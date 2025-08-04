@@ -41,8 +41,7 @@ const Gallery = () => {
       { src: dylanRoofWork, alt: "Dylan working on roof cleaning project", title: "Dylan - Roof Cleaning Specialist" }
     ],
     "House Washing": [
-      { src: houseBefore, alt: "House exterior cleaning before and after", title: "House Exterior Soft Wash" },
-      { src: heroCleaningService, alt: "Professional house cleaning service in progress", title: "Professional House Washing" }
+      { src: houseBefore, alt: "House exterior cleaning before and after", title: "House Exterior Soft Wash" }
     ],
     "Gutter Cleaning": [
       { src: gutterBefore, alt: "Gutter cleaning and brightening service", title: "Gutter Cleaning & Brightening" }
