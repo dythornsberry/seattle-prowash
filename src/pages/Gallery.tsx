@@ -286,6 +286,14 @@ const Gallery = () => {
         location: "Seattle Area", 
         description: "Professional commercial sidewalk pressure washing for Wells Fargo bank entrance - dramatic transformation from heavily stained to spotless",
         service: "Commercial"
+      },
+      { 
+        src: "/lovable-uploads/b075ca80-743b-42a6-830e-f31f8831ca56.png", 
+        alt: "Professional team pressure washing CVS Pharmacy sidewalk for grand opening", 
+        title: "CVS Grand Opening Preparation", 
+        location: "Mountlake Terrace", 
+        description: "Professional commercial pressure washing services for CVS Pharmacy grand opening - ensuring spotless sidewalks and entrance areas",
+        service: "Commercial"
       }
     ],
     "Team at Work": [
@@ -360,6 +368,14 @@ const Gallery = () => {
         location: "Seattle", 
         description: "Professional team member in action during commercial building soft wash project",
         service: "House Washing"
+      },
+      { 
+        src: "/lovable-uploads/b075ca80-743b-42a6-830e-f31f8831ca56.png", 
+        alt: "Professional team member pressure washing CVS Pharmacy sidewalk", 
+        title: "Team in Action - CVS Grand Opening", 
+        location: "Mountlake Terrace", 
+        description: "Professional team member performing commercial pressure washing for CVS Pharmacy grand opening preparation",
+        service: "Commercial Cleaning"
       }
     ]
   };
