@@ -43,10 +43,10 @@ const About = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center fade-up">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-                Meet Dylan – Owner of Seattle ProWash
+                Meet Dylan — Owner of Seattle ProWash
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-white/90">
-                Transforming Pacific Northwest properties since 2022 with expert soft washing and pressure washing services.
+                Helping Seattle-area homeowners restore their homes with safe, effective soft washing and pressure washing since 2022.
               </p>
             </div>
           </div>
@@ -63,10 +63,10 @@ const About = () => {
                   </h2>
                   <div className="space-y-6 text-lg text-muted-foreground">
                     <p>
-                      After years of working for other companies in the pressure washing industry, Dylan saw an opportunity to do things better. In 2022, he founded Seattle ProWash with a clear mission: deliver superior soft washing and pressure washing services using high-quality equipment and proven techniques.
+                      After years of working for other pressure washing companies, Dylan knew there was a better way to serve local homeowners. So in 2022, he launched Seattle ProWash with a mission to deliver reliable, top-quality cleaning using real professional gear—and a no-corners-cut mindset.
                     </p>
                     <p>
-                      "I learned the industry inside and out working for other companies," Dylan explains. "But I wanted to focus on what really matters: exceptional results that restore properties to their best condition."
+                      "I've worked on every kind of roof, siding, and driveway you can imagine. I know what works—and what damages property. I started Seattle ProWash to bring honest, reliable cleaning to the people in my community."
                     </p>
                     <p>
                       Dylan's passion lies in property restoration. He genuinely believes that professional cleaning is the single greatest return on investment any homeowner can make. As a Pacific Northwest local, Dylan takes immense pride in helping his neighbors protect and beautify their homes against our unique climate. "When you see a moss-covered roof or stained driveway transformed back to like-new condition, you understand the incredible value we provide."
@@ -154,16 +154,13 @@ const About = () => {
           </div>
         </section>
 
-        {/* Second CTA Section */}
+        {/* Mid-page CTA */}
         <section className="section-spacing bg-brand-orange/10">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center fade-up">
               <div className="bg-brand-white rounded-2xl p-8 shadow-lg border border-brand-orange/20">
-                <h2 className="text-2xl md:text-3xl font-bold text-brand-navy mb-4">
-                  Ready to Transform Your Property?
-                </h2>
                 <p className="text-lg text-muted-foreground mb-6">
-                  Get Your Free Quote Today – Call or Text 206.752.6690
+                  Ready for a moss-free roof? Call or text 206‑752‑6690 or get your free quote today.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                   <Button variant="prowash-primary" size="xl">
