@@ -19,13 +19,11 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-brand-white/95 backdrop-blur-sm border-b border-border shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
+          {/* Brand Text */}
           <div className="flex items-center">
-            <img 
-              src={logoImage} 
-              alt="Seattle ProWash - Professional Roof & Gutter Cleaning" 
-              className="h-12 md:h-16 w-auto"
-            />
+            <h1 className="text-xl md:text-2xl font-bold text-brand-blue">
+              Seattle <span className="text-brand-orange">ProWash</span>
+            </h1>
           </div>
 
           {/* Desktop Navigation */}
