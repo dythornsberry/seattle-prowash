@@ -107,6 +107,14 @@ const Gallery = () => {
         location: "Bellevue", 
         description: "Professional pressure washing service in action",
         service: "Pressure Washing"
+      },
+      { 
+        src: "/patio-pressure-washing-2nd-story-before-after.jpg", 
+        alt: "Second story patio pressure washing before and after transformation", 
+        title: "2nd Story Patio Restoration", 
+        location: "Seattle Area", 
+        description: "Dramatic transformation of 2nd story concrete patio - before and after pressure washing",
+        service: "Pressure Washing"
       }
     ],
     "Team at Work": [
