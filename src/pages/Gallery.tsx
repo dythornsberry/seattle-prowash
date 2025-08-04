@@ -189,6 +189,14 @@ const Gallery = () => {
         location: "Residential", 
         description: "Professional jobsite setup and service delivery",
         service: "Service"
+      },
+      { 
+        src: "/lovable-uploads/69a00574-1236-42ac-8dad-f347524ce62e.png", 
+        alt: "Team performing 3-story townhome soft wash with professional equipment", 
+        title: "3-Story Townhome Soft Wash", 
+        location: "Seattle Area", 
+        description: "Professional team and equipment setup for multi-story townhome soft washing project",
+        service: "House Washing"
       }
     ]
   };
