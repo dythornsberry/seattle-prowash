@@ -112,6 +112,14 @@ const Gallery = () => {
         location: "Kenmore", 
         description: "House washing in Kenmore – soft wash exterior cleaning before and after",
         service: "House Washing"
+      },
+      { 
+        src: "/lovable-uploads/a1418643-21de-4dd3-a77d-eebe9209eaef.png", 
+        alt: "House siding soft wash before and after showing dramatic cleaning results", 
+        title: "Siding Soft Wash Transformation", 
+        location: "Seattle Area", 
+        description: "Professional house siding soft wash - removing dirt, algae, and staining to restore clean appearance",
+        service: "House Washing"
       }
     ],
     "Gutter Cleaning": [
