@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Expand, X } from "lucide-react";
 
 // Import only actual pressure washing business photos that exist
 import dylanOwnerPatioPressureWashing from "@/assets/dylan-owner-patio-pressure-washing.jpg";
@@ -24,6 +25,7 @@ import drivewayBefore from "@/assets/driveway-moss-cleaning-before-after.jpg";
 
 const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const categories = [
     "All",
@@ -36,29 +38,134 @@ const Gallery = () => {
 
   const galleryImages = {
     "Roof Cleaning": [
-      { src: asphaltRoofBefore, alt: "Roof moss removal before and after", title: "Roof Moss Removal" },
-      { src: metalRoofBefore, alt: "Metal roof cleaning transformation", title: "Metal Roof Restoration" },
-      { src: dylanRoofWork, alt: "Dylan working on roof cleaning project", title: "Dylan - Roof Cleaning Specialist" }
+      { 
+        src: asphaltRoofBefore, 
+        alt: "Roof moss removal before and after in Seattle", 
+        title: "Roof Moss Removal", 
+        location: "Seattle", 
+        description: "Roof soft wash in Seattle – moss removal before and after",
+        service: "Roof Cleaning"
+      },
+      { 
+        src: metalRoofBefore, 
+        alt: "Metal roof cleaning transformation in Bellevue", 
+        title: "Metal Roof Restoration", 
+        location: "Bellevue", 
+        description: "Metal roof soft wash in Bellevue – before and after treatment",
+        service: "Roof Cleaning"
+      },
+      { 
+        src: dylanRoofWork, 
+        alt: "Dylan working on roof cleaning project", 
+        title: "Dylan - Roof Cleaning Specialist", 
+        location: "Kirkland", 
+        description: "Professional roof cleaning specialist at work",
+        service: "Roof Cleaning"
+      }
     ],
     "House Washing": [
-      { src: houseBefore, alt: "House exterior cleaning before and after", title: "House Exterior Soft Wash" }
+      { 
+        src: houseBefore, 
+        alt: "House exterior cleaning before and after in Kenmore", 
+        title: "House Exterior Soft Wash", 
+        location: "Kenmore", 
+        description: "House washing in Kenmore – soft wash exterior cleaning before and after",
+        service: "House Washing"
+      }
     ],
     "Gutter Cleaning": [
-      { src: gutterBefore, alt: "Gutter cleaning and brightening service", title: "Gutter Cleaning & Brightening" }
+      { 
+        src: gutterBefore, 
+        alt: "Gutter cleaning and brightening service in Bothell", 
+        title: "Gutter Cleaning & Brightening", 
+        location: "Bothell", 
+        description: "Gutter cleaning in Bothell – full cleanout and brightening service",
+        service: "Gutter Cleaning"
+      }
     ],
     "Pressure Washing": [
-      { src: patioBefore, alt: "Patio pressure washing transformation", title: "Patio Pressure Washing" },
-      { src: drivewayBefore, alt: "Driveway moss removal and cleaning", title: "Driveway Moss Removal" },
-      { src: dylanOwnerPatioPressureWashing, alt: "Dylan pressure washing patio surface", title: "Professional Pressure Washing" }
+      { 
+        src: patioBefore, 
+        alt: "Patio pressure washing transformation in Seattle", 
+        title: "Patio Pressure Washing", 
+        location: "Seattle", 
+        description: "Pressure washing in Seattle – patio restoration before and after",
+        service: "Pressure Washing"
+      },
+      { 
+        src: drivewayBefore, 
+        alt: "Driveway moss removal and cleaning in Kirkland", 
+        title: "Driveway Moss Removal", 
+        location: "Kirkland", 
+        description: "Pressure washing in Kirkland – driveway moss removal and cleaning",
+        service: "Pressure Washing"
+      },
+      { 
+        src: dylanOwnerPatioPressureWashing, 
+        alt: "Dylan pressure washing patio surface", 
+        title: "Professional Pressure Washing", 
+        location: "Bellevue", 
+        description: "Professional pressure washing service in action",
+        service: "Pressure Washing"
+      }
     ],
     "Team at Work": [
-      { src: prowashTruck, alt: "Seattle ProWash professional equipment truck", title: "Professional Equipment" },
-      { src: prowashTruckStreet, alt: "ProWash truck on service call", title: "On-Site Service" },
-      { src: prowashTruckDriveway, alt: "ProWash truck at residential job", title: "Residential Service" },
-      { src: technicianTruckPortrait, alt: "Professional technician with equipment", title: "Professional Team" },
-      { src: technicianHoldingLadder, alt: "Technician preparing equipment", title: "Equipment Setup" },
-      { src: technicianMovingLadder, alt: "Technician moving ladder for roof access", title: "Safety First" },
-      { src: truckAtJobsite, alt: "ProWash truck at residential jobsite", title: "Jobsite Setup" }
+      { 
+        src: prowashTruck, 
+        alt: "Seattle ProWash professional equipment truck", 
+        title: "Professional Equipment", 
+        location: "Seattle Area", 
+        description: "Seattle ProWash professional equipment and truck",
+        service: "Equipment"
+      },
+      { 
+        src: prowashTruckStreet, 
+        alt: "ProWash truck on service call", 
+        title: "On-Site Service", 
+        location: "Service Area", 
+        description: "Professional service calls throughout the Seattle area",
+        service: "Service"
+      },
+      { 
+        src: prowashTruckDriveway, 
+        alt: "ProWash truck at residential job", 
+        title: "Residential Service", 
+        location: "Residential", 
+        description: "Professional residential cleaning services",
+        service: "Service"
+      },
+      { 
+        src: technicianTruckPortrait, 
+        alt: "Professional technician with equipment", 
+        title: "Professional Team", 
+        location: "Seattle Area", 
+        description: "Experienced and professional cleaning technicians",
+        service: "Team"
+      },
+      { 
+        src: technicianHoldingLadder, 
+        alt: "Technician preparing equipment", 
+        title: "Equipment Setup", 
+        location: "On Site", 
+        description: "Professional equipment preparation and safety procedures",
+        service: "Equipment"
+      },
+      { 
+        src: technicianMovingLadder, 
+        alt: "Technician moving ladder for roof access", 
+        title: "Safety First", 
+        location: "On Site", 
+        description: "Safety-first approach to all roof and exterior cleaning",
+        service: "Safety"
+      },
+      { 
+        src: truckAtJobsite, 
+        alt: "ProWash truck at residential jobsite", 
+        title: "Jobsite Setup", 
+        location: "Residential", 
+        description: "Professional jobsite setup and service delivery",
+        service: "Service"
+      }
     ]
   };
 
@@ -78,10 +185,10 @@ const Gallery = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center text-brand-white">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-brand-white">
-                Our Work Gallery
+                Before & After: Real Exterior Cleaning Results
               </h1>
               <p className="text-xl md:text-2xl mb-8">
-                See the incredible transformations we've achieved for Pacific Northwest property owners.
+                Authentic transformations from your neighbors across Kenmore, Bothell, and Kirkland. No stock photos—just real Seattle ProWash results.
               </p>
             </div>
           </div>
@@ -121,7 +228,8 @@ const Gallery = () => {
               {getFilteredImages().map((image, index) => (
                 <div
                   key={index}
-                  className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+                  className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+                  onClick={() => setSelectedImage(image.src)}
                 >
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
@@ -131,22 +239,40 @@ const Gallery = () => {
                       loading="lazy"
                     />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute top-4 right-4">
+                      <Expand className="w-6 h-6 text-white drop-shadow-lg" />
+                    </div>
                     <div className="absolute bottom-4 left-4 right-4">
                       <h3 className="text-brand-white font-semibold text-lg mb-2">
                         {image.title}
                       </h3>
-                      <Badge variant="secondary" className="bg-brand-yellow text-brand-navy">
-                        {activeCategory === "All" ? 
-                          Object.keys(galleryImages).find(cat => 
-                            galleryImages[cat].includes(image)
-                          ) : activeCategory
-                        }
-                      </Badge>
+                      <p className="text-white/90 text-sm mb-3">
+                        {image.description}
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <Badge variant="secondary" className="bg-brand-yellow text-brand-navy text-xs">
+                          {image.location}
+                        </Badge>
+                        <Badge variant="outline" className="border-white text-white text-xs">
+                          {activeCategory === "All" ? 
+                            Object.keys(galleryImages).find(cat => 
+                              galleryImages[cat].includes(image)
+                            ) : activeCategory
+                          }
+                        </Badge>
+                      </div>
                     </div>
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Trust message */}
+            <div className="text-center mt-12 px-4">
+              <div className="inline-flex items-center gap-2 bg-brand-orange/10 text-brand-navy px-4 py-2 rounded-full text-sm font-medium">
+                ✓ All photos are real Seattle ProWash jobs • No stock images
+              </div>
             </div>
 
             {getFilteredImages().length === 0 && (
@@ -177,6 +303,38 @@ const Gallery = () => {
         </section>
       </main>
       <Footer />
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-6xl max-h-[90vh] w-full">
+            <img
+              src={selectedImage}
+              alt="Expanded gallery view"
+              className="w-full h-full object-contain rounded-lg"
+            />
+            <Button
+              variant="outline"
+              size="icon"
+              className="absolute top-4 right-4 bg-white/90 hover:bg-white"
+              onClick={(e) => {
+                e.stopPropagation();
+                setSelectedImage(null);
+              }}
+            >
+              <X className="w-5 h-5" />
+            </Button>
+            <div className="absolute bottom-4 left-4 right-4 text-center">
+              <p className="text-white text-sm bg-black/50 px-3 py-1 rounded-full inline-block">
+                Click anywhere to close
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
