@@ -30,7 +30,7 @@ const handler = async (req: Request): Promise<Response> => {
     console.log('Attempting to send owner notification to seattleprowash@gmail.com');
     const ownerEmailResponse = await resend.emails.send({
       from: "Seattle ProWash <onboarding@resend.dev>",
-      to: ["seattleprowash@gmail.com"],
+      to: ["dythornsberry@gmail.com"], // Temporary: Using verified email due to Resend restrictions
       subject: `New Quote Request from ${name}`,
       html: `
         <h2>New Quote Request</h2>
