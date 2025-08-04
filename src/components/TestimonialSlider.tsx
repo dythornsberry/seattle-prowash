@@ -8,18 +8,46 @@ const TestimonialSlider = () => {
   
   const testimonials = [
     {
+      content: "Dylan is prompt, attentive to details and caring. He power washed our front driveway and back yard. The work was meticulously done and he made sure all the furniture was moved back in place before leaving. He even cleaned our side walkway!",
+      author: "YT Chu",
+      location: "Seattle Area",
+      rating: 5,
+      service: "Pressure Washing"
+    },
+    {
+      content: "Dylan went above and beyond! He helped me put on a temporary fix for a hole on my roof. He paid a lot of attention to details and is very knowledgeable about what he does.",
+      author: "Dat Le",
+      location: "Seattle Area", 
+      rating: 5,
+      service: "Roof Cleaning & Repair"
+    },
+    {
+      content: "Dylan and the crew came out for my 99 year old grandmothers place. He was very informative, the place is old and he took the time to stop and inform us of some possible issues with continuing.",
+      author: "Ohana V.",
+      location: "Seattle Area",
+      rating: 5,
+      service: "House Washing"
+    },
+    {
+      content: "We had Dylan and his crew do our Christmas lights, and we were so impressed with the professionalism and quality that we had Seattle ProWash come and clean my mother in law's roof after the bomb cyclone.",
+      author: "Nick Tourte", 
+      location: "Seattle Area",
+      rating: 5,
+      service: "Roof Cleaning"
+    },
+    {
+      content: "My experience with them was seamless from booking to appointment. Dylan's team kept me updated throughout the process with before and after photos. The prices are fair.",
+      author: "Kimani G.",
+      location: "Bothell, WA",
+      rating: 5,
+      service: "House Soft Wash"
+    },
+    {
       content: "These guys removed years of moss—roof looks brand new! Great price and super professional.",
       author: "Jennifer C.",
       location: "Kenmore, WA",
       rating: 5,
       service: "Roof Moss Removal"
-    },
-    {
-      content: "Seamless from booking to finish. Loved the before/after photos and fair pricing.",
-      author: "Kimani G.", 
-      location: "Bothell, WA",
-      rating: 5,
-      service: "House Soft Wash"
     }
   ];
 
