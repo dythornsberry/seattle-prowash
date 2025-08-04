@@ -210,6 +210,14 @@ const Gallery = () => {
         location: "Seattle Area", 
         description: "Professional gutter brightening service - restoring gutters to original color and brightness with specialized cleaning",
         service: "Gutter Cleaning"
+      },
+      { 
+        src: "/lovable-uploads/ae56c077-963d-480b-a403-d5f4e4f81a2a.png", 
+        alt: "Asphalt roof gutter cleaning before and after showing moss and debris removal", 
+        title: "Roof and Gutter System Cleaning", 
+        location: "Seattle Area", 
+        description: "Complete roof and gutter cleaning service - removing moss, debris, and organic buildup from gutters and roof surface",
+        service: "Gutter Cleaning"
       }
     ],
     "Pressure Washing": [
@@ -371,6 +379,46 @@ const Gallery = () => {
         title: "Paver Patio Color Restoration", 
         location: "Seattle Area", 
         description: "Amazing transformation of paver patio - professional pressure washing brings back original colors and beauty",
+        service: "Pressure Washing"
+      },
+      { 
+        src: "/lovable-uploads/a11c1a99-bb8a-4f6e-9560-6fb43b8f452d.png", 
+        alt: "Concrete driveway pressure washing before and after showing dramatic cleaning results", 
+        title: "Driveway Deep Clean Transformation", 
+        location: "Seattle Area", 
+        description: "Professional concrete driveway pressure washing - removing stains, moss, and buildup for dramatic results",
+        service: "Pressure Washing"
+      },
+      { 
+        src: "/lovable-uploads/a5496294-1c91-46fa-b818-fc3078124376.png", 
+        alt: "Paver patio pressure washing before and after showing color restoration", 
+        title: "Paver Patio Deep Clean", 
+        location: "Seattle Area", 
+        description: "Professional paver patio pressure washing - removing organic buildup and restoring original colors",
+        service: "Pressure Washing"
+      },
+      { 
+        src: "/lovable-uploads/9147ed99-2a8c-4306-8495-352fc0ed8049.png", 
+        alt: "Concrete garage pad pressure washing before and after transformation", 
+        title: "Garage Pad Restoration", 
+        location: "Seattle Area", 
+        description: "Professional concrete garage pad pressure washing - removing heavy staining and buildup",
+        service: "Pressure Washing"
+      },
+      { 
+        src: "/lovable-uploads/ec1b3a15-96fe-4ee4-a4e5-a3ac395e72bc.png", 
+        alt: "HOA community patio pressure washing before and after transformation", 
+        title: "HOA Community Patio Cleaning", 
+        location: "Seattle Area", 
+        description: "Professional patio cleaning for HOA community - restoring walkways and common areas",
+        service: "Pressure Washing"
+      },
+      { 
+        src: "/lovable-uploads/4c0b025c-98d6-4265-931f-3290ae71575e.png", 
+        alt: "Residential driveway pressure washing before and after showing moss removal", 
+        title: "Residential Driveway Restoration", 
+        location: "Seattle Area", 
+        description: "Professional residential driveway pressure washing - removing moss, debris, and organic buildup",
         service: "Pressure Washing"
       }
     ],
