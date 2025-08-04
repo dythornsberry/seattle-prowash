@@ -19,6 +19,10 @@ const Hero = () => {
               <p className="text-xl md:text-2xl text-brand-gray-text font-medium leading-relaxed">
                 Protect your home from moss, mold, and grime—without climbing a ladder.
               </p>
+              
+              <p className="text-sm text-brand-gray-text/80 font-medium">
+                ⭐ 180+ 5‑Star Reviews · Fully Licensed & Insured
+              </p>
             </div>
 
             {/* CTA */}
