@@ -49,7 +49,7 @@ const Footer = () => {
                   Seattle <span className="text-brand-yellow">ProWash</span>
                 </h2>
                 <p className="text-white/80 leading-relaxed">
-                  Kenmore's trusted roof & gutter cleaning specialists. Protecting Pacific Northwest homes with safe, effective cleaning solutions.
+                  Kenmore's trusted roof & gutter cleaning specialists. Protecting Pacific Northwest homes with safe, effective cleaning solutions
                 </p>
               </div>
               
