@@ -21,7 +21,7 @@ const buttonVariants = cva(
         
         /* Seattle ProWash High Contrast Brand Variants */
         "prowash-primary": "bg-brand-orange text-brand-white font-bold hover:bg-brand-orange-light btn-glow shadow-md border-0",
-        "prowash-secondary": "border-2 border-brand-blue text-brand-blue bg-brand-white hover:bg-brand-blue hover:text-brand-white font-semibold",
+        "prowash-secondary": "border-2 border-brand-blue text-brand-navy bg-brand-white hover:bg-brand-blue hover:text-brand-white font-semibold shadow-sm",
         "prowash-cta": "bg-brand-blue text-brand-white font-bold hover:bg-brand-blue-light shadow-lg border-0",
         "prowash-phone": "bg-brand-orange text-brand-white font-bold hover:bg-brand-orange-light btn-glow text-lg border-0",
       },
