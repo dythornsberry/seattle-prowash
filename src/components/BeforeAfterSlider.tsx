@@ -1,35 +1,49 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import beforeRoof1 from "@/assets/before-roof-1.jpg";
+import afterRoof1 from "@/assets/after-roof-1.jpg";
+import beforeHouse2 from "@/assets/before-house-2.jpg";
+import afterHouse2 from "@/assets/after-house-2.jpg";
+import beforeConcrete3 from "@/assets/before-concrete-3.jpg";
+import afterConcrete3 from "@/assets/after-concrete-3.jpg";
 
 const BeforeAfterSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
-  // TODO: Replace with real before/after photos from Seattle ProWash projects
   const beforeAfterProjects = [
     {
       id: 1,
       title: "Roof Moss Removal - Kenmore Home",
       location: "Kenmore, WA",
       service: "Moss Removal + Gutter Cleaning",
+      beforeImage: beforeRoof1,
+      afterImage: afterRoof1,
       beforeAlt: "Moss-covered roof before professional cleaning",
-      afterAlt: "Clean, moss-free roof after Seattle ProWash treatment"
+      afterAlt: "Clean, moss-free roof after Seattle ProWash treatment",
+      completionDate: "March 2024"
     },
     {
       id: 2, 
       title: "House Soft Wash - Bothell Property",
       location: "Bothell, WA",
       service: "House Soft Wash",
+      beforeImage: beforeHouse2,
+      afterImage: afterHouse2,
       beforeAlt: "Dirty house siding with algae and mildew",
-      afterAlt: "Clean, bright house exterior after soft washing"
+      afterAlt: "Clean, bright house exterior after soft washing",
+      completionDate: "February 2024"
     },
     {
       id: 3,
       title: "Gutter & Pressure Wash - Kirkland",
       location: "Kirkland, WA", 
       service: "Complete Property Clean",
+      beforeImage: beforeConcrete3,
+      afterImage: afterConcrete3,
       beforeAlt: "Clogged gutters and dirty driveway",
-      afterAlt: "Clean gutters and pressure-washed driveway"
+      afterAlt: "Clean gutters and pressure-washed driveway",
+      completionDate: "January 2024"
     }
   ];
 
@@ -81,14 +95,11 @@ const BeforeAfterSlider = () => {
                         <div className="space-y-4">
                           <h4 className="text-lg font-semibold text-brand-navy text-center">Before</h4>
                           <div className="relative rounded-xl overflow-hidden shadow-lg">
-                            {/* TODO: Replace with actual before photos */}
-                            <div className="aspect-[4/3] bg-gray-300 flex items-center justify-center">
-                              <div className="text-center text-gray-600">
-                                <p className="font-semibold">Before Photo</p>
-                                <p className="text-sm">{project.beforeAlt}</p>
-                                <p className="text-xs mt-2 italic">TODO: Add real project photo</p>
-                              </div>
-                            </div>
+                            <img
+                              src={project.beforeImage}
+                              alt={project.beforeAlt}
+                              className="aspect-[4/3] w-full object-cover"
+                            />
                           </div>
                         </div>
 
@@ -96,17 +107,14 @@ const BeforeAfterSlider = () => {
                         <div className="space-y-4">
                           <h4 className="text-lg font-semibold text-brand-navy text-center">After</h4>
                           <div className="relative rounded-xl overflow-hidden shadow-lg">
-                            {/* TODO: Replace with actual after photos */}
-                            <div className="aspect-[4/3] bg-brand-yellow/10 flex items-center justify-center">
-                              <div className="text-center text-brand-navy">
-                                <p className="font-semibold">After Photo</p>
-                                <p className="text-sm">{project.afterAlt}</p>
-                                <p className="text-xs mt-2 italic">TODO: Add real project photo</p>
-                              </div>
-                            </div>
-                            {/* Success Badge */}
+                            <img
+                              src={project.afterImage}
+                              alt={project.afterAlt}
+                              className="aspect-[4/3] w-full object-cover"
+                            />
+                            {/* Completion Date Badge - Replacing "Complete" as Gemini suggested */}
                             <div className="absolute top-4 right-4 bg-brand-yellow text-brand-navy px-3 py-1 rounded-full text-sm font-bold shadow-lg">
-                              ✓ Complete
+                              {project.completionDate}
                             </div>
                           </div>
                         </div>
