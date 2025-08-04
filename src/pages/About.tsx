@@ -42,7 +42,7 @@ const About = () => {
         <section className="section-spacing bg-gradient-to-b from-brand-navy to-brand-navy/90">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center text-brand-white fade-up">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-brand-white">
                 Meet Dylan & The Seattle ProWash Team
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-brand-white">
