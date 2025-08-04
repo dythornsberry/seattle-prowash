@@ -40,7 +40,7 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <section className="section-spacing bg-brand-gray">
+    <section id="reviews" className="section-spacing bg-brand-gray">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 fade-up">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy mb-6">
