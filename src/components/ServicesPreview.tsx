@@ -32,7 +32,9 @@ const ServicesPreview = () => {
       features: [
         "Cleans siding, trim, soffits, eaves, exterior gutters, windows & doors",
         "2nd-story homes included",
-        "We use your water source (standard for soft washing)"
+        "We use your water source (standard for soft washing)",
+        "Removes dirt, mildew, algae, and organic stains",
+        "Safe for all siding materials including vinyl, wood, and composite"
       ]
     }
   ];
@@ -53,7 +55,7 @@ const ServicesPreview = () => {
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-brand-orange/50 fade-up">
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-brand-orange/50 fade-up flex flex-col h-full">
                 <CardHeader className="text-center pb-4">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-orange/10 rounded-full mb-4 mx-auto group-hover:bg-brand-orange/20 transition-colors">
                     <IconComponent className="w-8 h-8 text-brand-orange" />
@@ -66,27 +68,29 @@ const ServicesPreview = () => {
                   </CardDescription>
                 </CardHeader>
                 
-                <CardContent className="space-y-4">
-                  <ul className="space-y-3">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start text-sm text-muted-foreground">
-                        <div className="w-1.5 h-1.5 bg-brand-orange rounded-full mr-3 flex-shrink-0 mt-2"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                <CardContent className="space-y-4 flex-grow flex flex-col">
+                  <div className="flex-grow">
+                    <ul className="space-y-3">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start text-sm text-muted-foreground">
+                          <div className="w-1.5 h-1.5 bg-brand-orange rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    {service.socialProof && (
+                      <div className="pt-4">
+                        <p className="text-sm text-brand-orange text-center font-medium">
+                          {service.socialProof}
+                        </p>
+                      </div>
+                    )}
+                  </div>
                   
-                  {service.socialProof && (
-                    <div className="pt-2">
-                      <p className="text-xs text-brand-orange text-center font-medium">
-                        {service.socialProof}
-                      </p>
-                    </div>
-                  )}
-                  
-                  <div className="pt-4 border-t border-border">
+                  <div className="pt-4 border-t border-border mt-auto">
                     <p className="text-xs text-brand-gray-text text-center font-medium">
-                      Free Estimates · Call or Text 206.752.6690
+                      Free Estimates · Call or Text 206.752.6690.
                     </p>
                   </div>
                   
