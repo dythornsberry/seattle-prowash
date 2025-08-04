@@ -155,6 +155,14 @@ const Gallery = () => {
         location: "Seattle, WA", 
         description: "Incredible transformation of heavily soiled concrete stairs - professional pressure washing removes years of buildup",
         service: "Pressure Washing"
+      },
+      { 
+        src: "/lovable-uploads/6792eaac-aa82-4a1d-bbea-f66f775c2275.png", 
+        alt: "Retaining wall and brick walkway pressure washing before and after transformation", 
+        title: "Retaining Wall & Brick Restoration", 
+        location: "Seattle, WA", 
+        description: "Amazing transformation of moss-covered retaining wall and brick walkway - professional pressure washing restoration",
+        service: "Pressure Washing"
       }
     ],
     "Team at Work": [
