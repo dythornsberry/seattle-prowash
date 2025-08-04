@@ -199,7 +199,7 @@ const About = () => {
                       alt="Dylan working on roof cleaning project"
                       className="w-full h-80 object-cover"
                     />
-                    <div className="absolute bottom-4 left-4 bg-brand-navy/90 text-brand-white px-4 py-2 rounded-lg">
+                    <div className="absolute bottom-4 left-4 bg-brand-navy/90 text-white px-4 py-2 rounded-lg">
                       <div className="font-semibold">Dylan - Owner</div>
                       <div className="text-sm">Roof Soft Washing Specialist</div>
                     </div>
@@ -213,7 +213,7 @@ const About = () => {
                       alt="Professional technician house washing"
                       className="w-full h-80 object-cover"
                     />
-                    <div className="absolute bottom-4 left-4 bg-brand-navy/90 text-brand-white px-4 py-2 rounded-lg">
+                    <div className="absolute bottom-4 left-4 bg-brand-navy/90 text-white px-4 py-2 rounded-lg">
                       <div className="font-semibold">Professional Team</div>
                       <div className="text-sm">House Washing Experts</div>
                     </div>
@@ -228,7 +228,7 @@ const About = () => {
                     alt="Seattle ProWash team member with professional equipment"
                     className="w-full h-80 object-cover"
                   />
-                  <div className="absolute bottom-4 left-4 bg-brand-navy/90 text-brand-white px-4 py-2 rounded-lg">
+                  <div className="absolute bottom-4 left-4 bg-brand-navy/90 text-white px-4 py-2 rounded-lg">
                     <div className="font-semibold">Fully Equipped</div>
                     <div className="text-sm">Professional Grade Equipment</div>
                   </div>
