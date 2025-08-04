@@ -105,6 +105,14 @@ const Gallery = () => {
         location: "Bothell", 
         description: "Gutter cleaning in Bothell – full cleanout and brightening service",
         service: "Gutter Cleaning"
+      },
+      { 
+        src: "/lovable-uploads/26d7c8d9-d5dc-42b1-ac63-62630e258539.png", 
+        alt: "Gutter cleaning before and after showing debris removal", 
+        title: "Complete Gutter Cleanout", 
+        location: "Seattle Area", 
+        description: "Professional gutter cleaning service - removing debris, leaves, and buildup for proper water flow",
+        service: "Gutter Cleaning"
       }
     ],
     "Pressure Washing": [
