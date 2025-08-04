@@ -313,8 +313,8 @@ const QuoteForm = () => {
                     <div className="space-y-4 text-center">
                       <div className="bg-green-50 border border-green-200 rounded-lg p-4">
                         <div className="space-y-2 text-sm">
-                          <p className="text-green-800 font-semibold">✓ Quotes are free, fast, and come with zero pressure.</p>
-                          <p className="text-green-700">✓ We'll never spam you or share your info.</p>
+                          <p className="text-green-800 font-semibold">✓ Quotes are free, fast, and come with zero pressure</p>
+                          <p className="text-green-700">✓ We'll never spam you or share your info</p>
                         </div>
                       </div>
                       
