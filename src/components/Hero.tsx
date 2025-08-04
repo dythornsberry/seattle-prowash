@@ -20,11 +20,11 @@ const Hero = () => {
               </p>
               
               <p className="text-sm text-brand-gray-text/80 font-medium">
-                ⭐ 180+ 5‑Star Reviews · Fully Licensed & Insured
+                ⭐ <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-brand-orange transition-colors cursor-pointer">180+ 5‑Star Reviews</a> · Fully Licensed & Insured
               </p>
               
               <p className="text-sm text-brand-gray-text/70 font-medium">
-                🗺️ Serving Kenmore, Bothell, Kirkland, and surrounding suburbs within a 10-mile radius
+                🗺️ Serving Kenmore, Bothell, Kirkland, and surrounding areas in King and Snohomish counties
               </p>
             </div>
 
@@ -42,7 +42,7 @@ const Hero = () => {
                 </Button>
               </div>
               <div className="text-center lg:text-left">
-                <p className="text-brand-gray-text font-medium">📞 Call or Text: 206.752.6690.</p>
+                <p className="text-brand-gray-text font-medium">📞 <a href="tel:2067526690" className="hover:text-brand-orange transition-colors">Call or Text: 206.752.6690</a></p>
               </div>
             </div>
 
