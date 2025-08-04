@@ -29,6 +29,7 @@ const Gallery = () => {
     "All",
     "Roof Cleaning", 
     "House Washing",
+    "Gutter Cleaning",
     "Pressure Washing",
     "Team at Work"
   ];
@@ -41,7 +42,9 @@ const Gallery = () => {
     ],
     "House Washing": [
       { src: houseBefore, alt: "House exterior cleaning before and after", title: "House Exterior Soft Wash" },
-      { src: heroCleaningService, alt: "Professional house cleaning service in progress", title: "Professional House Washing" },
+      { src: heroCleaningService, alt: "Professional house cleaning service in progress", title: "Professional House Washing" }
+    ],
+    "Gutter Cleaning": [
       { src: gutterBefore, alt: "Gutter cleaning and brightening service", title: "Gutter Cleaning & Brightening" }
     ],
     "Pressure Washing": [
