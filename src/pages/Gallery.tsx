@@ -198,6 +198,14 @@ const Gallery = () => {
         location: "Marysville", 
         description: "Professional cleaning of ATM entrance area at Wells Fargo bank",
         service: "Commercial"
+      },
+      { 
+        src: "/lovable-uploads/4b6fff3e-567e-4898-916f-6985b5ac941e.png", 
+        alt: "Wells Fargo bank interior floor pressure washing before and after", 
+        title: "Bank Interior Floor Cleaning", 
+        location: "Seattle", 
+        description: "Professional interior floor pressure washing at Wells Fargo bank - dramatic transformation",
+        service: "Commercial"
       }
     ],
     "Team at Work": [
