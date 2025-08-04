@@ -65,7 +65,7 @@ const Services = () => {
       image: pressureWashing,
       description: "Professional pressure washing that removes years of buildup from your concrete surfaces, making them look new again while eliminating slip hazards.",
       process: [
-        "Clean concrete, pavers, fencing, and other flatwork",
+        "Clean concrete, pavers, fencing, and other flat surfaces",
         "Use professional surface cleaner for streak-free results", 
         "Great for removing algae, moss, oil, and grime"
       ],
