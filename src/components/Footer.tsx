@@ -45,7 +45,7 @@ const Footer = () => {
             {/* Company Info */}
             <div className="space-y-6">
               <div>
-                <h2 className="text-2xl font-bold mb-2">
+                <h2 className="text-2xl font-bold mb-2 text-brand-white">
                   Seattle <span className="text-brand-yellow">ProWash</span>
                 </h2>
                 <p className="text-brand-white/80 leading-relaxed">
