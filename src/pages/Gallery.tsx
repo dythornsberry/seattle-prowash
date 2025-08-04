@@ -102,6 +102,30 @@ const Gallery = () => {
         location: "Seattle, WA", 
         description: "Dramatic transformation of asphalt roof after professional moss removal and soft wash cleaning",
         service: "Roof Cleaning"
+      },
+      { 
+        src: "/lovable-uploads/64d9c018-2edd-4f52-a9c8-26f38eacb1ab.png", 
+        alt: "Asphalt roof debris removal before and after - moss and debris cleaning", 
+        title: "Roof Debris Removal Transformation", 
+        location: "Seattle Area", 
+        description: "Professional asphalt roof cleaning - complete debris and moss removal before and after treatment",
+        service: "Roof Cleaning"
+      },
+      { 
+        src: "/lovable-uploads/d860338a-0f08-4e00-9f5a-6de054035c8f.png", 
+        alt: "Asphalt roof soft wash before and after cleaning showing dramatic improvement", 
+        title: "Asphalt Roof Deep Cleaning", 
+        location: "Seattle Area", 
+        description: "Comprehensive asphalt roof soft wash treatment - removing years of moss, debris, and organic buildup",
+        service: "Roof Cleaning"
+      },
+      { 
+        src: "/lovable-uploads/61baa673-a9e7-4e3c-a983-cc33629610c0.png", 
+        alt: "Professional team performing asphalt roof soft wash treatment", 
+        title: "Roof Soft Wash in Progress", 
+        location: "Seattle Area", 
+        description: "Professional team member applying soft wash treatment to asphalt roof - showing the cleaning process in action",
+        service: "Roof Cleaning"
       }
     ],
     "House Washing": [
