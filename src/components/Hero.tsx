@@ -23,6 +23,10 @@ const Hero = () => {
               <p className="text-sm text-brand-gray-text/80 font-medium">
                 ⭐ 180+ 5‑Star Reviews · Fully Licensed & Insured
               </p>
+              
+              <p className="text-sm text-brand-gray-text/70 font-medium">
+                🗺️ Serving Kenmore and surrounding Seattle suburbs within 25-mile radius
+              </p>
             </div>
 
             {/* CTA */}
