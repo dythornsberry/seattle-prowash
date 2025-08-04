@@ -84,6 +84,34 @@ const handler = async (req: Request): Promise<Response> => {
       // Don't throw error for customer email failure, but log it
     }
 
+    // Optional: Send to Zapier/Jobber CRM integration
+    const zapierWebhookUrl = Deno.env.get('ZAPIER_WEBHOOK_URL');
+    if (zapierWebhookUrl) {
+      try {
+        console.log('Sending lead data to Zapier webhook for Jobber CRM...');
+        await fetch(zapierWebhookUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name,
+            phone,
+            email,
+            zipCode,
+            service,
+            message,
+            timestamp: new Date().toISOString(),
+            source: 'Website Quote Form'
+          })
+        });
+        console.log('Successfully sent lead to Zapier webhook');
+      } catch (zapierError) {
+        console.error('Failed to send to Zapier:', zapierError);
+        // Don't fail the email sending if Zapier fails
+      }
+    }
+
     console.log("Emails sent successfully:", { ownerEmailResponse, customerEmailResponse });
 
     return new Response(JSON.stringify({ success: true }), {
