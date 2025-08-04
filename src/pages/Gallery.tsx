@@ -33,6 +33,7 @@ const Gallery = () => {
     "House Washing",
     "Gutter Cleaning",
     "Pressure Washing",
+    "Commercial",
     "Team at Work"
   ];
 
@@ -171,6 +172,32 @@ const Gallery = () => {
         location: "Seattle, WA", 
         description: "Amazing transformation of moss-covered retaining wall and brick walkway - professional pressure washing restoration",
         service: "Pressure Washing"
+      }
+    ],
+    "Commercial": [
+      { 
+        src: "https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-6/505253534_10221752307676177_2976856671973644899_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=NjUx8nup8JoQ7kNvwEvGqBK&_nc_oc=AdlXg8sTnsgV_4z2xolrpzaZkOt6jY5s0lvaQlhmDBkIYJALJtkPj1BVWg4xs8KLjjw&_nc_zt=23&_nc_ht=scontent-sea1-1.xx&_nc_gid=AGdv05BUdz6gSfsO_buvlg&oh=00_AfWYIUBhJ2oub2DlK2fHgazA2ZS0TOAckx3VFBMEB4OBGg&oe=689686D5", 
+        alt: "Wells Fargo bank sidewalk pressure washing before and after", 
+        title: "Bank Sidewalk Cleaning", 
+        location: "Marysville", 
+        description: "Professional sidewalk pressure washing at Wells Fargo bank location",
+        service: "Commercial"
+      },
+      { 
+        src: "https://scontent-sea5-1.xx.fbcdn.net/v/t39.30808-6/505108295_10221752306196140_7014226768814137650_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Wm28A_u7HC0Q7kNvwH02PaT&_nc_oc=AdmZgHGzW6Qrq5mLbgwD0zsAMxkykiRV2DjE545smgFz-acE_NS4L2xuNdmFdbLegxk&_nc_zt=23&_nc_ht=scontent-sea5-1.xx&_nc_gid=PrPovnSq4HwMHVThzZBvWg&oh=00_AfXna9BXdR-6a37Aw4YPtcEXIkQJjUmkzFTmYtACUIFbNg&oe=689689CA", 
+        alt: "Wells Fargo bank sidewalk pressure washing second section", 
+        title: "Bank Sidewalk Cleaning - Section 2", 
+        location: "Marysville", 
+        description: "Additional sidewalk section at Wells Fargo bank after professional pressure washing",
+        service: "Commercial"
+      },
+      { 
+        src: "https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-6/505414342_10221752306076137_3126692555457843088_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=ZqhOH46OLDsQ7kNvwFSeAGM&_nc_oc=AdnrFUFDPBNwwBgCME854GPT2zZWX1vup5QEmrUVioolG3er0Sngzj_t3i2U_8vTuIQ&_nc_zt=23&_nc_ht=scontent-sea1-1.xx&_nc_gid=pgqqRIciJIDVsapJlvumxw&oh=00_AfW6hp7tulMWl9R27juqBGw4MK-S7e3NIfgnvZzESeUx3w&oe=68967D91", 
+        alt: "Wells Fargo ATM area pressure washing before and after", 
+        title: "ATM Area Cleaning", 
+        location: "Marysville", 
+        description: "Professional cleaning of ATM entrance area at Wells Fargo bank",
+        service: "Commercial"
       }
     ],
     "Team at Work": [
