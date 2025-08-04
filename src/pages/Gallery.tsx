@@ -77,6 +77,14 @@ const Gallery = () => {
         location: "Seattle Area", 
         description: "Professional metal roof soft wash with skylight cleaning - complete restoration",
         service: "Roof Cleaning"
+      },
+      { 
+        src: "/lovable-uploads/380b267e-dbb4-4a71-8ac9-2bba6d28b15c.png", 
+        alt: "Metal roof cleaning before and after with visible cleaning process", 
+        title: "Metal Roof Deep Cleaning", 
+        location: "Seattle Area", 
+        description: "Intensive metal roof cleaning showing the cleaning process and dramatic results - before and after",
+        service: "Roof Cleaning"
       }
     ],
     "House Washing": [
