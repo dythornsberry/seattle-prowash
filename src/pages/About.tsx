@@ -43,7 +43,7 @@ const About = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center text-brand-white fade-up">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-brand-white">
-                Meet Dylan & The Seattle ProWash Team
+                Meet Dylan – Owner of Seattle ProWash
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-brand-white">
                 Transforming Pacific Northwest properties since 2022 with expert soft washing and pressure washing services.
@@ -73,7 +73,7 @@ const About = () => {
                     </p>
                   </div>
                   
-                  <div className="grid grid-cols-2 gap-4 mt-8">
+                  <div className="grid grid-cols-3 gap-4 mt-8">
                     <div className="text-center">
                       <div className="text-3xl font-bold text-brand-yellow mb-2">2022</div>
                       <div className="text-sm text-muted-foreground">Founded Seattle ProWash</div>
@@ -81,6 +81,10 @@ const About = () => {
                     <div className="text-center">
                       <div className="text-3xl font-bold text-brand-yellow mb-2">500+</div>
                       <div className="text-sm text-muted-foreground">Properties Restored</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-brand-yellow mb-2">180+</div>
+                      <div className="text-sm text-muted-foreground">5-Star Google Reviews</div>
                     </div>
                   </div>
                 </div>
@@ -146,6 +150,30 @@ const About = () => {
                   <p className="text-muted-foreground">Consistent, reliable cleaning that restores your property's value and curb appeal.</p>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Second CTA Section */}
+        <section className="section-spacing bg-brand-orange/10">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center fade-up">
+              <div className="bg-brand-white rounded-2xl p-8 shadow-lg border border-brand-orange/20">
+                <h2 className="text-2xl md:text-3xl font-bold text-brand-navy mb-4">
+                  Ready to Transform Your Property?
+                </h2>
+                <p className="text-lg text-muted-foreground mb-6">
+                  Get Your Free Quote Today – Call or Text 206.752.6690
+                </p>
+                <div className="flex flex-col sm:flex-row justify-center gap-4">
+                  <Button variant="prowash-primary" size="xl">
+                    Get Free Quote
+                  </Button>
+                  <Button variant="prowash-phone" size="xl">
+                    📞 206.752.6690
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
