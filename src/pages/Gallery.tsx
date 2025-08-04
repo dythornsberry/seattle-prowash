@@ -268,6 +268,22 @@ const Gallery = () => {
         location: "Seattle Area", 
         description: "Professional composite deck and staircase cleaning - removing buildup and restoring original appearance",
         service: "Pressure Washing"
+      },
+      { 
+        src: "/lovable-uploads/421f2edc-aeab-4325-add0-bfac9af5b8e0.png", 
+        alt: "Asphalt driveway pressure washing before and after showing moss removal", 
+        title: "Asphalt Driveway Deep Clean", 
+        location: "Seattle Area", 
+        description: "Professional asphalt driveway pressure washing - removing heavy moss buildup and restoring clean appearance",
+        service: "Pressure Washing"
+      },
+      { 
+        src: "/lovable-uploads/0c381942-caa7-4984-890e-3512190e2d02.png", 
+        alt: "Residential walkway pressure washing before and after transformation", 
+        title: "Residential Walkway Restoration", 
+        location: "Seattle Area", 
+        description: "Complete walkway transformation - professional pressure washing removes moss and organic buildup",
+        service: "Pressure Washing"
       }
     ],
     "Commercial": [
