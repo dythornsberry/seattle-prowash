@@ -20,7 +20,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-xl md:text-2xl font-bold text-brand-blue">
+            <h1 className="text-xl md:text-2xl font-bold text-brand-navy">
               Seattle <span className="text-brand-orange">ProWash</span>
             </h1>
           </div>
