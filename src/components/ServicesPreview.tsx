@@ -11,7 +11,7 @@ const ServicesPreview = () => {
       features: [
         "Brush and blow moss and roof debris",
         "Apply soft wash treatment (manufacturer-recommended method)",
-        "Clean out gutters, flush downspouts, ground cleanup, and rinse siding if needed"
+        "Clean out gutters, flush downspouts, debris cleanup, and rinse siding if needed"
       ]
     },
     {
