@@ -275,11 +275,11 @@ const Services = () => {
         {/* CTA Section */}
         <section className="section-spacing bg-brand-navy">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center text-brand-white fade-up">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <div className="max-w-4xl mx-auto text-center fade-up">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Ready to Transform Your Property?
               </h2>
-              <p className="text-xl mb-8 text-brand-white/90">
+              <p className="text-xl mb-8 text-white/90">
                 Get your free estimate today and see why Seattle area homeowners trust Seattle ProWash.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">

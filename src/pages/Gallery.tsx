@@ -183,11 +183,11 @@ const Gallery = () => {
         {/* Hero Section */}
         <section className="section-spacing bg-gradient-to-b from-brand-navy to-brand-navy/90">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center text-brand-white">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-brand-white">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
                 Before & After: Real Exterior Cleaning Results
               </h1>
-              <p className="text-xl md:text-2xl mb-8">
+              <p className="text-xl md:text-2xl mb-8 text-white/90">
                 Authentic transformations from your neighbors across Kenmore, Bothell, and Kirkland. No stock photos—just real Seattle ProWash results.
               </p>
             </div>
@@ -288,11 +288,11 @@ const Gallery = () => {
         {/* CTA Section */}
         <section className="section-spacing bg-brand-navy">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center text-brand-white">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Ready for Your Transformation?
               </h2>
-              <p className="text-xl mb-8 text-brand-white/90">
+              <p className="text-xl mb-8 text-white/90">
                 Let us restore your property to its best condition with our professional cleaning services.
               </p>
               <Button variant="prowash-secondary" size="xl">

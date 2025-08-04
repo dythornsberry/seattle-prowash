@@ -19,7 +19,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-brand-navy text-brand-white">
+    <footer className="bg-brand-navy text-white">
       {/* Mini CTA Bar */}
       <div className="bg-brand-yellow text-brand-navy py-4">
         <div className="container mx-auto px-4">
@@ -45,10 +45,10 @@ const Footer = () => {
             {/* Company Info */}
             <div className="space-y-6">
               <div>
-                <h2 className="text-2xl font-bold mb-2 text-brand-white">
+                <h2 className="text-2xl font-bold mb-2 text-white">
                   Seattle <span className="text-brand-yellow">ProWash</span>
                 </h2>
-                <p className="text-brand-white/80 leading-relaxed">
+                <p className="text-white/80 leading-relaxed">
                   Kenmore's trusted roof & gutter cleaning specialists. Protecting Pacific Northwest homes with safe, effective cleaning solutions.
                 </p>
               </div>
@@ -61,7 +61,7 @@ const Footer = () => {
                   </div>
                   <span className="font-bold">5.0</span>
                 </div>
-                <p className="text-sm text-brand-white/80">180+ Google Reviews</p>
+                <p className="text-sm text-white/80">180+ Google Reviews</p>
                 <Button variant="prowash-secondary" size="sm" className="mt-2 text-xs">
                   Read Reviews
                 </Button>
@@ -76,7 +76,7 @@ const Footer = () => {
                   <li key={index}>
                     <a 
                       href="#services" 
-                      className="text-brand-white/80 hover:text-brand-yellow transition-colors duration-250 text-sm"
+                      className="text-white/80 hover:text-brand-yellow transition-colors duration-250 text-sm"
                     >
                       {service}
                     </a>
@@ -90,13 +90,13 @@ const Footer = () => {
               <h3 className="text-lg font-bold mb-6">Service Areas</h3>
               <div className="space-y-2">
                 {serviceAreas.map((area, index) => (
-                  <span key={index} className="inline-block text-sm text-brand-white/80 mr-3 mb-1">
+                  <span key={index} className="inline-block text-sm text-white/80 mr-3 mb-1">
                     {area}
                     {index < serviceAreas.length - 1 && ","}
                   </span>
                 ))}
               </div>
-              <p className="text-xs text-brand-white/60 mt-4">
+              <p className="text-xs text-white/60 mt-4">
                 Serving 25-mile radius from Kenmore, WA
               </p>
             </div>
@@ -112,7 +112,7 @@ const Footer = () => {
                     <a href="tel:206-752-6690" className="font-semibold hover:text-brand-yellow transition-colors">
                       206-752-6690
                     </a>
-                    <p className="text-xs text-brand-white/60">Call or text anytime</p>
+                    <p className="text-xs text-white/60">Call or text anytime</p>
                   </div>
                 </div>
                 
@@ -122,7 +122,7 @@ const Footer = () => {
                     <a href="mailto:seattleprowash@gmail.com" className="text-sm hover:text-brand-orange transition-colors">
                       seattleprowash@gmail.com
                     </a>
-                    <p className="text-xs text-brand-white/60">We reply within 1 hour</p>
+                    <p className="text-xs text-white/60">We reply within 1 hour</p>
                   </div>
                 </div>
                 
@@ -130,7 +130,7 @@ const Footer = () => {
                   <MapPin className="w-5 h-5 text-brand-yellow flex-shrink-0 mt-1" />
                   <div>
                     <p className="text-sm">Kenmore, WA</p>
-                    <p className="text-xs text-brand-white/60">Licensed & Insured</p>
+                    <p className="text-xs text-white/60">Licensed & Insured</p>
                   </div>
                 </div>
               </div>
@@ -144,17 +144,17 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-brand-white/20 py-6">
+      <div className="border-t border-white/20 py-6">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-brand-white/60">
+            <p className="text-sm text-white/60">
               © {currentYear} Seattle ProWash. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
-              <a href="#privacy" className="text-brand-white/60 hover:text-brand-white transition-colors">
+              <a href="#privacy" className="text-white/60 hover:text-white transition-colors">
                 Privacy Policy
               </a>
-              <a href="#terms" className="text-brand-white/60 hover:text-brand-white transition-colors">
+              <a href="#terms" className="text-white/60 hover:text-white transition-colors">
                 Terms of Service
               </a>
             </div>

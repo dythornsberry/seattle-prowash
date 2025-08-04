@@ -41,11 +41,11 @@ const About = () => {
         {/* Hero Section */}
         <section className="section-spacing bg-gradient-to-b from-brand-navy to-brand-navy/90">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center text-brand-white fade-up">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-brand-white">
+            <div className="max-w-4xl mx-auto text-center fade-up">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
                 Meet Dylan – Owner of Seattle ProWash
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-brand-white">
+              <p className="text-xl md:text-2xl mb-8 text-white/90">
                 Transforming Pacific Northwest properties since 2022 with expert soft washing and pressure washing services.
               </p>
             </div>
@@ -242,10 +242,10 @@ const About = () => {
         <section className="section-spacing bg-brand-navy">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center fade-up">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-white mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Proudly Serving the Pacific Northwest
               </h2>
-              <p className="text-xl text-brand-white/90 mb-8">
+              <p className="text-xl text-white/90 mb-8">
                 We provide professional cleaning services throughout the greater Seattle area.
               </p>
               
