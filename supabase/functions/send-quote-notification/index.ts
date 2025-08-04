@@ -48,7 +48,7 @@ const handler = async (req: Request): Promise<Response> => {
     
     if (ownerEmailResponse.error) {
       console.error('Owner email failed:', ownerEmailResponse.error);
-      throw new Error(`Owner email failed: ${ownerEmailResponse.error.message}`);
+      throw new Error(`Owner email failed: ${JSON.stringify(ownerEmailResponse.error)}`);
     }
 
     // Send confirmation to customer
