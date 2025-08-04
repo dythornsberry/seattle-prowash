@@ -24,6 +24,13 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				
+				/* Seattle ProWash Brand Colors */
+				'brand-navy': 'hsl(var(--brand-navy))',
+				'brand-yellow': 'hsl(var(--brand-yellow))',
+				'brand-white': 'hsl(var(--brand-white))',
+				'brand-gray-light': 'hsl(var(--brand-gray-light))',
+				
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -62,6 +69,14 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			fontFamily: {
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+			},
+			spacing: {
+				'18': '4.5rem', /* 72px */
+				'24': '6rem',   /* 96px - adjusted for tablet */
+				'32': '8rem',   /* 128px - adjusted for desktop */
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
