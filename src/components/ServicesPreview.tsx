@@ -33,8 +33,8 @@ const ServicesPreview = () => {
       title: "Pressure Washing",
       price: "$249+",
       bonus: "Driveways & Patios",
-      description: "High-pressure cleaning removes oil stains, rust, and eliminates slip hazards.",
-      features: ["Oil & rust removal", "Slip hazard elimination", "Concrete restoration"]
+      description: "High-pressure cleaning removes dirt, grime, and eliminates slip hazards on concrete surfaces.",
+      features: ["Dirt & grime removal", "Slip hazard elimination", "Concrete restoration"]
     }
   ];
 
