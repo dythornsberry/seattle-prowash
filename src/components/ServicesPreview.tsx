@@ -94,9 +94,14 @@ const ServicesPreview = () => {
         </div>
 
         <div className="text-center mt-12 fade-up">
-          <p className="text-sm text-muted-foreground mb-6">
-            *Final price confirmed after on-site walk-around or detailed photos.
-          </p>
+          <div className="bg-brand-orange/10 rounded-lg p-6 max-w-2xl mx-auto mb-8">
+            <p className="text-lg font-semibold text-brand-blue mb-2">
+              ⚠️ Important Pricing Information
+            </p>
+            <p className="text-brand-gray-text">
+              Final price confirmed after on-site walk-around or detailed photos. Starting prices shown for standard residential properties.
+            </p>
+          </div>
           <Button variant="prowash-primary" size="xl">
             Get My Free Quote Today
           </Button>

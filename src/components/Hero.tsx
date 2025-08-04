@@ -36,15 +36,28 @@ const Hero = () => {
               </Button>
             </div>
 
-            {/* Trust Indicators */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-6 pt-8">
-              <div className="flex items-center gap-2 text-brand-blue">
-                <Shield className="w-5 h-5 text-brand-orange" />
-                <span className="font-semibold">Fully Insured</span>
+            {/* Trust Indicators - Simplified to 3 core signals */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-8 pt-8">
+              <div className="flex items-center gap-3 text-brand-blue">
+                <Shield className="w-6 h-6 text-brand-orange" />
+                <div>
+                  <div className="font-bold">Fully Insured</div>
+                  <div className="text-sm text-brand-gray-text">Protection</div>
+                </div>
               </div>
-              <div className="flex items-center gap-2 text-brand-blue">
-                <Award className="w-5 h-5 text-brand-orange" />
-                <span className="font-semibold">100% Satisfaction</span>
+              <div className="flex items-center gap-3 text-brand-blue">
+                <Award className="w-6 h-6 text-brand-orange" />
+                <div>
+                  <div className="font-bold">100% Satisfaction</div>
+                  <div className="text-sm text-brand-gray-text">Guaranteed Results</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 text-brand-blue">
+                <Star className="w-6 h-6 fill-brand-orange text-brand-orange" />
+                <div>
+                  <div className="font-bold">180+ 5-Star Reviews</div>
+                  <div className="text-sm text-brand-gray-text">Trusted by Neighbors</div>
+                </div>
               </div>
             </div>
           </div>

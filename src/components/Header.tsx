@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
+import logoImage from "@/assets/seattle-prowash-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,9 +21,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-xl md:text-2xl font-bold text-brand-navy">
-              Seattle <span className="text-brand-orange">ProWash</span>
-            </h1>
+            <img 
+              src={logoImage} 
+              alt="Seattle ProWash - Professional Roof & Gutter Cleaning" 
+              className="h-12 md:h-16 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
