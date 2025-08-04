@@ -212,6 +212,22 @@ const Gallery = () => {
         location: "Lake Forest Park", 
         description: "Incredible transformation of concrete patio - professional pressure washing reveals clean, like-new surface",
         service: "Pressure Washing"
+      },
+      { 
+        src: "/lovable-uploads/61bfb1f1-0bee-423a-be7a-c49142b6fd6b.png", 
+        alt: "Front walkway before pressure washing showing heavy moss and staining", 
+        title: "Front Walkway Restoration - Before", 
+        location: "Seattle Area", 
+        description: "Heavily stained concrete walkway with moss growth requiring professional pressure washing treatment",
+        service: "Pressure Washing"
+      },
+      { 
+        src: "/lovable-uploads/7a0d1b2c-03a2-4054-8cf2-6bdc1dca519c.png", 
+        alt: "Clean front walkway after professional pressure washing transformation", 
+        title: "Front Walkway Restoration - After", 
+        location: "Seattle Area", 
+        description: "Dramatic transformation of front walkway - professional pressure washing removes years of buildup and staining",
+        service: "Pressure Washing"
       }
     ],
     "Commercial": [

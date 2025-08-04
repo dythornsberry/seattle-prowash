@@ -67,6 +67,17 @@ const BeforeAfterSlider = () => {
       beforeAlt: "Asphalt roof heavily covered in moss and debris before professional cleaning",
       afterAlt: "Clean asphalt roof after professional moss removal and soft wash treatment",
       completionDate: "January 2025"
+    },
+    {
+      id: 6,
+      title: "Front Walkway Revival - Seattle",
+      location: "Seattle Area, WA",
+      service: "Concrete Walkway Pressure Washing",
+      beforeImage: "/lovable-uploads/61bfb1f1-0bee-423a-be7a-c49142b6fd6b.png",
+      afterImage: "/lovable-uploads/7a0d1b2c-03a2-4054-8cf2-6bdc1dca519c.png",
+      beforeAlt: "Front walkway before pressure washing showing heavy moss and staining",
+      afterAlt: "Clean front walkway after professional pressure washing transformation",
+      completionDate: "January 2025"
     }
   ];
 
