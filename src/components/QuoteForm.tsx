@@ -76,7 +76,8 @@ const QuoteForm = () => {
       
       // Send email notifications
       try {
-        await supabase.functions.invoke('send-quote-notification', {
+        console.log('Calling send-quote-notification edge function...');
+        const emailResult = await supabase.functions.invoke('send-quote-notification', {
           body: {
             name: formData.name,
             phone: formData.phone,
@@ -86,9 +87,23 @@ const QuoteForm = () => {
             message: formData.message,
           }
         });
+        
+        console.log('Email function result:', emailResult);
+        
+        if (emailResult.error) {
+          console.error('Edge function returned error:', emailResult.error);
+          throw emailResult.error;
+        }
       } catch (emailError) {
         console.error('Email notification failed:', emailError);
-        // Don't fail the entire form submission if email fails
+        // Show user that email failed but lead was saved
+        toast({
+          title: "Quote Saved - Email Issue",
+          description: "Your quote was saved but we had trouble sending notifications. Please call 206-752-6690.",
+          variant: "destructive",
+        });
+        setIsSubmitting(false);
+        return;
       }
       
       toast({
