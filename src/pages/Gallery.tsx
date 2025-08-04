@@ -61,6 +61,14 @@ const Gallery = () => {
         location: "Kirkland", 
         description: "Professional roof cleaning specialist at work",
         service: "Roof Cleaning"
+      },
+      { 
+        src: "/metal-roof-cleaning-before-after-2.jpg", 
+        alt: "Metal roof moss removal and cleaning transformation", 
+        title: "Metal Roof Moss Removal", 
+        location: "Seattle Area", 
+        description: "Complete metal roof restoration - moss removal and soft wash cleaning before and after",
+        service: "Roof Cleaning"
       }
     ],
     "House Washing": [
