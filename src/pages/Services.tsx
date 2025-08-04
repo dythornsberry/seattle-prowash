@@ -6,11 +6,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Phone, Droplet, Home, Zap, Car } from "lucide-react";
 
-// Import service images
-import roofMossRemoval from "@/assets/roof-moss-removal-detailed-before-after.jpg";
+// Import service images - optimized versions
+import roofMossRemoval from "@/assets/roof-cleaning-before-after-optimized.jpg";
 import gutterCleaning from "@/assets/gutter-cleaning-before-after.jpg";
-import houseSoftwash from "@/assets/house-softwash-before-after.jpg";
-import pressureWashing from "@/assets/patio-pressure-washing-before-after.jpg";
+import houseSoftwash from "@/assets/house-washing-before-after-optimized.jpg";
+import pressureWashing from "@/assets/patio-cleaning-before-after-optimized.jpg";
 
 const Services = () => {
   // Intersection Observer for fade-up animations
