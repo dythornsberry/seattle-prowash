@@ -27,6 +27,7 @@ const handler = async (req: Request): Promise<Response> => {
     const { name, phone, email, zipCode, service, message }: QuoteRequest = await req.json();
 
     // Send notification to business owner
+    console.log('Attempting to send owner notification to seattleprowash@gmail.com');
     const ownerEmailResponse = await resend.emails.send({
       from: "Seattle ProWash <onboarding@resend.dev>",
       to: ["seattleprowash@gmail.com"],
@@ -43,7 +44,15 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
+    console.log('Owner email response:', ownerEmailResponse);
+    
+    if (ownerEmailResponse.error) {
+      console.error('Owner email failed:', ownerEmailResponse.error);
+      throw new Error(`Owner email failed: ${ownerEmailResponse.error.message}`);
+    }
+
     // Send confirmation to customer
+    console.log('Attempting to send customer confirmation to:', email);
     const customerEmailResponse = await resend.emails.send({
       from: "Seattle ProWash <onboarding@resend.dev>",
       to: [email],
@@ -67,6 +76,13 @@ const handler = async (req: Request): Promise<Response> => {
         📧 seattleprowash@gmail.com</p>
       `,
     });
+
+    console.log('Customer email response:', customerEmailResponse);
+    
+    if (customerEmailResponse.error) {
+      console.error('Customer email failed:', customerEmailResponse.error);
+      // Don't throw error for customer email failure, but log it
+    }
 
     console.log("Emails sent successfully:", { ownerEmailResponse, customerEmailResponse });
 
