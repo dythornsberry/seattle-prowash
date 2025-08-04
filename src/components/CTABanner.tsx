@@ -13,11 +13,6 @@ const CTABanner = () => {
       <div className="container mx-auto px-4 relative">
         <div className="text-center space-y-8 fade-up">
           <div className="space-y-4">
-            <div className="inline-flex items-center gap-2 bg-orange-400/20 text-orange-400 px-4 py-2 rounded-full text-sm font-semibold">
-              <Clock className="w-4 h-4" />
-              Limited Time Offer
-            </div>
-            
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
               Free Same-Day Estimates
             </h2>
