@@ -90,7 +90,7 @@ const Services = () => {
         "We use your water source (standard for soft washing)"
       ],
       benefits: [
-        "Safe on all siding materials (vinyl, wood, fiber cement)",
+        "Safe on all siding materials (vinyl, wood, hardi-board siding)",
         "Removes mold, mildew, and organic stains completely", 
         "Environmentally friendly cleaning solutions",
         "Dramatically improves home appearance"
