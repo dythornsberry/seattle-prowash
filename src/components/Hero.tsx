@@ -16,7 +16,7 @@ const Hero = () => {
                 Serving Kenmore, Bothell, Kirkland & Nearby
               </h1>
               
-              <p className="text-xl md:text-2xl text-brand-gray-text font-medium">
+              <p className="text-xl md:text-2xl text-brand-gray-text font-medium leading-relaxed">
                 Protect your home from moss, mold, and grime—without climbing a ladder.
               </p>
             </div>
