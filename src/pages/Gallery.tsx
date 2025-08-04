@@ -126,6 +126,22 @@ const Gallery = () => {
         location: "Seattle Area", 
         description: "Professional team member applying soft wash treatment to asphalt roof - showing the cleaning process in action",
         service: "Roof Cleaning"
+      },
+      { 
+        src: "/lovable-uploads/0b5d9cfa-52bb-4f34-b0ff-3ddd5f38c3b4.png", 
+        alt: "Asphalt roof soft wash moss removal before and after showing dramatic transformation", 
+        title: "Asphalt Roof Moss Removal", 
+        location: "Seattle Area", 
+        description: "Professional soft wash moss removal on asphalt shingle roof - gentle yet effective treatment restores roof appearance",
+        service: "Roof Cleaning"
+      },
+      { 
+        src: "/lovable-uploads/06729db5-d286-4da3-88bf-5096689d3383.png", 
+        alt: "Roof soft wash in progress showing treatment application on asphalt shingles", 
+        title: "Roof Soft Wash Treatment in Progress", 
+        location: "Seattle Area", 
+        description: "Professional roof soft wash application in action - specialized cleaning solution safely treating asphalt shingles",
+        service: "Roof Cleaning"
       }
     ],
     "House Washing": [
