@@ -6,35 +6,33 @@ const ServicesPreview = () => {
   const services = [
     {
       icon: Droplet,
-      title: "Roof Moss Removal",
-      price: "$499+",
-      bonus: "FREE Gutter Cleaning",
-      description: "Safe soft-wash kills moss spores plus preventative treatment to stop regrowth—extends shingle life.",
-      features: ["Low-pressure safe process", "Kills moss at the root", "Preventative treatment included", "Extends roof lifespan"]
-    },
-    {
-      icon: Home,
-      title: "Gutter Cleaning",
-      price: "$249+",
-      bonus: "Downspout Flush Included",
-      description: "Complete gutter system cleaning prevents water damage and foundation issues.",
-      features: ["Debris removal", "Downspout clearing", "Water damage prevention"]
+      title: "Roof & Gutter Cleaning",
+      description: "Moss removal + full gutter cleanouts, done the right way.",
+      features: [
+        "Brush and blow moss and roof debris",
+        "Apply soft wash treatment (manufacturer-recommended method)",
+        "Clean out gutters, flush downspouts, ground cleanup, and rinse siding if needed"
+      ]
     },
     {
       icon: Zap,
-      title: "House Soft Wash",
-      price: "$499+",
-      bonus: "Safe on All Siding",
-      description: "Gentle cleaning removes algae, mildew, and dirt to boost your home's curb appeal.",
-      features: ["Safe on all materials", "Removes algae & mildew", "Boosts curb appeal"]
+      title: "Pressure Washing",
+      description: "Restore driveways, patios, decks, and walkways.",
+      features: [
+        "Clean concrete, pavers, fencing, and other flatwork",
+        "Use professional surface cleaner for streak-free results",
+        "Great for removing algae, moss, oil, and grime"
+      ]
     },
     {
-      icon: Car,
-      title: "Pressure Washing",
-      price: "$249+",
-      bonus: "Driveways & Patios",
-      description: "High-pressure cleaning removes moss buildup and eliminates dangerous slip hazards on concrete surfaces.",
-      features: ["Moss removal from concrete", "Slip hazard elimination", "Concrete restoration"]
+      icon: Home,
+      title: "House Washing",
+      description: "Soft wash cleaning for your home's full exterior.",
+      features: [
+        "Cleans siding, trim, soffits, eaves, exterior gutters, windows & doors",
+        "2nd-story homes included",
+        "We use your water source (standard for soft washing)"
+      ]
     }
   ];
 
@@ -50,7 +48,7 @@ const ServicesPreview = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
@@ -59,32 +57,33 @@ const ServicesPreview = () => {
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-orange/10 rounded-full mb-4 mx-auto group-hover:bg-brand-orange/20 transition-colors">
                     <IconComponent className="w-8 h-8 text-brand-orange" />
                   </div>
-                  <CardTitle className="text-xl font-bold text-brand-blue">
+                  <CardTitle className="text-xl font-bold text-brand-blue mb-3">
                     {service.title}
                   </CardTitle>
-                  <div className="space-y-1">
-                    <div className="text-2xl font-bold text-brand-blue">{service.price}</div>
-                    <div className="text-sm text-brand-orange font-semibold">{service.bonus}</div>
-                  </div>
+                  <CardDescription className="text-center text-base font-medium text-brand-gray-text">
+                    {service.description}
+                  </CardDescription>
                 </CardHeader>
                 
                 <CardContent className="space-y-4">
-                  <CardDescription className="text-center">
-                    {service.description}
-                  </CardDescription>
-                  
-                  <ul className="space-y-2">
+                  <ul className="space-y-3">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-muted-foreground">
-                        <div className="w-1.5 h-1.5 bg-brand-orange rounded-full mr-3 flex-shrink-0"></div>
+                      <li key={idx} className="flex items-start text-sm text-muted-foreground">
+                        <div className="w-1.5 h-1.5 bg-brand-orange rounded-full mr-3 flex-shrink-0 mt-2"></div>
                         {feature}
                       </li>
                     ))}
                   </ul>
                   
-                  <div className="pt-4">
+                  <div className="pt-4 border-t border-border">
+                    <p className="text-xs text-brand-gray-text text-center font-medium">
+                      Free Estimates · Call or Text 206.752.6690
+                    </p>
+                  </div>
+                  
+                  <div className="pt-2">
                     <Button variant="prowash-secondary" className="w-full" size="sm">
-                      Learn More
+                      Get Free Quote
                     </Button>
                   </div>
                 </CardContent>
@@ -96,10 +95,10 @@ const ServicesPreview = () => {
         <div className="text-center mt-12 fade-up">
           <div className="bg-brand-orange/10 rounded-lg p-6 max-w-2xl mx-auto mb-8">
             <p className="text-lg font-semibold text-brand-blue mb-2">
-              ⚠️ Important Pricing Information
+              Ready to Get Started?
             </p>
             <p className="text-brand-gray-text">
-              Final price confirmed after on-site walk-around or detailed photos. Starting prices shown for standard residential properties.
+              Call or text us today for your free estimate. We'll walk your property and provide an accurate quote for the services you need.
             </p>
           </div>
           <Button variant="prowash-primary" size="xl">
