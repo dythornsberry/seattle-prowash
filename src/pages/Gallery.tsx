@@ -144,6 +144,22 @@ const Gallery = () => {
         location: "Seattle Area", 
         description: "Professional house siding soft wash - removing dirt, algae, and staining to restore clean appearance",
         service: "House Washing"
+      },
+      { 
+        src: "/lovable-uploads/da123d29-831c-41a6-be6e-0dab3deef9f0.png", 
+        alt: "House soft wash before and after showing siding transformation", 
+        title: "Professional House Soft Wash", 
+        location: "Seattle Area", 
+        description: "Complete house exterior soft wash - gentle yet effective cleaning that restores siding appearance",
+        service: "House Washing"
+      },
+      { 
+        src: "/lovable-uploads/11602706-3a5c-4674-b4c2-f6957b0984d2.png", 
+        alt: "Professional technician performing house soft wash service", 
+        title: "House Soft Wash in Progress", 
+        location: "Seattle Area", 
+        description: "Our experienced technician applying soft wash treatment to exterior siding for optimal results",
+        service: "House Washing"
       }
     ],
     "Gutter Cleaning": [
@@ -169,6 +185,14 @@ const Gallery = () => {
         title: "Complete Gutter System Cleaning", 
         location: "Seattle Area", 
         description: "Professional gutter cleaning transformation - removing organic buildup, debris, and restoring proper water flow",
+        service: "Gutter Cleaning"
+      },
+      { 
+        src: "/lovable-uploads/e5ca4024-1728-4972-8b36-99d8c320f4e4.png", 
+        alt: "Gutter brightening before and after showing dramatic restoration", 
+        title: "Gutter Brightening Service", 
+        location: "Seattle Area", 
+        description: "Professional gutter brightening service - restoring gutters to original color and brightness with specialized cleaning",
         service: "Gutter Cleaning"
       }
     ],
@@ -299,6 +323,38 @@ const Gallery = () => {
         title: "Retaining Wall Restoration In Progress", 
         location: "Seattle Area", 
         description: "Professional retaining wall pressure washing in action - dramatic difference between cleaned and uncleaned sections",
+        service: "Pressure Washing"
+      },
+      { 
+        src: "/lovable-uploads/3ea4a872-b0d7-4474-bd88-15f516d47269.png", 
+        alt: "Concrete staircase before and after pressure washing showing dramatic transformation", 
+        title: "Concrete Staircase Deep Clean", 
+        location: "Seattle Area", 
+        description: "Professional concrete staircase pressure washing - removing moss, debris, and organic buildup for dramatic results",
+        service: "Pressure Washing"
+      },
+      { 
+        src: "/lovable-uploads/c3386497-89a0-4539-b130-d2f2a5b71098.png", 
+        alt: "Professional technician using surface cleaner on driveway", 
+        title: "Surface Cleaner in Action", 
+        location: "Seattle Area", 
+        description: "Our experienced technician using professional surface cleaning equipment for even, thorough results",
+        service: "Pressure Washing"
+      },
+      { 
+        src: "/lovable-uploads/e71dc1ab-f8e0-4119-955e-97c1575a9493.png", 
+        alt: "Professional technician with surface cleaner equipment on patio", 
+        title: "Professional Surface Cleaning", 
+        location: "Seattle Area", 
+        description: "Expert technician performing professional surface cleaning with specialized equipment for optimal results",
+        service: "Pressure Washing"
+      },
+      { 
+        src: "/lovable-uploads/f5ad7abe-66c3-4d28-9e13-0b6502f2accb.png", 
+        alt: "Paver patio pressure washing before and after showing color restoration", 
+        title: "Paver Patio Color Restoration", 
+        location: "Seattle Area", 
+        description: "Amazing transformation of paver patio - professional pressure washing brings back original colors and beauty",
         service: "Pressure Washing"
       }
     ],
