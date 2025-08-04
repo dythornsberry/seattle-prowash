@@ -56,6 +56,17 @@ const BeforeAfterSlider = () => {
       beforeAlt: "Severely neglected concrete patio with heavy moss and algae buildup",
       afterAlt: "Dramatically restored concrete patio after intensive pressure washing",
       completionDate: "January 2025"
+    },
+    {
+      id: 5,
+      title: "Asphalt Roof Moss Recovery - Seattle",
+      location: "Seattle, WA",
+      service: "Roof Moss Removal + Soft Wash",
+      beforeImage: "/lovable-uploads/7cdfb095-76e6-4419-b395-a8272819a23b.png",
+      afterImage: "/lovable-uploads/cd85dd92-8acb-405d-a73c-44650e962bd8.png",
+      beforeAlt: "Asphalt roof heavily covered in moss and debris before professional cleaning",
+      afterAlt: "Clean asphalt roof after professional moss removal and soft wash treatment",
+      completionDate: "January 2025"
     }
   ];
 

@@ -86,6 +86,22 @@ const Gallery = () => {
         location: "Seattle Area", 
         description: "Intensive metal roof cleaning showing the cleaning process and dramatic results - before and after",
         service: "Roof Cleaning"
+      },
+      { 
+        src: "/lovable-uploads/7cdfb095-76e6-4419-b395-a8272819a23b.png", 
+        alt: "Asphalt roof heavily covered in moss and debris before professional cleaning", 
+        title: "Asphalt Roof Moss Removal - Before", 
+        location: "Seattle, WA", 
+        description: "Severely moss-covered asphalt roof with debris accumulation requiring professional soft wash treatment",
+        service: "Roof Cleaning"
+      },
+      { 
+        src: "/lovable-uploads/cd85dd92-8acb-405d-a73c-44650e962bd8.png", 
+        alt: "Clean asphalt roof after professional moss removal and soft wash treatment", 
+        title: "Asphalt Roof Moss Removal - After", 
+        location: "Seattle, WA", 
+        description: "Dramatic transformation of asphalt roof after professional moss removal and soft wash cleaning",
+        service: "Roof Cleaning"
       }
     ],
     "House Washing": [
