@@ -74,6 +74,23 @@ const QuoteForm = () => {
 
       console.log('Lead saved successfully:', data);
       
+      // Send email notifications
+      try {
+        await supabase.functions.invoke('send-quote-notification', {
+          body: {
+            name: formData.name,
+            phone: formData.phone,
+            email: formData.email,
+            zipCode: formData.zipCode,
+            service: formData.service,
+            message: formData.message,
+          }
+        });
+      } catch (emailError) {
+        console.error('Email notification failed:', emailError);
+        // Don't fail the entire form submission if email fails
+      }
+      
       toast({
         title: "Quote Request Received!",
         description: "We'll reply within 1 business hour with your personalized estimate.",
