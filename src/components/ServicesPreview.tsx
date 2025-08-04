@@ -19,11 +19,11 @@ const ServicesPreview = () => {
       title: "Pressure Washing",
       description: "Restore driveways, patios, walkways, and concrete surfaces.",
       features: [
-        "Driveways and concrete cleaning",
-        "Patios and walkways restoration", 
-        "Professional surface cleaner for streak-free results",
-        "Great for removing algae, moss, oil, and grime"
-      ]
+        "Driveways, patios, walkways, and concrete",
+        "Removes moss, algae, oil, and grime buildup",
+        "Safe, streak-free results with professional equipment"
+      ],
+      socialProof: "5-star rated by 180+ Seattle-area homeowners"
     },
     {
       icon: Home,
@@ -75,6 +75,14 @@ const ServicesPreview = () => {
                       </li>
                     ))}
                   </ul>
+                  
+                  {service.socialProof && (
+                    <div className="pt-2">
+                      <p className="text-xs text-brand-orange text-center font-medium">
+                        {service.socialProof}
+                      </p>
+                    </div>
+                  )}
                   
                   <div className="pt-4 border-t border-border">
                     <p className="text-xs text-brand-gray-text text-center font-medium">
