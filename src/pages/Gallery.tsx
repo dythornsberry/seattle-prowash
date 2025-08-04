@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
-// Import only confirmed existing images - using a conservative approach
+// Import only actual pressure washing business photos
 import afterConcrete3 from "@/assets/after-concrete-3.jpg";
 import afterHouse2 from "@/assets/after-house-2.jpg";
 import afterRoof1 from "@/assets/after-roof-1.jpg";
@@ -15,6 +15,12 @@ import dylanOwnerPatioPressureWashing from "@/assets/dylan-owner-patio-pressure-
 import dylanRoofWork from "@/assets/dylan-roof-work.jpg";
 import heroCleaningService from "@/assets/hero-cleaning-service.jpg";
 import prowashTruck from "@/assets/prowash-truck.jpg";
+import prowashTruckStreet from "@/assets/prowash-truck-street.jpg";
+import prowashTruckDriveway from "@/assets/prowash-truck-driveway.jpg";
+import technicianTruckPortrait from "@/assets/technician-truck-portrait.jpg";
+import technicianHoldingLadder from "@/assets/technician-holding-ladder.jpg";
+import technicianMovingLadder from "@/assets/technician-moving-ladder.jpg";
+import truckAtJobsite from "@/assets/truck-at-jobsite.jpg";
 
 const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -29,22 +35,28 @@ const Gallery = () => {
 
   const galleryImages = {
     "Roof Cleaning": [
-      { src: beforeRoof1, alt: "Roof before cleaning", title: "Roof - Before Treatment" },
-      { src: afterRoof1, alt: "Roof after cleaning", title: "Roof - After Treatment" },
-      { src: dylanRoofWork, alt: "Dylan working on roof cleaning", title: "Dylan - Roof Specialist" }
+      { src: beforeRoof1, alt: "Moss-covered roof before professional cleaning", title: "Roof Before - Moss Removal Needed" },
+      { src: afterRoof1, alt: "Clean, moss-free roof after Seattle ProWash treatment", title: "Roof After - Moss-Free & Protected" },
+      { src: dylanRoofWork, alt: "Dylan working on roof cleaning project", title: "Dylan - Roof Cleaning Specialist" }
     ],
     "House Washing": [
-      { src: beforeHouse2, alt: "House before cleaning", title: "House - Before Treatment" },
-      { src: afterHouse2, alt: "House after cleaning", title: "House - After Treatment" }
+      { src: beforeHouse2, alt: "Dirty house siding with algae and mildew", title: "House Before - Algae & Mildew Buildup" },
+      { src: afterHouse2, alt: "Clean, bright house exterior after soft washing", title: "House After - Soft Wash Restoration" },
+      { src: heroCleaningService, alt: "Professional house cleaning service in progress", title: "Professional House Washing" }
     ],
     "Pressure Washing": [
-      { src: beforeConcrete3, alt: "Concrete surface before cleaning", title: "Concrete - Before" },
-      { src: afterConcrete3, alt: "Concrete surface after cleaning", title: "Concrete - After" }
+      { src: beforeConcrete3, alt: "Dirty concrete driveway before pressure washing", title: "Concrete Before - Stained & Dirty" },
+      { src: afterConcrete3, alt: "Clean concrete surface after pressure washing", title: "Concrete After - Pressure Washed Clean" },
+      { src: dylanOwnerPatioPressureWashing, alt: "Dylan pressure washing patio surface", title: "Professional Pressure Washing" }
     ],
     "Team at Work": [
-      { src: dylanOwnerPatioPressureWashing, alt: "Dylan owner pressure washing patio", title: "Dylan - Owner in Action" },
-      { src: prowashTruck, alt: "Seattle ProWash truck", title: "Professional Equipment" },
-      { src: heroCleaningService, alt: "Professional cleaning service in action", title: "Professional Service" }
+      { src: prowashTruck, alt: "Seattle ProWash professional equipment truck", title: "Professional Equipment" },
+      { src: prowashTruckStreet, alt: "ProWash truck on service call", title: "On-Site Service" },
+      { src: prowashTruckDriveway, alt: "ProWash truck at residential job", title: "Residential Service" },
+      { src: technicianTruckPortrait, alt: "Professional technician with equipment", title: "Professional Team" },
+      { src: technicianHoldingLadder, alt: "Technician preparing equipment", title: "Equipment Setup" },
+      { src: technicianMovingLadder, alt: "Technician moving ladder for roof access", title: "Safety First" },
+      { src: truckAtJobsite, alt: "ProWash truck at residential jobsite", title: "Jobsite Setup" }
     ]
   };
 
