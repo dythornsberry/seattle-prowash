@@ -9,8 +9,8 @@ const ServicesPreview = () => {
       title: "Roof Moss Removal",
       price: "$499+",
       bonus: "FREE Gutter Cleaning",
-      description: "Safe soft-wash kills moss spores, extends shingle life, protects your investment.",
-      features: ["Low-pressure safe process", "Kills moss at the root", "Extends roof lifespan"]
+      description: "Safe soft-wash kills moss spores plus preventative treatment to stop regrowth—extends shingle life.",
+      features: ["Low-pressure safe process", "Kills moss at the root", "Preventative treatment included", "Extends roof lifespan"]
     },
     {
       icon: Home,
