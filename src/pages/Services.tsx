@@ -135,7 +135,13 @@ const Services = () => {
                 Detailed process breakdowns for roof cleaning, pressure washing, and house washing services across the Seattle area.
               </p>
               <div className="flex justify-center">
-                <Button variant="prowash-secondary" size="xl">
+                <Button 
+                  variant="prowash-secondary" 
+                  size="xl"
+                  onClick={() => {
+                    window.location.href = '/#contact';
+                  }}
+                >
                   Get Free Quote Today
                 </Button>
               </div>
@@ -211,7 +217,13 @@ const Services = () => {
                       </div>
 
                       <div className="flex flex-col sm:flex-row gap-4">
-                        <Button variant="prowash-primary" size="lg">
+                        <Button 
+                          variant="prowash-primary" 
+                          size="lg"
+                          onClick={() => {
+                            window.location.href = '/#contact';
+                          }}
+                        >
                           Get Quote for {service.title}
                         </Button>
                         <Button variant="prowash-phone" size="lg">
@@ -283,7 +295,13 @@ const Services = () => {
                 Get your free estimate today and see why Seattle area homeowners trust Seattle ProWash.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Button variant="prowash-secondary" size="xl">
+                <Button 
+                  variant="prowash-secondary" 
+                  size="xl"
+                  onClick={() => {
+                    window.location.href = '/#contact';
+                  }}
+                >
                   Get My Free Quote
                 </Button>
                 <Button variant="prowash-phone" size="xl">

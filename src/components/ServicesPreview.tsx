@@ -91,7 +91,14 @@ const ServicesPreview = () => {
                   </div>
                   
                   <div className="pt-2">
-                    <Button variant="prowash-secondary" className="w-full" size="sm">
+                    <Button 
+                      variant="prowash-secondary" 
+                      className="w-full" 
+                      size="sm"
+                      onClick={() => {
+                        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                    >
                       Get Free Quote
                     </Button>
                   </div>
@@ -113,7 +120,13 @@ const ServicesPreview = () => {
               Roof cleaning costs vary based on roof size and moss level. Most homes fall between $499–$999.
             </p>
           </div>
-          <Button variant="prowash-primary" size="xl">
+          <Button 
+            variant="prowash-primary" 
+            size="xl"
+            onClick={() => {
+              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
             Get My Free Quote Today
           </Button>
         </div>

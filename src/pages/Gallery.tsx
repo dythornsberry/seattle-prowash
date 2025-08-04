@@ -682,7 +682,13 @@ const Gallery = () => {
               <p className="text-xl mb-8 text-white/90">
                 Let us restore your property to its best condition with our professional cleaning services.
               </p>
-              <Button variant="prowash-secondary" size="xl">
+              <Button 
+                variant="prowash-secondary" 
+                size="xl"
+                onClick={() => {
+                  window.location.href = '/#contact';
+                }}
+              >
                 Get Your Free Quote Today
               </Button>
             </div>

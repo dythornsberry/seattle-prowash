@@ -31,7 +31,13 @@ const Hero = () => {
             {/* CTA */}
             <div className="space-y-3">
               <div className="flex justify-center lg:justify-start">
-                <Button variant="prowash-primary" size="xl">
+                <Button 
+                  variant="prowash-primary" 
+                  size="xl"
+                  onClick={() => {
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
                   Get My Free Quote
                 </Button>
               </div>

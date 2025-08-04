@@ -138,7 +138,14 @@ const Footer = () => {
                 </div>
               </div>
 
-              <Button variant="prowash-primary" size="lg" className="w-full">
+              <Button 
+                variant="prowash-primary" 
+                size="lg" 
+                className="w-full"
+                onClick={() => {
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Get Free Quote
               </Button>
             </div>

@@ -166,7 +166,13 @@ const About = () => {
                   Ready for a moss-free roof? Call or text 206‑752‑6690 or get your free quote today.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <Button variant="prowash-primary" size="xl">
+                  <Button 
+                    variant="prowash-primary" 
+                    size="xl"
+                    onClick={() => {
+                      window.location.href = '/#contact';
+                    }}
+                  >
                     Get Free Quote
                   </Button>
                   <Button variant="prowash-phone" size="xl">
@@ -262,7 +268,13 @@ const About = () => {
               </div>
 
               <div className="text-center">
-                <Button variant="prowash-secondary" size="xl">
+                <Button 
+                  variant="prowash-secondary" 
+                  size="xl"
+                  onClick={() => {
+                    window.location.href = '/#contact';
+                  }}
+                >
                   Get Your Free Quote Today
                 </Button>
               </div>
