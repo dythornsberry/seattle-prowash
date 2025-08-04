@@ -45,7 +45,7 @@ const About = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 Meet Dylan & The Seattle ProWash Team
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-brand-white/90">
+              <p className="text-xl md:text-2xl mb-8 text-brand-white">
                 Transforming Pacific Northwest properties since 2022 with expert soft washing and pressure washing services.
               </p>
             </div>
