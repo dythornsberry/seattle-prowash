@@ -95,8 +95,8 @@ const QuoteForm = () => {
                   <div className="flex items-center gap-3">
                     <Mail className="w-5 h-5 text-brand-yellow" />
                     <div>
-                      <a href="mailto:info@seattleprowash.com" className="text-sm text-brand-navy hover:text-brand-yellow transition-colors">
-                        info@seattleprowash.com
+                      <a href="mailto:seattleprowash@gmail.com" className="text-sm text-brand-navy hover:text-brand-yellow transition-colors">
+                        seattleprowash@gmail.com
                       </a>
                       <p className="text-sm text-muted-foreground">We reply within 1 hour</p>
                     </div>

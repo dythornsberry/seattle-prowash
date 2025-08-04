@@ -28,7 +28,7 @@ A high-performance website for Seattle ProWash, Kenmore's premier roof and gutte
 ## 📞 Contact Information
 - **Phone**: 206-752-6690 (tap-to-call enabled)
 - **Service Area**: Kenmore, Bothell, Kirkland, Shoreline (25-mile radius)
-- **Email**: info@seattleprowash.com
+- **Email**: seattleprowash@gmail.com
 
 ## 🚀 Quick Updates
 

@@ -119,8 +119,8 @@ const Footer = () => {
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-brand-yellow flex-shrink-0" />
                   <div>
-                    <a href="mailto:info@seattleprowash.com" className="text-sm hover:text-brand-yellow transition-colors">
-                      info@seattleprowash.com
+                    <a href="mailto:seattleprowash@gmail.com" className="text-sm hover:text-brand-yellow transition-colors">
+                      seattleprowash@gmail.com
                     </a>
                     <p className="text-xs text-brand-white/60">We reply within 1 hour</p>
                   </div>
