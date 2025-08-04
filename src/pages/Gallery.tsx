@@ -558,7 +558,35 @@ const Gallery = () => {
 
   const getFilteredImages = () => {
     if (activeCategory === "All") {
-      return Object.values(galleryImages).flat();
+      // Intersperse different service types for better variety in "All Projects"
+      const roofImages = galleryImages["Roof Cleaning"];
+      const houseImages = galleryImages["House Washing"];
+      const gutterImages = galleryImages["Gutter Cleaning"];
+      const pressureImages = galleryImages["Pressure Washing"];
+      const commercialImages = galleryImages["Commercial"];
+      const teamImages = galleryImages["Team at Work"];
+      
+      const interspersedImages = [];
+      const maxLength = Math.max(
+        roofImages.length,
+        houseImages.length,
+        gutterImages.length,
+        pressureImages.length,
+        commercialImages.length,
+        teamImages.length
+      );
+      
+      // Alternate between service types to create variety
+      for (let i = 0; i < maxLength; i++) {
+        if (i < roofImages.length) interspersedImages.push(roofImages[i]);
+        if (i < pressureImages.length) interspersedImages.push(pressureImages[i]);
+        if (i < houseImages.length) interspersedImages.push(houseImages[i]);
+        if (i < gutterImages.length) interspersedImages.push(gutterImages[i]);
+        if (i < commercialImages.length) interspersedImages.push(commercialImages[i]);
+        if (i < teamImages.length) interspersedImages.push(teamImages[i]);
+      }
+      
+      return interspersedImages;
     }
     return galleryImages[activeCategory] || [];
   };
