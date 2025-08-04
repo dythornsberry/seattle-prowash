@@ -4,69 +4,61 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
-// Roof Cleaning Images
-import roofMossRemovalBeforeAfter from "@/assets/roof-moss-removal-detailed-before-after.jpg";
-import roofSoftwashBeforeAfter from "@/assets/roof-softwash-before-after.jpg";
-import asphaltRoofMossBeforeAfter from "@/assets/asphalt-roof-moss-cleaning-before-after.jpg";
-import roofMossMoldMildewBeforeAfter from "@/assets/roof-moss-mold-mildew-removal-before-after.jpg";
-import metalRoofCleaningBeforeAfter from "@/assets/metal-roof-cleaning-before-after.jpg";
-import decraRoofCleaningBefore from "@/assets/decra-roof-cleaning-before.jpg";
-import decraRoofCleaningAfter from "@/assets/decra-roof-cleaning-after.jpg";
-import metalRoofCleaningBefore from "@/assets/metal-roof-cleaning-before.jpg";
-import metalRoofCleaningAfter from "@/assets/metal-roof-cleaning-after.jpg";
-import roofSoftwashInProgress from "@/assets/roof-softwash-in-progress.jpg";
-import roofSoftwashProgress2 from "@/assets/roof-softwash-progress-2.jpg";
-
-// House Washing Images
-import houseSoftwashBeforeAfter from "@/assets/house-softwash-before-after.jpg";
-import houseWashExteriorBeforeAfter from "@/assets/house-wash-exterior-before-after.jpg";
-import houseWashSidingBeforeAfter from "@/assets/house-wash-siding-before-after.jpg";
-import houseSidingSoftwashBeforeAfter from "@/assets/house-siding-softwash-before-after.jpg";
-import beforeHouse2 from "@/assets/before-house-2.jpg";
+// Import only existing images
+import afterConcrete3 from "@/assets/after-concrete-3.jpg";
 import afterHouse2 from "@/assets/after-house-2.jpg";
-import gutterCleaningBeforeAfter from "@/assets/gutter-cleaning-before-after.jpg";
-import gutterBrighteningBeforeAfter from "@/assets/gutter-brightening-before-after.jpg";
-import plasticAwningCleaningBefore from "@/assets/plastic-awning-cleaning-before.jpg";
-import plasticAwningCleaningAfter from "@/assets/plastic-awning-cleaning-after.jpg";
-
-// Pressure Washing Images
-import patioPressureWashingBeforeAfter from "@/assets/patio-pressure-washing-before-after.jpg";
-import disguistingPatioPressureWashingBeforeAfter from "@/assets/disgusting-patio-pressure-washing-before-after.jpg";
-import modernPatioPressureWashingBefore from "@/assets/modern-patio-pressure-washing-before.jpg";
-import modernPatioPressureWashingAfter from "@/assets/modern-patio-pressure-washing-after.jpg";
-import patioPressureWashingBefore from "@/assets/patio-pressure-washing-before.jpg";
-import patioPressureWashingAfter from "@/assets/patio-pressure-washing-after.jpg";
+import afterRoof1 from "@/assets/after-roof-1.jpg";
+import asphaltRoofMossCleaningBeforeAfter from "@/assets/asphalt-roof-moss-cleaning-before-after.jpg";
+import beforeConcrete3 from "@/assets/before-concrete-3.jpg";
+import beforeHouse2 from "@/assets/before-house-2.jpg";
+import beforeRoof1 from "@/assets/before-roof-1.jpg";
+import commercialBuildingWashing from "@/assets/commercial-building-washing.jpg";
+import commercialEntranceAfter from "@/assets/commercial-entrance-after.jpg";
+import commercialEntranceBefore from "@/assets/commercial-entrance-before.jpg";
 import concreteStairsBeforeAfter from "@/assets/concrete-stairs-before-after.jpg";
 import concreteStepsMossRemoval from "@/assets/concrete-steps-moss-removal.jpg";
-import beforeConcrete3 from "@/assets/before-concrete-3.jpg";
-import afterConcrete3 from "@/assets/after-concrete-3.jpg";
+import coveredDrivewayAfter from "@/assets/covered-driveway-after.jpg";
+import coveredDrivewayBefore from "@/assets/covered-driveway-before.jpg";
+import decraRoofCleaningAfter from "@/assets/decra-roof-cleaning-after.jpg";
+import decraRoofCleaningBefore from "@/assets/decra-roof-cleaning-before.jpg";
 import drivewayMossCleaningBeforeAfter from "@/assets/driveway-moss-cleaning-before-after.jpg";
 import drivewayPressureWashing from "@/assets/driveway-pressure-washing.jpg";
 import drivaySurfaceCleaner from "@/assets/driveway-surface-cleaner.jpg";
-import paverDrivewayCleaningBefore from "@/assets/paver-driveway-cleaning-before.jpg";
-import paverDrivewayCleaningAfter from "@/assets/paver-driveway-cleaning-after.jpg";
-import coveredDrivewayBefore from "@/assets/covered-driveway-before.jpg";
-import coveredDrivewayAfter from "@/assets/covered-driveway-after.jpg";
-import retainingWallPressureWash from "@/assets/retaining-wall-pressure-wash.jpg";
-import pressureWashingProgress from "@/assets/pressure-washing-progress.jpg";
-
-// Commercial Images
-import commercialBuildingWashing from "@/assets/commercial-building-washing.jpg";
-import commercialEntranceBefore from "@/assets/commercial-entrance-before.jpg";
-import commercialEntranceAfter from "@/assets/commercial-entrance-after.jpg";
-
-// Team at Work Images
 import dylanOwnerPatioPressureWashing from "@/assets/dylan-owner-patio-pressure-washing.jpg";
 import dylanRoofWork from "@/assets/dylan-roof-work.jpg";
-import technicianHouseWashing from "@/assets/technician-house-washing.jpg";
-import technicianTruckPortrait from "@/assets/technician-truck-portrait.jpg";
+import gutterBrighteningBeforeAfter from "@/assets/gutter-brightening-before-after.jpg";
+import gutterCleaningBeforeAfter from "@/assets/gutter-cleaning-before-after.jpg";
+import houseSidingSoftwashBeforeAfter from "@/assets/house-siding-softwash-before-after.jpg";
+import houseSoftwashBeforeAfter from "@/assets/house-softwash-before-after.jpg";
+import houseWashExteriorBeforeAfter from "@/assets/house-wash-exterior-before-after.jpg";
+import houseWashSidingBeforeAfter from "@/assets/house-wash-siding-before-after.jpg";
+import metalRoofCleaningAfter from "@/assets/metal-roof-cleaning-after.jpg";
+import metalRoofCleaningBefore from "@/assets/metal-roof-cleaning-before.jpg";
+import metalRoofCleaningBeforeAfter from "@/assets/metal-roof-cleaning-before-after.jpg";
+import modernPatioPressureWashingAfter from "@/assets/modern-patio-pressure-washing-after.jpg";
+import modernPatioPressureWashingBefore from "@/assets/modern-patio-pressure-washing-before.jpg";
+import patioPressureWashingAfter from "@/assets/patio-pressure-washing-after.jpg";
+import patioPressureWashingBefore from "@/assets/patio-pressure-washing-before.jpg";
+import patioPressureWashingBeforeAfter from "@/assets/patio-pressure-washing-before-after.jpg";
+import paverDrivewayCleaningAfter from "@/assets/paver-driveway-cleaning-after.jpg";
+import paverDrivewayCleaningBefore from "@/assets/paver-driveway-cleaning-before.jpg";
+import plasticAwningCleaningAfter from "@/assets/plastic-awning-cleaning-after.jpg";
+import plasticAwningCleaningBefore from "@/assets/plastic-awning-cleaning-before.jpg";
+import pressureWashingProgress from "@/assets/pressure-washing-progress.jpg";
+import prowashTruck from "@/assets/prowash-truck.jpg";
+import prowashTruckDriveway from "@/assets/prowash-truck-driveway.jpg";
+import prowashTruckStreet from "@/assets/prowash-truck-street.jpg";
+import retainingWallPressureWash from "@/assets/retaining-wall-pressure-wash.jpg";
+import roofMossMoldMildewRemovalBeforeAfter from "@/assets/roof-moss-mold-mildew-removal-before-after.jpg";
+import roofSoftwashBeforeAfter from "@/assets/roof-softwash-before-after.jpg";
+import roofSoftwashInProgress from "@/assets/roof-softwash-in-progress.jpg";
+import roofSoftwashProgress2 from "@/assets/roof-softwash-progress-2.jpg";
+import technicianApartmentSoftwash from "@/assets/technician-apartment-softwash.jpg";
 import technicianHoldingLadder from "@/assets/technician-holding-ladder.jpg";
+import technicianHousWashing from "@/assets/technician-house-washing.jpg";
 import technicianMovingLadder from "@/assets/technician-moving-ladder.jpg";
 import technicianSurfaceCleaning from "@/assets/technician-surface-cleaning.jpg";
-import technicianApartmentSoftwash from "@/assets/technician-apartment-softwash.jpg";
-import prowashTruck from "@/assets/prowash-truck.jpg";
-import prowashTruckStreet from "@/assets/prowash-truck-street.jpg";
-import prowashTruckDriveway from "@/assets/prowash-truck-driveway.jpg";
+import technicianTruckPortrait from "@/assets/technician-truck-portrait.jpg";
 import truckAtJobsite from "@/assets/truck-at-jobsite.jpg";
 
 const Gallery = () => {
@@ -83,15 +75,16 @@ const Gallery = () => {
 
   const galleryImages = {
     "Roof Cleaning": [
-      { src: roofMossRemovalBeforeAfter, alt: "Roof moss removal detailed before and after", title: "Complete Roof Moss Removal" },
+      { src: asphaltRoofMossCleaningBeforeAfter, alt: "Asphalt roof moss cleaning before and after", title: "Asphalt Roof Moss Treatment" },
+      { src: roofMossMoldMildewRemovalBeforeAfter, alt: "Roof moss mold and mildew removal before and after", title: "Moss, Mold & Mildew Removal" },
       { src: roofSoftwashBeforeAfter, alt: "Roof soft wash before and after transformation", title: "Soft Wash Roof Cleaning" },
-      { src: asphaltRoofMossBeforeAfter, alt: "Asphalt roof moss cleaning before and after", title: "Asphalt Roof Moss Treatment" },
-      { src: roofMossMoldMildewBeforeAfter, alt: "Roof moss mold and mildew removal before and after", title: "Moss, Mold & Mildew Removal" },
       { src: metalRoofCleaningBeforeAfter, alt: "Metal roof cleaning before and after", title: "Metal Roof Restoration" },
       { src: decraRoofCleaningBefore, alt: "Decra roof before cleaning", title: "Decra Roof - Before" },
       { src: decraRoofCleaningAfter, alt: "Decra roof after cleaning", title: "Decra Roof - After" },
       { src: metalRoofCleaningBefore, alt: "Metal roof before cleaning", title: "Metal Roof - Before" },
       { src: metalRoofCleaningAfter, alt: "Metal roof after cleaning", title: "Metal Roof - After" },
+      { src: beforeRoof1, alt: "Roof before cleaning", title: "Roof - Before Treatment" },
+      { src: afterRoof1, alt: "Roof after cleaning", title: "Roof - After Treatment" },
       { src: roofSoftwashInProgress, alt: "Roof soft wash cleaning in progress", title: "Soft Wash in Progress" },
       { src: roofSoftwashProgress2, alt: "Roof soft wash progress photo", title: "Professional Roof Treatment" }
     ],
@@ -109,7 +102,6 @@ const Gallery = () => {
     ],
     "Pressure Washing": [
       { src: patioPressureWashingBeforeAfter, alt: "Patio pressure washing before and after", title: "Patio Transformation" },
-      { src: disguistingPatioPressureWashingBeforeAfter, alt: "Heavily soiled patio pressure washing before and after", title: "Extreme Patio Cleaning" },
       { src: modernPatioPressureWashingBefore, alt: "Modern patio before pressure washing", title: "Modern Patio - Before" },
       { src: modernPatioPressureWashingAfter, alt: "Modern patio after pressure washing", title: "Modern Patio - After" },
       { src: patioPressureWashingBefore, alt: "Patio before pressure washing", title: "Patio - Before" },
@@ -136,7 +128,7 @@ const Gallery = () => {
     "Team at Work": [
       { src: dylanOwnerPatioPressureWashing, alt: "Dylan owner pressure washing patio", title: "Dylan - Owner in Action" },
       { src: dylanRoofWork, alt: "Dylan working on roof cleaning", title: "Dylan - Roof Specialist" },
-      { src: technicianHouseWashing, alt: "Technician house washing", title: "Professional House Washing" },
+      { src: technicianHousWashing, alt: "Technician house washing", title: "Professional House Washing" },
       { src: technicianTruckPortrait, alt: "Technician with truck portrait", title: "Team Member Portrait" },
       { src: technicianHoldingLadder, alt: "Technician holding ladder", title: "Professional Equipment Setup" },
       { src: technicianMovingLadder, alt: "Technician moving ladder", title: "Team in Action" },
