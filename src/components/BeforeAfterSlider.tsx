@@ -7,6 +7,30 @@ import beforeHouse2 from "@/assets/before-house-2.jpg";
 import afterHouse2 from "@/assets/after-house-2.jpg";
 import beforeConcrete3 from "@/assets/before-concrete-3.jpg";
 import afterConcrete3 from "@/assets/after-concrete-3.jpg";
+import asphaltRoofMossCleaningBeforeAfter from "@/assets/asphalt-roof-moss-cleaning-before-after.jpg";
+import concreteStairsBeforeAfter from "@/assets/concrete-stairs-before-after.jpg";
+import coveredDrivewayBefore from "@/assets/covered-driveway-before.jpg";
+import coveredDrivewayAfter from "@/assets/covered-driveway-after.jpg";
+import decraRoofCleaningBefore from "@/assets/decra-roof-cleaning-before.jpg";
+import decraRoofCleaningAfter from "@/assets/decra-roof-cleaning-after.jpg";
+import drivewayMossCleaningBeforeAfter from "@/assets/driveway-moss-cleaning-before-after.jpg";
+import gutterBrighteningBeforeAfter from "@/assets/gutter-brightening-before-after.jpg";
+import gutterCleaningBeforeAfter from "@/assets/gutter-cleaning-before-after.jpg";
+import houseSidingSoftwashBeforeAfter from "@/assets/house-siding-softwash-before-after.jpg";
+import houseSoftwashBeforeAfter from "@/assets/house-softwash-before-after.jpg";
+import houseWashExteriorBeforeAfter from "@/assets/house-wash-exterior-before-after.jpg";
+import houseWashSidingBeforeAfter from "@/assets/house-wash-siding-before-after.jpg";
+import metalRoofCleaningBeforeAfter from "@/assets/metal-roof-cleaning-before-after.jpg";
+import modernPatioBeforeAfter from "@/assets/modern-patio-pressure-washing-before.jpg";
+import modernPatioAfter from "@/assets/modern-patio-pressure-washing-after.jpg";
+import patioPressureWashingBeforeAfter from "@/assets/patio-pressure-washing-before-after.jpg";
+import paverDrivewayBefore from "@/assets/paver-driveway-cleaning-before.jpg";
+import paverDrivewayAfter from "@/assets/paver-driveway-cleaning-after.jpg";
+import plasticAwningBefore from "@/assets/plastic-awning-cleaning-before.jpg";
+import plasticAwningAfter from "@/assets/plastic-awning-cleaning-after.jpg";
+import roofMossMoldMildewBeforeAfter from "@/assets/roof-moss-mold-mildew-removal-before-after.jpg";
+import roofMossRemovalDetailedBeforeAfter from "@/assets/roof-moss-removal-detailed-before-after.jpg";
+import roofSoftwashBeforeAfter from "@/assets/roof-softwash-before-after.jpg";
 
 const BeforeAfterSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -14,36 +38,69 @@ const BeforeAfterSlider = () => {
   const beforeAfterProjects = [
     {
       id: 1,
-      title: "Roof Moss Removal - Kenmore Home",
+      title: "Asphalt Roof Moss Removal - Kenmore",
       location: "Kenmore, WA",
-      service: "Moss Removal + Gutter Cleaning",
-      beforeImage: beforeRoof1,
-      afterImage: afterRoof1,
-      beforeAlt: "Moss-covered roof before professional cleaning",
-      afterAlt: "Clean, moss-free roof after Seattle ProWash treatment",
+      service: "Moss Removal + Roof Treatment",
+      beforeImage: asphaltRoofMossCleaningBeforeAfter,
+      afterImage: asphaltRoofMossCleaningBeforeAfter,
+      beforeAlt: "Moss-covered asphalt roof before professional cleaning",
+      afterAlt: "Clean asphalt roof after moss removal treatment",
+      completionDate: "April 2024"
+    },
+    {
+      id: 2,
+      title: "House Exterior Soft Wash - Bothell",
+      location: "Bothell, WA", 
+      service: "Complete House Soft Wash",
+      beforeImage: houseWashExteriorBeforeAfter,
+      afterImage: houseWashExteriorBeforeAfter,
+      beforeAlt: "Dirty house exterior with algae and mildew buildup",
+      afterAlt: "Clean, bright house exterior after professional soft washing",
       completionDate: "March 2024"
     },
     {
-      id: 2, 
-      title: "House Soft Wash - Bothell Property",
-      location: "Bothell, WA",
-      service: "House Soft Wash",
-      beforeImage: beforeHouse2,
-      afterImage: afterHouse2,
-      beforeAlt: "Dirty house siding with algae and mildew",
-      afterAlt: "Clean, bright house exterior after soft washing",
+      id: 3,
+      title: "Driveway Moss Removal - Kirkland",
+      location: "Kirkland, WA",
+      service: "Pressure Washing + Moss Treatment", 
+      beforeImage: drivewayMossCleaningBeforeAfter,
+      afterImage: drivewayMossCleaningBeforeAfter,
+      beforeAlt: "Moss-covered concrete driveway before cleaning",
+      afterAlt: "Clean concrete driveway after moss removal and pressure washing",
       completionDate: "February 2024"
     },
     {
-      id: 3,
-      title: "Gutter & Pressure Wash - Kirkland",
-      location: "Kirkland, WA", 
-      service: "Complete Property Clean",
-      beforeImage: beforeConcrete3,
-      afterImage: afterConcrete3,
-      beforeAlt: "Clogged gutters and dirty driveway",
-      afterAlt: "Clean gutters and pressure-washed driveway",
+      id: 4,
+      title: "Gutter Cleaning & Brightening - Seattle",
+      location: "Seattle, WA",
+      service: "Gutter Clean + Brightening",
+      beforeImage: gutterBrighteningBeforeAfter,
+      afterImage: gutterBrighteningBeforeAfter,
+      beforeAlt: "Dirty, stained gutters before cleaning and brightening",
+      afterAlt: "Bright, clean gutters after professional cleaning service",
       completionDate: "January 2024"
+    },
+    {
+      id: 5,
+      title: "Metal Roof Restoration - Woodinville", 
+      location: "Woodinville, WA",
+      service: "Metal Roof Cleaning",
+      beforeImage: metalRoofCleaningBeforeAfter,
+      afterImage: metalRoofCleaningBeforeAfter,
+      beforeAlt: "Weathered metal roof before professional cleaning",
+      afterAlt: "Restored metal roof after specialized cleaning treatment",
+      completionDate: "December 2023"
+    },
+    {
+      id: 6,
+      title: "Patio Pressure Washing - Redmond",
+      location: "Redmond, WA",
+      service: "Concrete Pressure Washing",
+      beforeImage: patioPressureWashingBeforeAfter,
+      afterImage: patioPressureWashingBeforeAfter,
+      beforeAlt: "Stained concrete patio before pressure washing",
+      afterAlt: "Clean, restored concrete patio after pressure washing",
+      completionDate: "November 2023"
     }
   ];
 
