@@ -205,6 +205,14 @@ const Gallery = () => {
         location: "Seattle Area", 
         description: "Professional team and equipment setup for multi-story townhome soft washing project",
         service: "House Washing"
+      },
+      { 
+        src: "/lovable-uploads/2c817c93-c905-4c9d-9f5c-9a73cbf8ad86.png", 
+        alt: "Team member performing building soft wash in Seattle", 
+        title: "Commercial Building Soft Wash", 
+        location: "Seattle", 
+        description: "Professional team member in action during commercial building soft wash project",
+        service: "House Washing"
       }
     ]
   };
