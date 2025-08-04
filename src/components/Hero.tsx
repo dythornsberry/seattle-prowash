@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Star, Shield, Award } from "lucide-react";
-import heroImage from "@/assets/hero-cleaning-service-optimized.jpg";
+import heroImage from "@/assets/hero-cleaning-service.jpg";
 
 const Hero = () => {
   return (
