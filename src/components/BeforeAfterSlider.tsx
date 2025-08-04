@@ -14,13 +14,13 @@ const BeforeAfterSlider = () => {
   const beforeAfterProjects = [
     {
       id: 1,
-      title: "Asphalt Roof Deep Clean - Seattle",
+      title: "Metal Roof Deep Clean - Seattle",
       location: "Seattle, WA",
       service: "Moss Removal + Roof Treatment",
       beforeImage: newRoofBefore1,
       afterImage: newRoofAfter1,
-      beforeAlt: "Moss-covered asphalt roof before professional cleaning",
-      afterAlt: "Clean asphalt roof after moss removal treatment",
+      beforeAlt: "Moss-covered metal roof before professional cleaning",
+      afterAlt: "Clean metal roof after moss removal treatment",
       completionDate: "December 2024"
     },
     {
