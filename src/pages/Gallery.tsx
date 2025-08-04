@@ -131,6 +131,14 @@ const Gallery = () => {
         location: "Seattle Area", 
         description: "Dramatic transformation of 2nd story concrete patio - before and after pressure washing",
         service: "Pressure Washing"
+      },
+      { 
+        src: "/lovable-uploads/d07dd994-a56c-4706-8503-37b4bdde1119.png", 
+        alt: "Vinyl fence pressure washing before and after cleaning", 
+        title: "Vinyl Fence Restoration", 
+        location: "Seattle Area", 
+        description: "Professional vinyl fence pressure washing - removing dirt, moss, and stains to restore like-new appearance",
+        service: "Pressure Washing"
       }
     ],
     "Team at Work": [
