@@ -193,7 +193,7 @@ const About = () => {
                   Our Team at Work
                 </h2>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  See our professional team in action, delivering exceptional results across the Pacific Northwest.
+                  See our professional team in action, delivering exceptional results across the Pacific Northwest
                 </p>
               </div>
 
