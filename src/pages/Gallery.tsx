@@ -228,6 +228,22 @@ const Gallery = () => {
         location: "Seattle Area", 
         description: "Dramatic transformation of front walkway - professional pressure washing removes years of buildup and staining",
         service: "Pressure Washing"
+      },
+      { 
+        src: "/lovable-uploads/93a442fb-b597-4fdb-95b1-e0ca6294ae45.png", 
+        alt: "Composite deck before and after soft wash cleaning restoration", 
+        title: "Composite Deck Restoration", 
+        location: "Seattle Area", 
+        description: "Professional soft wash cleaning restores composite deck to original color and beauty",
+        service: "Pressure Washing"
+      },
+      { 
+        src: "/lovable-uploads/df415af5-fda0-44d2-aefc-2dd719bd41fd.png", 
+        alt: "Composite deck staircase before and after pressure washing", 
+        title: "Deck Staircase Cleaning", 
+        location: "Seattle Area", 
+        description: "Professional composite deck and staircase cleaning - removing buildup and restoring original appearance",
+        service: "Pressure Washing"
       }
     ],
     "Commercial": [
@@ -261,6 +277,14 @@ const Gallery = () => {
         title: "Bank Interior Floor Cleaning", 
         location: "Seattle", 
         description: "Professional interior floor pressure washing at Wells Fargo bank - dramatic transformation",
+        service: "Commercial"
+      },
+      { 
+        src: "/lovable-uploads/b6f5f7ae-fe57-44dc-99a7-17e3d06139ee.png", 
+        alt: "Wells Fargo bank entrance sidewalk before and after pressure washing", 
+        title: "Wells Fargo Sidewalk Cleaning", 
+        location: "Seattle Area", 
+        description: "Professional commercial sidewalk pressure washing for Wells Fargo bank entrance - dramatic transformation from heavily stained to spotless",
         service: "Commercial"
       }
     ],
