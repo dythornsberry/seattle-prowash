@@ -52,7 +52,7 @@ const Services = () => {
       benefits: [
         "Extends roof lifespan by removing damaging moss and algae",
         "Prevents water damage from clogged gutters",
-        "Maintains manufacturer warranty compliance",
+        "Maintains roofing manufacturer warranty compliance",
         "Improves curb appeal and property value"
       ],
       priceNote: "Starting at $499 for typical single-story homes"
