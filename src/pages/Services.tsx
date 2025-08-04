@@ -67,12 +67,12 @@ const Services = () => {
       process: [
         "Clean concrete, pavers, fencing, and other flat surfaces",
         "Use professional surface cleaner for streak-free results", 
-        "Great for removing algae, moss, oil, and grime"
+        "Great for removing algae, moss, and grime"
       ],
       benefits: [
         "Eliminates dangerous slip hazards from moss and algae",
         "Restores original concrete color and texture",
-        "Removes stubborn oil stains and discoloration",
+        "Removes discoloration and surface stains",
         "Increases property value and curb appeal"
       ],
       priceNote: "Starting at $249 for driveways and patios"
