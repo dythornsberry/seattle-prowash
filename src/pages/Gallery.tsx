@@ -147,6 +147,14 @@ const Gallery = () => {
         location: "Seattle Area", 
         description: "Professional vinyl fence pressure washing - removing dirt, moss, and stains to restore like-new appearance",
         service: "Pressure Washing"
+      },
+      { 
+        src: "/lovable-uploads/405b2518-e88f-4784-9f29-4abab64c56e4.png", 
+        alt: "Concrete staircase pressure washing dramatic before and after transformation", 
+        title: "Concrete Staircase Restoration", 
+        location: "Seattle, WA", 
+        description: "Incredible transformation of heavily soiled concrete stairs - professional pressure washing removes years of buildup",
+        service: "Pressure Washing"
       }
     ],
     "Team at Work": [
