@@ -5,7 +5,7 @@ import heroImage from "@/assets/hero-cleaning-service.jpg";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-brand-white to-brand-gray-light">
+    <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-brand-white to-brand-gray">
       <div className="container mx-auto px-4 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
@@ -21,7 +21,7 @@ const Hero = () => {
                 <span className="text-brand-orange block">Cleaning Pros</span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-muted-foreground font-light">
+              <p className="text-xl md:text-2xl text-brand-gray-text font-medium">
                 moss removal • gutter cleaning • house & pressure washing
               </p>
             </div>
@@ -67,14 +67,14 @@ const Hero = () => {
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="text-2xl font-bold text-brand-blue">$499+</div>
-                    <div className="text-sm text-muted-foreground">Roof Moss Removal</div>
+                    <div className="text-sm text-brand-gray-text">Roof Moss Removal</div>
                     <div className="text-xs text-brand-orange font-semibold">+ FREE Gutter Clean</div>
                   </div>
                   <div className="text-right">
                     <div className="flex text-brand-orange text-lg">
                       ★★★★★
                     </div>
-                    <div className="text-xs text-muted-foreground">180 Reviews</div>
+                    <div className="text-xs text-brand-gray-text">180 Reviews</div>
                   </div>
                 </div>
               </div>

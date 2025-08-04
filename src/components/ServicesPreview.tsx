@@ -45,7 +45,7 @@ const ServicesPreview = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-blue mb-6">
             Professional Cleaning Services
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-brand-gray-text max-w-3xl mx-auto font-medium">
             From moss-covered roofs to clogged gutters, we restore your home's beauty and protect your investment with proven cleaning solutions.
           </p>
         </div>

@@ -25,7 +25,7 @@ const BenefitStrip = () => {
   ];
 
   return (
-    <section className="py-12 bg-brand-gray-light border-y border-brand-orange/20">
+    <section className="py-12 bg-brand-gray border-y border-brand-orange/20">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index) => {
@@ -38,7 +38,7 @@ const BenefitStrip = () => {
                 <h3 className="font-bold text-brand-blue text-sm lg:text-base mb-1">
                   {benefit.title}
                 </h3>
-                <p className="text-xs lg:text-sm text-muted-foreground">
+                <p className="text-xs lg:text-sm text-brand-gray-text font-medium">
                   {benefit.description}
                 </p>
               </div>

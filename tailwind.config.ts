@@ -25,12 +25,15 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				
-				/* Seattle ProWash Original Brand Colors */
+				/* Seattle ProWash High Contrast Brand Colors */
 				'brand-blue': 'hsl(var(--brand-blue))',
+				'brand-blue-light': 'hsl(var(--brand-blue-light))', 
 				'brand-orange': 'hsl(var(--brand-orange))',
+				'brand-orange-light': 'hsl(var(--brand-orange-light))',
 				'brand-yellow': 'hsl(var(--brand-yellow))',
 				'brand-white': 'hsl(var(--brand-white))',
-				'brand-gray-light': 'hsl(var(--brand-gray-light))',
+				'brand-gray': 'hsl(var(--brand-gray))',
+				'brand-gray-text': 'hsl(var(--brand-gray-text))',
 				
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',

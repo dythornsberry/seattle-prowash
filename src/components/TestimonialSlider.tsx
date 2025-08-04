@@ -40,7 +40,7 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <section className="section-spacing bg-brand-gray-light">
+    <section className="section-spacing bg-brand-gray">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 fade-up">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy mb-6">
@@ -51,7 +51,7 @@ const TestimonialSlider = () => {
               ★★★★★
             </div>
             <span className="text-lg font-semibold text-brand-navy">5.0</span>
-            <span className="text-muted-foreground">• 180 Google Reviews</span>
+            <span className="text-brand-gray-text font-medium">• 180 Google Reviews</span>
           </div>
         </div>
 
@@ -81,13 +81,13 @@ const TestimonialSlider = () => {
                         
                         {/* Author Info */}
                         <div className="space-y-2">
-                          <div className="font-bold text-brand-navy text-lg">
+                          <div className="font-bold text-brand-blue text-lg">
                             {testimonial.author}
                           </div>
-                          <div className="text-muted-foreground">
+                          <div className="text-brand-gray-text font-medium">
                             {testimonial.location}
                           </div>
-                          <div className="text-sm text-brand-yellow font-semibold">
+                          <div className="text-sm text-brand-orange font-semibold">
                             {testimonial.service}
                           </div>
                         </div>

@@ -2,96 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Seattle ProWash Design System - Original Blue & Orange Palette */
+/* Seattle ProWash Design System - High Contrast Blue & Orange Palette */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
 @layer base {
   :root {
-    /* Seattle ProWash Original Brand Colors (HSL format) */
-    --background: 0 0% 100%; /* Clean white */
-    --foreground: 220 91% 20%; /* Deep blue text */
+    /* Seattle ProWash High Contrast Colors (HSL format) */
+    --background: 0 0% 100%; /* Pure white */
+    --foreground: 210 100% 10%; /* Very dark blue for excellent readability */
     
-    /* Seattle ProWash Brand Palette */
-    --brand-blue: 220 91% 20%; /* Rich royal blue #1e40af */
-    --brand-orange: 22 93% 53%; /* Vibrant orange #f97316 */
-    --brand-yellow: 45 93% 47%; /* Golden yellow #eab308 */
-    --brand-white: 0 0% 100%; /* Pure white #ffffff */
-    --brand-gray-light: 220 13% 97%; /* Very light blue-gray #f8fafc */
+    /* Seattle ProWash Brand Palette - High Contrast */
+    --brand-blue: 210 100% 10%; /* Dark navy blue #001a33 - excellent contrast */
+    --brand-blue-light: 210 100% 25%; /* Medium blue for headings */
+    --brand-orange: 25 95% 50%; /* Strong orange #ff6b00 - great contrast */
+    --brand-orange-light: 25 100% 55%; /* Lighter orange for hover states */
+    --brand-yellow: 45 100% 50%; /* Pure golden yellow */
+    --brand-white: 0 0% 100%; /* Pure white */
+    --brand-gray: 210 15% 95%; /* Very light blue-gray background */
+    --brand-gray-text: 210 10% 40%; /* Medium gray for secondary text */
     
     --card: 0 0% 100%;
-    --card-foreground: 220 91% 20%;
+    --card-foreground: 210 100% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 91% 20%;
+    --popover-foreground: 210 100% 10%;
 
-    --primary: 220 91% 20%; /* Brand blue */
+    --primary: 210 100% 10%; /* Dark navy */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 13% 97%; /* Light gray sections */
-    --secondary-foreground: 220 91% 20%;
+    --secondary: 210 15% 95%; /* Light background */
+    --secondary-foreground: 210 100% 10%;
 
-    --muted: 220 13% 97%;
-    --muted-foreground: 220 9% 46%;
+    --muted: 210 15% 95%;
+    --muted-foreground: 210 10% 40%; /* Darker for better readability */
 
-    --accent: 22 93% 53%; /* Brand orange */
+    --accent: 25 95% 50%; /* Strong orange */
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 84% 45%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 22 93% 53%;
+    --border: 210 20% 85%;
+    --input: 210 20% 90%;
+    --ring: 25 95% 50%;
 
     --radius: 0.5rem;
 
+    /* Sidebar colors */
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5% 26%;
-    --sidebar-primary: 240 6% 10%;
+    --sidebar-foreground: 210 100% 10%;
+    --sidebar-primary: 210 100% 10%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 5% 96%;
-    --sidebar-accent-foreground: 240 6% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-accent: 210 15% 95%;
+    --sidebar-accent-foreground: 210 100% 10%;
+    --sidebar-border: 210 20% 85%;
+    --sidebar-ring: 25 95% 50%;
   }
 
   .dark {
-    --background: 220 91% 4%;
+    --background: 210 100% 4%;
     --foreground: 0 0% 98%;
 
-    --card: 220 91% 4%;
+    --card: 210 100% 4%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 220 91% 4%;
+    --popover: 210 100% 4%;
     --popover-foreground: 0 0% 98%;
 
     --primary: 0 0% 98%;
-    --primary-foreground: 220 91% 20%;
+    --primary-foreground: 210 100% 10%;
 
-    --secondary: 217 33% 17%;
+    --secondary: 210 50% 10%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 210 50% 10%;
+    --muted-foreground: 210 20% 70%;
 
-    --accent: 22 93% 53%;
+    --accent: 25 95% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 212 27% 84%;
-    --sidebar-background: 240 6% 10%;
-    --sidebar-foreground: 240 5% 96%;
-    --sidebar-primary: 224 76% 48%;
+    --border: 210 50% 15%;
+    --input: 210 50% 15%;
+    --ring: 25 95% 55%;
+    
+    --sidebar-background: 210 100% 5%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 25 95% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 4% 16%;
-    --sidebar-accent-foreground: 240 5% 96%;
-    --sidebar-border: 240 4% 16%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-accent: 210 50% 10%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 210 50% 15%;
+    --sidebar-ring: 25 95% 55%;
   }
 }
 
@@ -103,7 +108,26 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    line-height: 1.5;
+    line-height: 1.6; /* Improved line height for readability */
+    font-weight: 400; /* Ensure good font weight */
+  }
+  
+  /* High contrast text classes */
+  .text-readable {
+    color: hsl(var(--brand-blue));
+    font-weight: 500;
+  }
+  
+  .text-secondary-readable {
+    color: hsl(var(--brand-gray-text));
+    font-weight: 400;
+  }
+  
+  /* Ensure headings have excellent contrast */
+  h1, h2, h3, h4, h5, h6 {
+    color: hsl(var(--brand-blue));
+    font-weight: 700;
+    letter-spacing: -0.025em;
   }
   
   /* Seattle ProWash Section Spacing */
@@ -123,8 +147,18 @@
     transform: translateY(0);
   }
   
-  /* Button hover effects */
+  /* Button hover effects with high contrast */
   .btn-glow:hover {
     box-shadow: 0 4px 20px hsl(var(--accent) / 0.4);
+  }
+  
+  /* Ensure all links are accessible */
+  a {
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  a:hover {
+    text-decoration: underline;
   }
 }
