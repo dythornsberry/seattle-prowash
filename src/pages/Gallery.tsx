@@ -162,6 +162,14 @@ const Gallery = () => {
         location: "Seattle Area", 
         description: "Professional gutter cleaning service - removing debris, leaves, and buildup for proper water flow",
         service: "Gutter Cleaning"
+      },
+      { 
+        src: "/lovable-uploads/b2ed7767-a921-4d56-8dfb-1c942c3daaa7.png", 
+        alt: "Gutter cleaning before and after showing debris removal and restoration", 
+        title: "Complete Gutter System Cleaning", 
+        location: "Seattle Area", 
+        description: "Professional gutter cleaning transformation - removing organic buildup, debris, and restoring proper water flow",
+        service: "Gutter Cleaning"
       }
     ],
     "Pressure Washing": [
@@ -283,6 +291,14 @@ const Gallery = () => {
         title: "Residential Walkway Restoration", 
         location: "Seattle Area", 
         description: "Complete walkway transformation - professional pressure washing removes moss and organic buildup",
+        service: "Pressure Washing"
+      },
+      { 
+        src: "/lovable-uploads/5addf656-858e-47e3-87a9-1db331528b89.png", 
+        alt: "Retaining wall pressure washing in progress showing dramatic clean vs dirty comparison", 
+        title: "Retaining Wall Restoration In Progress", 
+        location: "Seattle Area", 
+        description: "Professional retaining wall pressure washing in action - dramatic difference between cleaned and uncleaned sections",
         service: "Pressure Washing"
       }
     ],
