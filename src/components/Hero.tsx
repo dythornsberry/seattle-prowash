@@ -13,7 +13,7 @@ const Hero = () => {
             <div className="space-y-4">
               <Badge variant="outline" className="border-brand-orange text-brand-blue bg-brand-orange/10">
                 <Shield className="w-4 h-4 text-brand-orange mr-1" />
-                Kenmore's Licensed & Insured Cleaning Pros
+                Serving Kenmore Since 2022 • Licensed & Insured
               </Badge>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-blue leading-tight">
