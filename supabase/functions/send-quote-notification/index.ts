@@ -1,7 +1,4 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
-import { Resend } from "npm:resend@2.0.0";
-
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -26,93 +23,37 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const { name, phone, email, zipCode, service, message }: QuoteRequest = await req.json();
 
-    // Send notification to business owner
-    console.log('Attempting to send owner notification to seattleprowash@gmail.com');
-    const ownerEmailResponse = await resend.emails.send({
-      from: "Seattle ProWash <onboarding@resend.dev>",
-      to: ["dythornsberry@gmail.com"], // Temporary: Using verified email due to Resend restrictions
-      subject: `New Quote Request from ${name}`,
-      html: `
-        <h2>New Quote Request</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        ${zipCode ? `<p><strong>Zip Code:</strong> ${zipCode}</p>` : ''}
-        <p><strong>Service:</strong> ${service}</p>
-        ${message ? `<p><strong>Message:</strong> ${message}</p>` : ''}
-        <p><strong>Submitted at:</strong> ${new Date().toLocaleString()}</p>
-      `,
-    });
-
-    console.log('Owner email response:', ownerEmailResponse);
-    
-    if (ownerEmailResponse.error) {
-      console.error('Owner email failed:', ownerEmailResponse.error);
-      throw new Error(`Owner email failed: ${JSON.stringify(ownerEmailResponse.error)}`);
-    }
-
-    // Send confirmation to customer
-    console.log('Attempting to send customer confirmation to:', email);
-    const customerEmailResponse = await resend.emails.send({
-      from: "Seattle ProWash <onboarding@resend.dev>",
-      to: [email],
-      subject: "Your Quote Request - Seattle ProWash",
-      html: `
-        <h2>Thank you for your quote request, ${name}!</h2>
-        <p>We've received your request for <strong>${service}</strong>. Our team will review the details and get back to you as soon as possible.</p>
-        
-        <h3>Your Request Details:</h3>
-        <ul>
-          <li><strong>Service:</strong> ${service}</li>
-          ${zipCode ? `<li><strong>Zip Code:</strong> ${zipCode}</li>` : ''}
-          ${message ? `<li><strong>Your Message:</strong> ${message}</li>` : ''}
-        </ul>
-        
-        <p>In the meantime, feel free to call or text us at <strong>206-752-6690</strong> if you have any questions.</p>
-        
-        <p>Best regards,<br>
-        Seattle ProWash Team<br>
-        📞 206-752-6690<br>
-        📧 seattleprowash@gmail.com</p>
-      `,
-    });
-
-    console.log('Customer email response:', customerEmailResponse);
-    
-    if (customerEmailResponse.error) {
-      console.error('Customer email failed:', customerEmailResponse.error);
-      // Don't throw error for customer email failure, but log it
-    }
-
-    // Optional: Send to Zapier/Jobber CRM integration
+    // Send to Zapier webhook (handles emails + CRM integration)
     const zapierWebhookUrl = Deno.env.get('ZAPIER_WEBHOOK_URL');
-    if (zapierWebhookUrl) {
-      try {
-        console.log('Sending lead data to Zapier webhook for Jobber CRM...');
-        await fetch(zapierWebhookUrl, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            name,
-            phone,
-            email,
-            zipCode,
-            service,
-            message,
-            timestamp: new Date().toISOString(),
-            source: 'Website Quote Form'
-          })
-        });
-        console.log('Successfully sent lead to Zapier webhook');
-      } catch (zapierError) {
-        console.error('Failed to send to Zapier:', zapierError);
-        // Don't fail the email sending if Zapier fails
-      }
+    if (!zapierWebhookUrl) {
+      throw new Error('ZAPIER_WEBHOOK_URL not configured');
     }
 
-    console.log("Emails sent successfully:", { ownerEmailResponse, customerEmailResponse });
+    console.log('Sending quote data to Zapier webhook...');
+    const zapierResponse = await fetch(zapierWebhookUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name,
+        phone,
+        email,
+        zipCode,
+        service,
+        message,
+        timestamp: new Date().toISOString(),
+        source: 'Website Quote Form',
+        business_email: 'dythornsberry@gmail.com', // For business notifications
+        customer_email: email // For customer confirmations
+      })
+    });
+
+    if (!zapierResponse.ok) {
+      throw new Error(`Zapier webhook failed: ${zapierResponse.status}`);
+    }
+
+    console.log('Successfully sent to Zapier webhook');
 
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
