@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Expand, X } from "lucide-react";
+import { navigateToContact } from "@/lib/navigation";
 
 // Import only actual pressure washing business photos that exist
 import dylanOwnerPatioPressureWashing from "@/assets/dylan-owner-patio-pressure-washing.jpg";
@@ -713,9 +714,7 @@ const Gallery = () => {
               <Button 
                 variant="prowash-secondary" 
                 size="xl"
-                onClick={() => {
-                  window.location.href = '/#contact';
-                }}
+                onClick={navigateToContact}
               >
                 Get Your Free Quote Today
               </Button>

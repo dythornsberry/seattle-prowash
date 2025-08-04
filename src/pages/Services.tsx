@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Phone, Droplet, Home, Zap, Car } from "lucide-react";
+import { navigateToContact } from "@/lib/navigation";
 
 // Import service images
 import roofMossRemoval from "@/assets/roof-moss-removal-detailed-before-after.jpg";
@@ -137,9 +138,7 @@ const Services = () => {
                 <Button 
                   variant="prowash-secondary" 
                   size="xl"
-                  onClick={() => {
-                    window.location.href = '/#contact';
-                  }}
+                  onClick={navigateToContact}
                 >
                   Get Free Quote Today
                 </Button>
@@ -216,12 +215,10 @@ const Services = () => {
                       </div>
 
                       <div className="flex flex-col sm:flex-row gap-4">
-                        <Button 
-                          variant="prowash-primary" 
-                          size="lg"
-                          onClick={() => {
-                            window.location.href = '/#contact';
-                          }}
+                <Button 
+                  variant="prowash-primary" 
+                  size="lg"
+                  onClick={navigateToContact}
                         >
                           Get Quote for {service.title}
                         </Button>
@@ -297,9 +294,7 @@ const Services = () => {
                 <Button 
                   variant="prowash-secondary" 
                   size="xl"
-                  onClick={() => {
-                    window.location.href = '/#contact';
-                  }}
+                  onClick={navigateToContact}
                 >
                   Get My Free Quote
                 </Button>

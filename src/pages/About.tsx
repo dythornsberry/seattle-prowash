@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Award, Users, Calendar } from "lucide-react";
+import { navigateToContact } from "@/lib/navigation";
 import dylanOwnerPhoto from "@/assets/dylan-owner-patio-pressure-washing.jpg";
 import dylanRoofWork from "@/assets/dylan-roof-work.jpg";
 import technicianHousWashing from "@/assets/technician-house-washing.jpg";
@@ -169,9 +170,7 @@ const About = () => {
                   <Button 
                     variant="prowash-primary" 
                     size="xl"
-                    onClick={() => {
-                      window.location.href = '/#contact';
-                    }}
+                    onClick={navigateToContact}
                   >
                     Get Free Quote
                   </Button>
@@ -271,9 +270,7 @@ const About = () => {
                 <Button 
                   variant="prowash-secondary" 
                   size="xl"
-                  onClick={() => {
-                    window.location.href = '/#contact';
-                  }}
+                  onClick={navigateToContact}
                 >
                   Get Your Free Quote Today
                 </Button>

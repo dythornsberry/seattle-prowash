@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
 import logoImage from "@/assets/seattle-prowash-logo.png";
+import { navigateToContact } from "@/lib/navigation";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,7 +46,7 @@ const Header = () => {
             <Button 
               variant="prowash-secondary" 
               size="sm"
-              onClick={() => window.location.href = '/#contact'}
+              onClick={navigateToContact}
             >
               Get Free Quote
             </Button>
@@ -101,7 +102,7 @@ const Header = () => {
                   size="lg"
                   onClick={() => {
                     setIsMenuOpen(false);
-                    window.location.href = '/#contact';
+                    navigateToContact();
                   }}
                 >
                   Get My Free Quote
