@@ -66,7 +66,7 @@ const About = () => {
                       After years of working for other companies in the pressure washing industry, Dylan saw an opportunity to do things better. In 2022, he founded Seattle ProWash with a clear mission: deliver superior soft washing and pressure washing services using high-quality equipment and proven techniques.
                     </p>
                     <p>
-                      "I learned the industry inside and out working for other companies," Dylan explains. "But I wanted to focus on what really matters - exceptional results that restore properties to their best condition."
+                      "I learned the industry inside and out working for other companies," Dylan explains. "But I wanted to focus on what really matters: exceptional results that restore properties to their best condition."
                     </p>
                     <p>
                       Dylan's passion lies in property restoration. He genuinely believes that professional cleaning is the single greatest return on investment any homeowner can make. As a Pacific Northwest local, Dylan takes immense pride in helping his neighbors protect and beautify their homes against our unique climate. "When you see a moss-covered roof or stained driveway transformed back to like-new condition, you understand the incredible value we provide."
