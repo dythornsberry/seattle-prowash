@@ -32,7 +32,6 @@ const ServicesPreview = () => {
       features: [
         "Cleans siding, trim, soffits, eaves, exterior gutters, windows & doors",
         "2nd-story homes included",
-        "We use your water source (standard for soft washing)",
         "Removes dirt, mildew, algae, and organic stains",
         "Safe for all siding materials including vinyl, wood, and composite"
       ]

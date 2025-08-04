@@ -86,8 +86,7 @@ const Services = () => {
       description: "Gentle but effective soft washing that cleans your entire home's exterior without the risk from high-pressure washing.",
       process: [
         "Cleans siding, trim, soffits, eaves, exterior gutters, windows & doors",
-        "2nd-story homes included",
-        "We use your water source (standard for soft washing)"
+        "2nd-story homes included"
       ],
       benefits: [
         "Safe on all siding materials (vinyl, wood, hardi-board siding)",
