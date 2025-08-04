@@ -17,10 +17,11 @@ const ServicesPreview = () => {
     {
       icon: Zap,
       title: "Pressure Washing",
-      description: "Restore driveways, patios, decks, and walkways.",
+      description: "Restore driveways, patios, walkways, and concrete surfaces.",
       features: [
-        "Clean concrete, pavers, fencing, and other flatwork",
-        "Use professional surface cleaner for streak-free results",
+        "Driveways and concrete cleaning",
+        "Patios and walkways restoration", 
+        "Professional surface cleaner for streak-free results",
         "Great for removing algae, moss, oil, and grime"
       ]
     },
@@ -97,8 +98,11 @@ const ServicesPreview = () => {
             <p className="text-lg font-semibold text-brand-blue mb-2">
               Ready to Get Started?
             </p>
-            <p className="text-brand-gray-text">
+            <p className="text-brand-gray-text mb-4">
               Call or text us today for your free estimate. We'll walk your property and provide an accurate quote for the services you need.
+            </p>
+            <p className="text-sm text-brand-gray-text italic">
+              Roof cleaning costs vary based on roof size and moss level. Most homes fall between $499–$999.
             </p>
           </div>
           <Button variant="prowash-primary" size="xl">

@@ -12,12 +12,11 @@ const Hero = () => {
           <div className="text-center lg:text-left space-y-8 fade-up">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-blue leading-tight">
-                <span className="text-brand-orange block">Roof, Gutter & Pressure Washing</span>
-                Serving Kenmore, Bothell, Kirkland & Nearby
+                <span className="text-brand-orange block">Roof Moss Removal & Gutter Cleaning — Seattle's North-End Specialists</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-brand-gray-text font-medium leading-relaxed">
-                Protect your home from moss, mold, and grime—without climbing a ladder.
+                Soft washing, pressure washing, and full exterior cleaning for homes in Kenmore, Bothell, Kirkland & nearby.
               </p>
               
               <p className="text-sm text-brand-gray-text/80 font-medium">
@@ -25,7 +24,7 @@ const Hero = () => {
               </p>
               
               <p className="text-sm text-brand-gray-text/70 font-medium">
-                🗺️ Serving Kenmore and surrounding Seattle suburbs within 10-mile radius
+                🗺️ Serving Kenmore, Bothell, Kirkland, and surrounding suburbs within a 10-mile radius
               </p>
             </div>
 
