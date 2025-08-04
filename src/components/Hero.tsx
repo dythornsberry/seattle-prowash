@@ -33,7 +33,7 @@ const Hero = () => {
                 </Button>
               </div>
               <div className="text-center lg:text-left">
-                <p className="text-brand-gray-text font-medium">📞 Call or Text: (425) 406‑3445</p>
+                <p className="text-brand-gray-text font-medium">📞 Call or Text: 206.752.6690</p>
               </div>
             </div>
 
