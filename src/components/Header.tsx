@@ -8,7 +8,8 @@ const Header = () => {
 
   const phoneNumber = "206-752-6690";
   const navigation = [
-    { name: "Home", href: "#home" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
     { name: "Services", href: "#services" },
     { name: "Gallery", href: "#gallery" },
     { name: "Reviews", href: "#reviews" },
