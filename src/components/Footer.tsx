@@ -97,7 +97,7 @@ const Footer = () => {
                 ))}
               </div>
               <p className="text-xs text-white/60 mt-4">
-                Serving 25-mile radius from Kenmore, WA
+                Serving 10-mile radius from Kenmore, WA
               </p>
             </div>
 

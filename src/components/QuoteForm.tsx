@@ -106,7 +106,7 @@ const QuoteForm = () => {
                     <MapPin className="w-5 h-5 text-brand-yellow mt-1" />
                     <div>
                       <p className="text-sm text-brand-navy">Serving Kenmore & surrounding areas</p>
-                      <p className="text-sm text-muted-foreground">25-mile radius</p>
+                      <p className="text-sm text-muted-foreground">10-mile radius</p>
                     </div>
                   </div>
                 </CardContent>

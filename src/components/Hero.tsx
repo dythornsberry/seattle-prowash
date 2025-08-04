@@ -25,7 +25,7 @@ const Hero = () => {
               </p>
               
               <p className="text-sm text-brand-gray-text/70 font-medium">
-                🗺️ Serving Kenmore and surrounding Seattle suburbs within 25-mile radius
+                🗺️ Serving Kenmore and surrounding Seattle suburbs within 10-mile radius
               </p>
             </div>
 
