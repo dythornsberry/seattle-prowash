@@ -69,6 +69,14 @@ const Gallery = () => {
         location: "Seattle Area", 
         description: "Complete metal roof restoration - moss removal and soft wash cleaning before and after",
         service: "Roof Cleaning"
+      },
+      { 
+        src: "/metal-roof-skylight-cleaning-before-after.jpg", 
+        alt: "Metal roof and skylight cleaning before and after", 
+        title: "Metal Roof & Skylight Cleaning", 
+        location: "Seattle Area", 
+        description: "Professional metal roof soft wash with skylight cleaning - complete restoration",
+        service: "Roof Cleaning"
       }
     ],
     "House Washing": [
