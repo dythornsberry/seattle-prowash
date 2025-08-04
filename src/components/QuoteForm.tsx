@@ -319,13 +319,13 @@ const QuoteForm = () => {
                       </div>
                       
                       <div className="text-sm text-muted-foreground">
-                        <p className="font-medium text-brand-navy">We proudly serve Kenmore, Bothell, Kirkland, and surrounding suburbs within a 10-mile radius.</p>
-                        <p className="mt-1">We respond back in 1 hour — Monday through Sunday.</p>
+                        <p className="font-medium text-brand-navy">We proudly serve Kenmore, Bothell, Kirkland, and surrounding suburbs within a 10-mile radius</p>
+                        <p className="mt-1">We respond back in 1 hour — Monday through Sunday</p>
                       </div>
                     </div>
 
                     <p className="text-xs text-muted-foreground text-center">
-                      By submitting this form, you agree to receive communications from Seattle ProWash.
+                      By submitting this form, you agree to receive communications from Seattle ProWash
                     </p>
                   </form>
                 </CardContent>

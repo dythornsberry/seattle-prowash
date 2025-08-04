@@ -20,11 +20,11 @@ const Hero = () => {
               </p>
               
               <p className="text-sm text-brand-gray-text/80 font-medium">
-                ⭐ 180+ 5‑Star Reviews · Fully Licensed & Insured.
+                ⭐ 180+ 5‑Star Reviews · Fully Licensed & Insured
               </p>
               
               <p className="text-sm text-brand-gray-text/70 font-medium">
-                🗺️ Serving Kenmore, Bothell, Kirkland, and surrounding suburbs within a 10-mile radius.
+                🗺️ Serving Kenmore, Bothell, Kirkland, and surrounding suburbs within a 10-mile radius
               </p>
             </div>
 
