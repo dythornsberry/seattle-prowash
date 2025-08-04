@@ -101,9 +101,9 @@ const Services = () => {
       id: "gutter-cleaning",
       icon: Car,
       title: "Gutter Cleaning",
-      subtitle: "Complete gutter system maintenance and cleaning.",
+      subtitle: "Complete gutter system maintenance and cleaning",
       image: gutterCleaning,
-      description: "Comprehensive gutter cleaning service that prevents water damage and maintains proper drainage around your home.",
+      description: "Comprehensive gutter cleaning service that prevents water damage and maintains proper drainage around your home",
       process: [
         "Remove all debris from gutters and downspouts",
         "Flush entire gutter system to ensure proper flow",
