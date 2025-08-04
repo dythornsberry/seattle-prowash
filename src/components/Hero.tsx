@@ -31,7 +31,7 @@ const Hero = () => {
               <Button variant="prowash-primary" size="xl" className="flex-1 sm:flex-none">
                 Get My Free Quote
               </Button>
-              <Button variant="prowash-secondary" size="xl" className="flex-1 sm:flex-none">
+              <Button variant="prowash-outline" size="xl" className="flex-1 sm:flex-none">
                 Call Now: 206-752-6690
               </Button>
             </div>
