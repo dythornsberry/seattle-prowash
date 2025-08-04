@@ -83,7 +83,7 @@ const Services = () => {
       title: "House Washing", 
       subtitle: "Soft wash cleaning for your home's full exterior.",
       image: houseSoftwash,
-      description: "Gentle but effective soft washing that cleans your entire home exterior without the risk of high pressure washing.",
+      description: "Gentle but effective soft washing that cleans your entire home's exterior without the risk from high-pressure washing.",
       process: [
         "Cleans siding, trim, soffits, eaves, exterior gutters, windows & doors",
         "2nd-story homes included",
