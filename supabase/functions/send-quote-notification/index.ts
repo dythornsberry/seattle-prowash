@@ -24,7 +24,7 @@ const handler = async (req: Request): Promise<Response> => {
     const { name, phone, email, zipCode, service, message }: QuoteRequest = await req.json();
 
     // Send to Make webhook (handles emails + CRM integration)
-    const makeWebhookUrl = 'https://hook.us2.make.com/nptqd8sgste19t4047sqrbp62ccfmg6b';
+    const makeWebhookUrl = 'https://hook.us2.make.com/4ki9qoftawnzq1cs10ks2cckepq7tqp1';
 
     console.log('Sending quote data to Make webhook...');
     const makeResponse = await fetch(makeWebhookUrl, {
