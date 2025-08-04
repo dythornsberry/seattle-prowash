@@ -100,7 +100,7 @@ const Footer = () => {
                 Serving Kenmore, Bothell, Kirkland, Shoreline, and other nearby suburbs within a 10-mile radius of Kenmore, WA.
               </p>
               <p className="text-sm text-brand-yellow mt-4 font-semibold">
-                Call or text 206‑752‑6690 for your free same-day quote.
+                Call or text 206‑752‑6690 for your free same-day quote
               </p>
             </div>
 
