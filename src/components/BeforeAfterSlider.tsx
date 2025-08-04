@@ -45,6 +45,17 @@ const BeforeAfterSlider = () => {
       beforeAlt: "Stained concrete patio with moss before pressure washing",
       afterAlt: "Clean, restored concrete patio after pressure washing",
       completionDate: "December 2024"
+    },
+    {
+      id: 4,
+      title: "Extreme Concrete Patio Recovery - Lake Forest Park",
+      location: "Lake Forest Park, WA",
+      service: "Extreme Pressure Washing",
+      beforeImage: "/lovable-uploads/30f25fb0-b625-4f3e-8328-3084ca71c36b.png",
+      afterImage: "/lovable-uploads/0d94bc5e-3592-4aa4-877a-d124110a3d0e.png",
+      beforeAlt: "Severely neglected concrete patio with heavy moss and algae buildup",
+      afterAlt: "Dramatically restored concrete patio after intensive pressure washing",
+      completionDate: "January 2025"
     }
   ];
 

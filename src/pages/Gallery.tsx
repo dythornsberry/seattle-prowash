@@ -172,6 +172,22 @@ const Gallery = () => {
         location: "Seattle, WA", 
         description: "Amazing transformation of moss-covered retaining wall and brick walkway - professional pressure washing restoration",
         service: "Pressure Washing"
+      },
+      { 
+        src: "/lovable-uploads/30f25fb0-b625-4f3e-8328-3084ca71c36b.png", 
+        alt: "Heavily soiled concrete patio before cleaning showing extreme moss and dirt buildup", 
+        title: "Extreme Concrete Patio Restoration - Before", 
+        location: "Lake Forest Park", 
+        description: "Severely neglected concrete patio with heavy moss, algae, and dirt accumulation requiring intensive pressure washing",
+        service: "Pressure Washing"
+      },
+      { 
+        src: "/lovable-uploads/0d94bc5e-3592-4aa4-877a-d124110a3d0e.png", 
+        alt: "Concrete patio after professional pressure washing showing dramatic transformation", 
+        title: "Extreme Concrete Patio Restoration - After", 
+        location: "Lake Forest Park", 
+        description: "Incredible transformation of concrete patio - professional pressure washing reveals clean, like-new surface",
+        service: "Pressure Washing"
       }
     ],
     "Commercial": [
