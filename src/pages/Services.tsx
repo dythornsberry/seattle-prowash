@@ -103,7 +103,7 @@ const Services = () => {
       title: "Gutter Cleaning",
       subtitle: "Complete gutter system maintenance and cleaning",
       image: gutterCleaning,
-      description: "Comprehensive gutter cleaning service that prevents water damage and maintains proper drainage around your home",
+      description: "Comprehensive gutter cleaning service that prevents water damage and maintains proper drainage around your home. In the Pacific Northwest, we recommend cleaning gutters twice per year to prevent damage to your home",
       process: [
         "Remove all debris from gutters and downspouts",
         "Flush entire gutter system to ensure proper flow",
