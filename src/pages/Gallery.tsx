@@ -63,7 +63,7 @@ const Gallery = () => {
         service: "Roof Cleaning"
       },
       { 
-        src: "/metal-roof-cleaning-before-after-2.jpg", 
+        src: "/lovable-uploads/e74889d8-949e-43d7-8979-5150f13e7df4.png", 
         alt: "Metal roof moss removal and cleaning transformation", 
         title: "Metal Roof Moss Removal", 
         location: "Seattle Area", 
@@ -71,7 +71,7 @@ const Gallery = () => {
         service: "Roof Cleaning"
       },
       { 
-        src: "/metal-roof-skylight-cleaning-before-after.jpg", 
+        src: "/lovable-uploads/39ad7527-e74d-4532-a64b-0365b83aee6b.png", 
         alt: "Metal roof and skylight cleaning before and after", 
         title: "Metal Roof & Skylight Cleaning", 
         location: "Seattle Area", 
@@ -125,7 +125,7 @@ const Gallery = () => {
         service: "Pressure Washing"
       },
       { 
-        src: "/patio-pressure-washing-2nd-story-before-after.jpg", 
+        src: "/lovable-uploads/b629f07e-3990-42a8-920f-554f60488376.png", 
         alt: "Second story patio pressure washing before and after transformation", 
         title: "2nd Story Patio Restoration", 
         location: "Seattle Area", 
