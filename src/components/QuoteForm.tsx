@@ -5,7 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Phone, Mail, MapPin, Upload, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -93,7 +93,7 @@ const QuoteForm = () => {
       
       toast({
         title: "Quote Request Received!",
-        description: "We'll reply within 1 business hour with your personalized estimate.",
+        description: "We'll respond back in 1 hour.",
       });
       
       // Reset form
@@ -131,7 +131,7 @@ const QuoteForm = () => {
               Get Your Free Quote
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Fill out the form below and we'll reply within 1 business hour with your personalized estimate.
+              Fill out the form below and we'll respond back in 1 hour.
             </p>
           </div>
 
@@ -162,7 +162,7 @@ const QuoteForm = () => {
                       <a href="mailto:seattleprowash@gmail.com" className="text-sm text-brand-navy hover:text-brand-yellow transition-colors">
                         seattleprowash@gmail.com
                       </a>
-                      <p className="text-sm text-muted-foreground">We reply within 1 hour</p>
+                      <p className="text-sm text-muted-foreground">We respond back in 1 hour</p>
                     </div>
                   </div>
                   
@@ -283,19 +283,6 @@ const QuoteForm = () => {
                       />
                     </div>
 
-                    {/* Optional Photo Upload */}
-                    <div className="space-y-2">
-                      <Label className="text-brand-navy font-semibold">Photos (Optional)</Label>
-                      <div className="border-2 border-dashed border-brand-yellow/30 rounded-lg p-6 text-center hover:border-brand-yellow/60 transition-colors">
-                        <Upload className="w-8 h-8 text-brand-yellow mx-auto mb-2" />
-                        <p className="text-sm text-muted-foreground">
-                          Upload photos of your roof or gutters for a more accurate estimate
-                        </p>
-                        <Button variant="outline" size="sm" className="mt-2">
-                          Choose Files
-                        </Button>
-                      </div>
-                    </div>
 
                     <Button
                       type="submit"
@@ -318,7 +305,7 @@ const QuoteForm = () => {
                       
                       <div className="text-sm text-muted-foreground">
                         <p className="font-medium text-brand-navy">We proudly serve Kenmore, Bothell, Kirkland, and surrounding suburbs within a 10-mile radius.</p>
-                        <p className="mt-1">We reply within 1 hour — Monday through Sunday.</p>
+                        <p className="mt-1">We respond back in 1 hour — Monday through Sunday.</p>
                       </div>
                     </div>
 
