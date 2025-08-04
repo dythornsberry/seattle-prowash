@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Expand, ExternalLink } from "lucide-react";
 import newRoofBefore1 from "@/assets/new-roof-before-1.jpg";
 import newRoofAfter1 from "@/assets/new-roof-after-1.jpg";
 import newMetalRoofBefore2 from "@/assets/new-metal-roof-before-2.jpg";
@@ -10,6 +10,7 @@ import newPatioAfter3 from "@/assets/new-patio-after-3.jpg";
 
 const BeforeAfterSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   
   const beforeAfterProjects = [
     {
@@ -60,10 +61,10 @@ const BeforeAfterSlider = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 fade-up">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy mb-6">
-            See the Transformation
+            Before & After: Real Exterior Cleaning Results
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Real results from real neighbors across Kenmore, Bothell, and Kirkland. See why homeowners trust Seattle ProWash.
+            Authentic transformations from your neighbors across Kenmore, Bothell, and Kirkland. No stock photos—just real Seattle ProWash results.
           </p>
         </div>
 
@@ -93,30 +94,58 @@ const BeforeAfterSlider = () => {
                       <div className="grid md:grid-cols-2 gap-8">
                         {/* Before */}
                         <div className="space-y-4">
-                          <h4 className="text-lg font-semibold text-brand-navy text-center">Before</h4>
-                          <div className="relative rounded-xl overflow-hidden shadow-lg">
+                          <div className="flex items-center justify-center gap-2">
+                            <h4 className="text-lg font-semibold text-brand-navy">Before</h4>
+                            <span className="text-xs text-red-600 bg-red-50 px-2 py-1 rounded-full font-medium">Problem</span>
+                          </div>
+                          <div 
+                            className="relative rounded-xl overflow-hidden shadow-lg cursor-pointer group transition-transform hover:scale-[1.02]"
+                            onClick={() => setSelectedImage(project.beforeImage)}
+                          >
                             <img
                               src={project.beforeImage}
                               alt={project.beforeAlt}
                               className="aspect-[4/3] w-full object-cover"
                             />
+                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                              <Expand className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
+                            </div>
                           </div>
+                          <p className="text-sm text-muted-foreground text-center px-2">
+                            {project.service.toLowerCase().includes('roof') ? `Roof soft wash in ${project.location.split(',')[0]} – before moss removal` :
+                             project.service.toLowerCase().includes('pressure') ? `Pressure washing in ${project.location.split(',')[0]} – before cleaning` :
+                             `House washing in ${project.location.split(',')[0]} – before treatment`}
+                          </p>
                         </div>
 
                         {/* After */}
                         <div className="space-y-4">
-                          <h4 className="text-lg font-semibold text-brand-navy text-center">After</h4>
-                          <div className="relative rounded-xl overflow-hidden shadow-lg">
+                          <div className="flex items-center justify-center gap-2">
+                            <h4 className="text-lg font-semibold text-brand-navy">After</h4>
+                            <span className="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full font-medium">Solved</span>
+                          </div>
+                          <div 
+                            className="relative rounded-xl overflow-hidden shadow-lg cursor-pointer group transition-transform hover:scale-[1.02]"
+                            onClick={() => setSelectedImage(project.afterImage)}
+                          >
                             <img
                               src={project.afterImage}
                               alt={project.afterAlt}
                               className="aspect-[4/3] w-full object-cover"
                             />
-                            {/* Completion Date Badge - Replacing "Complete" as Gemini suggested */}
+                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                              <Expand className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
+                            </div>
+                            {/* Completion Date Badge */}
                             <div className="absolute top-4 right-4 bg-brand-yellow text-brand-navy px-3 py-1 rounded-full text-sm font-bold shadow-lg">
                               {project.completionDate}
                             </div>
                           </div>
+                          <p className="text-sm text-muted-foreground text-center px-2">
+                            {project.service.toLowerCase().includes('roof') ? `Roof soft wash in ${project.location.split(',')[0]} – after moss removal` :
+                             project.service.toLowerCase().includes('pressure') ? `Pressure washing in ${project.location.split(',')[0]} – after cleaning` :
+                             `House washing in ${project.location.split(',')[0]} – after treatment`}
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -161,12 +190,47 @@ const BeforeAfterSlider = () => {
 
         {/* CTA */}
         <div className="text-center mt-16 fade-up">
-          <p className="text-muted-foreground mb-6">Ready to see your home transformed?</p>
-          <Button variant="prowash-primary" size="xl">
-            Get My Free Quote
-          </Button>
+          <div className="space-y-6">
+            <p className="text-muted-foreground mb-4">Ready to see your home transformed?</p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Button variant="prowash-primary" size="xl">
+                Get My Free Quote
+              </Button>
+              <Button variant="prowash-secondary" size="xl">
+                <ExternalLink className="w-5 h-5 mr-2" />
+                View More Projects
+              </Button>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              All photos are real Seattle ProWash jobs • No stock images
+            </p>
+          </div>
         </div>
       </div>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-4xl max-h-[90vh] w-full">
+            <img
+              src={selectedImage}
+              alt="Expanded view"
+              className="w-full h-full object-contain rounded-lg"
+            />
+            <Button
+              variant="outline"
+              size="icon"
+              className="absolute top-4 right-4 bg-white/90 hover:bg-white"
+              onClick={() => setSelectedImage(null)}
+            >
+              <ChevronRight className="w-5 h-5 rotate-45 transform" />
+            </Button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
