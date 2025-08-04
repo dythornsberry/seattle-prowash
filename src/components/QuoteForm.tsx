@@ -15,7 +15,7 @@ const QuoteForm = () => {
     name: "",
     phone: "",
     email: "",
-    address: "",
+    zipCode: "",
     service: "",
     message: ""
   });
@@ -46,7 +46,7 @@ const QuoteForm = () => {
       name: "",
       phone: "",
       email: "",
-      address: "",
+      zipCode: "",
       service: "",
       message: ""
     });
@@ -181,13 +181,12 @@ const QuoteForm = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="address" className="text-brand-navy font-semibold">Property Address *</Label>
+                      <Label htmlFor="zipCode" className="text-brand-navy font-semibold">Zip Code</Label>
                       <Input
-                        id="address"
-                        value={formData.address}
-                        onChange={(e) => handleChange("address", e.target.value)}
-                        placeholder="123 Main St, Kenmore, WA 98028"
-                        required
+                        id="zipCode"
+                        value={formData.zipCode}
+                        onChange={(e) => handleChange("zipCode", e.target.value)}
+                        placeholder="98028"
                         className="border-brand-yellow/30 focus:border-brand-yellow"
                       />
                     </div>
@@ -209,7 +208,7 @@ const QuoteForm = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="message" className="text-brand-navy font-semibold">Project Details</Label>
+                      <Label htmlFor="message" className="text-brand-navy font-semibold">Project Details (Optional)</Label>
                       <Textarea
                         id="message"
                         value={formData.message}
@@ -244,9 +243,23 @@ const QuoteForm = () => {
                       {isSubmitting ? "Sending..." : "Get My Free Quote"}
                     </Button>
 
+                    {/* Trust Copy and Service Areas */}
+                    <div className="space-y-4 text-center">
+                      <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                        <div className="space-y-2 text-sm">
+                          <p className="text-green-800 font-semibold">✓ Quotes are free, fast, and come with zero pressure.</p>
+                          <p className="text-green-700">✓ We'll never spam you or share your info.</p>
+                        </div>
+                      </div>
+                      
+                      <div className="text-sm text-muted-foreground">
+                        <p className="font-medium text-brand-navy">We proudly serve Kenmore, Bothell, Kirkland, and nearby Seattle suburbs.</p>
+                        <p className="mt-1">We reply within 1 hour — Monday through Sunday.</p>
+                      </div>
+                    </div>
+
                     <p className="text-xs text-muted-foreground text-center">
-                      By submitting this form, you agree to receive communications from Seattle ProWash. 
-                      We never share your information and reply within 1 business hour.
+                      By submitting this form, you agree to receive communications from Seattle ProWash.
                     </p>
                   </form>
                 </CardContent>
