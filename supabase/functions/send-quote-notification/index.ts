@@ -23,14 +23,11 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const { name, phone, email, zipCode, service, message }: QuoteRequest = await req.json();
 
-    // Send to Zapier webhook (handles emails + CRM integration)
-    const zapierWebhookUrl = Deno.env.get('ZAPIER_WEBHOOK_URL');
-    if (!zapierWebhookUrl) {
-      throw new Error('ZAPIER_WEBHOOK_URL not configured');
-    }
+    // Send to Make webhook (handles emails + CRM integration)
+    const makeWebhookUrl = 'https://hook.us2.make.com/z297ggmxr3611gaddwp1jq16bebrzjy3';
 
-    console.log('Sending quote data to Zapier webhook...');
-    const zapierResponse = await fetch(zapierWebhookUrl, {
+    console.log('Sending quote data to Make webhook...');
+    const makeResponse = await fetch(makeWebhookUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -49,11 +46,11 @@ const handler = async (req: Request): Promise<Response> => {
       })
     });
 
-    if (!zapierResponse.ok) {
-      throw new Error(`Zapier webhook failed: ${zapierResponse.status}`);
+    if (!makeResponse.ok) {
+      throw new Error(`Make webhook failed: ${makeResponse.status}`);
     }
 
-    console.log('Successfully sent to Zapier webhook');
+    console.log('Successfully sent to Make webhook');
 
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
