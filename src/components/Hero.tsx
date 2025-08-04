@@ -12,8 +12,8 @@ const Hero = () => {
           <div className="text-center lg:text-left space-y-8 fade-up">
             <div className="space-y-4">
               <Badge variant="outline" className="border-brand-orange text-brand-blue bg-brand-orange/10">
-                <Star className="w-4 h-4 fill-brand-orange text-brand-orange mr-1" />
-                180 Five-Star Google Reviews
+                <Shield className="w-4 h-4 text-brand-orange mr-1" />
+                Kenmore's Licensed & Insured Cleaning Pros
               </Badge>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-blue leading-tight">
