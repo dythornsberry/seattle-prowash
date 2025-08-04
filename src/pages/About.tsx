@@ -176,7 +176,7 @@ const About = () => {
                     Get Free Quote
                   </Button>
                   <Button variant="prowash-phone" size="xl">
-                    📞 206.752.6690
+                    📞 206.752.6690.
                   </Button>
                 </div>
               </div>
