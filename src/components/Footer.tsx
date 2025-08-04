@@ -87,7 +87,7 @@ const Footer = () => {
 
             {/* Service Areas */}
             <div>
-              <h3 className="text-lg font-bold mb-6">Service Areas</h3>
+              <h3 className="text-lg font-bold mb-6 text-white">Service Areas</h3>
               <div className="space-y-2">
                 {serviceAreas.map((area, index) => (
                   <span key={index} className="inline-block text-sm text-white/80 mr-3 mb-1">
