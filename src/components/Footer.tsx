@@ -103,7 +103,7 @@ const Footer = () => {
 
             {/* Contact */}
             <div className="space-y-6">
-              <h3 className="text-lg font-bold">Contact Us</h3>
+              <h3 className="text-lg font-bold text-white">Contact Us</h3>
               
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
