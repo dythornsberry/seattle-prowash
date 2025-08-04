@@ -50,7 +50,7 @@ const handler = async (req: Request): Promise<Response> => {
       subject: "Your Quote Request - Seattle ProWash",
       html: `
         <h2>Thank you for your quote request, ${name}!</h2>
-        <p>We've received your request for <strong>${service}</strong> and will respond as soon as we're available with a personalized estimate.</p>
+        <p>We've received your request for <strong>${service}</strong>. Our team will review the details and get back to you as soon as possible.</p>
         
         <h3>Your Request Details:</h3>
         <ul>
