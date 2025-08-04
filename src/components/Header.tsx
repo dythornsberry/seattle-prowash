@@ -20,8 +20,8 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-xl md:text-2xl font-bold text-brand-navy">
-              Seattle <span className="text-brand-yellow">ProWash</span>
+            <h1 className="text-xl md:text-2xl font-bold text-brand-blue">
+              Seattle <span className="text-brand-orange">ProWash</span>
             </h1>
           </div>
 
@@ -31,7 +31,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-brand-navy hover:text-brand-yellow font-medium transition-colors duration-250"
+                className="text-brand-blue hover:text-brand-orange font-medium transition-colors duration-250"
               >
                 {item.name}
               </a>
@@ -59,7 +59,7 @@ const Header = () => {
               variant="ghost"
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-brand-navy"
+              className="text-brand-blue"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </Button>
@@ -74,7 +74,7 @@ const Header = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-4 py-2 text-brand-navy hover:bg-brand-gray-light hover:text-brand-yellow font-medium transition-colors duration-250"
+                  className="block px-4 py-2 text-brand-blue hover:bg-brand-gray-light hover:text-brand-orange font-medium transition-colors duration-250"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

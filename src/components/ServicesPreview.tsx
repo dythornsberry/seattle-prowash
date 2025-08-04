@@ -42,7 +42,7 @@ const ServicesPreview = () => {
     <section className="section-spacing">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 fade-up">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-blue mb-6">
             Professional Cleaning Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -54,17 +54,17 @@ const ServicesPreview = () => {
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-brand-yellow/50 fade-up">
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-brand-orange/50 fade-up">
                 <CardHeader className="text-center pb-4">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-yellow/10 rounded-full mb-4 mx-auto group-hover:bg-brand-yellow/20 transition-colors">
-                    <IconComponent className="w-8 h-8 text-brand-yellow" />
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-orange/10 rounded-full mb-4 mx-auto group-hover:bg-brand-orange/20 transition-colors">
+                    <IconComponent className="w-8 h-8 text-brand-orange" />
                   </div>
-                  <CardTitle className="text-xl font-bold text-brand-navy">
+                  <CardTitle className="text-xl font-bold text-brand-blue">
                     {service.title}
                   </CardTitle>
                   <div className="space-y-1">
-                    <div className="text-2xl font-bold text-brand-navy">{service.price}</div>
-                    <div className="text-sm text-brand-yellow font-semibold">{service.bonus}</div>
+                    <div className="text-2xl font-bold text-brand-blue">{service.price}</div>
+                    <div className="text-sm text-brand-orange font-semibold">{service.bonus}</div>
                   </div>
                 </CardHeader>
                 
@@ -76,7 +76,7 @@ const ServicesPreview = () => {
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-sm text-muted-foreground">
-                        <div className="w-1.5 h-1.5 bg-brand-yellow rounded-full mr-3 flex-shrink-0"></div>
+                        <div className="w-1.5 h-1.5 bg-brand-orange rounded-full mr-3 flex-shrink-0"></div>
                         {feature}
                       </li>
                     ))}

@@ -19,11 +19,11 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         
-        /* Seattle ProWash Brand Variants */
-        "prowash-primary": "bg-brand-yellow text-brand-navy font-bold hover:bg-brand-yellow/90 btn-glow shadow-md",
-        "prowash-secondary": "border-2 border-brand-navy text-brand-navy bg-transparent hover:bg-brand-navy hover:text-brand-white font-semibold",
-        "prowash-cta": "bg-brand-navy text-brand-white font-bold hover:bg-brand-navy/90 shadow-lg",
-        "prowash-phone": "bg-brand-yellow text-brand-navy font-bold hover:bg-brand-yellow/90 btn-glow text-lg sticky-phone-btn",
+        /* Seattle ProWash Original Brand Variants */
+        "prowash-primary": "bg-brand-orange text-brand-white font-bold hover:bg-brand-orange/90 btn-glow shadow-md",
+        "prowash-secondary": "border-2 border-brand-blue text-brand-blue bg-transparent hover:bg-brand-blue hover:text-brand-white font-semibold",
+        "prowash-cta": "bg-brand-blue text-brand-white font-bold hover:bg-brand-blue/90 shadow-lg",
+        "prowash-phone": "bg-brand-orange text-brand-white font-bold hover:bg-brand-orange/90 btn-glow text-lg sticky-phone-btn",
       },
       size: {
         default: "h-10 px-4 py-2",
