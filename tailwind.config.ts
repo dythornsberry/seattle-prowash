@@ -28,6 +28,7 @@ export default {
 				/* Seattle ProWash High Contrast Brand Colors */
 				'brand-blue': 'hsl(var(--brand-blue))',
 				'brand-blue-light': 'hsl(var(--brand-blue-light))', 
+				'brand-navy': 'hsl(var(--brand-navy))',
 				'brand-orange': 'hsl(var(--brand-orange))',
 				'brand-orange-light': 'hsl(var(--brand-orange-light))',
 				'brand-yellow': 'hsl(var(--brand-yellow))',

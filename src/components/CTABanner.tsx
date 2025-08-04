@@ -3,7 +3,7 @@ import { Clock, Phone } from "lucide-react";
 
 const CTABanner = () => {
   return (
-    <section className="py-16 bg-gradient-to-r from-brand-navy to-brand-navy/90 relative overflow-hidden">
+    <section className="py-16 bg-brand-navy relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-32 h-32 border-2 border-brand-yellow rounded-full -translate-x-16 -translate-y-16"></div>

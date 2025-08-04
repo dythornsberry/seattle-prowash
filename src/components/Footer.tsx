@@ -62,7 +62,7 @@ const Footer = () => {
                   <span className="font-bold">5.0</span>
                 </div>
                 <p className="text-sm text-brand-white/80">180+ Google Reviews</p>
-                <Button variant="outline" size="sm" className="mt-2 text-xs border-brand-white/30 text-brand-white hover:bg-brand-white hover:text-brand-navy">
+                <Button variant="outline" size="sm" className="mt-2 text-xs border-brand-white/50 text-brand-white hover:bg-brand-white hover:text-brand-navy">
                   Read Reviews
                 </Button>
               </div>
