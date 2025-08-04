@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, Mail, MapPin, Upload, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const QuoteForm = () => {
   const { toast } = useToast();
@@ -33,25 +34,71 @@ const QuoteForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Quote Request Received!",
-      description: "We'll reply within 1 business hour with your personalized estimate.",
-    });
-    
-    // Reset form
-    setFormData({
-      name: "",
-      phone: "",
-      email: "",
-      zipCode: "",
-      service: "",
-      message: ""
-    });
-    
-    setIsSubmitting(false);
+    try {
+      // Validate required fields
+      if (!formData.name || !formData.phone || !formData.email || !formData.service) {
+        toast({
+          title: "Please fill in all required fields",
+          description: "Name, phone, email, and service are required.",
+          variant: "destructive",
+        });
+        setIsSubmitting(false);
+        return;
+      }
+
+      // Save lead to database
+      const { data, error } = await supabase
+        .from('leads')
+        .insert([
+          {
+            name: formData.name,
+            phone: formData.phone,
+            email: formData.email,
+            zip_code: formData.zipCode,
+            service: formData.service,
+            message: formData.message,
+          }
+        ])
+        .select();
+
+      if (error) {
+        console.error('Error saving lead:', error);
+        toast({
+          title: "Something went wrong",
+          description: "Please try again or call us at 206-752-6690.",
+          variant: "destructive",
+        });
+        setIsSubmitting(false);
+        return;
+      }
+
+      console.log('Lead saved successfully:', data);
+      
+      toast({
+        title: "Quote Request Received!",
+        description: "We'll reply within 1 business hour with your personalized estimate.",
+      });
+      
+      // Reset form
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        zipCode: "",
+        service: "",
+        message: ""
+      });
+      
+    } catch (error) {
+      console.error('Unexpected error:', error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or call us at 206-752-6690.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (field: string, value: string) => {
