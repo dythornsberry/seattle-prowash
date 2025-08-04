@@ -10,10 +10,10 @@ const Header = () => {
   const navigation = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Services", href: "#services" },
+    { name: "Services", href: "/#services" },
     { name: "Gallery", href: "/gallery" },
-    { name: "Reviews", href: "#reviews" },
-    { name: "Contact", href: "#contact" }
+    { name: "Reviews", href: "/#reviews" },
+    { name: "Contact", href: "/#contact" }
   ];
 
   return (
@@ -42,10 +42,18 @@ const Header = () => {
 
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="prowash-secondary" size="sm">
+            <Button 
+              variant="prowash-secondary" 
+              size="sm"
+              onClick={() => window.location.href = '/#contact'}
+            >
               Get Free Quote
             </Button>
-            <Button variant="prowash-phone" size="sm">
+            <Button 
+              variant="prowash-phone" 
+              size="sm"
+              onClick={() => window.location.href = `tel:${phoneNumber}`}
+            >
               <Phone className="w-4 h-4" />
               {phoneNumber}
             </Button>
@@ -53,7 +61,11 @@ const Header = () => {
 
           {/* Mobile Controls */}
           <div className="md:hidden flex items-center space-x-2">
-            <Button variant="prowash-phone" size="sm">
+            <Button 
+              variant="prowash-phone" 
+              size="sm"
+              onClick={() => window.location.href = `tel:${phoneNumber}`}
+            >
               <Phone className="w-4 h-4" />
               Call
             </Button>
@@ -83,7 +95,15 @@ const Header = () => {
                 </a>
               ))}
               <div className="px-4 pt-4 border-t border-border">
-                <Button variant="prowash-primary" className="w-full" size="lg">
+                <Button 
+                  variant="prowash-primary" 
+                  className="w-full" 
+                  size="lg"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    window.location.href = '/#contact';
+                  }}
+                >
                   Get My Free Quote
                 </Button>
               </div>
