@@ -70,7 +70,7 @@ const Footer = () => {
 
             {/* Services */}
             <div>
-              <h3 className="text-lg font-bold mb-6">Our Services</h3>
+              <h3 className="text-lg font-bold mb-6 text-white">Our Services</h3>
               <ul className="space-y-3">
                 {services.map((service, index) => (
                   <li key={index}>
