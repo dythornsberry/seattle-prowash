@@ -113,7 +113,7 @@ const ServicesPreview = () => {
         <div className="text-center mt-12 fade-up">
           <div className="bg-brand-orange/10 rounded-lg p-6 max-w-2xl mx-auto mb-8">
             <p className="text-lg font-semibold text-brand-blue mb-2">
-              Ready to Get Started?
+              Ready to Protect Your Home This Fall?
             </p>
             <p className="text-brand-gray-text mb-4">
               Call or text us today for your free estimate. We'll walk your property and provide an accurate quote for the services you need.
