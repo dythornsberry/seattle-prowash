@@ -10,7 +10,7 @@ const ServicesPreview = () => {
       description: "Moss removal + full gutter cleanouts, done the right way.",
       features: [
         "Safely remove damaging moss and debris with our gentle brush and blow method.",
-        "Apply a professional soft wash treatment to protect your shingles and keep moss away longer.",
+        { text: "Apply a professional soft wash treatment to ", bold: "protect your shingles and keep moss away longer", end: "." },
         "Prevent water damage with a complete gutter & downspout flush, including a full site cleanup."
       ]
     },
@@ -20,7 +20,7 @@ const ServicesPreview = () => {
       description: "Restore driveways, patios, walkways, and concrete surfaces.",
       features: [
         "Instantly boost your home's curb appeal by deep cleaning driveways, patios, and walkways.",
-        "Eliminate slippery, unsafe moss and algae buildup for a safer, more inviting property.",
+        { text: "Eliminate ", bold: "slippery, unsafe moss and algae buildup", end: " for a safer, more inviting property." },
         "Achieve a flawless, streak-free finish that protects your concrete surfaces."
       ],
       socialProof: "5-star rated by 180+ Seattle-area homeowners"
@@ -31,7 +31,7 @@ const ServicesPreview = () => {
       description: "Soft wash cleaning for your home's full exterior.",
       features: [
         "Restore your home's beauty by washing siding, trim, soffits, and all exterior surfaces.",
-        "Remove harmful mildew, algae, and grime to protect your paint and siding from long-term damage.",
+        { text: "Remove harmful mildew, algae, and grime to ", bold: "protect your paint and siding", end: " from long-term damage." },
         "Our gentle soft wash technique is 100% safe for all materials—vinyl, wood, stucco, and more."
       ]
     }
@@ -69,40 +69,20 @@ const ServicesPreview = () => {
                 <CardContent className="space-y-4 flex-grow flex flex-col">
                   <div className="flex-grow">
                     <ul className="space-y-3">
-                      {service.features.map((feature, idx) => {
-                        // Handle specific features that need bolded text
-                        if (feature.includes("protect your shingles and keep moss away longer")) {
-                          return (
-                            <li key={idx} className="flex items-start text-sm text-muted-foreground">
-                              <div className="w-1.5 h-1.5 bg-brand-orange rounded-full mr-3 flex-shrink-0 mt-2"></div>
-                              Apply a professional soft wash treatment to <strong>protect your shingles and keep moss away longer</strong>.
-                            </li>
-                          );
-                        }
-                        if (feature.includes("slippery, unsafe moss and algae buildup")) {
-                          return (
-                            <li key={idx} className="flex items-start text-sm text-muted-foreground">
-                              <div className="w-1.5 h-1.5 bg-brand-orange rounded-full mr-3 flex-shrink-0 mt-2"></div>
-                              Eliminate <strong>slippery, unsafe moss and algae buildup</strong> for a safer, more inviting property.
-                            </li>
-                          );
-                        }
-                        if (feature.includes("protect your paint and siding")) {
-                          return (
-                            <li key={idx} className="flex items-start text-sm text-muted-foreground">
-                              <div className="w-1.5 h-1.5 bg-brand-orange rounded-full mr-3 flex-shrink-0 mt-2"></div>
-                              Remove harmful mildew, algae, and grime to <strong>protect your paint and siding</strong> from long-term damage.
-                            </li>
-                          );
-                        }
-                        // Default rendering for other features
-                        return (
-                          <li key={idx} className="flex items-start text-sm text-muted-foreground">
-                            <div className="w-1.5 h-1.5 bg-brand-orange rounded-full mr-3 flex-shrink-0 mt-2"></div>
-                            {feature}
-                          </li>
-                        );
-                      })}
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start text-sm text-muted-foreground">
+                          <div className="w-1.5 h-1.5 bg-brand-orange rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                          {typeof feature === 'string' ? (
+                            feature
+                          ) : (
+                            <>
+                              {feature.text}
+                              <strong>{feature.bold}</strong>
+                              {feature.end}
+                            </>
+                          )}
+                        </li>
+                      ))}
                     </ul>
                     
                     {service.socialProof && (
