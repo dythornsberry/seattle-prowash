@@ -251,7 +251,7 @@ const About = () => {
                 Proudly Serving the Pacific Northwest
               </h2>
               <p className="text-xl text-white/90 mb-8">
-                We provide professional cleaning services throughout the greater Seattle area.
+                We provide professional cleaning services throughout Kenmore and the greater Seattle area.
               </p>
               
               <div className="flex flex-wrap justify-center gap-3 mb-12">

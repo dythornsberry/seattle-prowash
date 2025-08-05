@@ -81,6 +81,17 @@ const TestimonialSlider = () => {
             <span className="text-lg font-semibold text-brand-navy">5.0</span>
             <span className="text-brand-gray-text font-medium">• 180 Google Reviews</span>
           </div>
+          <p className="text-brand-gray-text mb-8 max-w-2xl mx-auto">
+            Don't just take our word for it — see what homeowners across the Seattle area are saying about our roof and gutter cleaning services. 
+            <a 
+              href="https://www.google.com/search?q=Seattle+ProWash+reviews" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-brand-orange hover:underline font-semibold"
+            >
+              Read all our reviews on Google
+            </a>.
+          </p>
         </div>
 
         <div className="max-w-4xl mx-auto">

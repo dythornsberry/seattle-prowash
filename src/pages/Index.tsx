@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import BenefitStrip from "@/components/BenefitStrip";
 import ServicesPreview from "@/components/ServicesPreview";
+import AboutPreview from "@/components/AboutPreview";
 import TestimonialSlider from "@/components/TestimonialSlider";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import CTABanner from "@/components/CTABanner";
@@ -41,6 +42,7 @@ const Index = () => {
         <Hero />
         <BenefitStrip />
         <ServicesPreview />
+        <AboutPreview />
         <TestimonialSlider />
         <BeforeAfterSlider />
         <CTABanner />

@@ -9,8 +9,8 @@ const BenefitStrip = () => {
     },
     {
       icon: Gift,
-      title: "Free Gutter Clean",
-      description: "w/ Roof Service"
+      title: "12 Month Moss‑Free",
+      description: "Guarantee"
     },
     {
       icon: CheckCircle,

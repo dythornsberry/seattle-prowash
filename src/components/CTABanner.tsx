@@ -49,8 +49,8 @@ const CTABanner = () => {
               <div className="text-sm text-gray-300">Five-Star Reviews</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-orange-400">100%</div>
-              <div className="text-sm text-gray-300">Satisfaction Rate</div>
+              <div className="text-2xl font-bold text-orange-400">12 Month</div>
+              <div className="text-sm text-gray-300">Moss‑Free Guarantee</div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-orange-400">$2M+</div>

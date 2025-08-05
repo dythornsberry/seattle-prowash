@@ -22,11 +22,11 @@ const Hero = () => {
           <div className="text-center lg:text-left space-y-8 fade-up">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-blue leading-tight">
-                <span className="text-brand-orange block">Roof Moss Removal & Gutter Cleaning — Seattle's North-End Specialists</span>
+                <span className="text-brand-orange block">Seattle‑Area Roof Moss & Gutter Cleaning Specialists</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-brand-gray-text font-medium leading-relaxed">
-                Soft washing, pressure washing, and full exterior cleaning for homes in Kenmore, Bothell, Kirkland & nearby.
+                Based in Kenmore, WA — proudly serving Kenmore, Bothell, Kirkland, North Seattle and nearby areas.
               </p>
               
               <p className="text-sm text-brand-gray-text/80 font-medium">
@@ -42,7 +42,7 @@ const Hero = () => {
               </p>
               
               <p className="text-sm text-brand-gray-text/70 font-medium">
-                🗺️ Serving Kenmore, Bothell, Kirkland, and surrounding areas in King and Snohomish counties
+                🗺️ Serving Kenmore and the greater Seattle area
               </p>
             </div>
 

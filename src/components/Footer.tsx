@@ -28,7 +28,7 @@ const Footer = () => {
               <h3 className="text-lg md:text-xl font-bold">
                 Ready for a moss-free roof?
               </h3>
-              <p className="text-sm opacity-80">Same-day estimates • Fully licensed & insured • 100% satisfaction guarantee</p>
+              <p className="text-sm opacity-80">Same-day estimates • Fully licensed & insured • 12 month moss‑free guarantee</p>
             </div>
             <Button variant="prowash-cta" size="lg">
               <Phone className="w-4 h-4 mr-2" />
@@ -97,7 +97,7 @@ const Footer = () => {
                 ))}
               </div>
               <p className="text-xs text-white/60 mt-4">
-                Serving Kenmore, Bothell, Kirkland, Shoreline, and other nearby suburbs within a 10-mile radius of Kenmore, WA.
+                Serving Kenmore and the greater Seattle area.
               </p>
               <p className="text-sm text-brand-yellow mt-4 font-semibold">
                 Call or text 206‑752‑6690 for your free same-day quote

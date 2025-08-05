@@ -15,10 +15,8 @@ const QuoteForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    email: "",
-    zipCode: "",
     service: "",
-    message: ""
+    details: ""
   });
 
   const services = [
@@ -36,10 +34,10 @@ const QuoteForm = () => {
     
     try {
       // Validate required fields
-      if (!formData.name || !formData.phone || !formData.email || !formData.service) {
+      if (!formData.name || !formData.phone || !formData.service) {
         toast({
           title: "Please fill in all required fields",
-          description: "Name, phone, email, and service are required.",
+          description: "Name, phone, and service are required.",
           variant: "destructive",
         });
         setIsSubmitting(false);
@@ -53,10 +51,10 @@ const QuoteForm = () => {
           {
             name: formData.name,
             phone: formData.phone,
-            email: formData.email,
-            zip_code: formData.zipCode,
+            email: '',
+            zip_code: '',
             service: formData.service,
-            message: formData.message,
+            message: formData.details,
           }
         ])
         .select();
@@ -81,10 +79,10 @@ const QuoteForm = () => {
           body: {
             name: formData.name,
             phone: formData.phone,
-            email: formData.email,
-            zipCode: formData.zipCode,
+            email: '',
+            zipCode: '',
             service: formData.service,
-            message: formData.message,
+            message: formData.details,
           }
         });
         
@@ -115,10 +113,8 @@ const QuoteForm = () => {
       setFormData({
         name: "",
         phone: "",
-        email: "",
-        zipCode: "",
         service: "",
-        message: ""
+        details: ""
       });
       
     } catch (error) {
@@ -201,10 +197,10 @@ const QuoteForm = () => {
                   <CheckCircle className="w-5 h-5 text-brand-yellow" />
                   <span className="text-sm font-semibold text-brand-navy">Same-Day Estimates</span>
                 </div>
-                <div className="flex items-center gap-3 p-4 bg-brand-white rounded-lg shadow-sm">
-                  <CheckCircle className="w-5 h-5 text-brand-yellow" />
-                  <span className="text-sm font-semibold text-brand-navy">100% Satisfaction Guarantee</span>
-                </div>
+                 <div className="flex items-center gap-3 p-4 bg-brand-white rounded-lg shadow-sm">
+                   <CheckCircle className="w-5 h-5 text-brand-yellow" />
+                   <span className="text-sm font-semibold text-brand-navy">12 Month Moss‑Free Guarantee</span>
+                 </div>
               </div>
             </div>
 
@@ -247,30 +243,6 @@ const QuoteForm = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="email" className="text-brand-navy font-semibold">Email Address *</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) => handleChange("email", e.target.value)}
-                        placeholder="john@example.com"
-                        required
-                        className="border-brand-yellow/30 focus:border-brand-yellow"
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="zipCode" className="text-brand-navy font-semibold">Zip Code</Label>
-                      <Input
-                        id="zipCode"
-                        value={formData.zipCode}
-                        onChange={(e) => handleChange("zipCode", e.target.value)}
-                        placeholder="98028"
-                        className="border-brand-yellow/30 focus:border-brand-yellow"
-                      />
-                    </div>
-
-                    <div className="space-y-2">
                       <Label htmlFor="service" className="text-brand-navy font-semibold">Service Needed *</Label>
                       <Select value={formData.service} onValueChange={(value) => handleChange("service", value)}>
                         <SelectTrigger className="border-brand-yellow/30 focus:border-brand-yellow">
@@ -287,11 +259,11 @@ const QuoteForm = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="message" className="text-brand-navy font-semibold">Project Details (Optional)</Label>
+                      <Label htmlFor="details" className="text-brand-navy font-semibold">Project Details (Optional)</Label>
                       <Textarea
-                        id="message"
-                        value={formData.message}
-                        onChange={(e) => handleChange("message", e.target.value)}
+                        id="details"
+                        value={formData.details}
+                        onChange={(e) => handleChange("details", e.target.value)}
                         placeholder="Tell us about your roof, gutters, or specific concerns..."
                         rows={4}
                         className="border-brand-yellow/30 focus:border-brand-yellow"
@@ -318,10 +290,10 @@ const QuoteForm = () => {
                         </div>
                       </div>
                       
-                      <div className="text-sm text-muted-foreground">
-                        <p className="font-medium text-brand-navy">We proudly serve Kenmore, Bothell, Kirkland, and surrounding suburbs within a 10-mile radius</p>
-                        <p className="mt-1">We respond back in 1 hour — Monday through Sunday</p>
-                      </div>
+                       <div className="text-sm text-muted-foreground">
+                         <p className="font-medium text-brand-navy">We proudly serve Kenmore and the greater Seattle area</p>
+                         <p className="mt-1">We respond back in 1 hour — Monday through Sunday</p>
+                       </div>
                     </div>
 
                     <p className="text-xs text-muted-foreground text-center">
