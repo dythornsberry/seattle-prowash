@@ -41,22 +41,21 @@ const Services = () => {
     {
       id: "roof-cleaning",
       icon: Droplet,
-      title: "Roof & Gutter Cleaning",
-      subtitle: "Moss removal + full gutter cleanouts, done the right way.",
+      title: "Roof Cleaning & Moss Removal",
+      subtitle: "Safe moss removal and preventative soft wash treatment.",
       image: roofMossRemoval,
-      description: "Our professional roof cleaning service combines safe soft washing techniques with thorough gutter maintenance to protect your home's most important systems.",
+      description: "Our professional roof cleaning service uses safe, manufacturer-approved soft washing techniques to remove harmful moss, algae, and grime, protecting the integrity and lifespan of your roof.",
       process: [
         "Brush and blow moss and roof debris",
-        "Apply soft wash treatment (manufacturer-recommended method)",
-        "Clean out gutters, flush downspouts, debris cleanup, and rinse siding if needed"
+        "Apply soft wash treatment (manufacturer-recommended method)"
       ],
       benefits: [
         "Extends roof lifespan by removing damaging moss and algae",
-        "Prevents water damage from clogged gutters",
         "Maintains roofing manufacturer warranty compliance",
         "Improves curb appeal and property value"
       ],
-      priceNote: "Starting at $499 for typical single-story homes"
+      priceNote: "Starting at $499 for typical single-story homes",
+      crossPromo: "**For complete protection, pair this with our Gutter Cleaning service. Ask about our package discount!**"
     },
     {
       id: "pressure-washing", 
@@ -116,7 +115,7 @@ const Services = () => {
         "Maintains proper roof drainage",
         "Extends gutter system lifespan"
       ],
-      priceNote: "Starting at $249 - often included with roof cleaning"
+      priceNote: "**The perfect partner to our Roof Cleaning service.** Standalone gutter cleaning starts at $249. Ask about our package discount when you book both!"
     }
   ];
 
@@ -206,6 +205,15 @@ const Services = () => {
                         </ul>
                       </div>
 
+                      {/* Cross-promotion for roof cleaning */}
+                      {service.crossPromo && (
+                        <div className="mb-6">
+                          <p className="text-brand-orange font-medium text-sm">
+                            {service.crossPromo}
+                          </p>
+                        </div>
+                      )}
+
                       {/* Pricing */}
                       <div className="bg-brand-orange/10 rounded-lg p-4 mb-6">
                         <p className="text-brand-navy font-semibold">{service.priceNote}</p>
@@ -259,19 +267,19 @@ const Services = () => {
               <div className="grid md:grid-cols-3 gap-8 mt-12">
                 <Card className="border-brand-yellow/20">
                   <CardHeader className="text-center">
-                    <CardTitle className="text-brand-navy">Experience</CardTitle>
+                    <CardTitle className="text-brand-navy">Decades of Local Expertise</CardTitle>
                     <CardDescription>Years of professional cleaning expertise</CardDescription>
                   </CardHeader>
                 </Card>
                 <Card className="border-brand-yellow/20">
                   <CardHeader className="text-center">
-                    <CardTitle className="text-brand-navy">Equipment</CardTitle>
+                    <CardTitle className="text-brand-navy">Superior, Damage-Free Results</CardTitle>
                     <CardDescription>Professional-grade tools and techniques</CardDescription>
                   </CardHeader>
                 </Card>
                 <Card className="border-brand-yellow/20">
                   <CardHeader className="text-center">
-                    <CardTitle className="text-brand-navy">Results</CardTitle>
+                    <CardTitle className="text-brand-navy">A Track Record of Transformations</CardTitle>
                     <CardDescription>Proven transformations across Seattle area</CardDescription>
                   </CardHeader>
                 </Card>
