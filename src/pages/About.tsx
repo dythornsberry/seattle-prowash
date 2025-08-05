@@ -77,7 +77,7 @@ const About = () => {
                     </p>
                   </div>
                   
-                  <div className="grid grid-cols-3 gap-4 mt-8">
+                  <div className="grid grid-cols-4 gap-4 mt-8">
                     <div className="text-center">
                       <div className="text-3xl font-bold text-brand-yellow mb-2">2022</div>
                       <div className="text-sm text-muted-foreground">Founded Seattle ProWash</div>
@@ -90,6 +90,10 @@ const About = () => {
                       <div className="text-3xl font-bold text-brand-yellow mb-2">180+</div>
                       <div className="text-sm text-muted-foreground">5-Star Google Reviews</div>
                     </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-brand-yellow mb-2">15+</div>
+                      <div className="text-sm text-muted-foreground">Communities Served</div>
+                    </div>
                   </div>
                 </div>
 
@@ -101,7 +105,7 @@ const About = () => {
                       className="rounded-2xl shadow-2xl w-full"
                     />
                     <div className="absolute -bottom-6 -right-6 bg-brand-yellow text-brand-navy px-6 py-3 rounded-xl font-bold shadow-lg">
-                      Owner & Operator
+                      15+ Communities Served
                     </div>
                   </div>
                 </div>
@@ -126,7 +130,7 @@ const About = () => {
               <Card className="fade-up bg-brand-white border-brand-yellow/20 hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">
                   <Award className="w-12 h-12 text-brand-yellow mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-brand-navy mb-3">Industry Experience</h3>
+                  <h3 className="text-xl font-semibold text-brand-navy mb-3">Decades of Local Expertise</h3>
                   <p className="text-muted-foreground">Years of hands-on experience in professional cleaning techniques and equipment operation.</p>
                 </CardContent>
               </Card>
@@ -134,7 +138,7 @@ const About = () => {
               <Card className="fade-up bg-brand-white border-brand-yellow/20 hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">
                   <CheckCircle className="w-12 h-12 text-brand-yellow mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-brand-navy mb-3">Quality Equipment</h3>
+                  <h3 className="text-xl font-semibold text-brand-navy mb-3">Superior, Damage-Free Results</h3>
                   <p className="text-muted-foreground">Professional-grade soft washing and pressure washing equipment for superior results.</p>
                 </CardContent>
               </Card>
@@ -142,7 +146,7 @@ const About = () => {
               <Card className="fade-up bg-brand-white border-brand-yellow/20 hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">
                   <Users className="w-12 h-12 text-brand-yellow mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-brand-navy mb-3">Customer Focused</h3>
+                  <h3 className="text-xl font-semibold text-brand-navy mb-3">Your Property, Our Priority</h3>
                   <p className="text-muted-foreground">Every project is treated with the care and attention your property deserves.</p>
                 </CardContent>
               </Card>
@@ -150,7 +154,7 @@ const About = () => {
               <Card className="fade-up bg-brand-white border-brand-yellow/20 hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">
                   <Calendar className="w-12 h-12 text-brand-yellow mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-brand-navy mb-3">Proven Results</h3>
+                  <h3 className="text-xl font-semibold text-brand-navy mb-3">A Track Record of Transformations</h3>
                   <p className="text-muted-foreground">Consistent, reliable cleaning that restores your property's value and curb appeal.</p>
                 </CardContent>
               </Card>
@@ -205,7 +209,7 @@ const About = () => {
                       className="w-full h-80 object-cover"
                     />
                     <div className="absolute bottom-4 left-4 bg-brand-navy/90 text-white px-4 py-2 rounded-lg">
-                      <div className="font-semibold">Dylan - Owner</div>
+                      <div className="font-semibold">Dylan - Leading the Crew</div>
                       <div className="text-sm">Roof Soft Washing Specialist</div>
                     </div>
                   </div>
@@ -219,7 +223,7 @@ const About = () => {
                       className="w-full h-80 object-cover"
                     />
                     <div className="absolute bottom-4 left-4 bg-brand-navy/90 text-white px-4 py-2 rounded-lg">
-                      <div className="font-semibold">Professional Team</div>
+                      <div className="font-semibold">Teamwork on House Wash</div>
                       <div className="text-sm">House Washing Experts</div>
                     </div>
                   </div>
@@ -233,10 +237,10 @@ const About = () => {
                     alt="Seattle ProWash team member with professional equipment"
                     className="w-full h-80 object-cover"
                   />
-                  <div className="absolute bottom-4 left-4 bg-brand-navy/90 text-white px-4 py-2 rounded-lg">
-                    <div className="font-semibold">Fully Equipped</div>
-                    <div className="text-sm">Professional Grade Equipment</div>
-                  </div>
+                    <div className="absolute bottom-4 left-4 bg-brand-navy/90 text-white px-4 py-2 rounded-lg">
+                      <div className="font-semibold">Professional-Grade Equipment</div>
+                      <div className="text-sm">Ready for Any Challenge</div>
+                    </div>
                 </div>
               </div>
             </div>
