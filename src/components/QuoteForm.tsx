@@ -8,7 +8,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Phone, Mail, MapPin, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import { AddressAutocomplete } from "./AddressAutocomplete";
+import { AddressAutocomplete } from "./SimpleAddressAutocomplete";
+
 
 const QuoteForm = () => {
   const { toast } = useToast();
@@ -255,11 +256,8 @@ const QuoteForm = () => {
                         <AddressAutocomplete
                           id="address"
                           value={formData.address}
-                          onChange={(value) => handleChange("address", value)}
-                          onAddressSelect={(addressData) => {
-                            // Update the address field with the formatted address
-                            handleChange("address", addressData.formatted_address);
-                          }}
+                          onChange={(e) => handleChange("address", e.target.value)}
+                          onAddressSelect={(address) => handleChange("address", address)}
                           placeholder="Start typing your address..."
                           required
                           className="border-brand-yellow/30 focus:border-brand-yellow"
