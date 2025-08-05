@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
 import logoImage from "@/assets/seattle-prowash-logo.png";
-import { navigateToContact } from "@/lib/navigation";
 
 const Header = () => {
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const phoneNumber = "206-752-6690";
@@ -15,6 +16,56 @@ const Header = () => {
     onClick?: () => void;
   }
   
+  const navigateToContact = () => {
+    if (window.location.pathname === '/') {
+      // Already on home page, just scroll to contact
+      const contactElement = document.getElementById('contact');
+      if (contactElement) {
+        contactElement.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    } else {
+      // Navigate to home page first, then scroll to contact
+      navigate('/');
+      setTimeout(() => {
+        const contactElement = document.getElementById('contact');
+        if (contactElement) {
+          contactElement.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }, 100);
+    }
+  };
+
+  const navigateToReviews = () => {
+    if (window.location.pathname === '/') {
+      // Already on home page, just scroll to reviews
+      const reviewsElement = document.getElementById('reviews');
+      if (reviewsElement) {
+        reviewsElement.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    } else {
+      // Navigate to home page first, then scroll to reviews
+      navigate('/');
+      setTimeout(() => {
+        const reviewsElement = document.getElementById('reviews');
+        if (reviewsElement) {
+          reviewsElement.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }, 100);
+    }
+  };
+  
   const navigation: NavigationItem[] = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
@@ -23,13 +74,7 @@ const Header = () => {
     { 
       name: "Reviews", 
       href: "/#reviews",
-      onClick: () => {
-        if (window.location.pathname === '/') {
-          document.getElementById('reviews')?.scrollIntoView({ behavior: 'smooth' });
-        } else {
-          window.location.href = '/#reviews';
-        }
-      }
+      onClick: () => navigateToReviews()
     },
     { 
       name: "Contact", 
