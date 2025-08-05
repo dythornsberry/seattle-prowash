@@ -36,10 +36,10 @@ const QuoteForm = () => {
     
     try {
       // Validate required fields
-      if (!formData.phone || !formData.address) {
+      if (!formData.name || !formData.phone || !formData.address) {
         toast({
           title: "Please fill in all required fields",
-          description: "Phone number and address are required.",
+          description: "Name, phone number and address are required.",
           variant: "destructive",
         });
         setIsSubmitting(false);
@@ -180,14 +180,15 @@ const QuoteForm = () => {
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="space-y-6">
-                      {/* Name - optional */}
+                      {/* Name - required */}
                       <div className="space-y-2">
-                        <Label htmlFor="name" className="text-brand-navy font-semibold">Name</Label>
+                        <Label htmlFor="name" className="text-brand-navy font-semibold">Name *</Label>
                         <Input
                           id="name"
                           value={formData.name}
                           onChange={(e) => handleChange("name", e.target.value)}
                           placeholder="John Smith"
+                          required
                           className="border-brand-yellow/30 focus:border-brand-yellow"
                         />
                       </div>
