@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, Mail, MapPin, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const QuoteForm = () => {
   const { toast } = useToast();
@@ -45,7 +46,22 @@ const QuoteForm = () => {
         return;
       }
 
-      // For now, just show success message
+      // Call the edge function to send notifications
+      const { error } = await supabase.functions.invoke('send-quote-notification', {
+        body: {
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          zipCode: formData.address, // Using address as zipCode for now
+          service: formData.service,
+          message: formData.details
+        }
+      });
+
+      if (error) {
+        throw error;
+      }
+
       toast({
         title: "Quote Request Received!",
         description: "We'll respond back in 1 hour.",
