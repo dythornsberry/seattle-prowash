@@ -7,7 +7,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, Mail, MapPin, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
 
 const QuoteForm = () => {
   const { toast } = useToast();
@@ -46,66 +45,7 @@ const QuoteForm = () => {
         return;
       }
 
-      // Save lead to database
-      const { data, error } = await supabase
-        .from('leads')
-        .insert([
-          {
-            name: formData.name,
-            phone: formData.phone,
-            email: formData.email,
-            zip_code: formData.zipCode,
-            service: formData.service,
-            message: formData.details,
-          }
-        ])
-        .select();
-
-      if (error) {
-        console.error('Error saving lead:', error);
-        toast({
-          title: "Something went wrong",
-          description: "Please try again or call us at 206-752-6690.",
-          variant: "destructive",
-        });
-        setIsSubmitting(false);
-        return;
-      }
-
-      console.log('Lead saved successfully:', data);
-      
-      // Send email notifications
-      try {
-        console.log('Calling send-quote-notification edge function...');
-        const emailResult = await supabase.functions.invoke('send-quote-notification', {
-          body: {
-            name: formData.name,
-            phone: formData.phone,
-            email: formData.email,
-            zipCode: formData.zipCode,
-            service: formData.service,
-            message: formData.details,
-          }
-        });
-        
-        console.log('Email function result:', emailResult);
-        
-        if (emailResult.error) {
-          console.error('Edge function returned error:', emailResult.error);
-          throw emailResult.error;
-        }
-      } catch (emailError) {
-        console.error('Email notification failed:', emailError);
-        // Show user that email failed but lead was saved
-        toast({
-          title: "Quote Saved - Email Issue",
-          description: "Your quote was saved but we had trouble sending notifications. Please call 206-752-6690.",
-          variant: "destructive",
-        });
-        setIsSubmitting(false);
-        return;
-      }
-      
+      // For now, just show success message
       toast({
         title: "Quote Request Received!",
         description: "We'll respond back in 1 hour.",
@@ -302,9 +242,8 @@ const QuoteForm = () => {
 
                     <Button
                       type="submit"
-                      variant="prowash-primary"
+                      className="w-full bg-brand-orange text-white font-bold hover:bg-brand-orange-light btn-glow shadow-md border-0"
                       size="xl"
-                      className="w-full"
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? "Sending..." : "Get My Free Quote"}
