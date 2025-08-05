@@ -190,6 +190,19 @@ const QuoteForm = () => {
                         />
                       </div>
                       
+                      {/* Email - optional */}
+                      <div className="space-y-2">
+                        <Label htmlFor="email" className="text-brand-navy font-semibold">Email</Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          value={formData.email}
+                          onChange={(e) => handleChange("email", e.target.value)}
+                          placeholder="john@example.com"
+                          className="border-brand-yellow/30 focus:border-brand-yellow"
+                        />
+                      </div>
+                      
                       {/* Address - required */}
                       <div className="space-y-2">
                         <Label htmlFor="address" className="text-brand-navy font-semibold">Address *</Label>
@@ -203,35 +216,22 @@ const QuoteForm = () => {
                         />
                       </div>
                       
-                      {/* Email - optional */}
+                      {/* Service Needed - optional */}
                       <div className="space-y-2">
-                        <Label htmlFor="email" className="text-brand-navy font-semibold">Email</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={(e) => handleChange("email", e.target.value)}
-                          placeholder="john@example.com"
-                          className="border-brand-yellow/30 focus:border-brand-yellow"
-                        />
+                        <Label htmlFor="service" className="text-brand-navy font-semibold">Service Needed</Label>
+                        <Select value={formData.service} onValueChange={(value) => handleChange("service", value)}>
+                          <SelectTrigger className="border-brand-yellow/30 focus:border-brand-yellow">
+                            <SelectValue placeholder="Select a service..." />
+                          </SelectTrigger>
+                          <SelectContent>
+                            {services.map((service) => (
+                              <SelectItem key={service} value={service}>
+                                {service}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
                       </div>
-                    </div>
-
-                    {/* Service Needed - optional */}
-                    <div className="space-y-2">
-                      <Label htmlFor="service" className="text-brand-navy font-semibold">Service Needed</Label>
-                      <Select value={formData.service} onValueChange={(value) => handleChange("service", value)}>
-                        <SelectTrigger className="border-brand-yellow/30 focus:border-brand-yellow">
-                          <SelectValue placeholder="Select a service..." />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {services.map((service) => (
-                            <SelectItem key={service} value={service}>
-                              {service}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
                     </div>
 
                     {/* Additional Details - optional */}
