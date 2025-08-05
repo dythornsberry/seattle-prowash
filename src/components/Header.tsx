@@ -8,11 +8,34 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const phoneNumber = "206-752-6690";
-  const navigation = [
+  
+  interface NavigationItem {
+    name: string;
+    href: string;
+    onClick?: () => void;
+  }
+  
+  const navigation: NavigationItem[] = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
-    { name: "Gallery", href: "/gallery" }
+    { name: "Gallery", href: "/gallery" },
+    { 
+      name: "Reviews", 
+      href: "/#reviews",
+      onClick: () => {
+        if (window.location.pathname === '/') {
+          document.getElementById('reviews')?.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          window.location.href = '/#reviews';
+        }
+      }
+    },
+    { 
+      name: "Contact", 
+      href: "/#contact",
+      onClick: () => navigateToContact()
+    }
   ];
 
   return (
@@ -32,7 +55,13 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-brand-blue hover:text-brand-orange font-medium transition-colors duration-250"
+                className="text-brand-blue hover:text-brand-orange font-medium transition-colors duration-250 cursor-pointer"
+                onClick={(e) => {
+                  if (item.onClick) {
+                    e.preventDefault();
+                    item.onClick();
+                  }
+                }}
               >
                 {item.name}
               </a>
@@ -87,8 +116,14 @@ const Header = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-4 py-2 text-brand-blue hover:bg-brand-gray-light hover:text-brand-orange font-medium transition-colors duration-250"
-                  onClick={() => setIsMenuOpen(false)}
+                  className="block px-4 py-2 text-brand-blue hover:bg-brand-gray hover:text-brand-orange font-medium transition-colors duration-250 cursor-pointer"
+                  onClick={(e) => {
+                    setIsMenuOpen(false);
+                    if (item.onClick) {
+                      e.preventDefault();
+                      item.onClick();
+                    }
+                  }}
                 >
                   {item.name}
                 </a>

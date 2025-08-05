@@ -14,8 +14,8 @@ const QuoteForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
+    address: "",
     email: "",
-    zipCode: "",
     service: "",
     details: ""
   });
@@ -35,10 +35,10 @@ const QuoteForm = () => {
     
     try {
       // Validate required fields
-      if (!formData.name || !formData.phone || !formData.email || !formData.service) {
+      if (!formData.phone || !formData.address) {
         toast({
           title: "Please fill in all required fields",
-          description: "Name, phone, email, and service are required.",
+          description: "Phone number and address are required.",
           variant: "destructive",
         });
         setIsSubmitting(false);
@@ -55,8 +55,8 @@ const QuoteForm = () => {
       setFormData({
         name: "",
         phone: "",
+        address: "",
         email: "",
-        zipCode: "",
         service: "",
         details: ""
       });
@@ -121,13 +121,13 @@ const QuoteForm = () => {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-brand-yellow mt-1" />
-                    <div>
-                      <p className="text-sm text-brand-navy">Serving Kenmore & surrounding areas</p>
-                      <p className="text-sm text-muted-foreground">10-mile radius</p>
+                    <div className="flex items-start gap-3">
+                      <MapPin className="w-5 h-5 text-brand-yellow mt-1" />
+                      <div>
+                        <p className="text-sm text-brand-navy">Serving Kenmore and the greater Seattle area</p>
+                        <p className="text-sm text-muted-foreground">Including Bothell, Kirkland, Shoreline, and nearby neighborhoods</p>
+                      </div>
                     </div>
-                  </div>
                 </CardContent>
               </Card>
 
@@ -145,6 +145,10 @@ const QuoteForm = () => {
                   <CheckCircle className="w-5 h-5 text-brand-yellow" />
                   <span className="text-sm font-semibold text-brand-navy">100% Satisfaction Guarantee</span>
                 </div>
+                <div className="flex items-center gap-3 p-4 bg-brand-white rounded-lg shadow-sm">
+                  <CheckCircle className="w-5 h-5 text-brand-yellow" />
+                  <span className="text-sm font-semibold text-brand-navy">12-Month Moss-Free Guarantee</span>
+                </div>
               </div>
             </div>
 
@@ -159,19 +163,20 @@ const QuoteForm = () => {
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-6">
+                      {/* Name - optional */}
                       <div className="space-y-2">
-                        <Label htmlFor="name" className="text-brand-navy font-semibold">Full Name *</Label>
+                        <Label htmlFor="name" className="text-brand-navy font-semibold">Name</Label>
                         <Input
                           id="name"
                           value={formData.name}
                           onChange={(e) => handleChange("name", e.target.value)}
                           placeholder="John Smith"
-                          required
                           className="border-brand-yellow/30 focus:border-brand-yellow"
                         />
                       </div>
                       
+                      {/* Phone Number - required */}
                       <div className="space-y-2">
                         <Label htmlFor="phone" className="text-brand-navy font-semibold">Phone Number *</Label>
                         <Input
@@ -184,36 +189,37 @@ const QuoteForm = () => {
                           className="border-brand-yellow/30 focus:border-brand-yellow"
                         />
                       </div>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-6">
+                      
+                      {/* Address - required */}
                       <div className="space-y-2">
-                        <Label htmlFor="email" className="text-brand-navy font-semibold">Email Address *</Label>
+                        <Label htmlFor="address" className="text-brand-navy font-semibold">Address *</Label>
+                        <Input
+                          id="address"
+                          value={formData.address}
+                          onChange={(e) => handleChange("address", e.target.value)}
+                          placeholder="123 Main St, Kenmore, WA 98028"
+                          required
+                          className="border-brand-yellow/30 focus:border-brand-yellow"
+                        />
+                      </div>
+                      
+                      {/* Email - optional */}
+                      <div className="space-y-2">
+                        <Label htmlFor="email" className="text-brand-navy font-semibold">Email</Label>
                         <Input
                           id="email"
                           type="email"
                           value={formData.email}
                           onChange={(e) => handleChange("email", e.target.value)}
                           placeholder="john@example.com"
-                          required
-                          className="border-brand-yellow/30 focus:border-brand-yellow"
-                        />
-                      </div>
-                      
-                      <div className="space-y-2">
-                        <Label htmlFor="zipCode" className="text-brand-navy font-semibold">Zip Code</Label>
-                        <Input
-                          id="zipCode"
-                          value={formData.zipCode}
-                          onChange={(e) => handleChange("zipCode", e.target.value)}
-                          placeholder="98028"
                           className="border-brand-yellow/30 focus:border-brand-yellow"
                         />
                       </div>
                     </div>
 
+                    {/* Service Needed - optional */}
                     <div className="space-y-2">
-                      <Label htmlFor="service" className="text-brand-navy font-semibold">Service Needed *</Label>
+                      <Label htmlFor="service" className="text-brand-navy font-semibold">Service Needed</Label>
                       <Select value={formData.service} onValueChange={(value) => handleChange("service", value)}>
                         <SelectTrigger className="border-brand-yellow/30 focus:border-brand-yellow">
                           <SelectValue placeholder="Select a service..." />
@@ -228,14 +234,15 @@ const QuoteForm = () => {
                       </Select>
                     </div>
 
+                    {/* Additional Details - optional */}
                     <div className="space-y-2">
-                      <Label htmlFor="details" className="text-brand-navy font-semibold">Project Details (Optional)</Label>
+                      <Label htmlFor="details" className="text-brand-navy font-semibold">Additional Details</Label>
                       <Textarea
                         id="details"
                         value={formData.details}
                         onChange={(e) => handleChange("details", e.target.value)}
-                        placeholder="Tell us about your roof, gutters, or specific concerns..."
-                        rows={4}
+                        placeholder="Optional: anything you'd like to add?"
+                        rows={3}
                         className="border-brand-yellow/30 focus:border-brand-yellow"
                       />
                     </div>
@@ -259,7 +266,7 @@ const QuoteForm = () => {
                       </div>
                       
                       <div className="text-sm text-muted-foreground">
-                        <p className="font-medium text-brand-navy">We proudly serve Kenmore, Bothell, Kirkland, and surrounding suburbs within a 10-mile radius</p>
+                        <p className="font-medium text-brand-navy">Serving Kenmore and the greater Seattle area, including Bothell, Kirkland, Shoreline, and nearby neighborhoods</p>
                         <p className="mt-1">We respond back in 1 hour — Monday through Sunday</p>
                       </div>
                     </div>
