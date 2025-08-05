@@ -10,7 +10,7 @@ const ServicesPreview = () => {
       description: "Moss removal + full gutter cleanouts, done the right way.",
       features: [
         "Safely remove damaging moss and debris with our gentle brush and blow method.",
-        "Apply a professional soft wash treatment to protect your shingles and keep moss away longer.",
+        "Apply a professional soft wash treatment to <strong>protect your shingles and keep moss away longer</strong>.",
         "Prevent water damage with a complete gutter & downspout flush, including a full site cleanup."
       ]
     },
@@ -20,7 +20,7 @@ const ServicesPreview = () => {
       description: "Restore driveways, patios, walkways, and concrete surfaces.",
       features: [
         "Instantly boost your home's curb appeal by deep cleaning driveways, patios, and walkways.",
-        "Eliminate slippery, unsafe moss and algae buildup for a safer, more inviting property.",
+        "Eliminate <strong>slippery, unsafe moss and algae buildup</strong> for a safer, more inviting property.",
         "Achieve a flawless, streak-free finish that protects your concrete surfaces."
       ],
       socialProof: "5-star rated by 180+ Seattle-area homeowners"
@@ -31,7 +31,7 @@ const ServicesPreview = () => {
       description: "Soft wash cleaning for your home's full exterior.",
       features: [
         "Restore your home's beauty by washing siding, trim, soffits, and all exterior surfaces.",
-        "Remove harmful mildew, algae, and grime to protect your paint and siding from long-term damage.",
+        "Remove harmful mildew, algae, and grime to <strong>protect your paint and siding</strong> from long-term damage.",
         "Our gentle soft wash technique is 100% safe for all materials—vinyl, wood, stucco, and more."
       ]
     }
@@ -45,7 +45,7 @@ const ServicesPreview = () => {
             Professional Cleaning Services
           </h2>
           <p className="text-xl text-brand-gray-text max-w-3xl mx-auto font-medium">
-            From moss-covered roofs to clogged gutters, we restore your home's beauty and protect your investment with proven cleaning solutions.
+            From moss-covered roofs to clogged gutters, we restore your home's beauty and <strong>protect your investment</strong> with proven cleaning solutions.
           </p>
         </div>
 

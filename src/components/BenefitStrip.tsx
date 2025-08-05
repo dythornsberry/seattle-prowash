@@ -4,22 +4,22 @@ const BenefitStrip = () => {
   const benefits = [
     {
       icon: Shield,
-      title: "Fully Insured",
+      title: "🛡️ Fully Insured",
       description: "Complete protection"
     },
     {
       icon: Gift,
-      title: "12 Month Moss‑Free",
+      title: "🗓️ 12 Month Moss‑Free",
       description: "Guarantee"
     },
     {
       icon: CheckCircle,
-      title: "100% Satisfaction",
+      title: "✅ 100% Satisfaction",
       description: "Guaranteed results"
     },
     {
       icon: Star,
-      title: "180 ★★★★★ Reviews",
+      title: "⭐ 180 ★★★★★ Reviews",
       description: "Trusted by neighbors"
     }
   ];
