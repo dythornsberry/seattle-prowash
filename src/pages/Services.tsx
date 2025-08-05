@@ -63,11 +63,10 @@ const Services = () => {
       title: "Pressure Washing",
       subtitle: "Restore driveways, patios, decks, and walkways.",
       image: pressureWashing,
-      description: "Professional pressure washing that removes years of buildup from your concrete surfaces, making them look new again while eliminating slip hazards.",
+      description: "Professional pressure washing that removes years of buildup from your concrete surfaces, making them look new again. It's the perfect solution for eliminating slippery, unsafe moss and stubborn grime.",
       process: [
         "Clean concrete, pavers, fencing, and other flat surfaces",
-        "Use professional surface cleaner for streak-free results", 
-        "Great for removing algae, moss, and grime"
+        "Use professional surface cleaner for streak-free results"
       ],
       benefits: [
         "Eliminates dangerous slip hazards from moss and algae",
@@ -83,10 +82,9 @@ const Services = () => {
       title: "House Washing", 
       subtitle: "Soft wash cleaning for your home's full exterior.",
       image: houseSoftwash,
-      description: "Gentle but effective soft washing that cleans your entire home's exterior without the risk from high-pressure washing.",
+      description: "Our gentle but effective soft washing cleans your entire home's exterior—including 2nd-story homes—without the risk of damage from high-pressure washing.",
       process: [
-        "Cleans siding, trim, soffits, eaves, exterior gutters, windows & doors",
-        "2nd-story homes included"
+        "Cleans siding, trim, soffits, eaves, exterior gutters, windows & doors"
       ],
       benefits: [
         "Safe on all siding materials (vinyl, wood, hardi-board siding)",
