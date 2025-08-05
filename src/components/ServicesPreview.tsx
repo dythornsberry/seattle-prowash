@@ -10,7 +10,7 @@ const ServicesPreview = () => {
       description: "Moss removal + full gutter cleanouts, done the right way.",
       features: [
         "Safely remove damaging moss and debris with our gentle brush and blow method.",
-        <>Apply a professional soft wash treatment to <strong className="font-bold text-brand-blue">protect your shingles and keep moss away longer</strong>.</>,
+        "Apply a professional soft wash treatment to protect your shingles and keep moss away longer.",
         "Prevent water damage with a complete gutter & downspout flush, including a full site cleanup."
       ]
     },
@@ -20,7 +20,7 @@ const ServicesPreview = () => {
       description: "Restore driveways, patios, walkways, and concrete surfaces.",
       features: [
         "Instantly boost your home's curb appeal by deep cleaning driveways, patios, and walkways.",
-        <>Eliminate <strong className="font-bold text-brand-blue">slippery, unsafe moss and algae buildup</strong> for a safer, more inviting property.</>,
+        "Eliminate slippery, unsafe moss and algae buildup for a safer, more inviting property.",
         "Achieve a flawless, streak-free finish that protects your concrete surfaces."
       ],
       socialProof: "5-star rated by 180+ Seattle-area homeowners"
@@ -31,7 +31,7 @@ const ServicesPreview = () => {
       description: "Soft wash cleaning for your home's full exterior.",
       features: [
         "Restore your home's beauty by washing siding, trim, soffits, and all exterior surfaces.",
-        <>Remove harmful mildew, algae, and grime to <strong className="font-bold text-brand-blue">protect your paint and siding</strong> from long-term damage.</>,
+        "Remove harmful mildew, algae, and grime to protect your paint and siding from long-term damage.",
         "Our gentle soft wash technique is 100% safe for all materials—vinyl, wood, stucco, and more."
       ]
     }
@@ -45,7 +45,7 @@ const ServicesPreview = () => {
             Professional Cleaning Services
           </h2>
           <p className="text-xl text-brand-gray-text max-w-3xl mx-auto font-medium">
-            From moss-covered roofs to clogged gutters, we restore your home's beauty and <strong className="font-bold text-brand-blue">protect your investment</strong> with proven cleaning solutions.
+            From moss-covered roofs to clogged gutters, we restore your home's beauty and <span className="font-bold text-brand-blue">protect your investment</span> with proven cleaning solutions.
           </p>
         </div>
 
@@ -72,7 +72,12 @@ const ServicesPreview = () => {
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start text-sm text-muted-foreground">
                           <div className="w-1.5 h-1.5 bg-brand-orange rounded-full mr-3 flex-shrink-0 mt-2"></div>
-                          {feature}
+                          <span dangerouslySetInnerHTML={{
+                            __html: feature
+                              .replace(/protect your shingles and keep moss away longer/g, '<span class="font-bold text-brand-blue">protect your shingles and keep moss away longer</span>')
+                              .replace(/slippery, unsafe moss and algae buildup/g, '<span class="font-bold text-brand-blue">slippery, unsafe moss and algae buildup</span>')
+                              .replace(/protect your paint and siding/g, '<span class="font-bold text-brand-blue">protect your paint and siding</span>')
+                          }} />
                         </li>
                       ))}
                     </ul>
