@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Phone, Mail, MapPin, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { AddressAutocomplete } from "./AddressAutocomplete";
 
 const QuoteForm = () => {
   const { toast } = useToast();
@@ -20,6 +21,34 @@ const QuoteForm = () => {
     service: "",
     details: ""
   });
+
+  // Load saved form data from localStorage on component mount
+  useEffect(() => {
+    const savedData = localStorage.getItem('quoteFormData');
+    if (savedData) {
+      try {
+        const parsedData = JSON.parse(savedData);
+        setFormData(prev => ({
+          ...prev,
+          name: parsedData.name || "",
+          phone: parsedData.phone || "",
+          email: parsedData.email || ""
+        }));
+      } catch (error) {
+        console.error('Error parsing saved form data:', error);
+      }
+    }
+  }, []);
+
+  // Save form data to localStorage whenever it changes
+  useEffect(() => {
+    const dataToSave = {
+      name: formData.name,
+      phone: formData.phone,
+      email: formData.email
+    };
+    localStorage.setItem('quoteFormData', JSON.stringify(dataToSave));
+  }, [formData.name, formData.phone, formData.email]);
 
   const services = [
     "Roof Moss Removal",
@@ -223,11 +252,15 @@ const QuoteForm = () => {
                       {/* Address - required */}
                       <div className="space-y-2">
                         <Label htmlFor="address" className="text-brand-navy font-semibold">Address *</Label>
-                        <Input
+                        <AddressAutocomplete
                           id="address"
                           value={formData.address}
-                          onChange={(e) => handleChange("address", e.target.value)}
-                          placeholder="123 Main St, Kenmore, WA 98028"
+                          onChange={(value) => handleChange("address", value)}
+                          onAddressSelect={(addressData) => {
+                            // Update the address field with the formatted address
+                            handleChange("address", addressData.formatted_address);
+                          }}
+                          placeholder="Start typing your address..."
                           required
                           className="border-brand-yellow/30 focus:border-brand-yellow"
                         />
