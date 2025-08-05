@@ -731,11 +731,11 @@ const Gallery = () => {
           className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
           onClick={() => setSelectedImage(null)}
         >
-          <div className="relative max-w-6xl max-h-[90vh] w-full">
+          <div className="relative w-full h-full flex items-center justify-center">
             <img
               src={selectedImage}
               alt="Expanded gallery view"
-              className="w-full h-full object-contain rounded-lg"
+              className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
             />
             <Button
               variant="outline"
