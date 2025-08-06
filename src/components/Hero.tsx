@@ -15,74 +15,93 @@ const GoogleIcon = ({ className }: { className?: string }) => (
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-brand-white to-brand-gray">
-      <div className="container mx-auto px-4 py-20">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Video/Photo Background with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={heroImage}
+          alt="Professional roof and gutter cleaning service in Kenmore, WA"
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-brand-navy/60"></div>
+      </div>
+
+      <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="text-center lg:text-left space-y-8 fade-up">
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-blue leading-tight">
-                <span className="text-brand-orange block">Seattle‑Area Roof Moss & Gutter Cleaning Specialists</span>
+              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                Seattle‑Area <span className="text-brand-green">Roof Moss & Gutter Cleaning</span> Specialists
               </h1>
               
               {/* Seasonal Banner */}
-              <div className="bg-brand-yellow/20 border border-brand-yellow/40 rounded-lg px-4 py-3 text-center">
-                <p className="text-lg font-semibold text-brand-navy">
+              <div className="bg-brand-green/20 border border-brand-green/40 rounded-xl px-6 py-4 backdrop-blur-sm">
+                <p className="text-lg font-semibold text-white">
                   Beat the Fall Rush! Schedule your essential roof & gutter cleaning now before the rainy season hits.
                 </p>
               </div>
               
-              <p className="text-xl md:text-2xl text-brand-gray-text font-medium leading-relaxed">
+              <p className="text-xl md:text-2xl text-white/90 font-medium leading-relaxed">
                 Based in Kenmore, WA — proudly serving Kenmore, Bothell, Kirkland, North Seattle and nearby areas.
               </p>
               
-              <p className="text-sm text-brand-gray-text/80 font-medium">
-                ⭐ <a 
-                  href="https://www.google.com/search?q=Seattle+ProWash+reviews" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="hover:text-brand-orange transition-colors cursor-pointer inline-flex items-center gap-1"
-                >
+              <div className="flex flex-col sm:flex-row gap-4 text-white/80 font-medium">
+                <div className="inline-flex items-center gap-2">
                   <GoogleIcon className="inline" />
-                  180+ 5‑Star Reviews
-                </a> · Fully Licensed & Insured
-              </p>
-              
-              <p className="text-sm text-brand-gray-text/70 font-medium">
-                🗺️ Serving Kenmore and the greater Seattle area
-              </p>
+                  <span>180+ 5‑Star Reviews</span>
+                </div>
+                <div className="hidden sm:block text-white/60">•</div>
+                <span>Fully Licensed & Insured</span>
+              </div>
             </div>
 
             {/* CTA */}
-            <div className="space-y-3">
-              <div className="flex justify-center lg:justify-start">
+            <div className="space-y-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button 
                   variant="prowash-primary" 
                   size="xl"
+                  className="text-lg px-8 py-4 h-16 shadow-2xl"
                   onClick={() => {
                     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
                   Get My Free Quote
                 </Button>
-              </div>
-              <div className="text-center lg:text-left">
-                <p className="text-brand-gray-text font-medium">📞 <a href="tel:2067526690" className="hover:text-brand-orange transition-colors">Call or Text: 206.752.6690</a></p>
+                <Button 
+                  variant="prowash-outline" 
+                  size="xl"
+                  className="text-lg px-8 py-4 h-16"
+                  onClick={() => {
+                    window.location.href = 'tel:2067526690';
+                  }}
+                >
+                  Call: 206.752.6690
+                </Button>
               </div>
             </div>
 
           </div>
 
-          {/* Hero Image */}
-          <div className="relative lg:order-last fade-up">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src={heroImage}
-                alt="Professional roof and gutter cleaning service in Kenmore, WA - clean house with moss-free roof"
-                className="w-full h-[400px] lg:h-[600px] object-cover"
-                loading="eager"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/20 to-transparent"></div>
+          {/* Trust Cards */}
+          <div className="grid grid-cols-2 gap-4 lg:order-last fade-up">
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+              <div className="text-brand-green text-3xl font-bold">12+</div>
+              <div className="text-white font-medium">Years Experience</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+              <div className="text-brand-green text-3xl font-bold">2K+</div>
+              <div className="text-white font-medium">Happy Customers</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+              <div className="text-brand-green text-3xl font-bold">100%</div>
+              <div className="text-white font-medium">Satisfaction Rate</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+              <div className="text-brand-green text-3xl font-bold">24hr</div>
+              <div className="text-white font-medium">Response Time</div>
             </div>
           </div>
         </div>

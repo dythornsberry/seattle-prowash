@@ -7,135 +7,116 @@ const ServicesPreview = () => {
     {
       icon: Droplet,
       title: "Roof & Gutter Cleaning",
-      description: "Moss removal + full gutter cleanouts, done the right way.",
-      features: [
-        "Safely remove damaging moss and debris with our gentle brush and blow method.",
-        "Apply a professional soft wash treatment to protect your shingles and keep moss away longer.",
-        "Prevent water damage with a complete gutter & downspout flush, including a full site cleanup."
-      ]
+      description: "Complete moss removal and gutter cleaning to protect your home from water damage.",
+      features: ["Moss & algae removal", "Gutter cleaning & inspection", "Downspout clearing", "12-month moss-free guarantee"],
+      socialProof: "⭐ Most popular service with 180+ 5-star reviews",
+      image: "/src/assets/roof-moss-removal-detailed-before-after.jpg"
     },
     {
       icon: Zap,
       title: "Pressure Washing",
-      description: "Restore driveways, patios, walkways, and concrete surfaces.",
-      features: [
-        "Instantly boost your home's curb appeal by deep cleaning driveways, patios, and walkways.",
-        "Eliminate slippery, unsafe moss and algae buildup for a safer, more inviting property.",
-        "Achieve a flawless, streak-free finish that protects your concrete surfaces."
-      ],
-      socialProof: "5-star rated by 180+ Seattle-area homeowners"
+      description: "Professional pressure washing for driveways, patios, decks, and walkways.",
+      features: ["Concrete cleaning", "Deck restoration", "Walkway cleaning", "Eco-friendly solutions"],
+      socialProof: "✨ Transform your outdoor spaces in just one day",
+      image: "/src/assets/patio-pressure-washing-before-after.jpg"
     },
     {
       icon: Home,
       title: "House Washing",
-      description: "Soft wash cleaning for your home's full exterior.",
-      features: [
-        "Restore your home's beauty by washing siding, trim, soffits, and all exterior surfaces.",
-        "Remove harmful mildew, algae, and grime to protect your paint and siding from long-term damage.",
-        "Our gentle soft wash technique is 100% safe for all materials—vinyl, wood, stucco, and more."
-      ]
+      description: "Gentle yet effective exterior house washing to restore your home's curb appeal.",
+      features: ["Siding cleaning", "Window washing", "Trim restoration", "Mold & mildew removal"],
+      socialProof: "🏡 Increase your home value with our soft-wash system",
+      image: "/src/assets/house-wash-exterior-before-after.jpg"
     }
   ];
 
   return (
-    <section className="section-spacing">
+    <section className="section-spacing bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 fade-up">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-blue mb-6">
-            Professional Cleaning Services
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-brand-navy mb-4">
+            Our Professional Cleaning Services
           </h2>
-          <p className="text-xl text-brand-gray-text max-w-3xl mx-auto font-medium">
-            From moss-covered roofs to clogged gutters, we restore your home's beauty and <span className="font-bold text-brand-blue">protect your investment</span> with proven cleaning solutions.
+          <p className="text-xl text-brand-gray-text max-w-3xl mx-auto">
+            From moss-covered roofs to dirty driveways, we restore the beauty and value of your Pacific Northwest home.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-brand-orange/50 fade-up flex flex-col h-full">
-                <CardHeader className="text-center pb-4">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-orange/10 rounded-full mb-4 mx-auto group-hover:bg-brand-orange/20 transition-colors">
-                    <IconComponent className="w-8 h-8 text-brand-orange" />
+              <Card key={index} className="fade-up border-0 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                {/* Service Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-brand-navy/20"></div>
+                  <div className="absolute top-4 left-4">
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-white/90 rounded-full">
+                      <IconComponent className="w-6 h-6 text-brand-green" />
+                    </div>
                   </div>
-                  <CardTitle className="text-xl font-bold text-brand-blue mb-3">
-                    {service.title}
-                  </CardTitle>
-                  <CardDescription className="text-center text-base font-medium text-brand-gray-text">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-                
-                <CardContent className="space-y-4 flex-grow flex flex-col">
-                  <div className="flex-grow">
-                    <ul className="space-y-3">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start text-sm text-muted-foreground">
-                          <div className="w-1.5 h-1.5 bg-brand-orange rounded-full mr-3 flex-shrink-0 mt-2"></div>
-                          <span dangerouslySetInnerHTML={{
-                            __html: feature
-                              .replace(/protect your shingles and keep moss away longer/g, '<span class="font-bold text-brand-blue">protect your shingles and keep moss away longer</span>')
-                              .replace(/slippery, unsafe moss and algae buildup/g, '<span class="font-bold text-brand-blue">slippery, unsafe moss and algae buildup</span>')
-                              .replace(/protect your paint and siding/g, '<span class="font-bold text-brand-blue">protect your paint and siding</span>')
-                          }} />
-                        </li>
-                      ))}
-                    </ul>
-                    
-                    {service.socialProof && (
-                      <div className="pt-4">
-                        <p className="text-sm text-brand-orange text-center font-medium">
-                          {service.socialProof}
-                        </p>
-                      </div>
-                    )}
+                </div>
+
+                <CardContent className="p-6">
+                  <div className="mb-4">
+                    <h3 className="font-heading text-xl font-bold text-brand-navy mb-2">{service.title}</h3>
+                    <p className="text-brand-gray-text leading-relaxed">{service.description}</p>
                   </div>
-                  
-                  <div className="pt-4 border-t border-border mt-auto">
-                    <p className="text-xs text-brand-gray-text text-center font-medium">
-                      Free Estimates · Call or Text 206.752.6690.
-                    </p>
-                  </div>
-                  
-                  <div className="pt-2">
-                    <Button 
-                      variant="prowash-secondary" 
-                      className="w-full" 
-                      size="sm"
-                      onClick={() => {
-                        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                      }}
-                    >
-                      Get Free Quote
-                    </Button>
-                  </div>
+
+                  <ul className="space-y-2 mb-4">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-brand-gray-text">
+                        <div className="w-2 h-2 bg-brand-green rounded-full mr-3 flex-shrink-0"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  {service.socialProof && (
+                    <div className="bg-brand-green/5 border border-brand-green/20 rounded-lg p-3 mb-4">
+                      <p className="text-sm font-medium text-brand-navy text-center">{service.socialProof}</p>
+                    </div>
+                  )}
+
+                  <Button 
+                    variant="prowash-primary" 
+                    className="w-full"
+                    onClick={() => {
+                      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                  >
+                    Get Free Quote
+                  </Button>
                 </CardContent>
               </Card>
             );
           })}
         </div>
 
-        <div className="text-center mt-12 fade-up">
-          <div className="bg-brand-orange/10 rounded-lg p-6 max-w-2xl mx-auto mb-8">
-            <p className="text-lg font-semibold text-brand-blue mb-2">
-              Ready to Protect Your Home This Fall?
+        {/* Bottom CTA */}
+        <div className="text-center fade-up">
+          <div className="bg-brand-gray rounded-2xl p-8 max-w-2xl mx-auto border border-brand-green/20">
+            <h3 className="font-heading text-2xl font-bold text-brand-navy mb-4">
+              Ready to Transform Your Property?
+            </h3>
+            <p className="text-brand-gray-text mb-6">
+              Get your free, no-obligation estimate today. Same-day quotes available!
             </p>
-            <p className="text-brand-gray-text mb-4">
-              Call or text us today for your free estimate. We'll walk your property and provide an accurate quote for the services you need.
-            </p>
-            <p className="text-sm text-brand-gray-text italic">
-              Roof cleaning costs vary based on roof size and moss level. Most homes fall between $499–$999.
-            </p>
+            <Button 
+              variant="prowash-primary" 
+              size="xl"
+              onClick={() => {
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Request Your Free Quote
+            </Button>
           </div>
-          <Button 
-            variant="prowash-primary" 
-            size="xl"
-            onClick={() => {
-              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-          >
-            Get My Free Quote Today
-          </Button>
         </div>
       </div>
     </section>

@@ -2,26 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Seattle ProWash Design System - High Contrast Blue & Orange Palette */
+/* Seattle ProWash Design System - Pacific Northwest Aesthetic */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@300;400;500&display=swap');
 
 @layer base {
   :root {
-    /* Seattle ProWash High Contrast Colors (HSL format) */
-    --background: 0 0% 100%; /* Pure white */
-    --foreground: 210 100% 10%; /* Very dark blue for excellent readability */
+    /* Pacific Northwest Color Palette (HSL format) */
+    --background: 210 20% 98%; /* Off-white with subtle warmth */
+    --foreground: 210 50% 15%; /* Deep charcoal for excellent readability */
     
-    /* Seattle ProWash Brand Palette - High Contrast */
-    --brand-blue: 210 100% 10%; /* Dark navy blue #001a33 - excellent contrast */
-    --brand-blue-light: 210 100% 25%; /* Medium blue for headings */
-    --brand-navy: 210 100% 8%; /* Even darker navy for backgrounds */
-    --brand-orange: 25 95% 50%; /* Strong orange #ff6b00 - great contrast */
-    --brand-orange-light: 25 100% 55%; /* Lighter orange for hover states */
-    --brand-yellow: 45 100% 50%; /* Pure golden yellow */
+    /* Seattle ProWash Pacific Northwest Brand Palette */
+    --brand-navy: 210 50% 15%; /* Deep professional navy #2C3E50 */
+    --brand-charcoal: 210 45% 20%; /* Charcoal for dark backgrounds */
+    --brand-navy-light: 210 40% 25%; /* Lighter navy for accents */
+    --brand-green: 145 65% 45%; /* Vibrant Pacific green #2ECC71 */
+    --brand-green-hover: 145 65% 40%; /* Darker green for hover states */
+    --brand-green-light: 145 50% 60%; /* Lighter green for subtle accents */
     --brand-white: 0 0% 100%; /* Pure white */
-    --brand-gray: 210 15% 95%; /* Very light blue-gray background */
-    --brand-gray-text: 210 10% 40%; /* Medium gray for secondary text */
+    --brand-gray: 210 20% 96%; /* Premium off-white background */
+    --brand-gray-text: 210 15% 45%; /* Medium gray for secondary text */
     
     --card: 0 0% 100%;
     --card-foreground: 210 100% 10%;
@@ -29,24 +29,24 @@
     --popover: 0 0% 100%;
     --popover-foreground: 210 100% 10%;
 
-    --primary: 210 100% 10%; /* Dark navy */
+    --primary: 210 50% 15%; /* Deep navy */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 15% 95%; /* Light background */
-    --secondary-foreground: 210 100% 10%;
+    --secondary: 210 20% 96%; /* Premium off-white background */
+    --secondary-foreground: 210 50% 15%;
 
-    --muted: 210 15% 95%;
-    --muted-foreground: 210 10% 40%; /* Darker for better readability */
+    --muted: 210 20% 94%;
+    --muted-foreground: 210 15% 45%; /* Better readability */
 
-    --accent: 25 95% 50%; /* Strong orange */
+    --accent: 145 65% 45%; /* Vibrant Pacific green */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 45%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 85%;
-    --input: 210 20% 90%;
-    --ring: 25 95% 50%;
+    --border: 210 20% 88%;
+    --input: 210 20% 92%;
+    --ring: 145 65% 45%;
 
     --radius: 0.5rem;
 
@@ -112,14 +112,14 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: 1.6; /* Improved line height for readability */
     font-weight: 400; /* Ensure good font weight */
   }
   
-  /* High contrast text classes */
+  /* Pacific Northwest text classes */
   .text-readable {
-    color: hsl(var(--brand-blue));
+    color: hsl(var(--brand-navy));
     font-weight: 500;
   }
   
@@ -128,9 +128,10 @@
     font-weight: 400;
   }
   
-  /* Ensure headings have excellent contrast */
+  /* Modern headings with Poppins */
   h1, h2, h3, h4, h5, h6 {
-    color: hsl(var(--brand-blue));
+    font-family: 'Poppins', sans-serif;
+    color: hsl(var(--brand-navy));
     font-weight: 700;
     letter-spacing: -0.025em;
   }
