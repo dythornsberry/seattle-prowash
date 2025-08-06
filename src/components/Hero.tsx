@@ -22,7 +22,7 @@ const Hero = () => {
           <div className="text-center lg:text-left space-y-10 fade-up">
             <div className="space-y-8">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-white leading-tight">
-                Moss is silently destroying your roof - <span className="text-brand-yellow">we'll stop it before the rain hits.</span>
+                Moss is silently destroying your roof — <span className="text-brand-yellow">we'll stop it before the rain hits.</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-brand-gray-text font-medium leading-relaxed">
