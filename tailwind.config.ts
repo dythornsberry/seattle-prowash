@@ -25,13 +25,13 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				
-				/* Seattle ProWash Pacific Northwest Brand Colors */
+				/* Seattle ProWash High Contrast Brand Colors */
+				'brand-blue': 'hsl(var(--brand-blue))',
+				'brand-blue-light': 'hsl(var(--brand-blue-light))', 
 				'brand-navy': 'hsl(var(--brand-navy))',
-				'brand-charcoal': 'hsl(var(--brand-charcoal))',
-				'brand-navy-light': 'hsl(var(--brand-navy-light))', 
-				'brand-green': 'hsl(var(--brand-green))',
-				'brand-green-hover': 'hsl(var(--brand-green-hover))',
-				'brand-green-light': 'hsl(var(--brand-green-light))',
+				'brand-orange': 'hsl(var(--brand-orange))',
+				'brand-orange-light': 'hsl(var(--brand-orange-light))',
+				'brand-yellow': 'hsl(var(--brand-yellow))',
 				'brand-white': 'hsl(var(--brand-white))',
 				'brand-gray': 'hsl(var(--brand-gray))',
 				'brand-gray-text': 'hsl(var(--brand-gray-text))',
@@ -76,8 +76,7 @@ export default {
 				}
 			},
 			fontFamily: {
-				sans: ['Lato', 'system-ui', 'sans-serif'],
-				heading: ['Poppins', 'system-ui', 'sans-serif'],
+				sans: ['Inter', 'system-ui', 'sans-serif'],
 			},
 			spacing: {
 				'18': '4.5rem', /* 72px */

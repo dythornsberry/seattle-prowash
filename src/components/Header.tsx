@@ -120,7 +120,7 @@ const Header = () => {
               size="sm"
               onClick={navigateToContact}
             >
-              Get My Free Quote
+              Get Free Quote
             </Button>
             <Button 
               variant="prowash-phone" 

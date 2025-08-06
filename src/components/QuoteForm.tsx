@@ -99,7 +99,7 @@ const QuoteForm = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16 fade-up">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy mb-6">
-              Get My Free Quote
+              Get Your Free Quote
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Fill out the form below and we'll respond back in 1 hour.
@@ -172,7 +172,7 @@ const QuoteForm = () => {
             <div className="lg:col-span-2 fade-up">
               <Card className="border-brand-yellow/20 shadow-xl">
                 <CardHeader>
-                  <CardTitle className="text-brand-navy">Get My Free Quote</CardTitle>
+                  <CardTitle className="text-brand-navy">Request Your Free Quote</CardTitle>
                   <CardDescription>
                     Tell us about your project and we'll provide a detailed estimate.
                   </CardDescription>

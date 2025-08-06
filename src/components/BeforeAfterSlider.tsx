@@ -22,7 +22,7 @@ const BeforeAfterSlider = () => {
       afterImage: newRoofAfter1,
       beforeAlt: "Moss-covered metal roof before professional cleaning",
       afterAlt: "Clean metal roof after moss removal treatment",
-      completionDate: "November 2025"
+      completionDate: "December 2024"
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ const BeforeAfterSlider = () => {
       afterImage: newMetalRoofAfter2,
       beforeAlt: "Weathered metal roof with debris before professional cleaning",
       afterAlt: "Restored metal roof and skylights after specialized cleaning treatment",
-      completionDate: "October 2025"
+      completionDate: "December 2024"
     },
     {
       id: 3,
@@ -44,7 +44,7 @@ const BeforeAfterSlider = () => {
       afterImage: newPatioAfter3,
       beforeAlt: "Stained concrete patio with moss before pressure washing",
       afterAlt: "Clean, restored concrete patio after pressure washing",
-      completionDate: "September 2025"
+      completionDate: "December 2024"
     },
     {
       id: 4,
@@ -55,7 +55,7 @@ const BeforeAfterSlider = () => {
       afterImage: "/lovable-uploads/0d94bc5e-3592-4aa4-877a-d124110a3d0e.png",
       beforeAlt: "Severely neglected concrete patio with heavy moss and algae buildup",
       afterAlt: "Dramatically restored concrete patio after intensive pressure washing",
-      completionDate: "August 2025"
+      completionDate: "January 2025"
     },
     {
       id: 5,
@@ -66,7 +66,7 @@ const BeforeAfterSlider = () => {
       afterImage: "/lovable-uploads/cd85dd92-8acb-405d-a73c-44650e962bd8.png",
       beforeAlt: "Asphalt roof heavily covered in moss and debris before professional cleaning",
       afterAlt: "Clean asphalt roof after professional moss removal and soft wash treatment",
-      completionDate: "July 2025"
+      completionDate: "January 2025"
     },
     {
       id: 6,
@@ -77,7 +77,7 @@ const BeforeAfterSlider = () => {
       afterImage: "/lovable-uploads/7a0d1b2c-03a2-4054-8cf2-6bdc1dca519c.png",
       beforeAlt: "Front walkway before pressure washing showing heavy moss and staining",
       afterAlt: "Clean front walkway after professional pressure washing transformation",
-      completionDate: "June 2025"
+      completionDate: "January 2025"
     }
   ];
 

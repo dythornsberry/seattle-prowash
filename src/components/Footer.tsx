@@ -146,7 +146,7 @@ const Footer = () => {
                   document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                Get My Free Quote
+                Get Free Quote
               </Button>
             </div>
           </div>

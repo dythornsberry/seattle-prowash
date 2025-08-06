@@ -15,117 +15,76 @@ const GoogleIcon = ({ className }: { className?: string }) => (
 
 const Hero = () => {
   return (
-    <section id="home" className="relative py-20 min-h-screen flex items-center overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Professional roof and gutter cleaning service in Kenmore, WA"
-          className="w-full h-full object-cover"
-          loading="eager"
-        />
-        <div className="absolute inset-0 bg-black/50"></div>
-      </div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-5 gap-12 items-center max-w-7xl mx-auto">
-          
-          {/* Left Column - The Message (60% width) */}
-          <div className="lg:col-span-3 space-y-8 fade-up">
-            
-            {/* Main Headline */}
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              Protect Your Home, <span className="text-brand-green">Restore Its Beauty.</span>
-            </h1>
-            
-            {/* Supporting Paragraph */}
-            <p className="text-xl md:text-2xl text-white leading-relaxed font-medium">
-              Seattle's Trusted Specialists for Roof Moss Removal & Gutter Cleaning. We protect your biggest investment from the Pacific Northwest weather.
-            </p>
-            
-            {/* Key Trust Metrics - List Format */}
-            <div className="space-y-4">
-              <div className="flex items-center gap-3 text-lg font-semibold text-white">
-                <div className="w-6 h-6 bg-brand-green rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <span>4+ Years Experience</span>
+    <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-brand-white to-brand-gray">
+      <div className="container mx-auto px-4 py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Content */}
+          <div className="text-center lg:text-left space-y-8 fade-up">
+            <div className="space-y-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-blue leading-tight">
+                <span className="text-brand-orange block">Seattle‑Area Roof Moss & Gutter Cleaning Specialists</span>
+              </h1>
+              
+              {/* Seasonal Banner */}
+              <div className="bg-brand-yellow/20 border border-brand-yellow/40 rounded-lg px-4 py-3 text-center">
+                <p className="text-lg font-semibold text-brand-navy">
+                  Beat the Fall Rush! Schedule your essential roof & gutter cleaning now before the rainy season hits.
+                </p>
               </div>
               
-              <div className="flex items-center gap-3 text-lg font-semibold text-white">
-                <div className="w-6 h-6 bg-brand-green rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <span>1K+ Happy Customers</span>
-              </div>
+              <p className="text-xl md:text-2xl text-brand-gray-text font-medium leading-relaxed">
+                Based in Kenmore, WA — proudly serving Kenmore, Bothell, Kirkland, North Seattle and nearby areas.
+              </p>
               
-              <div className="flex items-center gap-3 text-lg font-semibold text-white">
-                <div className="w-6 h-6 bg-brand-green rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <span>12-Month Moss-Free Guarantee</span>
-              </div>
+              <p className="text-sm text-brand-gray-text/80 font-medium">
+                ⭐ <a 
+                  href="https://www.google.com/search?q=Seattle+ProWash+reviews" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-brand-orange transition-colors cursor-pointer inline-flex items-center gap-1"
+                >
+                  <GoogleIcon className="inline" />
+                  180+ 5‑Star Reviews
+                </a> · Fully Licensed & Insured
+              </p>
+              
+              <p className="text-sm text-brand-gray-text/70 font-medium">
+                🗺️ Serving Kenmore and the greater Seattle area
+              </p>
             </div>
-            
-            {/* Call to Action */}
-            <div className="space-y-4">
-              <div className="flex flex-col sm:flex-row gap-4">
+
+            {/* CTA */}
+            <div className="space-y-3">
+              <div className="flex justify-center lg:justify-start">
                 <Button 
                   variant="prowash-primary" 
                   size="xl"
-                  className="text-lg px-10 py-6 h-16 shadow-xl"
                   onClick={() => {
                     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
                   Get My Free Quote
                 </Button>
-                <Button 
-                  variant="prowash-outline" 
-                  size="xl"
-                  className="text-lg px-8 py-6 h-16"
-                  onClick={() => {
-                    window.location.href = 'tel:2067526690';
-                  }}
-                >
-                  Call: 206.752.6690
-                </Button>
               </div>
-              
-              <p className="text-sm text-white/80 font-medium">
-                Based in Kenmore, WA — serving Kenmore, Bothell, Kirkland, North Seattle and nearby areas.
-              </p>
+              <div className="text-center lg:text-left">
+                <p className="text-brand-gray-text font-medium">📞 <a href="tel:2067526690" className="hover:text-brand-orange transition-colors">Call or Text: 206.752.6690</a></p>
+              </div>
             </div>
+
           </div>
 
-          {/* Right Column - Four Stat Boxes */}
-          <div className="lg:col-span-2 fade-up">
-            <div className="grid grid-cols-2 gap-6">
-              <div className="text-center">
-                <div className="text-brand-green text-4xl font-bold">4+</div>
-                <div className="text-white font-medium">Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-brand-green text-4xl font-bold">1K+</div>
-                <div className="text-white font-medium">Happy Customers</div>
-              </div>
-              <div className="text-center">
-                <div className="text-brand-green text-4xl font-bold">100%</div>
-                <div className="text-white font-medium">Satisfaction Rate</div>
-              </div>
-              <div className="text-center">
-                <div className="text-brand-green text-3xl font-bold">Same-Day</div>
-                <div className="text-white font-medium">Quotes</div>
-              </div>
+          {/* Hero Image */}
+          <div className="relative lg:order-last fade-up">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src={heroImage}
+                alt="Professional roof and gutter cleaning service in Kenmore, WA - clean house with moss-free roof"
+                className="w-full h-[400px] lg:h-[600px] object-cover"
+                loading="eager"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/20 to-transparent"></div>
             </div>
           </div>
-          
         </div>
       </div>
     </section>
