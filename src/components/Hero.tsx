@@ -33,7 +33,7 @@ const Hero = () => {
           <div className="text-center lg:text-left space-y-8 fade-up">
             <div className="space-y-6">
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                Seattle‑Area <span className="text-brand-green">Roof Moss & Gutter Cleaning</span> Specialists
+                Protect Your Home, <span className="text-brand-green">Restore Its Beauty.</span>
               </h1>
               
               {/* Seasonal Banner */}
@@ -44,17 +44,12 @@ const Hero = () => {
               </div>
               
               <p className="text-xl md:text-2xl text-white/90 font-medium leading-relaxed">
-                Based in Kenmore, WA — proudly serving Kenmore, Bothell, Kirkland, North Seattle and nearby areas.
+                Seattle's Trusted Specialists for Roof Moss Removal & Gutter Cleaning.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 text-white/80 font-medium">
-                <div className="inline-flex items-center gap-2">
-                  <GoogleIcon className="inline" />
-                  <span>180+ 5‑Star Reviews</span>
-                </div>
-                <div className="hidden sm:block text-white/60">•</div>
-                <span>Fully Licensed & Insured</span>
-              </div>
+              <p className="text-lg text-white/80 font-medium">
+                Based in Kenmore, WA — proudly serving Kenmore, Bothell, Kirkland, North Seattle and nearby areas.
+              </p>
             </div>
 
             {/* CTA */}
@@ -88,11 +83,11 @@ const Hero = () => {
           {/* Trust Cards */}
           <div className="grid grid-cols-2 gap-4 lg:order-last fade-up">
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-              <div className="text-brand-green text-3xl font-bold">12+</div>
+              <div className="text-brand-green text-3xl font-bold">4+</div>
               <div className="text-white font-medium">Years Experience</div>
             </div>
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-              <div className="text-brand-green text-3xl font-bold">2K+</div>
+              <div className="text-brand-green text-3xl font-bold">1K+</div>
               <div className="text-white font-medium">Happy Customers</div>
             </div>
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
@@ -100,8 +95,8 @@ const Hero = () => {
               <div className="text-white font-medium">Satisfaction Rate</div>
             </div>
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-              <div className="text-brand-green text-3xl font-bold">24hr</div>
-              <div className="text-white font-medium">Response Time</div>
+              <div className="text-brand-green text-3xl font-bold">Same-Day</div>
+              <div className="text-white font-medium">Quotes</div>
             </div>
           </div>
         </div>

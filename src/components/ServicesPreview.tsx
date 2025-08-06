@@ -90,7 +90,7 @@ const ServicesPreview = () => {
                       document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                     }}
                   >
-                    Get Free Quote
+                    Get My Free Quote
                   </Button>
                 </CardContent>
               </Card>
@@ -114,7 +114,7 @@ const ServicesPreview = () => {
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              Request Your Free Quote
+              Get My Free Quote
             </Button>
           </div>
         </div>

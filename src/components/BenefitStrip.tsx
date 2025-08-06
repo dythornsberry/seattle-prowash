@@ -3,24 +3,24 @@ import { Shield, Calendar, CheckCircle, Star } from "lucide-react";
 const BenefitStrip = () => {
   const benefits = [
     {
-      icon: Shield,
-      title: "Fully Insured",
-      description: "Complete protection"
-    },
-    {
       icon: Calendar,
       title: "12 Month Moss‑Free",
       description: "Guarantee"
     },
     {
+      icon: Shield,
+      title: "Fully Licensed",
+      description: "& Insured"
+    },
+    {
       icon: CheckCircle,
-      title: "100% Satisfaction",
-      description: "Guaranteed results"
+      title: "Eco‑Friendly",
+      description: "Solutions"
     },
     {
       icon: Star,
-      title: "180 ★★★★★ Reviews",
-      description: "Trusted by neighbors"
+      title: "5‑Star Rated",
+      description: "Service"
     }
   ];
 

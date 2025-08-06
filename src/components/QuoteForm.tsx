@@ -172,7 +172,7 @@ const QuoteForm = () => {
             <div className="lg:col-span-2 fade-up">
               <Card className="border-brand-yellow/20 shadow-xl">
                 <CardHeader>
-                  <CardTitle className="text-brand-navy">Request Your Free Quote</CardTitle>
+                  <CardTitle className="text-brand-navy">Get My Free Quote</CardTitle>
                   <CardDescription>
                     Tell us about your project and we'll provide a detailed estimate.
                   </CardDescription>
