@@ -15,50 +15,60 @@ const GoogleIcon = ({ className }: { className?: string }) => (
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Video/Photo Background with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Professional roof and gutter cleaning service in Kenmore, WA"
-          className="w-full h-full object-cover"
-          loading="eager"
-        />
-        <div className="absolute inset-0 bg-brand-navy/60"></div>
-      </div>
-
-      <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div className="text-center lg:text-left space-y-8 fade-up">
-            <div className="space-y-6">
-              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                Protect Your Home, <span className="text-brand-green">Restore Its Beauty.</span>
-              </h1>
-              
-              {/* Seasonal Banner */}
-              <div className="bg-brand-green/20 border border-brand-green/40 rounded-xl px-6 py-4 backdrop-blur-sm">
-                <p className="text-lg font-semibold text-white">
-                  Beat the Fall Rush! Schedule your essential roof & gutter cleaning now before the rainy season hits.
-                </p>
+    <section id="home" className="py-20 bg-brand-gray min-h-screen flex items-center">
+      <div className="container mx-auto px-4">
+        <div className="grid lg:grid-cols-5 gap-12 items-center max-w-7xl mx-auto">
+          
+          {/* Left Column - The Message (60% width) */}
+          <div className="lg:col-span-3 space-y-8 fade-up">
+            
+            {/* Main Headline */}
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-brand-navy leading-tight">
+              Protect Your Home, <span className="text-brand-green">Restore Its Beauty.</span>
+            </h1>
+            
+            {/* Supporting Paragraph */}
+            <p className="text-xl md:text-2xl text-brand-gray-text leading-relaxed font-medium">
+              Seattle's Trusted Specialists for Roof Moss Removal & Gutter Cleaning. We protect your biggest investment from the Pacific Northwest weather.
+            </p>
+            
+            {/* Key Trust Metrics - List Format */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-3 text-lg font-semibold text-brand-navy">
+                <div className="w-6 h-6 bg-brand-green rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span>4+ Years Experience</span>
               </div>
               
-              <p className="text-xl md:text-2xl text-white/90 font-medium leading-relaxed">
-                Seattle's Trusted Specialists for Roof Moss Removal & Gutter Cleaning.
-              </p>
+              <div className="flex items-center gap-3 text-lg font-semibold text-brand-navy">
+                <div className="w-6 h-6 bg-brand-green rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span>1K+ Happy Customers</span>
+              </div>
               
-              <p className="text-lg text-white/80 font-medium">
-                Based in Kenmore, WA — proudly serving Kenmore, Bothell, Kirkland, North Seattle and nearby areas.
-              </p>
+              <div className="flex items-center gap-3 text-lg font-semibold text-brand-navy">
+                <div className="w-6 h-6 bg-brand-green rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span>12-Month Moss-Free Guarantee</span>
+              </div>
             </div>
-
-            {/* CTA */}
+            
+            {/* Call to Action */}
             <div className="space-y-4">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   variant="prowash-primary" 
                   size="xl"
-                  className="text-lg px-8 py-4 h-16 shadow-2xl"
+                  className="text-lg px-10 py-6 h-16 shadow-xl"
                   onClick={() => {
                     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                   }}
@@ -68,7 +78,7 @@ const Hero = () => {
                 <Button 
                   variant="prowash-outline" 
                   size="xl"
-                  className="text-lg px-8 py-4 h-16"
+                  className="text-lg px-8 py-6 h-16 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white"
                   onClick={() => {
                     window.location.href = 'tel:2067526690';
                   }}
@@ -76,29 +86,36 @@ const Hero = () => {
                   Call: 206.752.6690
                 </Button>
               </div>
-            </div>
-
-          </div>
-
-          {/* Trust Cards */}
-          <div className="grid grid-cols-2 gap-4 lg:order-last fade-up">
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-              <div className="text-brand-green text-3xl font-bold">4+</div>
-              <div className="text-white font-medium">Years Experience</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-              <div className="text-brand-green text-3xl font-bold">1K+</div>
-              <div className="text-white font-medium">Happy Customers</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-              <div className="text-brand-green text-3xl font-bold">100%</div>
-              <div className="text-white font-medium">Satisfaction Rate</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-              <div className="text-brand-green text-3xl font-bold">Same-Day</div>
-              <div className="text-white font-medium">Quotes</div>
+              
+              <p className="text-sm text-brand-gray-text font-medium">
+                Based in Kenmore, WA — serving Kenmore, Bothell, Kirkland, North Seattle and nearby areas.
+              </p>
             </div>
           </div>
+
+          {/* Right Column - The Visual (40% width) */}
+          <div className="lg:col-span-2 fade-up">
+            <div className="relative">
+              <img
+                src={heroImage}
+                alt="Professional roof and gutter cleaning service - Seattle ProWash owner with equipment"
+                className="w-full h-[600px] object-cover rounded-2xl shadow-2xl"
+                loading="eager"
+              />
+              
+              {/* Trust Badge Overlay */}
+              <div className="absolute bottom-6 left-6 right-6">
+                <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-brand-green/20">
+                  <div className="text-center">
+                    <div className="text-brand-green text-2xl font-bold">100%</div>
+                    <div className="text-brand-navy font-semibold text-sm">Satisfaction Rate</div>
+                    <div className="text-xs text-brand-gray-text mt-1">Same-Day Quotes Available</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
     </section>
