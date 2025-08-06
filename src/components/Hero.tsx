@@ -15,8 +15,19 @@ const GoogleIcon = ({ className }: { className?: string }) => (
 
 const Hero = () => {
   return (
-    <section id="home" className="py-20 bg-[#2C3E50] min-h-screen flex items-center">
-      <div className="container mx-auto px-4">
+    <section id="home" className="relative py-20 min-h-screen flex items-center overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={heroImage}
+          alt="Professional roof and gutter cleaning service in Kenmore, WA"
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-black/50"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-5 gap-12 items-center max-w-7xl mx-auto">
           
           {/* Left Column - The Message (60% width) */}
