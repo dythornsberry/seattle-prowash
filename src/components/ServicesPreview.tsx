@@ -45,7 +45,7 @@ const ServicesPreview = () => {
             Professional Cleaning Services
           </h2>
           <p className="text-xl text-brand-gray-text max-w-3xl mx-auto font-medium">
-            From moss-covered roofs to clogged gutters, we restore your home's beauty and <span className="font-bold text-brand-blue">protect your investment</span> with proven cleaning solutions.
+            From moss-covered roofs to clogged gutters, we restore your home's beauty and protect your investment with proven cleaning solutions.
           </p>
         </div>
 
@@ -72,12 +72,7 @@ const ServicesPreview = () => {
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start text-sm text-muted-foreground">
                           <div className="w-1.5 h-1.5 bg-brand-orange rounded-full mr-3 flex-shrink-0 mt-2"></div>
-                          <span dangerouslySetInnerHTML={{
-                            __html: feature
-                              .replace(/protect your shingles and keep moss away longer/g, '<span class="font-bold text-brand-blue">protect your shingles and keep moss away longer</span>')
-                              .replace(/slippery, unsafe moss and algae buildup/g, '<span class="font-bold text-brand-blue">slippery, unsafe moss and algae buildup</span>')
-                              .replace(/protect your paint and siding/g, '<span class="font-bold text-brand-blue">protect your paint and siding</span>')
-                          }} />
+                          {feature}
                         </li>
                       ))}
                     </ul>

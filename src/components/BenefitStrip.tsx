@@ -1,4 +1,4 @@
-import { Shield, Calendar, CheckCircle, Star } from "lucide-react";
+import { Shield, Gift, CheckCircle, Star } from "lucide-react";
 
 const BenefitStrip = () => {
   const benefits = [
@@ -8,7 +8,7 @@ const BenefitStrip = () => {
       description: "Complete protection"
     },
     {
-      icon: Calendar,
+      icon: Gift,
       title: "12 Month Moss‑Free",
       description: "Guarantee"
     },

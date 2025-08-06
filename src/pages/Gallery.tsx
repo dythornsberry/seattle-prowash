@@ -144,17 +144,6 @@ const Gallery = () => {
         location: "Seattle Area", 
         description: "Professional roof soft wash application in action - specialized cleaning solution safely treating asphalt shingles",
         service: "Roof Cleaning"
-      },
-      // Before/After Pair - Extract the two images from the uploaded composite
-      {
-        type: "before-after",
-        beforeSrc: "/lovable-uploads/7cdfb095-76e6-4419-b395-a8272819a23b.png", // Use existing before image
-        afterSrc: "/lovable-uploads/cd85dd92-8acb-405d-a73c-44650e962bd8.png", // Use existing after image
-        alt: "Asphalt roof moss removal dramatic before and after transformation",
-        title: "Asphalt Roof Complete Transformation",
-        location: "Seattle Area", 
-        description: "Dramatic transformation showing before and after professional moss removal and soft wash cleaning",
-        service: "Roof Cleaning"
       }
     ],
     "House Washing": [
@@ -653,121 +642,47 @@ const Gallery = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {getFilteredImages().map((image, index) => {
-                // Handle before/after pairs
-                if (image.type === "before-after") {
-                  return (
-                    <div key={index} className="lg:col-span-2 group">
-                      <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                        <div className="grid grid-cols-1 sm:grid-cols-2">
-                          {/* Before Image */}
-                          <div className="relative">
-                            <div className="aspect-[4/3] overflow-hidden">
-                              <img
-                                src={image.beforeSrc}
-                                alt={`Before - ${image.alt}`}
-                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                loading="lazy"
-                              />
-                            </div>
-                            <div className="absolute top-2 left-2">
-                              <Badge className="bg-red-500 text-white text-xs font-medium">
-                                BEFORE
-                              </Badge>
-                            </div>
-                          </div>
-                          {/* After Image */}
-                          <div className="relative">
-                            <div className="aspect-[4/3] overflow-hidden">
-                              <img
-                                src={image.afterSrc}
-                                alt={`After - ${image.alt}`}
-                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                loading="lazy"
-                              />
-                            </div>
-                            <div className="absolute top-2 left-2">
-                              <Badge className="bg-green-500 text-white text-xs font-medium">
-                                AFTER
-                              </Badge>
-                            </div>
-                          </div>
-                        </div>
-                        {/* Overlay Info */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
-                             onClick={() => setSelectedImage(image.beforeSrc)}>
-                          <div className="absolute top-4 right-4">
-                            <Expand className="w-6 h-6 text-white drop-shadow-lg" />
-                          </div>
-                          <div className="absolute bottom-4 left-4 right-4">
-                            <h3 className="text-brand-white font-semibold text-lg mb-2">
-                              {image.title}
-                            </h3>
-                            <p className="text-white/90 text-sm mb-3">
-                              {image.description}
-                            </p>
-                            <div className="flex items-center justify-between">
-                              <Badge variant="secondary" className="bg-brand-yellow text-brand-navy text-xs">
-                                {image.location}
-                              </Badge>
-                              <Badge variant="outline" className="border-white text-white text-xs">
-                                {activeCategory === "All" ? 
-                                  Object.keys(galleryImages).find(cat => 
-                                    galleryImages[cat].includes(image)
-                                  ) : activeCategory
-                                }
-                              </Badge>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+              {getFilteredImages().map((image, index) => (
+                <div
+                  key={index}
+                  className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+                  onClick={() => setSelectedImage(image.src)}
+                >
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute top-4 right-4">
+                      <Expand className="w-6 h-6 text-white drop-shadow-lg" />
                     </div>
-                  );
-                }
-
-                // Handle regular single images
-                return (
-                  <div
-                    key={index}
-                    className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
-                    onClick={() => setSelectedImage(image.src)}
-                  >
-                    <div className="aspect-[4/3] overflow-hidden">
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="absolute top-4 right-4">
-                        <Expand className="w-6 h-6 text-white drop-shadow-lg" />
-                      </div>
-                      <div className="absolute bottom-4 left-4 right-4">
-                        <h3 className="text-brand-white font-semibold text-lg mb-2">
-                          {image.title}
-                        </h3>
-                        <p className="text-white/90 text-sm mb-3">
-                          {image.description}
-                        </p>
-                        <div className="flex items-center justify-between">
-                          <Badge variant="secondary" className="bg-brand-yellow text-brand-navy text-xs">
-                            {image.location}
-                          </Badge>
-                          <Badge variant="outline" className="border-white text-white text-xs">
-                            {activeCategory === "All" ? 
-                              Object.keys(galleryImages).find(cat => 
-                                galleryImages[cat].includes(image)
-                              ) : activeCategory
-                            }
-                          </Badge>
-                        </div>
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <h3 className="text-brand-white font-semibold text-lg mb-2">
+                        {image.title}
+                      </h3>
+                      <p className="text-white/90 text-sm mb-3">
+                        {image.description}
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <Badge variant="secondary" className="bg-brand-yellow text-brand-navy text-xs">
+                          {image.location}
+                        </Badge>
+                        <Badge variant="outline" className="border-white text-white text-xs">
+                          {activeCategory === "All" ? 
+                            Object.keys(galleryImages).find(cat => 
+                              galleryImages[cat].includes(image)
+                            ) : activeCategory
+                          }
+                        </Badge>
                       </div>
                     </div>
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </div>
 
             {/* Trust message */}
@@ -816,11 +731,11 @@ const Gallery = () => {
           className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
           onClick={() => setSelectedImage(null)}
         >
-          <div className="relative w-full h-full flex items-center justify-center">
+          <div className="relative max-w-6xl max-h-[90vh] w-full">
             <img
               src={selectedImage}
               alt="Expanded gallery view"
-              className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+              className="w-full h-full object-contain rounded-lg"
             />
             <Button
               variant="outline"

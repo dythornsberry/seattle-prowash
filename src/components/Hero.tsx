@@ -15,35 +15,46 @@ const GoogleIcon = ({ className }: { className?: string }) => (
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-brand-blue py-20 lg:py-32">
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+    <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-brand-white to-brand-gray">
+      <div className="container mx-auto px-4 py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div className="text-center lg:text-left space-y-10 fade-up">
-            <div className="space-y-8">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-white leading-tight">
-                Moss is silently destroying your roof — <span className="text-brand-yellow">we'll stop it before the rain hits.</span>
+          <div className="text-center lg:text-left space-y-8 fade-up">
+            <div className="space-y-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-blue leading-tight">
+                <span className="text-brand-orange block">Seattle‑Area Roof Moss & Gutter Cleaning Specialists</span>
               </h1>
               
+              {/* Seasonal Banner */}
+              <div className="bg-brand-yellow/20 border border-brand-yellow/40 rounded-lg px-4 py-3 text-center">
+                <p className="text-lg font-semibold text-brand-navy">
+                  Beat the Fall Rush! Schedule your essential roof & gutter cleaning now before the rainy season hits.
+                </p>
+              </div>
+              
               <p className="text-xl md:text-2xl text-brand-gray-text font-medium leading-relaxed">
-                Fully licensed & insured. Same-day estimates. Serving Kenmore, Bothell, Kirkland & nearby.
+                Based in Kenmore, WA — proudly serving Kenmore, Bothell, Kirkland, North Seattle and nearby areas.
               </p>
               
-              <p className="text-lg text-brand-gray-text font-medium">
+              <p className="text-sm text-brand-gray-text/80 font-medium">
                 ⭐ <a 
                   href="https://www.google.com/search?q=Seattle+ProWash+reviews" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="hover:text-brand-yellow transition-colors cursor-pointer inline-flex items-center gap-1"
+                  className="hover:text-brand-orange transition-colors cursor-pointer inline-flex items-center gap-1"
                 >
                   <GoogleIcon className="inline" />
                   180+ 5‑Star Reviews
-                </a>
+                </a> · Fully Licensed & Insured
+              </p>
+              
+              <p className="text-sm text-brand-gray-text/70 font-medium">
+                🗺️ Serving Kenmore and the greater Seattle area
               </p>
             </div>
 
             {/* CTA */}
-            <div className="space-y-4">
+            <div className="space-y-3">
               <div className="flex justify-center lg:justify-start">
                 <Button 
                   variant="prowash-primary" 
@@ -54,6 +65,9 @@ const Hero = () => {
                 >
                   Get My Free Quote
                 </Button>
+              </div>
+              <div className="text-center lg:text-left">
+                <p className="text-brand-gray-text font-medium">📞 <a href="tel:2067526690" className="hover:text-brand-orange transition-colors">Call or Text: 206.752.6690</a></p>
               </div>
             </div>
 
@@ -68,7 +82,7 @@ const Hero = () => {
                 className="w-full h-[400px] lg:h-[600px] object-cover"
                 loading="eager"
               />
-              <div className="absolute inset-0 bg-black/50"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/20 to-transparent"></div>
             </div>
           </div>
         </div>

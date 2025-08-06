@@ -8,20 +8,20 @@
 
 @layer base {
   :root {
-    /* Seattle ProWash Pacific Northwest Theme (HSL format) */
-    --background: 210 8% 18%; /* Slate gray #2F2F2F */
-    --foreground: 210 20% 92%; /* Off-white for readability */
+    /* Seattle ProWash High Contrast Colors (HSL format) */
+    --background: 0 0% 100%; /* Pure white */
+    --foreground: 210 100% 10%; /* Very dark blue for excellent readability */
     
-    /* Seattle ProWash Brand Palette - Pacific Northwest */
-    --brand-blue: 210 8% 18%; /* Slate gray #2F2F2F for primary sections */
-    --brand-blue-light: 210 15% 35%; /* Medium slate for accents */
-    --brand-navy: 167 35% 24%; /* Dark evergreen #1E3A34 for secondary sections */
-    --brand-orange: 36 100% 50%; /* Vibrant yellow #FFB400 for CTAs */
-    --brand-orange-light: 36 100% 55%; /* Lighter yellow for hover states */
-    --brand-yellow: 36 100% 50%; /* Vibrant yellow #FFB400 */
-    --brand-white: 210 20% 92%; /* Off-white for text */
-    --brand-gray: 167 35% 24%; /* Dark evergreen for secondary backgrounds */
-    --brand-gray-text: 210 15% 75%; /* Soft gray for secondary text */
+    /* Seattle ProWash Brand Palette - High Contrast */
+    --brand-blue: 210 100% 10%; /* Dark navy blue #001a33 - excellent contrast */
+    --brand-blue-light: 210 100% 25%; /* Medium blue for headings */
+    --brand-navy: 210 100% 8%; /* Even darker navy for backgrounds */
+    --brand-orange: 25 95% 50%; /* Strong orange #ff6b00 - great contrast */
+    --brand-orange-light: 25 100% 55%; /* Lighter orange for hover states */
+    --brand-yellow: 45 100% 50%; /* Pure golden yellow */
+    --brand-white: 0 0% 100%; /* Pure white */
+    --brand-gray: 210 15% 95%; /* Very light blue-gray background */
+    --brand-gray-text: 210 10% 40%; /* Medium gray for secondary text */
     
     --card: 0 0% 100%;
     --card-foreground: 210 100% 10%;
@@ -135,9 +135,9 @@
     letter-spacing: -0.025em;
   }
   
-  /* Seattle ProWash Section Spacing - More breathing room */
+  /* Seattle ProWash Section Spacing */
   .section-spacing {
-    @apply py-12 md:py-20 lg:py-28;
+    @apply py-8 md:py-16 lg:py-20;
   }
   
   /* ProWash animations */
