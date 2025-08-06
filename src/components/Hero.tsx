@@ -22,18 +22,11 @@ const Hero = () => {
           <div className="text-center lg:text-left space-y-8 fade-up">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-blue leading-tight">
-                <span className="text-brand-orange block">Seattle‑Area Roof Moss & Gutter Cleaning Specialists</span>
+                <span className="text-brand-orange block">Moss is silently destroying your roof — we'll stop it before the rain hits.</span>
               </h1>
               
-              {/* Seasonal Banner */}
-              <div className="bg-brand-yellow/20 border border-brand-yellow/40 rounded-lg px-4 py-3 text-center">
-                <p className="text-lg font-semibold text-brand-navy">
-                  Beat the Fall Rush! Schedule your essential roof & gutter cleaning now before the rainy season hits.
-                </p>
-              </div>
-              
               <p className="text-xl md:text-2xl text-brand-gray-text font-medium leading-relaxed">
-                Based in Kenmore, WA — proudly serving Kenmore, Bothell, Kirkland, North Seattle and nearby areas.
+                Fully licensed & insured. Same-day estimates. Serving Kenmore, Bothell, Kirkland & nearby.
               </p>
               
               <p className="text-sm text-brand-gray-text/80 font-medium">
