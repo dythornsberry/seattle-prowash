@@ -15,7 +15,7 @@ const GoogleIcon = ({ className }: { className?: string }) => (
 
 const Hero = () => {
   return (
-    <section id="home" className="py-20 bg-brand-gray min-h-screen flex items-center">
+    <section id="home" className="py-20 bg-[#2C3E50] min-h-screen flex items-center">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-5 gap-12 items-center max-w-7xl mx-auto">
           
@@ -23,18 +23,18 @@ const Hero = () => {
           <div className="lg:col-span-3 space-y-8 fade-up">
             
             {/* Main Headline */}
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-brand-navy leading-tight">
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Protect Your Home, <span className="text-brand-green">Restore Its Beauty.</span>
             </h1>
             
             {/* Supporting Paragraph */}
-            <p className="text-xl md:text-2xl text-brand-gray-text leading-relaxed font-medium">
+            <p className="text-xl md:text-2xl text-white leading-relaxed font-medium">
               Seattle's Trusted Specialists for Roof Moss Removal & Gutter Cleaning. We protect your biggest investment from the Pacific Northwest weather.
             </p>
             
             {/* Key Trust Metrics - List Format */}
             <div className="space-y-4">
-              <div className="flex items-center gap-3 text-lg font-semibold text-brand-navy">
+              <div className="flex items-center gap-3 text-lg font-semibold text-white">
                 <div className="w-6 h-6 bg-brand-green rounded-full flex items-center justify-center flex-shrink-0">
                   <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -43,7 +43,7 @@ const Hero = () => {
                 <span>4+ Years Experience</span>
               </div>
               
-              <div className="flex items-center gap-3 text-lg font-semibold text-brand-navy">
+              <div className="flex items-center gap-3 text-lg font-semibold text-white">
                 <div className="w-6 h-6 bg-brand-green rounded-full flex items-center justify-center flex-shrink-0">
                   <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -52,7 +52,7 @@ const Hero = () => {
                 <span>1K+ Happy Customers</span>
               </div>
               
-              <div className="flex items-center gap-3 text-lg font-semibold text-brand-navy">
+              <div className="flex items-center gap-3 text-lg font-semibold text-white">
                 <div className="w-6 h-6 bg-brand-green rounded-full flex items-center justify-center flex-shrink-0">
                   <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -78,7 +78,7 @@ const Hero = () => {
                 <Button 
                   variant="prowash-outline" 
                   size="xl"
-                  className="text-lg px-8 py-6 h-16 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white"
+                  className="text-lg px-8 py-6 h-16"
                   onClick={() => {
                     window.location.href = 'tel:2067526690';
                   }}
@@ -87,31 +87,30 @@ const Hero = () => {
                 </Button>
               </div>
               
-              <p className="text-sm text-brand-gray-text font-medium">
+              <p className="text-sm text-white/80 font-medium">
                 Based in Kenmore, WA — serving Kenmore, Bothell, Kirkland, North Seattle and nearby areas.
               </p>
             </div>
           </div>
 
-          {/* Right Column - The Visual (40% width) */}
+          {/* Right Column - Four Stat Boxes */}
           <div className="lg:col-span-2 fade-up">
-            <div className="relative">
-              <img
-                src={heroImage}
-                alt="Professional roof and gutter cleaning service - Seattle ProWash owner with equipment"
-                className="w-full h-[600px] object-cover rounded-2xl shadow-2xl"
-                loading="eager"
-              />
-              
-              {/* Trust Badge Overlay */}
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-brand-green/20">
-                  <div className="text-center">
-                    <div className="text-brand-green text-2xl font-bold">100%</div>
-                    <div className="text-brand-navy font-semibold text-sm">Satisfaction Rate</div>
-                    <div className="text-xs text-brand-gray-text mt-1">Same-Day Quotes Available</div>
-                  </div>
-                </div>
+            <div className="grid grid-cols-2 gap-6">
+              <div className="text-center">
+                <div className="text-brand-green text-4xl font-bold">4+</div>
+                <div className="text-white font-medium">Years Experience</div>
+              </div>
+              <div className="text-center">
+                <div className="text-brand-green text-4xl font-bold">1K+</div>
+                <div className="text-white font-medium">Happy Customers</div>
+              </div>
+              <div className="text-center">
+                <div className="text-brand-green text-4xl font-bold">100%</div>
+                <div className="text-white font-medium">Satisfaction Rate</div>
+              </div>
+              <div className="text-center">
+                <div className="text-brand-green text-3xl font-bold">Same-Day</div>
+                <div className="text-white font-medium">Quotes</div>
               </div>
             </div>
           </div>
