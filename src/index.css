@@ -9,26 +9,32 @@
 @layer base {
   :root {
     /* Seattle ProWash High Contrast Colors (HSL format) */
-    --background: 0 0% 100%; /* Pure white */
-    --foreground: 210 100% 10%; /* Very dark blue for excellent readability */
+    --background: 210 20% 98%; /* Off-white background */
+    --foreground: 210 11% 25%; /* Charcoal for excellent readability */
     
-    /* Seattle ProWash Brand Palette - High Contrast */
-    --brand-blue: 210 100% 10%; /* Dark navy blue #001a33 - excellent contrast */
-    --brand-blue-light: 210 100% 25%; /* Medium blue for headings */
-    --brand-navy: 210 100% 8%; /* Even darker navy for backgrounds */
-    --brand-orange: 25 95% 50%; /* Strong orange #ff6b00 - great contrast */
-    --brand-orange-light: 25 100% 55%; /* Lighter orange for hover states */
+    /* Pacific Northwest Professional Palette */
+    --primary-teal: 192 100% 22%; /* Deep Teal #005D6E - headings, dark backgrounds, footer */
+    --secondary-off-white: 210 20% 98%; /* Off-White #F8F9FA - main page background */
+    --accent-bright-green: 120 61% 50%; /* Bright Green #32CD32 - CTA buttons, icons, highlights */
+    --text-charcoal: 210 11% 25%; /* Charcoal #343A40 - body text */
+    
+    /* Legacy Brand Colors (keeping for compatibility) */
+    --brand-blue: 192 100% 22%; /* Now maps to Deep Teal */
+    --brand-blue-light: 192 85% 35%; /* Lighter teal variation */
+    --brand-navy: 192 100% 18%; /* Even darker teal for backgrounds */
+    --brand-orange: 120 61% 50%; /* Now maps to Bright Green */
+    --brand-orange-light: 120 61% 60%; /* Lighter bright green for hover states */
     --brand-yellow: 45 100% 50%; /* Pure golden yellow */
     --brand-white: 0 0% 100%; /* Pure white */
-    --brand-gray: 210 15% 95%; /* Very light blue-gray background */
-    --brand-gray-text: 210 10% 40%; /* Medium gray for secondary text */
+    --brand-gray: 210 20% 98%; /* Off-white background */
+    --brand-gray-text: 210 11% 25%; /* Charcoal for text */
     
-    /* New StoryBrand Colors */
-    --moss-green: 155 35% 35%; /* Deep moss green #4A7C59 */
-    --moss-green-light: 155 35% 45%; /* Lighter moss green for hover */
-    --slate-charcoal: 210 22% 31%; /* Slate blue/charcoal #2C3E50 */
-    --off-white: 60 9% 98%; /* Off-white background */
-    --light-gray: 0 0% 95%; /* Light gray background */
+    /* Updated StoryBrand Colors */
+    --moss-green: 120 61% 50%; /* Now Bright Green for consistency */
+    --moss-green-light: 120 61% 60%; /* Lighter bright green for hover */
+    --slate-charcoal: 192 100% 22%; /* Deep Teal for consistency */
+    --off-white: 210 20% 98%; /* Off-white background */
+    --light-gray: 210 14% 96%; /* Light gray background */
     
     --card: 0 0% 100%;
     --card-foreground: 210 100% 10%;
@@ -36,16 +42,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 210 100% 10%;
 
-    --primary: 210 100% 10%; /* Dark navy */
+    --primary: 192 100% 22%; /* Deep Teal */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 15% 95%; /* Light background */
-    --secondary-foreground: 210 100% 10%;
+    --secondary: 210 20% 98%; /* Off-white background */
+    --secondary-foreground: 210 11% 25%; /* Charcoal text */
 
-    --muted: 210 15% 95%;
-    --muted-foreground: 210 10% 40%; /* Darker for better readability */
+    --muted: 210 14% 96%; /* Light gray */
+    --muted-foreground: 210 11% 25%; /* Charcoal for better readability */
 
-    --accent: 25 95% 50%; /* Strong orange */
+    --accent: 120 61% 50%; /* Bright Green */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 45%;

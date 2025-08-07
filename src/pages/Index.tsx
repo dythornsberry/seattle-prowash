@@ -1,8 +1,10 @@
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import TrustBar from "@/components/TrustBar";
 import BenefitStrip from "@/components/BenefitStrip";
 import ServicesPreview from "@/components/ServicesPreview";
+import CostOfWaiting from "@/components/CostOfWaiting";
 import ProcessSection from "@/components/ProcessSection";
 import AboutPreview from "@/components/AboutPreview";
 import TestimonialSlider from "@/components/TestimonialSlider";
@@ -41,10 +43,12 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <TrustBar />
         <BenefitStrip />
         <div className="bg-light-gray">
           <ServicesPreview />
         </div>
+        <CostOfWaiting />
         <ProcessSection />
         <div className="bg-off-white">
           <AboutPreview />

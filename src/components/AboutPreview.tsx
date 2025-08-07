@@ -9,8 +9,8 @@ const AboutPreview = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="fade-up">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-blue mb-6">
-                Meet Dylan — Seattle ProWash Owner
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-teal mb-6">
+                Your Expert Guide to a Protected Home
               </h2>
               <div className="space-y-4 text-lg text-brand-gray-text">
                 <p>

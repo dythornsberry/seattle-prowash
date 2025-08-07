@@ -15,34 +15,42 @@ const GoogleIcon = ({ className }: { className?: string }) => (
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-brand-white to-brand-gray">
-      <div className="container mx-auto px-4 py-20">
+    <section id="home" className="relative min-h-screen flex items-center">
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+        }}
+      >
+        <div className="absolute inset-0 bg-primary-teal/80"></div>
+      </div>
+      <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="text-center lg:text-left space-y-8 fade-up">
             <div className="space-y-6">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-brand-blue leading-tight">
-                <span className="text-brand-orange block">Your roof isn't just dirty. It's decaying—quietly, slowly, and expensively.</span>
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight drop-shadow-lg">
+                Moss is silently destroying your roof — we'll stop it before the rain hits.
               </h1>
               
-              <p className="text-xl md:text-2xl text-brand-gray-text font-medium leading-relaxed">
+              <p className="text-xl md:text-2xl text-white/90 font-medium leading-relaxed drop-shadow-md">
                 Seattle ProWash shows up with pro gear, gets rid of the moss and grime, and leaves your home spotless—without wrecking your shingles or wasting your time.
               </p>
               
-              <p className="text-sm text-brand-gray-text/80 font-medium">
+              <p className="text-sm text-white/80 font-medium">
                 ⭐ <a 
                   href="https://www.google.com/search?q=Seattle+ProWash+reviews" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="hover:text-brand-orange transition-colors cursor-pointer inline-flex items-center gap-1"
+                  className="hover:text-bright-green transition-colors cursor-pointer inline-flex items-center gap-1"
                 >
                   <GoogleIcon className="inline" />
                   180+ 5‑Star Reviews
                 </a> · Fully Licensed & Insured
               </p>
               
-              <p className="text-sm text-brand-gray-text/70 font-medium">
-                🗺️ Serving Kenmore and the greater Seattle area
+              <p className="text-sm text-white/70 font-medium">
+                🗺️ Serving Kenmore, Bothell, Kirkland & nearby
               </p>
             </div>
 
@@ -52,6 +60,7 @@ const Hero = () => {
                 <Button 
                   variant="prowash-primary" 
                   size="xl"
+                  className="bg-bright-green hover:bg-bright-green/90 text-white font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
                   onClick={() => {
                     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                   }}
@@ -60,22 +69,19 @@ const Hero = () => {
                 </Button>
               </div>
               <div className="text-center lg:text-left">
-                <p className="text-brand-gray-text font-medium">📞 <a href="tel:2067526690" className="hover:text-brand-orange transition-colors">Call or Text: 206.752.6690</a></p>
+                <p className="text-white/90 font-medium">📞 <a href="tel:2067526690" className="hover:text-bright-green transition-colors">Call or Text: 206.752.6690</a></p>
               </div>
             </div>
 
           </div>
 
-          {/* Hero Image */}
-          <div className="relative lg:order-last fade-up">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src={heroImage}
-                alt="Professional roof and gutter cleaning service in Kenmore, WA - clean house with moss-free roof"
-                className="w-full h-[400px] lg:h-[600px] object-cover"
-                loading="eager"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/20 to-transparent"></div>
+          {/* Optional: Remove this section or keep it as an overlay element */}
+          <div className="hidden lg:block relative lg:order-last fade-up">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white/10 backdrop-blur-sm border border-white/20">
+              <div className="p-8 text-center text-white">
+                <h3 className="text-2xl font-bold mb-4">Professional Results</h3>
+                <p className="text-white/80">See the difference our professional equipment and expertise makes</p>
+              </div>
             </div>
           </div>
         </div>
