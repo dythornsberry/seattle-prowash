@@ -657,8 +657,8 @@ const Gallery = () => {
                     />
                   </div>
                   
-                  {/* Always visible label overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-navy/95 to-transparent p-4">
+                  {/* Always visible label overlay - hidden on hover */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-navy/95 to-transparent p-4 group-hover:opacity-0 transition-opacity duration-300">
                     <h3 className="text-white font-semibold text-lg mb-1">
                       {image.service} in {image.location.split(',')[0]}
                     </h3>
