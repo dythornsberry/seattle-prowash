@@ -45,10 +45,21 @@ const Index = () => {
       setTimeout(() => {
         const element = document.getElementById(hash.substring(1));
         if (element) {
-          element.scrollIntoView({ 
-            behavior: 'smooth',
-            block: 'start'
-          });
+          // On mobile, scroll to the form specifically for better UX
+          const isMobile = window.innerWidth < 1024;
+          const formElement = element.querySelector('form');
+          
+          if (isMobile && formElement && hash === '#contact') {
+            formElement.scrollIntoView({ 
+              behavior: 'smooth',
+              block: 'start'
+            });
+          } else {
+            element.scrollIntoView({ 
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
         }
       }, 100);
     }

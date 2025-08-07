@@ -11,10 +11,21 @@ export const navigateToContact = () => {
   if (window.location.pathname === '/') {
     const contactElement = document.getElementById('contact');
     if (contactElement) {
-      contactElement.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
+      // On mobile, scroll to the form specifically for better UX
+      const isMobile = window.innerWidth < 1024;
+      const formElement = contactElement.querySelector('form');
+      
+      if (isMobile && formElement) {
+        formElement.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+      } else {
+        contactElement.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
     }
   } else {
     // Navigate to home page with hash
