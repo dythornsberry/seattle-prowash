@@ -284,7 +284,7 @@ const QuoteForm = () => {
                       
                       <div className="text-sm text-muted-foreground">
                         <p className="font-medium text-brand-navy">Serving Kenmore and the greater Seattle area, including Bothell, Kirkland, Shoreline, and nearby neighborhoods</p>
-                        <p className="mt-1">We respond back in 1 hour — Monday through Sunday</p>
+                        <p className="mt-1">We respond back in 1 hour, Monday through Sunday</p>
                       </div>
                     </div>
 

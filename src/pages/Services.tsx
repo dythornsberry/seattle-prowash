@@ -44,7 +44,7 @@ const Services = () => {
       title: "Roof Cleaning & Moss Removal",
       subtitle: "Is moss slowly destroying your roof?",
       image: roofMossRemoval,
-      description: "Left untreated, roof moss shortens the life of your shingles and can cause major water damage. We remove the moss, treat the roof, and keep your home protected—all backed by our 12-month moss-free guarantee.",
+      description: "Left untreated, roof moss shortens the life of your shingles and can cause major water damage. We remove the moss, treat the roof, and keep your home protected, all backed by our 12-month moss-free guarantee.",
       process: [
         "Brush and blow moss and roof debris",
         "Apply soft wash treatment (manufacturer-recommended method)"
@@ -82,7 +82,7 @@ const Services = () => {
       title: "House Washing", 
       subtitle: "Soft wash cleaning for your home's full exterior.",
       image: houseSoftwash,
-      description: "Our gentle but effective soft washing cleans your entire home's exterior—including 2nd-story homes—without the risk of damage from high-pressure washing.",
+      description: "Our gentle but effective soft washing cleans your entire home's exterior, including 2nd-story homes, without the risk of damage from high-pressure washing.",
       process: [
         "Cleans siding, trim, soffits, eaves, exterior gutters, windows & doors"
       ],

@@ -43,7 +43,7 @@ const TestimonialSlider = () => {
       service: "House Soft Wash"
     },
     {
-      content: "These guys removed years of moss—roof looks brand new! Great price and super professional.",
+      content: "These guys removed years of moss and the roof looks brand new! Great price and super professional.",
       author: "Jennifer C.",
       location: "Kenmore, WA",
       rating: 5,
@@ -82,7 +82,7 @@ const TestimonialSlider = () => {
             <span className="text-brand-gray-text font-medium">• 180 Google Reviews</span>
           </div>
           <p className="text-brand-gray-text mb-8 max-w-2xl mx-auto">
-            Don't just take our word for it — see what homeowners across the Seattle area are saying about our roof and gutter cleaning services. 
+            Don't just take our word for it. See what homeowners across the Seattle area are saying about our roof and gutter cleaning services. 
             <a 
               href="https://www.google.com/search?q=Seattle+ProWash+reviews" 
               target="_blank" 

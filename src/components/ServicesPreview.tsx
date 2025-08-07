@@ -32,7 +32,7 @@ const ServicesPreview = () => {
       features: [
         "Restore your home's beauty by washing siding, trim, soffits, and all exterior surfaces.",
         "Remove harmful mildew, algae, and grime to protect your paint and siding from long-term damage.",
-        "Our gentle soft wash technique is 100% safe for all materials—vinyl, wood, stucco, and more."
+        "Our gentle soft wash technique is 100% safe for all materials: vinyl, wood, stucco, and more."
       ]
     }
   ];

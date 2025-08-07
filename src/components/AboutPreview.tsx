@@ -14,7 +14,7 @@ const AboutPreview = () => {
               </h2>
               <div className="space-y-4 text-lg text-brand-gray-text">
                 <p>
-                  Hi, I'm Dylan—owner of Seattle ProWash.
+                  Hi, I'm Dylan, owner of Seattle ProWash.
                 </p>
                 <p>
                   I started this company after working for others who cut corners. I wanted to offer something better: legit gear, honest pricing, and a crew that actually cares about the homes we work on. Whether we're on a steep roof or power washing a walkway, we treat it like it's our own place.

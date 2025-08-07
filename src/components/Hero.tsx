@@ -30,11 +30,11 @@ const Hero = () => {
           <div className="text-center lg:text-left space-y-8 fade-up">
             <div className="space-y-6">
               <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight drop-shadow-lg">
-                Moss is silently destroying your roof — we'll stop it before the rain hits.
+                Moss is silently destroying your roof. We'll stop it before the rain hits.
               </h1>
               
               <p className="text-xl md:text-2xl text-white/90 font-medium leading-relaxed drop-shadow-md">
-                Seattle ProWash shows up with pro gear, gets rid of the moss and grime, and leaves your home spotless—without wrecking your shingles or wasting your time.
+                Seattle ProWash shows up with pro gear, gets rid of the moss and grime, and leaves your home spotless without wrecking your shingles or wasting your time.
               </p>
               
               <p className="text-sm text-white/80 font-medium">

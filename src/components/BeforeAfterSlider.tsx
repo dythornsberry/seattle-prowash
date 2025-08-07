@@ -97,7 +97,7 @@ const BeforeAfterSlider = () => {
             Before & After: Real Exterior Cleaning Results
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Authentic transformations from your neighbors across Kenmore, Bothell, and Kirkland. No stock photos—just real Seattle ProWash results.
+            Authentic transformations from your neighbors across Kenmore, Bothell, and Kirkland. No stock photos, just real Seattle ProWash results.
           </p>
         </div>
 

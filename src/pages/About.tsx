@@ -44,7 +44,7 @@ const About = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center fade-up">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-                Meet Dylan — Owner of Seattle ProWash
+                Meet Dylan, Owner of Seattle ProWash
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-white/90">
                 Helping Seattle-area homeowners restore their homes with safe, effective soft washing and pressure washing since 2022.
