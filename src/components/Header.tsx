@@ -66,8 +66,22 @@ const Header = () => {
     }
   };
   
+  const navigateToHome = () => {
+    if (window.location.pathname === '/') {
+      // Already on home page, scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // Navigate to home page
+      navigate('/');
+    }
+  };
+  
   const navigation: NavigationItem[] = [
-    { name: "Home", href: "/" },
+    { 
+      name: "Home", 
+      href: "/",
+      onClick: () => navigateToHome()
+    },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Gallery", href: "/gallery" },
@@ -89,11 +103,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Brand Text */}
           <div className="flex items-center">
-            <Link to="/">
+            <button onClick={navigateToHome}>
               <h1 className="text-xl md:text-2xl font-bold text-brand-blue hover:text-brand-orange transition-colors duration-250 cursor-pointer">
                 Seattle <span className="text-brand-orange">ProWash</span>
               </h1>
-            </Link>
+            </button>
           </div>
 
           {/* Desktop Navigation */}
