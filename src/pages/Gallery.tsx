@@ -656,14 +656,23 @@ const Gallery = () => {
                       loading="lazy"
                     />
                   </div>
+                  
+                  {/* Always visible label overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-navy/95 to-transparent p-4">
+                    <h3 className="text-white font-semibold text-lg mb-1">
+                      {image.service} in {image.location.split(',')[0]}
+                    </h3>
+                    <p className="text-white/80 text-sm">
+                      {image.title}
+                    </p>
+                  </div>
+                  
+                  {/* Hover overlay with additional details */}
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute top-4 right-4">
                       <Expand className="w-6 h-6 text-white drop-shadow-lg" />
                     </div>
                     <div className="absolute bottom-4 left-4 right-4">
-                      <h3 className="text-brand-white font-semibold text-lg mb-2">
-                        {image.title}
-                      </h3>
                       <p className="text-white/90 text-sm mb-3">
                         {image.description}
                       </p>
@@ -713,9 +722,10 @@ const Gallery = () => {
                 Let us restore your property to its best condition with our professional cleaning services.
               </p>
               <Button 
-                variant="prowash-secondary" 
+                variant="prowash-primary" 
                 size="xl"
                 onClick={navigateToContact}
+                className="bg-moss-green hover:bg-moss-green-light"
               >
                 Get Your Free Quote Today
               </Button>
