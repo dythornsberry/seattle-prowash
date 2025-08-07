@@ -27,6 +27,13 @@ const CTABanner = () => {
             <Button 
               size="xl" 
               className="flex-1 sm:flex-none bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 text-lg rounded-lg shadow-lg"
+              onClick={() => {
+                if (window.location.pathname === '/') {
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  window.location.href = '/#contact';
+                }
+              }}
             >
               Get My Free Quote
             </Button>
@@ -36,6 +43,7 @@ const CTABanner = () => {
             <Button 
               size="xl" 
               className="flex-1 sm:flex-none bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-200"
+              onClick={() => window.location.href = 'tel:206-752-6690'}
             >
               <Phone className="w-5 h-5 mr-2" />
               Call Now: 206-752-6690

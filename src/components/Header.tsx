@@ -105,6 +105,9 @@ const Header = () => {
                   if (item.onClick) {
                     e.preventDefault();
                     item.onClick();
+                  } else if (item.href.startsWith('/')) {
+                    e.preventDefault();
+                    window.location.href = item.href;
                   }
                 }}
               >
@@ -167,6 +170,9 @@ const Header = () => {
                     if (item.onClick) {
                       e.preventDefault();
                       item.onClick();
+                    } else if (item.href.startsWith('/')) {
+                      e.preventDefault();
+                      window.location.href = item.href;
                     }
                   }}
                 >

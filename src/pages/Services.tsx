@@ -228,7 +228,11 @@ const Services = () => {
                         >
                           Get Quote for {service.title}
                         </Button>
-                        <Button variant="prowash-phone" size="lg">
+                        <Button 
+                          variant="prowash-phone" 
+                          size="lg"
+                          onClick={() => window.location.href = 'tel:206-752-6690'}
+                        >
                           <Phone className="w-4 h-4 mr-2" />
                           206.752.6690
                         </Button>
@@ -304,7 +308,11 @@ const Services = () => {
                 >
                   Get My Free Quote
                 </Button>
-                <Button variant="prowash-phone" size="xl">
+                <Button 
+                  variant="prowash-phone" 
+                  size="xl"
+                  onClick={() => window.location.href = 'tel:206-752-6690'}
+                >
                   <Phone className="w-5 h-5 mr-2" />
                   Call 206.752.6690
                 </Button>

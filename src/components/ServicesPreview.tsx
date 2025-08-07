@@ -98,7 +98,11 @@ const ServicesPreview = () => {
                       className="w-full" 
                       size="sm"
                       onClick={() => {
-                        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                        if (window.location.pathname === '/') {
+                          document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                        } else {
+                          window.location.href = '/#contact';
+                        }
                       }}
                     >
                       Get Free Quote
@@ -126,7 +130,11 @@ const ServicesPreview = () => {
             variant="prowash-primary" 
             size="xl"
             onClick={() => {
-              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              if (window.location.pathname === '/') {
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              } else {
+                window.location.href = '/#contact';
+              }
             }}
           >
             Get My Free Quote Today

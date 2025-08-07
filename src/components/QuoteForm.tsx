@@ -266,7 +266,8 @@ const QuoteForm = () => {
 
                     <Button
                       type="submit"
-                      className="w-full bg-brand-orange text-white font-bold hover:bg-brand-orange-light btn-glow shadow-md border-0"
+                      variant="cta-orange"
+                      className="w-full bg-bright-orange text-white font-bold hover:bg-bright-orange/90 btn-glow shadow-md border-0"
                       size="xl"
                       disabled={isSubmitting}
                     >

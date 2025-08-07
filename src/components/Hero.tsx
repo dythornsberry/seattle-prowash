@@ -42,7 +42,7 @@ const Hero = () => {
                   href="https://www.google.com/search?q=Seattle+ProWash+reviews" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="hover:text-bright-green transition-colors cursor-pointer inline-flex items-center gap-1"
+                  className="hover:text-moss-green transition-colors cursor-pointer inline-flex items-center gap-1"
                 >
                   <GoogleIcon className="inline" />
                   180+ 5‑Star Reviews

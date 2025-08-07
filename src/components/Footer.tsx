@@ -30,7 +30,11 @@ const Footer = () => {
               </h3>
               <p className="text-sm opacity-80">Same-day estimates • Fully licensed & insured • 12 month moss‑free guarantee</p>
             </div>
-            <Button variant="prowash-cta" size="lg">
+            <Button 
+              variant="prowash-cta" 
+              size="lg"
+              onClick={() => window.location.href = 'tel:206-752-6690'}
+            >
               <Phone className="w-4 h-4 mr-2" />
               Call 206-752-6690
             </Button>
@@ -62,7 +66,12 @@ const Footer = () => {
                   <span className="font-bold">5.0</span>
                 </div>
                 <p className="text-sm text-white/80">180+ Google Reviews</p>
-                <Button variant="prowash-secondary" size="sm" className="mt-2 text-xs">
+                <Button 
+                  variant="prowash-secondary" 
+                  size="sm" 
+                  className="mt-2 text-xs"
+                  onClick={() => window.open('https://www.google.com/search?q=Seattle+ProWash+reviews', '_blank')}
+                >
                   Read Reviews
                 </Button>
               </div>
@@ -75,7 +84,7 @@ const Footer = () => {
                 {services.map((service, index) => (
                   <li key={index}>
                     <a 
-                      href="#services" 
+                      href="/services" 
                       className="text-white/80 hover:text-brand-yellow transition-colors duration-250 text-sm"
                     >
                       {service}
@@ -143,7 +152,11 @@ const Footer = () => {
                 size="lg" 
                 className="w-full"
                 onClick={() => {
-                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  if (window.location.pathname === '/') {
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    window.location.href = '/#contact';
+                  }
                 }}
               >
                 Get Free Quote

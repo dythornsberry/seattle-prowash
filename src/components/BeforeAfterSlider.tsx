@@ -230,12 +230,20 @@ const BeforeAfterSlider = () => {
                 variant="prowash-primary" 
                 size="xl"
                 onClick={() => {
-                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  if (window.location.pathname === '/') {
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    window.location.href = '/#contact';
+                  }
                 }}
               >
                 Get My Free Quote
               </Button>
-              <Button variant="prowash-secondary" size="xl">
+              <Button 
+                variant="prowash-secondary" 
+                size="xl"
+                onClick={() => window.location.href = '/gallery'}
+              >
                 <ExternalLink className="w-5 h-5 mr-2" />
                 View More Projects
               </Button>
