@@ -56,7 +56,7 @@ const CostOfWaiting = () => {
                   <img
                     src="/lovable-uploads/0189ddf5-dfd1-4746-b6b4-7b665e561954.png"
                     alt="Clean, pristine roof after professional cleaning"
-                    className="w-full h-48 object-cover rounded-lg object-[center_75%]"
+                    className="w-full h-48 object-cover rounded-lg object-[center_80%]"
                   />
                 </div>
                 
