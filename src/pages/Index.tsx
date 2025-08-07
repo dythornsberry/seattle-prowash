@@ -38,6 +38,22 @@ const Index = () => {
     };
   }, []);
 
+  // Handle hash navigation (e.g., /#contact)
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      setTimeout(() => {
+        const element = document.getElementById(hash.substring(1));
+        if (element) {
+          element.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }, 100);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />

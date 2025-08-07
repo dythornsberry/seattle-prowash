@@ -17,19 +17,8 @@ export const navigateToContact = () => {
       });
     }
   } else {
-    // Navigate to home page first, then scroll to contact
-    window.history.pushState({}, '', '/');
-    
-    // Small delay to ensure the page has loaded
-    setTimeout(() => {
-      const contactElement = document.getElementById('contact');
-      if (contactElement) {
-        contactElement.scrollIntoView({ 
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    }, 300);
+    // Navigate to home page with hash
+    window.location.href = '/#contact';
   }
 };
 
@@ -46,17 +35,7 @@ export const navigateToReviews = () => {
       });
     }
   } else {
-    // Navigate to home page first, then scroll to reviews
-    window.history.pushState({}, '', '/');
-    
-    setTimeout(() => {
-      const reviewsElement = document.getElementById('reviews');
-      if (reviewsElement) {
-        reviewsElement.scrollIntoView({ 
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    }, 300);
+    // Navigate to home page with hash
+    window.location.href = '/#reviews';
   }
 };
