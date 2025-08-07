@@ -5,17 +5,17 @@ const ProcessSection = () => {
     {
       number: "1",
       title: "Get Your Free Quote",
-      description: "Call, text, or fill out our form. We'll provide a fast, accurate, and no-pressure quote for your property."
+      description: "Call, text, or fill out our form. We'll provide a fast, accurate, and no-pressure quote for your property"
     },
     {
       number: "2", 
       title: "We Handle the Work",
-      description: "Our licensed and insured team will arrive on time and use professional equipment to safely transform your home."
+      description: "Our licensed and insured team will arrive on time and use professional equipment to safely transform your home"
     },
     {
       number: "3",
       title: "Love Your Results", 
-      description: "Enjoy a pristine property, backed by our 100% satisfaction and 12-month moss-free guarantees."
+      description: "Enjoy a pristine property, backed by our 100% satisfaction and 12-month moss-free guarantees"
     }
   ];
 

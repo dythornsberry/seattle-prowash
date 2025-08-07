@@ -9,9 +9,9 @@ const ServicesPreview = () => {
       title: "Roof & Gutter Cleaning",
       description: "Moss removal + full gutter cleanouts, done the right way.",
       features: [
-        "Safely remove damaging moss and debris with our gentle brush and blow method.",
-        "Apply a professional soft wash treatment to protect your shingles and keep moss away longer.",
-        "Prevent water damage with a complete gutter & downspout flush, including a full site cleanup."
+        "Safely remove damaging moss and debris with our gentle brush and blow method",
+        "Apply a professional soft wash treatment to protect your shingles and keep moss away longer",
+        "Prevent water damage with a complete gutter & downspout flush, including a full site cleanup"
       ]
     },
     {
@@ -19,9 +19,9 @@ const ServicesPreview = () => {
       title: "Pressure Washing",
       description: "Restore driveways, patios, walkways, and concrete surfaces.",
       features: [
-        "Instantly boost your home's curb appeal by deep cleaning driveways, patios, and walkways.",
-        "Eliminate slippery, unsafe moss and algae buildup for a safer, more inviting property.",
-        "Achieve a flawless, streak-free finish that protects your concrete surfaces."
+        "Instantly boost your home's curb appeal by deep cleaning driveways, patios, and walkways",
+        "Eliminate slippery, unsafe moss and algae buildup for a safer, more inviting property",
+        "Achieve a flawless, streak-free finish that protects your concrete surfaces"
       ],
       socialProof: "5-star rated by 180+ Seattle-area homeowners"
     },
@@ -30,9 +30,9 @@ const ServicesPreview = () => {
       title: "House Washing",
       description: "Soft wash cleaning for your home's full exterior.",
       features: [
-        "Restore your home's beauty by washing siding, trim, soffits, and all exterior surfaces.",
-        "Remove harmful mildew, algae, and grime to protect your paint and siding from long-term damage.",
-        "Our gentle soft wash technique is 100% safe for all materials: vinyl, wood, stucco, and more."
+        "Restore your home's beauty by washing siding, trim, soffits, and all exterior surfaces",
+        "Remove harmful mildew, algae, and grime to protect your paint and siding from long-term damage",
+        "Our gentle soft wash technique is 100% safe for all materials: vinyl, wood, stucco, and more"
       ]
     }
   ];
@@ -88,7 +88,7 @@ const ServicesPreview = () => {
                   
                   <div className="pt-4 border-t border-border mt-auto">
                     <p className="text-xs text-brand-gray-text text-center font-medium">
-                      Free Estimates · Call or Text 206.752.6690.
+                      Free Estimates · Call or Text 206.752.6690
                     </p>
                   </div>
                   

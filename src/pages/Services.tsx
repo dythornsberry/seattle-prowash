@@ -61,7 +61,7 @@ const Services = () => {
       id: "pressure-washing", 
       icon: Zap,
       title: "Pressure Washing",
-      subtitle: "Restore driveways, patios, decks, and walkways.",
+      subtitle: "Restore driveways, patios, decks, and walkways",
       image: pressureWashing,
       description: "Professional pressure washing that removes years of buildup from your concrete surfaces, making them look new again. It's the perfect solution for eliminating slippery, unsafe moss and stubborn grime.",
       process: [
@@ -80,7 +80,7 @@ const Services = () => {
       id: "house-washing",
       icon: Home,
       title: "House Washing", 
-      subtitle: "Soft wash cleaning for your home's full exterior.",
+      subtitle: "Soft wash cleaning for your home's full exterior",
       image: houseSoftwash,
       description: "Our gentle but effective soft washing cleans your entire home's exterior, including 2nd-story homes, without the risk of damage from high-pressure washing.",
       process: [
