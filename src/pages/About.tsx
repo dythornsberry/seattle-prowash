@@ -114,15 +114,48 @@ const About = () => {
           </div>
         </section>
 
+        {/* Personal CTA from Dylan */}
+        <section className="section-spacing bg-brand-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex flex-col md:flex-row items-center gap-8 fade-up">
+                <div className="flex-shrink-0">
+                  <img
+                    src={dylanOwnerPhoto}
+                    alt="Dylan, owner of Seattle ProWash"
+                    className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-lg"
+                  />
+                </div>
+                <div className="text-center md:text-left flex-1">
+                  <h3 className="text-2xl md:text-3xl font-bold text-brand-navy mb-4">
+                    Let Us Show You the Difference
+                  </h3>
+                  <p className="text-lg text-muted-foreground mb-6">
+                    "I started this company to provide the honest, high-quality service our community deserves. Contact us today for your free, no-pressure quote, and let us earn your trust."
+                  </p>
+                  <Button 
+                    variant="prowash-primary" 
+                    size="xl"
+                    onClick={navigateToContact}
+                    className="bg-moss-green hover:bg-moss-green-light"
+                  >
+                    Get My Free Quote
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Why Choose Us */}
         <section className="section-spacing bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-16 fade-up">
               <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-6">
-                Why Property Owners Choose Seattle ProWash
+                The Seattle ProWash Promise
               </h2>
               <p className="text-xl text-muted-foreground">
-                Our commitment to excellence and genuine care for your property sets us apart.
+                We treat your home like our own. Here is our commitment to you:
               </p>
             </div>
 
@@ -130,32 +163,32 @@ const About = () => {
               <Card className="fade-up bg-brand-white border-brand-yellow/20 hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">
                   <Award className="w-12 h-12 text-brand-yellow mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-brand-navy mb-3">Decades of Local Expertise</h3>
-                  <p className="text-muted-foreground">Years of hands-on experience in professional cleaning techniques and equipment operation.</p>
+                  <h3 className="text-xl font-semibold text-brand-navy mb-3">True Local Mastery</h3>
+                  <p className="text-muted-foreground">We're experts in protecting Pacific Northwest homes from our specific climate.</p>
                 </CardContent>
               </Card>
 
               <Card className="fade-up bg-brand-white border-brand-yellow/20 hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">
                   <CheckCircle className="w-12 h-12 text-brand-yellow mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-brand-navy mb-3">Superior, Damage-Free Results</h3>
-                  <p className="text-muted-foreground">Professional-grade soft washing and pressure washing equipment for superior results.</p>
+                  <h3 className="text-xl font-semibold text-brand-navy mb-3">A Flawless Finish, Guaranteed</h3>
+                  <p className="text-muted-foreground">Our soft washing cleans completely without risking damage to your property.</p>
                 </CardContent>
               </Card>
 
               <Card className="fade-up bg-brand-white border-brand-yellow/20 hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">
                   <Users className="w-12 h-12 text-brand-yellow mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-brand-navy mb-3">Your Property, Our Priority</h3>
-                  <p className="text-muted-foreground">Every project is treated with the care and attention your property deserves.</p>
+                  <h3 className="text-xl font-semibold text-brand-navy mb-3">Unwavering Respect for Your Home</h3>
+                  <p className="text-muted-foreground">We take pride in our professionalism, from clear communication to a spotless cleanup.</p>
                 </CardContent>
               </Card>
 
               <Card className="fade-up bg-brand-white border-brand-yellow/20 hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">
                   <Calendar className="w-12 h-12 text-brand-yellow mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-brand-navy mb-3">A Track Record of Transformations</h3>
-                  <p className="text-muted-foreground">Consistent, reliable cleaning that restores your property's value and curb appeal.</p>
+                  <h3 className="text-xl font-semibold text-brand-navy mb-3">Results That Speak for Themselves</h3>
+                  <p className="text-muted-foreground">With 500+ properties restored, we deliver transformations that boost your home's value and curb appeal.</p>
                 </CardContent>
               </Card>
             </div>
@@ -272,9 +305,10 @@ const About = () => {
 
               <div className="text-center">
                 <Button 
-                  variant="prowash-secondary" 
+                  variant="prowash-primary" 
                   size="xl"
                   onClick={navigateToContact}
+                  className="bg-moss-green hover:bg-moss-green-light"
                 >
                   Get Your Free Quote Today
                 </Button>
