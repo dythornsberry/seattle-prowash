@@ -36,6 +36,13 @@ export default {
 				'brand-gray': 'hsl(var(--brand-gray))',
 				'brand-gray-text': 'hsl(var(--brand-gray-text))',
 				
+				/* New StoryBrand Colors */
+				'moss-green': 'hsl(var(--moss-green))',
+				'moss-green-light': 'hsl(var(--moss-green-light))',
+				'slate-charcoal': 'hsl(var(--slate-charcoal))',
+				'off-white': 'hsl(var(--off-white))',
+				'light-gray': 'hsl(var(--light-gray))',
+				
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'

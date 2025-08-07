@@ -42,9 +42,9 @@ const Services = () => {
       id: "roof-cleaning",
       icon: Droplet,
       title: "Roof Cleaning & Moss Removal",
-      subtitle: "Safe moss removal and preventative soft wash treatment.",
+      subtitle: "Is moss slowly destroying your roof?",
       image: roofMossRemoval,
-      description: "Our professional roof cleaning service uses safe, manufacturer-approved soft washing techniques to remove harmful moss, algae, and grime, protecting the integrity and lifespan of your roof.",
+      description: "Left untreated, roof moss shortens the life of your shingles and can cause major water damage. We remove the moss, treat the roof, and keep your home protected—all backed by our 12-month moss-free guarantee.",
       process: [
         "Brush and blow moss and roof debris",
         "Apply soft wash treatment (manufacturer-recommended method)"

@@ -23,6 +23,13 @@
     --brand-gray: 210 15% 95%; /* Very light blue-gray background */
     --brand-gray-text: 210 10% 40%; /* Medium gray for secondary text */
     
+    /* New StoryBrand Colors */
+    --moss-green: 155 35% 35%; /* Deep moss green #4A7C59 */
+    --moss-green-light: 155 35% 45%; /* Lighter moss green for hover */
+    --slate-charcoal: 210 22% 31%; /* Slate blue/charcoal #2C3E50 */
+    --off-white: 60 9% 98%; /* Off-white background */
+    --light-gray: 0 0% 95%; /* Light gray background */
+    
     --card: 0 0% 100%;
     --card-foreground: 210 100% 10%;
 

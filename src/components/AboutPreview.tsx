@@ -14,13 +14,10 @@ const AboutPreview = () => {
               </h2>
               <div className="space-y-4 text-lg text-brand-gray-text">
                 <p>
-                  Seattle ProWash is owned and operated by Dylan Thornsberry, a Kenmore-based local who built this company to serve Seattle-area homeowners with honest, effective roof cleaning services.
+                  Hi, I'm Dylan—owner of Seattle ProWash.
                 </p>
                 <p>
-                  After years of working for other pressure washing companies, Dylan knew there was a better way to serve local homeowners. So in 2022, he launched Seattle ProWash with a mission to deliver reliable, top-quality cleaning using real professional gear.
-                </p>
-                <p className="font-semibold text-brand-orange">
-                  "I've worked on every kind of roof, siding, and driveway you can imagine. I know what works best for each property. I started Seattle ProWash to bring honest, reliable cleaning to the people in my community."
+                  I started this company after working for others who cut corners. I wanted to offer something better: legit gear, honest pricing, and a crew that actually cares about the homes we work on. Whether we're on a steep roof or power washing a walkway, we treat it like it's our own place.
                 </p>
               </div>
               

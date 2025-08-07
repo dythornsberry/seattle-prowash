@@ -21,12 +21,12 @@ const Hero = () => {
           {/* Content */}
           <div className="text-center lg:text-left space-y-8 fade-up">
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-blue leading-tight">
-                <span className="text-brand-orange block">Moss is silently destroying your roof — we'll stop it before the rain hits.</span>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-brand-blue leading-tight">
+                <span className="text-brand-orange block">Your roof isn't just dirty. It's decaying—quietly, slowly, and expensively.</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-brand-gray-text font-medium leading-relaxed">
-                Fully licensed & insured. Same-day estimates. Serving Kenmore, Bothell, Kirkland & nearby.
+                Seattle ProWash shows up with pro gear, gets rid of the moss and grime, and leaves your home spotless—without wrecking your shingles or wasting your time.
               </p>
               
               <p className="text-sm text-brand-gray-text/80 font-medium">
