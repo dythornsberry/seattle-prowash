@@ -1,7 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, AlertTriangle } from "lucide-react";
-import beforeRoofImage from "@/assets/before-roof-1.jpg";
-import afterRoofImage from "@/assets/after-roof-1.jpg";
 
 const CostOfWaiting = () => {
   return (
@@ -23,7 +21,7 @@ const CostOfWaiting = () => {
                 
                 <div className="mb-6">
                   <img
-                    src={beforeRoofImage}
+                    src="/lovable-uploads/8cb3c10f-c05a-4727-93c9-247d82982b7a.png"
                     alt="Damaged, mossy roof showing potential problems"
                     className="w-full h-48 object-cover rounded-lg grayscale opacity-75"
                   />
@@ -56,7 +54,7 @@ const CostOfWaiting = () => {
                 
                 <div className="mb-6">
                   <img
-                    src={afterRoofImage}
+                    src="/lovable-uploads/0189ddf5-dfd1-4746-b6b4-7b665e561954.png"
                     alt="Clean, pristine roof after professional cleaning"
                     className="w-full h-48 object-cover rounded-lg"
                   />
