@@ -30,11 +30,11 @@ const Hero = () => {
           <div className="text-center lg:text-left space-y-8 fade-up">
             <div className="space-y-6">
               <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight drop-shadow-lg">
-                Moss is silently destroying your roof. We'll stop it before the rain hits.
+                Your roof is under attack. We'll stop the moss before it wins.
               </h1>
               
               <p className="text-xl md:text-2xl text-white/90 font-medium leading-relaxed drop-shadow-md">
-                Seattle ProWash shows up with pro gear, gets rid of the moss and grime, and leaves your home spotless without wrecking your shingles or wasting your time.
+                Seattle ProWash protects your home with expert moss removal, pro gear, and a 12-month moss-free guarantee—without damaging your roof or wasting your time.
               </p>
               
               <p className="text-sm text-white/80 font-medium">
@@ -58,9 +58,9 @@ const Hero = () => {
             <div className="space-y-3">
               <div className="flex justify-center lg:justify-start">
                 <Button 
-                  variant="prowash-primary" 
+                  variant="cta-orange" 
                   size="xl"
-                  className="bg-bright-green hover:bg-bright-green/90 text-white font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+                  className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
                   onClick={() => {
                     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                   }}
@@ -69,21 +69,12 @@ const Hero = () => {
                 </Button>
               </div>
               <div className="text-center lg:text-left">
-                <p className="text-white/90 font-medium">📞 <a href="tel:2067526690" className="hover:text-bright-green transition-colors">Call or Text: 206.752.6690</a></p>
+                <p className="text-white/90 font-medium">📞 <a href="tel:2067526690" className="hover:text-moss-green transition-colors">Call or Text: 206.752.6690</a></p>
               </div>
             </div>
 
           </div>
 
-          {/* Optional: Remove this section or keep it as an overlay element */}
-          <div className="hidden lg:block relative lg:order-last fade-up">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white/10 backdrop-blur-sm border border-white/20">
-              <div className="p-8 text-center text-white">
-                <h3 className="text-2xl font-bold mb-4">Professional Results</h3>
-                <p className="text-white/80">See the difference our professional equipment and expertise makes</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

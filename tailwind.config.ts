@@ -48,6 +48,11 @@ export default {
 				'slate-charcoal': 'hsl(var(--slate-charcoal))',
 				'light-gray': 'hsl(var(--light-gray))',
 				
+				/* New Colors for Design Update */
+				'bright-orange': 'hsl(var(--bright-orange))',
+				'navy': 'hsl(var(--navy))',
+				'dark-teal': 'hsl(var(--dark-teal))',
+				
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'

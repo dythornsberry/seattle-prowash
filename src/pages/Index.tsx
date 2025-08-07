@@ -43,22 +43,36 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <TrustBar />
-        <BenefitStrip />
-        <div className="bg-light-gray">
+        <div className="bg-off-white">
+          <TrustBar />
+        </div>
+        <div className="bg-dark-teal text-white">
+          <BenefitStrip />
+        </div>
+        <div className="bg-off-white">
           <ServicesPreview />
         </div>
-        <CostOfWaiting />
-        <ProcessSection />
+        <div className="bg-dark-teal text-white">
+          <CostOfWaiting />
+        </div>
         <div className="bg-off-white">
+          <ProcessSection />
+        </div>
+        <div className="bg-dark-teal text-white">
           <AboutPreview />
         </div>
-        <TestimonialSlider />
-        <div className="bg-light-gray">
+        <div className="bg-off-white">
+          <TestimonialSlider />
+        </div>
+        <div className="bg-navy">
           <BeforeAfterSlider />
         </div>
-        <CTABanner />
-        <QuoteForm />
+        <div className="bg-dark-teal text-white">
+          <CTABanner />
+        </div>
+        <div className="bg-off-white">
+          <QuoteForm />
+        </div>
       </main>
       <Footer />
     </div>

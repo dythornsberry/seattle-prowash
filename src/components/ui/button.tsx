@@ -24,7 +24,8 @@ const buttonVariants = cva(
         "prowash-outline": "bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-blue font-semibold",
         "prowash-secondary": "border-2 border-gray-900 bg-white hover:bg-gray-900 hover:text-white font-semibold shadow-sm" + " text-gray-900",
         "prowash-cta": "bg-brand-blue text-white font-bold hover:bg-brand-blue-light shadow-lg border-0",
-        "prowash-phone": "bg-brand-orange text-white font-bold hover:bg-brand-orange-light btn-glow text-lg border-0",
+        "prowash-phone": "bg-moss-green text-white font-bold hover:bg-moss-green-light btn-glow text-lg border-0",
+        "cta-orange": "bg-bright-orange text-white font-bold hover:bg-bright-orange/90 btn-glow shadow-md border-0 hover:scale-105 transition-all duration-300",
       },
       size: {
         default: "h-10 px-4 py-2",
