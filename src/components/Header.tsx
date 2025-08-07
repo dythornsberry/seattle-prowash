@@ -89,9 +89,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Brand Text */}
           <div className="flex items-center">
-            <h1 className="text-xl md:text-2xl font-bold text-brand-blue">
-              Seattle <span className="text-brand-orange">ProWash</span>
-            </h1>
+            <Link to="/">
+              <h1 className="text-xl md:text-2xl font-bold text-brand-blue hover:text-brand-orange transition-colors duration-250 cursor-pointer">
+                Seattle <span className="text-brand-orange">ProWash</span>
+              </h1>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
