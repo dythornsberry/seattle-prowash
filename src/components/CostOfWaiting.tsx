@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, AlertTriangle } from "lucide-react";
-import beforeRoofImage from "@/assets/before-roof-1.jpg";
-import afterRoofImage from "@/assets/after-roof-1.jpg";
+import beforeRoofImage from "/lovable-uploads/46C178C4-64D0-48FC-9A4F-579FCA989F26_1_102_o.jpeg";
+import afterRoofImage from "/lovable-uploads/B890510C-45DD-4C65-8C29-98D455A42003_1_105_c.jpeg";
 
 const CostOfWaiting = () => {
   return (
