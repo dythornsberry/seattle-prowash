@@ -20,15 +20,14 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section className="section-spacing bg-off-white">
+    <section className="section-spacing bg-primary-teal">
       <div className="container mx-auto px-4">
-        {/* Visually isolated "Plan" container */}
         <div className="max-w-4xl mx-auto text-center">
           <div className="fade-up mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-teal mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Our Simple 3-Step Process
             </h2>
-            <p className="text-xl text-text-charcoal max-w-2xl mx-auto font-medium">
+            <p className="text-xl text-white/90 max-w-2xl mx-auto font-medium">
               From free estimate to sparkling clean results, we make roof cleaning straightforward and stress-free.
             </p>
           </div>

@@ -1,17 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, AlertTriangle, X } from "lucide-react";
-import { useState } from "react";
+import { CheckCircle, AlertTriangle } from "lucide-react";
 
 const CostOfWaiting = () => {
-  const [expandedImage, setExpandedImage] = useState<string | null>(null);
-
-  const handleImageClick = (imageSrc: string) => {
-    setExpandedImage(imageSrc);
-  };
-
-  const handleCloseModal = () => {
-    setExpandedImage(null);
-  };
   return (
     <section className="section-spacing bg-light-gray">
       <div className="container mx-auto px-4">
@@ -33,8 +23,7 @@ const CostOfWaiting = () => {
                   <img
                     src="/lovable-uploads/062a3f5b-99f6-4c63-8ace-78e9a451a6f0.png"
                     alt="Roof covered in moss and algae showing potential problems"
-                    className="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("/lovable-uploads/062a3f5b-99f6-4c63-8ace-78e9a451a6f0.png")}
+                    className="w-full h-48 object-cover rounded-lg"
                   />
                 </div>
                 
@@ -67,8 +56,7 @@ const CostOfWaiting = () => {
                   <img
                     src="/lovable-uploads/ddfefd30-18aa-48ac-98db-283c94d8e8ec.png"
                     alt="Clean, pristine roof after professional moss removal"
-                    className="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => handleImageClick("/lovable-uploads/ddfefd30-18aa-48ac-98db-283c94d8e8ec.png")}
+                    className="w-full h-48 object-cover rounded-lg"
                   />
                 </div>
                 
@@ -91,29 +79,6 @@ const CostOfWaiting = () => {
           </div>
         </div>
       </div>
-
-      {/* Modal for expanded images */}
-      {expandedImage && (
-        <div 
-          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
-          onClick={handleCloseModal}
-        >
-          <div className="relative max-w-4xl max-h-[90vh] w-full">
-            <button
-              onClick={handleCloseModal}
-              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
-            >
-              <X className="w-8 h-8" />
-            </button>
-            <img
-              src={expandedImage}
-              alt="Expanded roof image"
-              className="w-full h-full object-contain rounded-lg"
-              onClick={(e) => e.stopPropagation()}
-            />
-          </div>
-        </div>
-      )}
     </section>
   );
 };
