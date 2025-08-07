@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Star } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -83,12 +84,12 @@ const Footer = () => {
               <ul className="space-y-3">
                 {services.map((service, index) => (
                   <li key={index}>
-                    <a 
-                      href="/services" 
+                    <Link 
+                      to="/services" 
                       className="text-white/80 hover:text-brand-yellow transition-colors duration-250 text-sm"
                     >
                       {service}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

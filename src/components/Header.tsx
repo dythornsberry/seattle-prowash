@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
 import logoImage from "@/assets/seattle-prowash-logo.png";
@@ -97,22 +97,23 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-brand-blue hover:text-brand-orange font-medium transition-colors duration-250 cursor-pointer"
-                onClick={(e) => {
-                  if (item.onClick) {
-                    e.preventDefault();
-                    item.onClick();
-                  } else if (item.href.startsWith('/')) {
-                    e.preventDefault();
-                    window.location.href = item.href;
-                  }
-                }}
-              >
-                {item.name}
-              </a>
+              item.onClick ? (
+                <button
+                  key={item.name}
+                  onClick={item.onClick}
+                  className="text-brand-blue hover:text-brand-orange font-medium transition-colors duration-250 cursor-pointer"
+                >
+                  {item.name}
+                </button>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-brand-blue hover:text-brand-orange font-medium transition-colors duration-250 cursor-pointer"
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
           </nav>
 
@@ -161,23 +162,27 @@ const Header = () => {
           <div className="md:hidden border-t border-border bg-brand-white">
             <nav className="py-4 space-y-2">
               {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="block px-4 py-2 text-brand-blue hover:bg-brand-gray hover:text-brand-orange font-medium transition-colors duration-250 cursor-pointer"
-                  onClick={(e) => {
-                    setIsMenuOpen(false);
-                    if (item.onClick) {
-                      e.preventDefault();
+                item.onClick ? (
+                  <button
+                    key={item.name}
+                    onClick={() => {
+                      setIsMenuOpen(false);
                       item.onClick();
-                    } else if (item.href.startsWith('/')) {
-                      e.preventDefault();
-                      window.location.href = item.href;
-                    }
-                  }}
-                >
-                  {item.name}
-                </a>
+                    }}
+                    className="block w-full text-left px-4 py-2 text-brand-blue hover:bg-brand-gray hover:text-brand-orange font-medium transition-colors duration-250 cursor-pointer"
+                  >
+                    {item.name}
+                  </button>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block px-4 py-2 text-brand-blue hover:bg-brand-gray hover:text-brand-orange font-medium transition-colors duration-250 cursor-pointer"
+                  >
+                    {item.name}
+                  </Link>
+                )
               ))}
               <div className="px-4 pt-4 border-t border-border">
                 <Button 
