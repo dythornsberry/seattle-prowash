@@ -286,8 +286,8 @@ const Services = () => {
               <div className="grid md:grid-cols-3 gap-8 mt-12">
                 <Card className="border-brand-yellow/20">
                   <CardHeader className="text-center">
-                    <CardTitle className="text-brand-navy">Decades of Local Expertise</CardTitle>
-                    <CardDescription>Years of professional cleaning expertise</CardDescription>
+                    <CardTitle className="text-brand-navy">PNW Climate Expertise</CardTitle>
+                    <CardDescription>We specialize in cleaning techniques that are proven to combat the specific challenges of our Pacific Northwest climate, from heavy moss to stubborn grime.</CardDescription>
                   </CardHeader>
                 </Card>
                 <Card className="border-brand-yellow/20">
