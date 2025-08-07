@@ -126,10 +126,10 @@ const Services = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center fade-up">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-                Professional Exterior Cleaning Services
+                Your Home, Brilliantly Clean & Protected.
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-white/90">
-                Detailed process breakdowns for roof cleaning, pressure washing, and house washing services across the Seattle area.
+                See our proven processes for restoring your roof, siding, and walkways to their original beauty.
               </p>
               <div className="flex justify-center">
                 <Button 
@@ -202,6 +202,23 @@ const Services = () => {
                           ))}
                         </ul>
                       </div>
+
+                      {/* FAQ Section for Roof Cleaning */}
+                      {service.id === "roof-cleaning" && (
+                        <div className="mb-8">
+                          <h3 className="text-xl font-bold text-brand-navy mb-6">Frequently Asked Questions</h3>
+                          <div className="space-y-6">
+                            <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-6">
+                              <h4 className="font-bold text-brand-navy mb-3">Q: Is soft washing safe for my roof?</h4>
+                              <p className="text-muted-foreground">A: Yes, our manufacturer-recommended soft wash method cleans thoroughly by killing moss and algae at the root without using damaging high pressure, protecting your shingles and warranty.</p>
+                            </div>
+                            <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-6">
+                              <h4 className="font-bold text-brand-navy mb-3">Q: How does the 12-month moss-free guarantee work?</h4>
+                              <p className="text-muted-foreground">A: If any new moss growth appears on the treated surfaces within 12 months of your service date, we will return and re-treat the affected areas free of charge.</p>
+                            </div>
+                          </div>
+                        </div>
+                      )}
 
                       {/* Cross-promotion for roof cleaning */}
                       {service.crossPromo && (
