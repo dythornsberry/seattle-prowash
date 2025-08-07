@@ -1,17 +1,19 @@
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
 import BenefitStrip from "@/components/BenefitStrip";
 import ServicesPreview from "@/components/ServicesPreview";
-import CostOfWaiting from "@/components/CostOfWaiting";
-import ProcessSection from "@/components/ProcessSection";
-import AboutPreview from "@/components/AboutPreview";
-import TestimonialSlider from "@/components/TestimonialSlider";
-import BeforeAfterSlider from "@/components/BeforeAfterSlider";
-import CTABanner from "@/components/CTABanner";
-import QuoteForm from "@/components/QuoteForm";
 import Footer from "@/components/Footer";
+
+// Lazy load below-fold components
+const CostOfWaiting = lazy(() => import("@/components/CostOfWaiting"));
+const ProcessSection = lazy(() => import("@/components/ProcessSection"));
+const AboutPreview = lazy(() => import("@/components/AboutPreview"));
+const TestimonialSlider = lazy(() => import("@/components/TestimonialSlider"));
+const BeforeAfterSlider = lazy(() => import("@/components/BeforeAfterSlider"));
+const CTABanner = lazy(() => import("@/components/CTABanner"));
+const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 
 const Index = () => {
   // Intersection Observer for fade-up animations
@@ -79,27 +81,41 @@ const Index = () => {
         <div className="bg-off-white">
           <ServicesPreview />
         </div>
-        <div className="bg-dark-teal text-white">
-          <CostOfWaiting />
-        </div>
-        <div className="bg-off-white">
-          <ProcessSection />
-        </div>
-        <div className="bg-dark-teal text-white">
-          <AboutPreview />
-        </div>
-        <div className="bg-off-white">
-          <TestimonialSlider />
-        </div>
-        <div className="bg-navy">
-          <BeforeAfterSlider />
-        </div>
-        <div className="bg-dark-teal text-white">
-          <CTABanner />
-        </div>
-        <div className="bg-off-white">
-          <QuoteForm />
-        </div>
+        <Suspense fallback={<div className="bg-dark-teal text-white h-96 flex items-center justify-center">Loading...</div>}>
+          <div className="bg-dark-teal text-white">
+            <CostOfWaiting />
+          </div>
+        </Suspense>
+        <Suspense fallback={<div className="bg-off-white h-96 flex items-center justify-center">Loading...</div>}>
+          <div className="bg-off-white">
+            <ProcessSection />
+          </div>
+        </Suspense>
+        <Suspense fallback={<div className="bg-dark-teal text-white h-96 flex items-center justify-center">Loading...</div>}>
+          <div className="bg-dark-teal text-white">
+            <AboutPreview />
+          </div>
+        </Suspense>
+        <Suspense fallback={<div className="bg-off-white h-96 flex items-center justify-center">Loading...</div>}>
+          <div className="bg-off-white">
+            <TestimonialSlider />
+          </div>
+        </Suspense>
+        <Suspense fallback={<div className="bg-navy h-96 flex items-center justify-center">Loading...</div>}>
+          <div className="bg-navy">
+            <BeforeAfterSlider />
+          </div>
+        </Suspense>
+        <Suspense fallback={<div className="bg-dark-teal text-white h-96 flex items-center justify-center">Loading...</div>}>
+          <div className="bg-dark-teal text-white">
+            <CTABanner />
+          </div>
+        </Suspense>
+        <Suspense fallback={<div className="bg-off-white h-96 flex items-center justify-center">Loading...</div>}>
+          <div className="bg-off-white">
+            <QuoteForm />
+          </div>
+        </Suspense>
       </main>
       <Footer />
     </div>
