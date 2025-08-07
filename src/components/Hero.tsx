@@ -34,7 +34,7 @@ const Hero = () => {
               </h1>
               
               <p className="text-xl md:text-2xl text-white/90 font-medium leading-relaxed drop-shadow-md">
-                Seattle ProWash protects your home with expert moss removal, pro gear, and a 12-month moss-free guarantee—without damaging your roof or wasting your time.
+                Seattle ProWash protects your home with expert moss removal, pro gear, and a 12-month moss-free guarantee. We won't damage your roof or waste your time.
               </p>
               
               <p className="text-sm text-white/80 font-medium">
