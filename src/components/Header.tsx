@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { navigateToContact as goToContact, navigateToReviews as goToReviews } from "@/lib/navigation";
+import { navigateToContact as goToContact, navigateToReviews as goToReviews, navigateToHome as goHome } from "@/lib/navigation";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
 
@@ -20,7 +20,7 @@ const Header = () => {
 
   
   const navigation: NavigationItem[] = [
-    { name: "Home", href: "/" },
+    { name: "Home", href: "/", onClick: goHome },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Gallery", href: "/gallery" },

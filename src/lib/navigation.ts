@@ -50,3 +50,14 @@ export const navigateToReviews = () => {
     window.location.href = '/#reviews';
   }
 };
+
+/**
+ * Navigate to home (scroll to top if already on home)
+ */
+export const navigateToHome = () => {
+  if (window.location.pathname === '/') {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    window.location.href = '/';
+  }
+};
