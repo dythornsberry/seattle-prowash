@@ -22,38 +22,63 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { name, phone, email, zipCode, service, message }: QuoteRequest = await req.json();
-
-    // Send to Make webhook (handles emails + CRM integration)
+    const payload: QuoteRequest = await req.json();
     const makeWebhookUrl = 'https://hook.us2.make.com/4ki9qoftawnzq1cs10ks2cckepq7tqp1';
 
-    console.log('Sending quote data to Make webhook...');
-    const makeResponse = await fetch(makeWebhookUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        name,
-        phone,
-        email,
-        zipCode,
-        service,
-        message,
-        timestamp: new Date().toISOString(),
-        source: 'Website Quote Form',
-        business_email: 'dythornsberry@gmail.com', // For business notifications
-        customer_email: email // For customer confirmations
-      })
-    });
+    const backgroundTask = async () => {
+      try {
+        console.log('Sending quote data to Make webhook...');
+        const makeResponse = await fetch(makeWebhookUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: payload.name,
+            phone: payload.phone,
+            email: payload.email,
+            zipCode: payload.zipCode,
+            service: payload.service,
+            message: payload.message,
+            timestamp: new Date().toISOString(),
+            source: 'Website Quote Form',
+            business_email: 'dythornsberry@gmail.com', // For business notifications
+            customer_email: payload.email // For customer confirmations
+          })
+        });
 
-    if (!makeResponse.ok) {
-      throw new Error(`Make webhook failed: ${makeResponse.status}`);
+        if (!makeResponse.ok) {
+          console.error('Make webhook failed:', makeResponse.status);
+          return;
+        }
+
+        console.log('Successfully sent to Make webhook');
+      } catch (err) {
+        console.error('Background task error:', err);
+      }
+    };
+
+    // Fire-and-forget to maximize speed-to-lead
+    try {
+      // Prefer the Edge Runtime helper if available
+      // @ts-ignore
+      const runtime = (globalThis as any).EdgeRuntime;
+      if (runtime && typeof runtime.waitUntil === 'function') {
+        // @ts-ignore
+        runtime.waitUntil(backgroundTask());
+      } else {
+        // Fallback – still non-blocking
+        setTimeout(() => {
+          backgroundTask();
+        }, 0);
+      }
+    } catch (_) {
+      setTimeout(() => {
+        backgroundTask();
+      }, 0);
     }
 
-    console.log('Successfully sent to Make webhook');
-
-    return new Response(JSON.stringify({ success: true }), {
+    return new Response(JSON.stringify({ success: true, queued: true }), {
       status: 200,
       headers: {
         "Content-Type": "application/json",
