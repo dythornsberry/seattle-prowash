@@ -50,3 +50,14 @@ export const navigateToReviews = () => {
     window.location.href = '/#reviews';
   }
 };
+
+/**
+ * Navigate to top of the home page
+ */
+export const navigateToHomeTop = () => {
+  if (window.location.pathname === '/') {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    window.location.href = '/';
+  }
+};
