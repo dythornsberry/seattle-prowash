@@ -12,6 +12,7 @@ import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import CTABanner from "@/components/CTABanner";
 import QuoteForm from "@/components/QuoteForm";
 import Footer from "@/components/Footer";
+import TrustindexReviews from "@/components/TrustindexReviews";
 
 const Index = () => {
   // Intersection Observer for fade-up animations
@@ -100,6 +101,7 @@ const Index = () => {
         <div className="bg-off-white">
           <QuoteForm />
         </div>
+        <TrustindexReviews />
       </main>
       <Footer />
     </div>
