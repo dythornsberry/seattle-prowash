@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Star, Shield, Award } from "lucide-react";
-import heroImage from "@/assets/hero-cleaning-service.jpg";
+import heroImageWebP from "@/assets/hero-cleaning-service.webp";
+import heroImageJpg from "@/assets/hero-cleaning-service.jpg";
 
 // Google logo as SVG component
 const GoogleIcon = ({ className }: { className?: string }) => (
@@ -15,15 +16,21 @@ const GoogleIcon = ({ className }: { className?: string }) => (
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center">
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url(${heroImage})`,
-        }}
-      >
-        <div className="absolute inset-0 bg-primary-teal/80"></div>
-      </div>
+    <section id="home" className="relative h-screen flex items-center" style={{ minHeight: '100vh' }}>
+      {/* Optimized hero image with WebP and fallback */}
+      <picture className="absolute inset-0">
+        <source srcSet={heroImageWebP} type="image/webp" />
+        <img 
+          src={heroImageJpg}
+          alt="Professional roof and exterior cleaning service in Seattle"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          fetchPriority="high"
+          width="1920"
+          height="1080"
+          style={{ objectPosition: 'center center' }}
+        />
+      </picture>
+      <div className="absolute inset-0 bg-primary-teal/80"></div>
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}

@@ -24,6 +24,9 @@ const CostOfWaiting = () => {
                     src="/lovable-uploads/8cb3c10f-c05a-4727-93c9-247d82982b7a.png"
                     alt="Damaged, mossy roof showing potential problems"
                     className="w-full h-48 object-cover rounded-lg grayscale opacity-75"
+                    width="400"
+                    height="192"
+                    loading="lazy"
                   />
                 </div>
                 
@@ -57,6 +60,9 @@ const CostOfWaiting = () => {
                     src="/lovable-uploads/0189ddf5-dfd1-4746-b6b4-7b665e561954.png"
                     alt="Clean, pristine roof after professional cleaning"
                     className="w-full h-48 object-cover rounded-lg object-[center_80%]"
+                    width="400"
+                    height="192"
+                    loading="lazy"
                   />
                 </div>
                 

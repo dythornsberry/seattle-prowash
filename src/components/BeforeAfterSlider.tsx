@@ -1,6 +1,15 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Expand, ExternalLink } from "lucide-react";
+import OptimizedImage from "./OptimizedImage";
+// WebP images with JPG fallbacks
+import newRoofBefore1WebP from "@/assets/new-roof-before-1.webp";
+import newRoofAfter1WebP from "@/assets/new-roof-after-1.webp";
+import newMetalRoofBefore2WebP from "@/assets/new-metal-roof-before-2.webp";
+import newMetalRoofAfter2WebP from "@/assets/new-metal-roof-after-2.webp";
+import newPatioBefore3WebP from "@/assets/new-patio-before-3.webp";
+import newPatioAfter3WebP from "@/assets/new-patio-after-3.webp";
+// JPG fallbacks
 import newRoofBefore1 from "@/assets/new-roof-before-1.jpg";
 import newRoofAfter1 from "@/assets/new-roof-after-1.jpg";
 import newMetalRoofBefore2 from "@/assets/new-metal-roof-before-2.jpg";
@@ -20,6 +29,8 @@ const BeforeAfterSlider = () => {
       service: "Moss Removal + Roof Treatment",
       beforeImage: newRoofBefore1,
       afterImage: newRoofAfter1,
+      beforeImageWebP: newRoofBefore1WebP,
+      afterImageWebP: newRoofAfter1WebP,
       beforeAlt: "Moss-covered metal roof before professional cleaning",
       afterAlt: "Clean metal roof after moss removal treatment",
       completionDate: "December 2024"
@@ -31,6 +42,8 @@ const BeforeAfterSlider = () => {
       service: "Metal Roof Cleaning + Skylight Clean",
       beforeImage: newMetalRoofBefore2,
       afterImage: newMetalRoofAfter2,
+      beforeImageWebP: newMetalRoofBefore2WebP,
+      afterImageWebP: newMetalRoofAfter2WebP,
       beforeAlt: "Weathered metal roof with debris before professional cleaning",
       afterAlt: "Restored metal roof and skylights after specialized cleaning treatment",
       completionDate: "December 2024"
@@ -42,6 +55,8 @@ const BeforeAfterSlider = () => {
       service: "Concrete Pressure Washing", 
       beforeImage: newPatioBefore3,
       afterImage: newPatioAfter3,
+      beforeImageWebP: newPatioBefore3WebP,
+      afterImageWebP: newPatioAfter3WebP,
       beforeAlt: "Stained concrete patio with moss before pressure washing",
       afterAlt: "Clean, restored concrete patio after pressure washing",
       completionDate: "December 2024"
@@ -135,10 +150,14 @@ const BeforeAfterSlider = () => {
                             className="relative rounded-xl overflow-hidden shadow-lg cursor-pointer group transition-transform hover:scale-[1.02]"
                             onClick={() => setSelectedImage(project.beforeImage)}
                           >
-                            <img
+                            <OptimizedImage
                               src={project.beforeImage}
+                              srcWebP={project.beforeImageWebP}
                               alt={project.beforeAlt}
                               className="aspect-[4/3] w-full object-cover"
+                              width={600}
+                              height={450}
+                              loading="lazy"
                             />
                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
                               <Expand className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -161,10 +180,14 @@ const BeforeAfterSlider = () => {
                             className="relative rounded-xl overflow-hidden shadow-lg cursor-pointer group transition-transform hover:scale-[1.02]"
                             onClick={() => setSelectedImage(project.afterImage)}
                           >
-                            <img
+                            <OptimizedImage
                               src={project.afterImage}
+                              srcWebP={project.afterImageWebP}
                               alt={project.afterAlt}
                               className="aspect-[4/3] w-full object-cover"
+                              width={600}
+                              height={450}
+                              loading="lazy"
                             />
                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
                               <Expand className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity" />

@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import dylanOwnerPhotoWebP from "@/assets/dylan-owner-patio-pressure-washing.webp";
 import dylanOwnerPhoto from "@/assets/dylan-owner-patio-pressure-washing.jpg";
+import OptimizedImage from "./OptimizedImage";
 
 const AboutPreview = () => {
   return (
@@ -36,10 +38,14 @@ const AboutPreview = () => {
               <Card className="overflow-hidden shadow-2xl border-brand-orange/20">
                 <CardContent className="p-0">
                   <div className="relative">
-                    <img
+                    <OptimizedImage
                       src={dylanOwnerPhoto}
+                      srcWebP={dylanOwnerPhotoWebP}
                       alt="Dylan, owner of Seattle ProWash, pressure washing a patio"
                       className="w-full h-[400px] object-cover"
+                      width={400}
+                      height={400}
+                      loading="lazy"
                     />
                     <div className="absolute bottom-4 left-4 bg-brand-blue/90 text-white px-4 py-2 rounded-lg">
                       <div className="font-semibold">Dylan Thornsberry</div>

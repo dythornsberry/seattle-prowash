@@ -8,6 +8,13 @@
     <meta name="description" content="Professional roof moss removal & gutter cleaning in Kenmore, WA. 180+ five-star Google reviews. Same-day estimates. Fully insured. Serving Bothell, Kirkland, Shoreline. Call 206-752-6690" />
     <meta name="author" content="Seattle ProWash" />
     <meta name="keywords" content="roof moss removal Kenmore WA, gutter cleaning Bothell, house soft wash Kirkland, pressure washing Shoreline, roof cleaning Seattle" />
+    
+    <!-- Performance optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="/src/assets/hero-cleaning-service.webp" as="image" type="image/webp" fetchpriority="high" />
+    <link rel="dns-prefetch" href="https://hook.us2.make.com" />
+    <link rel="dns-prefetch" href="https://cdn.trustindex.io" />
 
     <meta property="og:title" content="Seattle ProWash - Roof & Gutter Cleaning Kenmore WA | 180+ ★★★★★ Reviews" />
     <meta property="og:description" content="Professional roof moss removal & gutter cleaning in Kenmore, WA. 180+ five-star Google reviews. Same-day estimates. Fully insured." />
@@ -64,15 +71,38 @@
     }
     </script>
     
-    <!-- GA4 Placeholder -->
-    <!-- TODO: Replace with actual GA4 tracking ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <!-- GA4 - Deferred for performance -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'GA_MEASUREMENT_ID');
+      window.addEventListener('load', function() {
+        if (window.gtag) return;
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
+        document.head.appendChild(script);
+        
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+        window.gtag = gtag;
+      });
     </script>
-    <script defer async src="https://cdn.trustindex.io/loader.js?1419e0a5167285708366323f27c"></script>
+    
+    <!-- Trustindex - Load on user interaction for performance -->
+    <script>
+      var trustindexLoaded = false;
+      function loadTrustindex() {
+        if (trustindexLoaded) return;
+        trustindexLoaded = true;
+        var script = document.createElement('script');
+        script.defer = true;
+        script.src = 'https://cdn.trustindex.io/loader.js?1419e0a5167285708366323f27c';
+        document.head.appendChild(script);
+      }
+      
+      // Load on scroll or after 3 seconds
+      window.addEventListener('scroll', loadTrustindex, { once: true });
+      setTimeout(loadTrustindex, 3000);
+    </script>
   </body>
 </html>

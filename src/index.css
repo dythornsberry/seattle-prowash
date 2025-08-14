@@ -4,7 +4,8 @@
 
 /* Seattle ProWash Design System - High Contrast Blue & Orange Palette */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+/* Optimized font loading - 2 weights only for performance */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 @layer base {
   :root {
