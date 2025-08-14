@@ -1,11 +1,11 @@
+/* Optimized font loading - 2 weights only for performance */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* Seattle ProWash Design System - High Contrast Blue & Orange Palette */
-
-/* Optimized font loading - 2 weights only for performance */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 @layer base {
   :root {
