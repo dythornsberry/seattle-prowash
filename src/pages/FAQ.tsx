@@ -79,7 +79,7 @@ const FAQ = () => {
     {
       icon: Clock,
       question: "How long does a typical service take?",
-      answer: "Most services take 2-4 hours depending on size and scope. Roof cleaning: 4-6 hours. House washing: 3-4 hours. Gutter cleaning: 1-2 hours. We'll provide a time estimate with your quote.",
+      answer: "Most services take 2-4 hours depending on size and scope. Roof cleaning: 4-6 hours. House washing: 3-4 hours. Gutter cleaning: 1-2 hours.",
       category: "Process"
     },
     {
@@ -91,7 +91,7 @@ const FAQ = () => {
     {
       icon: CheckCircle,
       question: "What areas do you serve?",
-      answer: "We serve Kenmore and the greater Seattle area, including Bothell, Kirkland, Shoreline, Woodinville, Redmond, Bellevue, Mukilteo, Mill Creek, and Lynnwood.",
+      answer: "We serve Seattle, Kenmore and the greater Seattle area, including Bothell, Kirkland, Shoreline, Woodinville, Redmond, Bellevue, Mukilteo, Mill Creek, and Lynnwood.",
       category: "Service Area"
     },
     {
