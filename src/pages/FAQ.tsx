@@ -53,6 +53,12 @@ const FAQ = () => {
       category: "Services"
     },
     {
+      icon: Shield,
+      question: "What types of roofs do you clean?", 
+      answer: "We specialize in cleaning metal, asphalt/composite, and flat roofs (including EPDM, TPO, and PVC). We don't clean cedar shake or tile roofs - we recommend contacting a roofing professional for those specialized roof types.",
+      category: "Services"
+    },
+    {
       icon: Leaf,
       question: "Do you use eco-friendly solutions?",
       answer: "Yes. We use biodegradable, manufacturer-approved cleaning solutions that are safe for plants, pets, and the environment when used properly.",
