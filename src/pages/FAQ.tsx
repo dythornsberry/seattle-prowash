@@ -91,7 +91,7 @@ const FAQ = () => {
     {
       icon: Clock,
       question: "What's the best time of year to get my home cleaned?",
-      answer: "The **best time was last year!** Regular maintenance will improve your home's longevity and appearance.\n\n✅ If you see visible moss on your roof\n\n✅ If you notice clogged gutters\n\n✅ If there's algae on your home's siding\n\nWe recommend cleaning **ASAP before it gets worse**. Don't wait – these issues only compound over time and become more expensive to address.",
+      answer: "The **best time was last year!** Regular maintenance will improve your home's longevity and appearance.\n\n✅ If you see visible moss on your roof\n\n✅ If you notice clogged gutters\n\n✅ If there's algae on your home's siding\n\n✅ If there's moss on your driveway\n\n✅ If there's algae on your deck\n\nWe recommend cleaning **ASAP before it gets worse**. Don't wait – these issues only compound over time and become more expensive to address.",
       category: "Maintenance"
     },
     {
