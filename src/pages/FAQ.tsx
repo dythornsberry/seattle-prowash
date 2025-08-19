@@ -61,7 +61,7 @@ const FAQ = () => {
     {
       icon: Shield,
       question: "Will pressure washing damage my surfaces?",
-      answer: "No. We use the right method for each surface:\n• Roofs & siding → soft washing\n• Concrete & pavers → controlled pressure washing with pro-grade surface cleaners",
+      answer: "No. We use the right method for each surface:\n• Roofs, siding & decks → soft washing\n• Concrete & pavers → controlled pressure washing with pro-grade surface cleaners",
       category: "Safety & Trust"
     },
     {
