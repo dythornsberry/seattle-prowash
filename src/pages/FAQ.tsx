@@ -67,7 +67,7 @@ const FAQ = () => {
     {
       icon: Clock,
       question: "How often should I clean my roof or gutters in the Seattle area?",
-      answer: "We recommend roof cleaning every 2-3 years and gutter cleaning twice per year in the Pacific Northwest due to our wet climate and moss growth conditions.",
+      answer: "We recommend yearly roof cleaning and gutter cleaning twice per year (once in Fall, once in Spring) in the Pacific Northwest due to our wet climate and moss growth conditions.",
       category: "Maintenance"
     },
     {
@@ -79,7 +79,7 @@ const FAQ = () => {
     {
       icon: Clock,
       question: "How long does a typical service take?",
-      answer: "Most services take 2-4 hours depending on size and scope. Roof cleaning: 2-3 hours. House washing: 3-4 hours. Gutter cleaning: 1-2 hours. We'll provide a time estimate with your quote.",
+      answer: "Most services take 2-4 hours depending on size and scope. Roof cleaning: 4-6 hours. House washing: 3-4 hours. Gutter cleaning: 1-2 hours. We'll provide a time estimate with your quote.",
       category: "Process"
     },
     {
@@ -90,12 +90,6 @@ const FAQ = () => {
     },
     {
       icon: CheckCircle,
-      question: "Do you offer package discounts?",
-      answer: "Yes! We offer discounts when you bundle services like roof cleaning + gutter cleaning or house washing + pressure washing. Ask about current package deals when you call for your quote.",
-      category: "Pricing"
-    },
-    {
-      icon: CheckCircle,
       question: "What areas do you serve?",
       answer: "We serve Kenmore and the greater Seattle area, including Bothell, Kirkland, Shoreline, Woodinville, Redmond, Bellevue, Mukilteo, Mill Creek, and Lynnwood.",
       category: "Service Area"
@@ -103,7 +97,7 @@ const FAQ = () => {
     {
       icon: Clock,
       question: "How do estimates and scheduling work?",
-      answer: "We provide free, same-day estimates via phone, text, or email. Most quotes can be given over the phone with basic property details. We schedule services typically within 1-2 weeks of booking.",
+      answer: "We provide free estimates. For roof cleaning, we require in-person assessments. For services like gutter cleaning or driveway cleaning, we can usually provide remote quotes over the phone. We schedule services typically within 1-2 weeks of booking.",
       category: "Process"
     }
   ];
