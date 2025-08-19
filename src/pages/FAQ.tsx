@@ -43,67 +43,67 @@ const FAQ = () => {
     {
       icon: Shield,
       question: "Is soft washing safe for my roof?",
-      answer: "• Safe on shingles - no damaging high pressure\n• Kills moss and algae at the root\n• Protects your warranty\n• Manufacturer-recommended method",
+      answer: "✅ Yes. Our manufacturer-recommended soft wash method kills moss and algae at the root without using damaging high pressure.\n✅ Protects your shingles and keeps your warranty valid.",
       category: "Safety & Trust"
     },
     {
       icon: CheckCircle,
       question: "What happens if moss comes back after treatment?",
-      answer: "We offer a **12-month moss-free guarantee**\n\n• If moss returns within 12 months, we re-treat for free\n• No questions asked\n• Applies to all treated surfaces",
+      answer: "We offer a 12-month moss-free guarantee.\nIf any new moss growth appears within 12 months of service, we'll return and re-treat the affected areas free of charge.",
       category: "Safety & Trust"
     },
     {
       icon: CheckCircle,
       question: "What types of stains do you remove?",
-      answer: "**We specialize in organic growth removal:**\n• Moss, mold, mildew\n• Algae and lichen\n• Green buildup on surfaces\n\n**Not guaranteed:**\n• Oil stains, rust, oxidation\n• Scuff marks, gum, paint\n• Dust (requires wiping)",
+      answer: "✅ Organic growth: moss, mold, mildew, algae, lichen\n❌ Not guaranteed: scuff marks, dust, oxidation, oil stains, gum, paint, rust\n\nSeattle ProWash specializes in organic growth removal only.",
       category: "Safety & Trust"
     },
     {
       icon: Shield,
       question: "Will pressure washing damage my surfaces?",
-      answer: "No. We use the right method for each surface:\n\n**Soft washing for:**\n• Roofs, siding & decks\n• Delicate surfaces\n\n**Controlled pressure for:**\n• Concrete & pavers\n• Professional surface cleaners used",
+      answer: "No. We use the right method for each surface:\n• Roofs, siding & decks → soft washing\n• Concrete & pavers → controlled pressure washing with pro-grade surface cleaners",
       category: "Safety & Trust"
     },
     {
       icon: CheckCircle,
       question: "What types of roofs do you clean?",
-      answer: "**We clean:**\n• Metal roofs\n• Asphalt/composite shingles\n• Flat roofs (EPDM, TPO, PVC)\n\n**We don't clean:**\n• Cedar shake roofs\n• Tile roofs\n\n*For these, contact a roofing professional*",
+      answer: "• Metal\n• Asphalt/composite\n• Flat roofs (EPDM, TPO, PVC)\n\n❌ We don't clean cedar shake or tile roofs. For those, we recommend contacting a roofing professional.",
       category: "Services"
     },
     {
       icon: CheckCircle,
       question: "Do you clean windows?",
-      answer: "We include **exterior window rinsing** with house washing:\n\n• Great for removing dirt, dust, and grime\n• Not a 100% spot-free finish\n• Different from dedicated window cleaning service",
+      answer: "We include exterior window rinsing with house washing (great for removing dirt, dust, and grime).\nNot a 100% spot-free finish like a dedicated window cleaning service.",
       category: "Services"
     },
     {
       icon: Leaf,
       question: "Do you use eco-friendly solutions?",
-      answer: "**Yes - all our solutions are:**\n• Biodegradable\n• Manufacturer-approved\n• Safe for plants and pets when used properly\n• Environmentally responsible",
+      answer: "✅ Yes. We use biodegradable, manufacturer-approved cleaning solutions.\n✅ Safe for plants, pets, and the environment when used properly.",
       category: "Environment"
     },
     {
       icon: Clock,
       question: "How often should I clean my roof or gutters in the Seattle area?",
-      answer: "**Recommended schedule for Pacific Northwest:**\n\n• **Roof cleaning:** Once per year\n• **Gutter cleaning:** Twice per year (Spring + Fall)\n\n*Our wet climate promotes moss growth*",
+      answer: "• Roof cleaning → once per year\n• Gutter cleaning → twice per year (Spring + Fall)",
       category: "Maintenance"
     },
     {
       icon: Clock,
       question: "How long does a typical service take?",
-      answer: "**Most jobs completed same day:**\n\n• **Roof cleaning:** 4–6 hours\n• **House washing:** 3–4 hours\n• **Gutter cleaning:** 1–2 hours\n\n*Times vary by property size and condition*",
+      answer: "• Roof cleaning → 4–6 hours\n• House washing → 3–4 hours\n• Gutter cleaning → 1–2 hours\n\nMost jobs are completed same day.",
       category: "Process"
     },
     {
       icon: Clock,
       question: "How do estimates and scheduling work?",
-      answer: "**Free estimates provided:**\n\n• **Roof cleaning:** Requires on-site assessment\n• **Gutter/driveway cleaning:** Often quoted by phone\n• **Scheduling:** Usually within 1–2 weeks\n• **No pressure sales**",
+      answer: "• Free estimates provided\n• Roof cleaning → requires on-site assessment\n• Gutter cleaning/driveway cleaning → often quoted remotely by phone\n• Services usually scheduled within 1–2 weeks",
       category: "Process"
     },
     {
       icon: CheckCircle,
       question: "What areas do you serve?",
-      answer: "**Primary service areas:**\n\nSeattle, Kenmore, Bothell, Kirkland, Shoreline, Woodinville, Redmond, Bellevue, Mukilteo, Mill Creek, and Lynnwood\n\n*Contact us if your area isn't listed*",
+      answer: "Seattle, Kenmore, and the greater Seattle area, including Bothell, Kirkland, Shoreline, Woodinville, Redmond, Bellevue, Mukilteo, Mill Creek, and Lynnwood.",
       category: "Service Area"
     }
   ];
@@ -166,9 +166,7 @@ const FAQ = () => {
                                     Q: {faq.question}
                                   </CardTitle>
                                   <CardDescription className="text-base text-muted-foreground leading-relaxed whitespace-pre-line">
-                                    <div dangerouslySetInnerHTML={{ 
-                                      __html: `A: ${faq.answer.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')}`
-                                    }} />
+                                    A: {faq.answer}
                                   </CardDescription>
                                 </div>
                               </div>
