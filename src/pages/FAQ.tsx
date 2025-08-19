@@ -43,68 +43,68 @@ const FAQ = () => {
     {
       icon: Shield,
       question: "Is soft washing safe for my roof?",
-      answer: "Yes. Our soft wash method kills moss and algae at the root without high pressure. It protects shingles and keeps your warranty valid.",
-      category: "Safety"
+      answer: "✅ Yes. Our manufacturer-recommended soft wash method kills moss and algae at the root without using damaging high pressure.\n✅ Protects your shingles and keeps your warranty valid.",
+      category: "Safety & Trust"
+    },
+    {
+      icon: CheckCircle,
+      question: "What happens if moss comes back after treatment?",
+      answer: "We offer a 12-month moss-free guarantee.\nIf any new moss growth appears within 12 months of service, we'll return and re-treat the affected areas free of charge.",
+      category: "Safety & Trust"
     },
     {
       icon: CheckCircle,
       question: "What types of stains do you remove?",
-      answer: "Our soft wash techniques safely remove organic growth like moss, mold, mildew, algae, and lichen. However, we cannot guarantee removal of non-organic stains such as scuff marks, dust, oxidation, oil stains, gum, paint, or rust. Seattle ProWash specializes in organic growth removal only.",
-      category: "Services"
+      answer: "✅ Organic growth: moss, mold, mildew, algae, lichen\n❌ Not guaranteed: scuff marks, dust, oxidation, oil stains, gum, paint, rust\n\nSeattle ProWash specializes in organic growth removal only.",
+      category: "Safety & Trust"
     },
     {
       icon: Shield,
-      question: "What types of roofs do you clean?", 
-      answer: "We specialize in cleaning metal, asphalt/composite, and flat roofs (including EPDM, TPO, and PVC). We don't clean cedar shake or tile roofs - we recommend contacting a roofing professional for those specialized roof types.",
+      question: "Will pressure washing damage my surfaces?",
+      answer: "No. We use the right method for each surface:\n• Roofs & siding → soft washing\n• Concrete & pavers → controlled pressure washing with pro-grade surface cleaners",
+      category: "Safety & Trust"
+    },
+    {
+      icon: CheckCircle,
+      question: "What types of roofs do you clean?",
+      answer: "• Metal\n• Asphalt/composite\n• Flat roofs (EPDM, TPO, PVC)\n\n❌ We don't clean cedar shake or tile roofs. For those, we recommend contacting a roofing professional.",
       category: "Services"
     },
     {
       icon: CheckCircle,
       question: "Do you clean windows?",
-      answer: "No. Instead we offer house soft washing that includes windows for free as part of the service, excellent for removing grime and dust off the windows, but not a deep clean that is 100% spot free like a traditional window cleaning service.",
+      answer: "We include exterior window rinsing with house washing (great for removing dirt, dust, and grime).\nNot a 100% spot-free finish like a dedicated window cleaning service.",
       category: "Services"
     },
     {
       icon: Leaf,
       question: "Do you use eco-friendly solutions?",
-      answer: "Yes. We use biodegradable, manufacturer-approved cleaning solutions that are safe for plants, pets, and the environment when used properly.",
+      answer: "✅ Yes. We use biodegradable, manufacturer-approved cleaning solutions.\n✅ Safe for plants, pets, and the environment when used properly.",
       category: "Environment"
     },
     {
       icon: Clock,
       question: "How often should I clean my roof or gutters in the Seattle area?",
-      answer: "We recommend yearly roof cleaning and gutter cleaning twice per year (once in Fall, once in Spring) in the Pacific Northwest due to our wet climate and moss growth conditions.",
+      answer: "• Roof cleaning → once per year\n• Gutter cleaning → twice per year (Spring + Fall)",
       category: "Maintenance"
-    },
-    {
-      icon: Shield,
-      question: "Will pressure washing damage my surfaces?",
-      answer: "No. We use appropriate pressure levels and techniques for each surface. For delicate areas like roofs and siding, we use soft washing. For concrete and pavers, we use controlled pressure washing with professional surface cleaners.",
-      category: "Safety"
     },
     {
       icon: Clock,
       question: "How long does a typical service take?",
-      answer: "Most services take 2-4 hours depending on size and scope. Roof cleaning: 4-6 hours. House washing: 3-4 hours. Gutter cleaning: 1-2 hours.",
+      answer: "• Roof cleaning → 4–6 hours\n• House washing → 3–4 hours\n• Gutter cleaning → 1–2 hours\n\nMost jobs are completed same day.",
       category: "Process"
-    },
-    {
-      icon: CheckCircle,
-      question: "What happens if moss comes back after treatment?",
-      answer: "We offer a 12-month moss-free guarantee. If any new moss growth appears on treated surfaces within 12 months of your service date, we'll return and re-treat the affected areas free of charge.",
-      category: "Guarantee"
-    },
-    {
-      icon: CheckCircle,
-      question: "What areas do you serve?",
-      answer: "We serve Seattle, Kenmore and the greater Seattle area, including Bothell, Kirkland, Shoreline, Woodinville, Redmond, Bellevue, Mukilteo, Mill Creek, and Lynnwood.",
-      category: "Service Area"
     },
     {
       icon: Clock,
       question: "How do estimates and scheduling work?",
-      answer: "We provide free estimates. For roof cleaning, we require in-person assessments. For services like gutter cleaning or driveway cleaning, we can usually provide remote quotes over the phone. We schedule services typically within 1-2 weeks of booking.",
+      answer: "• Free estimates provided\n• Roof cleaning → requires on-site assessment\n• Gutter cleaning/driveway cleaning → often quoted remotely by phone\n• Services usually scheduled within 1–2 weeks",
       category: "Process"
+    },
+    {
+      icon: CheckCircle,
+      question: "What areas do you serve?",
+      answer: "Seattle, Kenmore, and the greater Seattle area, including Bothell, Kirkland, Shoreline, Woodinville, Redmond, Bellevue, Mukilteo, Mill Creek, and Lynnwood.",
+      category: "Service Area"
     }
   ];
 
@@ -165,7 +165,7 @@ const FAQ = () => {
                                   <CardTitle className="text-lg md:text-xl text-brand-navy mb-3">
                                     Q: {faq.question}
                                   </CardTitle>
-                                  <CardDescription className="text-base text-muted-foreground leading-relaxed">
+                                  <CardDescription className="text-base text-muted-foreground leading-relaxed whitespace-pre-line">
                                     A: {faq.answer}
                                   </CardDescription>
                                 </div>
@@ -190,7 +190,7 @@ const FAQ = () => {
                 Ready to Get Started?
               </h2>
               <p className="text-xl mb-8 text-white/90">
-                Don't see your question? Call us for a free consultation and personalized answers.
+                Don't see your question? Call us today for a free consultation and personalized answers.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Button 
