@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
@@ -7,11 +7,13 @@ import ServicesPreview from "@/components/ServicesPreview";
 import CostOfWaiting from "@/components/CostOfWaiting";
 import ProcessSection from "@/components/ProcessSection";
 import AboutPreview from "@/components/AboutPreview";
-import TestimonialSlider from "@/components/TestimonialSlider";
-import BeforeAfterSlider from "@/components/BeforeAfterSlider";
-import CTABanner from "@/components/CTABanner";
-import QuoteForm from "@/components/QuoteForm";
 import Footer from "@/components/Footer";
+
+// Lazy load components below the fold for better performance
+const TestimonialSlider = lazy(() => import("@/components/TestimonialSlider"));
+const BeforeAfterSlider = lazy(() => import("@/components/BeforeAfterSlider"));
+const CTABanner = lazy(() => import("@/components/CTABanner"));
+const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 
 const Index = () => {
   // Intersection Observer for fade-up animations
@@ -89,16 +91,24 @@ const Index = () => {
           <AboutPreview />
         </div>
         <div className="bg-off-white">
-          <TestimonialSlider />
+          <Suspense fallback={<div className="min-h-[300px] animate-pulse bg-gray-100" />}>
+            <TestimonialSlider />
+          </Suspense>
         </div>
         <div className="bg-navy">
-          <BeforeAfterSlider />
+          <Suspense fallback={<div className="min-h-[500px] animate-pulse bg-gray-200" />}>
+            <BeforeAfterSlider />
+          </Suspense>
         </div>
         <div className="bg-dark-teal text-white">
-          <CTABanner />
+          <Suspense fallback={<div className="min-h-[200px] animate-pulse bg-gray-100" />}>
+            <CTABanner />
+          </Suspense>
         </div>
         <div className="bg-off-white">
-          <QuoteForm />
+          <Suspense fallback={<div className="min-h-[400px] animate-pulse bg-gray-100" />}>
+            <QuoteForm />
+          </Suspense>
         </div>
       </main>
       <Footer />
