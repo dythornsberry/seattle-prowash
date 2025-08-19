@@ -213,6 +213,10 @@ const Services = () => {
                               <p className="text-muted-foreground">A: Yes, our manufacturer-recommended soft wash method cleans thoroughly by killing moss and algae at the root without using damaging high pressure, protecting your shingles and warranty.</p>
                             </div>
                             <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-6">
+                              <h4 className="font-bold text-brand-navy mb-3">Q: What types of roofs do you clean?</h4>
+                              <p className="text-muted-foreground">A: We specialize in cleaning metal and asphalt/composite roofs. We do not clean cedar shake or tile roofs, as these materials often require specialized roofing expertise rather than cleaning services, especially if they are over 15 years old and may have underlying damage. For these roof types, we recommend contacting a roofer who specializes in cedar shake or tile roof maintenance.</p>
+                            </div>
+                            <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-6">
                               <h4 className="font-bold text-brand-navy mb-3">Q: How does the 12-month moss-free guarantee work?</h4>
                               <p className="text-muted-foreground">A: If any new moss growth appears on the treated surfaces within 12 months of your service date, we will return and re-treat the affected areas free of charge.</p>
                             </div>
