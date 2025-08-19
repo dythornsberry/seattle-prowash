@@ -90,6 +90,12 @@ const FAQ = () => {
     },
     {
       icon: Clock,
+      question: "What's the best time of year to get my home cleaned?",
+      answer: "The **best time was last year!** Regular maintenance will improve your home's longevity and appearance.\n\n✅ If you see visible moss on your roof\n\n✅ If you notice clogged gutters\n\n✅ If there's algae on your home's siding\n\nWe recommend cleaning **ASAP before it gets worse**. Don't wait – these issues only compound over time and become more expensive to address.",
+      category: "Maintenance"
+    },
+    {
+      icon: Clock,
       question: "How long does a typical service take?",
       answer: "• Roof cleaning → 4–6 hours\n\n• House washing → 3–4 hours\n\n• Gutter cleaning → 1–2 hours\n\nMost jobs are completed same day.",
       category: "Process"
