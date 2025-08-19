@@ -43,61 +43,61 @@ const FAQ = () => {
     {
       icon: Shield,
       question: "Is soft washing safe for my roof?",
-      answer: "✅ Yes. Our manufacturer-recommended soft wash method kills moss and algae at the root without using damaging high pressure.\n✅ Protects your shingles and keeps your warranty valid.",
+      answer: "✅ Yes. Our manufacturer-recommended soft wash method kills moss and algae at the root without using damaging high pressure.\n\n✅ Protects your shingles and keeps your warranty valid.",
       category: "Safety & Trust"
     },
     {
       icon: CheckCircle,
       question: "What happens if moss comes back after treatment?",
-      answer: "We offer a 12-month moss-free guarantee.\nIf any new moss growth appears within 12 months of service, we'll return and re-treat the affected areas free of charge.",
+      answer: "We offer a **12-month moss-free guarantee**.\n\nIf any new moss growth appears within 12 months of service, we'll return and re-treat the affected areas free of charge.",
       category: "Safety & Trust"
     },
     {
       icon: CheckCircle,
       question: "What types of stains do you remove?",
-      answer: "✅ Organic growth: moss, mold, mildew, algae, lichen\n❌ Not guaranteed: scuff marks, dust, oxidation, oil stains, gum, paint, rust\n\nSeattle ProWash specializes in organic growth removal only.",
+      answer: "✅ Organic growth: moss, mold, mildew, algae, lichen\n\n❌ Not guaranteed: scuff marks, dust, oxidation, oil stains, gum, paint, rust\n\nSeattle ProWash specializes in organic growth removal only.",
       category: "Safety & Trust"
     },
     {
       icon: Shield,
       question: "Will pressure washing damage my surfaces?",
-      answer: "No. We use the right method for each surface:\n• Roofs, siding & decks → soft washing\n• Concrete & pavers → controlled pressure washing with pro-grade surface cleaners",
+      answer: "No. We use the right method for each surface:\n\n• Roofs, siding & decks → soft washing\n\n• Concrete & pavers → controlled pressure washing with pro-grade surface cleaners",
       category: "Safety & Trust"
     },
     {
       icon: CheckCircle,
       question: "What types of roofs do you clean?",
-      answer: "• Metal\n• Asphalt/composite\n• Flat roofs (EPDM, TPO, PVC)\n\n❌ We don't clean cedar shake or tile roofs. For those, we recommend contacting a roofing professional.",
+      answer: "• Metal\n\n• Asphalt/composite\n\n• Flat roofs (EPDM, TPO, PVC)\n\n❌ We don't clean cedar shake or tile roofs. For those, we recommend contacting a roofing professional.",
       category: "Services"
     },
     {
       icon: CheckCircle,
       question: "Do you clean windows?",
-      answer: "We include exterior window rinsing with house washing (great for removing dirt, dust, and grime).\nNot a 100% spot-free finish like a dedicated window cleaning service.",
+      answer: "We include exterior window rinsing with house washing (great for removing dirt, dust, and grime).\n\nNot a 100% spot-free finish like a dedicated window cleaning service.",
       category: "Services"
     },
     {
       icon: Leaf,
       question: "Do you use eco-friendly solutions?",
-      answer: "✅ Yes. We use biodegradable, manufacturer-approved cleaning solutions.\n✅ Safe for plants, pets, and the environment when used properly.",
+      answer: "✅ Yes. We use biodegradable, manufacturer-approved cleaning solutions.\n\n✅ Safe for plants, pets, and the environment when used properly.",
       category: "Environment"
     },
     {
       icon: Clock,
       question: "How often should I clean my roof or gutters in the Seattle area?",
-      answer: "• Roof cleaning → once per year\n• Gutter cleaning → twice per year (Spring + Fall)",
+      answer: "• Roof cleaning → once per year\n\n• Gutter cleaning → twice per year (Spring + Fall)",
       category: "Maintenance"
     },
     {
       icon: Clock,
       question: "How long does a typical service take?",
-      answer: "• Roof cleaning → 4–6 hours\n• House washing → 3–4 hours\n• Gutter cleaning → 1–2 hours\n\nMost jobs are completed same day.",
+      answer: "• Roof cleaning → 4–6 hours\n\n• House washing → 3–4 hours\n\n• Gutter cleaning → 1–2 hours\n\nMost jobs are completed same day.",
       category: "Process"
     },
     {
       icon: Clock,
       question: "How do estimates and scheduling work?",
-      answer: "• Free estimates provided\n• Roof cleaning → requires on-site assessment\n• Gutter cleaning/driveway cleaning → often quoted remotely by phone\n• Services usually scheduled within 1–2 weeks",
+      answer: "• Free estimates provided\n\n• Roof cleaning → requires on-site assessment\n\n• Gutter cleaning/driveway cleaning → often quoted remotely by phone\n\n• Services usually scheduled within 1–2 weeks",
       category: "Process"
     },
     {
