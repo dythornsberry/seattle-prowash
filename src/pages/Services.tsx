@@ -220,6 +220,10 @@ const Services = () => {
                               <h4 className="font-bold text-brand-navy mb-3">Q: How does the 12-month moss-free guarantee work?</h4>
                               <p className="text-muted-foreground">A: If any new moss growth appears on the treated surfaces within 12 months of your service date, we will return and re-treat the affected areas free of charge.</p>
                             </div>
+                            <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-6">
+                              <h4 className="font-bold text-brand-navy mb-3">Q: What types of stains do you remove?</h4>
+                              <p className="text-muted-foreground">A: Our soft wash techniques are designed to safely remove organic growth like mold, mildew, lichen, moss, and algae. These methods are ideal for restoring surfaces affected by natural growth. However, we cannot guarantee removal of non-organic stains such as scuff marks, dust, oxidation (common on older, faded paint), oil stains, gum stains, paint stains, or rust. Seattle ProWash specializes in organic growth removal only.</p>
+                            </div>
                           </div>
                         </div>
                       )}
