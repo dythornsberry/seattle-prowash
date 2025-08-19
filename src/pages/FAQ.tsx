@@ -59,6 +59,12 @@ const FAQ = () => {
       category: "Services"
     },
     {
+      icon: CheckCircle,
+      question: "Do you clean windows?",
+      answer: "No. Instead we offer house soft washing that includes windows for free as part of the service, excellent for removing grime and dust off the windows, but not a deep clean that is 100% spot free like a traditional window cleaning service.",
+      category: "Services"
+    },
+    {
       icon: Leaf,
       question: "Do you use eco-friendly solutions?",
       answer: "Yes. We use biodegradable, manufacturer-approved cleaning solutions that are safe for plants, pets, and the environment when used properly.",
