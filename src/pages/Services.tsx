@@ -203,30 +203,68 @@ const Services = () => {
                         </ul>
                       </div>
 
-                      {/* FAQ Section for Roof Cleaning */}
-                      {service.id === "roof-cleaning" && (
-                        <div className="mb-8">
-                          <h3 className="text-xl font-bold text-brand-navy mb-6">Frequently Asked Questions</h3>
-                          <div className="space-y-6">
-                            <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-6">
-                              <h4 className="font-bold text-brand-navy mb-3">Q: Is soft washing safe for my roof?</h4>
-                              <p className="text-muted-foreground">A: Yes, our manufacturer-recommended soft wash method cleans thoroughly by killing moss and algae at the root without using damaging high pressure, protecting your shingles and warranty.</p>
-                            </div>
-                            <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-6">
-                              <h4 className="font-bold text-brand-navy mb-3">Q: What types of roofs do you clean?</h4>
-                              <p className="text-muted-foreground">A: We specialize in cleaning metal, asphalt/composite, and flat roofs (including EPDM, TPO, and PVC). We do not clean cedar shake or tile roofs, as these materials often require specialized roofing expertise rather than cleaning services, especially if they are over 15 years old and may have underlying damage. For these roof types, we recommend contacting a roofer who specializes in cedar shake or tile roof maintenance.</p>
-                            </div>
-                            <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-6">
-                              <h4 className="font-bold text-brand-navy mb-3">Q: How does the 12-month moss-free guarantee work?</h4>
-                              <p className="text-muted-foreground">A: If any new moss growth appears on the treated surfaces within 12 months of your service date, we will return and re-treat the affected areas free of charge.</p>
-                            </div>
-                            <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-6">
-                              <h4 className="font-bold text-brand-navy mb-3">Q: What types of stains do you remove?</h4>
-                              <p className="text-muted-foreground">A: Our soft wash techniques are designed to safely remove organic growth like mold, mildew, lichen, moss, and algae. These methods are ideal for restoring surfaces affected by natural growth. However, we cannot guarantee removal of non-organic stains such as scuff marks, dust, oxidation (common on older, faded paint), oil stains, gum stains, paint stains, or rust. Seattle ProWash specializes in organic growth removal only.</p>
-                            </div>
-                          </div>
+                      {/* Service-specific mini FAQ */}
+                      <div className="mb-8">
+                        <h3 className="text-xl font-bold text-brand-navy mb-4">Common Questions</h3>
+                        <div className="space-y-4">
+                          {service.id === "roof-cleaning" && (
+                            <>
+                              <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-4">
+                                <h4 className="font-bold text-brand-navy mb-2 text-sm">Q: Is soft washing safe for my roof?</h4>
+                                <p className="text-muted-foreground text-sm">A: Yes. Our soft wash method kills moss/algae at the root without high pressure. It protects shingles and keeps your warranty valid.</p>
+                              </div>
+                              <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-4">
+                                <h4 className="font-bold text-brand-navy mb-2 text-sm">Q: What types of roofs do you clean?</h4>
+                                <p className="text-muted-foreground text-sm">A: We specialize in metal, asphalt/composite, and flat roofs (EPDM, TPO, PVC). We don't clean cedar shake or tile roofs over 15 years old.</p>
+                              </div>
+                            </>
+                          )}
+                          {service.id === "pressure-washing" && (
+                            <>
+                              <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-4">
+                                <h4 className="font-bold text-brand-navy mb-2 text-sm">Q: Will pressure washing damage my surfaces?</h4>
+                                <p className="text-muted-foreground text-sm">A: No. We use appropriate pressure levels and professional surface cleaners to protect your concrete while removing all buildup.</p>
+                              </div>
+                              <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-4">
+                                <h4 className="font-bold text-brand-navy mb-2 text-sm">Q: How long does pressure washing take?</h4>
+                                <p className="text-muted-foreground text-sm">A: Most driveways and patios take 2-3 hours depending on size and condition.</p>
+                              </div>
+                            </>
+                          )}
+                          {service.id === "house-washing" && (
+                            <>
+                              <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-4">
+                                <h4 className="font-bold text-brand-navy mb-2 text-sm">Q: Is house washing safe for all siding types?</h4>
+                                <p className="text-muted-foreground text-sm">A: Yes. Our soft wash method is safe for vinyl, wood, hardiboard, and all common siding materials.</p>
+                              </div>
+                              <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-4">
+                                <h4 className="font-bold text-brand-navy mb-2 text-sm">Q: Do you clean windows during house washing?</h4>
+                                <p className="text-muted-foreground text-sm">A: Yes, we clean exterior windows and doors as part of our complete house washing service.</p>
+                              </div>
+                            </>
+                          )}
+                          {service.id === "gutter-cleaning" && (
+                            <>
+                              <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-4">
+                                <h4 className="font-bold text-brand-navy mb-2 text-sm">Q: How often should gutters be cleaned in Seattle?</h4>
+                                <p className="text-muted-foreground text-sm">A: We recommend twice per year due to our wet climate and heavy leaf fall.</p>
+                              </div>
+                              <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-4">
+                                <h4 className="font-bold text-brand-navy mb-2 text-sm">Q: Do you check for gutter damage?</h4>
+                                <p className="text-muted-foreground text-sm">A: Yes, we inspect for damage and potential issues during cleaning and report our findings.</p>
+                              </div>
+                            </>
+                          )}
                         </div>
-                      )}
+                        <div className="mt-4">
+                          <a 
+                            href="/faq" 
+                            className="text-brand-orange hover:text-brand-orange/80 text-sm font-medium"
+                          >
+                            More questions? See our full FAQ here →
+                          </a>
+                        </div>
+                      </div>
 
                       {/* Cross-promotion for roof cleaning */}
                       {service.crossPromo && (

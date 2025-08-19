@@ -175,6 +175,9 @@ const Footer = () => {
               © {currentYear} Seattle ProWash. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
+              <Link to="/faq" className="text-white/60 hover:text-white transition-colors">
+                FAQ
+              </Link>
               <a href="#privacy" className="text-white/60 hover:text-white transition-colors">
                 Privacy Policy
               </a>
