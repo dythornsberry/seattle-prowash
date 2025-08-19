@@ -214,7 +214,7 @@ const Services = () => {
                             </div>
                             <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-6">
                               <h4 className="font-bold text-brand-navy mb-3">Q: What types of roofs do you clean?</h4>
-                              <p className="text-muted-foreground">A: We specialize in cleaning metal and asphalt/composite roofs. We do not clean cedar shake or tile roofs, as these materials often require specialized roofing expertise rather than cleaning services, especially if they are over 15 years old and may have underlying damage. For these roof types, we recommend contacting a roofer who specializes in cedar shake or tile roof maintenance.</p>
+                              <p className="text-muted-foreground">A: We specialize in cleaning metal, asphalt/composite, and flat roofs (including EPDM, TPO, and PVC). We do not clean cedar shake or tile roofs, as these materials often require specialized roofing expertise rather than cleaning services, especially if they are over 15 years old and may have underlying damage. For these roof types, we recommend contacting a roofer who specializes in cedar shake or tile roof maintenance.</p>
                             </div>
                             <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-6">
                               <h4 className="font-bold text-brand-navy mb-3">Q: How does the 12-month moss-free guarantee work?</h4>
