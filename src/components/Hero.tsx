@@ -30,7 +30,7 @@ const Hero = () => {
           style={{ objectPosition: 'center center' }}
         />
       </picture>
-      <div className="absolute inset-0 bg-dark-teal/90"></div>
+      <div className="absolute inset-0 bg-black/60"></div>
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
