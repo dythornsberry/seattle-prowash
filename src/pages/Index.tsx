@@ -1,17 +1,13 @@
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import TrustBar from "@/components/TrustBar";
-import BenefitStrip from "@/components/BenefitStrip";
-import ServicesPreview from "@/components/ServicesPreview";
-import CostOfWaiting from "@/components/CostOfWaiting";
+import ProWashPromise from "@/components/ProWashPromise";
+import StreamlinedServices from "@/components/StreamlinedServices";
 import ProcessSection from "@/components/ProcessSection";
+import RealResults from "@/components/RealResults";
 import AboutPreview from "@/components/AboutPreview";
-import TestimonialSlider from "@/components/TestimonialSlider";
-import BeforeAfterSlider from "@/components/BeforeAfterSlider";
-import CTABanner from "@/components/CTABanner";
-import QuoteForm from "@/components/QuoteForm";
-import Footer from "@/components/Footer";
+import FinalCTA from "@/components/FinalCTA";
+import SimplifiedFooter from "@/components/SimplifiedFooter";
 
 const Index = () => {
   // Intersection Observer for fade-up animations
@@ -69,39 +65,34 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
+        {/* 1. Hero Section (Keep As-Is) */}
         <Hero />
-        <div className="bg-off-white">
-          <TrustBar />
-        </div>
-        <div className="bg-dark-teal text-white">
-          <BenefitStrip />
-        </div>
-        <div className="bg-off-white">
-          <ServicesPreview />
-        </div>
-        <div className="bg-dark-teal text-white">
-          <CostOfWaiting />
-        </div>
+        
+        {/* 2. NEW "The ProWash Promise" Section (Consolidated Trust Bar) */}
+        <ProWashPromise />
+        
+        {/* 3. Streamlined Services Section */}
+        <StreamlinedServices />
+        
+        {/* 4. Our Simple 3-Step Process (Keep As-Is) */}
         <div className="bg-off-white">
           <ProcessSection />
         </div>
+        
+        {/* 5. Powerful Proof Section (Combined & Refined) */}
+        <RealResults />
+        
+        {/* 6. Meet the Owner Section (Keep As-Is) */}
         <div className="bg-dark-teal text-white">
           <AboutPreview />
         </div>
-        <div className="bg-off-white">
-          <TestimonialSlider />
-        </div>
-        <div className="bg-navy">
-          <BeforeAfterSlider />
-        </div>
-        <div className="bg-dark-teal text-white">
-          <CTABanner />
-        </div>
-        <div className="bg-off-white">
-          <QuoteForm />
-        </div>
+        
+        {/* 7. Final Call-to-Action & Contact Form */}
+        <FinalCTA />
       </main>
-      <Footer />
+      
+      {/* 8. Simplified Footer */}
+      <SimplifiedFooter />
     </div>
   );
 };
