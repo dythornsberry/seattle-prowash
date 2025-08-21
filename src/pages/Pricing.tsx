@@ -99,12 +99,12 @@ const Pricing = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-primary-teal to-primary-teal/80 text-white py-20">
+        <section className="bg-gradient-to-br from-dark-teal to-navy text-white py-20">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 drop-shadow-2xl">
               Simple, Upfront Pricing
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto drop-shadow-2xl">
               Fast quotes. Fair prices. No surprises.
             </p>
             <Button 

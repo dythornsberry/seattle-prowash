@@ -30,21 +30,21 @@ const Hero = () => {
           style={{ objectPosition: 'center center' }}
         />
       </picture>
-      <div className="absolute inset-0 bg-primary-teal/80"></div>
+      <div className="absolute inset-0 bg-dark-teal/90"></div>
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="text-center lg:text-left space-y-8 fade-up">
             <div className="space-y-6">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight drop-shadow-lg">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight drop-shadow-2xl">
                 Seattle's Trusted Roof & Gutter Cleaning Pros
               </h1>
               
-              <p className="text-xl md:text-2xl text-white/90 font-medium leading-relaxed drop-shadow-md">
+              <p className="text-xl md:text-2xl text-white font-medium leading-relaxed drop-shadow-2xl">
                 Fast, safe, and guaranteed cleaning with dramatic results you can see.
               </p>
               
-              <p className="text-sm text-white/80 font-medium">
+              <p className="text-sm text-white font-medium drop-shadow-xl">
                 ⭐ <a 
                   href="https://www.google.com/search?q=Seattle+ProWash+reviews" 
                   target="_blank" 
@@ -56,7 +56,7 @@ const Hero = () => {
                 </a> · Fully Licensed & Insured
               </p>
               
-              <p className="text-sm text-white/70 font-medium">
+              <p className="text-sm text-white font-medium drop-shadow-xl">
                 🗺️ Serving Kenmore, Bothell, Kirkland & nearby
               </p>
             </div>
@@ -86,7 +86,7 @@ const Hero = () => {
                 </Button>
               </div>
               <div className="text-center lg:text-left">
-                <p className="text-white/90 font-medium">📞 <a href="tel:2067526690" className="hover:text-moss-green transition-colors">Call or Text: 206.752.6690</a></p>
+                <p className="text-white font-medium drop-shadow-xl">📞 <a href="tel:2067526690" className="hover:text-bright-green transition-colors">Call or Text: 206.752.6690</a></p>
               </div>
             </div>
 
