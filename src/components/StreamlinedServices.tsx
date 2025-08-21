@@ -9,25 +9,25 @@ const StreamlinedServices = () => {
       icon: Droplet,
       title: "Roof Cleaning",
       price: "From $500",
-      description: "Our soft wash roof cleaning safely kills moss and algae using a gentle, low-pressure method that protects your shingles. We remove all loose debris, leaving your roof spotless and backed by our 12-month moss-free guarantee."
+      description: "Soft wash roof cleaning that safely kills moss and algae while protecting your shingles. Includes our 12-month moss-free guarantee."
     },
     {
       icon: Droplet,
       title: "Gutter Cleaning",
       price: "From $250",
-      description: "We clear all debris from your gutters and flush your downspouts to ensure proper water flow and protect your home's foundation. Every job includes completion photos so you can see the finished work."
+      description: "Debris cleared and downspouts flushed to protect your home's foundation. Every job includes completion photos."
     },
     {
       icon: Home,
       title: "House Washing",
       price: "From $500",
-      description: "A complete exterior soft wash that gently cleans siding, trim, eaves, and gutters to remove algae, mildew, and organic stains. Our safe, low-pressure technique works on all materials and leaves your home looking fresh."
+      description: "Full exterior soft wash (excluding the roof). Cleans siding, trim, eaves, doors, windows, and outside of gutters for a fresh look."
     },
     {
       icon: Car,
       title: "Pressure Washing",
       price: "From $250",
-      description: "Revitalize your home's curb appeal with deep cleaning for driveways, patios, walkways, and other hardscapes. We remove years of built-up grime, moss, and algae to restore surfaces to like-new condition."
+      description: "Driveways, patios, walkways, and hardscapes deep-cleaned to restore curb appeal."
     }
   ];
 

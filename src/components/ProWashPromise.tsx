@@ -9,18 +9,18 @@ const ProWashPromise = () => {
     },
     {
       icon: CheckCircle,
-      title: "Fully Licensed & Insured",
-      description: "We carry full insurance coverage to protect your property and our team."
+      title: "Licensed & Insured",
+      description: "Complete protection for your property and our team."
     },
     {
       icon: Star,
       title: "180+ 5-Star Reviews",
-      description: "Trusted by homeowners across Kenmore, Kirkland, Bothell, and beyond."
+      description: "Trusted by homeowners across Seattle and nearby."
     },
     {
       icon: Clock,
       title: "Fast, Free Estimates",
-      description: "Get a no-pressure quote for your property, often on the same day."
+      description: "Most handled online the same day; in-person visits when needed."
     }
   ];
 

@@ -64,7 +64,7 @@ const FinalCTA = () => {
               Ready for a Spotless Home?
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-6">
-              Get your fast, free, no-pressure estimate today. Fill out the form below or call/text us directly at 206-752-6690.
+              Get your fast, free estimate today. Most quotes are handled online in under a day. In-person visits available if needed.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">

@@ -3,6 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { Star, Shield, Award } from "lucide-react";
 import heroImageWebP from "@/assets/hero-cleaning-service.webp";
 import heroImageJpg from "@/assets/hero-cleaning-service.jpg";
+import newRoofAfter1WebP from "@/assets/new-roof-after-1.webp";
+import newRoofAfter1 from "@/assets/new-roof-after-1.jpg";
 
 // Google logo as SVG component
 const GoogleIcon = ({ className }: { className?: string }) => (
@@ -49,7 +51,7 @@ const Hero = () => {
                   href="https://www.google.com/search?q=Seattle+ProWash+reviews" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="hover:text-moss-green transition-colors cursor-pointer inline-flex items-center gap-1"
+                  className="hover:text-bright-green transition-colors cursor-pointer inline-flex items-center gap-1"
                 >
                   <GoogleIcon className="inline" />
                   180+ 5‑Star Reviews
@@ -89,9 +91,49 @@ const Hero = () => {
                 <p className="text-white font-medium drop-shadow-xl">📞 <a href="tel:2067526690" className="hover:text-bright-green transition-colors">Call or Text: 206.752.6690</a></p>
               </div>
             </div>
-
           </div>
 
+          {/* Before/After Slider */}
+          <div className="lg:ml-8 fade-up">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 shadow-2xl">
+              <h3 className="text-white font-bold text-xl mb-4 text-center">Real Before & After Results</h3>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <p className="text-white/80 text-sm font-medium text-center">Before</p>
+                  <div className="rounded-lg overflow-hidden shadow-lg">
+                    <picture>
+                      <source srcSet="/lovable-uploads/6f421435-bb27-40ea-ac27-6ba923f0d820.png" type="image/webp" />
+                      <img 
+                        src="/lovable-uploads/6f421435-bb27-40ea-ac27-6ba923f0d820.png"
+                        alt="Moss-covered roof before cleaning"
+                        className="w-full h-32 object-cover"
+                        loading="eager"
+                        width="300"
+                        height="200"
+                      />
+                    </picture>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <p className="text-white/80 text-sm font-medium text-center">After</p>
+                  <div className="rounded-lg overflow-hidden shadow-lg">
+                    <picture>
+                      <source srcSet={newRoofAfter1WebP} type="image/webp" />
+                      <img 
+                        src={newRoofAfter1}
+                        alt="Clean roof after professional cleaning"
+                        className="w-full h-32 object-cover"
+                        loading="eager"
+                        width="300"
+                        height="200"
+                      />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <p className="text-white/70 text-xs text-center mt-3">Seattle Roof Cleaning • 12-Month Guarantee</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
