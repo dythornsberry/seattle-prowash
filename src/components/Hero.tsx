@@ -36,12 +36,12 @@ const Hero = () => {
           {/* Content */}
           <div className="text-center lg:text-left space-y-8 fade-up">
             <div className="space-y-6">
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight drop-shadow-lg">
-                Your roof is under attack. We'll stop the moss before it wins.
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight drop-shadow-lg">
+                Seattle's Trusted Roof & Gutter Cleaning Pros
               </h1>
               
               <p className="text-xl md:text-2xl text-white/90 font-medium leading-relaxed drop-shadow-md">
-                Seattle ProWash protects your home with expert moss removal, pro gear, and a 12-month moss-free guarantee. We won't damage your roof or waste your time.
+                Fast, safe, and guaranteed cleaning with dramatic results you can see.
               </p>
               
               <p className="text-sm text-white/80 font-medium">
@@ -63,7 +63,7 @@ const Hero = () => {
 
             {/* CTA */}
             <div className="space-y-3">
-              <div className="flex justify-center lg:justify-start">
+              <div className="flex justify-center lg:justify-start gap-4 flex-wrap">
                 <Button 
                   variant="cta-orange" 
                   size="xl"
@@ -72,7 +72,17 @@ const Hero = () => {
                     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
-                  Get My Free Quote
+                  Get My Fast Quote
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="xl"
+                  className="border-white text-white hover:bg-white hover:text-dark-teal font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+                  onClick={() => {
+                    window.location.href = '/pricing';
+                  }}
+                >
+                  See Our Pricing
                 </Button>
               </div>
               <div className="text-center lg:text-left">
