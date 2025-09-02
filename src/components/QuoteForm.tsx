@@ -3,32 +3,22 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, Mail, MapPin, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
 
 const QuoteForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [webhookUrl, setWebhookUrl] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     address: "",
     email: "",
-    service: "",
     details: ""
   });
 
-  const services = [
-    "Roof Treatment",
-    "Gutter Cleaning", 
-    "House Washing",
-    "Pressure Washing",
-    "Complete Property Package",
-    "Other (describe in message)"
-  ];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,25 +36,38 @@ const QuoteForm = () => {
         return;
       }
 
-      // Call the edge function to send notifications
-      const { error } = await supabase.functions.invoke('send-quote-notification', {
-        body: {
+      if (!webhookUrl) {
+        toast({
+          title: "Please configure Zapier webhook",
+          description: "Zapier webhook URL is required to send leads to Jobber.",
+          variant: "destructive",
+        });
+        setIsSubmitting(false);
+        return;
+      }
+
+      // Send to Zapier webhook for Jobber integration
+      const response = await fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        mode: "no-cors",
+        body: JSON.stringify({
           name: formData.name,
           phone: formData.phone,
           email: formData.email,
-          zipCode: formData.address, // Using address as zipCode for now
-          service: formData.service,
-          message: formData.details
-        }
+          address: formData.address,
+          details: formData.details,
+          timestamp: new Date().toISOString(),
+          source: "Website Quote Form",
+          business_name: "Seattle ProWash"
+        }),
       });
 
-      if (error) {
-        throw error;
-      }
-
       toast({
-        title: "Quote Request Received!",
-        description: "We'll respond back in 1 hour.",
+        title: "Quote Request Sent!",
+        description: "Your lead has been sent to Jobber via Zapier. We'll respond back in 1 hour.",
       });
       
       // Reset form
@@ -73,12 +76,11 @@ const QuoteForm = () => {
         phone: "",
         address: "",
         email: "",
-        service: "",
         details: ""
       });
       
     } catch (error) {
-      console.error('Unexpected error:', error);
+      console.error('Error sending to Zapier:', error);
       toast({
         title: "Something went wrong",
         description: "Please try again or call us at 206-752-6690.",
@@ -178,6 +180,21 @@ const QuoteForm = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
+                  {/* Zapier Webhook Configuration */}
+                  <div className="mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                    <Label htmlFor="webhook" className="text-brand-navy font-semibold">Zapier Webhook URL *</Label>
+                    <Input
+                      id="webhook"
+                      value={webhookUrl}
+                      onChange={(e) => setWebhookUrl(e.target.value)}
+                      placeholder="https://hooks.zapier.com/hooks/catch/..."
+                      className="mt-2 border-brand-yellow/30 focus:border-brand-yellow"
+                    />
+                    <p className="text-xs text-muted-foreground mt-1">
+                      Enter your Zapier webhook URL to send leads to Jobber
+                    </p>
+                  </div>
+
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="space-y-6">
                       {/* Name - required */}
