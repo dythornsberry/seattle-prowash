@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const CompactReviews = () => {
   const [currentReview, setCurrentReview] = useState(0);

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import UltraSimpleHero from "@/components/UltraSimpleHero";
 import PromiseBlock from "@/components/PromiseBlock";

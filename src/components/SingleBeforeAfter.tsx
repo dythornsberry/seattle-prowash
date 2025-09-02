@@ -1,6 +1,6 @@
 import beforeRoof from "@/assets/new-roof-before-1.webp";
 import afterRoof from "@/assets/new-roof-after-1.webp";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const SingleBeforeAfter = () => {
   const [showAfter, setShowAfter] = useState(false);
