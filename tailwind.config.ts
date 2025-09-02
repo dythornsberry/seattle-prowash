@@ -19,78 +19,48 @@ export default {
 		},
 		extend: {
 			colors: {
-				border: 'hsl(var(--border))',
-				input: 'hsl(var(--input))',
-				ring: 'hsl(var(--ring))',
-				background: 'hsl(var(--background))',
-				foreground: 'hsl(var(--foreground))',
-				
-				/* Pacific Northwest Professional Palette */
-				'primary-teal': 'hsl(var(--primary-teal))',
-				'off-white': 'hsl(var(--secondary-off-white))',
-				'bright-green': 'hsl(var(--accent-bright-green))',
-				'text-charcoal': 'hsl(var(--text-charcoal))',
-				
-				/* Seattle ProWash Brand Colors (mapped to new palette) */
-				'brand-blue': 'hsl(var(--brand-blue))',
-				'brand-blue-light': 'hsl(var(--brand-blue-light))', 
-				'brand-navy': 'hsl(var(--brand-navy))',
-				'brand-orange': 'hsl(var(--brand-orange))',
-				'brand-orange-light': 'hsl(var(--brand-orange-light))',
-				'brand-yellow': 'hsl(var(--brand-yellow))',
-				'brand-white': 'hsl(var(--brand-white))',
-				'brand-gray': 'hsl(var(--brand-gray))',
-				'brand-gray-text': 'hsl(var(--brand-gray-text))',
-				
-				/* Updated StoryBrand Colors */
-				'moss-green': 'hsl(var(--moss-green))',
-				'moss-green-light': 'hsl(var(--moss-green-light))',
-				'slate-charcoal': 'hsl(var(--slate-charcoal))',
-				'light-gray': 'hsl(var(--light-gray))',
-				
-				/* New Colors for Design Update */
-				'bright-orange': 'hsl(var(--bright-orange))',
-				'navy': 'hsl(var(--navy))',
-				'dark-teal': 'hsl(var(--dark-teal))',
-				
-				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
-				},
-				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
-				},
-				destructive: {
-					DEFAULT: 'hsl(var(--destructive))',
-					foreground: 'hsl(var(--destructive-foreground))'
-				},
-				muted: {
-					DEFAULT: 'hsl(var(--muted))',
-					foreground: 'hsl(var(--muted-foreground))'
-				},
-				accent: {
-					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
-				},
-				popover: {
-					DEFAULT: 'hsl(var(--popover))',
-					foreground: 'hsl(var(--popover-foreground))'
-				},
-				card: {
-					DEFAULT: 'hsl(var(--card))',
-					foreground: 'hsl(var(--card-foreground))'
-				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+        // Seattle ProWash Brand Colors
+        'brand-blue': 'hsl(var(--brand-blue))',
+        'brand-blue-light': 'hsl(var(--brand-blue-light))',
+        'brand-blue-dark': 'hsl(var(--brand-blue-dark))',
+        'cta-orange': 'hsl(var(--cta-orange))',
+        'cta-orange-light': 'hsl(var(--cta-orange-light))',
+        'cta-orange-dark': 'hsl(var(--cta-orange-dark))',
+        
+        // Semantic colors
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
 			},
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],

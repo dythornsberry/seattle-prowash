@@ -8,76 +8,58 @@
 /* Seattle ProWash Design System - High Contrast Blue & Orange Palette */
 
 @layer base {
+  /* Seattle ProWash Brand Colors */
   :root {
-    /* Seattle ProWash High Contrast Colors (HSL format) */
-    --background: 210 20% 98%; /* Off-white background */
-    --foreground: 210 11% 25%; /* Charcoal for excellent readability */
+    --brand-blue: 212 100% 36%; /* #0057B8 */
+    --brand-blue-light: 212 100% 45%;
+    --brand-blue-dark: 212 100% 25%;
+    --cta-orange: 28 100% 50%; /* #FF8A00 */
+    --cta-orange-light: 28 100% 60%;
+    --cta-orange-dark: 28 100% 40%;
     
-    /* Pacific Northwest Professional Palette */
-    --primary-teal: 192 100% 22%; /* Deep Teal #005D6E - headings, dark backgrounds, footer */
-    --secondary-off-white: 210 20% 98%; /* Off-White #F8F9FA - main page background */
-    --accent-bright-green: 120 61% 50%; /* Bright Green #32CD32 - CTA buttons, icons, highlights */
-    --text-charcoal: 210 11% 25%; /* Charcoal #343A40 - body text */
-    
-    /* Legacy Brand Colors (keeping for compatibility) */
-    --brand-blue: 192 100% 22%; /* Now maps to Deep Teal */
-    --brand-blue-light: 192 85% 35%; /* Lighter teal variation */
-    --brand-navy: 192 100% 18%; /* Even darker teal for backgrounds */
-    --brand-orange: 120 61% 50%; /* Now maps to Bright Green */
-    --brand-orange-light: 120 61% 60%; /* Lighter bright green for hover states */
-    --brand-yellow: 45 100% 50%; /* Pure golden yellow */
-    --brand-white: 0 0% 100%; /* Pure white */
-    --brand-gray: 210 20% 98%; /* Off-white background */
-    --brand-gray-text: 210 11% 25%; /* Charcoal for text */
-    
-    /* Updated StoryBrand Colors */
-    --moss-green: 120 61% 50%; /* Now Bright Green for consistency */
-    --moss-green-light: 120 61% 60%; /* Lighter bright green for hover */
-    --slate-charcoal: 192 100% 22%; /* Deep Teal for consistency */
-    --off-white: 210 20% 98%; /* Off-white background */
-    --light-gray: 210 14% 96%; /* Light gray background */
-    
-    /* New Colors for Design Update */
-    --bright-orange: 25 95% 53%; /* Bright Orange #f97316 */
-    --navy: 220 84% 5%; /* Navy #0f172a */
-    --dark-teal: 182 100% 14%; /* Dark Teal #004348 */
-    
+    /* Semantic colors */
+    --background: 0 0% 100%;
+    --foreground: 212 100% 15%;
     --card: 0 0% 100%;
-    --card-foreground: 210 100% 10%;
-
+    --card-foreground: 212 100% 15%;
     --popover: 0 0% 100%;
-    --popover-foreground: 210 100% 10%;
-
-    --primary: 192 100% 22%; /* Deep Teal */
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 210 20% 98%; /* Off-white background */
-    --secondary-foreground: 210 11% 25%; /* Charcoal text */
-
-    --muted: 210 14% 96%; /* Light gray */
-    --muted-foreground: 210 11% 25%; /* Charcoal for better readability */
-
-    --accent: 120 61% 50%; /* Bright Green */
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 84% 45%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 210 20% 85%;
-    --input: 210 20% 90%;
-    --ring: 25 95% 50%;
-
+    --popover-foreground: 212 100% 15%;
+    --primary: 212 100% 36%; /* brand-blue */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 212 100% 15%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 28 100% 50%; /* cta-orange */
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 212 100% 36%; /* brand-blue */
     --radius: 0.5rem;
+  }
 
-    /* Sidebar colors */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 210 100% 10%;
-    --sidebar-primary: 210 100% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 210 15% 95%;
-    --sidebar-accent-foreground: 210 100% 10%;
-    --sidebar-border: 210 20% 85%;
-    --sidebar-ring: 25 95% 50%;
+  .dark {
+    --background: 212 100% 5%;
+    --foreground: 0 0% 98%;
+    --card: 212 50% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 212 50% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 28 100% 50%; /* cta-orange */
+    --primary-foreground: 212 100% 15%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 212 100% 36%; /* brand-blue */
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 28 100% 50%; /* cta-orange */
   }
 
   .dark {
