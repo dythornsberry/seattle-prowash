@@ -25,13 +25,12 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				
-				/* Pacific Northwest Professional Palette */
-				'primary-teal': 'hsl(var(--primary-teal))',
-				'off-white': 'hsl(var(--secondary-off-white))',
-				'bright-green': 'hsl(var(--accent-bright-green))',
+				/* Seattle ProWash Ultra Simple Brand Colors */
+				'seattle-blue': 'hsl(var(--seattle-blue))',
+				'seattle-orange': 'hsl(var(--seattle-orange))',
 				'text-charcoal': 'hsl(var(--text-charcoal))',
 				
-				/* Seattle ProWash Brand Colors (mapped to new palette) */
+				/* Legacy Brand Colors (mapped to new system) */
 				'brand-blue': 'hsl(var(--brand-blue))',
 				'brand-blue-light': 'hsl(var(--brand-blue-light))', 
 				'brand-navy': 'hsl(var(--brand-navy))',
@@ -46,6 +45,7 @@ export default {
 				'moss-green': 'hsl(var(--moss-green))',
 				'moss-green-light': 'hsl(var(--moss-green-light))',
 				'slate-charcoal': 'hsl(var(--slate-charcoal))',
+				'off-white': 'hsl(var(--off-white))',
 				'light-gray': 'hsl(var(--light-gray))',
 				
 				/* New Colors for Design Update */

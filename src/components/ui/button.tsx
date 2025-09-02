@@ -20,12 +20,15 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         
         /* Seattle ProWash High Contrast Brand Variants */
-        "prowash-primary": "bg-moss-green text-white font-bold hover:bg-moss-green-light btn-glow shadow-md border-0 hover:scale-105 transition-all duration-300 w-full sm:w-auto",
-        "prowash-outline": "bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-blue font-semibold",
-        "prowash-secondary": "border-2 border-gray-900 bg-white hover:bg-gray-900 hover:text-white font-semibold shadow-sm" + " text-gray-900",
-        "prowash-cta": "bg-brand-blue text-white font-bold hover:bg-brand-blue-light shadow-lg border-0",
-        "prowash-phone": "bg-moss-green text-white font-bold hover:bg-moss-green-light btn-glow text-lg border-0",
-        "cta-orange": "bg-bright-orange text-white font-bold hover:bg-bright-orange/90 btn-glow shadow-md border-0 hover:scale-105 transition-all duration-300",
+        "prowash-primary": "bg-seattle-blue text-white font-bold hover:bg-seattle-blue/90 shadow-md hover:shadow-lg transition-all duration-300",
+        "prowash-outline": "border-2 border-seattle-blue text-seattle-blue bg-white hover:bg-seattle-blue hover:text-white font-bold transition-all duration-300",
+        "prowash-secondary": "border-2 border-seattle-blue text-seattle-blue bg-white hover:bg-seattle-blue hover:text-white font-bold transition-all duration-300",
+        "prowash-cta": "bg-seattle-orange text-white font-bold hover:bg-seattle-orange/90 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300",
+        "prowash-phone": "bg-seattle-blue text-white hover:bg-seattle-blue/90 font-medium shadow-sm hover:shadow-md transition-all duration-300",
+        "cta-orange": "bg-seattle-orange text-white font-bold hover:bg-seattle-orange/90 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300",
+        "seattle-primary": "bg-seattle-blue text-white font-bold hover:bg-seattle-blue/90 shadow-md hover:shadow-lg transition-all duration-300",
+        "seattle-secondary": "border-2 border-seattle-blue text-seattle-blue bg-white hover:bg-seattle-blue hover:text-white font-bold transition-all duration-300",
+        "seattle-phone": "bg-seattle-blue text-white hover:bg-seattle-blue/90 font-medium shadow-sm hover:shadow-md transition-all duration-300",
       },
       size: {
         default: "h-10 px-4 py-2",
