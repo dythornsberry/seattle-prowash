@@ -10,7 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 const QuoteForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [webhookUrl, setWebhookUrl] = useState("");
+  const webhookUrl = "https://hooks.zapier.com/hooks/catch/24075201/uheurzq/";
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -36,15 +36,6 @@ const QuoteForm = () => {
         return;
       }
 
-      if (!webhookUrl) {
-        toast({
-          title: "Please configure Zapier webhook",
-          description: "Zapier webhook URL is required to send leads to Jobber.",
-          variant: "destructive",
-        });
-        setIsSubmitting(false);
-        return;
-      }
 
       // Send to Zapier webhook for Jobber integration
       const response = await fetch(webhookUrl, {
@@ -180,20 +171,6 @@ const QuoteForm = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  {/* Zapier Webhook Configuration */}
-                  <div className="mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-                    <Label htmlFor="webhook" className="text-brand-navy font-semibold">Zapier Webhook URL *</Label>
-                    <Input
-                      id="webhook"
-                      value={webhookUrl}
-                      onChange={(e) => setWebhookUrl(e.target.value)}
-                      placeholder="https://hooks.zapier.com/hooks/catch/..."
-                      className="mt-2 border-brand-yellow/30 focus:border-brand-yellow"
-                    />
-                    <p className="text-xs text-muted-foreground mt-1">
-                      Enter your Zapier webhook URL to send leads to Jobber
-                    </p>
-                  </div>
 
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="space-y-6">
