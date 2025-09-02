@@ -1,14 +1,17 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Header from "@/components/Header";
-import UltraSimpleHero from "@/components/UltraSimpleHero";
-import PromiseBlock from "@/components/PromiseBlock";
-import TwoServiceCards from "@/components/TwoServiceCards";
-import SingleBeforeAfter from "@/components/SingleBeforeAfter";
-import SimpleHowItWorks from "@/components/SimpleHowItWorks";
-import CompactReviews from "@/components/CompactReviews";
-import FinalCTA from "@/components/FinalCTA";
-import SimplifiedFooter from "@/components/SimplifiedFooter";
-import MobileBottomBar from "@/components/MobileBottomBar";
+import Hero from "@/components/Hero";
+import TrustBar from "@/components/TrustBar";
+import BenefitStrip from "@/components/BenefitStrip";
+import ServicesPreview from "@/components/ServicesPreview";
+import CostOfWaiting from "@/components/CostOfWaiting";
+import ProcessSection from "@/components/ProcessSection";
+import AboutPreview from "@/components/AboutPreview";
+import TestimonialSlider from "@/components/TestimonialSlider";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
+import CTABanner from "@/components/CTABanner";
+import QuoteForm from "@/components/QuoteForm";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   // Intersection Observer for fade-up animations
@@ -63,19 +66,42 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <UltraSimpleHero />
-        <PromiseBlock />
-        <TwoServiceCards />
-        <SingleBeforeAfter />
-        <SimpleHowItWorks />
-        <CompactReviews />
-        <FinalCTA />
+        <Hero />
+        <div className="bg-off-white">
+          <TrustBar />
+        </div>
+        <div className="bg-dark-teal text-white">
+          <BenefitStrip />
+        </div>
+        <div className="bg-off-white">
+          <ServicesPreview />
+        </div>
+        <div className="bg-dark-teal text-white">
+          <CostOfWaiting />
+        </div>
+        <div className="bg-off-white">
+          <ProcessSection />
+        </div>
+        <div className="bg-dark-teal text-white">
+          <AboutPreview />
+        </div>
+        <div className="bg-off-white">
+          <TestimonialSlider />
+        </div>
+        <div className="bg-navy">
+          <BeforeAfterSlider />
+        </div>
+        <div className="bg-dark-teal text-white">
+          <CTABanner />
+        </div>
+        <div className="bg-off-white">
+          <QuoteForm />
+        </div>
       </main>
-      <SimplifiedFooter />
-      <MobileBottomBar />
+      <Footer />
     </div>
   );
 };

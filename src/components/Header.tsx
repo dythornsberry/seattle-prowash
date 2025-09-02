@@ -21,16 +21,17 @@ const Header = () => {
   
   const navigation: NavigationItem[] = [
     { name: "Home", href: "/", onClick: goHome },
-    { name: "Roof Cleaning", href: "/services" },
-    { name: "Gutter Cleaning", href: "/services" },
-    { name: "Pricing", href: "/services" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "FAQ", href: "/faq" },
     { 
       name: "Reviews", 
       href: "/#reviews",
       onClick: goToReviews
     },
     { 
-      name: "Get Quote", 
+      name: "Contact", 
       href: "/#contact",
       onClick: goToContact
     }
@@ -75,14 +76,14 @@ const Header = () => {
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center space-x-4">
             <Button 
-              variant="seattle-secondary" 
+              variant="prowash-secondary" 
               size="sm"
               onClick={goToContact}
             >
               Get Free Quote
             </Button>
             <Button 
-              variant="seattle-phone" 
+              variant="prowash-phone" 
               size="sm"
               onClick={() => window.location.href = `tel:${phoneNumber}`}
             >
@@ -94,7 +95,7 @@ const Header = () => {
           {/* Mobile Controls */}
           <div className="md:hidden flex items-center space-x-2">
             <Button 
-              variant="seattle-phone" 
+              variant="prowash-phone" 
               size="sm"
               onClick={() => window.location.href = `tel:${phoneNumber}`}
             >
@@ -141,7 +142,7 @@ const Header = () => {
               ))}
               <div className="px-4 pt-4 border-t border-border">
                 <Button 
-                  variant="seattle-primary" 
+                  variant="prowash-primary" 
                   className="w-full" 
                   size="lg"
                   onClick={() => {

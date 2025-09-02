@@ -9,37 +9,38 @@
 
 @layer base {
   :root {
-    /* Seattle ProWash Brand Colors - Ultra Simple Design */
-    --background: 0 0% 100%; /* Pure white background */
+    /* Seattle ProWash High Contrast Colors (HSL format) */
+    --background: 210 20% 98%; /* Off-white background */
     --foreground: 210 11% 25%; /* Charcoal for excellent readability */
     
-    /* Primary Brand Colors */
-    --seattle-blue: 209 100% 35%; /* #0057B8 - Primary blue */
-    --seattle-orange: 25 100% 50%; /* #FF8A00 - CTA orange */
+    /* Pacific Northwest Professional Palette */
+    --primary-teal: 192 100% 22%; /* Deep Teal #005D6E - headings, dark backgrounds, footer */
+    --secondary-off-white: 210 20% 98%; /* Off-White #F8F9FA - main page background */
+    --accent-bright-green: 120 61% 50%; /* Bright Green #32CD32 - CTA buttons, icons, highlights */
     --text-charcoal: 210 11% 25%; /* Charcoal #343A40 - body text */
     
-    /* Legacy Brand Colors (mapped to new system) */
-    --brand-blue: 209 100% 35%; /* #0057B8 */
-    --brand-blue-light: 209 85% 45%; /* Lighter blue variation */
-    --brand-navy: 209 100% 25%; /* Darker blue for backgrounds */
-    --brand-orange: 25 100% 50%; /* #FF8A00 */
-    --brand-orange-light: 25 85% 60%; /* Lighter orange for hover states */
-    --brand-yellow: 25 100% 50%; /* Maps to orange for consistency */
+    /* Legacy Brand Colors (keeping for compatibility) */
+    --brand-blue: 192 100% 22%; /* Now maps to Deep Teal */
+    --brand-blue-light: 192 85% 35%; /* Lighter teal variation */
+    --brand-navy: 192 100% 18%; /* Even darker teal for backgrounds */
+    --brand-orange: 120 61% 50%; /* Now maps to Bright Green */
+    --brand-orange-light: 120 61% 60%; /* Lighter bright green for hover states */
+    --brand-yellow: 45 100% 50%; /* Pure golden yellow */
     --brand-white: 0 0% 100%; /* Pure white */
-    --brand-gray: 210 20% 96%; /* Light gray background */
+    --brand-gray: 210 20% 98%; /* Off-white background */
     --brand-gray-text: 210 11% 25%; /* Charcoal for text */
     
     /* Updated StoryBrand Colors */
-    --moss-green: 25 100% 50%; /* Maps to orange for consistency */
-    --moss-green-light: 25 85% 60%; /* Lighter orange for hover */
-    --slate-charcoal: 209 100% 35%; /* Blue for consistency */
-    --off-white: 0 0% 100%; /* Pure white background */
+    --moss-green: 120 61% 50%; /* Now Bright Green for consistency */
+    --moss-green-light: 120 61% 60%; /* Lighter bright green for hover */
+    --slate-charcoal: 192 100% 22%; /* Deep Teal for consistency */
+    --off-white: 210 20% 98%; /* Off-white background */
     --light-gray: 210 14% 96%; /* Light gray background */
     
     /* New Colors for Design Update */
-    --bright-orange: 25 100% 50%; /* #FF8A00 */
-    --navy: 209 100% 25%; /* Darker blue */
-    --dark-teal: 209 100% 35%; /* Maps to blue */
+    --bright-orange: 25 95% 53%; /* Bright Orange #f97316 */
+    --navy: 222 84% 5%; /* Navy #0f172a */
+    --dark-teal: 182 100% 14%; /* Dark Teal #004348 */
     
     --card: 0 0% 100%;
     --card-foreground: 210 100% 10%;
@@ -47,16 +48,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 210 100% 10%;
 
-    --primary: 209 100% 35%; /* Seattle Blue */
+    --primary: 192 100% 22%; /* Deep Teal */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 100%; /* Pure white background */
+    --secondary: 210 20% 98%; /* Off-white background */
     --secondary-foreground: 210 11% 25%; /* Charcoal text */
 
     --muted: 210 14% 96%; /* Light gray */
     --muted-foreground: 210 11% 25%; /* Charcoal for better readability */
 
-    --accent: 25 100% 50%; /* Seattle Orange */
+    --accent: 120 61% 50%; /* Bright Green */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 45%;
@@ -139,18 +140,18 @@
   
   /* High contrast text classes */
   .text-readable {
-    color: hsl(var(--seattle-blue));
-    font-weight: 600;
+    color: hsl(var(--brand-blue));
+    font-weight: 500;
   }
   
   .text-secondary-readable {
-    color: hsl(var(--text-charcoal));
+    color: hsl(var(--brand-gray-text));
     font-weight: 400;
   }
   
   /* Ensure headings have excellent contrast */
   h1, h2, h3, h4, h5, h6 {
-    color: hsl(var(--seattle-blue));
+    color: hsl(var(--brand-blue));
     font-weight: 700;
     letter-spacing: -0.025em;
   }
