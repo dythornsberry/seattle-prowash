@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, AlertTriangle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const CostOfWaiting = () => {
   return (
@@ -33,15 +34,15 @@ const CostOfWaiting = () => {
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-text-charcoal">Risk of leaks and costly water damage</span>
+                    <span className="text-text-charcoal">Higher risk of leaks & water damage</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-text-charcoal">Decreased home value</span>
+                    <span className="text-text-charcoal">Possible shingle deterioration</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-text-charcoal">Potential damage to shingles</span>
+                    <span className="text-text-charcoal">Lower curb appeal & home value</span>
                   </li>
                 </ul>
               </CardContent>
@@ -69,19 +70,32 @@ const CostOfWaiting = () => {
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-bright-green mt-0.5 flex-shrink-0" />
-                    <span className="text-text-charcoal">Extend the life of your roof</span>
+                    <span className="text-text-charcoal">Extend roof life with proper treatment</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-bright-green mt-0.5 flex-shrink-0" />
-                    <span className="text-text-charcoal">Boost your home's curb appeal</span>
+                    <span className="text-text-charcoal">Boost curb appeal immediately</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-bright-green mt-0.5 flex-shrink-0" />
-                    <span className="text-text-charcoal">Enjoy a 12-Month Moss-Free Guarantee</span>
+                    <span className="text-text-charcoal">12-month moss-free guarantee</span>
                   </li>
                 </ul>
               </CardContent>
             </Card>
+          </div>
+          
+          <div className="text-center mt-12">
+            <Button 
+              variant="cta-orange" 
+              size="xl"
+              className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+              onClick={() => {
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              GET YOUR FREE QUOTE TODAY
+            </Button>
           </div>
         </div>
       </div>

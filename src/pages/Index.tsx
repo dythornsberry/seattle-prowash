@@ -12,6 +12,7 @@ import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import CTABanner from "@/components/CTABanner";
 import QuoteForm from "@/components/QuoteForm";
 import Footer from "@/components/Footer";
+import MobileBottomBar from "@/components/MobileBottomBar";
 
 const Index = () => {
   // Intersection Observer for fade-up animations
@@ -102,6 +103,7 @@ const Index = () => {
         </div>
       </main>
       <Footer />
+      <MobileBottomBar />
     </div>
   );
 };

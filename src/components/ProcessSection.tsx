@@ -1,21 +1,22 @@
 import { CheckCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const ProcessSection = () => {
   const steps = [
     {
       number: "1",
-      title: "Get Your Free Quote",
-      description: "Call, text, or fill out our form. We'll provide a fast, accurate, and no-pressure quote for your property"
+      title: "Fast Quote",
+      description: "Call, text, or use the form. Most quotes sent quickly by text/email."
     },
     {
       number: "2", 
-      title: "We Handle the Work",
-      description: "Our licensed and insured team will arrive on time and use professional equipment to safely transform your home"
+      title: "We Treat & Clean",
+      description: "Pro methods that protect your roof."
     },
     {
       number: "3",
-      title: "Love Your Results", 
-      description: "Enjoy a pristine property, backed by our 100% satisfaction and 12-month moss-free guarantees"
+      title: "Moss-Free Guarantee", 
+      description: "12-month coverage on qualifying treatments. On-site visits available when helpful."
     }
   ];
 
@@ -25,10 +26,10 @@ const ProcessSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="fade-up mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Our Simple 3-Step Process
+              How It Works
             </h2>
             <p className="text-xl text-white/90 max-w-2xl mx-auto font-medium">
-              From free estimate to sparkling clean results, we make roof cleaning straightforward and stress-free.
+              From fast quote to moss-free guarantee, we make it simple.
             </p>
           </div>
 
@@ -58,14 +59,16 @@ const ProcessSection = () => {
           </div>
 
           <div className="mt-16 text-center fade-up">
-            <div className="inline-flex items-center gap-3 bg-white px-6 py-4 rounded-lg shadow-md border border-bright-green/20">
-              <div className="w-6 h-6 bg-bright-green rounded-full flex items-center justify-center">
-                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <span className="text-primary-teal font-semibold">Licensed, Insured & Locally Owned Since 2022</span>
-            </div>
+            <Button 
+              variant="cta-orange" 
+              size="xl"
+              className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+              onClick={() => {
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              GET YOUR FREE QUOTE TODAY
+            </Button>
           </div>
         </div>
       </div>

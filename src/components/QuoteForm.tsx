@@ -22,9 +22,9 @@ const QuoteForm = () => {
   });
 
   const services = [
-    "Roof Moss Removal",
+    "Roof Treatment",
     "Gutter Cleaning", 
-    "House Soft Wash",
+    "House Washing",
     "Pressure Washing",
     "Complete Property Package",
     "Other (describe in message)"
@@ -99,10 +99,10 @@ const QuoteForm = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16 fade-up">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy mb-6">
-              Get Your Free Quote
+              GET YOUR FREE QUOTE TODAY!
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Fill out the form below and we'll respond back in 1 hour.
+              Most quotes sent same day. We reply within ~10 minutes (7am–7pm).
             </p>
           </div>
 
@@ -120,9 +120,9 @@ const QuoteForm = () => {
                   <div className="flex items-center gap-3">
                     <Phone className="w-5 h-5 text-brand-yellow" />
                     <div>
-                      <a href="tel:206-752-6690" className="font-semibold text-brand-navy hover:text-brand-yellow transition-colors">
-                        206-752-6690
-                      </a>
+                        <a href="tel:12067526690" className="font-semibold text-brand-navy hover:text-brand-yellow transition-colors">
+                          206-752-6690
+                        </a>
                       <p className="text-sm text-muted-foreground">Call or text anytime</p>
                     </div>
                   </div>
@@ -193,20 +193,6 @@ const QuoteForm = () => {
                         />
                       </div>
                       
-                      {/* Phone Number - required */}
-                      <div className="space-y-2">
-                        <Label htmlFor="phone" className="text-brand-navy font-semibold">Phone Number *</Label>
-                        <Input
-                          id="phone"
-                          type="tel"
-                          value={formData.phone}
-                          onChange={(e) => handleChange("phone", e.target.value)}
-                          placeholder="(206) 555-0123"
-                          required
-                          className="border-brand-yellow/30 focus:border-brand-yellow"
-                        />
-                      </div>
-                      
                       {/* Email - optional */}
                       <div className="space-y-2">
                         <Label htmlFor="email" className="text-brand-navy font-semibold">Email</Label>
@@ -216,6 +202,20 @@ const QuoteForm = () => {
                           value={formData.email}
                           onChange={(e) => handleChange("email", e.target.value)}
                           placeholder="john@example.com"
+                          className="border-brand-yellow/30 focus:border-brand-yellow"
+                        />
+                      </div>
+                      
+                      {/* Mobile - required */}
+                      <div className="space-y-2">
+                        <Label htmlFor="mobile" className="text-brand-navy font-semibold">Mobile *</Label>
+                        <Input
+                          id="mobile"
+                          type="tel"
+                          value={formData.phone}
+                          onChange={(e) => handleChange("phone", e.target.value)}
+                          placeholder="(206) 555-0123"
+                          required
                           className="border-brand-yellow/30 focus:border-brand-yellow"
                         />
                       </div>
@@ -233,35 +233,35 @@ const QuoteForm = () => {
                         />
                       </div>
                       
-                      {/* Service Needed - optional */}
+                      {/* Optional Details */}
                       <div className="space-y-2">
-                        <Label htmlFor="service" className="text-brand-navy font-semibold">Service Needed</Label>
-                        <Select value={formData.service} onValueChange={(value) => handleChange("service", value)}>
-                          <SelectTrigger className="border-brand-yellow/30 focus:border-brand-yellow">
-                            <SelectValue placeholder="Select a service..." />
-                          </SelectTrigger>
-                          <SelectContent>
-                            {services.map((service) => (
-                              <SelectItem key={service} value={service}>
-                                {service}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
+                        <Label htmlFor="details" className="text-brand-navy font-semibold">Details (optional)</Label>
+                        <Textarea
+                          id="details"
+                          value={formData.details}
+                          onChange={(e) => handleChange("details", e.target.value)}
+                          placeholder="Add photos link or describe your needs"
+                          rows={2}
+                          className="border-brand-yellow/30 focus:border-brand-yellow"
+                        />
                       </div>
                     </div>
 
-                    {/* Additional Details - optional */}
-                    <div className="space-y-2">
-                      <Label htmlFor="details" className="text-brand-navy font-semibold">Additional Details</Label>
-                      <Textarea
-                        id="details"
-                        value={formData.details}
-                        onChange={(e) => handleChange("details", e.target.value)}
-                        placeholder="Optional: anything you'd like to add?"
-                        rows={3}
-                        className="border-brand-yellow/30 focus:border-brand-yellow"
-                      />
+                    {/* SMS Consent Checkbox */}
+                    <div className="space-y-3">
+                      <label className="flex items-start gap-3 cursor-pointer">
+                        <input 
+                          type="checkbox" 
+                          defaultChecked 
+                          className="mt-1 w-4 h-4 text-brand-yellow border-brand-yellow/30 rounded focus:ring-brand-yellow"
+                        />
+                        <span className="text-sm text-brand-navy">
+                          ✅ Yes, text me my quote for the fastest response.
+                        </span>
+                      </label>
+                      <p className="text-xs text-muted-foreground">
+                        By submitting, you agree to receive SMS from Seattle ProWash. Reply STOP to opt out. Msg/data rates may apply. Consent not required for purchase.
+                      </p>
                     </div>
 
                     <Button
@@ -271,21 +271,14 @@ const QuoteForm = () => {
                       size="xl"
                       disabled={isSubmitting}
                     >
-                      {isSubmitting ? "Sending..." : "Get My Free Quote"}
+                      {isSubmitting ? "Sending..." : "GET YOUR FREE QUOTE TODAY"}
                     </Button>
 
                     {/* Trust Copy and Service Areas */}
                     <div className="space-y-4 text-center">
-                      <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                        <div className="space-y-2 text-sm">
-                          <p className="text-green-800 font-semibold">✓ Quotes are free, fast, and come with zero pressure</p>
-                          <p className="text-green-700">✓ We'll never spam you or share your info</p>
-                        </div>
-                      </div>
-                      
                       <div className="text-sm text-muted-foreground">
-                        <p className="font-medium text-brand-navy">Serving Kenmore and the greater Seattle area, including Bothell, Kirkland, Shoreline, and nearby neighborhoods</p>
-                        <p className="mt-1">We respond back in 1 hour, Monday through Sunday</p>
+                        <p className="font-medium text-brand-navy">Most quotes sent same day. We reply within ~10 minutes (7am–7pm).</p>
+                        <p className="mt-1">On-site visit available when helpful.</p>
                       </div>
                     </div>
 

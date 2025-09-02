@@ -80,12 +80,12 @@ const Header = () => {
               size="sm"
               onClick={goToContact}
             >
-              Get Free Quote
+              GET YOUR FREE QUOTE TODAY
             </Button>
             <Button 
               variant="prowash-phone" 
               size="sm"
-              onClick={() => window.location.href = `tel:${phoneNumber}`}
+              onClick={() => window.location.href = `tel:1${phoneNumber.replace(/[^0-9]/g, '')}`}
             >
               <Phone className="w-4 h-4" />
               {phoneNumber}
@@ -97,7 +97,7 @@ const Header = () => {
             <Button 
               variant="prowash-phone" 
               size="sm"
-              onClick={() => window.location.href = `tel:${phoneNumber}`}
+              onClick={() => window.location.href = `tel:1${phoneNumber.replace(/[^0-9]/g, '')}`}
             >
               <Phone className="w-4 h-4" />
               Call
@@ -150,7 +150,7 @@ const Header = () => {
                     goToContact();
                   }}
                 >
-                  Get My Free Quote
+                  GET YOUR FREE QUOTE TODAY
                 </Button>
               </div>
             </nav>

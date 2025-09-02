@@ -37,23 +37,23 @@ const Hero = () => {
           <div className="text-center lg:text-left space-y-8 fade-up">
             <div className="space-y-6">
               <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight drop-shadow-lg">
-                Your roof is under attack. We'll stop the moss before it wins.
+                Roof & Gutter Cleaning in Kenmore, Bothell & Kirkland
               </h1>
               
               <p className="text-xl md:text-2xl text-white/90 font-medium leading-relaxed drop-shadow-md">
-                Seattle ProWash protects your home with expert moss removal, pro gear, and a 12-month moss-free guarantee. We won't damage your roof or waste your time.
+                Fast quotes, safe results, 12-month moss-free guarantee.
               </p>
               
               <p className="text-sm text-white/80 font-medium">
-                ⭐ <a 
+                ★★★★★ <a 
                   href="https://www.google.com/search?q=Seattle+ProWash+reviews" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="hover:text-moss-green transition-colors cursor-pointer inline-flex items-center gap-1"
                 >
                   <GoogleIcon className="inline" />
-                  180+ 5‑Star Reviews
-                </a> · Fully Licensed & Insured
+                  180+ Google reviews
+                </a> • Licensed & Insured • Since 2022
               </p>
               
               <p className="text-sm text-white/70 font-medium">
@@ -72,11 +72,11 @@ const Hero = () => {
                     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
-                  Get My Free Quote
+                  GET YOUR FREE QUOTE TODAY
                 </Button>
               </div>
               <div className="text-center lg:text-left">
-                <p className="text-white/90 font-medium">📞 <a href="tel:2067526690" className="hover:text-moss-green transition-colors">Call or Text: 206.752.6690</a></p>
+                <p className="text-white/90 font-medium">📞 <a href="tel:12067526690" className="hover:text-moss-green transition-colors">Call or Text 206-752-6690</a></p>
               </div>
             </div>
 

@@ -1,4 +1,5 @@
 import { Star, Shield, Clock, Award } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const TrustBar = () => {
   const trustPoints = [
@@ -50,10 +51,23 @@ const TrustBar = () => {
                 )}
               </div>
             );
-          })}
+            })}
+          </div>
+          
+          <div className="text-center mt-8">
+            <Button 
+              variant="cta-orange" 
+              size="sm"
+              className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold"
+              onClick={() => {
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              GET YOUR FREE QUOTE TODAY
+            </Button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
   );
 };
 

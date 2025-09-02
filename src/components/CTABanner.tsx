@@ -14,19 +14,14 @@ const CTABanner = () => {
         <div className="text-center space-y-8 fade-up">
           <div className="space-y-4">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-              Free Same-Day Estimates
+              Ready for a moss-free roof?
             </h2>
-            
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Don't wait for moss and grime to damage your home. Get your personalized quote today and protect your biggest investment.
-            </p>
           </div>
 
-          {/* CTAs - Completely rewritten */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-4xl mx-auto">
             <Button 
               size="xl" 
-              className="flex-1 sm:flex-none bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 text-lg rounded-lg shadow-lg"
+              className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 text-lg rounded-lg shadow-lg"
               onClick={() => {
                 if (window.location.pathname === '/') {
                   document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
@@ -35,40 +30,16 @@ const CTABanner = () => {
                 }
               }}
             >
-              Get My Free Quote
+              GET YOUR FREE QUOTE TODAY
             </Button>
             
-            <div className="text-gray-400 px-4 text-lg font-medium">or</div>
-            
-            <Button 
-              size="xl" 
-              className="flex-1 sm:flex-none bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-200"
-              onClick={() => window.location.href = 'tel:206-752-6690'}
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Call Now: 206-752-6690
-            </Button>
+            <div className="text-center mt-4">
+              <p className="text-gray-300">
+                Or call <a href="tel:12067526690" className="text-white hover:text-orange-400 transition-colors">206-752-6690</a>
+              </p>
+            </div>
           </div>
 
-          {/* Trust Indicators */}
-          <div className="flex flex-wrap justify-center gap-8 pt-8 border-t border-white/20">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-orange-400">180+</div>
-              <div className="text-sm text-gray-300">Five-Star Reviews</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-orange-400">12 Month</div>
-              <div className="text-sm text-gray-300">Moss‑Free Guarantee</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-orange-400">$2M+</div>
-              <div className="text-sm text-gray-300">Fully Insured</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-orange-400">Same Day</div>
-              <div className="text-sm text-gray-300">Free Estimates</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

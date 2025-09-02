@@ -36,18 +36,25 @@ const TestimonialSlider = () => {
       service: "Roof Cleaning"
     },
     {
-      content: "My experience with them was seamless from booking to appointment. Dylan's team kept me updated throughout the process with before and after photos. The prices are fair.",
+      content: "Seamless from booking to appointment. The before/after photos were awesome.",
       author: "Kimani G.",
-      location: "Bothell, WA",
+      location: "Bothell",
       rating: 5,
-      service: "House Soft Wash"
+      service: "House Wash"
     },
     {
-      content: "These guys removed years of moss and the roof looks brand new! Great price and super professional.",
+      content: "Roof looks brand new. Great price and super professional.",
       author: "Jennifer C.",
-      location: "Kenmore, WA",
+      location: "Kenmore",
       rating: 5,
-      service: "Roof Moss Removal"
+      service: "Roof Treatment"
+    },
+    {
+      content: "On time, careful, and the results were dramatic.",
+      author: "YT C.",
+      location: "Seattle",
+      rating: 5,
+      service: "Pressure Washing"
     }
   ];
 
@@ -72,26 +79,8 @@ const TestimonialSlider = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 fade-up">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy mb-6">
-            What Our Neighbors Say
+            What Neighbors Say
           </h2>
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <div className="flex text-brand-yellow text-2xl">
-              ★★★★★
-            </div>
-            <span className="text-lg font-semibold text-brand-navy">5.0</span>
-            <span className="text-brand-gray-text font-medium">• 180 Google Reviews</span>
-          </div>
-          <p className="text-brand-gray-text mb-8 max-w-2xl mx-auto">
-            Don't just take our word for it. See what homeowners across the Seattle area are saying about our roof and gutter cleaning services. 
-            <a 
-              href="https://www.google.com/search?q=Seattle+ProWash+reviews" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-brand-orange hover:underline font-semibold"
-            >
-              Read all our reviews on Google
-            </a>.
-          </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
@@ -168,6 +157,15 @@ const TestimonialSlider = () => {
                 onClick={() => setCurrentSlide(index)}
               />
             ))}
+          </div>
+          
+          <div className="text-center mt-8">
+            <Button
+              variant="outline"
+              onClick={() => window.open('https://www.google.com/search?q=Seattle+ProWash+reviews', '_blank')}
+            >
+              Read reviews on Google →
+            </Button>
           </div>
         </div>
       </div>
