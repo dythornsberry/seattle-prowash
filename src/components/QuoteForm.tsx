@@ -174,6 +174,20 @@ const QuoteForm = () => {
 
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="space-y-6">
+                      {/* Mobile - required (moved to first) */}
+                      <div className="space-y-2">
+                        <Label htmlFor="mobile" className="text-brand-navy font-semibold">Mobile *</Label>
+                        <Input
+                          id="mobile"
+                          type="tel"
+                          value={formData.phone}
+                          onChange={(e) => handleChange("phone", e.target.value)}
+                          placeholder="(206) 555-0123"
+                          required
+                          className="border-brand-yellow/30 focus:border-brand-yellow"
+                        />
+                      </div>
+                      
                       {/* Name - required */}
                       <div className="space-y-2">
                         <Label htmlFor="name" className="text-brand-navy font-semibold">Name *</Label>
@@ -196,20 +210,6 @@ const QuoteForm = () => {
                           value={formData.email}
                           onChange={(e) => handleChange("email", e.target.value)}
                           placeholder="john@example.com"
-                          className="border-brand-yellow/30 focus:border-brand-yellow"
-                        />
-                      </div>
-                      
-                      {/* Mobile - required */}
-                      <div className="space-y-2">
-                        <Label htmlFor="mobile" className="text-brand-navy font-semibold">Mobile *</Label>
-                        <Input
-                          id="mobile"
-                          type="tel"
-                          value={formData.phone}
-                          onChange={(e) => handleChange("phone", e.target.value)}
-                          placeholder="(206) 555-0123"
-                          required
                           className="border-brand-yellow/30 focus:border-brand-yellow"
                         />
                       </div>
