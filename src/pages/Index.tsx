@@ -1,55 +1,60 @@
 import { useEffect } from "react";
 import Header from "@/components/Header";
-import MinimalistHero from "@/components/MinimalistHero";
-import SeattlePromise from "@/components/SeattlePromise";
-import TwoServiceCards from "@/components/TwoServiceCards";
-import SingleBeforeAfter from "@/components/SingleBeforeAfter";
-import ThreeStepProcess from "@/components/ThreeStepProcess";
-import CompactReviews from "@/components/CompactReviews";
+import Hero from "@/components/Hero";
+import ProWashPromise from "@/components/ProWashPromise";
+import StreamlinedServices from "@/components/StreamlinedServices";
+import ProcessSection from "@/components/ProcessSection";
+import RealResults from "@/components/RealResults";
+import AboutPreview from "@/components/AboutPreview";
+import FinalCTA from "@/components/FinalCTA";
 import SimplifiedFooter from "@/components/SimplifiedFooter";
-import MobileBottomBar from "@/components/MobileBottomBar";
-import { Button } from "@/components/ui/button";
 
 const Index = () => {
-  // Intersection Observer for fade animations
+  // Intersection Observer for fade-up animations
   useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('in-view');
         }
       });
-    }, observerOptions);
+    };
 
-    // Observe all elements with fade-up class
-    const elements = document.querySelectorAll('.fade-up');
-    elements.forEach((el) => observer.observe(el));
+    const observer = new IntersectionObserver(observerCallback, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
 
-    return () => observer.disconnect();
+    // Observe all fade-up elements
+    const fadeElements = document.querySelectorAll('.fade-up');
+    fadeElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      fadeElements.forEach((el) => observer.unobserve(el));
+    };
   }, []);
 
-  // Handle hash navigation
+  // Handle hash navigation (e.g., /#contact)
   useEffect(() => {
     const hash = window.location.hash;
     if (hash) {
       setTimeout(() => {
-        const element = document.querySelector(hash);
+        const element = document.getElementById(hash.substring(1));
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+          // On mobile, scroll to the form specifically for better UX
+          const isMobile = window.innerWidth < 1024;
+          const formElement = element.querySelector('form');
           
-          // Special handling for mobile contact form
-          if (hash === '#contact' && window.innerWidth < 768) {
-            setTimeout(() => {
-              const form = document.querySelector('#quote-form');
-              if (form) {
-                form.scrollIntoView({ behavior: 'smooth', block: 'center' });
-              }
-            }, 500);
+          if (isMobile && formElement && hash === '#contact') {
+            formElement.scrollIntoView({ 
+              behavior: 'smooth',
+              block: 'start'
+            });
+          } else {
+            element.scrollIntoView({ 
+              behavior: 'smooth',
+              block: 'start'
+            });
           }
         }
       }, 100);
@@ -59,46 +64,35 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
-      {/* Hero with inline form */}
-      <MinimalistHero />
-      
-      {/* Promise section */}
-      <SeattlePromise />
-      
-      {/* Two service cards */}
-      <TwoServiceCards />
-      
-      {/* Single dramatic before/after */}
-      <SingleBeforeAfter />
-      
-      {/* Three-step process */}
-      <ThreeStepProcess />
-      
-      {/* Compact reviews */}
-      <CompactReviews />
-      
-      {/* Final CTA */}
-      <section className="py-12 bg-background">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-brand-blue mb-4">
-            Ready for a Spotless Home?
-          </h2>
-          <p className="text-foreground/80 mb-8 max-w-2xl mx-auto">
-            Get your fast, free quote today. Most quotes sent same day with reply within ~10 minutes.
-          </p>
-          <Button 
-            size="lg"
-            className="bg-cta-orange hover:bg-cta-orange-dark text-white font-bold px-8 py-4"
-            onClick={() => document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            GET YOUR FREE QUOTE TODAY
-          </Button>
+      <main>
+        {/* 1. Hero Section (Keep As-Is) */}
+        <Hero />
+        
+        {/* 2. NEW "The ProWash Promise" Section (Consolidated Trust Bar) */}
+        <ProWashPromise />
+        
+        {/* 3. Streamlined Services Section */}
+        <StreamlinedServices />
+        
+        {/* 4. Our Simple 3-Step Process (Keep As-Is) */}
+        <div className="bg-off-white">
+          <ProcessSection />
         </div>
-      </section>
+        
+        {/* 5. Powerful Proof Section (Combined & Refined) */}
+        <RealResults />
+        
+        {/* 6. Meet the Owner Section (Keep As-Is) */}
+        <div className="bg-dark-teal text-white">
+          <AboutPreview />
+        </div>
+        
+        {/* 7. Final Call-to-Action & Contact Form */}
+        <FinalCTA />
+      </main>
       
+      {/* 8. Simplified Footer */}
       <SimplifiedFooter />
-      <MobileBottomBar />
     </div>
   );
 };

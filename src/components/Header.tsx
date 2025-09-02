@@ -1,103 +1,161 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { navigateToContact as goToContact, navigateToReviews as goToReviews, navigateToHome as goHome } from "@/lib/navigation";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Phone } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
+
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "Roof Cleaning", href: "/services#roof-cleaning" },
-    { name: "Gutter Cleaning", href: "/services#gutter-cleaning" },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Reviews", href: "/reviews" },
+  const phoneNumber = "206-752-6690";
+  
+  interface NavigationItem {
+    name: string;
+    href: string;
+    onClick?: () => void;
+  }
+  
+
+  
+  const navigation: NavigationItem[] = [
+    { name: "Home", href: "/", onClick: goHome },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "FAQ", href: "/faq" },
+    { 
+      name: "Reviews", 
+      href: "/#reviews",
+      onClick: goToReviews
+    },
+    { 
+      name: "Contact", 
+      href: "/#contact",
+      onClick: goToContact
+    }
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-4 py-3">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
+    <header className="sticky top-0 z-50 bg-brand-white/95 backdrop-blur-sm border-b border-border shadow-sm">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16 md:h-20">
+          {/* Brand Text */}
           <div className="flex items-center">
-            <img 
-              src="/src/assets/seattle-prowash-logo.png" 
-              alt="Seattle ProWash Logo" 
-              className="h-10 w-auto"
-            />
+            <Link to="/">
+              <h1 className="text-xl md:text-2xl font-bold text-brand-blue hover:text-brand-orange transition-colors duration-250 cursor-pointer">
+                Seattle <span className="text-brand-orange">ProWash</span>
+              </h1>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-brand-blue hover:text-cta-orange transition-colors font-medium"
-              >
-                {link.name}
-              </a>
+          <nav className="hidden md:flex items-center space-x-8">
+            {navigation.map((item) => (
+              item.onClick ? (
+                <button
+                  key={item.name}
+                  onClick={item.onClick}
+                  className="text-brand-blue hover:text-brand-orange font-medium transition-colors duration-250 cursor-pointer"
+                >
+                  {item.name}
+                </button>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-brand-blue hover:text-brand-orange font-medium transition-colors duration-250 cursor-pointer"
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
           </nav>
 
-          {/* Desktop CTA */}
-          <div className="hidden md:flex items-center gap-4">
-            <a 
-              href="tel:2067526690"
-              className="flex items-center gap-2 text-brand-blue hover:text-cta-orange transition-colors"
+          {/* Desktop CTAs */}
+          <div className="hidden md:flex items-center space-x-4">
+            <Button 
+              variant="prowash-secondary" 
+              size="sm"
+              onClick={goToContact}
+            >
+              Get Free Quote
+            </Button>
+            <Button 
+              variant="prowash-phone" 
+              size="sm"
+              onClick={() => window.location.href = `tel:${phoneNumber}`}
             >
               <Phone className="w-4 h-4" />
-              <span className="font-medium">206-752-6690</span>
-            </a>
-            <Button 
-              className="bg-cta-orange hover:bg-cta-orange-dark text-white font-bold"
-              onClick={() => document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Get Quote
+              {phoneNumber}
             </Button>
           </div>
 
-          {/* Mobile Menu */}
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="sm">
-                <Menu className="w-5 h-5 text-brand-blue" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-80">
-              <div className="flex flex-col space-y-4 mt-8">
-                {navLinks.map((link) => (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className="text-lg text-brand-blue hover:text-cta-orange transition-colors font-medium py-2"
-                  >
-                    {link.name}
-                  </a>
-                ))}
-                <div className="pt-4 border-t border-border">
-                  <a 
-                    href="tel:2067526690"
-                    className="flex items-center gap-2 text-brand-blue text-lg font-medium py-2"
-                  >
-                    <Phone className="w-5 h-5" />
-                    206-752-6690
-                  </a>
-                  <Button 
-                    className="w-full mt-4 bg-cta-orange hover:bg-cta-orange-dark text-white font-bold"
-                    onClick={() => {
-                      setIsOpen(false);
-                      document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' });
-                    }}
-                  >
-                    Get Your Free Quote
-                  </Button>
-                </div>
-              </div>
-            </SheetContent>
-          </Sheet>
+          {/* Mobile Controls */}
+          <div className="md:hidden flex items-center space-x-2">
+            <Button 
+              variant="prowash-phone" 
+              size="sm"
+              onClick={() => window.location.href = `tel:${phoneNumber}`}
+            >
+              <Phone className="w-4 h-4" />
+              Call
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-brand-blue"
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </Button>
+          </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden border-t border-border bg-brand-white">
+            <nav className="py-4 space-y-2">
+              {navigation.map((item) => (
+                item.onClick ? (
+                  <button
+                    key={item.name}
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      item.onClick();
+                    }}
+                    className="block w-full text-left px-4 py-2 text-brand-blue hover:bg-brand-gray hover:text-brand-orange font-medium transition-colors duration-250 cursor-pointer"
+                  >
+                    {item.name}
+                  </button>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block px-4 py-2 text-brand-blue hover:bg-brand-gray hover:text-brand-orange font-medium transition-colors duration-250 cursor-pointer"
+                  >
+                    {item.name}
+                  </Link>
+                )
+              ))}
+              <div className="px-4 pt-4 border-t border-border">
+                <Button 
+                  variant="prowash-primary" 
+                  className="w-full" 
+                  size="lg"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    goToContact();
+                  }}
+                >
+                  Get My Free Quote
+                </Button>
+              </div>
+            </nav>
+          </div>
+        )}
       </div>
     </header>
   );
