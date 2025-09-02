@@ -5,7 +5,7 @@ const ProcessSection = () => {
     {
       number: "1",
       title: "Get Your Free Quote",
-      description: "Call, text, or fill out our form. Most quotes are handled online the same day, with in-person visits available if needed."
+      description: "Call, text, or fill out our form. We'll provide a fast, accurate, and no-pressure quote for your property"
     },
     {
       number: "2", 

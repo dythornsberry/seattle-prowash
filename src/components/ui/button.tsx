@@ -13,19 +13,19 @@ const buttonVariants = cva(
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border border-dark-teal bg-white text-dark-teal hover:bg-dark-teal hover:text-white",
+          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
         secondary:
-          "bg-off-white text-dark-teal hover:bg-dark-teal hover:text-white",
-        ghost: "text-dark-teal hover:bg-off-white hover:text-dark-teal",
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         
         /* Seattle ProWash High Contrast Brand Variants */
-        "prowash-primary": "bg-moss-green text-white font-bold hover:bg-moss-green-light hover:text-white btn-glow shadow-md border-0 hover:scale-105 transition-all duration-300 w-full sm:w-auto",
-        "prowash-outline": "bg-transparent border-2 border-white text-white hover:bg-white hover:text-dark-teal font-semibold",
-        "prowash-secondary": "border-2 border-dark-teal bg-white text-dark-teal hover:bg-dark-teal hover:text-white font-semibold shadow-sm",
-        "prowash-cta": "bg-dark-teal text-white font-bold hover:bg-dark-teal/90 hover:text-white shadow-lg border-0",
-        "prowash-phone": "bg-moss-green text-white font-bold hover:bg-moss-green-light hover:text-white btn-glow text-lg border-0",
-        "cta-orange": "bg-bright-orange text-white font-bold hover:bg-bright-orange/90 hover:text-white btn-glow shadow-md border-0 hover:scale-105 transition-all duration-300",
+        "prowash-primary": "bg-moss-green text-white font-bold hover:bg-moss-green-light btn-glow shadow-md border-0 hover:scale-105 transition-all duration-300 w-full sm:w-auto",
+        "prowash-outline": "bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-blue font-semibold",
+        "prowash-secondary": "border-2 border-gray-900 bg-white hover:bg-gray-900 hover:text-white font-semibold shadow-sm" + " text-gray-900",
+        "prowash-cta": "bg-brand-blue text-white font-bold hover:bg-brand-blue-light shadow-lg border-0",
+        "prowash-phone": "bg-moss-green text-white font-bold hover:bg-moss-green-light btn-glow text-lg border-0",
+        "cta-orange": "bg-bright-orange text-white font-bold hover:bg-bright-orange/90 btn-glow shadow-md border-0 hover:scale-105 transition-all duration-300",
       },
       size: {
         default: "h-10 px-4 py-2",

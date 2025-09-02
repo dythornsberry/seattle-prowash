@@ -5,14 +5,13 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Phone, Mail, MapPin, CheckCircle, Settings } from "lucide-react";
+import { Phone, Mail, MapPin, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const QuoteForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [webhookUrl, setWebhookUrl] = useState("");
-  const [showWebhookSettings, setShowWebhookSettings] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -33,17 +32,6 @@ const QuoteForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    if (!webhookUrl) {
-      toast({
-        title: "Webhook URL Required",
-        description: "Please enter your Zapier webhook URL first.",
-        variant: "destructive",
-      });
-      setShowWebhookSettings(true);
-      return;
-    }
-
     setIsSubmitting(true);
     
     try {
@@ -58,24 +46,21 @@ const QuoteForm = () => {
         return;
       }
 
-      // Send to Zapier webhook
-      const response = await fetch(webhookUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        mode: 'no-cors',
-        body: JSON.stringify({
+      // Call the edge function to send notifications
+      const { error } = await supabase.functions.invoke('send-quote-notification', {
+        body: {
           name: formData.name,
-          mobile: formData.phone,
+          phone: formData.phone,
           email: formData.email,
-          address: formData.address,
+          zipCode: formData.address, // Using address as zipCode for now
           service: formData.service,
-          message: formData.details,
-          timestamp: new Date().toISOString(),
-          source: 'Seattle ProWash Website'
-        }),
+          message: formData.details
+        }
       });
+
+      if (error) {
+        throw error;
+      }
 
       toast({
         title: "Quote Request Received!",
@@ -193,37 +178,6 @@ const QuoteForm = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  {/* Zapier Webhook Settings */}
-                  <div className="mb-6 p-4 bg-gray-50 rounded-lg border">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-sm font-medium text-brand-navy">Zapier Integration Settings</h3>
-                      <Button
-                        type="button"
-                        variant="ghost"
-                        size="sm"
-                        onClick={() => setShowWebhookSettings(!showWebhookSettings)}
-                      >
-                        <Settings className="w-4 h-4" />
-                      </Button>
-                    </div>
-                    {showWebhookSettings && (
-                      <div>
-                        <Label htmlFor="webhook" className="text-sm text-gray-600">Zapier Webhook URL</Label>
-                        <Input
-                          id="webhook"
-                          type="url"
-                          placeholder="https://hooks.zapier.com/hooks/catch/..."
-                          value={webhookUrl}
-                          onChange={(e) => setWebhookUrl(e.target.value)}
-                          className="mt-1"
-                        />
-                        <p className="text-xs text-gray-500 mt-1">
-                          Enter your Zapier webhook URL to connect form submissions to Jobber
-                        </p>
-                      </div>
-                    )}
-                  </div>
-
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="space-y-6">
                       {/* Name - required */}

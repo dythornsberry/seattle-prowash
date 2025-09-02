@@ -6,50 +6,33 @@ const ServicesPreview = () => {
   const services = [
     {
       icon: Droplet,
-      title: "Roof Cleaning",
-      price: "From $500",
-      description: "Our soft wash roof cleaning safely kills moss and algae, protecting your shingles and leaving your roof spotless. Includes our 12-month moss-free guarantee on qualifying treatments.",
+      title: "Roof & Gutter Cleaning",
+      description: "Moss removal + full gutter cleanouts, done the right way.",
       features: [
-        "Complete soft wash treatment kills all moss & algae",
-        "Gentle, low-pressure method is safe for all shingle types",
-        "All loose debris removed from roof surface",
-        "Includes our 12-month moss-free guarantee on qualifying treatments"
+        "Safely remove damaging moss and debris with our gentle brush and blow method",
+        "Apply a professional soft wash treatment to protect your shingles and keep moss away longer",
+        "Prevent water damage with a complete gutter & downspout flush, including a full site cleanup"
       ]
     },
     {
-      icon: Droplet,
-      title: "Gutter Cleaning",
-      price: "From $250",
-      description: "We clear all debris from your gutters and flush your downspouts to ensure proper water flow and protect your home's foundation. Completion photos are included with every job.",
+      icon: Zap,
+      title: "Pressure Washing",
+      description: "Restore driveways, patios, walkways, and concrete surfaces.",
       features: [
-        "Clear all debris from your gutters",
-        "Flush your downspouts to ensure proper water flow",
-        "Protect your home's foundation",
-        "Completion photos included with every job"
-      ]
+        "Instantly boost your home's curb appeal by deep cleaning driveways, patios, and walkways",
+        "Eliminate slippery, unsafe moss and algae buildup for a safer, more inviting property",
+        "Achieve a flawless, streak-free finish that protects your concrete surfaces"
+      ],
+      socialProof: "5-star rated by 180+ Seattle-area homeowners"
     },
     {
       icon: Home,
       title: "House Washing",
-      price: "From $500",
-      description: "A complete exterior soft wash for your home. We gently clean siding, trim, eaves, and the outside of gutters to remove algae, mildew, and organic stains for a fresh new look.",
+      description: "Soft wash cleaning for your home's full exterior.",
       features: [
-        "Complete exterior soft wash for your home",
-        "Gently clean siding, trim, eaves, and outside of gutters",
-        "Remove algae, mildew, and organic stains",
-        "Fresh new look for your home's exterior"
-      ]
-    },
-    {
-      icon: Car,
-      title: "Pressure Washing",
-      price: "From $250",
-      description: "Revitalize your home's curb appeal. We deep clean driveways, patios, walkways, and other hardscapes to remove years of built-up grime.",
-      features: [
-        "Revitalize your home's curb appeal",
-        "Deep clean driveways, patios, walkways",
-        "Clean other hardscapes",
-        "Remove years of built-up grime"
+        "Restore your home's beauty by washing siding, trim, soffits, and all exterior surfaces",
+        "Remove harmful mildew, algae, and grime to protect your paint and siding from long-term damage",
+        "Our gentle soft wash technique is 100% safe for all materials: vinyl, wood, stucco, and more"
       ]
     }
   ];
@@ -66,7 +49,7 @@ const ServicesPreview = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
@@ -78,11 +61,6 @@ const ServicesPreview = () => {
                   <CardTitle className="text-xl font-bold text-brand-blue mb-3">
                     {service.title}
                   </CardTitle>
-                  <div className="text-center mb-3">
-                    <span className="bg-brand-orange text-white font-bold px-3 py-1 rounded-full text-lg">
-                      {service.price}
-                    </span>
-                  </div>
                   <CardDescription className="text-center text-base font-medium text-brand-gray-text">
                     {service.description}
                   </CardDescription>
@@ -99,6 +77,13 @@ const ServicesPreview = () => {
                       ))}
                     </ul>
                     
+                    {service.socialProof && (
+                      <div className="pt-4">
+                        <p className="text-sm text-brand-orange text-center font-medium">
+                          {service.socialProof}
+                        </p>
+                      </div>
+                    )}
                   </div>
                   
                   <div className="pt-4 border-t border-border mt-auto">
@@ -113,10 +98,14 @@ const ServicesPreview = () => {
                       className="w-full" 
                       size="sm"
                       onClick={() => {
-                        window.location.href = '/pricing';
+                        if (window.location.pathname === '/') {
+                          document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                        } else {
+                          window.location.href = '/#contact';
+                        }
                       }}
                     >
-                      See Pricing Details
+                      Get Free Quote
                     </Button>
                   </div>
                 </CardContent>

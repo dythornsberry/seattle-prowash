@@ -3,8 +3,6 @@ import { Badge } from "@/components/ui/badge";
 import { Star, Shield, Award } from "lucide-react";
 import heroImageWebP from "@/assets/hero-cleaning-service.webp";
 import heroImageJpg from "@/assets/hero-cleaning-service.jpg";
-import newRoofAfter1WebP from "@/assets/new-roof-after-1.webp";
-import newRoofAfter1 from "@/assets/new-roof-after-1.jpg";
 
 // Google logo as SVG component
 const GoogleIcon = ({ className }: { className?: string }) => (
@@ -32,40 +30,40 @@ const Hero = () => {
           style={{ objectPosition: 'center center' }}
         />
       </picture>
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 bg-primary-teal/80"></div>
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="text-center lg:text-left space-y-8 fade-up">
             <div className="space-y-6">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight drop-shadow-2xl">
-                Seattle's Trusted Roof & Gutter Cleaning Pros
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight drop-shadow-lg">
+                Your roof is under attack. We'll stop the moss before it wins.
               </h1>
               
-              <p className="text-xl md:text-2xl text-white font-medium leading-relaxed drop-shadow-2xl">
-                Fast, safe, and guaranteed cleaning with dramatic results you can see.
+              <p className="text-xl md:text-2xl text-white/90 font-medium leading-relaxed drop-shadow-md">
+                Seattle ProWash protects your home with expert moss removal, pro gear, and a 12-month moss-free guarantee. We won't damage your roof or waste your time.
               </p>
               
-              <p className="text-sm text-white font-medium drop-shadow-xl">
+              <p className="text-sm text-white/80 font-medium">
                 ⭐ <a 
                   href="https://www.google.com/search?q=Seattle+ProWash+reviews" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="hover:text-bright-green transition-colors cursor-pointer inline-flex items-center gap-1"
+                  className="hover:text-moss-green transition-colors cursor-pointer inline-flex items-center gap-1"
                 >
                   <GoogleIcon className="inline" />
                   180+ 5‑Star Reviews
                 </a> · Fully Licensed & Insured
               </p>
               
-              <p className="text-sm text-white font-medium drop-shadow-xl">
+              <p className="text-sm text-white/70 font-medium">
                 🗺️ Serving Kenmore, Bothell, Kirkland & nearby
               </p>
             </div>
 
             {/* CTA */}
             <div className="space-y-3">
-              <div className="flex justify-center lg:justify-start gap-4 flex-wrap">
+              <div className="flex justify-center lg:justify-start">
                 <Button 
                   variant="cta-orange" 
                   size="xl"
@@ -74,66 +72,16 @@ const Hero = () => {
                     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
-                  Get My Fast Quote
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="xl"
-                  className="border-white text-white hover:bg-white hover:text-dark-teal font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-                  onClick={() => {
-                    window.location.href = '/pricing';
-                  }}
-                >
-                  See Our Pricing
+                  Get My Free Quote
                 </Button>
               </div>
               <div className="text-center lg:text-left">
-                <p className="text-white font-medium drop-shadow-xl">📞 <a href="tel:2067526690" className="hover:text-bright-green transition-colors">Call or Text: 206.752.6690</a></p>
+                <p className="text-white/90 font-medium">📞 <a href="tel:2067526690" className="hover:text-moss-green transition-colors">Call or Text: 206.752.6690</a></p>
               </div>
             </div>
+
           </div>
 
-          {/* Before/After Slider */}
-          <div className="lg:ml-8 fade-up">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 shadow-2xl">
-              <h3 className="text-white font-bold text-xl mb-4 text-center">Real Before & After Results</h3>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <p className="text-white/80 text-sm font-medium text-center">Before</p>
-                  <div className="rounded-lg overflow-hidden shadow-lg">
-                    <picture>
-                      <source srcSet="/lovable-uploads/6f421435-bb27-40ea-ac27-6ba923f0d820.png" type="image/webp" />
-                      <img 
-                        src="/lovable-uploads/6f421435-bb27-40ea-ac27-6ba923f0d820.png"
-                        alt="Moss-covered roof before cleaning"
-                        className="w-full h-32 object-cover"
-                        loading="eager"
-                        width="300"
-                        height="200"
-                      />
-                    </picture>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <p className="text-white/80 text-sm font-medium text-center">After</p>
-                  <div className="rounded-lg overflow-hidden shadow-lg">
-                    <picture>
-                      <source srcSet={newRoofAfter1WebP} type="image/webp" />
-                      <img 
-                        src={newRoofAfter1}
-                        alt="Clean roof after professional cleaning"
-                        className="w-full h-32 object-cover"
-                        loading="eager"
-                        width="300"
-                        height="200"
-                      />
-                    </picture>
-                  </div>
-                </div>
-              </div>
-              <p className="text-white/70 text-xs text-center mt-3">Seattle Roof Cleaning • 12-Month Guarantee</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
