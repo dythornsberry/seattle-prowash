@@ -4,46 +4,59 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { CheckCircle, Phone } from "lucide-react";
+import { CheckCircle, Phone, Settings } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 const FinalCTA = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [webhookUrl, setWebhookUrl] = useState("");
+  const [showWebhookSettings, setShowWebhookSettings] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    
+    if (!webhookUrl) {
+      toast({
+        title: "Webhook URL Required",
+        description: "Please enter your Zapier webhook URL in the settings first.",
+        variant: "destructive",
+      });
+      setShowWebhookSettings(true);
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
       const formData = new FormData(e.currentTarget);
       const data = {
         name: formData.get('name'),
-        phone: formData.get('phone'),
+        mobile: formData.get('mobile'), // Changed from 'phone' to 'mobile' for Zapier
         email: formData.get('email'),
         address: formData.get('address'),
         service: formData.get('service'),
-        message: formData.get('message')
+        message: formData.get('message'),
+        timestamp: new Date().toISOString(),
+        source: 'Seattle ProWash Website'
       };
 
-      const response = await fetch('/api/send-quote', {
+      const response = await fetch(webhookUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
+        mode: 'no-cors', // Handle CORS for webhook calls
         body: JSON.stringify(data),
       });
 
-      if (response.ok) {
-        toast({
-          title: "Quote Request Sent!",
-          description: "We'll get back to you within the hour with your free estimate.",
-        });
-        (e.target as HTMLFormElement).reset();
-      } else {
-        throw new Error('Failed to send quote request');
-      }
+      // Since we're using no-cors, we won't get a proper response status
+      toast({
+        title: "Quote Request Sent!",
+        description: "We'll get back to you within the hour with your free estimate.",
+      });
+      (e.target as HTMLFormElement).reset();
     } catch (error) {
       toast({
         title: "Something went wrong",
@@ -86,6 +99,37 @@ const FinalCTA = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="p-8">
+              {/* Zapier Webhook Settings */}
+              <div className="mb-6 p-4 bg-gray-50 rounded-lg border">
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-sm font-medium text-dark-teal">Zapier Integration Settings</h3>
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => setShowWebhookSettings(!showWebhookSettings)}
+                  >
+                    <Settings className="w-4 h-4" />
+                  </Button>
+                </div>
+                {showWebhookSettings && (
+                  <div>
+                    <Label htmlFor="webhook" className="text-sm text-gray-600">Zapier Webhook URL</Label>
+                    <Input
+                      id="webhook"
+                      type="url"
+                      placeholder="https://hooks.zapier.com/hooks/catch/..."
+                      value={webhookUrl}
+                      onChange={(e) => setWebhookUrl(e.target.value)}
+                      className="mt-1"
+                    />
+                    <p className="text-xs text-gray-500 mt-1">
+                      Enter your Zapier webhook URL to connect form submissions to Jobber
+                    </p>
+                  </div>
+                )}
+              </div>
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
@@ -99,10 +143,10 @@ const FinalCTA = () => {
                     />
                   </div>
                   <div>
-                    <Label htmlFor="phone" className="text-dark-teal font-medium">Phone *</Label>
+                    <Label htmlFor="mobile" className="text-dark-teal font-medium">Mobile *</Label>
                     <Input 
-                      id="phone" 
-                      name="phone" 
+                      id="mobile" 
+                      name="mobile" 
                       type="tel" 
                       required 
                       className="mt-1"
