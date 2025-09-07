@@ -13,8 +13,10 @@ import TestimonialSlider from "@/components/TestimonialSlider";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import CTABanner from "@/components/CTABanner";
 import QuoteForm from "@/components/QuoteForm";
+import SeasonalPromotions from "@/components/SeasonalPromotions";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
+import FloatingSMSButton from "@/components/FloatingSMSButton";
 
 const Index = () => {
   // Intersection Observer for fade-up animations
@@ -106,9 +108,11 @@ const Index = () => {
         <div className="bg-off-white">
           <QuoteForm />
         </div>
+        <SeasonalPromotions />
         </main>
         <Footer />
         <MobileBottomBar />
+        <FloatingSMSButton />
       </div>
     </div>
   );
