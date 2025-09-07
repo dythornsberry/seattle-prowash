@@ -31,23 +31,22 @@ const Gallery = () => {
 
   const categories = [
     "All",
-    "Roof Cleaning", 
-    "House Washing",
+    "Roof Cleaning & Moss Removal", 
     "Gutter Cleaning",
-    "Pressure Washing",
-    "Commercial",
+    "House Washing",
+    "Pressure Washing", 
     "Team at Work"
   ];
 
   const galleryImages = {
-    "Roof Cleaning": [
+    "Roof Cleaning & Moss Removal": [
       { 
         src: asphaltRoofBefore, 
         alt: "Roof moss removal before and after in Seattle", 
         title: "Roof Moss Removal", 
         location: "Seattle", 
         description: "Roof moss protection treatment in Seattle – moss removal before and after",
-        service: "Roof Cleaning"
+        service: "Roof Cleaning & Moss Removal"
       },
       { 
         src: metalRoofBefore, 
@@ -55,7 +54,7 @@ const Gallery = () => {
         title: "Metal Roof Restoration", 
         location: "Bellevue", 
         description: "Metal roof cleaning in Bellevue – before and after treatment",
-        service: "Roof Cleaning"
+        service: "Roof Cleaning & Moss Removal"
       },
       { 
         src: dylanRoofWork, 
@@ -63,7 +62,7 @@ const Gallery = () => {
         title: "Dylan - Roof Cleaning Specialist", 
         location: "Kirkland", 
         description: "Professional roof cleaning specialist at work",
-        service: "Roof Cleaning"
+        service: "Roof Cleaning & Moss Removal"
       },
       { 
         src: "/lovable-uploads/e74889d8-949e-43d7-8979-5150f13e7df4.png", 
@@ -71,7 +70,7 @@ const Gallery = () => {
         title: "Metal Roof Moss Removal", 
         location: "Seattle Area", 
         description: "Complete metal roof restoration - moss removal and cleaning before and after",
-        service: "Roof Cleaning"
+        service: "Roof Cleaning & Moss Removal"
       },
       { 
         src: "/lovable-uploads/39ad7527-e74d-4532-a64b-0365b83aee6b.png", 
@@ -79,7 +78,7 @@ const Gallery = () => {
         title: "Metal Roof & Skylight Cleaning", 
         location: "Seattle Area", 
         description: "Professional metal roof cleaning with skylight cleaning - complete restoration",
-        service: "Roof Cleaning"
+        service: "Roof Cleaning & Moss Removal"
       },
       { 
         src: "/lovable-uploads/380b267e-dbb4-4a71-8ac9-2bba6d28b15c.png", 
@@ -87,7 +86,7 @@ const Gallery = () => {
         title: "Metal Roof Deep Cleaning", 
         location: "Seattle Area", 
         description: "Intensive metal roof cleaning showing the cleaning process and dramatic results - before and after",
-        service: "Roof Cleaning"
+        service: "Roof Cleaning & Moss Removal"
       },
       { 
         src: "/lovable-uploads/7cdfb095-76e6-4419-b395-a8272819a23b.png", 
@@ -95,7 +94,7 @@ const Gallery = () => {
         title: "Asphalt Roof Moss Removal - Before", 
         location: "Seattle, WA", 
         description: "Severely moss-covered asphalt roof with debris accumulation requiring professional moss protection treatment",
-        service: "Roof Cleaning"
+        service: "Roof Cleaning & Moss Removal"
       },
       { 
         src: "/lovable-uploads/cd85dd92-8acb-405d-a73c-44650e962bd8.png", 
@@ -103,7 +102,7 @@ const Gallery = () => {
         title: "Asphalt Roof Moss Removal - After", 
         location: "Seattle, WA", 
         description: "Dramatic transformation of asphalt roof after professional moss removal and cleaning",
-        service: "Roof Cleaning"
+        service: "Roof Cleaning & Moss Removal"
       },
       { 
         src: "/lovable-uploads/64d9c018-2edd-4f52-a9c8-26f38eacb1ab.png", 
@@ -111,7 +110,7 @@ const Gallery = () => {
         title: "Roof Debris Removal Transformation", 
         location: "Seattle Area", 
         description: "Professional asphalt roof cleaning - complete debris and moss removal before and after treatment",
-        service: "Roof Cleaning"
+        service: "Roof Cleaning & Moss Removal"
       },
       { 
         src: "/lovable-uploads/d860338a-0f08-4e00-9f5a-6de054035c8f.png", 
@@ -119,7 +118,7 @@ const Gallery = () => {
         title: "Asphalt Roof Deep Cleaning", 
         location: "Seattle Area", 
         description: "Comprehensive asphalt roof moss protection treatment - removing years of moss, debris, and organic buildup",
-        service: "Roof Cleaning"
+        service: "Roof Cleaning & Moss Removal"
       },
       { 
         src: "/lovable-uploads/61baa673-a9e7-4e3c-a983-cc33629610c0.png", 
@@ -127,7 +126,7 @@ const Gallery = () => {
         title: "Roof Moss Treatment in Progress", 
         location: "Seattle Area", 
         description: "Professional team member applying moss protection treatment to asphalt roof - showing the cleaning process in action",
-        service: "Roof Cleaning"
+        service: "Roof Cleaning & Moss Removal"
       },
       { 
         src: "/lovable-uploads/0b5d9cfa-52bb-4f34-b0ff-3ddd5f38c3b4.png", 
@@ -135,7 +134,7 @@ const Gallery = () => {
         title: "Asphalt Roof Moss Removal", 
         location: "Seattle Area", 
         description: "Professional moss removal on asphalt shingle roof - gentle yet effective treatment restores roof appearance",
-        service: "Roof Cleaning"
+        service: "Roof Cleaning & Moss Removal"
       },
       { 
         src: "/lovable-uploads/06729db5-d286-4da3-88bf-5096689d3383.png", 
@@ -143,7 +142,7 @@ const Gallery = () => {
         title: "Roof Moss Treatment in Progress", 
         location: "Seattle Area", 
         description: "Professional roof moss protection application in action - specialized cleaning solution safely treating asphalt shingles",
-        service: "Roof Cleaning"
+        service: "Roof Cleaning & Moss Removal"
       },
       { 
         src: "/lovable-uploads/84877120-87fc-4d9f-8151-f6013e38b055.png", 
@@ -151,16 +150,16 @@ const Gallery = () => {
         title: "Asphalt Roof Moss Removal - Before & After", 
         location: "Seattle, WA", 
         description: "Professional asphalt roof cleaning transformation - before showing heavy moss coverage and after revealing clean, restored shingles",
-        service: "Roof Cleaning"
+        service: "Roof Cleaning & Moss Removal"
       }
     ],
     "House Washing": [
       { 
         src: houseBefore, 
         alt: "House exterior cleaning before and after in Kenmore", 
-        title: "House Exterior Cleaning", 
+        title: "House Washing - Gentle Exterior Cleaning", 
         location: "Kenmore", 
-        description: "House washing in Kenmore – gentle exterior cleaning before and after",
+        description: "Gentle house washing in Kenmore – safe exterior cleaning before and after",
         service: "House Washing"
       },
       { 
@@ -234,25 +233,25 @@ const Gallery = () => {
       { 
         src: patioBefore, 
         alt: "Patio pressure washing transformation in Seattle", 
-        title: "Patio Pressure Washing", 
+        title: "Concrete Surface Restoration", 
         location: "Seattle", 
-        description: "Pressure washing in Seattle – patio restoration before and after",
+        description: "Concrete surface restoration in Seattle – removing moss and debris",
         service: "Pressure Washing"
       },
       { 
         src: drivewayBefore, 
         alt: "Driveway moss removal and cleaning in Kirkland", 
-        title: "Driveway Moss Removal", 
+        title: "Driveway Surface Cleaning", 
         location: "Kirkland", 
-        description: "Pressure washing in Kirkland – driveway moss removal and cleaning",
+        description: "Driveway surface cleaning in Kirkland – moss and buildup removal",
         service: "Pressure Washing"
       },
       { 
         src: dylanOwnerPatioPressureWashing, 
         alt: "Dylan pressure washing patio surface", 
-        title: "Professional Pressure Washing", 
+        title: "Professional Surface Cleaning", 
         location: "Bellevue", 
-        description: "Professional pressure washing service in action",
+        description: "Professional surface cleaning service in action",
         service: "Pressure Washing"
       },
       { 

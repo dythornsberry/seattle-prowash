@@ -70,7 +70,7 @@ const Footer = () => {
                   variant="prowash-secondary" 
                   size="sm" 
                   className="mt-2 text-xs"
-                  onClick={() => window.open('https://www.google.com/search?q=Seattle+ProWash+reviews', '_blank')}
+                  onClick={() => window.open('https://g.page/r/CZ1YhG3KQ4_8EAE/review', '_blank')}
                 >
                   Read Reviews
                 </Button>

@@ -49,7 +49,7 @@ const TrustSignalSection = () => {
             Based on 180+ Google Reviews
           </p>
           <a 
-            href="https://www.google.com/search?q=Seattle+ProWash+reviews" 
+            href="https://g.page/r/CZ1YhG3KQ4_8EAE/review" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-block mt-2 text-primary-teal hover:text-primary-teal/80 font-medium underline"

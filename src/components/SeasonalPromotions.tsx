@@ -6,15 +6,15 @@ const SeasonalPromotions = () => {
   const promotions = [
     {
       id: 1,
-      title: "Fall Gutter Cleaning + Roof Moss Protection Package",
+      title: "Fall 2025 Roof & Gutter Cleaning + Moss Protection Package",
       description: "Complete autumn protection for your home. Includes gutter cleaning, debris removal, and our professional moss treatment with 12-month guarantee.",
-      validUntil: "December 31, 2024",
+      validUntil: "December 31, 2025",
       discount: "Save $50",
       isActive: true
     },
     {
       id: 2, 
-      title: "Winter Roof & Gutter Maintenance Special",
+      title: "Winter 2025 Roof & Gutter Maintenance Special",
       description: "Protect your home this winter with our comprehensive roof and gutter cleaning service plus moss prevention treatment.",
       validUntil: "March 31, 2025",
       discount: "15% Off",

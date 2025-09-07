@@ -183,7 +183,7 @@ const TestimonialSlider = () => {
           <div className="text-center mt-8">
             <Button
               variant="outline"
-              onClick={() => window.open('https://www.google.com/search?q=Seattle+ProWash+reviews', '_blank')}
+              onClick={() => window.open('https://g.page/r/CZ1YhG3KQ4_8EAE/review', '_blank')}
             >
               Read reviews on Google →
             </Button>

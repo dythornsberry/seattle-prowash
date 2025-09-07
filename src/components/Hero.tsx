@@ -46,7 +46,7 @@ const Hero = () => {
               
               <p className="text-sm text-white/80 font-medium">
                 ★★★★★ <a 
-                  href="https://www.google.com/search?q=Seattle+ProWash+reviews" 
+                  href="https://g.page/r/CZ1YhG3KQ4_8EAE/review" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="hover:text-moss-green transition-colors cursor-pointer inline-flex items-center gap-1"

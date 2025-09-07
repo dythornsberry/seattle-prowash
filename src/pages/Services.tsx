@@ -10,7 +10,7 @@ import { navigateToContact } from "@/lib/navigation";
 // Import service images
 import roofMossRemoval from "@/assets/roof-moss-removal-detailed-before-after.jpg";
 import gutterCleaning from "@/assets/gutter-cleaning-before-after.jpg";
-import houseSoftwash from "@/assets/house-softwash-before-after.jpg";
+import houseWashing from "@/assets/house-softwash-before-after.jpg";
 import pressureWashing from "@/assets/patio-pressure-washing-before-after.jpg";
 
 const Services = () => {
@@ -102,7 +102,7 @@ const Services = () => {
       icon: Home,
       title: "House Washing (Supplementary Service)", 
       subtitle: "Gentle house washing for your home's full exterior",
-      image: houseSoftwash,
+      image: houseWashing,
       description: "Our gentle but effective house washing cleans your entire home's exterior, including 2nd-story homes, without the risk of damage from high-pressure washing.",
       process: [
         "Cleans siding, trim, soffits, eaves, exterior gutters, windows & doors"
