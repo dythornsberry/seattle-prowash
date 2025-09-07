@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import Header from "@/components/Header";
+import StickyTopBar from "@/components/StickyTopBar";
 import Hero from "@/components/Hero";
+import TrustSignalSection from "@/components/TrustSignalSection";
 import TrustBar from "@/components/TrustBar";
 import BenefitStrip from "@/components/BenefitStrip";
 import ServicesPreview from "@/components/ServicesPreview";
@@ -68,12 +70,15 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-      <main>
-        <Hero />
-        <div className="bg-off-white">
-          <TrustBar />
-        </div>
+      <StickyTopBar />
+      <div style={{ paddingTop: '60px' }}>
+        <Header />
+        <main>
+          <Hero />
+          <TrustSignalSection />
+          <div className="bg-off-white">
+            <TrustBar />
+          </div>
         <div className="bg-dark-teal text-white">
           <BenefitStrip />
         </div>
@@ -101,9 +106,10 @@ const Index = () => {
         <div className="bg-off-white">
           <QuoteForm />
         </div>
-      </main>
-      <Footer />
-      <MobileBottomBar />
+        </main>
+        <Footer />
+        <MobileBottomBar />
+      </div>
     </div>
   );
 };

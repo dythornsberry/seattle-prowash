@@ -37,11 +37,11 @@ const Hero = () => {
           <div className="text-center lg:text-left space-y-8 fade-up">
             <div className="space-y-6">
               <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight drop-shadow-lg">
-                Roof & Gutter Cleaning in Kenmore, Bothell & Kirkland
+                Roof & Gutter Cleaning & Moss Treatment in Kenmore, Bothell & Kirkland
               </h1>
               
               <p className="text-xl md:text-2xl text-white/90 font-medium leading-relaxed drop-shadow-md">
-                Fast quotes, safe results, 12-month moss-free guarantee.
+                12-month moss-free guarantee • Same-day estimates • Professional results
               </p>
               
               <p className="text-sm text-white/80 font-medium">
@@ -62,7 +62,7 @@ const Hero = () => {
             </div>
 
             {/* CTA */}
-            <div className="space-y-3">
+            <div className="space-y-4">
               <div className="flex justify-center lg:justify-start">
                 <Button 
                   variant="cta-orange" 
@@ -77,6 +77,11 @@ const Hero = () => {
               </div>
               <div className="text-center lg:text-left">
                 <p className="text-white/90 font-medium">📞 <a href="tel:12067526690" className="hover:text-moss-green transition-colors">Call or Text 206-752-6690</a></p>
+              </div>
+              <div className="text-center lg:text-left">
+                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
+                  <span className="text-white/90 font-medium text-sm">Licensed & Insured • 180+ 5-Star Reviews</span>
+                </div>
               </div>
             </div>
 

@@ -40,9 +40,11 @@ export const navigateToReviews = () => {
   if (window.location.pathname === '/') {
     const reviewsElement = document.getElementById('reviews');
     if (reviewsElement) {
-      reviewsElement.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
+      // Account for sticky top bar height
+      const offsetTop = reviewsElement.offsetTop - 60;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
       });
     }
   } else {
