@@ -6,32 +6,13 @@ const ServicesPreview = () => {
   const services = [
     {
       icon: Droplet,
-      title: "Roof & Gutter Cleaning",
-      description: "Moss removal + full gutter cleanouts with a roof treatment to keep moss away. 12-month guarantee.",
+      title: "Roof & Gutter Cleaning & Moss Treatment",
+      description: "Professional moss removal + full gutter cleanouts with protective treatment to keep moss away. 12-month guarantee.",
       features: [
-        "Safely remove damaging moss and debris",
-        "Apply professional treatment to protect shingles",
-        "Complete gutter & downspout cleaning with photo proof"
-      ]
-    },
-    {
-      icon: Zap,
-      title: "Pressure Washing",
-      description: "Driveways, patios, walkways. Safer, cleaner surfaces—fast.",
-      features: [
-        "Deep clean driveways, patios, and walkways",
-        "Eliminate slippery moss and algae buildup",
-        "Professional equipment for lasting results"
-      ]
-    },
-    {
-      icon: Home,
-      title: "House Washing",
-      description: "Gentle, low-pressure exterior wash for siding, trim, and eaves.",
-      features: [
-        "Safe for all siding materials",
-        "Remove mildew, algae, and grime",
-        "Professional equipment and techniques"
+        "Safely remove damaging moss and debris from roof",
+        "Apply professional moss protection treatment to prevent regrowth", 
+        "Complete gutter & downspout cleaning with photo proof",
+        "12-month moss-free guarantee on qualifying treatments"
       ]
     }
   ];
@@ -48,7 +29,7 @@ const ServicesPreview = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-8 max-w-2xl mx-auto">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (

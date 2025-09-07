@@ -58,43 +58,6 @@ const Services = () => {
       crossPromo: "**For complete protection, pair this with our Gutter Cleaning service. Ask about our package discount!**"
     },
     {
-      id: "pressure-washing", 
-      icon: Zap,
-      title: "Pressure Washing",
-      subtitle: "Restore driveways, patios, decks, and walkways",
-      image: pressureWashing,
-      description: "Professional pressure washing that removes years of buildup from your concrete surfaces, making them look new again. It's the perfect solution for eliminating slippery, unsafe moss and stubborn grime.",
-      process: [
-        "Clean concrete, pavers, fencing, and other flat surfaces",
-        "Use professional surface cleaner for streak-free results"
-      ],
-      benefits: [
-        "Eliminates dangerous slip hazards from moss and algae",
-        "Restores original concrete color and texture",
-        "Removes discoloration and surface stains",
-        "Increases property value and curb appeal"
-      ],
-      priceNote: "Starting at $249 for driveways and patios"
-    },
-    {
-      id: "house-washing",
-      icon: Home,
-      title: "House Washing", 
-      subtitle: "Gentle house washing for your home's full exterior",
-      image: houseSoftwash,
-      description: "Our gentle but effective house washing cleans your entire home's exterior, including 2nd-story homes, without the risk of damage from high-pressure washing.",
-      process: [
-        "Cleans siding, trim, soffits, eaves, exterior gutters, windows & doors"
-      ],
-      benefits: [
-        "Safe on all siding materials (vinyl, wood, hardi-board siding)",
-        "Removes mold, mildew, and organic stains completely", 
-        "Environmentally friendly cleaning solutions",
-        "Dramatically improves home appearance"
-      ],
-      priceNote: "Starting at $499 for typical homes"
-    },
-    {
       id: "gutter-cleaning",
       icon: Car,
       title: "Gutter Cleaning",
@@ -114,6 +77,43 @@ const Services = () => {
         "Extends gutter system lifespan"
       ],
       priceNote: "**The perfect partner to our Roof Cleaning service.** Standalone gutter cleaning starts at $249. Ask about our package discount when you book both!"
+    },
+    {
+      id: "pressure-washing", 
+      icon: Zap,
+      title: "Pressure Washing (Supplementary Service)",
+      subtitle: "Restore driveways, patios, decks, and walkways",
+      image: pressureWashing,
+      description: "Professional pressure washing that removes years of buildup from your concrete surfaces, making them look new again. Perfect addition to our roof and gutter services.",
+      process: [
+        "Clean concrete, pavers, fencing, and other flat surfaces",
+        "Use professional surface cleaner for streak-free results"
+      ],
+      benefits: [
+        "Eliminates dangerous slip hazards from moss and algae",
+        "Restores original concrete color and texture",
+        "Removes discoloration and surface stains",
+        "Increases property value and curb appeal"
+      ],
+      priceNote: "Starting at $249 for driveways and patios"
+    },
+    {
+      id: "house-washing",
+      icon: Home,
+      title: "House Washing (Supplementary Service)", 
+      subtitle: "Gentle house washing for your home's full exterior",
+      image: houseSoftwash,
+      description: "Our gentle but effective house washing cleans your entire home's exterior, including 2nd-story homes, without the risk of damage from high-pressure washing.",
+      process: [
+        "Cleans siding, trim, soffits, eaves, exterior gutters, windows & doors"
+      ],
+      benefits: [
+        "Safe on all siding materials (vinyl, wood, hardi-board siding)",
+        "Removes mold, mildew, and organic stains completely", 
+        "Environmentally friendly cleaning solutions",
+        "Dramatically improves home appearance"
+      ],
+      priceNote: "Starting at $499 for typical homes"
     }
   ];
 

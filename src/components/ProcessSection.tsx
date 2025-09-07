@@ -6,7 +6,7 @@ const ProcessSection = () => {
     {
       number: "1",
       title: "Fast Quote",
-      description: "Call, text, or use the form. Most quotes sent quickly by text/email."
+      description: "Call or use the form. Most quotes sent quickly by email."
     },
     {
       number: "2", 

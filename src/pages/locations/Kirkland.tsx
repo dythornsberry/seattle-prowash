@@ -134,22 +134,6 @@ const Kirkland = () => {
                   </div>
 
                   <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">Luxury House Washing</h3>
-                    <p className="text-white/80 mb-4">
-                      Specialized gentle washing for high-end siding materials, preserving beauty while removing contaminants.
-                    </p>
-                    <div className="text-moss-green font-semibold">Material-Safe Methods</div>
-                  </div>
-
-                  <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">Estate Pressure Washing</h3>
-                    <p className="text-white/80 mb-4">
-                      Professional cleaning for driveways, walkways, patios, and outdoor living spaces throughout Kirkland.
-                    </p>
-                    <div className="text-moss-green font-semibold">Outdoor Living Care</div>
-                  </div>
-
-                  <div className="text-center">
                     <h3 className="text-xl font-bold mb-4">Roof Restoration</h3>
                     <p className="text-white/80 mb-4">
                       Gentle yet thorough roof cleaning that restores appearance and extends the life of premium roofing materials.
@@ -163,6 +147,22 @@ const Kirkland = () => {
                       Customized maintenance schedules to keep your Kirkland property looking pristine year-round.
                     </p>
                     <div className="text-moss-green font-semibold">Ongoing Care</div>
+                  </div>
+
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold mb-4">Luxury House Washing (Add-On)</h3>
+                    <p className="text-white/80 mb-4">
+                      Specialized gentle washing for high-end siding materials, preserving beauty while removing contaminants.
+                    </p>
+                    <div className="text-moss-green font-semibold">Material-Safe Methods</div>
+                  </div>
+
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold mb-4">Estate Pressure Washing (Add-On)</h3>
+                    <p className="text-white/80 mb-4">
+                      Professional cleaning for driveways, walkways, patios, and outdoor living spaces throughout Kirkland.
+                    </p>
+                    <div className="text-moss-green font-semibold">Outdoor Living Care</div>
                   </div>
                 </div>
               </div>

@@ -134,22 +134,6 @@ const Kenmore = () => {
                   </div>
 
                   <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">House Washing</h3>
-                    <p className="text-white/80 mb-4">
-                      Gentle yet effective exterior cleaning that removes algae, mildew, and dirt without damaging your home's surfaces.
-                    </p>
-                    <div className="text-moss-green font-semibold">Safe & Effective</div>
-                  </div>
-
-                  <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">Pressure Washing</h3>
-                    <p className="text-white/80 mb-4">
-                      Professional pressure washing for driveways, patios, decks, and walkways around your Kenmore property.
-                    </p>
-                    <div className="text-moss-green font-semibold">Concrete & Surfaces</div>
-                  </div>
-
-                  <div className="text-center">
                     <h3 className="text-xl font-bold mb-4">Roof Moss Protection</h3>
                     <p className="text-white/80 mb-4">
                       Gentle roof cleaning that removes stains, algae, and organic growth without the damage of pressure washing.
@@ -163,6 +147,22 @@ const Kenmore = () => {
                       Restore your gutters' appearance by removing oxidation stains and returning them to like-new condition.
                     </p>
                     <div className="text-moss-green font-semibold">Like-New Appearance</div>
+                  </div>
+
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold mb-4">House Washing (Add-On)</h3>
+                    <p className="text-white/80 mb-4">
+                      Gentle yet effective exterior cleaning that removes algae, mildew, and dirt without damaging your home's surfaces.
+                    </p>
+                    <div className="text-moss-green font-semibold">Safe & Effective</div>
+                  </div>
+
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold mb-4">Pressure Washing (Add-On)</h3>
+                    <p className="text-white/80 mb-4">
+                      Professional pressure washing for driveways, patios, decks, and walkways around your Kenmore property.
+                    </p>
+                    <div className="text-moss-green font-semibold">Concrete & Surfaces</div>
                   </div>
                 </div>
               </div>

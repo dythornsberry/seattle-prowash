@@ -116,7 +116,7 @@ const QuoteForm = () => {
                         <a href="tel:12067526690" className="font-semibold text-brand-navy hover:text-brand-yellow transition-colors">
                           206-752-6690
                         </a>
-                      <p className="text-sm text-muted-foreground">Call or text anytime</p>
+                      <p className="text-sm text-muted-foreground">Call us anytime</p>
                     </div>
                   </div>
                   
@@ -241,22 +241,6 @@ const QuoteForm = () => {
                       </div>
                     </div>
 
-                    {/* SMS Consent Checkbox */}
-                    <div className="space-y-3">
-                      <label className="flex items-start gap-3 cursor-pointer">
-                        <input 
-                          type="checkbox" 
-                          defaultChecked 
-                          className="mt-1 w-4 h-4 text-brand-yellow border-brand-yellow/30 rounded focus:ring-brand-yellow"
-                        />
-                        <span className="text-sm text-brand-navy">
-                          ✅ Yes, text me my quote for the fastest response.
-                        </span>
-                      </label>
-                      <p className="text-xs text-muted-foreground">
-                        By submitting, you agree to receive SMS from Seattle ProWash. Reply STOP to opt out. Msg/data rates may apply. Consent not required for purchase.
-                      </p>
-                    </div>
 
                     <Button
                       type="submit"

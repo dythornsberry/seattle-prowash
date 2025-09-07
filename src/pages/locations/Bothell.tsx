@@ -134,22 +134,6 @@ const Bothell = () => {
                   </div>
 
                   <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">House Washing</h3>
-                    <p className="text-white/80 mb-4">
-                      Gentle washing techniques that safely clean siding, removing moss, algae, and years of accumulated grime.
-                    </p>
-                    <div className="text-moss-green font-semibold">Gentle & Effective</div>
-                  </div>
-
-                  <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">Concrete Cleaning</h3>
-                    <p className="text-white/80 mb-4">
-                      Professional pressure washing for driveways, walkways, and patios throughout Bothell neighborhoods.
-                    </p>
-                    <div className="text-moss-green font-semibold">Surface Restoration</div>
-                  </div>
-
-                  <div className="text-center">
                     <h3 className="text-xl font-bold mb-4">Roof Cleaning</h3>
                     <p className="text-white/80 mb-4">
                       Safe roof cleaning methods that remove stains and organic growth without damaging roofing materials.
@@ -163,6 +147,22 @@ const Bothell = () => {
                       Professional exterior cleaning for Bothell businesses, maintaining curb appeal and property value.
                     </p>
                     <div className="text-moss-green font-semibold">Business Solutions</div>
+                  </div>
+
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold mb-4">House Washing (Add-On)</h3>
+                    <p className="text-white/80 mb-4">
+                      Gentle washing techniques that safely clean siding, removing moss, algae, and years of accumulated grime.
+                    </p>
+                    <div className="text-moss-green font-semibold">Gentle & Effective</div>
+                  </div>
+
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold mb-4">Concrete Cleaning (Add-On)</h3>
+                    <p className="text-white/80 mb-4">
+                      Professional pressure washing for driveways, walkways, and patios throughout Bothell neighborhoods.
+                    </p>
+                    <div className="text-moss-green font-semibold">Surface Restoration</div>
                   </div>
                 </div>
               </div>
