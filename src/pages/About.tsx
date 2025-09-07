@@ -47,7 +47,7 @@ const About = () => {
                 Meet Dylan, Owner of Seattle ProWash
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-white/90">
-                Helping Seattle-area homeowners restore their homes with safe, effective soft washing and pressure washing since 2022.
+                Helping Seattle-area homeowners restore their homes with safe, effective roof moss protection and pressure washing since 2022.
               </p>
             </div>
           </div>
@@ -172,7 +172,7 @@ const About = () => {
                 <CardContent className="p-6 text-center">
                   <CheckCircle className="w-12 h-12 text-brand-yellow mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-brand-navy mb-3">A Flawless Finish, Guaranteed</h3>
-                  <p className="text-muted-foreground">Our soft washing cleans completely without risking damage to your property.</p>
+                  <p className="text-muted-foreground">Our gentle house washing cleans completely without risking damage to your property.</p>
                 </CardContent>
               </Card>
 
@@ -201,7 +201,7 @@ const About = () => {
             <div className="max-w-4xl mx-auto text-center fade-up">
               <div className="bg-brand-white rounded-2xl p-8 shadow-lg border border-brand-orange/20">
                 <p className="text-lg text-muted-foreground mb-6">
-                  Ready for a moss-free roof? Call or text 206‑752‑6690 or get your free quote today.
+                  Ready for a moss-free roof? Call 206-752-6690 or get your free quote today.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                   <Button 
@@ -211,9 +211,13 @@ const About = () => {
                   >
                     Get Free Quote
                   </Button>
-                  <Button variant="prowash-phone" size="xl">
-                    📞 206.752.6690.
-                  </Button>
+                   <Button 
+                     variant="prowash-phone" 
+                     size="xl"
+                     onClick={() => window.location.href = 'tel:206-752-6690'}
+                   >
+                     📞 206-752-6690
+                   </Button>
                 </div>
               </div>
             </div>
@@ -243,7 +247,7 @@ const About = () => {
                     />
                     <div className="absolute bottom-4 left-4 bg-brand-navy/90 text-white px-4 py-2 rounded-lg">
                       <div className="font-semibold">Dylan - Leading the Crew</div>
-                      <div className="text-sm">Roof Soft Washing Specialist</div>
+                      <div className="text-sm">Roof Moss Protection Specialist</div>
                     </div>
                   </div>
                 </div>

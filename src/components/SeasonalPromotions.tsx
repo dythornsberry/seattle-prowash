@@ -14,10 +14,10 @@ const SeasonalPromotions = () => {
     },
     {
       id: 2, 
-      title: "Spring Roof & Gutter Cleaning Special",
-      description: "Get your home ready for the rainy season with our comprehensive roof and gutter cleaning service plus moss prevention treatment.",
-      validUntil: "May 31, 2024",
-      discount: "20% Off",
+      title: "Winter Roof & Gutter Maintenance Special",
+      description: "Protect your home this winter with our comprehensive roof and gutter cleaning service plus moss prevention treatment.",
+      validUntil: "March 31, 2025",
+      discount: "15% Off",
       isActive: true
     }
   ];

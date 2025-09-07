@@ -136,7 +136,7 @@ const Bothell = () => {
                   <div className="text-center">
                     <h3 className="text-xl font-bold mb-4">House Washing</h3>
                     <p className="text-white/80 mb-4">
-                      Soft washing techniques that safely clean siding, removing moss, algae, and years of accumulated grime.
+                      Gentle washing techniques that safely clean siding, removing moss, algae, and years of accumulated grime.
                     </p>
                     <div className="text-moss-green font-semibold">Gentle & Effective</div>
                   </div>

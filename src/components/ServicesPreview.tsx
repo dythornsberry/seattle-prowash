@@ -80,7 +80,7 @@ const ServicesPreview = () => {
                   
                   <div className="pt-4 border-t border-border mt-auto">
                     <p className="text-xs text-brand-gray-text text-center font-medium">
-                      Free Estimates · Call or Text 206.752.6690
+                      Free Estimates · Call 206-752-6690
                     </p>
                   </div>
                   
@@ -112,7 +112,7 @@ const ServicesPreview = () => {
               Ready to Protect Your Home This Fall?
             </p>
             <p className="text-brand-gray-text mb-4">
-              Call or text us today for your free estimate. We'll walk your property and provide an accurate quote for the services you need.
+              Call us today for your free estimate. We'll walk your property and provide an accurate quote for the services you need.
             </p>
             <p className="text-sm text-brand-gray-text italic">
               Roof cleaning costs vary based on roof size and moss level. Most homes fall between $499–$999.

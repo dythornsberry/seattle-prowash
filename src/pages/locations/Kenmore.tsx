@@ -134,7 +134,7 @@ const Kenmore = () => {
                   </div>
 
                   <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">House Soft Washing</h3>
+                    <h3 className="text-xl font-bold mb-4">House Washing</h3>
                     <p className="text-white/80 mb-4">
                       Gentle yet effective exterior cleaning that removes algae, mildew, and dirt without damaging your home's surfaces.
                     </p>
@@ -150,7 +150,7 @@ const Kenmore = () => {
                   </div>
 
                   <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">Roof Soft Washing</h3>
+                    <h3 className="text-xl font-bold mb-4">Roof Moss Protection</h3>
                     <p className="text-white/80 mb-4">
                       Gentle roof cleaning that removes stains, algae, and organic growth without the damage of pressure washing.
                     </p>

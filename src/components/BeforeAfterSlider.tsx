@@ -76,11 +76,11 @@ const BeforeAfterSlider = () => {
       id: 5,
       title: "Asphalt Roof Moss Recovery - Seattle",
       location: "Seattle, WA",
-      service: "Roof Moss Removal + Soft Wash",
+      service: "Roof Moss Removal + Treatment",
       beforeImage: "/lovable-uploads/7cdfb095-76e6-4419-b395-a8272819a23b.png",
       afterImage: "/lovable-uploads/cd85dd92-8acb-405d-a73c-44650e962bd8.png",
       beforeAlt: "Asphalt roof heavily covered in moss and debris before professional cleaning",
-      afterAlt: "Clean asphalt roof after professional moss removal and soft wash treatment",
+      afterAlt: "Clean asphalt roof after professional moss removal and moss protection treatment",
       completionDate: "January 2025"
     },
     {
@@ -164,7 +164,7 @@ const BeforeAfterSlider = () => {
                             </div>
                           </div>
                           <p className="text-sm text-muted-foreground text-center px-2">
-                            {project.service.toLowerCase().includes('roof') ? `Roof soft wash in ${project.location.split(',')[0]} – before moss removal` :
+                            {project.service.toLowerCase().includes('roof') ? `Roof moss treatment in ${project.location.split(',')[0]} – before moss removal` :
                              project.service.toLowerCase().includes('pressure') ? `Pressure washing in ${project.location.split(',')[0]} – before cleaning` :
                              `House washing in ${project.location.split(',')[0]} – before treatment`}
                           </p>
@@ -198,7 +198,7 @@ const BeforeAfterSlider = () => {
                             </div>
                           </div>
                           <p className="text-sm text-muted-foreground text-center px-2">
-                            {project.service.toLowerCase().includes('roof') ? `Roof soft wash in ${project.location.split(',')[0]} – after moss removal` :
+                            {project.service.toLowerCase().includes('roof') ? `Roof moss treatment in ${project.location.split(',')[0]} – after moss removal` :
                              project.service.toLowerCase().includes('pressure') ? `Pressure washing in ${project.location.split(',')[0]} – after cleaning` :
                              `House washing in ${project.location.split(',')[0]} – after treatment`}
                           </p>

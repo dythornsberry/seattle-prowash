@@ -13,10 +13,9 @@ const Footer = () => {
   const services = [
     "Roof Moss Removal",
     "Gutter Cleaning", 
-    "House Soft Wash",
+    "House Washing",
     "Pressure Washing",
-    "Driveway Cleaning",
-    "Roof Soft Wash"
+    "Driveway Cleaning"
   ];
 
   return (
@@ -54,7 +53,7 @@ const Footer = () => {
                   Seattle <span className="text-brand-yellow">ProWash</span>
                 </h2>
                 <p className="text-white/80 leading-relaxed">
-                  Kenmore's trusted roof & gutter cleaning specialists. Protecting Pacific Northwest homes with safe, effective cleaning solutions
+                  Trusted roof & gutter cleaning specialists serving Kenmore, Bothell, Kirkland and the greater Seattle area. Protecting Pacific Northwest homes with safe, effective cleaning solutions
                 </p>
               </div>
               
@@ -118,7 +117,7 @@ const Footer = () => {
                 Serving Kenmore and the greater Seattle area.
               </p>
               <p className="text-sm text-brand-yellow mt-4 font-semibold">
-                Call or text 206‑752‑6690 for your free same-day quote
+                Call 206-752-6690 for your free same-day quote
               </p>
             </div>
 
@@ -133,7 +132,7 @@ const Footer = () => {
                     <a href="tel:206-752-6690" className="font-semibold hover:text-brand-yellow transition-colors">
                       206-752-6690
                     </a>
-                    <p className="text-xs text-white/60">Call or text anytime</p>
+                    <p className="text-xs text-white/60">Call anytime</p>
                   </div>
                 </div>
                 

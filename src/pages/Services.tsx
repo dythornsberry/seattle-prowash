@@ -47,7 +47,7 @@ const Services = () => {
       description: "Left untreated, roof moss shortens the life of your shingles and can cause major water damage. We remove the moss, treat the roof, and keep your home protected, all backed by our 12-month moss-free guarantee.",
       process: [
         "Brush and blow moss and roof debris",
-        "Apply soft wash treatment (manufacturer-recommended method)"
+        "Apply our roof moss protection treatment"
       ],
       benefits: [
         "Extends roof lifespan by removing damaging moss and algae",
@@ -80,9 +80,9 @@ const Services = () => {
       id: "house-washing",
       icon: Home,
       title: "House Washing", 
-      subtitle: "Soft wash cleaning for your home's full exterior",
+      subtitle: "Gentle house washing for your home's full exterior",
       image: houseSoftwash,
-      description: "Our gentle but effective soft washing cleans your entire home's exterior, including 2nd-story homes, without the risk of damage from high-pressure washing.",
+      description: "Our gentle but effective house washing cleans your entire home's exterior, including 2nd-story homes, without the risk of damage from high-pressure washing.",
       process: [
         "Cleans siding, trim, soffits, eaves, exterior gutters, windows & doors"
       ],
@@ -210,8 +210,8 @@ const Services = () => {
                           {service.id === "roof-cleaning" && (
                             <>
                               <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-4">
-                                <h4 className="font-bold text-brand-navy mb-2 text-sm">Q: Is soft washing safe for my roof?</h4>
-                                <p className="text-muted-foreground text-sm">A: Yes. Our soft wash method kills moss/algae at the root without high pressure. It protects shingles and keeps your warranty valid.</p>
+                                <h4 className="font-bold text-brand-navy mb-2 text-sm">Q: Is our roof moss protection treatment safe for my roof?</h4>
+                                <p className="text-muted-foreground text-sm">A: Yes. Our moss protection treatment kills moss and algae at the root without high pressure. It protects shingles and keeps your warranty valid.</p>
                               </div>
                               <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-4">
                                 <h4 className="font-bold text-brand-navy mb-2 text-sm">Q: What types of roofs do you clean?</h4>
@@ -235,7 +235,7 @@ const Services = () => {
                             <>
                               <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-4">
                                 <h4 className="font-bold text-brand-navy mb-2 text-sm">Q: Is house washing safe for all siding types?</h4>
-                                <p className="text-muted-foreground text-sm">A: Yes. Our soft wash method is safe for vinyl, wood, hardiboard, and all common siding materials.</p>
+                                <p className="text-muted-foreground text-sm">A: Yes. Our gentle house washing method is safe for vinyl, wood, hardiboard, and all common siding materials.</p>
                               </div>
                               <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-4">
                                 <h4 className="font-bold text-brand-navy mb-2 text-sm">Q: Do you clean windows during house washing?</h4>
@@ -297,7 +297,7 @@ const Services = () => {
                           onClick={() => window.location.href = 'tel:206-752-6690'}
                         >
                           <Phone className="w-4 h-4 mr-2" />
-                          206.752.6690
+                          206-752-6690
                         </Button>
                       </div>
                     </div>
@@ -377,7 +377,7 @@ const Services = () => {
                   onClick={() => window.location.href = 'tel:206-752-6690'}
                 >
                   <Phone className="w-5 h-5 mr-2" />
-                  Call 206.752.6690
+                  Call 206-752-6690
                 </Button>
               </div>
             </div>

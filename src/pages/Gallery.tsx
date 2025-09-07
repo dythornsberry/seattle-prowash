@@ -46,7 +46,7 @@ const Gallery = () => {
         alt: "Roof moss removal before and after in Seattle", 
         title: "Roof Moss Removal", 
         location: "Seattle", 
-        description: "Roof soft wash in Seattle – moss removal before and after",
+        description: "Roof moss protection treatment in Seattle – moss removal before and after",
         service: "Roof Cleaning"
       },
       { 
@@ -54,7 +54,7 @@ const Gallery = () => {
         alt: "Metal roof cleaning transformation in Bellevue", 
         title: "Metal Roof Restoration", 
         location: "Bellevue", 
-        description: "Metal roof soft wash in Bellevue – before and after treatment",
+        description: "Metal roof cleaning in Bellevue – before and after treatment",
         service: "Roof Cleaning"
       },
       { 
@@ -70,7 +70,7 @@ const Gallery = () => {
         alt: "Metal roof moss removal and cleaning transformation", 
         title: "Metal Roof Moss Removal", 
         location: "Seattle Area", 
-        description: "Complete metal roof restoration - moss removal and soft wash cleaning before and after",
+        description: "Complete metal roof restoration - moss removal and cleaning before and after",
         service: "Roof Cleaning"
       },
       { 
@@ -78,7 +78,7 @@ const Gallery = () => {
         alt: "Metal roof and skylight cleaning before and after", 
         title: "Metal Roof & Skylight Cleaning", 
         location: "Seattle Area", 
-        description: "Professional metal roof soft wash with skylight cleaning - complete restoration",
+        description: "Professional metal roof cleaning with skylight cleaning - complete restoration",
         service: "Roof Cleaning"
       },
       { 
@@ -94,15 +94,15 @@ const Gallery = () => {
         alt: "Asphalt roof heavily covered in moss and debris before professional cleaning", 
         title: "Asphalt Roof Moss Removal - Before", 
         location: "Seattle, WA", 
-        description: "Severely moss-covered asphalt roof with debris accumulation requiring professional soft wash treatment",
+        description: "Severely moss-covered asphalt roof with debris accumulation requiring professional moss protection treatment",
         service: "Roof Cleaning"
       },
       { 
         src: "/lovable-uploads/cd85dd92-8acb-405d-a73c-44650e962bd8.png", 
-        alt: "Clean asphalt roof after professional moss removal and soft wash treatment", 
+        alt: "Clean asphalt roof after professional moss removal and protection treatment", 
         title: "Asphalt Roof Moss Removal - After", 
         location: "Seattle, WA", 
-        description: "Dramatic transformation of asphalt roof after professional moss removal and soft wash cleaning",
+        description: "Dramatic transformation of asphalt roof after professional moss removal and cleaning",
         service: "Roof Cleaning"
       },
       { 
@@ -115,34 +115,34 @@ const Gallery = () => {
       },
       { 
         src: "/lovable-uploads/d860338a-0f08-4e00-9f5a-6de054035c8f.png", 
-        alt: "Asphalt roof soft wash before and after cleaning showing dramatic improvement", 
+        alt: "Asphalt roof moss treatment before and after cleaning showing dramatic improvement", 
         title: "Asphalt Roof Deep Cleaning", 
         location: "Seattle Area", 
-        description: "Comprehensive asphalt roof soft wash treatment - removing years of moss, debris, and organic buildup",
+        description: "Comprehensive asphalt roof moss protection treatment - removing years of moss, debris, and organic buildup",
         service: "Roof Cleaning"
       },
       { 
         src: "/lovable-uploads/61baa673-a9e7-4e3c-a983-cc33629610c0.png", 
-        alt: "Professional team performing asphalt roof soft wash treatment", 
-        title: "Roof Soft Wash in Progress", 
+        alt: "Professional team performing asphalt roof moss protection treatment", 
+        title: "Roof Moss Treatment in Progress", 
         location: "Seattle Area", 
-        description: "Professional team member applying soft wash treatment to asphalt roof - showing the cleaning process in action",
+        description: "Professional team member applying moss protection treatment to asphalt roof - showing the cleaning process in action",
         service: "Roof Cleaning"
       },
       { 
         src: "/lovable-uploads/0b5d9cfa-52bb-4f34-b0ff-3ddd5f38c3b4.png", 
-        alt: "Asphalt roof soft wash moss removal before and after showing dramatic transformation", 
+        alt: "Asphalt roof moss removal before and after showing dramatic transformation", 
         title: "Asphalt Roof Moss Removal", 
         location: "Seattle Area", 
-        description: "Professional soft wash moss removal on asphalt shingle roof - gentle yet effective treatment restores roof appearance",
+        description: "Professional moss removal on asphalt shingle roof - gentle yet effective treatment restores roof appearance",
         service: "Roof Cleaning"
       },
       { 
         src: "/lovable-uploads/06729db5-d286-4da3-88bf-5096689d3383.png", 
-        alt: "Roof soft wash in progress showing treatment application on asphalt shingles", 
-        title: "Roof Soft Wash Treatment in Progress", 
+        alt: "Roof moss treatment in progress showing application on asphalt shingles", 
+        title: "Roof Moss Treatment in Progress", 
         location: "Seattle Area", 
-        description: "Professional roof soft wash application in action - specialized cleaning solution safely treating asphalt shingles",
+        description: "Professional roof moss protection application in action - specialized cleaning solution safely treating asphalt shingles",
         service: "Roof Cleaning"
       },
       { 
@@ -158,33 +158,33 @@ const Gallery = () => {
       { 
         src: houseBefore, 
         alt: "House exterior cleaning before and after in Kenmore", 
-        title: "House Exterior Soft Wash", 
+        title: "House Exterior Cleaning", 
         location: "Kenmore", 
-        description: "House washing in Kenmore – soft wash exterior cleaning before and after",
+        description: "House washing in Kenmore – gentle exterior cleaning before and after",
         service: "House Washing"
       },
       { 
         src: "/lovable-uploads/a1418643-21de-4dd3-a77d-eebe9209eaef.png", 
-        alt: "House siding soft wash before and after showing dramatic cleaning results", 
-        title: "Siding Soft Wash Transformation", 
+        alt: "House siding cleaning before and after showing dramatic cleaning results", 
+        title: "Siding Cleaning Transformation", 
         location: "Seattle Area", 
-        description: "Professional house siding soft wash - removing dirt, algae, and staining to restore clean appearance",
+        description: "Professional house siding cleaning - removing dirt, algae, and staining to restore clean appearance",
         service: "House Washing"
       },
       { 
         src: "/lovable-uploads/da123d29-831c-41a6-be6e-0dab3deef9f0.png", 
-        alt: "House soft wash before and after showing siding transformation", 
-        title: "Professional House Soft Wash", 
+        alt: "House washing before and after showing siding transformation", 
+        title: "Professional House Washing", 
         location: "Seattle Area", 
-        description: "Complete house exterior soft wash - gentle yet effective cleaning that restores siding appearance",
+        description: "Complete house exterior washing - gentle yet effective cleaning that restores siding appearance",
         service: "House Washing"
       },
       { 
         src: "/lovable-uploads/11602706-3a5c-4674-b4c2-f6957b0984d2.png", 
-        alt: "Professional technician performing house soft wash service", 
-        title: "House Soft Wash in Progress", 
+        alt: "Professional technician performing house washing service", 
+        title: "House Washing in Progress", 
         location: "Seattle Area", 
-        description: "Our experienced technician applying soft wash treatment to exterior siding for optimal results",
+        description: "Our experienced technician applying gentle house washing treatment to exterior siding for optimal results",
         service: "House Washing"
       }
     ],
@@ -321,10 +321,10 @@ const Gallery = () => {
       },
       { 
         src: "/lovable-uploads/93a442fb-b597-4fdb-95b1-e0ca6294ae45.png", 
-        alt: "Composite deck before and after soft wash cleaning restoration", 
+        alt: "Composite deck before and after gentle cleaning restoration", 
         title: "Composite Deck Restoration", 
         location: "Seattle Area", 
-        description: "Professional soft wash cleaning restores composite deck to original color and beauty",
+        description: "Professional gentle cleaning restores composite deck to original color and beauty",
         service: "Pressure Washing"
       },
       { 
@@ -541,18 +541,18 @@ const Gallery = () => {
       },
       { 
         src: "/lovable-uploads/69a00574-1236-42ac-8dad-f347524ce62e.png", 
-        alt: "Team performing 3-story townhome soft wash with professional equipment", 
-        title: "3-Story Townhome Soft Wash", 
+        alt: "Team performing 3-story townhome washing with professional equipment", 
+        title: "3-Story Townhome Washing", 
         location: "Seattle Area", 
-        description: "Professional team and equipment setup for multi-story townhome soft washing project",
+        description: "Professional team and equipment setup for multi-story townhome washing project",
         service: "House Washing"
       },
       { 
         src: "/lovable-uploads/2c817c93-c905-4c9d-9f5c-9a73cbf8ad86.png", 
-        alt: "Team member performing building soft wash in Seattle", 
-        title: "Commercial Building Soft Wash", 
+        alt: "Team member performing building washing in Seattle", 
+        title: "Commercial Building Washing", 
         location: "Seattle", 
-        description: "Professional team member in action during commercial building soft wash project",
+        description: "Professional team member in action during commercial building washing project",
         service: "House Washing"
       },
       { 

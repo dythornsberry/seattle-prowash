@@ -136,7 +136,7 @@ const Kirkland = () => {
                   <div className="text-center">
                     <h3 className="text-xl font-bold mb-4">Luxury House Washing</h3>
                     <p className="text-white/80 mb-4">
-                      Specialized soft washing for high-end siding materials, preserving beauty while removing contaminants.
+                      Specialized gentle washing for high-end siding materials, preserving beauty while removing contaminants.
                     </p>
                     <div className="text-moss-green font-semibold">Material-Safe Methods</div>
                   </div>

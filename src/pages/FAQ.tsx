@@ -42,8 +42,8 @@ const FAQ = () => {
   const faqs = [
     {
       icon: Shield,
-      question: "Is soft washing safe for my roof?",
-      answer: "✅ Yes. Our manufacturer-recommended soft wash method kills moss and algae at the root without using damaging high pressure.\n\n✅ Protects your shingles and keeps your warranty valid.",
+      question: "Is our roof moss protection treatment safe for my roof?",
+      answer: "✅ Yes. Our manufacturer-recommended moss protection treatment kills moss and algae at the root without using damaging high pressure.\n\n✅ Protects your shingles and keeps your warranty valid.",
       category: "Safety & Trust"
     },
     {
@@ -61,7 +61,7 @@ const FAQ = () => {
     {
       icon: Shield,
       question: "Will pressure washing damage my surfaces?",
-      answer: "No. We use the right method for each surface:\n\n• Roofs, siding & decks → soft washing\n\n• Concrete & pavers → controlled pressure washing with pro-grade surface cleaners",
+      answer: "No. We use the right method for each surface:\n\n• Roofs, siding & decks → gentle house washing\n\n• Concrete & pavers → controlled pressure washing with pro-grade surface cleaners",
       category: "Safety & Trust"
     },
     {
@@ -212,7 +212,7 @@ const FAQ = () => {
                   onClick={() => window.location.href = 'tel:206-752-6690'}
                 >
                   <Phone className="w-5 h-5 mr-2" />
-                  Call 206.752.6690
+                  Call 206-752-6690
                 </Button>
               </div>
             </div>

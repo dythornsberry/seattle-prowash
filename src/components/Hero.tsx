@@ -76,7 +76,7 @@ const Hero = () => {
                 </Button>
               </div>
               <div className="text-center lg:text-left">
-                <p className="text-white/90 font-medium">📞 <a href="tel:12067526690" className="hover:text-moss-green transition-colors">Call or Text 206-752-6690</a></p>
+                <p className="text-white/90 font-medium">📞 <a href="tel:12067526690" className="hover:text-moss-green transition-colors">Call 206-752-6690</a></p>
               </div>
               <div className="text-center lg:text-left">
                 <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
