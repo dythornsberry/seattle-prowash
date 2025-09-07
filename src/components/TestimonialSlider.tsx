@@ -8,51 +8,72 @@ const TestimonialSlider = () => {
   
   const testimonials = [
     {
-      content: "Dylan is prompt, attentive to details and caring. He power washed our front driveway and back yard. The work was meticulously done and he made sure all the furniture was moved back in place before leaving. He even cleaned our side walkway!",
-      author: "YT Chu",
-      location: "Seattle Area",
-      rating: 5,
-      service: "Pressure Washing"
-    },
-    {
-      content: "Dylan went above and beyond! He helped me put on a temporary fix for a hole on my roof. He paid a lot of attention to details and is very knowledgeable about what he does.",
-      author: "Dat Le",
-      location: "Seattle Area", 
-      rating: 5,
-      service: "Roof Cleaning & Repair"
-    },
-    {
-      content: "Dylan and the crew came out for my 99 year old grandmothers place. He was very informative, the place is old and he took the time to stop and inform us of some possible issues with continuing.",
-      author: "Ohana V.",
-      location: "Seattle Area",
-      rating: 5,
-      service: "House Washing"
-    },
-    {
-      content: "We had Dylan and his crew do our Christmas lights, and we were so impressed with the professionalism and quality that we had Seattle ProWash come and clean my mother in law's roof after the bomb cyclone.",
-      author: "Nick Tourte", 
+      content: "Really happy with the work the Seattle Pro Wash team did to clean the transparent roof of my backyard pergola. It's a pretty high structure and a bit awkward to access, but they had the skills and tools to do the job right. The roof looks like new again. Quick friendly and efficient, highly recommended!",
+      author: "Aileen Imperial",
       location: "Seattle Area",
       rating: 5,
       service: "Roof Cleaning"
     },
     {
-      content: "Seamless from booking to appointment. The before/after photos were awesome.",
-      author: "Kimani G.",
-      location: "Bothell",
+      content: "These dudes are the way to go, very hard working and I was very satisfied with their work, thanks Dylan and the crew!",
+      author: "Owen Andresen",
+      location: "Seattle Area", 
       rating: 5,
-      service: "House Wash"
+      service: "Property Cleaning"
     },
     {
-      content: "Roof looks brand new. Great price and super professional.",
-      author: "Jennifer C.",
-      location: "Kenmore",
+      content: "Seattle Pro Wash did an amazing job on my driveway! Service was friendly and efficient, they got it done in no time! Would definitely recommend, overall they did an amazing job and one that I won't forget.",
+      author: "Kai Concepcion",
+      location: "Seattle Area",
       rating: 5,
-      service: "Roof Treatment"
+      service: "Driveway Pressure Washing"
     },
     {
-      content: "On time, careful, and the results were dramatic.",
-      author: "YT C.",
-      location: "Seattle",
+      content: "I needed my deck power washed immediately and heard from my neighbors that Seattle Prowash was legit. Dylan and his team did an excellent job and I was thoroughly impressed with their work. Dylan is easily reachable and his team does great work.",
+      author: "Lucas Hakamada",
+      location: "Seattle Area",
+      rating: 5,
+      service: "Deck Pressure Washing"
+    },
+    {
+      content: "These guys did an amazing job cleaning up my roof. They did a great job not damaging anything and i would definitely hire them again down the line.",
+      author: "Daniel Shubert", 
+      location: "Seattle Area",
+      rating: 5,
+      service: "Roof Cleaning"
+    },
+    {
+      content: "Prowash has very good service and did an excellent job they made my metal roof brand new again. I recommend these guys to everyone and I'm definitely looking forward to seeing these guys again.",
+      author: "Ajitesh Sangar",
+      location: "Seattle Area",
+      rating: 5,
+      service: "Metal Roof Cleaning"
+    },
+    {
+      content: "My experience with them was seamless from booking to appointment. Dylan's team kept me updated throughout the process with before and after photos. The prices are fair. I would highly recommend them.",
+      author: "Kimani G",
+      location: "Seattle Area",
+      rating: 5,
+      service: "House Washing"
+    },
+    {
+      content: "Dylan did an amazing job cleaning our gutters, roof and clearing branches!",
+      author: "Arielle Steger",
+      location: "Seattle Area",
+      rating: 5,
+      service: "Gutter & Roof Cleaning"
+    },
+    {
+      content: "If you miss good old fashion quality service, you will find it here. These guys are the best - on time, quality workmanship, and at a fair price. We have had them do several cleaning jobs and the results are always the same FANTASTIC. I wish I could do more than 5-stars.",
+      author: "Mary Duros",
+      location: "Seattle Area",
+      rating: 5,
+      service: "Multiple Services"
+    },
+    {
+      content: "Dylan is prompt, attentive to details and caring. He power washed our front driveway and back yard. The work was meticulously done and he made sure all the furniture was moved back in place before leaving. He even cleaned our side walkway!",
+      author: "YT Chu",
+      location: "Seattle Area",
       rating: 5,
       service: "Pressure Washing"
     }
