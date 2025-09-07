@@ -23,7 +23,10 @@ const Header = () => {
     { name: "Home", href: "/", onClick: goHome },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
+    { name: "Moss Treatment", href: "/moss-treatment" },
     { name: "Gallery", href: "/gallery" },
+    { name: "Resources", href: "/resources" },
+    { name: "Locations", href: "/kenmore" },
     { name: "FAQ", href: "/faq" },
     { 
       name: "Reviews", 
