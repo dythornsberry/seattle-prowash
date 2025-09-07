@@ -16,7 +16,6 @@ import QuoteForm from "@/components/QuoteForm";
 import SeasonalPromotions from "@/components/SeasonalPromotions";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
-import FloatingSMSButton from "@/components/FloatingSMSButton";
 
 const Index = () => {
   // Intersection Observer for fade-up animations
@@ -112,7 +111,6 @@ const Index = () => {
         </main>
         <Footer />
         <MobileBottomBar />
-        <FloatingSMSButton />
       </div>
     </div>
   );
