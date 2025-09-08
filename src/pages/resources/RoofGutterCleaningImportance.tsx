@@ -80,9 +80,9 @@ const RoofGutterCleaningImportance = () => {
                   </p>
                   <ul>
                     <li><strong>Annual roof cleaning</strong> to remove moss, algae, and debris</li>
-                    <li><strong>Bi-annual gutter cleaning</strong> (spring and fall) to prevent clogs</li>
+                    <li><strong>Biannual gutter cleaning</strong> (spring and fall) to prevent clogs</li>
                     <li><strong>Quarterly inspections</strong> to catch issues early</li>
-                    <li><strong>Moss treatment</strong> every 12-18 months for prevention</li>
+                    <li><strong>Moss treatment</strong> every 12 to 18 months for prevention</li>
                   </ul>
 
                   <h2>Professional vs. DIY</h2>

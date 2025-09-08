@@ -28,7 +28,7 @@ const Footer = () => {
               <h3 className="text-lg md:text-xl font-bold">
                 Ready for a moss-free roof?
               </h3>
-              <p className="text-sm opacity-80">Same-day estimates • Fully licensed & insured • 12 month moss‑free guarantee</p>
+              <p className="text-sm opacity-80">Same-day estimates • Fully licensed & insured • 12‑month moss‑free guarantee</p>
             </div>
             <Button 
               variant="prowash-cta" 

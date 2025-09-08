@@ -9,7 +9,7 @@ const BenefitStrip = () => {
     },
     {
       icon: Gift,
-      title: "12 Month Moss‑Free",
+      title: "12‑Month Moss‑Free",
       description: "Guarantee"
     },
     {

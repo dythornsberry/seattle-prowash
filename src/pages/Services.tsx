@@ -76,7 +76,7 @@ const Services = () => {
         "Maintains proper roof drainage",
         "Extends gutter system lifespan"
       ],
-      priceNote: "**The perfect partner to our Roof Cleaning service.** Standalone gutter cleaning starts at $249. Ask about our package discount when you book both!"
+      priceNote: "The perfect partner to our Roof Cleaning service. Standalone gutter cleaning starts at $249. Ask about our package discount when you book both!"
     },
     {
       id: "pressure-washing", 
