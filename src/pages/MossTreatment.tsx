@@ -11,7 +11,7 @@ const MossTreatment = () => {
   return (
     <div className="min-h-screen bg-background">
       <StickyTopBar />
-      <div style={{ paddingTop: '60px' }}>
+      <div className="pt-[120px] md:pt-[60px]">
         <Header />
         
         <main>
