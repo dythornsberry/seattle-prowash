@@ -55,7 +55,7 @@ const Services = () => {
         "Improves curb appeal and property value"
       ],
       priceNote: "Starting at $499 for typical single-story homes",
-      crossPromo: "**For complete protection, pair this with our Gutter Cleaning service. Ask about our package discount!**"
+      crossPromo: "For complete protection, pair this with our Gutter Cleaning service. Ask about our package discount!"
     },
     {
       id: "gutter-cleaning",
@@ -261,7 +261,7 @@ const Services = () => {
                             href="/faq" 
                             className="text-brand-orange hover:text-brand-orange/80 text-sm font-medium"
                           >
-                            More questions? See our full FAQ here →
+                            More questions? See our full FAQ here
                           </a>
                         </div>
                       </div>

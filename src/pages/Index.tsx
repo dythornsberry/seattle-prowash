@@ -95,7 +95,7 @@ const Index = () => {
         <div className="bg-dark-teal text-white">
           <AboutPreview />
         </div>
-        <div className="bg-off-white">
+        <div id="reviews" className="bg-off-white">
           <TestimonialSlider />
         </div>
         <div className="bg-navy">
@@ -104,7 +104,7 @@ const Index = () => {
         <div className="bg-dark-teal text-white">
           <CTABanner />
         </div>
-        <div className="bg-off-white">
+        <div id="contact" className="bg-off-white">
           <QuoteForm />
         </div>
         <SeasonalPromotions />

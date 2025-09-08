@@ -35,10 +35,10 @@ const Kirkland = () => {
                   <Badge variant="secondary">Kirkland, WA</Badge>
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                  Premium Roof & Gutter Cleaning in Kirkland
+                  Expert Roof & Gutter Cleaning Services in Kirkland
                 </h1>
                 <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
-                  Protecting Kirkland's beautiful homes with expert moss treatment and exterior cleaning services
+                  Professional moss treatment and exterior cleaning for Kirkland homeowners since 2022
                 </p>
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <span className="bg-white/10 px-4 py-2 rounded-full">12-Month Moss-Free Guarantee</span>

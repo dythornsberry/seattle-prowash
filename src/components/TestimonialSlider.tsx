@@ -185,7 +185,7 @@ const TestimonialSlider = () => {
               variant="outline"
               onClick={() => window.open('https://g.page/r/CZ1YhG3KQ4_8EAE/review', '_blank')}
             >
-              Read reviews on Google →
+              Read reviews on Google
             </Button>
           </div>
         </div>

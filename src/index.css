@@ -136,6 +136,7 @@
     line-height: 1.6;
     font-weight: 400;
     min-width: 320px; /* Prevent layout issues on very small screens */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
   }
   
   /* High contrast text classes */

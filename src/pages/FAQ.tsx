@@ -49,7 +49,7 @@ const FAQ = () => {
     {
       icon: CheckCircle,
       question: "What happens if moss comes back after treatment?",
-      answer: "We offer a **12-month moss-free guarantee**.\n\nIf any new moss growth appears within 12 months of service, we'll return and re-treat the affected areas free of charge.",
+      answer: "We offer a 12-month moss-free guarantee.\n\nIf any new moss growth appears within 12 months of service, we'll return and re-treat the affected areas free of charge.",
       category: "Safety & Trust"
     },
     {
@@ -61,7 +61,7 @@ const FAQ = () => {
     {
       icon: Shield,
       question: "Will pressure washing damage my surfaces?",
-      answer: "No. We use the right method for each surface:\n\n• Roofs, siding & decks → gentle house washing\n\n• Concrete & pavers → controlled pressure washing with pro-grade surface cleaners",
+      answer: "No. We use the right method for each surface:\n\n• Roofs, siding & decks - gentle house washing\n\n• Concrete & pavers - controlled pressure washing with pro-grade surface cleaners",
       category: "Safety & Trust"
     },
     {
@@ -85,25 +85,25 @@ const FAQ = () => {
     {
       icon: Clock,
       question: "How often should I clean my roof or gutters in the Seattle area?",
-      answer: "• Roof cleaning → once per year\n\n• Gutter cleaning → twice per year (Spring + Fall)",
+      answer: "• Roof cleaning - once per year\n\n• Gutter cleaning - twice per year (Spring + Fall)",
       category: "Maintenance"
     },
     {
       icon: Clock,
       question: "What's the best time of year to get my home cleaned?",
-      answer: "The **best time was last year!** Regular maintenance will improve your home's longevity and appearance.\n\n✅ If you see visible moss on your roof\n\n✅ If you notice clogged gutters\n\n✅ If there's algae on your home's siding\n\n✅ If there's moss on your driveway\n\n✅ If there's algae on your deck\n\nWe recommend cleaning **ASAP before it gets worse**. Don't wait – these issues only compound over time and become more expensive to address.",
+      answer: "The best time was last year! Regular maintenance will improve your home's longevity and appearance.\n\n• If you see visible moss on your roof\n\n• If you notice clogged gutters\n\n• If there's algae on your home's siding\n\n• If there's moss on your driveway\n\n• If there's algae on your deck\n\nWe recommend cleaning ASAP before it gets worse. Don't wait – these issues only compound over time and become more expensive to address.",
       category: "Maintenance"
     },
     {
       icon: Clock,
       question: "How long does a typical service take?",
-      answer: "• Roof cleaning → 4–6 hours\n\n• House washing → 3–4 hours\n\n• Gutter cleaning → 1–2 hours\n\nMost jobs are completed same day.",
+      answer: "• Roof cleaning - 4-6 hours\n\n• House washing - 3-4 hours\n\n• Gutter cleaning - 1-2 hours\n\nMost jobs are completed same day.",
       category: "Process"
     },
     {
       icon: Clock,
       question: "How do estimates and scheduling work?",
-      answer: "• Free estimates provided\n\n• Roof cleaning → requires on-site assessment\n\n• Gutter cleaning/driveway cleaning → often quoted remotely by phone\n\n• Services usually scheduled within 1–2 weeks",
+      answer: "• Free estimates provided\n\n• Roof cleaning - requires on-site assessment\n\n• Gutter cleaning/driveway cleaning - often quoted remotely by phone\n\n• Services usually scheduled within 1-2 weeks",
       category: "Process"
     },
     {
