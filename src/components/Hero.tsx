@@ -36,11 +36,12 @@ const Hero = () => {
           {/* Content */}
           <div className="text-center lg:text-left space-y-8 fade-up">
             <div className="space-y-6">
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight drop-shadow-lg">
-                Roof & Gutter Cleaning & Moss Treatment in Kenmore, Bothell & Kirkland
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight drop-shadow-lg">
+                <span className="block">Roof Cleaning & Moss Treatment</span>
+                <span className="block">in Kenmore, Bothell & Kirkland</span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-white/90 font-medium leading-relaxed drop-shadow-md">
+              <p className="text-lg md:text-xl text-white/90 font-medium drop-shadow-md">
                 12-month moss-free guarantee • Same-day estimates • Professional results
               </p>
               
