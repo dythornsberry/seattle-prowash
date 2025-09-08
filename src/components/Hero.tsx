@@ -25,6 +25,7 @@ const Hero = () => {
           alt="Professional roof and exterior cleaning service in Seattle"
           className="absolute inset-0 w-full h-full object-cover object-center"
           fetchPriority="high"
+          loading="eager"
           width="1920"
           height="1080"
           style={{ objectPosition: 'center center' }}
@@ -41,8 +42,12 @@ const Hero = () => {
                 <span className="block">in Kenmore, Bothell & Kirkland</span>
               </h1>
               
+              <p className="text-xl md:text-2xl text-white/95 font-semibold drop-shadow-md mb-2">
+                Safe, damage-free cleaning with a 12-month moss-free guarantee
+              </p>
+              
               <p className="text-lg md:text-xl text-white/90 font-medium drop-shadow-md">
-                12-month moss-free guarantee • Same-day estimates • Professional results
+                Same-day estimates • Professional results
               </p>
               
               <p className="text-sm text-white/80 font-medium">
@@ -76,8 +81,18 @@ const Hero = () => {
                   GET YOUR FREE QUOTE TODAY
                 </Button>
               </div>
-              <div className="text-center lg:text-left">
+              <div className="text-center lg:text-left space-y-2">
                 <p className="text-white/90 font-medium">📞 <a href="tel:12067526690" className="hover:text-moss-green transition-colors">Call 206-752-6690</a></p>
+                <p className="text-white/80 font-medium">
+                  <a 
+                    href="https://g.page/r/CZ1YhG3KQ4_8EAE/review" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="hover:text-moss-green transition-colors underline decoration-white/50 hover:decoration-moss-green"
+                  >
+                    Read 180+ Google reviews
+                  </a>
+                </p>
               </div>
               <div className="text-center lg:text-left">
                 <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">

@@ -7,7 +7,7 @@ const ServicesPreview = () => {
     {
       icon: Droplet,
       title: "Roof & Gutter Cleaning & Moss Treatment",
-      description: "Professional moss removal + full gutter cleanouts with protective treatment to keep moss away. 12-month guarantee.",
+      description: "Professional moss removal + full gutter cleanouts with protective treatment to keep moss away. 12-month moss-free guarantee.",
       features: [
         "Safely remove damaging moss and debris from roof",
         "Apply professional moss protection treatment to prevent regrowth", 
@@ -97,6 +97,9 @@ const ServicesPreview = () => {
             </p>
             <p className="text-sm text-brand-gray-text italic">
               Roof cleaning costs vary based on roof size and moss level. Most homes fall between $499–$999.
+            </p>
+            <p className="text-xs text-brand-gray-text mt-1">
+              Final price after quick photo or drive-by evaluation.
             </p>
           </div>
           <Button 

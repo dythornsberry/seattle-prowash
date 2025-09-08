@@ -16,7 +16,7 @@ const ProcessSection = () => {
     {
       number: "3",
       title: "Moss-Free Guarantee", 
-      description: "12-month coverage on qualifying treatments. On-site visits available when helpful."
+      description: "12-month moss-free guarantee on qualifying treatments. On-site visits available when helpful."
     }
   ];
 

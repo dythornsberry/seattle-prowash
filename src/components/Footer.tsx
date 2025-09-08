@@ -106,12 +106,26 @@ const Footer = () => {
             <div>
               <h3 className="text-lg font-bold mb-6 text-white">Service Areas</h3>
               <div className="space-y-2">
-                {serviceAreas.map((area, index) => (
-                  <span key={index} className="inline-block text-sm text-white/80 mr-3 mb-1">
-                    {area}
-                    {index < serviceAreas.length - 1 && ","}
-                  </span>
-                ))}
+                {serviceAreas.map((area, index) => {
+                  const isLinkable = ["Kenmore", "Bothell", "Kirkland"].includes(area);
+                  const linkPath = isLinkable ? `/${area.toLowerCase()}` : null;
+                  
+                  return isLinkable && linkPath ? (
+                    <Link 
+                      key={index} 
+                      to={linkPath}
+                      className="inline-block text-sm text-white/80 hover:text-white transition-colors mr-3 mb-1 underline decoration-white/30 hover:decoration-white"
+                    >
+                      {area}
+                      {index < serviceAreas.length - 1 && ","}
+                    </Link>
+                  ) : (
+                    <span key={index} className="inline-block text-sm text-white/80 mr-3 mb-1">
+                      {area}
+                      {index < serviceAreas.length - 1 && ","}
+                    </span>
+                  );
+                })}
               </div>
               <p className="text-xs text-white/60 mt-4">
                 Serving Kenmore and the greater Seattle area.
@@ -142,7 +156,10 @@ const Footer = () => {
                     <a href="mailto:seattleprowash@gmail.com" className="text-sm hover:text-brand-orange transition-colors">
                       seattleprowash@gmail.com
                     </a>
-                    <p className="text-xs text-white/60">We reply within 1 hour</p>
+                    <div className="text-xs text-white/60">
+                      <p>We respond promptly during business hours</p>
+                      <p>Most quotes are sent the same day</p>
+                    </div>
                   </div>
                 </div>
                 

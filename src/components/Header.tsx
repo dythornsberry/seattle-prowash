@@ -82,14 +82,15 @@ const Header = () => {
               variant="prowash-cta" 
               size="lg"
               onClick={goToContact}
-              className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold text-base px-6 py-3 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold text-base px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               GET YOUR FREE QUOTE TODAY
             </Button>
             <Button 
-              variant="prowash-phone" 
+              variant="outline" 
               size="sm"
               onClick={() => window.location.href = `tel:1${phoneNumber.replace(/[^0-9]/g, '')}`}
+              className="border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white transition-all duration-300"
             >
               <Phone className="w-4 h-4" />
               {phoneNumber}

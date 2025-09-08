@@ -1,23 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const SeasonalPromotions = () => {
   const promotions = [
     {
       id: 1,
       title: "Fall 2025 Roof & Gutter Cleaning + Moss Protection Package",
-      description: "Complete autumn protection for your home. Includes gutter cleaning, debris removal, and our professional moss treatment with 12-month guarantee.",
+      description: "Complete autumn protection for your home. Includes gutter cleaning, debris removal, and our professional moss treatment with 12-month moss-free guarantee.",
       validUntil: "December 31, 2025",
       discount: "Save $50",
-      isActive: true
-    },
-    {
-      id: 2, 
-      title: "Winter 2025 Roof & Gutter Maintenance Special",
-      description: "Protect your home this winter with our comprehensive roof and gutter cleaning service plus moss prevention treatment.",
-      validUntil: "March 31, 2025",
-      discount: "15% Off",
       isActive: true
     }
   ];
@@ -83,7 +76,7 @@ const SeasonalPromotions = () => {
 
         <div className="text-center mt-8">
           <p className="text-sm text-text-charcoal">
-            *Offers cannot be combined. Valid for new customers only. Seattle metro area including Kenmore, Bothell, and Kirkland.
+            *Offers cannot be combined. Valid for new customers only. Seattle metro area including <Link to="/kenmore" className="hover:text-primary-teal transition-colors">Kenmore</Link>, <Link to="/bothell" className="hover:text-primary-teal transition-colors">Bothell</Link>, and <Link to="/kirkland" className="hover:text-primary-teal transition-colors">Kirkland</Link>.
           </p>
         </div>
       </div>

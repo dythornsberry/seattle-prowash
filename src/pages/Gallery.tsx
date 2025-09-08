@@ -493,9 +493,9 @@ const Gallery = () => {
       { 
         src: prowashTruckStreet, 
         alt: "ProWash truck on service call", 
-        title: "On-Site Service", 
+        title: "Professional Service Call", 
         location: "Service Area", 
-        description: "Professional service calls throughout the Seattle area",
+        description: "ProWash truck responding to service calls throughout the Seattle area",
         service: "Service"
       },
       { 

@@ -55,6 +55,7 @@ const Services = () => {
         "Improves curb appeal and property value"
       ],
       priceNote: "Starting at $499 for typical single-story homes",
+      priceHelper: "Final price after quick photo or drive-by evaluation.",
       crossPromo: "For complete protection, pair this with our Gutter Cleaning service. Ask about our package discount!"
     },
     {
@@ -76,7 +77,8 @@ const Services = () => {
         "Maintains proper roof drainage",
         "Extends gutter system lifespan"
       ],
-      priceNote: "The perfect partner to our Roof Cleaning service. Standalone gutter cleaning starts at $249. Ask about our package discount when you book both!"
+      priceNote: "The perfect partner to our Roof Cleaning service. Standalone gutter cleaning starts at $249. Ask about our package discount when you book both!",
+      priceHelper: "Final price after quick photo or drive-by evaluation."
     },
     {
       id: "pressure-washing", 
@@ -95,7 +97,8 @@ const Services = () => {
         "Removes discoloration and surface stains",
         "Increases property value and curb appeal"
       ],
-      priceNote: "Starting at $249 for driveways and patios"
+      priceNote: "Starting at $249 for driveways and patios",
+      priceHelper: "Final price after quick photo or drive-by evaluation."
     },
     {
       id: "house-washing",
@@ -113,7 +116,8 @@ const Services = () => {
         "Environmentally friendly cleaning solutions",
         "Dramatically improves home appearance"
       ],
-      priceNote: "Starting at $499 for typical homes"
+      priceNote: "Starting at $499 for typical homes",
+      priceHelper: "Final price after quick photo or drive-by evaluation."
     }
   ];
 
@@ -278,9 +282,11 @@ const Services = () => {
                       {/* Pricing */}
                       <div className="bg-brand-orange/10 rounded-lg p-4 mb-6">
                         <p className="text-brand-navy font-semibold">{service.priceNote}</p>
-                        <p className="text-sm text-muted-foreground mt-1">
-                          Final pricing confirmed after on-site evaluation
-                        </p>
+                        {(service as any).priceHelper && (
+                          <p className="text-sm text-muted-foreground mt-1">
+                            {(service as any).priceHelper}
+                          </p>
+                        )}
                       </div>
 
                       <div className="flex flex-col sm:flex-row gap-4">

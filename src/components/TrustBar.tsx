@@ -10,7 +10,7 @@ const TrustBar = () => {
     },
     {
       icon: Shield,
-      text: "12-Month Moss-Free Guarantee"
+      text: "12-month moss-free guarantee"
     },
     {
       icon: Award,
