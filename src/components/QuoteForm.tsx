@@ -95,7 +95,7 @@ const QuoteForm = () => {
               GET YOUR FREE QUOTE TODAY!
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Most quotes sent same day. We reply within ~10 minutes (7am–7pm).
+              Most quotes are sent the same day. We respond promptly during business hours.
             </p>
           </div>
 
@@ -156,7 +156,7 @@ const QuoteForm = () => {
                 </div>
                 <div className="flex items-center gap-3 p-4 bg-brand-white rounded-lg shadow-sm">
                   <CheckCircle className="w-5 h-5 text-brand-yellow" />
-                  <span className="text-sm font-semibold text-brand-navy">12-Month Moss-Free Guarantee</span>
+                  <span className="text-sm font-semibold text-brand-navy">12‑Month Moss‑Free Guarantee</span>
                 </div>
               </div>
             </div>
@@ -255,7 +255,7 @@ const QuoteForm = () => {
                     {/* Trust Copy and Service Areas */}
                     <div className="space-y-4 text-center">
                       <div className="text-sm text-muted-foreground">
-                        <p className="font-medium text-brand-navy">Most quotes sent same day. We reply within ~10 minutes (7am–7pm).</p>
+                        <p className="font-medium text-brand-navy">Most quotes are sent the same day. We respond promptly during business hours.</p>
                         <p className="mt-1">On-site visit available when helpful.</p>
                       </div>
                     </div>

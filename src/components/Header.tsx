@@ -79,9 +79,10 @@ const Header = () => {
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center space-x-4">
             <Button 
-              variant="prowash-secondary" 
-              size="sm"
+              variant="prowash-cta" 
+              size="lg"
               onClick={goToContact}
+              className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold text-base px-6 py-3 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               GET YOUR FREE QUOTE TODAY
             </Button>

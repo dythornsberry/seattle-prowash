@@ -67,7 +67,7 @@ const FAQ = () => {
     {
       icon: CheckCircle,
       question: "What types of roofs do you clean?",
-      answer: "• Metal\n\n• Asphalt/composite\n\n• Flat roofs (EPDM, TPO, PVC)\n\n❌ We don't clean cedar shake or tile roofs. For those, we recommend contacting a roofing professional.",
+      answer: "• Metal\n\n• Asphalt/composite\n\n• Flat roofs (EPDM, TPO, PVC)\n\n❌ We don't clean cedar shake or tile roofs; we recommend contacting a roofing professional for these specialized roof types.",
       category: "Services"
     },
     {

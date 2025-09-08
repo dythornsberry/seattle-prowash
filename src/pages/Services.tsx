@@ -215,7 +215,7 @@ const Services = () => {
                               </div>
                               <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-4">
                                 <h4 className="font-bold text-brand-navy mb-2 text-sm">Q: What types of roofs do you clean?</h4>
-                                <p className="text-muted-foreground text-sm">A: We specialize in metal, asphalt/composite, and flat roofs (EPDM, TPO, PVC). We don't clean cedar shake or tile roofs - we recommend contacting a roofing professional for those specialized roof types.</p>
+                                <p className="text-muted-foreground text-sm">A: We specialize in metal, asphalt/composite, and flat roofs (EPDM, TPO, PVC). We don't clean cedar shake or tile roofs; we recommend contacting a roofing professional for these specialized roof types.</p>
                               </div>
                             </>
                           )}
