@@ -568,12 +568,11 @@ const Gallery = () => {
   const getFilteredImages = () => {
     if (activeCategory === "All") {
       // Intersperse different service types for better variety in "All Projects"
-      const roofImages = galleryImages["Roof Cleaning"];
-      const houseImages = galleryImages["House Washing"];
-      const gutterImages = galleryImages["Gutter Cleaning"];
-      const pressureImages = galleryImages["Pressure Washing"];
-      const commercialImages = galleryImages["Commercial"];
-      const teamImages = galleryImages["Team at Work"];
+      const roofImages = galleryImages["Roof Cleaning & Moss Removal"] || [];
+      const houseImages = galleryImages["House Washing"] || [];
+      const gutterImages = galleryImages["Gutter Cleaning"] || [];
+      const pressureImages = galleryImages["Pressure Washing"] || [];
+      const teamImages = galleryImages["Team at Work"] || [];
       
       const interspersedImages = [];
       const maxLength = Math.max(
@@ -581,7 +580,6 @@ const Gallery = () => {
         houseImages.length,
         gutterImages.length,
         pressureImages.length,
-        commercialImages.length,
         teamImages.length
       );
       
@@ -591,7 +589,6 @@ const Gallery = () => {
         if (i < pressureImages.length) interspersedImages.push(pressureImages[i]);
         if (i < houseImages.length) interspersedImages.push(houseImages[i]);
         if (i < gutterImages.length) interspersedImages.push(gutterImages[i]);
-        if (i < commercialImages.length) interspersedImages.push(commercialImages[i]);
         if (i < teamImages.length) interspersedImages.push(teamImages[i]);
       }
       
