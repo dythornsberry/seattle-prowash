@@ -38,16 +38,11 @@ const Hero = () => {
           <div className="text-center lg:text-left space-y-8 fade-up">
             <div className="space-y-6">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight drop-shadow-lg">
-                <span className="block">Roof Cleaning & Moss Treatment</span>
-                <span className="block">in Kenmore, Bothell & Kirkland</span>
+                Roof & Gutter Cleaning Pros — Kenmore, Bothell, Kirkland
               </h1>
               
               <p className="text-xl md:text-2xl text-white/95 font-semibold drop-shadow-md mb-2">
-                Safe, damage-free cleaning with a 12-month moss-free guarantee
-              </p>
-              
-              <p className="text-lg md:text-xl text-white/90 font-medium drop-shadow-md">
-                Same-day estimates • Professional results
+                Safe roof moss removal, gutter cleaning, and downspout flushing. 5-star rated and insured. Same-day quotes.
               </p>
               
               <p className="text-sm text-white/80 font-medium">
@@ -69,7 +64,7 @@ const Hero = () => {
 
             {/* CTA */}
             <div className="space-y-4">
-              <div className="flex justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
                 <Button 
                   variant="cta-orange" 
                   size="xl"
@@ -78,11 +73,18 @@ const Hero = () => {
                     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
-                  GET YOUR FREE QUOTE TODAY
+                  Get a Fast Quote
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="xl"
+                  className="bg-white/10 backdrop-blur-sm text-white border-white/20 hover:bg-white/20 font-bold shadow-xl hover:shadow-2xl transition-all duration-300"
+                  onClick={() => window.location.href = 'tel:206-752-6690'}
+                >
+                  Call 206-752-6690
                 </Button>
               </div>
-              <div className="text-center lg:text-left space-y-2">
-                <p className="text-white/90 font-medium">📞 <a href="tel:12067526690" className="hover:text-moss-green transition-colors">Call 206-752-6690</a></p>
+              <div className="text-center lg:text-left">
                 <p className="text-white/80 font-medium">
                   <a 
                     href="https://g.page/r/CZ1YhG3KQ4_8EAE/review" 

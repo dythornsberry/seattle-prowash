@@ -6,14 +6,27 @@ const ServicesPreview = () => {
   const services = [
     {
       icon: Droplet,
-      title: "Roof & Gutter Cleaning & Moss Treatment",
-      description: "Professional moss removal + full gutter cleanouts with protective treatment to keep moss away. 12-month moss-free guarantee.",
+      title: "Roof Cleaning",
+      description: "Soft-wash moss removal and treatment. No pressure on shingles. Light debris cleanup included.",
       features: [
-        "Safely remove damaging moss and debris from roof",
-        "Apply professional moss protection treatment to prevent regrowth", 
-        "Complete gutter & downspout cleaning with photo proof",
-        "12-month moss-free guarantee on qualifying treatments"
-      ]
+        "Gentle brush removal of loose moss",
+        "Soft wash treatment to kill remaining growth",
+        "12-month moss-free guarantee",
+        "Light debris cleanup around home"
+      ],
+      link: "/roof-cleaning"
+    },
+    {
+      icon: Car,
+      title: "Gutter Cleaning",
+      description: "Hand clean and flush downspouts. Photos on completion. Optional gutter brightening.",
+      features: [
+        "Hand scoop and vacuum debris",
+        "Downspout flush and function test",
+        "Completion photos sent to you",
+        "Gutter brightening available"
+      ],
+      link: "/gutter-cleaning"
     }
   ];
 
@@ -29,7 +42,7 @@ const ServicesPreview = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-8 max-w-2xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
@@ -65,9 +78,17 @@ const ServicesPreview = () => {
                     </p>
                   </div>
                   
-                  <div className="pt-2">
+                  <div className="pt-2 space-y-2">
                     <Button 
                       variant="prowash-secondary" 
+                      className="w-full" 
+                      size="sm"
+                      onClick={() => window.location.href = service.link}
+                    >
+                      Learn More
+                    </Button>
+                    <Button 
+                      variant="outline" 
                       className="w-full" 
                       size="sm"
                       onClick={() => {
@@ -78,7 +99,7 @@ const ServicesPreview = () => {
                         }
                       }}
                     >
-                      GET YOUR FREE QUOTE TODAY
+                      Get Quote
                     </Button>
                   </div>
                 </CardContent>
@@ -113,7 +134,7 @@ const ServicesPreview = () => {
               }
             }}
           >
-            GET YOUR FREE QUOTE TODAY
+            Get a Fast Quote
           </Button>
         </div>
       </div>

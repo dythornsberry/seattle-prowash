@@ -1,0 +1,289 @@
+import { useEffect } from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import StickyTopBar from "@/components/StickyTopBar";
+import MobileBottomBar from "@/components/MobileBottomBar";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { CheckCircle, Phone, HelpCircle } from "lucide-react";
+import gutterCleaningImage from "@/assets/gutter-cleaning-before-after.jpg";
+
+const GutterCleaning = () => {
+  useEffect(() => {
+    document.title = "Gutter Cleaning and Downspout Flushing | Seattle ProWash";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content", 
+        "Professional gutter cleaning and downspout flushing. Clear flow, clean edges, photos included. Serving Kenmore, Bothell, Kirkland."
+      );
+    }
+
+    // Intersection Observer for fade-up animations
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    const fadeElements = document.querySelectorAll('.fade-up');
+    fadeElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      fadeElements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
+  const whatYouGet = [
+    "Hand scoop and vacuum gutter debris",
+    "Downspout flush and function test",
+    "Bag and remove debris or place in yard waste on request",
+    "Wipe visible drips on fascia and walkways",
+    "Completion photos sent to you"
+  ];
+
+  const addOns = [
+    "Minor gutter reseals where accessible",
+    "Gutter brightening for black streaks",
+    "Roof blow-off if requested"
+  ];
+
+  const faqs = [
+    {
+      question: "Do you work from the roof or ladders?",
+      answer: "We choose the safest method for the home and conditions."
+    },
+    {
+      question: "Can you unclog underground drains?",
+      answer: "If a line is blocked underground we'll advise options."
+    },
+    {
+      question: "Do you clean up after?",
+      answer: "Yes. We leave the site tidy."
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-background">
+      <StickyTopBar />
+      <Header />
+      <main>
+        {/* Hero Section */}
+        <section className="section-spacing bg-gradient-to-b from-brand-navy to-brand-navy/90">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="fade-up">
+                  <Badge variant="outline" className="text-brand-orange border-brand-orange mb-4">
+                    Gutter Cleaning Experts
+                  </Badge>
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+                    Gutter Cleaning and Downspout Flushing
+                  </h1>
+                  <p className="text-xl md:text-2xl mb-6 text-white/90 font-semibold">
+                    Clear flow. Clean edges. Photos included.
+                  </p>
+                  <p className="text-lg mb-8 text-white/80">
+                    Keep water moving away from your home. We hand clean gutters, bag debris, and flush downspouts so you can see clean flow. We finish with photos so you know the job was done right.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button 
+                      variant="prowash-secondary" 
+                      size="xl"
+                      onClick={() => {
+                        const contactElement = document.getElementById('contact');
+                        if (contactElement) {
+                          contactElement.scrollIntoView({ behavior: 'smooth' });
+                        } else {
+                          window.location.href = '/#contact';
+                        }
+                      }}
+                    >
+                      Get a Fast Quote
+                    </Button>
+                    <Button 
+                      variant="outline" 
+                      size="xl"
+                      className="bg-white/10 backdrop-blur-sm text-white border-white/20 hover:bg-white/20"
+                      onClick={() => window.location.href = 'tel:206-752-6690'}
+                    >
+                      <Phone className="w-4 h-4 mr-2" />
+                      Call 206-752-6690
+                    </Button>
+                  </div>
+                </div>
+                <div className="fade-up">
+                  <img
+                    src={gutterCleaningImage}
+                    alt="Gutter cleaning before and after showing clear gutters and downspouts"
+                    className="rounded-2xl shadow-2xl w-full"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* What You Get Section */}
+        <section className="section-spacing">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12 fade-up">
+                <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-6">
+                  What You Get Every Visit
+                </h2>
+              </div>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="fade-up">
+                  <ul className="space-y-4">
+                    {whatYouGet.map((item, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="fade-up">
+                  <Card className="h-full">
+                    <CardHeader>
+                      <CardTitle className="text-brand-navy">Pricing</CardTitle>
+                      <CardDescription>
+                        Final price after quick photo or drive-by evaluation.
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-2xl font-bold text-brand-orange mb-2">
+                        Starting at $249
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        For typical residential homes
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Add-ons Section */}
+        <section className="section-spacing bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-12 text-center fade-up">
+                Add-ons
+              </h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                {addOns.map((addOn, index) => (
+                  <div key={index} className="text-center fade-up">
+                    <div className="bg-brand-orange/10 rounded-lg p-6">
+                      <CheckCircle className="w-8 h-8 text-brand-orange mx-auto mb-4" />
+                      <p className="text-muted-foreground">{addOn}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Recommended Schedule Section */}
+        <section className="section-spacing">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center fade-up">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-6">
+                Recommended Schedule
+              </h2>
+              <Card className="bg-brand-orange/10 border-brand-orange/20">
+                <CardContent className="p-8">
+                  <p className="text-lg text-muted-foreground">
+                    Most homes here need service twice per year. Late fall and spring are the most common.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="section-spacing bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-12 text-center fade-up">
+                Frequently Asked Questions
+              </h2>
+              <div className="space-y-6">
+                {faqs.map((faq, index) => (
+                  <Card key={index} className="fade-up">
+                    <CardHeader>
+                      <CardTitle className="text-brand-navy flex items-start gap-3">
+                        <HelpCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                        {faq.question}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground">{faq.answer}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="section-spacing bg-brand-navy">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center fade-up">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready for Clean Gutters?
+              </h2>
+              <p className="text-xl text-white/90 mb-8">
+                Get your free quote today. Professional gutter cleaning with clear results.
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Button 
+                  variant="prowash-secondary" 
+                  size="xl"
+                  onClick={() => {
+                    const contactElement = document.getElementById('contact');
+                    if (contactElement) {
+                      contactElement.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                      window.location.href = '/#contact';
+                    }
+                  }}
+                >
+                  Get a Fast Quote
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="xl"
+                  className="bg-white/10 backdrop-blur-sm text-white border-white/20 hover:bg-white/20"
+                  onClick={() => window.location.href = 'tel:206-752-6690'}
+                >
+                  <Phone className="w-4 h-4 mr-2" />
+                  Call 206-752-6690
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+      <MobileBottomBar />
+    </div>
+  );
+};
+
+export default GutterCleaning;

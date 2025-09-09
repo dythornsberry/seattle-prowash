@@ -21,18 +21,17 @@ const Header = () => {
   
   const navigation: NavigationItem[] = [
     { name: "Home", href: "/", onClick: goHome },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Moss Treatment", href: "/moss-treatment" },
-    { name: "Gallery", href: "/gallery" },
-    { name: "Resources", href: "/resources" },
-    { name: "Locations", href: "/kenmore" },
-    { name: "FAQ", href: "/faq" },
+    { name: "Roof Cleaning", href: "/roof-cleaning" },
+    { name: "Gutter Cleaning", href: "/gutter-cleaning" },
     { 
       name: "Reviews", 
       href: "/#reviews",
       onClick: goToReviews
     },
+    { name: "Service Area", href: "/kenmore" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "FAQ", href: "/faq" },
+    { name: "About", href: "/about" },
     { 
       name: "Contact", 
       href: "/#contact",
@@ -84,7 +83,7 @@ const Header = () => {
               onClick={goToContact}
               className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold text-base px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
-              GET YOUR FREE QUOTE TODAY
+              Get a Fast Quote
             </Button>
             <Button 
               variant="outline" 
@@ -93,7 +92,7 @@ const Header = () => {
               className="border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white transition-all duration-300"
             >
               <Phone className="w-4 h-4" />
-              {phoneNumber}
+              Call {phoneNumber}
             </Button>
           </div>
 
@@ -155,7 +154,7 @@ const Header = () => {
                     goToContact();
                   }}
                 >
-                  GET YOUR FREE QUOTE TODAY
+                  Get a Fast Quote
                 </Button>
               </div>
             </nav>

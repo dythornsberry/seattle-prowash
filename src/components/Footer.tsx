@@ -11,11 +11,8 @@ const Footer = () => {
   ];
 
   const services = [
-    "Roof Moss Removal",
-    "Gutter Cleaning", 
-    "House Washing",
-    "Pressure Washing",
-    "Driveway Cleaning"
+    "Roof Cleaning",
+    "Gutter Cleaning"
   ];
 
   return (
@@ -80,23 +77,21 @@ const Footer = () => {
             {/* Services */}
             <div>
               <h3 className="text-lg font-bold mb-6 text-white">Our Services</h3>
-              <ul className="space-y-3">
-                {services.map((service, index) => (
-                  <li key={index}>
-                    <Link 
-                      to="/services" 
-                      className="text-white/80 hover:text-brand-yellow transition-colors duration-250 text-sm"
-                    >
-                      {service}
-                    </Link>
-                  </li>
-                ))}
+               <ul className="space-y-3">
                 <li>
                   <Link 
-                    to="/resources" 
+                    to="/roof-cleaning" 
                     className="text-white/80 hover:text-brand-yellow transition-colors duration-250 text-sm"
                   >
-                    Resources & Tips
+                    Roof Cleaning
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/gutter-cleaning" 
+                    className="text-white/80 hover:text-brand-yellow transition-colors duration-250 text-sm"
+                  >
+                    Gutter Cleaning
                   </Link>
                 </li>
               </ul>
