@@ -7,9 +7,12 @@ const CostOfWaiting = () => {
     <section className="section-spacing bg-light-gray">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto fade-up">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-teal text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-teal text-center mb-4">
             The Cost of Waiting vs. The Peace of Mind We Deliver
           </h2>
+          <p className="text-center text-lg text-text-charcoal max-w-3xl mx-auto mb-12">
+            Moss isn't just ugly—it's actively destroying your roof right now. Here's what happens when you delay.
+          </p>
           
           <div className="grid lg:grid-cols-2 gap-8">
             {/* The Failure */}
@@ -34,15 +37,19 @@ const CostOfWaiting = () => {
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-text-charcoal">Higher risk of leaks & water damage</span>
+                    <span className="text-text-charcoal"><strong>Moss lifts shingles</strong> creating entry points for water damage</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-text-charcoal">Possible shingle deterioration</span>
+                    <span className="text-text-charcoal"><strong>Trapped moisture</strong> accelerates wood rot & structural decay</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-text-charcoal">Lower curb appeal & home value</span>
+                    <span className="text-text-charcoal"><strong>Voided warranties</strong> when maintenance is neglected</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-text-charcoal"><strong>$10,000-$30,000</strong> roof replacement vs. $300-$800 cleaning</span>
                   </li>
                 </ul>
               </CardContent>

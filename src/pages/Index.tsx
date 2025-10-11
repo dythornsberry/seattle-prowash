@@ -15,6 +15,7 @@ import CTABanner from "@/components/CTABanner";
 import QuoteForm from "@/components/QuoteForm";
 import SeasonalPromotions from "@/components/SeasonalPromotions";
 import MossUrgency from "@/components/MossUrgency";
+import FloatingMossCTA from "@/components/FloatingMossCTA";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
 
@@ -111,8 +112,9 @@ const Index = () => {
         </div>
         <SeasonalPromotions />
         </main>
-        <Footer />
-        <MobileBottomBar />
+      <Footer />
+      <MobileBottomBar />
+      <FloatingMossCTA />
       </div>
     </div>
   );
