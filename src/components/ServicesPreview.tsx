@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Droplet, Home, Zap, Car } from "lucide-react";
 
@@ -6,13 +7,14 @@ const ServicesPreview = () => {
   const services = [
     {
       icon: Droplet,
-      title: "Roof Cleaning",
-      description: "Soft-wash moss removal and treatment. No pressure on shingles. Light debris cleanup included.",
+      title: "Roof Moss Removal",
+      description: "Soft-wash moss removal and treatment. No pressure on shingles. Light debris cleanup included. Our most requested service with a 12-month moss-free guarantee.",
       features: [
         "Gentle brush removal of loose moss",
         "Soft wash treatment to kill remaining growth",
         "12-month moss-free guarantee",
-        "Light debris cleanup around home"
+        "Light debris cleanup around home",
+        "Safe for all roof types"
       ],
       link: "/roof-cleaning"
     },
@@ -42,11 +44,17 @@ const ServicesPreview = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => {
             const IconComponent = service.icon;
+            const isRoofService = index === 0;
             return (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-brand-orange/50 fade-up flex flex-col h-full">
+              <Card key={index} className={`group hover:shadow-xl transition-all duration-300 border-2 hover:border-brand-orange/50 fade-up flex flex-col h-full ${isRoofService ? 'md:col-span-2 border-brand-orange/30 relative' : ''}`}>
+                {isRoofService && (
+                  <div className="absolute top-4 right-4 z-10">
+                    <Badge className="bg-brand-orange text-white">Our Specialty</Badge>
+                  </div>
+                )}
                 <CardHeader className="text-center pb-4">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-orange/10 rounded-full mb-4 mx-auto group-hover:bg-brand-orange/20 transition-colors">
                     <IconComponent className="w-8 h-8 text-brand-orange" />

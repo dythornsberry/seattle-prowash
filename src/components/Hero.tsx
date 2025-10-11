@@ -38,11 +38,11 @@ const Hero = () => {
           <div className="text-center lg:text-left space-y-8 fade-up">
             <div className="space-y-6">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight drop-shadow-lg">
-                Roof & Gutter Cleaning Pros — Kenmore, Bothell, Kirkland
+                Roof Moss Removal Specialists — Kenmore, Bothell, Kirkland
               </h1>
               
               <p className="text-xl md:text-2xl text-white/95 font-semibold drop-shadow-md mb-2">
-                Safe roof moss removal, gutter cleaning, and downspout flushing. 5-star rated and insured. Same-day quotes.
+                Expert moss removal and roof cleaning. Gutter service available. 5-star rated and insured. Same-day quotes.
               </p>
               
               <p className="text-sm text-white/80 font-medium">
@@ -73,7 +73,7 @@ const Hero = () => {
                     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
-                  Get a Fast Quote
+                  Get Moss Removal Quote
                 </Button>
                 <Button 
                   variant="outline" 

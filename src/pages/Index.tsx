@@ -14,6 +14,7 @@ import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import CTABanner from "@/components/CTABanner";
 import QuoteForm from "@/components/QuoteForm";
 import SeasonalPromotions from "@/components/SeasonalPromotions";
+import MossUrgency from "@/components/MossUrgency";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
 
@@ -83,6 +84,7 @@ const Index = () => {
         <div className="bg-dark-teal text-white">
           <BenefitStrip />
         </div>
+        <MossUrgency />
         <div className="bg-off-white">
           <ServicesPreview />
         </div>
