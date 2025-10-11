@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import GuaranteeBadge from "@/components/GuaranteeBadge";
 import { Star, Shield, Award } from "lucide-react";
 import heroImageWebP from "@/assets/hero-cleaning-service.webp";
 import heroImageJpg from "@/assets/hero-cleaning-service.jpg";
@@ -60,6 +61,10 @@ const Hero = () => {
               <p className="text-sm text-white/70 font-medium">
                 🗺️ Serving Kenmore, Bothell, Kirkland & nearby
               </p>
+
+              <div className="pt-2">
+                <GuaranteeBadge variant="large" />
+              </div>
             </div>
 
             {/* CTA */}

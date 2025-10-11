@@ -3,6 +3,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyTopBar from "@/components/StickyTopBar";
 import MobileBottomBar from "@/components/MobileBottomBar";
+import MossUrgency from "@/components/MossUrgency";
+import CostOfWaiting from "@/components/CostOfWaiting";
+import FloatingMossCTA from "@/components/FloatingMossCTA";
+import GuaranteeBadge from "@/components/GuaranteeBadge";
+import QuoteForm from "@/components/QuoteForm";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -68,9 +73,10 @@ const RoofMoss = () => {
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
                     Roof Moss Removal and Treatment
                   </h1>
-                  <p className="text-xl md:text-2xl mb-6 text-white/90 font-semibold">
+                  <p className="text-xl md:text-2xl mb-4 text-white/90 font-semibold">
                     Stop growth and protect your shingles.
                   </p>
+                  <GuaranteeBadge variant="large" className="mb-6" />
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button 
                       variant="prowash-secondary" 
@@ -194,6 +200,17 @@ const RoofMoss = () => {
           </div>
         </section>
 
+        {/* Moss Urgency Section */}
+        <MossUrgency />
+
+        {/* Cost of Waiting Section */}
+        <CostOfWaiting />
+
+        {/* Quote Form */}
+        <div id="contact" className="bg-off-white">
+          <QuoteForm />
+        </div>
+
         {/* CTA Section */}
         <section className="section-spacing bg-brand-navy">
           <div className="container mx-auto px-4">
@@ -235,6 +252,7 @@ const RoofMoss = () => {
       </main>
       <Footer />
       <MobileBottomBar />
+      <FloatingMossCTA />
     </div>
   );
 };

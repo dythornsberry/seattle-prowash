@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import GuaranteeBadge from "@/components/GuaranteeBadge";
 
 const CostOfWaiting = () => {
   return (
@@ -74,7 +75,7 @@ const CostOfWaiting = () => {
                   />
                 </div>
                 
-                <ul className="space-y-3">
+                <ul className="space-y-3 mb-6">
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-bright-green mt-0.5 flex-shrink-0" />
                     <span className="text-text-charcoal">Extend roof life with proper treatment</span>
@@ -85,9 +86,10 @@ const CostOfWaiting = () => {
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-bright-green mt-0.5 flex-shrink-0" />
-                    <span className="text-text-charcoal">12-month moss-free guarantee</span>
+                    <span className="text-text-charcoal">Professional service you can trust</span>
                   </li>
                 </ul>
+                <GuaranteeBadge className="text-sm" />
               </CardContent>
             </Card>
           </div>
