@@ -3,9 +3,9 @@ import { Phone } from "lucide-react";
 
 const StickyTopBar = () => {
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-primary-teal border-b border-white/10 shadow-lg">
-      <div className="container mx-auto px-4 py-1.5">
-        <div className="flex items-center justify-between gap-2">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-primary-teal border-b border-white/10 shadow-lg h-10 md:h-11">
+      <div className="container mx-auto px-4 h-full">
+        <div className="flex items-center justify-between gap-2 h-full">
           <div className="text-white font-medium text-xs md:text-base">
             🚨 <span className="hidden sm:inline">Roof Moss Removal Specialists</span><span className="sm:hidden">Moss Removal Pros</span>
           </div>

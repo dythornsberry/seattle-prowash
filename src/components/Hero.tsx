@@ -17,7 +17,7 @@ const GoogleIcon = ({ className }: { className?: string }) => (
 
 const Hero = () => {
   return (
-    <section id="home" className="relative h-screen flex items-center" style={{ minHeight: '100vh' }}>
+    <section id="home" className="relative h-screen flex items-center mt-12 md:mt-0" style={{ minHeight: '100vh' }}>
       {/* Optimized hero image with WebP and fallback */}
       <picture className="absolute inset-0">
         <source srcSet={heroImageWebP} type="image/webp" />

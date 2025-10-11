@@ -41,9 +41,9 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-[42px] md:top-[46px] z-40 bg-brand-white/95 backdrop-blur-sm border-b border-border shadow-sm">
+    <header className="md:sticky md:top-11 z-40 bg-brand-white/95 backdrop-blur-sm border-b border-border shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-14 md:h-20">
+        <div className="flex items-center justify-between h-12 md:h-20">
           {/* Brand Text */}
           <div className="flex items-center">
             <Link to="/">
