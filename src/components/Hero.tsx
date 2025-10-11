@@ -33,7 +33,7 @@ const Hero = () => {
         />
       </picture>
       <div className="absolute inset-0 bg-primary-teal/80"></div>
-      <div className="container mx-auto px-4 py-20 relative z-10">
+      <div className="container mx-auto px-4 pt-32 md:pt-20 pb-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="text-center lg:text-left space-y-8 fade-up">
