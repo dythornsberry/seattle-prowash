@@ -4,12 +4,12 @@ import { Phone } from "lucide-react";
 const StickyTopBar = () => {
   return (
     <div className="fixed top-0 left-0 right-0 z-50 bg-primary-teal border-b border-white/10 shadow-lg">
-      <div className="container mx-auto px-4 py-2">
-        <div className="flex items-center justify-between">
-          <div className="text-white font-medium text-sm md:text-base">
-            🚨 Roof Moss Removal Specialists
+      <div className="container mx-auto px-4 py-1.5">
+        <div className="flex items-center justify-between gap-2">
+          <div className="text-white font-medium text-xs md:text-base">
+            🚨 <span className="hidden sm:inline">Roof Moss Removal Specialists</span><span className="sm:hidden">Moss Removal Pros</span>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             <a 
               href="tel:12067526690"
               className="hidden sm:flex items-center gap-2 text-white hover:text-bright-orange transition-colors font-bold text-lg"
