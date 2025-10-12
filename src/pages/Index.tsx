@@ -74,7 +74,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <StickyTopBar />
-      <div style={{ paddingTop: '40px' }}>
+      <div className="pt-10 md:pt-11">
         <Header />
         <main>
           <Hero />
