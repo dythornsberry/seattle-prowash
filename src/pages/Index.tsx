@@ -71,12 +71,41 @@ const Index = () => {
     }
   }, []);
 
+  // Dynamically offset content by actual fixed bars height
+  useEffect(() => {
+    const applyOffset = () => {
+      const topbar = document.getElementById('sticky-top-bar');
+      const header = document.getElementById('site-header');
+      const content = document.getElementById('content-with-offset');
+      if (topbar && header && content) {
+        const offset = topbar.offsetHeight + header.offsetHeight;
+        content.style.paddingTop = `${offset}px`;
+      }
+    };
+
+    applyOffset();
+    window.addEventListener('resize', applyOffset);
+
+    // Recalculate when fonts/layout settle
+    (document as any).fonts?.ready?.then(applyOffset).catch(() => {});
+
+    // Observe header size changes (e.g., nav wrapping)
+    const headerEl = document.getElementById('site-header');
+    const ro = headerEl ? new ResizeObserver(applyOffset) : null;
+    if (headerEl && ro) ro.observe(headerEl);
+
+    return () => {
+      window.removeEventListener('resize', applyOffset);
+      ro?.disconnect();
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <StickyTopBar />
-      <div>
+      <div id="content-with-offset" className="pt-[5.5rem] md:pt-[7.75rem]">
         <Header />
-        <div className="h-[5.5rem] md:h-[7.75rem]" aria-hidden="true" />
+        
         <main>
           <Hero />
           <TrustSignalSection />
