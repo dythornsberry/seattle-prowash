@@ -74,8 +74,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <StickyTopBar />
-      <div className="pt-10 md:pt-11">
+      <div>
         <Header />
+        <div className="h-[5.5rem] md:h-[7.75rem]" aria-hidden="true" />
         <main>
           <Hero />
           <TrustSignalSection />
