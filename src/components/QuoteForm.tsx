@@ -70,21 +70,18 @@ const QuoteForm = () => {
     }
 
     try {
-      const response = await sendWithTimeout(
+      await sendWithTimeout(
         webhookUrl,
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
+          mode: "no-cors",
           body: JSON.stringify(payload),
         },
         10000
       );
-      
-      if (!response.ok) {
-        throw new Error(`Webhook failed: ${response.status}`);
-      }
     } catch (err) {
       // Fallback to beacon if available
       if ("sendBeacon" in navigator) {
