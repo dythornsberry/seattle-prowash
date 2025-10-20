@@ -1,55 +1,56 @@
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Phone, Mail, MapPin, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+
+const formSchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
+  phone: z.string().trim().min(1, "Phone number is required").max(20, "Phone must be less than 20 characters"),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters").optional().or(z.literal("")),
+  address: z.string().trim().min(1, "Address is required").max(300, "Address must be less than 300 characters"),
+  details: z.string().trim().max(1000, "Details must be less than 1000 characters").optional(),
+});
 
 const QuoteForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const webhookUrl = "https://hooks.zapier.com/hooks/catch/24075201/uheurzq/";
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    address: "",
-    email: "",
-    details: ""
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      phone: "",
+      email: "",
+      address: "",
+      details: "",
+    },
   });
 
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
     
     try {
-      // Validate required fields
-      if (!formData.name || !formData.phone || !formData.address) {
-        toast({
-          title: "Please fill in all required fields",
-          description: "Name, phone number and address are required.",
-          variant: "destructive",
-        });
-        setIsSubmitting(false);
-        return;
-      }
-
-
       // Send to Zapier webhook for Jobber integration
-      const response = await fetch(webhookUrl, {
+      await fetch(webhookUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         mode: "no-cors",
         body: JSON.stringify({
-          name: formData.name,
-          phone: formData.phone,
-          email: formData.email,
-          address: formData.address,
-          details: formData.details,
+          name: values.name,
+          phone: values.phone,
+          email: values.email || "",
+          address: values.address,
+          details: values.details || "",
           timestamp: new Date().toISOString(),
           source: "Website Quote Form",
           business_name: "Seattle ProWash"
@@ -58,17 +59,10 @@ const QuoteForm = () => {
 
       toast({
         title: "Quote Request Sent!",
-        description: "Your lead has been sent to Jobber via Zapier. We'll respond back in 1 hour.",
+        description: "We'll respond back in 1 hour.",
       });
       
-      // Reset form
-      setFormData({
-        name: "",
-        phone: "",
-        address: "",
-        email: "",
-        details: ""
-      });
+      form.reset();
       
     } catch (error) {
       console.error('Error sending to Zapier:', error);
@@ -80,10 +74,6 @@ const QuoteForm = () => {
     } finally {
       setIsSubmitting(false);
     }
-  };
-
-  const handleChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
   };
 
   return (
@@ -171,86 +161,112 @@ const QuoteForm = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
+                  <Form {...form}>
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                      <div className="space-y-6">
+                        <FormField
+                          control={form.control}
+                          name="name"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-brand-navy font-semibold">Name *</FormLabel>
+                              <FormControl>
+                                <Input
+                                  placeholder="John Smith"
+                                  className="border-brand-yellow/30 focus:border-brand-yellow"
+                                  {...field}
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        
+                        <FormField
+                          control={form.control}
+                          name="phone"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-brand-navy font-semibold">Mobile *</FormLabel>
+                              <FormControl>
+                                <Input
+                                  type="tel"
+                                  placeholder="(206) 555-0123"
+                                  className="border-brand-yellow/30 focus:border-brand-yellow"
+                                  {...field}
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        
+                        <FormField
+                          control={form.control}
+                          name="email"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-brand-navy font-semibold">Email</FormLabel>
+                              <FormControl>
+                                <Input
+                                  type="email"
+                                  placeholder="john@example.com"
+                                  className="border-brand-yellow/30 focus:border-brand-yellow"
+                                  {...field}
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        
+                        <FormField
+                          control={form.control}
+                          name="address"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-brand-navy font-semibold">Address *</FormLabel>
+                              <FormControl>
+                                <Input
+                                  placeholder="123 Main St, Kenmore, WA 98028"
+                                  className="border-brand-yellow/30 focus:border-brand-yellow"
+                                  {...field}
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        
+                        <FormField
+                          control={form.control}
+                          name="details"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-brand-navy font-semibold">Details (optional)</FormLabel>
+                              <FormControl>
+                                <Textarea
+                                  placeholder="Add photos link or describe your needs"
+                                  rows={2}
+                                  className="border-brand-yellow/30 focus:border-brand-yellow"
+                                  {...field}
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
 
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="space-y-6">
-                      {/* Name - required */}
-                      <div className="space-y-2">
-                        <Label htmlFor="name" className="text-brand-navy font-semibold">Name *</Label>
-                        <Input
-                          id="name"
-                          value={formData.name}
-                          onChange={(e) => handleChange("name", e.target.value)}
-                          placeholder="John Smith"
-                          required
-                          className="border-brand-yellow/30 focus:border-brand-yellow"
-                        />
-                      </div>
-                      
-                      {/* Mobile - required */}
-                      <div className="space-y-2">
-                        <Label htmlFor="mobile" className="text-brand-navy font-semibold">Mobile *</Label>
-                        <Input
-                          id="mobile"
-                          type="tel"
-                          value={formData.phone}
-                          onChange={(e) => handleChange("phone", e.target.value)}
-                          placeholder="(206) 555-0123"
-                          required
-                          className="border-brand-yellow/30 focus:border-brand-yellow"
-                        />
-                      </div>
-                      
-                      {/* Email - optional */}
-                      <div className="space-y-2">
-                        <Label htmlFor="email" className="text-brand-navy font-semibold">Email</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={(e) => handleChange("email", e.target.value)}
-                          placeholder="john@example.com"
-                          className="border-brand-yellow/30 focus:border-brand-yellow"
-                        />
-                      </div>
-                      
-                      {/* Address - required */}
-                      <div className="space-y-2">
-                        <Label htmlFor="address" className="text-brand-navy font-semibold">Address *</Label>
-                        <Input
-                          id="address"
-                          value={formData.address}
-                          onChange={(e) => handleChange("address", e.target.value)}
-                          placeholder="123 Main St, Kenmore, WA 98028"
-                          required
-                          className="border-brand-yellow/30 focus:border-brand-yellow"
-                        />
-                      </div>
-                      
-                      {/* Optional Details */}
-                      <div className="space-y-2">
-                        <Label htmlFor="details" className="text-brand-navy font-semibold">Details (optional)</Label>
-                        <Textarea
-                          id="details"
-                          value={formData.details}
-                          onChange={(e) => handleChange("details", e.target.value)}
-                          placeholder="Add photos link or describe your needs"
-                          rows={2}
-                          className="border-brand-yellow/30 focus:border-brand-yellow"
-                        />
-                      </div>
-                    </div>
-
-
-                    <Button
-                      type="submit"
-                      variant="cta-orange"
-                      className="w-full bg-bright-orange text-white font-bold hover:bg-bright-orange/90 btn-glow shadow-md border-0"
-                      size="xl"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? "Sending..." : "GET YOUR FREE QUOTE TODAY"}
-                    </Button>
+                      <Button
+                        type="submit"
+                        variant="cta-orange"
+                        className="w-full bg-bright-orange text-white font-bold hover:bg-bright-orange/90 btn-glow shadow-md border-0"
+                        size="xl"
+                        disabled={isSubmitting}
+                      >
+                        {isSubmitting ? "Sending..." : "GET YOUR FREE QUOTE TODAY"}
+                      </Button>
 
                     {/* Trust Copy and Service Areas */}
                     <div className="space-y-4 text-center">
@@ -260,10 +276,11 @@ const QuoteForm = () => {
                       </div>
                     </div>
 
-                    <p className="text-xs text-muted-foreground text-center">
-                      By submitting this form, you agree to receive communications from Seattle ProWash
-                    </p>
-                  </form>
+                      <p className="text-xs text-muted-foreground text-center">
+                        By submitting this form, you agree to receive communications from Seattle ProWash
+                      </p>
+                    </form>
+                  </Form>
                 </CardContent>
               </Card>
             </div>
