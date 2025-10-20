@@ -34,41 +34,86 @@ const QuoteForm = () => {
     },
   });
 
+  // Reliability helpers: timeout + beacon fallback
+  const buildPayload = (values: z.infer<typeof formSchema>) => ({
+    name: values.name,
+    phone: values.phone,
+    email: values.email || "",
+    address: values.address,
+    details: values.details || "",
+    timestamp: new Date().toISOString(),
+    source: "Website Quote Form",
+    business_name: "Seattle ProWash",
+  });
+
+  const sendWithTimeout = async (url: string, options: RequestInit, timeoutMs = 10000) => {
+    const controller = new AbortController();
+    const id = setTimeout(() => controller.abort(), timeoutMs);
+    try {
+      return await fetch(url, { ...options, signal: controller.signal });
+    } finally {
+      clearTimeout(id);
+    }
+  };
+
+  const sendToWebhook = async (values: z.infer<typeof formSchema>) => {
+    const payload = buildPayload(values);
+
+    // If offline, try beacon immediately
+    if (typeof navigator !== "undefined" && navigator.onLine === false && "sendBeacon" in navigator) {
+      const ok = (navigator as any).sendBeacon(
+        webhookUrl,
+        new Blob([JSON.stringify(payload)], { type: "application/json" })
+      );
+      if (!ok) throw new Error("Beacon send failed while offline");
+      return;
+    }
+
+    try {
+      await sendWithTimeout(
+        webhookUrl,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          mode: "no-cors",
+          body: JSON.stringify(payload),
+        },
+        10000
+      );
+    } catch (err) {
+      // Fallback to beacon if available
+      if ("sendBeacon" in navigator) {
+        const ok = (navigator as any).sendBeacon(
+          webhookUrl,
+          new Blob([JSON.stringify(payload)], { type: "application/json" })
+        );
+        if (!ok) throw err;
+      } else {
+        throw err;
+      }
+    }
+  };
+
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
     
     try {
-      // Send to Zapier webhook for Jobber integration
-      await fetch(webhookUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        mode: "no-cors",
-        body: JSON.stringify({
-          name: values.name,
-          phone: values.phone,
-          email: values.email || "",
-          address: values.address,
-          details: values.details || "",
-          timestamp: new Date().toISOString(),
-          source: "Website Quote Form",
-          business_name: "Seattle ProWash"
-        }),
-      });
+      await sendToWebhook(values);
 
       toast({
-        title: "Quote Request Sent!",
-        description: "We'll respond back in 1 hour.",
+        title: "Request sent",
+        description: "We received your request. We'll respond within 1 hour.",
       });
       
       form.reset();
       
     } catch (error) {
-      console.error('Error sending to Zapier:', error);
+      console.error("Quote submit error:", error);
       toast({
-        title: "Something went wrong",
-        description: "Please try again or call us at 206-752-6690.",
+        title: "Network issue",
+        description: "We couldn't send your request. Please try again or call 206-752-6690.",
         variant: "destructive",
       });
     } finally {
