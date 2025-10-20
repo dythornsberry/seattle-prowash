@@ -9,6 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Phone, Mail, MapPin, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const formSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
@@ -21,7 +22,7 @@ const formSchema = z.object({
 const QuoteForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const webhookUrl = "https://hooks.zapier.com/hooks/catch/24075201/uheurzq/";
+  const EDGE_FUNCTION_NAME = "submit-quote";
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -59,43 +60,15 @@ const QuoteForm = () => {
   const sendToWebhook = async (values: z.infer<typeof formSchema>) => {
     const payload = buildPayload(values);
 
-    // If offline, try beacon immediately
-    if (typeof navigator !== "undefined" && navigator.onLine === false && "sendBeacon" in navigator) {
-      const ok = (navigator as any).sendBeacon(
-        webhookUrl,
-        new Blob([JSON.stringify(payload)], { type: "application/json" })
-      );
-      if (!ok) throw new Error("Beacon send failed while offline");
-      return;
+    const { data, error } = await supabase.functions.invoke(EDGE_FUNCTION_NAME, {
+      body: payload,
+    });
+
+    if (error) {
+      throw new Error(error.message || "Proxy error");
     }
-
-    try {
-      // Use FormData to avoid CORS preflight and reliably reach Zapier
-      const formData = new FormData();
-      Object.entries(payload).forEach(([key, value]) => {
-        formData.append(key, String(value ?? ""));
-      });
-
-      await sendWithTimeout(
-        webhookUrl,
-        {
-          method: "POST",
-          mode: "no-cors",
-          body: formData,
-        },
-        10000
-      );
-    } catch (err) {
-      // Fallback to beacon if available
-      if ("sendBeacon" in navigator) {
-        const ok = (navigator as any).sendBeacon(
-          webhookUrl,
-          new Blob([JSON.stringify(payload)], { type: "application/json" })
-        );
-        if (!ok) throw err;
-      } else {
-        throw err;
-      }
+    if (!data?.ok) {
+      throw new Error("Proxy failed");
     }
   };
 
