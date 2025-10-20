@@ -70,15 +70,18 @@ const QuoteForm = () => {
     }
 
     try {
+      // Use FormData to avoid CORS preflight and reliably reach Zapier
+      const formData = new FormData();
+      Object.entries(payload).forEach(([key, value]) => {
+        formData.append(key, String(value ?? ""));
+      });
+
       await sendWithTimeout(
         webhookUrl,
         {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
           mode: "no-cors",
-          body: JSON.stringify(payload),
+          body: formData,
         },
         10000
       );
