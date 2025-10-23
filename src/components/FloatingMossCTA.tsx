@@ -43,8 +43,11 @@ const FloatingMossCTA = () => {
             <h3 className="font-bold text-white text-sm mb-1">
               Moss Damage Happening Now
             </h3>
-            <p className="text-white/90 text-xs">
+            <p className="text-white/90 text-xs mb-2">
               Every day moss sits on your roof costs you money. Get protected before it's too late.
+            </p>
+            <p className="text-gold text-xs font-semibold">
+              ⚡ Limited spots available this week—lock in your price now
             </p>
           </div>
         </div>
@@ -57,7 +60,7 @@ const FloatingMossCTA = () => {
             document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
           }}
         >
-          Get Free Moss Removal Quote
+          Get Free Quote Today
         </Button>
       </div>
     </div>

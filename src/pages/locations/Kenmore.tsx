@@ -198,9 +198,16 @@ const Kenmore = () => {
                 </div>
 
                 <div className="text-center mt-8">
-                  <p className="text-gray-600">
-                    Don't see your neighborhood? We serve the greater Kenmore area. Call to confirm service to your location.
+                  <p className="text-gray-600 mb-3">
+                    Don't see your neighborhood? We likely still serve you—call us today!
                   </p>
+                  <Button 
+                    variant="outline"
+                    onClick={() => window.location.href = 'tel:206-752-6690'}
+                  >
+                    <Phone className="w-4 h-4 mr-2" />
+                    Call 206-752-6690
+                  </Button>
                 </div>
               </div>
             </div>
@@ -263,7 +270,7 @@ const Kenmore = () => {
                       window.location.href = '/#contact';
                     }}
                   >
-                    GET YOUR FREE QUOTE TODAY
+                    Get Free Quote Today
                   </Button>
                   <Button 
                     variant="outline"

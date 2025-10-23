@@ -367,7 +367,7 @@ const TwoStepQuoteForm = () => {
                                 <FormLabel className="text-forest-green font-semibold">Additional Details (Optional)</FormLabel>
                                 <FormControl>
                                   <Textarea
-                                    placeholder="Any specific concerns or questions? Share photos link if helpful."
+                                    placeholder="Add photos link or describe your needs (optional) — e.g., 'Heavy moss on north side' or 'Link to photos: dropbox.com/...'"
                                     rows={4}
                                     className="border-forest-green/30 focus:border-gold rounded-xl"
                                     {...field}

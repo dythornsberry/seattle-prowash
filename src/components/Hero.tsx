@@ -48,6 +48,11 @@ const Hero = () => {
             Professional roof and gutter cleaning that protects your home.
           </p>
 
+          {/* Local credibility */}
+          <p className="text-lg md:text-xl text-white/80">
+            Serving Kenmore, Bothell, Kirkland & Greater Seattle since 2022
+          </p>
+
           {/* Speed emphasis */}
           <p className="text-lg md:text-xl text-gold font-semibold flex items-center justify-center gap-2">
             <Clock className="w-5 h-5" />

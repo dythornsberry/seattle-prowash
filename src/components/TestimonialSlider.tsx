@@ -83,7 +83,7 @@ const TestimonialSlider = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
+    }, 8000); // Changed from 5000 to 8000 (8 seconds)
     return () => clearInterval(timer);
   }, [testimonials.length]);
 

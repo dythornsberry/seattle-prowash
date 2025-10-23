@@ -289,7 +289,7 @@ const GutterCleaning = () => {
               <p className="text-xl text-white/90 mb-8">
                 Get your free quote today. Professional gutter cleaning with clear results.
               </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
                 <Button 
                   variant="prowash-secondary" 
                   size="xl"
@@ -300,10 +300,10 @@ const GutterCleaning = () => {
                     } else {
                       window.location.href = '/#contact';
                     }
-                      }}
-                    >
-                      Get Free Quote Today
-                    </Button>
+                  }}
+                >
+                  Get Free Quote Today
+                </Button>
                 <Button 
                   variant="outline" 
                   size="xl"
@@ -314,6 +314,9 @@ const GutterCleaning = () => {
                   Call 206-752-6690
                 </Button>
               </div>
+              <p className="text-white/70 text-sm">
+                Have questions? <a href="/faq" className="text-gold hover:underline">Visit our FAQ page</a>
+              </p>
             </div>
           </div>
         </section>
