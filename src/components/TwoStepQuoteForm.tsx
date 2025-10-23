@@ -228,9 +228,9 @@ const TwoStepQuoteForm = () => {
                 </CardHeader>
                 <CardContent>
                   <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" autoComplete="on">
-                      {currentStep === 1 ? (
-                        // Step 1: Contact Information
+                    {currentStep === 1 ? (
+                      <form className="space-y-6" autoComplete="on" onSubmit={(e) => e.preventDefault()}>
+                        {/* Step 1: Contact Information */}
                         <div className="space-y-6">
                           <FormField
                             control={form.control}
@@ -328,8 +328,10 @@ const TwoStepQuoteForm = () => {
                             🔒 No spam. No obligation. We respect your privacy.
                           </p>
                         </div>
-                      ) : (
-                        // Step 2: Project Details
+                      </form>
+                    ) : (
+                      <form className="space-y-6" autoComplete="off" onSubmit={form.handleSubmit(onSubmit)}>
+                        {/* Step 2: Project Details */}
                         <div className="space-y-6">
                           <FormField
                             control={form.control}
@@ -341,7 +343,7 @@ const TwoStepQuoteForm = () => {
                                   <Input
                                     placeholder="123 Main St, Kenmore, WA 98028"
                                     className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
-                                    autoComplete="section-project street-address"
+                                    autoComplete="street-address"
                                     {...field}
                                   />
                                 </FormControl>
@@ -360,7 +362,7 @@ const TwoStepQuoteForm = () => {
                                   <Input
                                     placeholder="e.g., Roof moss removal, Gutter cleaning"
                                     className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
-                                     autoComplete="section-project off"
+                                    autoComplete="off"
                                     {...field}
                                   />
                                 </FormControl>
@@ -377,10 +379,10 @@ const TwoStepQuoteForm = () => {
                                 <FormLabel className="text-brand-navy font-semibold">Additional Details *</FormLabel>
                                 <FormControl>
                                   <Textarea
-                                    placeholder="Add photos link or describe your needs (optional) — e.g., 'Heavy moss on north side' or 'Link to photos: dropbox.com/...'"
+                                    placeholder="Add photos link or describe your needs (optional) — e.g., 'Heavy moss on north side' or 'Link to photos: dropbox.com/'"
                                     rows={4}
                                     className="border-brand-navy/30 focus:border-brand-orange rounded-xl"
-                                    autoComplete="section-project off"
+                                    autoComplete="off"
                                     {...field}
                                   />
                                 </FormControl>
@@ -414,8 +416,8 @@ const TwoStepQuoteForm = () => {
                             Most quotes delivered same day • Free on-site visit when helpful
                           </p>
                         </div>
-                      )}
-                    </form>
+                      </form>
+                    )}
                   </Form>
                 </CardContent>
               </Card>
