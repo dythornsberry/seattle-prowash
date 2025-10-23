@@ -3,10 +3,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyTopBar from "@/components/StickyTopBar";
 import MobileBottomBar from "@/components/MobileBottomBar";
+import ProcessSection from "@/components/ProcessSection";
+import TestimonialCard from "@/components/TestimonialCard";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Phone, HelpCircle } from "lucide-react";
+import { CheckCircle, Phone, HelpCircle, Calendar } from "lucide-react";
 import gutterCleaningImage from "@/assets/gutter-cleaning-before-after.jpg";
 
 const GutterCleaning = () => {
@@ -44,11 +46,11 @@ const GutterCleaning = () => {
   }, []);
 
   const whatYouGet = [
-    "Hand scoop and vacuum gutter debris",
-    "Downspout flush and function test",
-    "Bag and remove debris or place in yard waste on request",
-    "Wipe visible drips on fascia and walkways",
-    "Completion photos sent to you"
+    "Hand-scoop all leaves and debris to restore proper water flow",
+    "Flush downspouts to ensure drainage works perfectly",
+    "Remove all debris from your property—no mess left behind",
+    "Clean visible drips from fascia to improve your home's appearance",
+    "Receive completion photos showing the work was done right"
   ];
 
   const addOns = [
@@ -108,7 +110,7 @@ const GutterCleaning = () => {
                         }
                       }}
                     >
-                      Get a Fast Quote
+                      Get Free Quote Today
                     </Button>
                     <Button 
                       variant="outline" 
@@ -197,6 +199,32 @@ const GutterCleaning = () => {
           </div>
         </section>
 
+        {/* Process Section */}
+        <ProcessSection />
+
+        {/* Testimonials Section */}
+        <section className="section-spacing bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-12 text-center fade-up">
+                What Our Customers Say
+              </h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                <TestimonialCard 
+                  quote="Fast, thorough service. They flushed the downspouts and showed me photos. Water flows perfectly now!"
+                  author="Jennifer L."
+                  service="Gutter Cleaning - Kirkland"
+                />
+                <TestimonialCard 
+                  quote="I had overflow issues every rain. They cleaned everything out and the problem is gone. Worth every penny."
+                  author="David R."
+                  service="Gutter Cleaning - Kenmore"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Recommended Schedule Section */}
         <section className="section-spacing">
           <div className="container mx-auto px-4">
@@ -204,10 +232,20 @@ const GutterCleaning = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-6">
                 Recommended Schedule
               </h2>
-              <Card className="bg-brand-orange/10 border-brand-orange/20">
+              <Card className="bg-gold/10 border-gold/30">
                 <CardContent className="p-8">
+                  <div className="flex items-center justify-center gap-3 mb-4">
+                    <Calendar className="w-8 h-8 text-forest-green" />
+                    <p className="text-2xl font-bold text-forest-green">Twice a Year</p>
+                  </div>
+                  <p className="text-lg text-muted-foreground mb-2">
+                    <strong>Fall:</strong> After leaves drop to prevent winter ice damage
+                  </p>
                   <p className="text-lg text-muted-foreground">
-                    Most homes here need service twice per year. Late fall and spring are the most common.
+                    <strong>Spring:</strong> Clear debris and prepare for heavy rain season
+                  </p>
+                  <p className="text-sm text-muted-foreground mt-4 italic">
+                    Regular cleaning prevents overflow, protects your foundation, and extends gutter life.
                   </p>
                 </CardContent>
               </Card>
@@ -262,10 +300,10 @@ const GutterCleaning = () => {
                     } else {
                       window.location.href = '/#contact';
                     }
-                  }}
-                >
-                  Get a Fast Quote
-                </Button>
+                      }}
+                    >
+                      Get Free Quote Today
+                    </Button>
                 <Button 
                   variant="outline" 
                   size="xl"

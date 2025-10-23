@@ -3,6 +3,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyTopBar from "@/components/StickyTopBar";
 import MobileBottomBar from "@/components/MobileBottomBar";
+import ProcessSection from "@/components/ProcessSection";
+import TestimonialCard from "@/components/TestimonialCard";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -50,11 +52,11 @@ const RoofCleaning = () => {
   ];
 
   const whatWeDo = [
-    "Brush and remove loose moss that can be safely detached",
-    "Apply a soft wash that kills remaining growth",
-    "Treat the roof to slow regrowth",
-    "Light debris cleanup around the home",
-    "Optional: gutter flush and downspout test on request"
+    "Hand-remove moss and debris to restore your home's curb appeal",
+    "Soft-wash treatment protects shingles while eliminating moss at the roots",
+    "Preventative application slows future moss and algae growth",
+    "Clean up debris around your property—leave no mess behind",
+    "Optional gutter flush ensures water flows freely away from your foundation"
   ];
 
   const whyChooseUs = [
@@ -100,7 +102,7 @@ const RoofCleaning = () => {
                         }
                       }}
                     >
-                      Get a Fast Quote
+                      Get Free Quote Today
                     </Button>
                     <Button 
                       variant="outline" 
@@ -208,8 +210,34 @@ const RoofCleaning = () => {
           </div>
         </section>
 
-        {/* Care After Cleaning Section */}
+        {/* Process Section */}
+        <ProcessSection />
+
+        {/* Testimonials Section */}
         <section className="section-spacing bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-12 text-center fade-up">
+                What Our Customers Say
+              </h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                <TestimonialCard 
+                  quote="My roof looks brand new! They were careful, thorough, and the moss is completely gone. Highly recommend!"
+                  author="Sarah M."
+                  service="Roof Cleaning - Kenmore"
+                />
+                <TestimonialCard 
+                  quote="Professional service from start to finish. They explained everything and my roof has stayed clean for months now."
+                  author="Mike T."
+                  service="Roof Moss Treatment - Bothell"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Care After Cleaning Section */}
+        <section className="section-spacing">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center fade-up">
               <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-6">
@@ -243,10 +271,10 @@ const RoofCleaning = () => {
                     } else {
                       window.location.href = '/#contact';
                     }
-                  }}
-                >
-                  Get a Fast Quote
-                </Button>
+                      }}
+                    >
+                      Get Free Quote Today
+                    </Button>
                 <Button 
                   variant="outline" 
                   size="xl"

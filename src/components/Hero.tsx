@@ -40,12 +40,12 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="text-white font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight">
-            Seattle's #1 Roof & Gutter Cleaning
+            Moss-Free Roofs, Guaranteed
           </h1>
 
           {/* Sub-headline */}
           <p className="text-xl md:text-2xl text-white/95 font-medium max-w-2xl mx-auto">
-            Moss-free roofs, spotless gutters, guaranteed.
+            Professional roof and gutter cleaning that protects your home.
           </p>
 
           {/* Speed emphasis */}
@@ -71,7 +71,7 @@ const Hero = () => {
               className="group text-lg px-8 py-6 w-full sm:w-auto"
               onClick={handleGetQuote}
             >
-              Get Free Quote
+              Get Free Quote Today
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
@@ -86,8 +86,13 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Additional Trust Info */}
+          {/* Trust Reassurance */}
           <p className="text-white/90 text-sm md:text-base pt-4">
+            No spam. Same-day estimate.
+          </p>
+
+          {/* Additional Trust Info */}
+          <p className="text-white/80 text-sm pt-2">
             180+ Five-Star Reviews • Family-Owned • Serving Seattle Since 2022
           </p>
         </div>

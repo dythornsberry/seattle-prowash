@@ -1,74 +1,59 @@
-import { CheckCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Search, Droplets, Shield } from "lucide-react";
 
 const ProcessSection = () => {
   const steps = [
     {
       number: "1",
-      title: "Fast Quote",
-      description: "Call or use the form. Most quotes sent quickly by email."
+      title: "Inspect",
+      description: "We assess your roof's condition and identify problem areas",
+      icon: Search
     },
     {
       number: "2", 
-      title: "We Treat & Clean",
-      description: "Pro methods that protect your roof."
+      title: "Treat",
+      description: "Safe soft-wash treatment eliminates moss and prevents regrowth",
+      icon: Droplets
     },
     {
       number: "3",
-      title: "Moss-Free Guarantee", 
-      description: "12-month moss-free guarantee on qualifying treatments. On-site visits available when helpful."
+      title: "Protect", 
+      description: "12-month moss-free guarantee keeps your roof clean",
+      icon: Shield
     }
   ];
 
   return (
-    <section className="section-spacing bg-primary-teal">
+    <section className="section-spacing bg-forest-green">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="fade-up mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              How It Works
+          <div className="fade-up mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our 3-Step Process
             </h2>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto font-medium">
-              From fast quote to moss-free guarantee, we make it simple.
+            <p className="text-xl text-white/90 max-w-2xl mx-auto">
+              Simple, effective, and guaranteed
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {steps.map((step, index) => (
-              <div key={index} className="fade-up group">
-                <div className="relative">
-                  <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-bright-green/20">
-                    <div className="flex items-center justify-center w-16 h-16 bg-bright-green text-white rounded-full font-bold text-xl mb-6 mx-auto">
-                      {step.number}
+            {steps.map((step, index) => {
+              const Icon = step.icon;
+              return (
+                <div key={index} className="fade-up">
+                  <div className="bg-white rounded-xl p-8 shadow-lg h-full">
+                    <div className="flex items-center justify-center w-16 h-16 bg-gold text-forest-green rounded-full mb-6 mx-auto">
+                      <Icon className="w-8 h-8" />
                     </div>
-                    <h3 className="text-xl font-bold text-primary-teal mb-4 text-center">
+                    <h3 className="text-2xl font-bold text-forest-green mb-3">
                       {step.title}
                     </h3>
-                    <p className="text-text-charcoal text-center leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed">
                       {step.description}
                     </p>
                   </div>
-                  
-                  {/* Connecting line for desktop */}
-                  {index < steps.length - 1 && (
-                    <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-bright-green/20 transform -translate-y-1/2"></div>
-                  )}
                 </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-16 text-center fade-up">
-            <Button 
-              variant="cta-orange" 
-              size="xl"
-              className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-              onClick={() => {
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              GET YOUR FREE QUOTE TODAY
-            </Button>
+              );
+            })}
           </div>
         </div>
       </div>

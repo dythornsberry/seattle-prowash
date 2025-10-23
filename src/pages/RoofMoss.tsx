@@ -67,16 +67,15 @@ const RoofMoss = () => {
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="fade-up">
-                  <Badge variant="outline" className="text-brand-orange border-brand-orange mb-4">
-                    Moss Treatment Specialists
+                  <Badge variant="outline" className="text-gold border-gold mb-4 text-lg px-4 py-2">
+                    🛡️ 12-Month Moss-Free Guarantee
                   </Badge>
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-                    Roof Moss Removal and Treatment
+                    Roof Moss Removal & Treatment
                   </h1>
-                  <p className="text-xl md:text-2xl mb-4 text-white/90 font-semibold">
-                    Stop growth and protect your shingles.
+                  <p className="text-xl md:text-2xl mb-6 text-white/90 font-semibold">
+                    Stop moss growth at the roots and protect your investment.
                   </p>
-                  <GuaranteeBadge variant="large" className="mb-6" />
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button 
                       variant="prowash-secondary" 
@@ -90,7 +89,7 @@ const RoofMoss = () => {
                         }
                       }}
                     >
-                      Get a Fast Quote
+                      Get Free Quote Today
                     </Button>
                     <Button 
                       variant="outline" 
@@ -232,10 +231,10 @@ const RoofMoss = () => {
                     } else {
                       window.location.href = '/#contact';
                     }
-                  }}
-                >
-                  Get a Fast Quote
-                </Button>
+                      }}
+                    >
+                      Get Free Quote Today
+                    </Button>
                 <Button 
                   variant="outline" 
                   size="xl"
