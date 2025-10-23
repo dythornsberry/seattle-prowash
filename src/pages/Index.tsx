@@ -12,10 +12,12 @@ import AboutPreview from "@/components/AboutPreview";
 import TestimonialSlider from "@/components/TestimonialSlider";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import CTABanner from "@/components/CTABanner";
-import QuoteForm from "@/components/QuoteForm";
+import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
+import HomeFAQ from "@/components/HomeFAQ";
 import SeasonalPromotions from "@/components/SeasonalPromotions";
 import MossUrgency from "@/components/MossUrgency";
 import FloatingMossCTA from "@/components/FloatingMossCTA";
+import DesktopFloatingCTA from "@/components/DesktopFloatingCTA";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
 
@@ -134,16 +136,18 @@ const Index = () => {
         <div className="bg-navy">
           <BeforeAfterSlider />
         </div>
+        <HomeFAQ />
         <div className="bg-dark-teal text-white">
           <CTABanner />
         </div>
         <div id="contact" className="bg-off-white">
-          <QuoteForm />
+          <TwoStepQuoteForm />
         </div>
         <SeasonalPromotions />
         </main>
       <Footer />
       <MobileBottomBar />
+      <DesktopFloatingCTA />
       <FloatingMossCTA />
       </div>
     </div>

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, ArrowRight, Star, Shield } from "lucide-react";
+import { Phone, ArrowRight, Star, Shield, Clock } from "lucide-react";
 import heroImage from "@/assets/hero-gray-house.webp";
 
 const Hero = () => {
@@ -46,6 +46,12 @@ const Hero = () => {
           {/* Sub-headline */}
           <p className="text-xl md:text-2xl text-white/95 font-medium max-w-2xl mx-auto">
             Moss-free roofs, spotless gutters, guaranteed.
+          </p>
+
+          {/* Speed emphasis */}
+          <p className="text-lg md:text-xl text-gold font-semibold flex items-center justify-center gap-2">
+            <Clock className="w-5 h-5" />
+            Most quotes delivered same day
           </p>
 
           {/* 12-Month Guarantee Badge */}

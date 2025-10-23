@@ -1,0 +1,419 @@
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Phone, Mail, MapPin, CheckCircle, Clock, Shield, ArrowRight, ArrowLeft } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+
+const formSchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(100),
+  phone: z.string().trim().min(1, "Phone number is required").max(20),
+  email: z.string().trim().email("Invalid email address").max(255).optional().or(z.literal("")),
+  preferText: z.boolean().default(false),
+  address: z.string().trim().min(1, "Address is required").max(300),
+  serviceNeeded: z.string().trim().optional(),
+  details: z.string().trim().max(1000).optional(),
+});
+
+const TwoStepQuoteForm = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [currentStep, setCurrentStep] = useState(1);
+  const EDGE_FUNCTION_NAME = "submit-quote";
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      phone: "",
+      email: "",
+      preferText: false,
+      address: "",
+      serviceNeeded: "",
+      details: "",
+    },
+  });
+
+  const buildPayload = (values: z.infer<typeof formSchema>) => ({
+    name: values.name,
+    phone: values.phone,
+    email: values.email || "",
+    preferText: values.preferText,
+    address: values.address,
+    serviceNeeded: values.serviceNeeded || "",
+    details: values.details || "",
+    timestamp: new Date().toISOString(),
+    source: "Website Quote Form",
+    business_name: "Seattle ProWash",
+  });
+
+  const sendToWebhook = async (values: z.infer<typeof formSchema>) => {
+    const payload = buildPayload(values);
+
+    const { data, error } = await supabase.functions.invoke(EDGE_FUNCTION_NAME, {
+      body: payload,
+    });
+
+    if (error) throw new Error(error.message || "Proxy error");
+    if (!data?.ok) throw new Error("Proxy failed");
+  };
+
+  const validateStep1 = async () => {
+    const isValid = await form.trigger(["name", "phone", "email"]);
+    if (isValid) {
+      setCurrentStep(2);
+    }
+  };
+
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    setIsSubmitting(true);
+    
+    try {
+      await sendToWebhook(values);
+
+      toast({
+        title: "✓ Request received!",
+        description: values.preferText 
+          ? "We'll text you back within 1 hour."
+          : "We'll call or email you within 1 hour.",
+      });
+      
+      form.reset();
+      setCurrentStep(1);
+      
+    } catch (error) {
+      console.error("Quote submit error:", error);
+      toast({
+        title: "Network issue",
+        description: "Please try again or call 206-752-6690.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  // Time-sensitive offer - expires in 7 days
+  const offerExpiry = new Date();
+  offerExpiry.setDate(offerExpiry.getDate() + 7);
+  const offerExpiryStr = offerExpiry.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+
+  return (
+    <section id="contact" className="section-spacing bg-off-white/50">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto">
+          {/* Urgency Banner */}
+          <div className="mb-8 text-center fade-up">
+            <div className="inline-block bg-gold/10 border-2 border-gold rounded-xl px-6 py-3 animate-pulse">
+              <p className="text-forest-green font-bold flex items-center justify-center gap-2">
+                <Clock className="w-5 h-5" />
+                Book before {offerExpiryStr} and lock in this year's rates
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center mb-12 fade-up">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-forest-green mb-4 font-heading">
+              Get Your Free Quote Today
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Most quotes sent same day • No obligation • Free consultation
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-12">
+            {/* Contact Info & Trust Badges */}
+            <div className="lg:col-span-1 space-y-6 fade-up">
+              <Card className="border-2 border-forest-green/20 shadow-lg rounded-xl">
+                <CardHeader>
+                  <CardTitle className="text-forest-green font-heading">Quick Contact</CardTitle>
+                  <CardDescription>
+                    Prefer to call? We're here to help!
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <Phone className="w-5 h-5 text-gold" />
+                    <div>
+                      <a href="tel:12067526690" className="font-semibold text-forest-green hover:text-gold transition-colors">
+                        206-752-6690
+                      </a>
+                      <p className="text-sm text-muted-foreground">Call or text anytime</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-3">
+                    <Mail className="w-5 h-5 text-gold" />
+                    <div>
+                      <a href="mailto:seattleprowash@gmail.com" className="text-sm text-forest-green hover:text-gold transition-colors break-all">
+                        seattleprowash@gmail.com
+                      </a>
+                      <p className="text-sm text-muted-foreground">1-hour response time</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <MapPin className="w-5 h-5 text-gold mt-1" />
+                    <div>
+                      <p className="text-sm text-forest-green">Kenmore & Greater Seattle</p>
+                      <p className="text-sm text-muted-foreground">Bothell, Kirkland, Shoreline</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Trust Badges with Icons */}
+              <div className="space-y-3">
+                <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-forest-green/10">
+                  <Shield className="w-5 h-5 text-gold flex-shrink-0" />
+                  <span className="text-sm font-semibold text-forest-green">Licensed & Insured</span>
+                </div>
+                <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-forest-green/10">
+                  <Clock className="w-5 h-5 text-gold flex-shrink-0" />
+                  <span className="text-sm font-semibold text-forest-green">Same-Day Estimates</span>
+                </div>
+                <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-forest-green/10">
+                  <CheckCircle className="w-5 h-5 text-gold flex-shrink-0" />
+                  <span className="text-sm font-semibold text-forest-green">12-Month Moss-Free Guarantee</span>
+                </div>
+                <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-forest-green/10">
+                  <CheckCircle className="w-5 h-5 text-gold flex-shrink-0" />
+                  <span className="text-sm font-semibold text-forest-green">180+ Five-Star Reviews</span>
+                </div>
+              </div>
+            </div>
+
+            {/* 2-Step Quote Form */}
+            <div className="lg:col-span-2 fade-up">
+              <Card className="border-2 border-forest-green/20 shadow-xl rounded-xl">
+                <CardHeader>
+                  {/* Progress Indicator */}
+                  <div className="mb-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm font-semibold text-forest-green">
+                        Step {currentStep} of 2
+                      </span>
+                      <span className="text-sm text-muted-foreground">
+                        {currentStep === 1 ? "Contact Info" : "Project Details"}
+                      </span>
+                    </div>
+                    <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+                      <div 
+                        className="h-full bg-gold transition-all duration-300"
+                        style={{ width: `${(currentStep / 2) * 100}%` }}
+                      />
+                    </div>
+                  </div>
+
+                  <CardTitle className="text-forest-green font-heading">
+                    {currentStep === 1 ? "Your Contact Information" : "Tell Us About Your Project"}
+                  </CardTitle>
+                  <CardDescription>
+                    {currentStep === 1 
+                      ? "We'll use this to send your quote"
+                      : "Help us provide an accurate estimate"}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Form {...form}>
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                      {currentStep === 1 ? (
+                        // Step 1: Contact Information
+                        <div className="space-y-6">
+                          <FormField
+                            control={form.control}
+                            name="name"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel className="text-forest-green font-semibold">Full Name *</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    placeholder="John Smith"
+                                    className="border-forest-green/30 focus:border-gold h-12 rounded-xl"
+                                    {...field}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                          
+                          <FormField
+                            control={form.control}
+                            name="phone"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel className="text-forest-green font-semibold">Phone Number *</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    type="tel"
+                                    placeholder="(206) 555-0123"
+                                    className="border-forest-green/30 focus:border-gold h-12 rounded-xl"
+                                    {...field}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                          
+                          <FormField
+                            control={form.control}
+                            name="email"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel className="text-forest-green font-semibold">Email (Optional)</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    type="email"
+                                    placeholder="john@example.com"
+                                    className="border-forest-green/30 focus:border-gold h-12 rounded-xl"
+                                    {...field}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+
+                          <FormField
+                            control={form.control}
+                            name="preferText"
+                            render={({ field }) => (
+                              <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-forest-green/20 p-4">
+                                <FormControl>
+                                  <Checkbox
+                                    checked={field.value}
+                                    onCheckedChange={field.onChange}
+                                  />
+                                </FormControl>
+                                <div className="space-y-1 leading-none">
+                                  <FormLabel className="text-sm font-semibold text-forest-green">
+                                    Prefer text message follow-up
+                                  </FormLabel>
+                                  <p className="text-sm text-muted-foreground">
+                                    We'll text you instead of calling
+                                  </p>
+                                </div>
+                              </FormItem>
+                            )}
+                          />
+
+                          <Button
+                            type="button"
+                            variant="cta-orange"
+                            className="w-full h-12 text-lg font-bold rounded-xl"
+                            onClick={validateStep1}
+                          >
+                            Next: Project Details
+                            <ArrowRight className="ml-2 w-5 h-5" />
+                          </Button>
+
+                          <p className="text-xs text-center text-muted-foreground">
+                            🔒 No spam. No obligation. We respect your privacy.
+                          </p>
+                        </div>
+                      ) : (
+                        // Step 2: Project Details
+                        <div className="space-y-6">
+                          <FormField
+                            control={form.control}
+                            name="address"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel className="text-forest-green font-semibold">Property Address *</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    placeholder="123 Main St, Kenmore, WA 98028"
+                                    className="border-forest-green/30 focus:border-gold h-12 rounded-xl"
+                                    {...field}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+
+                          <FormField
+                            control={form.control}
+                            name="serviceNeeded"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel className="text-forest-green font-semibold">Service Needed (Optional)</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    placeholder="e.g., Roof moss removal, Gutter cleaning"
+                                    className="border-forest-green/30 focus:border-gold h-12 rounded-xl"
+                                    {...field}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                          
+                          <FormField
+                            control={form.control}
+                            name="details"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel className="text-forest-green font-semibold">Additional Details (Optional)</FormLabel>
+                                <FormControl>
+                                  <Textarea
+                                    placeholder="Any specific concerns or questions? Share photos link if helpful."
+                                    rows={4}
+                                    className="border-forest-green/30 focus:border-gold rounded-xl"
+                                    {...field}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+
+                          <div className="flex gap-3">
+                            <Button
+                              type="button"
+                              variant="outline"
+                              className="flex-1 h-12 border-forest-green text-forest-green hover:bg-forest-green hover:text-white rounded-xl"
+                              onClick={() => setCurrentStep(1)}
+                            >
+                              <ArrowLeft className="mr-2 w-5 h-5" />
+                              Back
+                            </Button>
+
+                            <Button
+                              type="submit"
+                              variant="cta-orange"
+                              className="flex-[2] h-12 text-lg font-bold rounded-xl"
+                              disabled={isSubmitting}
+                            >
+                              {isSubmitting ? "Sending..." : "Get My Free Quote"}
+                            </Button>
+                          </div>
+
+                          <p className="text-sm text-center text-muted-foreground">
+                            Most quotes delivered same day • Free on-site visit when helpful
+                          </p>
+                        </div>
+                      )}
+                    </form>
+                  </Form>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default TwoStepQuoteForm;
