@@ -242,6 +242,7 @@ const TwoStepQuoteForm = () => {
                                   <Input
                                     placeholder="Your Name"
                                     className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
+                                    autoComplete="name"
                                     {...field}
                                   />
                                 </FormControl>
@@ -261,6 +262,7 @@ const TwoStepQuoteForm = () => {
                                     type="tel"
                                     placeholder="Mobile Number"
                                     className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
+                                    autoComplete="tel"
                                     {...field}
                                   />
                                 </FormControl>
@@ -280,6 +282,7 @@ const TwoStepQuoteForm = () => {
                                     type="email"
                                     placeholder="Email Address"
                                     className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
+                                    autoComplete="email"
                                     {...field}
                                   />
                                 </FormControl>
@@ -338,6 +341,7 @@ const TwoStepQuoteForm = () => {
                                   <Input
                                     placeholder="123 Main St, Kenmore, WA 98028"
                                     className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
+                                    autoComplete="street-address"
                                     {...field}
                                   />
                                 </FormControl>
@@ -356,6 +360,7 @@ const TwoStepQuoteForm = () => {
                                   <Input
                                     placeholder="e.g., Roof moss removal, Gutter cleaning"
                                     className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
+                                    autoComplete="off"
                                     {...field}
                                   />
                                 </FormControl>
@@ -375,6 +380,7 @@ const TwoStepQuoteForm = () => {
                                     placeholder="Add photos link or describe your needs (optional) — e.g., 'Heavy moss on north side' or 'Link to photos: dropbox.com/...'"
                                     rows={4}
                                     className="border-brand-navy/30 focus:border-brand-orange rounded-xl"
+                                    autoComplete="off"
                                     {...field}
                                   />
                                 </FormControl>
