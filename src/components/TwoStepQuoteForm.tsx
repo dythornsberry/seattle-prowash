@@ -23,7 +23,7 @@ const formSchema = z.object({
 const TwoStepQuoteForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const ZAPIER_WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/24075201/uheurzq/";
+  const ZAPIER_WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/24075201/urxpaav/";
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
