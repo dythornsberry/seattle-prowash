@@ -118,7 +118,7 @@ const RoofCleaning = () => {
                 <div className="fade-up">
                   <img
                     src={roofCleaningImage}
-                    alt="Roof cleaning before and after showing moss removal results"
+                    alt="Seattle roof cleaning before and after - Professional moss removal results on residential roof in Kenmore and Kirkland area"
                     className="rounded-2xl shadow-2xl w-full"
                   />
                 </div>
@@ -287,13 +287,13 @@ const RoofCleaning = () => {
               </div>
               <div className="space-y-2">
                 <p className="text-white/70 text-sm">
-                  Need gutter cleaning too? <a href="/gutter-cleaning" className="text-gold hover:underline">Click here</a>
+                  Need gutter cleaning too? <a href="/gutter-cleaning" className="text-brand-orange hover:underline">Click here</a>
                 </p>
                 <p className="text-white/70 text-sm">
-                  <a href="#faq" className="text-gold hover:underline">Got questions? Jump to FAQs</a>
+                  <a href="#faq" className="text-brand-orange hover:underline">Got questions? Jump to FAQs</a>
                 </p>
                 <p className="text-white/70 text-sm">
-                  Have questions? <a href="/faq" className="text-gold hover:underline">Visit our FAQ page</a>
+                  Have questions? <a href="/faq" className="text-brand-orange hover:underline">Visit our FAQ page</a>
                 </p>
               </div>
             </div>

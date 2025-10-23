@@ -12,7 +12,7 @@ const StickyTopBar = () => {
           <div className="flex items-center gap-2">
             <a 
               href="tel:12067526690"
-              className="hidden sm:flex items-center gap-2 text-white hover:text-gold transition-colors font-bold text-lg"
+              className="hidden sm:flex items-center gap-2 text-white hover:text-brand-orange transition-colors font-bold text-lg"
             >
               <Phone className="w-5 h-5" />
               206-752-6690

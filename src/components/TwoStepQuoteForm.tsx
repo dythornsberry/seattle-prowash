@@ -220,6 +220,11 @@ const TwoStepQuoteForm = () => {
                       ? "We'll use this to send your quote"
                       : "Help us provide an accurate estimate"}
                   </CardDescription>
+                  <div className="mt-3 p-3 bg-brand-orange/10 rounded-lg border border-brand-orange/20">
+                    <p className="text-sm text-brand-navy font-medium">
+                      🔒 Your information is secure. No spam. No obligation.
+                    </p>
+                  </div>
                 </CardHeader>
                 <CardContent>
                   <Form {...form}>

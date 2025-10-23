@@ -126,7 +126,7 @@ const GutterCleaning = () => {
                 <div className="fade-up">
                   <img
                     src={gutterCleaningImage}
-                    alt="Gutter cleaning before and after showing clear gutters and downspouts"
+                    alt="Professional gutter cleaning Seattle - Before and after photos showing debris removal and clear downspouts in Kenmore, Bothell, and Kirkland area"
                     className="rounded-2xl shadow-2xl w-full"
                   />
                 </div>
@@ -232,11 +232,11 @@ const GutterCleaning = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-6">
                 Recommended Schedule
               </h2>
-              <Card className="bg-gold/10 border-gold/30">
+              <Card className="bg-brand-orange/10 border-brand-orange/30">
                 <CardContent className="p-8">
                   <div className="flex items-center justify-center gap-3 mb-4">
-                    <Calendar className="w-8 h-8 text-forest-green" />
-                    <p className="text-2xl font-bold text-forest-green">Twice a Year</p>
+                    <Calendar className="w-8 h-8 text-brand-navy" />
+                    <p className="text-2xl font-bold text-brand-navy">Twice a Year</p>
                   </div>
                   <p className="text-lg text-muted-foreground mb-2">
                     <strong>Fall:</strong> After leaves drop to prevent winter ice damage
@@ -316,13 +316,13 @@ const GutterCleaning = () => {
               </div>
               <div className="space-y-2">
                 <p className="text-white/70 text-sm">
-                  Need roof cleaning too? <a href="/roof-cleaning" className="text-gold hover:underline">Click here</a>
+                  Need roof cleaning too? <a href="/roof-cleaning" className="text-brand-orange hover:underline">Click here</a>
                 </p>
                 <p className="text-white/70 text-sm">
-                  <a href="#faq" className="text-gold hover:underline">Got questions? Jump to FAQs</a>
+                  <a href="#faq" className="text-brand-orange hover:underline">Got questions? Jump to FAQs</a>
                 </p>
                 <p className="text-white/70 text-sm">
-                  Have questions? <a href="/faq" className="text-gold hover:underline">Visit our FAQ page</a>
+                  Have questions? <a href="/faq" className="text-brand-orange hover:underline">Visit our FAQ page</a>
                 </p>
               </div>
             </div>

@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img 
           src={heroImage}
-          alt="Beautiful gray home with clean roof"
+          alt="Professional Seattle roof cleaning services - Clean residential home exterior showcasing ProWash quality work"
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-brand-navy/40"></div>

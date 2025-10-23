@@ -18,7 +18,7 @@ const Footer = () => {
   return (
     <footer className="bg-brand-navy text-white">
       {/* Mini CTA Bar */}
-      <div className="bg-brand-yellow text-brand-navy py-4">
+      <div className="bg-brand-orange text-white py-4">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-center md:text-left">
@@ -47,7 +47,7 @@ const Footer = () => {
             <div className="space-y-6">
               <div>
                 <h2 className="text-2xl font-bold mb-2 text-white">
-                  Seattle <span className="text-brand-yellow">ProWash</span>
+                  Seattle <span className="text-brand-orange">ProWash</span>
                 </h2>
                 <p className="text-white/80 leading-relaxed">
                   Trusted roof & gutter cleaning specialists serving Kenmore, Bothell, Kirkland and the greater Seattle area. Protecting Pacific Northwest homes with safe, effective cleaning solutions
@@ -57,7 +57,7 @@ const Footer = () => {
               {/* Google Reviews Badge */}
               <div className="bg-brand-white/10 rounded-lg p-4">
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="flex text-brand-yellow">
+                  <div className="flex text-brand-orange">
                     ★★★★★
                   </div>
                   <span className="font-bold">5.0</span>
@@ -80,16 +80,16 @@ const Footer = () => {
                <ul className="space-y-3">
                 <li>
                   <Link 
-                    to="/roof-cleaning" 
-                    className="text-white/80 hover:text-brand-yellow transition-colors duration-250 text-sm"
+                     to="/roof-cleaning" 
+                    className="text-white/80 hover:text-brand-orange transition-colors duration-250 text-sm"
                   >
                     Roof Cleaning
                   </Link>
                 </li>
                 <li>
                   <Link 
-                    to="/gutter-cleaning" 
-                    className="text-white/80 hover:text-brand-yellow transition-colors duration-250 text-sm"
+                     to="/gutter-cleaning" 
+                    className="text-white/80 hover:text-brand-orange transition-colors duration-250 text-sm"
                   >
                     Gutter Cleaning
                   </Link>
@@ -125,7 +125,7 @@ const Footer = () => {
               <p className="text-xs text-white/60 mt-4">
                 Serving Kenmore and the greater Seattle area.
               </p>
-              <p className="text-sm text-brand-yellow mt-4 font-semibold">
+              <p className="text-sm text-brand-orange mt-4 font-semibold">
                 Call 206-752-6690 for your free same-day quote
               </p>
             </div>
@@ -136,9 +136,9 @@ const Footer = () => {
               
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-brand-yellow flex-shrink-0" />
+                  <Phone className="w-5 h-5 text-brand-orange flex-shrink-0" />
                   <div>
-                     <a href="tel:+12067526690" className="font-semibold hover:text-brand-yellow transition-colors">
+                     <a href="tel:+12067526690" className="font-semibold hover:text-brand-orange transition-colors">
                       206-752-6690
                     </a>
                     <p className="text-xs text-white/60">Call anytime</p>
@@ -146,7 +146,7 @@ const Footer = () => {
                 </div>
                 
                 <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-brand-yellow flex-shrink-0" />
+                  <Mail className="w-5 h-5 text-brand-orange flex-shrink-0" />
                   <div>
                     <a href="mailto:seattleprowash@gmail.com" className="text-sm hover:text-brand-orange transition-colors">
                       seattleprowash@gmail.com
@@ -159,7 +159,7 @@ const Footer = () => {
                 </div>
                 
                 <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-brand-yellow flex-shrink-0 mt-1" />
+                  <MapPin className="w-5 h-5 text-brand-orange flex-shrink-0 mt-1" />
                   <div>
                     <p className="text-sm">Kenmore, WA</p>
                     <p className="text-xs text-white/60">Licensed & Insured</p>

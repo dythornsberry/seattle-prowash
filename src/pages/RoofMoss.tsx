@@ -67,7 +67,7 @@ const RoofMoss = () => {
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="fade-up">
-                  <Badge variant="outline" className="text-gold border-gold mb-4 text-lg px-4 py-2">
+                  <Badge variant="outline" className="text-brand-orange border-brand-orange mb-4 text-lg px-4 py-2">
                     🛡️ 12-Month Moss-Free Guarantee
                   </Badge>
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
@@ -105,7 +105,7 @@ const RoofMoss = () => {
                 <div className="fade-up">
                   <img
                     src={mossRemovalImage}
-                    alt="Roof moss removal and treatment before and after results"
+                    alt="Professional roof moss removal and treatment Seattle - Before and after results with 12-month guarantee in Bothell and Kenmore"
                     className="rounded-2xl shadow-2xl w-full"
                   />
                 </div>
@@ -247,10 +247,10 @@ const RoofMoss = () => {
               </div>
               <div className="space-y-2">
                 <p className="text-white/70 text-sm">
-                  Need roof cleaning too? <a href="/roof-cleaning" className="text-gold hover:underline">Click here</a>
+                  Need roof cleaning too? <a href="/roof-cleaning" className="text-brand-orange hover:underline">Click here</a>
                 </p>
                 <p className="text-white/70 text-sm">
-                  Have questions? <a href="/faq" className="text-gold hover:underline">Visit our FAQ page</a>
+                  Have questions? <a href="/faq" className="text-brand-orange hover:underline">Visit our FAQ page</a>
                 </p>
               </div>
             </div>
