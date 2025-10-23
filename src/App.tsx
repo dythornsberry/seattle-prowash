@@ -16,7 +16,12 @@ import RoofMoss from "./pages/RoofMoss";
 import Kenmore from "./pages/locations/Kenmore";
 import Bothell from "./pages/locations/Bothell";
 import Kirkland from "./pages/locations/Kirkland";
+import Bellevue from "./pages/locations/Bellevue";
+import Redmond from "./pages/locations/Redmond";
+import Sammamish from "./pages/locations/Sammamish";
+import Woodinville from "./pages/locations/Woodinville";
 import Reviews from "./pages/Reviews";
+import ServiceAreas from "./pages/ServiceAreas";
 
 const queryClient = new QueryClient();
 
@@ -34,9 +39,14 @@ const App = () => (
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/about" element={<About />} />
+          <Route path="/service-areas" element={<ServiceAreas />} />
           <Route path="/kenmore" element={<Kenmore />} />
           <Route path="/bothell" element={<Bothell />} />
           <Route path="/kirkland" element={<Kirkland />} />
+          <Route path="/bellevue" element={<Bellevue />} />
+          <Route path="/redmond" element={<Redmond />} />
+          <Route path="/sammamish" element={<Sammamish />} />
+          <Route path="/woodinville" element={<Woodinville />} />
           <Route path="/reviews" element={<Reviews />} />
           {/* Redirects for old services */}
           <Route path="/services" element={<RoofCleaning />} />

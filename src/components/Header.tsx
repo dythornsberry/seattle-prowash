@@ -28,7 +28,7 @@ const Header = () => {
       name: "Reviews", 
       href: "/reviews"
     },
-    { name: "Service Area", href: "/kenmore" },
+    { name: "Service Area", href: "/service-areas" },
     { name: "Gallery", href: "/gallery" },
     { name: "FAQ", href: "/faq" },
     { name: "About", href: "/about" },

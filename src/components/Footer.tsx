@@ -102,7 +102,8 @@ const Footer = () => {
               <h3 className="text-lg font-bold mb-6 text-white">Service Areas</h3>
               <div className="space-y-2">
                 {serviceAreas.map((area, index) => {
-                  const isLinkable = ["Kenmore", "Bothell", "Kirkland"].includes(area);
+                  const cityPages = ["Kenmore", "Bothell", "Kirkland", "Bellevue", "Redmond", "Sammamish", "Woodinville"];
+                  const isLinkable = cityPages.includes(area);
                   const linkPath = isLinkable ? `/${area.toLowerCase()}` : null;
                   
                   return isLinkable && linkPath ? (
@@ -123,7 +124,7 @@ const Footer = () => {
                 })}
               </div>
               <p className="text-xs text-white/60 mt-4">
-                Serving Kenmore and the greater Seattle area.
+                <Link to="/service-areas" className="hover:text-white underline">View all service areas</Link> • Serving ~15 miles from Kenmore
               </p>
               <p className="text-sm text-brand-orange mt-4 font-semibold">
                 Call 206-752-6690 for your free same-day quote
