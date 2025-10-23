@@ -21,6 +21,7 @@ import DesktopFloatingCTA from "@/components/DesktopFloatingCTA";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
 import IntroSection from "@/components/IntroSection";
+import GutterAddonSection from "@/components/GutterAddonSection";
 
 const Index = () => {
   // Scroll to top and set up fade-up animations
@@ -136,6 +137,7 @@ const Index = () => {
         <div className="bg-off-white">
           <ServicesPreview />
         </div>
+        <GutterAddonSection />
         <div className="bg-dark-teal text-white">
           <CostOfWaiting />
         </div>

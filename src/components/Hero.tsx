@@ -19,6 +19,8 @@ const Hero = () => {
           src={heroImage}
           alt="Professional Seattle roof cleaning services - Clean residential home exterior showcasing ProWash quality work"
           className="w-full h-full object-cover object-center"
+          loading="eager"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-brand-navy/40"></div>
       </div>
