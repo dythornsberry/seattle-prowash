@@ -9,23 +9,24 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "border-2 border-forest-green text-forest-green bg-white hover:bg-forest-green hover:text-white transition-all",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+          "bg-gold text-charcoal hover:bg-gold-dark hover:text-white transition-all shadow-sm",
+        ghost: "hover:bg-accent/10 hover:text-accent-foreground",
+        link: "text-forest-green underline-offset-4 hover:underline",
         
-        /* Seattle ProWash High Contrast Brand Variants */
-        "prowash-primary": "bg-moss-green text-white font-bold hover:bg-moss-green-light btn-glow shadow-md border-0 hover:scale-105 transition-all duration-300 w-full sm:w-auto",
-        "prowash-outline": "bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-blue font-semibold",
-        "prowash-secondary": "border-2 border-gray-900 bg-white hover:bg-gray-900 hover:text-white font-semibold shadow-sm" + " text-gray-900",
-        "prowash-cta": "bg-brand-blue text-white font-bold hover:bg-brand-blue-light shadow-lg border-0",
-        "prowash-phone": "bg-moss-green text-white font-bold hover:bg-moss-green-light btn-glow text-lg border-0",
-        "cta-orange": "bg-bright-orange text-white font-bold hover:bg-bright-orange/90 btn-glow shadow-md border-0 hover:scale-105 transition-all duration-300",
+        /* Premium ProWash variants */
+        prowash: "bg-forest-green text-white hover:bg-forest-green-light font-semibold shadow-lg hover:shadow-xl transition-all rounded-xl",
+        "prowash-primary": "bg-forest-green text-white hover:bg-forest-green-light font-semibold shadow-lg hover:shadow-xl transition-all rounded-xl",
+        "prowash-secondary": "bg-white border-2 border-forest-green text-forest-green hover:bg-forest-green hover:text-white font-semibold transition-all",
+        "prowash-cta": "bg-forest-green text-white hover:bg-forest-green-light font-bold shadow-lg transition-all",
+        "prowash-phone": "bg-gold text-forest-green-dark hover:bg-gold-dark hover:text-white font-bold shadow-lg",
+        "cta-orange": "bg-gold text-forest-green-dark hover:bg-gold-dark hover:text-white font-bold shadow-lg hover:shadow-xl transition-all rounded-xl",
+        "prowash-outline": "bg-transparent border-2 border-white text-white hover:bg-white hover:text-forest-green font-semibold",
       },
       size: {
         default: "h-10 px-4 py-2",

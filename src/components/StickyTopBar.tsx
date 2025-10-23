@@ -3,16 +3,16 @@ import { Phone } from "lucide-react";
 
 const StickyTopBar = () => {
   return (
-    <div id="sticky-top-bar" className="fixed top-0 left-0 right-0 z-50 bg-primary-teal border-b border-white/10 shadow-lg h-10 md:h-11">
+    <div id="sticky-top-bar" className="fixed top-0 left-0 right-0 z-50 bg-forest-green border-b border-gold/20 shadow-lg h-10 md:h-11">
       <div className="container mx-auto px-4 h-full">
         <div className="flex items-center justify-between gap-2 h-full">
           <div className="text-white font-medium text-xs md:text-base">
-            🚨 <span className="hidden sm:inline">Roof Moss Removal Specialists</span><span className="sm:hidden">Moss Removal Pros</span>
+            🌲 <span className="hidden sm:inline">Roof Moss Removal Specialists</span><span className="sm:hidden">Moss Removal Pros</span>
           </div>
           <div className="flex items-center gap-2">
             <a 
               href="tel:12067526690"
-              className="hidden sm:flex items-center gap-2 text-white hover:text-bright-orange transition-colors font-bold text-lg"
+              className="hidden sm:flex items-center gap-2 text-white hover:text-gold transition-colors font-bold text-lg"
             >
               <Phone className="w-5 h-5" />
               206-752-6690
@@ -20,7 +20,7 @@ const StickyTopBar = () => {
             <Button 
               variant="cta-orange"
               size="sm"
-              className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold"
+              className="shadow-md"
               onClick={() => {
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
               }}

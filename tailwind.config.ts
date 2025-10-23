@@ -25,13 +25,19 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				
-				/* Pacific Northwest Professional Palette */
+				/* Premium Forest Green & Gold Palette */
+				'forest-green': 'hsl(var(--forest-green))',
+				'forest-green-light': 'hsl(var(--forest-green-light))',
+				'forest-green-dark': 'hsl(var(--forest-green-dark))',
+				'gold': 'hsl(var(--gold))',
+				'gold-light': 'hsl(var(--gold-light))',
+				'gold-dark': 'hsl(var(--gold-dark))',
+				
+				/* Legacy mappings */
 				'primary-teal': 'hsl(var(--primary-teal))',
 				'off-white': 'hsl(var(--secondary-off-white))',
 				'bright-green': 'hsl(var(--accent-bright-green))',
 				'text-charcoal': 'hsl(var(--text-charcoal))',
-				
-				/* Seattle ProWash Brand Colors (mapped to new palette) */
 				'brand-blue': 'hsl(var(--brand-blue))',
 				'brand-blue-light': 'hsl(var(--brand-blue-light))', 
 				'brand-navy': 'hsl(var(--brand-navy))',
@@ -41,14 +47,10 @@ export default {
 				'brand-white': 'hsl(var(--brand-white))',
 				'brand-gray': 'hsl(var(--brand-gray))',
 				'brand-gray-text': 'hsl(var(--brand-gray-text))',
-				
-				/* Updated StoryBrand Colors */
 				'moss-green': 'hsl(var(--moss-green))',
 				'moss-green-light': 'hsl(var(--moss-green-light))',
 				'slate-charcoal': 'hsl(var(--slate-charcoal))',
 				'light-gray': 'hsl(var(--light-gray))',
-				
-				/* New Colors for Design Update */
 				'bright-orange': 'hsl(var(--bright-orange))',
 				'navy': 'hsl(var(--navy))',
 				'dark-teal': 'hsl(var(--dark-teal))',
@@ -94,6 +96,7 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
+				heading: ['Poppins', 'system-ui', 'sans-serif'],
 			},
 			spacing: {
 				'18': '4.5rem', /* 72px */

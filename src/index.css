@@ -1,73 +1,79 @@
-/* Optimized font loading - 2 weights only for performance */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Seattle ProWash Design System - High Contrast Blue & Orange Palette */
+/* Seattle ProWash Premium Design System - Forest Green & Gold */
 
 @layer base {
   :root {
-    /* Seattle ProWash High Contrast Colors (HSL format) */
-    --background: 210 20% 98%; /* Off-white background */
-    --foreground: 210 11% 25%; /* Charcoal for excellent readability */
+    /* Premium Color Palette */
+    --background: 0 0% 98%; /* Off-white background */
+    --foreground: 0 0% 15%; /* Rich charcoal for text */
     
-    /* Pacific Northwest Professional Palette */
-    --primary-teal: 192 100% 22%; /* Deep Teal #005D6E - headings, dark backgrounds, footer */
-    --secondary-off-white: 210 20% 98%; /* Off-White #F8F9FA - main page background */
-    --accent-bright-green: 120 61% 50%; /* Bright Green #32CD32 - CTA buttons, icons, highlights */
-    --text-charcoal: 210 11% 25%; /* Charcoal #343A40 - body text */
+    /* Primary Forest Green Palette */
+    --forest-green: 158 64% 20%; /* Deep Forest Green #126049 */
+    --forest-green-light: 158 50% 30%; /* Lighter forest green */
+    --forest-green-dark: 158 80% 15%; /* Darker forest green */
     
-    /* Legacy Brand Colors (keeping for compatibility) */
-    --brand-blue: 192 100% 22%; /* Now maps to Deep Teal */
-    --brand-blue-light: 192 85% 35%; /* Lighter teal variation */
-    --brand-navy: 192 100% 18%; /* Even darker teal for backgrounds */
-    --brand-orange: 120 61% 50%; /* Now maps to Bright Green */
-    --brand-orange-light: 120 61% 60%; /* Lighter bright green for hover states */
-    --brand-yellow: 45 100% 50%; /* Pure golden yellow */
-    --brand-white: 0 0% 100%; /* Pure white */
-    --brand-gray: 210 20% 98%; /* Off-white background */
-    --brand-gray-text: 210 11% 25%; /* Charcoal for text */
+    /* Gold Accent Palette */
+    --gold: 43 90% 55%; /* Rich Gold #E3B041 */
+    --gold-light: 43 85% 65%; /* Light gold for hover */
+    --gold-dark: 43 95% 45%; /* Dark gold for emphasis */
     
-    /* Updated StoryBrand Colors */
-    --moss-green: 120 61% 50%; /* Now Bright Green for consistency */
-    --moss-green-light: 120 61% 60%; /* Lighter bright green for hover */
-    --slate-charcoal: 192 100% 22%; /* Deep Teal for consistency */
-    --off-white: 210 20% 98%; /* Off-white background */
-    --light-gray: 210 14% 96%; /* Light gray background */
+    /* Neutral Palette */
+    --off-white: 0 0% 98%; /* Off-white background */
+    --light-gray: 0 0% 96%; /* Light gray */
+    --mid-gray: 0 0% 60%; /* Mid gray */
+    --charcoal: 0 0% 15%; /* Rich charcoal text */
+    --pure-white: 0 0% 100%; /* Pure white */
     
-    /* New Colors for Design Update */
-    --bright-orange: 25 95% 53%; /* Bright Orange #f97316 */
-    --navy: 222 84% 5%; /* Navy #0f172a */
-    --dark-teal: 182 100% 14%; /* Dark Teal #004348 */
+    /* Legacy Brand Colors (mapped to new palette) */
+    --primary-teal: 158 64% 20%; /* Now maps to Forest Green */
+    --secondary-off-white: 0 0% 98%;
+    --accent-bright-green: 158 64% 20%; /* Forest green */
+    --text-charcoal: 0 0% 15%;
+    --brand-blue: 158 64% 20%; /* Forest green */
+    --brand-blue-light: 158 50% 30%;
+    --brand-navy: 158 80% 15%;
+    --brand-orange: 43 90% 55%; /* Gold */
+    --brand-orange-light: 43 85% 65%;
+    --brand-yellow: 43 90% 55%; /* Gold */
+    --brand-white: 0 0% 100%;
+    --brand-gray: 0 0% 98%;
+    --brand-gray-text: 0 0% 15%;
+    --moss-green: 158 64% 20%;
+    --moss-green-light: 158 50% 30%;
+    --slate-charcoal: 158 64% 20%;
+    --bright-orange: 43 90% 55%; /* Gold */
+    --navy: 158 80% 15%; /* Dark forest green */
+    --dark-teal: 158 80% 15%;
     
     --card: 0 0% 100%;
-    --card-foreground: 210 100% 10%;
+    --card-foreground: 0 0% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 100% 10%;
+    --popover-foreground: 0 0% 15%;
 
-    --primary: 192 100% 22%; /* Deep Teal */
+    --primary: 158 64% 20%; /* Forest Green */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 20% 98%; /* Off-white background */
-    --secondary-foreground: 210 11% 25%; /* Charcoal text */
+    --secondary: 0 0% 98%;
+    --secondary-foreground: 0 0% 15%;
 
-    --muted: 210 14% 96%; /* Light gray */
-    --muted-foreground: 210 11% 25%; /* Charcoal for better readability */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 120 61% 50%; /* Bright Green */
-    --accent-foreground: 0 0% 100%;
+    --accent: 43 90% 55%; /* Gold */
+    --accent-foreground: 0 0% 15%;
 
     --destructive: 0 84% 45%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 85%;
-    --input: 210 20% 90%;
-    --ring: 25 95% 50%;
+    --border: 0 0% 88%;
+    --input: 0 0% 92%;
+    --ring: 43 90% 55%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     /* Sidebar colors */
     --sidebar-background: 0 0% 98%;
@@ -133,29 +139,24 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    line-height: 1.6;
+    line-height: 1.7;
     font-weight: 400;
-    min-width: 320px; /* Prevent layout issues on very small screens */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    min-width: 320px;
+    overflow-x: hidden;
   }
   
-  /* High contrast text classes */
-  .text-readable {
-    color: hsl(var(--brand-blue));
-    font-weight: 500;
-  }
-  
-  .text-secondary-readable {
-    color: hsl(var(--brand-gray-text));
-    font-weight: 400;
-  }
-  
-  /* Ensure headings have excellent contrast */
+  /* Premium typography */
   h1, h2, h3, h4, h5, h6 {
-    color: hsl(var(--brand-blue));
+    font-family: 'Poppins', sans-serif;
+    color: hsl(var(--forest-green));
     font-weight: 700;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
   }
+  
+  h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+  h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+  h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
   
   /* Seattle ProWash Section Spacing */
   .section-spacing {
