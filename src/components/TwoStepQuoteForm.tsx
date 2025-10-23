@@ -343,7 +343,9 @@ const TwoStepQuoteForm = () => {
                                   <Input
                                     placeholder="123 Main St, Kenmore, WA 98028"
                                     className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
-                                    autoComplete="street-address"
+                                    autoComplete="new-password"
+                                    data-lpignore="true"
+                                    data-form-type="other"
                                     {...field}
                                   />
                                 </FormControl>
@@ -362,7 +364,9 @@ const TwoStepQuoteForm = () => {
                                   <Input
                                     placeholder="e.g., Roof moss removal, Gutter cleaning"
                                     className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
-                                    autoComplete="off"
+                                    autoComplete="new-password"
+                                    data-lpignore="true"
+                                    data-form-type="other"
                                     {...field}
                                   />
                                 </FormControl>
@@ -382,7 +386,9 @@ const TwoStepQuoteForm = () => {
                                     placeholder="Add photos link or describe your needs (optional) — e.g., 'Heavy moss on north side' or 'Link to photos: dropbox.com/'"
                                     rows={4}
                                     className="border-brand-navy/30 focus:border-brand-orange rounded-xl"
-                                    autoComplete="off"
+                                    autoComplete="new-password"
+                                    data-lpignore="true"
+                                    data-form-type="other"
                                     {...field}
                                   />
                                 </FormControl>

@@ -7,7 +7,7 @@ const StickyTopBar = () => {
       <div className="container mx-auto px-4 h-full">
         <div className="flex items-center justify-between gap-2 h-full">
           <div className="text-white font-medium text-xs md:text-base">
-            🌲 <span className="hidden sm:inline">Roof Moss Removal Specialists</span><span className="sm:hidden">Moss Removal Pros</span>
+            🌲 <span className="hidden sm:inline">Roof Cleaning & Moss Removal Specialists</span><span className="sm:hidden">Roof & Moss Pros</span>
           </div>
           <div className="flex items-center gap-2">
             <a 

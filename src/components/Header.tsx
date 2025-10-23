@@ -40,13 +40,13 @@ const Header = () => {
   ];
 
   return (
-    <header id="site-header" className="fixed top-10 md:top-11 z-40 w-full bg-brand-white/95 backdrop-blur-sm border-b border-border shadow-sm">
+    <header id="site-header" className="fixed top-10 md:top-11 z-40 w-full bg-brand-navy/95 backdrop-blur-sm border-b border-brand-orange/20 shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-12 md:h-20">
           {/* Brand Text */}
           <div className="flex items-center">
             <Link to="/">
-              <h1 className="text-xl md:text-2xl font-bold text-brand-blue hover:text-brand-orange transition-colors duration-250 cursor-pointer">
+              <h1 className="text-xl md:text-2xl font-bold text-white hover:text-brand-orange transition-colors duration-250 cursor-pointer">
                 Seattle <span className="text-brand-orange">ProWash</span>
               </h1>
             </Link>
@@ -59,7 +59,7 @@ const Header = () => {
                 <button
                   key={item.name}
                   onClick={item.onClick}
-                  className="text-brand-blue hover:text-brand-orange font-medium transition-colors duration-250 cursor-pointer"
+                  className="text-white hover:text-brand-orange font-medium transition-colors duration-250 cursor-pointer"
                 >
                   {item.name}
                 </button>
@@ -67,7 +67,7 @@ const Header = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="text-brand-blue hover:text-brand-orange font-medium transition-colors duration-250 cursor-pointer"
+                  className="text-white hover:text-brand-orange font-medium transition-colors duration-250 cursor-pointer"
                 >
                   {item.name}
                 </Link>
@@ -78,10 +78,10 @@ const Header = () => {
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center space-x-4">
             <Button 
-              variant="prowash-cta" 
+              variant="cta-orange" 
               size="lg"
               onClick={goToContact}
-              className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold text-base px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="font-bold text-base px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               Get Moss Removal Quote
             </Button>
@@ -89,7 +89,7 @@ const Header = () => {
               variant="outline" 
               size="sm"
               onClick={() => window.location.href = `tel:1${phoneNumber.replace(/[^0-9]/g, '')}`}
-              className="border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white transition-all duration-300"
+              className="border-white text-white hover:bg-white hover:text-brand-navy transition-all duration-300"
             >
               <Phone className="w-4 h-4" />
               Call {phoneNumber}
@@ -102,6 +102,7 @@ const Header = () => {
               variant="prowash-phone" 
               size="sm"
               onClick={() => window.location.href = `tel:1${phoneNumber.replace(/[^0-9]/g, '')}`}
+              className="border-white text-white hover:bg-white hover:text-brand-navy"
             >
               <Phone className="w-4 h-4" />
               Call
@@ -110,7 +111,7 @@ const Header = () => {
               variant="ghost"
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-brand-blue"
+              className="text-white hover:text-brand-orange"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </Button>
@@ -119,7 +120,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-border bg-brand-white">
+          <div className="md:hidden border-t border-brand-orange/20 bg-brand-navy/98">
             <nav className="py-4 space-y-2">
               {navigation.map((item) => (
                 item.onClick ? (
@@ -129,7 +130,7 @@ const Header = () => {
                       setIsMenuOpen(false);
                       item.onClick();
                     }}
-                    className="block w-full text-left px-4 py-2 text-brand-blue hover:bg-brand-gray hover:text-brand-orange font-medium transition-colors duration-250 cursor-pointer"
+                    className="block w-full text-left px-4 py-2 text-white hover:bg-brand-orange/20 hover:text-brand-orange font-medium transition-colors duration-250 cursor-pointer"
                   >
                     {item.name}
                   </button>
@@ -138,15 +139,15 @@ const Header = () => {
                     key={item.name}
                     to={item.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className="block px-4 py-2 text-brand-blue hover:bg-brand-gray hover:text-brand-orange font-medium transition-colors duration-250 cursor-pointer"
+                    className="block px-4 py-2 text-white hover:bg-brand-orange/20 hover:text-brand-orange font-medium transition-colors duration-250 cursor-pointer"
                   >
                     {item.name}
                   </Link>
                 )
               ))}
-              <div className="px-4 pt-4 border-t border-border">
+              <div className="px-4 pt-4 border-t border-brand-orange/20">
                 <Button 
-                  variant="prowash-primary" 
+                  variant="cta-orange" 
                   className="w-full" 
                   size="lg"
                   onClick={() => {
