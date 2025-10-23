@@ -228,7 +228,7 @@ const TwoStepQuoteForm = () => {
                 </CardHeader>
                 <CardContent>
                   <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" autoComplete="on">
                       {currentStep === 1 ? (
                         // Step 1: Contact Information
                         <div className="space-y-6">
@@ -242,7 +242,7 @@ const TwoStepQuoteForm = () => {
                                   <Input
                                     placeholder="Your Name"
                                     className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
-                                    autoComplete="name"
+                                    autoComplete="section-contact name"
                                     {...field}
                                   />
                                 </FormControl>
@@ -262,7 +262,7 @@ const TwoStepQuoteForm = () => {
                                     type="tel"
                                     placeholder="Mobile Number"
                                     className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
-                                    autoComplete="tel"
+                                    autoComplete="section-contact tel"
                                     {...field}
                                   />
                                 </FormControl>
@@ -276,13 +276,13 @@ const TwoStepQuoteForm = () => {
                             name="email"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel className="text-brand-navy font-semibold">Email (Optional)</FormLabel>
+                                <FormLabel className="text-brand-navy font-semibold">Email *</FormLabel>
                                 <FormControl>
                                   <Input
                                     type="email"
                                     placeholder="Email Address"
                                     className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
-                                    autoComplete="email"
+                                    autoComplete="section-contact email"
                                     {...field}
                                   />
                                 </FormControl>
@@ -341,7 +341,7 @@ const TwoStepQuoteForm = () => {
                                   <Input
                                     placeholder="123 Main St, Kenmore, WA 98028"
                                     className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
-                                    autoComplete="street-address"
+                                    autoComplete="section-project street-address"
                                     {...field}
                                   />
                                 </FormControl>
@@ -360,7 +360,7 @@ const TwoStepQuoteForm = () => {
                                   <Input
                                     placeholder="e.g., Roof moss removal, Gutter cleaning"
                                     className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
-                                    autoComplete="off"
+                                     autoComplete="section-project off"
                                     {...field}
                                   />
                                 </FormControl>
@@ -374,13 +374,13 @@ const TwoStepQuoteForm = () => {
                             name="details"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel className="text-brand-navy font-semibold">Additional Details (Optional)</FormLabel>
+                                <FormLabel className="text-brand-navy font-semibold">Additional Details *</FormLabel>
                                 <FormControl>
                                   <Textarea
                                     placeholder="Add photos link or describe your needs (optional) — e.g., 'Heavy moss on north side' or 'Link to photos: dropbox.com/...'"
                                     rows={4}
                                     className="border-brand-navy/30 focus:border-brand-orange rounded-xl"
-                                    autoComplete="off"
+                                    autoComplete="section-project off"
                                     {...field}
                                   />
                                 </FormControl>
