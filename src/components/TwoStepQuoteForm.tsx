@@ -17,7 +17,6 @@ const formSchema = z.object({
   email: z.string().trim().min(1, "Email is required").email("Invalid email address").max(255),
   preferText: z.boolean().default(false),
   address: z.string().trim().min(1, "Address is required").max(300),
-  serviceNeeded: z.string().trim().optional(),
   details: z.string().trim().min(1, "Please tell us about your service needs").max(1000),
 });
 
@@ -34,7 +33,6 @@ const TwoStepQuoteForm = () => {
       email: "",
       preferText: false,
       address: "",
-      serviceNeeded: "",
       details: "",
     },
   });
@@ -45,7 +43,6 @@ const TwoStepQuoteForm = () => {
     email: values.email || "",
     preferText: values.preferText,
     address: values.address,
-    serviceNeeded: values.serviceNeeded || "",
     details: values.details || "",
     timestamp: new Date().toISOString(),
     source: "Website Quote Form",
@@ -272,24 +269,6 @@ const TwoStepQuoteForm = () => {
                                 placeholder="123 Main St, Kenmore, WA 98028"
                                 className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
                                 autoComplete="street-address"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="serviceNeeded"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-brand-navy font-semibold">Service Needed</FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder="e.g., Roof moss removal, Gutter cleaning"
-                                className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
                                 {...field}
                               />
                             </FormControl>
