@@ -12,8 +12,11 @@ import technicianHousWashing from "@/assets/technician-house-washing.jpg";
 import technicianTruckPortrait from "@/assets/technician-truck-portrait.jpg";
 
 const About = () => {
-  // Intersection Observer for fade-up animations
+  // Scroll to top and set up fade-up animations
   useEffect(() => {
+    // Scroll to top on mount
+    window.scrollTo(0, 0);
+
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
