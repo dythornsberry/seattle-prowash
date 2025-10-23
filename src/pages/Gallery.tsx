@@ -26,7 +26,7 @@ import houseBefore from "@/assets/house-wash-exterior-before-after.jpg";
 import drivewayBefore from "@/assets/driveway-moss-cleaning-before-after.jpg";
 
 const Gallery = () => {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState("Roof Cleaning & Moss Removal");
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const categories = [

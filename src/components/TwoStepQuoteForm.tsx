@@ -235,7 +235,7 @@ const TwoStepQuoteForm = () => {
                                 <FormLabel className="text-forest-green font-semibold">Full Name *</FormLabel>
                                 <FormControl>
                                   <Input
-                                    placeholder="John Smith"
+                                    placeholder="Your Name"
                                     className="border-forest-green/30 focus:border-gold h-12 rounded-xl"
                                     {...field}
                                   />
@@ -254,7 +254,7 @@ const TwoStepQuoteForm = () => {
                                 <FormControl>
                                   <Input
                                     type="tel"
-                                    placeholder="(206) 555-0123"
+                                    placeholder="Mobile Number"
                                     className="border-forest-green/30 focus:border-gold h-12 rounded-xl"
                                     {...field}
                                   />
@@ -273,7 +273,7 @@ const TwoStepQuoteForm = () => {
                                 <FormControl>
                                   <Input
                                     type="email"
-                                    placeholder="john@example.com"
+                                    placeholder="Email Address"
                                     className="border-forest-green/30 focus:border-gold h-12 rounded-xl"
                                     {...field}
                                   />

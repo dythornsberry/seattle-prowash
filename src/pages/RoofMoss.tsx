@@ -245,9 +245,14 @@ const RoofMoss = () => {
                   Call 206-752-6690
                 </Button>
               </div>
-              <p className="text-white/70 text-sm">
-                Have questions? <a href="/faq" className="text-gold hover:underline">Visit our FAQ page</a>
-              </p>
+              <div className="space-y-2">
+                <p className="text-white/70 text-sm">
+                  Need roof cleaning too? <a href="/roof-cleaning" className="text-gold hover:underline">Click here</a>
+                </p>
+                <p className="text-white/70 text-sm">
+                  Have questions? <a href="/faq" className="text-gold hover:underline">Visit our FAQ page</a>
+                </p>
+              </div>
             </div>
           </div>
         </section>

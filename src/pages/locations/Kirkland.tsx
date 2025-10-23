@@ -197,9 +197,12 @@ const Kirkland = () => {
                   ))}
                 </div>
 
-                <div className="text-center mt-8">
+                <div className="text-center mt-8 space-y-2">
                   <p className="text-gray-600">
                     We proudly serve the entire Kirkland area, including waterfront properties and surrounding communities.
+                  </p>
+                  <p className="text-gray-600">
+                    Looking for another location? <a href="/services" className="text-primary-teal hover:underline font-semibold">See all areas we serve</a>
                   </p>
                 </div>
               </div>

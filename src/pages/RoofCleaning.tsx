@@ -286,13 +286,12 @@ const RoofCleaning = () => {
                 </Button>
               </div>
               <div className="space-y-2">
-                <Button 
-                  variant="link"
-                  className="text-brand-yellow hover:text-brand-yellow/80"
-                  onClick={() => window.location.href = '/roof-moss'}
-                >
-                  Learn about Moss Treatment <ArrowRight className="w-4 h-4 ml-1" />
-                </Button>
+                <p className="text-white/70 text-sm">
+                  Need gutter cleaning too? <a href="/gutter-cleaning" className="text-gold hover:underline">Click here</a>
+                </p>
+                <p className="text-white/70 text-sm">
+                  <a href="#faq" className="text-gold hover:underline">Got questions? Jump to FAQs</a>
+                </p>
                 <p className="text-white/70 text-sm">
                   Have questions? <a href="/faq" className="text-gold hover:underline">Visit our FAQ page</a>
                 </p>

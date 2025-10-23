@@ -201,7 +201,7 @@ const About = () => {
             <div className="max-w-4xl mx-auto text-center fade-up">
               <div className="bg-brand-white rounded-2xl p-8 shadow-lg border border-brand-orange/20">
                 <p className="text-lg text-muted-foreground mb-6">
-                  Ready for a moss-free roof? Call 206-752-6690 or get your free quote today.
+                  Ready for a moss-free roof? Call <a href="tel:+12067526690" className="text-brand-yellow hover:underline">206-752-6690</a> or get your free quote today.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                   <Button 

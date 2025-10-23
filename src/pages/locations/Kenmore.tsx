@@ -197,17 +197,20 @@ const Kenmore = () => {
                   ))}
                 </div>
 
-                <div className="text-center mt-8">
+                <div className="text-center mt-8 space-y-2">
                   <p className="text-gray-600 mb-3">
                     Don't see your neighborhood? We likely still serve you—call us today!
                   </p>
                   <Button 
                     variant="outline"
-                    onClick={() => window.location.href = 'tel:206-752-6690'}
+                    onClick={() => window.location.href = 'tel:+12067526690'}
                   >
                     <Phone className="w-4 h-4 mr-2" />
                     Call 206-752-6690
                   </Button>
+                  <p className="text-gray-600 mt-4">
+                    Looking for another location? <a href="/services" className="text-primary-teal hover:underline font-semibold">See all areas we serve</a>
+                  </p>
                 </div>
               </div>
             </div>

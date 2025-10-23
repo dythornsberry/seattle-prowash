@@ -48,7 +48,7 @@ const FAQ = () => {
     },
     {
       icon: CheckCircle,
-      question: "What happens if moss comes back after treatment?",
+      question: "What if moss comes back?",
       answer: "We offer a 12-month moss-free guarantee.\n\nIf any new moss growth appears within 12 months of service, we'll return and re-treat the affected areas free of charge.",
       category: "Safety & Trust"
     },
@@ -84,7 +84,7 @@ const FAQ = () => {
     },
     {
       icon: Clock,
-      question: "How often should I clean my roof or gutters in the Seattle area?",
+      question: "How often should I clean my roof or gutters?",
       answer: "• Roof cleaning - once per year\n\n• Gutter cleaning - twice per year (Spring + Fall)",
       category: "Maintenance"
     },

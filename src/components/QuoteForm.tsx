@@ -193,7 +193,7 @@ const QuoteForm = () => {
                               <FormLabel className="text-brand-navy font-semibold">Name *</FormLabel>
                               <FormControl>
                                 <Input
-                                  placeholder="John Smith"
+                                  placeholder="Your Name"
                                   className="border-brand-yellow/30 focus:border-brand-yellow"
                                   {...field}
                                 />
@@ -212,7 +212,7 @@ const QuoteForm = () => {
                               <FormControl>
                                 <Input
                                   type="tel"
-                                  placeholder="(206) 555-0123"
+                                  placeholder="Mobile Number"
                                   className="border-brand-yellow/30 focus:border-brand-yellow"
                                   {...field}
                                 />
@@ -231,7 +231,7 @@ const QuoteForm = () => {
                               <FormControl>
                                 <Input
                                   type="email"
-                                  placeholder="john@example.com"
+                                  placeholder="Email Address"
                                   className="border-brand-yellow/30 focus:border-brand-yellow"
                                   {...field}
                                 />

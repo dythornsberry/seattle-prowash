@@ -15,7 +15,7 @@ const HomeFAQ = () => {
       icon: Shield
     },
     {
-      question: "What's included in your 12-month guarantee?",
+      question: "What's in the 12-month guarantee?",
       answer: "If any new moss growth appears within 12 months of service, we'll return and re-treat the affected areas completely free of charge. No questions asked.",
       icon: CheckCircle
     },

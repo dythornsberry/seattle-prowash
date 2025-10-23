@@ -35,7 +35,7 @@ const CTABanner = () => {
             
             <div className="text-center mt-4">
               <p className="text-gray-300">
-                Or call <a href="tel:12067526690" className="text-white hover:text-orange-400 transition-colors">206-752-6690</a>
+                Or call <a href="tel:+12067526690" className="text-white hover:text-orange-400 transition-colors">206-752-6690</a>
               </p>
             </div>
           </div>
