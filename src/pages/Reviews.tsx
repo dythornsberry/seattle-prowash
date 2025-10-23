@@ -66,8 +66,138 @@ const Reviews = () => {
     }
   ];
 
+  const additionalReviews = [
+    {
+      name: "Lori",
+      rating: 5,
+      service: "Roof & Gutter Cleaning",
+      quote: "Excellent service, he came in with a couple days of the rains, and during. Dylan kept us up to date before our scheduled time stating he may be a little late and asked if we still had time. We did and he was only a few minutes late.",
+      verified: true
+    },
+    {
+      name: "Owen A.",
+      rating: 5,
+      service: "Property Cleaning",
+      quote: "These dudes are the way to go, very hard working and I was very satisfied with their work, thanks Dylan and the crew!",
+      verified: true
+    },
+    {
+      name: "Kai C.",
+      rating: 5,
+      service: "Driveway Cleaning",
+      quote: "Seattle Pro Wash did an amazing job on my driveway! Service was friendly and efficient, they got it done in no time! Would definitely recommend.",
+      verified: true
+    },
+    {
+      name: "Ajitesh S.",
+      rating: 5,
+      service: "Metal Roof Cleaning",
+      quote: "Prowash has very good service and did an excellent job they made my metal roof brand new again. I recommend these guys to everyone.",
+      verified: true
+    },
+    {
+      name: "Tigran K.",
+      rating: 5,
+      service: "Parking Garage Cleaning",
+      quote: "Great guys! took care of it like his own! Thank you Dylan.",
+      verified: true
+    },
+    {
+      name: "Kimani G.",
+      rating: 5,
+      service: "Full Property Service",
+      quote: "My experience with them was seamless from booking to appointment. Dylan's team kept me updated throughout the process with before and after photos. The price are fair.",
+      verified: true
+    },
+    {
+      name: "Arielle S.",
+      rating: 5,
+      service: "Gutters & Roof",
+      quote: "Dylan did an amazing job cleaning our gutters, roof and clearing branches!",
+      verified: true
+    },
+    {
+      name: "Shirley L.",
+      rating: 5,
+      service: "Patio & Gutter Cleaning",
+      quote: "Another superb job by Seattle Prowash! Thank you, Dylan, for your consistently excellent service!",
+      verified: true
+    },
+    {
+      name: "Susan B.",
+      rating: 5,
+      service: "Full Service",
+      quote: "Fast, courteous and well done!",
+      verified: true
+    },
+    {
+      name: "Dafna S.",
+      rating: 5,
+      service: "Multiple Services",
+      quote: "Seattle Pro Wash is a great company to work with! They do a great job either for gutter cleaning, roof cleaning and window washing! As a real estate broker I've also recommended them to my clients that were very satisfied.",
+      verified: true
+    },
+    {
+      name: "Mary D.",
+      rating: 5,
+      service: "Multiple Projects",
+      quote: "If you miss good old fashion quality service, you will find it here. These guys are the best - on time, quality workmanship, and at a fair price. I wish I could do more than 5-stars.",
+      verified: true
+    },
+    {
+      name: "Rachel G.",
+      rating: 5,
+      service: "Rooftop Deck Cleaning",
+      quote: "Responsive, professional, capable! Great job on the rooftop deck and concrete cleaning.",
+      verified: true
+    },
+    {
+      name: "Beth M.",
+      rating: 5,
+      service: "Metal Roof & Gutters",
+      quote: "Took the time to do a thorough job. Did a great job cleaning up. Cost was much lower than all other quotes.",
+      verified: true
+    },
+    {
+      name: "Jennifer C.",
+      rating: 5,
+      service: "Metal Roof Cleaning",
+      quote: "Wow!! Seattle Prowash does great work for a great price. My metal roof is not easy to clean and after they left it's sparkling!!",
+      verified: true
+    },
+    {
+      name: "Matt T.",
+      rating: 5,
+      service: "Multiple Services",
+      quote: "Great company and easy to work with. I don't dare to step on my roof, so I am happy to pay someone else to do it. They have done a number of different services on my house, all of which have been excellent.",
+      verified: true
+    },
+    {
+      name: "Melanie C.",
+      rating: 5,
+      service: "Gutter & Roof Cleaning",
+      quote: "I had 5 different quotes for gutter & roof cleaning, and Dylan was by far the best.",
+      verified: true
+    },
+    {
+      name: "Monisha H.",
+      rating: 5,
+      service: "Roof & Gutters",
+      quote: "I called them to clean my grandparent's roof and gutters and mine - both jobs were great and team was timely, affordable and professional. Neighbor then requested services and was extremely pleased.",
+      verified: true
+    },
+    {
+      name: "Nancy",
+      rating: 5,
+      service: "Recurring Service",
+      quote: "They gave us a good quote. Delivered great service and the best part was they left the yard clean! This is our third time! They always do great. Always go the extra step to make it terrific.",
+      verified: true
+    }
+  ];
+
   const reviews = [
     ...featuredReviews,
+    ...additionalReviews,
   ];
 
   return (
