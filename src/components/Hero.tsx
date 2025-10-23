@@ -40,17 +40,17 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="text-white font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight">
-            Moss-Free Roofs, Guaranteed
+            Roof Cleaning in Seattle Metro
           </h1>
 
           {/* Sub-headline */}
           <p className="text-xl md:text-2xl text-white/95 font-medium max-w-2xl mx-auto">
-            Professional roof and gutter cleaning that protects your home.
+            Safe, no-damage roof moss removal & treatment for long-lasting, spotless roofs.
           </p>
 
-          {/* Local credibility */}
-          <p className="text-lg md:text-xl text-white/80">
-            Serving Kenmore, Bothell, Kirkland & Greater Seattle since 2022
+          {/* Local credibility - Proof line */}
+          <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+            Serving Seattle, Kenmore, Bothell, Kirkland, Lynnwood, Snohomish & Shoreline • Licensed & Insured • Photos & Pricing Fast
           </p>
 
           {/* Speed emphasis */}
@@ -93,7 +93,7 @@ const Hero = () => {
 
           {/* Trust Reassurance */}
           <p className="text-white/90 text-sm md:text-base pt-4">
-            No spam. Same-day estimate.
+            No spam, same-day estimate.
           </p>
 
           {/* Additional Trust Info */}

@@ -16,13 +16,13 @@ import mossRemovalImage from "@/assets/roof-moss-removal-detailed-before-after.j
 
 const RoofMoss = () => {
   useEffect(() => {
-    document.title = "Roof Moss Removal and Treatment | Seattle ProWash";
+    document.title = "Roof Moss Removal & Treatment in Seattle Metro | Seattle ProWash";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content", 
-        "Professional roof moss removal and treatment. Stop growth and protect your shingles. Safe soft-wash methods in Kenmore, Bothell, Kirkland."
+        "Professional roof moss removal and treatment across Seattle metro area. Safe, no-damage methods that protect your shingles. Serving Kenmore, Bothell, Kirkland, Lynnwood, Snohomish & Shoreline."
       );
     }
 
@@ -73,10 +73,10 @@ const RoofMoss = () => {
                     🛡️ 12-Month Moss-Free Guarantee
                   </Badge>
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-                    Roof Moss Removal & Treatment
+                    Roof Moss Removal & Treatment in Seattle Metro
                   </h1>
                   <p className="text-xl md:text-2xl mb-6 text-white/90 font-semibold">
-                    Stop moss growth at the roots and protect your investment.
+                    Safe, no-damage methods that stop moss growth and protect your roof.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button 
@@ -143,8 +143,11 @@ const RoofMoss = () => {
               </h2>
               <Card>
                 <CardContent className="p-8">
-                  <p className="text-lg text-muted-foreground">
-                    Moss removal means taking off loose, bulky growth. Moss treatment means killing the roots so the dead moss dries and sheds after weather cycles. We remove what can be brushed safely, then apply a soft wash that kills what remains.
+                  <p className="text-lg text-muted-foreground mb-4">
+                    <strong>Moss removal</strong> means taking off loose, bulky growth. <strong>Moss treatment</strong> means killing the roots so the dead moss dries and sheds after weather cycles. We remove what can be brushed safely, then apply a soft wash that kills what remains.
+                  </p>
+                  <p className="text-base text-muted-foreground">
+                    <strong>Is brushing safe?</strong> Yes, when done properly. We use soft brushes and avoid aggressive scraping that can damage shingles. Our team is trained to assess your roof type and adjust techniques accordingly.
                   </p>
                 </CardContent>
               </Card>
@@ -188,12 +191,18 @@ const RoofMoss = () => {
                 <CardHeader>
                   <CardTitle className="text-brand-navy flex items-center justify-center gap-3">
                     <AlertTriangle className="w-6 h-6 text-amber-600" />
-                    Important Information
+                    After Your Service
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="space-y-3">
                   <p className="text-lg text-muted-foreground">
-                    Color changes are normal as moss dies. Expect gradual shedding. Do not pressure wash or scrape shingles. Call with any questions.
+                    <strong>Color changes are normal</strong> as moss dies. In Seattle's wet climate, expect gradual shedding over 2-4 months as rain and wind naturally remove the dead moss.
+                  </p>
+                  <p className="text-base text-muted-foreground">
+                    <strong>How often should I clean my roof in Seattle?</strong> We recommend annual maintenance to prevent heavy moss buildup. Our 12-month moss-free guarantee covers regrowth during that period.
+                  </p>
+                  <p className="text-base text-muted-foreground font-semibold text-brand-navy">
+                    Do not pressure wash or scrape shingles yourself. Call us with any questions at 206-752-6690.
                   </p>
                 </CardContent>
               </Card>

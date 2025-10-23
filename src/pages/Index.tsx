@@ -20,6 +20,7 @@ import FloatingMossCTA from "@/components/FloatingMossCTA";
 import DesktopFloatingCTA from "@/components/DesktopFloatingCTA";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
+import IntroSection from "@/components/IntroSection";
 
 const Index = () => {
   // Scroll to top and set up fade-up animations
@@ -123,6 +124,7 @@ const Index = () => {
         
         <main>
           <Hero />
+          <IntroSection />
           <TrustSignalSection />
           <div className="bg-off-white">
             <TrustBar />

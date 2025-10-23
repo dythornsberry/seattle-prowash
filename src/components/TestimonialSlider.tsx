@@ -24,9 +24,9 @@ const TestimonialSlider = () => {
     {
       content: "These guys did an amazing job cleaning up my roof. They did a great job not damaging anything and i would definitely hire them again down the line.",
       author: "Daniel S.",
-      location: "Seattle Area",
+      location: "Bothell",
       rating: 5,
-      service: "Roof Cleaning"
+      service: "Roof Cleaning in Bothell"
     },
     {
       content: "My experience with Seattle pro wash has always been very good. They follow up on my calls, they use modern scheduling software that sends text confirmation/reminders which I like. On site they have always been very professional.",
@@ -52,9 +52,9 @@ const TestimonialSlider = () => {
     {
       content: "Prowash has very good service and did an excellent job they made my metal roof brand new again. I recommend these guys to everyone.",
       author: "Ajitesh S.",
-      location: "Seattle Area",
+      location: "Kirkland",
       rating: 5,
-      service: "Metal Roof Cleaning"
+      service: "Metal Roof Cleaning in Kirkland"
     },
     {
       content: "These guys did a great job! They sent me a price quote very quickly after I inquired. We talked about all the different things that would be included in the service. Their prices were very reasonable for the scope they were going to handle.",
