@@ -128,7 +128,7 @@ const Kenmore = () => {
                     <p className="text-white/80 mb-4">
                       Our specialized moss treatment kills existing growth and prevents regrowth for 12 months, perfect for Kenmore's moss-prone climate.
                     </p>
-                    <div className="text-moss-green font-semibold">12-Month Guarantee</div>
+                    <div className="text-bright-orange font-semibold">12-Month Guarantee</div>
                   </div>
 
                   <div className="text-center">
@@ -136,7 +136,7 @@ const Kenmore = () => {
                     <p className="text-white/80 mb-4">
                       Complete gutter cleaning and inspection to protect your Kenmore home from water damage and foundation issues.
                     </p>
-                    <div className="text-moss-green font-semibold">Debris Removal & Inspection</div>
+                    <div className="text-bright-orange font-semibold">Debris Removal & Inspection</div>
                   </div>
 
                   <div className="text-center">
@@ -144,7 +144,7 @@ const Kenmore = () => {
                     <p className="text-white/80 mb-4">
                       Gentle roof cleaning that removes stains, algae, and organic growth without the damage of pressure washing.
                     </p>
-                    <div className="text-moss-green font-semibold">Shingle-Safe Method</div>
+                    <div className="text-bright-orange font-semibold">Shingle-Safe Method</div>
                   </div>
 
                   <div className="text-center">
@@ -152,7 +152,7 @@ const Kenmore = () => {
                     <p className="text-white/80 mb-4">
                       Restore your gutters' appearance by removing oxidation stains and returning them to like-new condition.
                     </p>
-                    <div className="text-moss-green font-semibold">Like-New Appearance</div>
+                    <div className="text-bright-orange font-semibold">Like-New Appearance</div>
                   </div>
 
                   <div className="text-center">
@@ -160,7 +160,7 @@ const Kenmore = () => {
                     <p className="text-white/80 mb-4">
                       Gentle yet effective exterior cleaning that removes algae, mildew, and dirt without damaging your home's surfaces.
                     </p>
-                    <div className="text-moss-green font-semibold">Safe & Effective</div>
+                    <div className="text-bright-orange font-semibold">Safe & Effective</div>
                   </div>
 
                   <div className="text-center">
@@ -168,7 +168,7 @@ const Kenmore = () => {
                     <p className="text-white/80 mb-4">
                       Professional pressure washing for driveways, patios, decks, and walkways around your Kenmore property.
                     </p>
-                    <div className="text-moss-green font-semibold">Concrete & Surfaces</div>
+                    <div className="text-bright-orange font-semibold">Concrete & Surfaces</div>
                   </div>
                 </div>
               </div>

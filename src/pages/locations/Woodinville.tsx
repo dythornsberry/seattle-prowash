@@ -116,7 +116,7 @@ const Woodinville = () => {
                     <p className="text-white/80 mb-4">
                       Specialized moss treatment that kills existing growth and prevents regrowth for 12 months.
                     </p>
-                    <div className="text-moss-green font-semibold">12-Month Guarantee</div>
+                    <div className="text-bright-orange font-semibold">12-Month Guarantee</div>
                   </div>
 
                   <div className="text-center">
@@ -124,7 +124,7 @@ const Woodinville = () => {
                     <p className="text-white/80 mb-4">
                       Complete gutter cleaning and inspection to protect your home from water damage.
                     </p>
-                    <div className="text-moss-green font-semibold">Debris Removal & Inspection</div>
+                    <div className="text-bright-orange font-semibold">Debris Removal & Inspection</div>
                   </div>
 
                   <div className="text-center">
@@ -132,7 +132,7 @@ const Woodinville = () => {
                     <p className="text-white/80 mb-4">
                       Gentle roof cleaning that removes stains and algae without pressure washing damage.
                     </p>
-                    <div className="text-moss-green font-semibold">Shingle-Safe Method</div>
+                    <div className="text-bright-orange font-semibold">Shingle-Safe Method</div>
                   </div>
 
                   <div className="text-center">
@@ -140,7 +140,7 @@ const Woodinville = () => {
                     <p className="text-white/80 mb-4">
                       Restore your gutters' appearance by removing oxidation stains.
                     </p>
-                    <div className="text-moss-green font-semibold">Like-New Appearance</div>
+                    <div className="text-bright-orange font-semibold">Like-New Appearance</div>
                   </div>
 
                   <div className="text-center">
@@ -148,7 +148,7 @@ const Woodinville = () => {
                     <p className="text-white/80 mb-4">
                       Gentle exterior cleaning that removes algae, mildew, and dirt.
                     </p>
-                    <div className="text-moss-green font-semibold">Safe & Effective</div>
+                    <div className="text-bright-orange font-semibold">Safe & Effective</div>
                   </div>
 
                   <div className="text-center">
@@ -156,7 +156,7 @@ const Woodinville = () => {
                     <p className="text-white/80 mb-4">
                       Professional pressure washing for driveways, patios, and walkways.
                     </p>
-                    <div className="text-moss-green font-semibold">Concrete & Surfaces</div>
+                    <div className="text-bright-orange font-semibold">Concrete & Surfaces</div>
                   </div>
                 </div>
               </div>

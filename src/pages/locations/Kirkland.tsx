@@ -128,7 +128,7 @@ const Kirkland = () => {
                     <p className="text-white/80 mb-4">
                       State-of-the-art moss removal and prevention system designed for Kirkland's challenging moss-growing conditions.
                     </p>
-                    <div className="text-moss-green font-semibold">12-Month Guarantee</div>
+                    <div className="text-bright-orange font-semibold">12-Month Guarantee</div>
                   </div>
 
                   <div className="text-center">
@@ -136,7 +136,7 @@ const Kirkland = () => {
                     <p className="text-white/80 mb-4">
                       Comprehensive gutter cleaning and maintenance to protect your valuable Kirkland property investment.
                     </p>
-                    <div className="text-moss-green font-semibold">Complete Protection</div>
+                    <div className="text-bright-orange font-semibold">Complete Protection</div>
                   </div>
 
                   <div className="text-center">
@@ -144,7 +144,7 @@ const Kirkland = () => {
                     <p className="text-white/80 mb-4">
                       Gentle yet thorough roof cleaning that restores appearance and extends the life of premium roofing materials.
                     </p>
-                    <div className="text-moss-green font-semibold">Value Preservation</div>
+                    <div className="text-bright-orange font-semibold">Value Preservation</div>
                   </div>
 
                   <div className="text-center">
@@ -152,7 +152,7 @@ const Kirkland = () => {
                     <p className="text-white/80 mb-4">
                       Customized maintenance schedules to keep your Kirkland property looking pristine year-round.
                     </p>
-                    <div className="text-moss-green font-semibold">Ongoing Care</div>
+                    <div className="text-bright-orange font-semibold">Ongoing Care</div>
                   </div>
 
                   <div className="text-center">
@@ -160,7 +160,7 @@ const Kirkland = () => {
                     <p className="text-white/80 mb-4">
                       Specialized gentle washing for high-end siding materials, preserving beauty while removing contaminants.
                     </p>
-                    <div className="text-moss-green font-semibold">Material-Safe Methods</div>
+                    <div className="text-bright-orange font-semibold">Material-Safe Methods</div>
                   </div>
 
                   <div className="text-center">
@@ -168,7 +168,7 @@ const Kirkland = () => {
                     <p className="text-white/80 mb-4">
                       Professional cleaning for driveways, walkways, patios, and outdoor living spaces throughout Kirkland.
                     </p>
-                    <div className="text-moss-green font-semibold">Outdoor Living Care</div>
+                    <div className="text-bright-orange font-semibold">Outdoor Living Care</div>
                   </div>
                 </div>
               </div>

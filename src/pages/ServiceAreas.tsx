@@ -204,14 +204,14 @@ const ServiceAreas = () => {
           </section>
 
           {/* Why Choose Us */}
-          <section className="py-16 bg-dark-teal text-white">
+          <section className="py-16 bg-off-white">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-12">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-4">
                     Why Seattle Metro Homeowners Choose Us
                   </h2>
-                  <p className="text-xl text-white/90">
+                  <p className="text-xl text-gray-600">
                     Trusted expertise serving the Pacific Northwest
                   </p>
                 </div>
@@ -221,8 +221,8 @@ const ServiceAreas = () => {
                     <div className="w-16 h-16 bg-moss-green rounded-full flex items-center justify-center mx-auto mb-4">
                       <CheckCircle className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold mb-3">Local Expertise</h3>
-                    <p className="text-white/80">
+                    <h3 className="text-xl font-bold text-dark-teal mb-3">Local Expertise</h3>
+                    <p className="text-gray-600">
                       Based in Kenmore, we understand the unique challenges of Pacific Northwest weather and moss growth.
                     </p>
                   </div>
@@ -231,8 +231,8 @@ const ServiceAreas = () => {
                     <div className="w-16 h-16 bg-bright-orange rounded-full flex items-center justify-center mx-auto mb-4">
                       <CheckCircle className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold mb-3">12-Month Guarantee</h3>
-                    <p className="text-white/80">
+                    <h3 className="text-xl font-bold text-dark-teal mb-3">12-Month Guarantee</h3>
+                    <p className="text-gray-600">
                       Our moss treatment comes with a full 12-month moss-free guarantee for your peace of mind.
                     </p>
                   </div>
@@ -241,8 +241,8 @@ const ServiceAreas = () => {
                     <div className="w-16 h-16 bg-primary-teal rounded-full flex items-center justify-center mx-auto mb-4">
                       <CheckCircle className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold mb-3">180+ Five-Star Reviews</h3>
-                    <p className="text-white/80">
+                    <h3 className="text-xl font-bold text-dark-teal mb-3">180+ Five-Star Reviews</h3>
+                    <p className="text-gray-600">
                       Join hundreds of satisfied customers across the Seattle metro area who trust our service.
                     </p>
                   </div>
@@ -252,7 +252,7 @@ const ServiceAreas = () => {
           </section>
 
           {/* CTA Section */}
-          <section className="py-16 bg-off-white">
+          <section className="py-16 bg-white">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
                 <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-6">

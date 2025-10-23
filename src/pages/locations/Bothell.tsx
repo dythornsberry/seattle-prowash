@@ -128,7 +128,7 @@ const Bothell = () => {
                     <p className="text-white/80 mb-4">
                       Advanced moss removal and prevention system that keeps Bothell roofs moss-free for an entire year.
                     </p>
-                    <div className="text-moss-green font-semibold">12-Month Protection</div>
+                    <div className="text-bright-orange font-semibold">12-Month Protection</div>
                   </div>
 
                   <div className="text-center">
@@ -136,7 +136,7 @@ const Bothell = () => {
                     <p className="text-white/80 mb-4">
                       Thorough gutter cleaning, inspection, and minor repairs to protect your Bothell home from water damage.
                     </p>
-                    <div className="text-moss-green font-semibold">Full Service Approach</div>
+                    <div className="text-bright-orange font-semibold">Full Service Approach</div>
                   </div>
 
                   <div className="text-center">
@@ -144,7 +144,7 @@ const Bothell = () => {
                     <p className="text-white/80 mb-4">
                       Safe roof cleaning methods that remove stains and organic growth without damaging roofing materials.
                     </p>
-                    <div className="text-moss-green font-semibold">Damage-Free Process</div>
+                    <div className="text-bright-orange font-semibold">Damage-Free Process</div>
                   </div>
 
                   <div className="text-center">
@@ -152,7 +152,7 @@ const Bothell = () => {
                     <p className="text-white/80 mb-4">
                       Professional exterior cleaning for Bothell businesses, maintaining curb appeal and property value.
                     </p>
-                    <div className="text-moss-green font-semibold">Business Solutions</div>
+                    <div className="text-bright-orange font-semibold">Business Solutions</div>
                   </div>
 
                   <div className="text-center">
@@ -160,7 +160,7 @@ const Bothell = () => {
                     <p className="text-white/80 mb-4">
                       Gentle washing techniques that safely clean siding, removing moss, algae, and years of accumulated grime.
                     </p>
-                    <div className="text-moss-green font-semibold">Gentle & Effective</div>
+                    <div className="text-bright-orange font-semibold">Gentle & Effective</div>
                   </div>
 
                   <div className="text-center">
@@ -168,7 +168,7 @@ const Bothell = () => {
                     <p className="text-white/80 mb-4">
                       Professional pressure washing for driveways, walkways, and patios throughout Bothell neighborhoods.
                     </p>
-                    <div className="text-moss-green font-semibold">Surface Restoration</div>
+                    <div className="text-bright-orange font-semibold">Surface Restoration</div>
                   </div>
                 </div>
               </div>
