@@ -21,7 +21,7 @@ const Reviews = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const featuredReviews = [
+  const allReviews = [
     {
       name: "Lucas H.",
       rating: 5,
@@ -33,7 +33,7 @@ const Reviews = () => {
       name: "Aileen I.",
       rating: 5,
       service: "Pergola Roof Cleaning",
-      quote: "Really happy with the work the Seattle Pro Wash team did to clean the transparent roof of my backyard pergola. It's a pretty high structure and a bit awkward to access, but they had the skills and tools to do the job right. The roof looks like new again. Quick friendly and efficient, highly recommended!",
+      quote: "Really happy with the work the Seattle Pro Wash team did to clean the transparent roof of my backyard pergola. The roof looks like new again. Quick friendly and efficient, highly recommended!",
       verified: true
     },
     {
@@ -47,14 +47,14 @@ const Reviews = () => {
       name: "Jon R.",
       rating: 5,
       service: "Roof & Concrete Cleaning",
-      quote: "My experience with Seattle pro wash has always been very good. They follow up on my calls, they use modern scheduling software that sends text confirmation/reminders which I like. On site they have always been very professional.",
+      quote: "My experience with Seattle pro wash has always been very good. They follow up on my calls, they use modern scheduling software that sends text confirmation/reminders which I like.",
       verified: true
     },
     {
       name: "YT C.",
       rating: 5,
       service: "Driveway & Patio Cleaning",
-      quote: "Dylan is prompt, attentive to details and caring. He power washed our front driveway and back yard. The work was meticulously done and he made sure all the furniture was moved back in place before leaving. He even cleaned our side walkway!",
+      quote: "Dylan is prompt, attentive to details and caring. He power washed our front driveway and back yard. The work was meticulously done and he made sure all the furniture was moved back in place before leaving.",
       verified: true
     },
     {
@@ -63,15 +63,12 @@ const Reviews = () => {
       service: "Roof & Gutter Cleaning",
       quote: "Great job on my roof and gutters, friendly crew. Customer is always right attitude, price fair. Recommend them!",
       verified: true
-    }
-  ];
-
-  const additionalReviews = [
+    },
     {
       name: "Lori",
       rating: 5,
       service: "Roof & Gutter Cleaning",
-      quote: "Excellent service, he came in with a couple days of the rains, and during. Dylan kept us up to date before our scheduled time stating he may be a little late and asked if we still had time. We did and he was only a few minutes late.",
+      quote: "Excellent service, he came in with a couple days of the rains, and during. Dylan kept us up to date before our scheduled time.",
       verified: true
     },
     {
@@ -85,7 +82,7 @@ const Reviews = () => {
       name: "Kai C.",
       rating: 5,
       service: "Driveway Cleaning",
-      quote: "Seattle Pro Wash did an amazing job on my driveway! Service was friendly and efficient, they got it done in no time! Would definitely recommend.",
+      quote: "Seattle Pro Wash did an amazing job on my driveway! Service was friendly and efficient, they got it done in no time!",
       verified: true
     },
     {
@@ -106,7 +103,7 @@ const Reviews = () => {
       name: "Kimani G.",
       rating: 5,
       service: "Full Property Service",
-      quote: "My experience with them was seamless from booking to appointment. Dylan's team kept me updated throughout the process with before and after photos. The price are fair.",
+      quote: "My experience with them was seamless from booking to appointment. Dylan's team kept me updated throughout the process with before and after photos.",
       verified: true
     },
     {
@@ -134,14 +131,14 @@ const Reviews = () => {
       name: "Dafna S.",
       rating: 5,
       service: "Multiple Services",
-      quote: "Seattle Pro Wash is a great company to work with! They do a great job either for gutter cleaning, roof cleaning and window washing! As a real estate broker I've also recommended them to my clients that were very satisfied.",
+      quote: "Seattle Pro Wash is a great company to work with! They do a great job for gutter cleaning, roof cleaning and window washing!",
       verified: true
     },
     {
       name: "Mary D.",
       rating: 5,
       service: "Multiple Projects",
-      quote: "If you miss good old fashion quality service, you will find it here. These guys are the best - on time, quality workmanship, and at a fair price. I wish I could do more than 5-stars.",
+      quote: "If you miss good old fashion quality service, you will find it here. These guys are the best - on time, quality workmanship, and at a fair price.",
       verified: true
     },
     {
@@ -169,7 +166,7 @@ const Reviews = () => {
       name: "Matt T.",
       rating: 5,
       service: "Multiple Services",
-      quote: "Great company and easy to work with. I don't dare to step on my roof, so I am happy to pay someone else to do it. They have done a number of different services on my house, all of which have been excellent.",
+      quote: "Great company and easy to work with. I don't dare to step on my roof, so I am happy to pay someone else to do it.",
       verified: true
     },
     {
@@ -183,21 +180,16 @@ const Reviews = () => {
       name: "Monisha H.",
       rating: 5,
       service: "Roof & Gutters",
-      quote: "I called them to clean my grandparent's roof and gutters and mine - both jobs were great and team was timely, affordable and professional. Neighbor then requested services and was extremely pleased.",
+      quote: "I called them to clean my grandparent's roof and gutters and mine - both jobs were great and team was timely, affordable and professional.",
       verified: true
     },
     {
       name: "Nancy",
       rating: 5,
       service: "Recurring Service",
-      quote: "They gave us a good quote. Delivered great service and the best part was they left the yard clean! This is our third time! They always do great. Always go the extra step to make it terrific.",
+      quote: "They gave us a good quote. Delivered great service and the best part was they left the yard clean! This is our third time!",
       verified: true
     }
-  ];
-
-  const reviews = [
-    ...featuredReviews,
-    ...additionalReviews,
   ];
 
   return (
@@ -213,7 +205,7 @@ const Reviews = () => {
                 <Star className="w-5 h-5 mr-2 fill-white" />
                 180+ Five-Star Reviews
               </Badge>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white font-heading">
                 What Our Customers Say
               </h1>
               <p className="text-xl md:text-2xl text-white/90 mb-8">
@@ -247,55 +239,58 @@ const Reviews = () => {
         </section>
 
         {/* Trust Stats */}
-        <section className="py-12 bg-brand-gray">
+        <section className="py-16 bg-off-white">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 text-center">
-              <div className="fade-up">
-                <div className="text-5xl font-bold text-brand-orange mb-2">5.0</div>
-                <div className="flex justify-center mb-2">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 fill-brand-orange text-brand-orange" />
-                  ))}
+              <div>
+                <div className="text-6xl font-bold text-brand-orange mb-3">5.0</div>
+                <div className="flex justify-center gap-1 mb-3">
+                  <Star className="w-6 h-6 fill-brand-orange text-brand-orange" />
+                  <Star className="w-6 h-6 fill-brand-orange text-brand-orange" />
+                  <Star className="w-6 h-6 fill-brand-orange text-brand-orange" />
+                  <Star className="w-6 h-6 fill-brand-orange text-brand-orange" />
+                  <Star className="w-6 h-6 fill-brand-orange text-brand-orange" />
                 </div>
-                <div className="text-brand-navy font-semibold">Average Rating</div>
+                <div className="text-brand-navy font-bold text-lg">Average Rating</div>
               </div>
-              <div className="fade-up">
-                <div className="text-5xl font-bold text-brand-orange mb-2">180+</div>
-                <div className="text-brand-navy font-semibold">Five-Star Reviews</div>
-                <div className="text-sm text-muted-foreground mt-2">Verified Google Reviews</div>
+              <div>
+                <div className="text-6xl font-bold text-brand-orange mb-3">180+</div>
+                <div className="text-brand-navy font-bold text-lg mb-2">Five-Star Reviews</div>
+                <div className="text-sm text-muted-foreground">Verified Google Reviews</div>
               </div>
-              <div className="fade-up">
-                <div className="text-5xl font-bold text-brand-orange mb-2">100%</div>
-                <div className="text-brand-navy font-semibold">Customer Satisfaction</div>
-                <div className="text-sm text-muted-foreground mt-2">Licensed & Insured</div>
+              <div>
+                <div className="text-6xl font-bold text-brand-orange mb-3">100%</div>
+                <div className="text-brand-navy font-bold text-lg mb-2">Customer Satisfaction</div>
+                <div className="text-sm text-muted-foreground">Licensed & Insured</div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Featured Reviews Section */}
-        <section className="section-spacing bg-brand-gray">
+        {/* Reviews Grid */}
+        <section className="section-spacing bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-12 fade-up">
-                <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">
-                  Featured Customer Reviews
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4 font-heading">
+                  Customer Reviews
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Real reviews from homeowners who trust us with their roof and gutter cleaning needs
+                  Hear from satisfied customers across the Seattle area
                 </p>
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                {featuredReviews.map((review, index) => (
-                  <Card key={index} className="border-2 border-brand-orange/10 shadow-lg hover:shadow-xl transition-shadow fade-up bg-white">
+                {allReviews.map((review, index) => (
+                  <Card key={index} className="border-2 border-brand-orange/10 shadow-lg hover:shadow-xl transition-shadow bg-white">
                     <CardContent className="p-6">
-                      {/* Star Rating */}
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex gap-1">
-                          {[...Array(review.rating)].map((_, i) => (
-                            <Star key={i} className="w-5 h-5 fill-brand-orange text-brand-orange" />
-                          ))}
+                          <Star className="w-5 h-5 fill-brand-orange text-brand-orange" />
+                          <Star className="w-5 h-5 fill-brand-orange text-brand-orange" />
+                          <Star className="w-5 h-5 fill-brand-orange text-brand-orange" />
+                          <Star className="w-5 h-5 fill-brand-orange text-brand-orange" />
+                          <Star className="w-5 h-5 fill-brand-orange text-brand-orange" />
                         </div>
                         {review.verified && (
                           <Badge variant="outline" className="text-brand-orange border-brand-orange/30">
@@ -305,86 +300,28 @@ const Reviews = () => {
                         )}
                       </div>
 
-                      {/* Review Quote */}
-                      <blockquote className="text-brand-navy/80 italic mb-4 leading-relaxed line-clamp-4">
+                      <blockquote className="text-brand-navy/80 italic mb-4 leading-relaxed min-h-[80px]">
                         "{review.quote}"
                       </blockquote>
 
-                      {/* Author Info */}
                       <div className="border-t pt-4">
-                        <div>
-                          <p className="font-bold text-brand-navy">{review.name}</p>
-                          <p className="text-sm text-brand-orange font-semibold">{review.service}</p>
-                        </div>
+                        <p className="font-bold text-brand-navy">{review.name}</p>
+                        <p className="text-sm text-brand-orange font-semibold">{review.service}</p>
                       </div>
                     </CardContent>
                   </Card>
                 ))}
               </div>
 
-              <div className="text-center fade-up">
+              <div className="text-center">
                 <Button
                   variant="cta-orange"
                   size="lg"
                   onClick={() => window.open('https://g.page/r/CZ1YhG3KQ4_8EAE/review', '_blank')}
                 >
                   <ExternalLink className="w-5 h-5 mr-2" />
-                  Read All Google Reviews
+                  Read All 180+ Reviews on Google
                 </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* All Reviews Grid */}
-        <section className="section-spacing bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-12 fade-up">
-                <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">
-                  More Customer Feedback
-                </h2>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Hear from more satisfied customers across the Seattle area
-                </p>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                {reviews.slice(6).map((review, index) => (
-                  <Card key={index} className="border-2 border-brand-orange/10 shadow-lg hover:shadow-xl transition-shadow fade-up">
-                    <CardContent className="p-6">
-                      {/* Star Rating */}
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex gap-1">
-                          {[...Array(review.rating)].map((_, i) => (
-                            <Star key={i} className="w-5 h-5 fill-brand-orange text-brand-orange" />
-                          ))}
-                        </div>
-                        {review.verified && (
-                          <Badge variant="outline" className="text-brand-orange border-brand-orange/30">
-                            <ShieldCheck className="w-3 h-3 mr-1" />
-                            Verified
-                          </Badge>
-                        )}
-                      </div>
-
-                      {/* Review Quote */}
-                      <blockquote className="text-brand-navy/80 italic mb-4 leading-relaxed">
-                        "{review.quote}"
-                      </blockquote>
-
-                      {/* Author Info */}
-                      <div className="border-t pt-4">
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <p className="font-bold text-brand-navy">{review.name}</p>
-                            <p className="text-sm text-brand-orange font-semibold">{review.service}</p>
-                          </div>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
               </div>
             </div>
           </div>
@@ -394,7 +331,7 @@ const Reviews = () => {
         <section className="section-spacing bg-gradient-to-b from-brand-navy to-brand-navy/95">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-heading">
                 Join Our Satisfied Customers
               </h2>
               <p className="text-xl text-white/90 mb-8">
