@@ -14,12 +14,12 @@ import { supabase } from "@/integrations/supabase/client";
 
 const formSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
-  phone: z.string().trim().min(1, "Phone number is required").max(20),
-  email: z.string().trim().email("Invalid email address").max(255).optional().or(z.literal("")),
+  phone: z.string().trim().min(10, "Valid phone number is required").max(20),
+  email: z.string().trim().min(1, "Email is required").email("Invalid email address").max(255),
   preferText: z.boolean().default(false),
   address: z.string().trim().min(1, "Address is required").max(300),
   serviceNeeded: z.string().trim().optional(),
-  details: z.string().trim().max(1000).optional(),
+  details: z.string().trim().min(1, "Please tell us about your service needs").max(1000),
 });
 
 const TwoStepQuoteForm = () => {

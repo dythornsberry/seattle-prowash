@@ -45,7 +45,7 @@ const Gallery = () => {
         alt: "Roof moss removal before and after in Seattle", 
         title: "Roof Moss Removal", 
         location: "Seattle", 
-        description: "Roof moss protection treatment in Seattle – moss removal before and after",
+        description: "Complete roof moss removal and protection treatment – dramatic transformation from heavy moss coverage to clean roof",
         service: "Roof Cleaning & Moss Removal"
       },
       { 
@@ -53,7 +53,7 @@ const Gallery = () => {
         alt: "Metal roof cleaning transformation in Bellevue", 
         title: "Metal Roof Restoration", 
         location: "Bellevue", 
-        description: "Metal roof cleaning in Bellevue – before and after treatment",
+        description: "Professional metal roof cleaning – removed oxidation and staining to restore original shine and appearance",
         service: "Roof Cleaning & Moss Removal"
       },
       { 
@@ -159,7 +159,7 @@ const Gallery = () => {
         alt: "House exterior cleaning before and after in Kenmore", 
         title: "House Washing - Gentle Exterior Cleaning", 
         location: "Kenmore", 
-        description: "Gentle house washing in Kenmore – safe exterior cleaning before and after",
+        description: "Professional soft wash house cleaning – safely removed dirt, mildew, and organic stains without damage to siding",
         service: "House Washing"
       },
       { 
@@ -193,7 +193,7 @@ const Gallery = () => {
         alt: "Gutter cleaning and brightening service in Bothell", 
         title: "Gutter Cleaning & Brightening", 
         location: "Bothell", 
-        description: "Gutter cleaning in Bothell – full cleanout and brightening service",
+        description: "Complete gutter cleaning and brightening – removed debris, cleaned gutters, and restored exterior to like-new appearance",
         service: "Gutter Cleaning"
       },
       { 
@@ -235,7 +235,7 @@ const Gallery = () => {
         alt: "Patio pressure washing transformation in Seattle", 
         title: "Concrete Surface Restoration", 
         location: "Seattle", 
-        description: "Concrete surface restoration in Seattle – removing moss and debris",
+        description: "Complete concrete patio restoration – pressure washed to remove heavy moss buildup, stains, and years of accumulated grime",
         service: "Pressure Washing"
       },
       { 
@@ -243,7 +243,7 @@ const Gallery = () => {
         alt: "Driveway moss removal and cleaning in Kirkland", 
         title: "Driveway Surface Cleaning", 
         location: "Kirkland", 
-        description: "Driveway surface cleaning in Kirkland – moss and buildup removal",
+        description: "Professional driveway pressure washing – removed embedded moss, oil stains, and dirt to restore clean appearance",
         service: "Pressure Washing"
       },
       { 

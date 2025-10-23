@@ -7,6 +7,13 @@ const FloatingMossCTA = () => {
   const [isDismissed, setIsDismissed] = useState(false);
 
   useEffect(() => {
+    // Check if already dismissed this session
+    const dismissed = sessionStorage.getItem('mossCTADismissed');
+    if (dismissed) {
+      setIsDismissed(true);
+      return;
+    }
+
     const handleScroll = () => {
       // Show after scrolling 800px
       if (window.scrollY > 800 && !isDismissed) {
@@ -20,17 +27,33 @@ const FloatingMossCTA = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isDismissed]);
 
+  // Auto-dismiss after 5 seconds
+  useEffect(() => {
+    if (isVisible && !isDismissed) {
+      const timer = setTimeout(() => {
+        setIsVisible(false);
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [isVisible, isDismissed]);
+
   if (isDismissed) return null;
+
+  const handleDismiss = () => {
+    setIsDismissed(true);
+    setIsVisible(false);
+    sessionStorage.setItem('mossCTADismissed', 'true');
+  };
 
   return (
     <div
-      className={`fixed bottom-24 md:bottom-8 right-4 z-40 max-w-sm transition-all duration-300 ${
+      className={`fixed bottom-24 md:bottom-8 right-4 z-30 max-w-sm transition-all duration-300 ${
         isVisible ? "translate-x-0 opacity-100" : "translate-x-[120%] opacity-0"
       }`}
     >
       <div className="bg-brand-navy border-2 border-brand-orange rounded-lg shadow-2xl p-4 relative">
         <button
-          onClick={() => setIsDismissed(true)}
+          onClick={handleDismiss}
           className="absolute -top-2 -right-2 bg-brand-orange text-white rounded-full p-1 hover:bg-brand-orange/90 transition-colors"
           aria-label="Dismiss"
         >
