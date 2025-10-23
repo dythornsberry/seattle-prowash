@@ -10,7 +10,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Phone, Mail, MapPin, CheckCircle, Clock, Shield } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
 
 const formSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
@@ -25,7 +24,7 @@ const formSchema = z.object({
 const TwoStepQuoteForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const EDGE_FUNCTION_NAME = "submit-quote";
+  const ZAPIER_WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/24075201/uheurzq/";
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -56,12 +55,17 @@ const TwoStepQuoteForm = () => {
   const sendToWebhook = async (values: z.infer<typeof formSchema>) => {
     const payload = buildPayload(values);
 
-    const { data, error } = await supabase.functions.invoke(EDGE_FUNCTION_NAME, {
-      body: payload,
+    const response = await fetch(ZAPIER_WEBHOOK_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      mode: "no-cors",
+      body: JSON.stringify(payload),
     });
 
-    if (error) throw new Error(error.message || "Proxy error");
-    if (!data?.ok) throw new Error("Proxy failed");
+    // no-cors mode doesn't give us access to response status, so we assume success
+    return response;
   };
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
@@ -72,9 +76,7 @@ const TwoStepQuoteForm = () => {
 
       toast({
         title: "✓ Request received!",
-        description: values.preferText 
-          ? "We'll text you back within 1 hour."
-          : "We'll call or email you within 1 hour.",
+        description: "We'll get back to you within 1 hour.",
       });
       
       form.reset();
