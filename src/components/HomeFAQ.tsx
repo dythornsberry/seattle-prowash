@@ -31,7 +31,7 @@ const HomeFAQ = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12 fade-up">
-            <h2 className="text-3xl md:text-4xl font-bold text-forest-green mb-4 font-heading">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4 font-heading">
               Common Questions
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -46,14 +46,14 @@ const HomeFAQ = () => {
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`}
-                  className="border-2 border-forest-green/10 rounded-xl px-6 hover:border-forest-green/30 transition-colors"
+                  className="border-2 border-brand-navy/10 rounded-xl px-6 hover:border-brand-orange/30 transition-colors"
                 >
                   <AccordionTrigger className="text-left hover:no-underline py-6">
                     <div className="flex items-start gap-4 pr-4">
-                      <div className="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                        <IconComponent className="w-5 h-5 text-gold" />
+                      <div className="w-10 h-10 bg-brand-orange/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <IconComponent className="w-5 h-5 text-brand-orange" />
                       </div>
-                      <span className="text-lg font-semibold text-forest-green">
+                      <span className="text-lg font-semibold text-brand-navy">
                         {faq.question}
                       </span>
                     </div>
@@ -70,7 +70,7 @@ const HomeFAQ = () => {
             <Button
               variant="outline"
               onClick={() => window.location.href = '/faq'}
-              className="border-2 border-forest-green text-forest-green hover:bg-forest-green hover:text-white"
+              className="border-2 border-brand-navy text-brand-navy hover:bg-brand-orange hover:text-white"
             >
               View All FAQs
               <ArrowRight className="ml-2 w-4 h-4" />
@@ -79,7 +79,7 @@ const HomeFAQ = () => {
               Still have questions?{" "}
               <button 
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="text-forest-green hover:text-gold font-semibold underline"
+                className="text-brand-orange hover:text-brand-orange-light font-semibold underline"
               >
                 Contact us
               </button>

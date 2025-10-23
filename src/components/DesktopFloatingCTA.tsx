@@ -16,12 +16,12 @@ const DesktopFloatingCTA = () => {
 
   return (
     <div className="hidden md:block fixed bottom-8 right-8 z-50 animate-fade-in">
-      <div className="bg-white border-2 border-forest-green rounded-2xl shadow-2xl p-2 flex items-center gap-2">
+      <div className="bg-white border-2 border-brand-navy rounded-2xl shadow-2xl p-2 flex items-center gap-2">
         <Button
           variant="outline"
           size="sm"
           onClick={handleCall}
-          className="border-forest-green text-forest-green hover:bg-forest-green hover:text-white"
+          className="bg-brand-orange text-white hover:bg-brand-orange-light"
           title="Call us"
         >
           <Phone className="w-4 h-4" />
@@ -31,7 +31,7 @@ const DesktopFloatingCTA = () => {
           variant="outline"
           size="sm"
           onClick={handleText}
-          className="border-forest-green text-forest-green hover:bg-forest-green hover:text-white"
+          className="bg-brand-orange text-white hover:bg-brand-orange-light"
           title="Text us"
         >
           <MessageSquare className="w-4 h-4" />

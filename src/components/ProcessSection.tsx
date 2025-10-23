@@ -23,14 +23,14 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section className="section-spacing bg-forest-green">
+    <section className="section-spacing bg-brand-gray">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="fade-up mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">
               Our 3-Step Process
             </h2>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto">
+            <p className="text-xl text-brand-gray-text max-w-2xl mx-auto">
               Simple, effective, and guaranteed
             </p>
           </div>
@@ -41,10 +41,10 @@ const ProcessSection = () => {
               return (
                 <div key={index} className="fade-up">
                   <div className="bg-white rounded-xl p-8 shadow-lg h-full">
-                    <div className="flex items-center justify-center w-16 h-16 bg-gold text-forest-green rounded-full mb-6 mx-auto">
+                    <div className="flex items-center justify-center w-16 h-16 bg-brand-orange text-white rounded-full mb-6 mx-auto">
                       <Icon className="w-8 h-8" />
                     </div>
-                    <h3 className="text-2xl font-bold text-forest-green mb-3">
+                    <h3 className="text-2xl font-bold text-brand-navy mb-3">
                       {step.title}
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">

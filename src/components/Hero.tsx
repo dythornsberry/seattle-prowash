@@ -13,14 +13,14 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-      {/* Hero Background with Dark Overlay */}
+      {/* Hero Background with Navy Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
           src={heroImage}
           alt="Beautiful gray home with clean roof"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-forest-green-dark/85 via-forest-green-dark/75 to-forest-green-dark/85"></div>
+        <div className="absolute inset-0 bg-brand-navy/40"></div>
       </div>
 
       {/* Hero Content */}
@@ -29,12 +29,12 @@ const Hero = () => {
           {/* Trust Badges */}
           <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mb-6">
             <div className="flex items-center gap-2 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
-              <Star className="w-5 h-5 fill-gold text-gold" />
-              <span className="font-semibold text-forest-green">5.0 Google Rating</span>
+              <Star className="w-5 h-5 fill-brand-orange text-brand-orange" />
+              <span className="font-semibold text-brand-navy">5.0 Google Rating</span>
             </div>
             <div className="flex items-center gap-2 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
-              <Shield className="w-5 h-5 text-forest-green" />
-              <span className="font-semibold text-forest-green">Licensed & Insured</span>
+              <Shield className="w-5 h-5 text-brand-orange" />
+              <span className="font-semibold text-brand-navy">Licensed & Insured</span>
             </div>
           </div>
 
@@ -54,13 +54,13 @@ const Hero = () => {
           </p>
 
           {/* Speed emphasis */}
-          <p className="text-lg md:text-xl text-gold font-semibold flex items-center justify-center gap-2">
+          <p className="text-lg md:text-xl text-brand-orange font-semibold flex items-center justify-center gap-2">
             <Clock className="w-5 h-5" />
             Most quotes delivered same day
           </p>
 
           {/* 12-Month Guarantee Badge */}
-          <div className="inline-flex items-center gap-3 bg-gold/95 backdrop-blur-sm text-forest-green px-6 py-4 rounded-2xl shadow-xl">
+          <div className="inline-flex items-center gap-3 bg-brand-orange backdrop-blur-sm text-white px-6 py-4 rounded-2xl shadow-xl">
             <Shield className="w-8 h-8" />
             <div className="text-left">
               <div className="text-2xl font-bold font-heading">12-Month</div>

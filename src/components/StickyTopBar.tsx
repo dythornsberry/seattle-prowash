@@ -3,7 +3,7 @@ import { Phone } from "lucide-react";
 
 const StickyTopBar = () => {
   return (
-    <div id="sticky-top-bar" className="fixed top-0 left-0 right-0 z-50 bg-forest-green border-b border-gold/20 shadow-lg h-10 md:h-11">
+    <div id="sticky-top-bar" className="fixed top-0 left-0 right-0 z-50 bg-brand-navy border-b border-brand-orange/20 shadow-lg h-10 md:h-11">
       <div className="container mx-auto px-4 h-full">
         <div className="flex items-center justify-between gap-2 h-full">
           <div className="text-white font-medium text-xs md:text-base">

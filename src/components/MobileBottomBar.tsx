@@ -3,12 +3,12 @@ import { Phone, MessageSquare } from "lucide-react";
 
 const MobileBottomBar = () => {
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t-2 border-forest-green shadow-2xl md:hidden">
+    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t-2 border-brand-navy shadow-2xl md:hidden">
       <div className="flex items-center justify-between p-3 gap-2">
         <Button 
           variant="outline"
           size="sm"
-          className="flex-1 flex items-center gap-2 border-forest-green text-forest-green hover:bg-forest-green hover:text-white"
+          className="flex-1 flex items-center gap-2 border-brand-navy text-brand-navy hover:bg-brand-orange hover:text-white"
           onClick={() => window.location.href = 'tel:12067526690'}
         >
           <Phone className="w-4 h-4" />
@@ -18,7 +18,7 @@ const MobileBottomBar = () => {
         <Button 
           variant="outline"
           size="sm"
-          className="flex-1 flex items-center gap-2 border-forest-green text-forest-green hover:bg-forest-green hover:text-white"
+          className="flex-1 flex items-center gap-2 border-brand-navy text-brand-navy hover:bg-brand-orange hover:text-white"
           onClick={() => window.location.href = 'sms:12067526690'}
         >
           <MessageSquare className="w-4 h-4" />

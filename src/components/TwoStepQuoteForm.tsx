@@ -111,8 +111,8 @@ const TwoStepQuoteForm = () => {
         <div className="max-w-4xl mx-auto">
           {/* Urgency Banner */}
           <div className="mb-8 text-center fade-up">
-            <div className="inline-block bg-gold/10 border-2 border-gold rounded-xl px-6 py-3 animate-pulse">
-              <p className="text-forest-green font-bold flex items-center justify-center gap-2">
+            <div className="inline-block bg-brand-orange/10 border-2 border-brand-orange rounded-xl px-6 py-3 animate-pulse">
+              <p className="text-brand-navy font-bold flex items-center justify-center gap-2">
                 <Clock className="w-5 h-5" />
                 Book before {offerExpiryStr} and lock in this year's rates
               </p>
@@ -120,7 +120,7 @@ const TwoStepQuoteForm = () => {
           </div>
 
           <div className="text-center mb-12 fade-up">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-forest-green mb-4 font-heading">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy mb-4 font-heading">
               Get Your Free Quote Today
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -131,18 +131,18 @@ const TwoStepQuoteForm = () => {
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Info & Trust Badges */}
             <div className="lg:col-span-1 space-y-6 fade-up">
-              <Card className="border-2 border-forest-green/20 shadow-lg rounded-xl">
+              <Card className="border-2 border-brand-navy/20 shadow-lg rounded-xl">
                 <CardHeader>
-                  <CardTitle className="text-forest-green font-heading">Quick Contact</CardTitle>
+                  <CardTitle className="text-brand-navy font-heading">Quick Contact</CardTitle>
                   <CardDescription>
                     Prefer to call? We're here to help!
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <Phone className="w-5 h-5 text-gold" />
+                    <Phone className="w-5 h-5 text-brand-orange" />
                     <div>
-                      <a href="tel:12067526690" className="font-semibold text-forest-green hover:text-gold transition-colors">
+                      <a href="tel:12067526690" className="font-semibold text-brand-navy hover:text-brand-orange transition-colors">
                         206-752-6690
                       </a>
                       <p className="text-sm text-muted-foreground">Call or text anytime</p>
@@ -150,9 +150,9 @@ const TwoStepQuoteForm = () => {
                   </div>
                   
                   <div className="flex items-center gap-3">
-                    <Mail className="w-5 h-5 text-gold" />
+                    <Mail className="w-5 h-5 text-brand-orange" />
                     <div>
-                      <a href="mailto:seattleprowash@gmail.com" className="text-sm text-forest-green hover:text-gold transition-colors break-all">
+                      <a href="mailto:seattleprowash@gmail.com" className="text-sm text-brand-navy hover:text-brand-orange transition-colors break-all">
                         seattleprowash@gmail.com
                       </a>
                       <p className="text-sm text-muted-foreground">1-hour response time</p>
@@ -160,9 +160,9 @@ const TwoStepQuoteForm = () => {
                   </div>
                   
                   <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-gold mt-1" />
+                    <MapPin className="w-5 h-5 text-brand-orange mt-1" />
                     <div>
-                      <p className="text-sm text-forest-green">Kenmore & Greater Seattle</p>
+                      <p className="text-sm text-brand-navy">Kenmore & Greater Seattle</p>
                       <p className="text-sm text-muted-foreground">Bothell, Kirkland, Shoreline</p>
                     </div>
                   </div>
@@ -171,33 +171,33 @@ const TwoStepQuoteForm = () => {
 
               {/* Trust Badges with Icons */}
               <div className="space-y-3">
-                <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-forest-green/10">
-                  <Shield className="w-5 h-5 text-gold flex-shrink-0" />
-                  <span className="text-sm font-semibold text-forest-green">Licensed & Insured</span>
+                <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-brand-navy/10">
+                  <Shield className="w-5 h-5 text-brand-orange flex-shrink-0" />
+                  <span className="text-sm font-semibold text-brand-navy">Licensed & Insured</span>
                 </div>
-                <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-forest-green/10">
-                  <Clock className="w-5 h-5 text-gold flex-shrink-0" />
-                  <span className="text-sm font-semibold text-forest-green">Same-Day Estimates</span>
+                <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-brand-navy/10">
+                  <Clock className="w-5 h-5 text-brand-orange flex-shrink-0" />
+                  <span className="text-sm font-semibold text-brand-navy">Same-Day Estimates</span>
                 </div>
-                <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-forest-green/10">
-                  <CheckCircle className="w-5 h-5 text-gold flex-shrink-0" />
-                  <span className="text-sm font-semibold text-forest-green">12-Month Moss-Free Guarantee</span>
+                <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-brand-navy/10">
+                  <CheckCircle className="w-5 h-5 text-brand-orange flex-shrink-0" />
+                  <span className="text-sm font-semibold text-brand-navy">12-Month Moss-Free Guarantee</span>
                 </div>
-                <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-forest-green/10">
-                  <CheckCircle className="w-5 h-5 text-gold flex-shrink-0" />
-                  <span className="text-sm font-semibold text-forest-green">180+ Five-Star Reviews</span>
+                <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-brand-navy/10">
+                  <CheckCircle className="w-5 h-5 text-brand-orange flex-shrink-0" />
+                  <span className="text-sm font-semibold text-brand-navy">180+ Five-Star Reviews</span>
                 </div>
               </div>
             </div>
 
             {/* 2-Step Quote Form */}
             <div className="lg:col-span-2 fade-up">
-              <Card className="border-2 border-forest-green/20 shadow-xl rounded-xl">
+              <Card className="border-2 border-brand-navy/20 shadow-xl rounded-xl">
                 <CardHeader>
                   {/* Progress Indicator */}
                   <div className="mb-4">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-semibold text-forest-green">
+                      <span className="text-sm font-semibold text-brand-navy">
                         Step {currentStep} of 2
                       </span>
                       <span className="text-sm text-muted-foreground">
@@ -206,13 +206,13 @@ const TwoStepQuoteForm = () => {
                     </div>
                     <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
                       <div 
-                        className="h-full bg-gold transition-all duration-300"
+                        className="h-full bg-brand-orange transition-all duration-300"
                         style={{ width: `${(currentStep / 2) * 100}%` }}
                       />
                     </div>
                   </div>
 
-                  <CardTitle className="text-forest-green font-heading">
+                  <CardTitle className="text-brand-navy font-heading">
                     {currentStep === 1 ? "Your Contact Information" : "Tell Us About Your Project"}
                   </CardTitle>
                   <CardDescription>
@@ -232,11 +232,11 @@ const TwoStepQuoteForm = () => {
                             name="name"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel className="text-forest-green font-semibold">Full Name *</FormLabel>
+                                <FormLabel className="text-brand-navy font-semibold">Full Name *</FormLabel>
                                 <FormControl>
                                   <Input
                                     placeholder="Your Name"
-                                    className="border-forest-green/30 focus:border-gold h-12 rounded-xl"
+                                    className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
                                     {...field}
                                   />
                                 </FormControl>
@@ -250,12 +250,12 @@ const TwoStepQuoteForm = () => {
                             name="phone"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel className="text-forest-green font-semibold">Phone Number *</FormLabel>
+                                <FormLabel className="text-brand-navy font-semibold">Phone Number *</FormLabel>
                                 <FormControl>
                                   <Input
                                     type="tel"
                                     placeholder="Mobile Number"
-                                    className="border-forest-green/30 focus:border-gold h-12 rounded-xl"
+                                    className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
                                     {...field}
                                   />
                                 </FormControl>
@@ -269,12 +269,12 @@ const TwoStepQuoteForm = () => {
                             name="email"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel className="text-forest-green font-semibold">Email (Optional)</FormLabel>
+                                <FormLabel className="text-brand-navy font-semibold">Email (Optional)</FormLabel>
                                 <FormControl>
                                   <Input
                                     type="email"
                                     placeholder="Email Address"
-                                    className="border-forest-green/30 focus:border-gold h-12 rounded-xl"
+                                    className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
                                     {...field}
                                   />
                                 </FormControl>
@@ -287,7 +287,7 @@ const TwoStepQuoteForm = () => {
                             control={form.control}
                             name="preferText"
                             render={({ field }) => (
-                              <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-forest-green/20 p-4">
+                              <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
                                 <FormControl>
                                   <Checkbox
                                     checked={field.value}
@@ -295,7 +295,7 @@ const TwoStepQuoteForm = () => {
                                   />
                                 </FormControl>
                                 <div className="space-y-1 leading-none">
-                                  <FormLabel className="text-sm font-semibold text-forest-green">
+                                  <FormLabel className="text-sm font-semibold text-brand-navy">
                                     Prefer text message follow-up
                                   </FormLabel>
                                   <p className="text-sm text-muted-foreground">
@@ -328,11 +328,11 @@ const TwoStepQuoteForm = () => {
                             name="address"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel className="text-forest-green font-semibold">Property Address *</FormLabel>
+                                <FormLabel className="text-brand-navy font-semibold">Property Address *</FormLabel>
                                 <FormControl>
                                   <Input
                                     placeholder="123 Main St, Kenmore, WA 98028"
-                                    className="border-forest-green/30 focus:border-gold h-12 rounded-xl"
+                                    className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
                                     {...field}
                                   />
                                 </FormControl>
@@ -346,11 +346,11 @@ const TwoStepQuoteForm = () => {
                             name="serviceNeeded"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel className="text-forest-green font-semibold">Service Needed (Optional)</FormLabel>
+                                <FormLabel className="text-brand-navy font-semibold">Service Needed (Optional)</FormLabel>
                                 <FormControl>
                                   <Input
                                     placeholder="e.g., Roof moss removal, Gutter cleaning"
-                                    className="border-forest-green/30 focus:border-gold h-12 rounded-xl"
+                                    className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
                                     {...field}
                                   />
                                 </FormControl>
@@ -364,12 +364,12 @@ const TwoStepQuoteForm = () => {
                             name="details"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel className="text-forest-green font-semibold">Additional Details (Optional)</FormLabel>
+                                <FormLabel className="text-brand-navy font-semibold">Additional Details (Optional)</FormLabel>
                                 <FormControl>
                                   <Textarea
                                     placeholder="Add photos link or describe your needs (optional) — e.g., 'Heavy moss on north side' or 'Link to photos: dropbox.com/...'"
                                     rows={4}
-                                    className="border-forest-green/30 focus:border-gold rounded-xl"
+                                    className="border-brand-navy/30 focus:border-brand-orange rounded-xl"
                                     {...field}
                                   />
                                 </FormControl>
@@ -382,7 +382,7 @@ const TwoStepQuoteForm = () => {
                             <Button
                               type="button"
                               variant="outline"
-                              className="flex-1 h-12 border-forest-green text-forest-green hover:bg-forest-green hover:text-white rounded-xl"
+                              className="flex-1 h-12 border-brand-navy text-brand-navy hover:bg-brand-orange hover:text-white rounded-xl"
                               onClick={() => setCurrentStep(1)}
                             >
                               <ArrowLeft className="mr-2 w-5 h-5" />
