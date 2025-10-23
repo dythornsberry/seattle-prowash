@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Seattle ProWash Premium Design System - Forest Green & Gold */
+/* Seattle ProWash Premium Design System - Navy & Warm Orange */
 
 @layer base {
   :root {
@@ -10,43 +10,43 @@
     --background: 0 0% 98%; /* Off-white background */
     --foreground: 0 0% 15%; /* Rich charcoal for text */
     
-    /* Primary Forest Green Palette */
-    --forest-green: 158 64% 20%; /* Deep Forest Green #126049 */
-    --forest-green-light: 158 50% 30%; /* Lighter forest green */
-    --forest-green-dark: 158 80% 15%; /* Darker forest green */
+    /* Primary Navy Palette */
+    --forest-green: 210 59% 25%; /* Navy Blue #1A3E66 */
+    --forest-green-light: 210 55% 35%; /* Lighter navy */
+    --forest-green-dark: 210 65% 20%; /* Darker navy */
     
-    /* Gold Accent Palette */
-    --gold: 43 90% 55%; /* Rich Gold #E3B041 */
-    --gold-light: 43 85% 65%; /* Light gold for hover */
-    --gold-dark: 43 95% 45%; /* Dark gold for emphasis */
+    /* Warm Orange Accent Palette */
+    --gold: 25 88% 55%; /* Warm Orange #F27A24 */
+    --gold-light: 25 88% 65%; /* Light orange for hover */
+    --gold-dark: 25 88% 45%; /* Dark orange for emphasis */
     
     /* Neutral Palette */
     --off-white: 0 0% 98%; /* Off-white background */
-    --light-gray: 0 0% 96%; /* Light gray */
+    --light-gray: 0 0% 96%; /* Light gray #F5F5F5 */
     --mid-gray: 0 0% 60%; /* Mid gray */
     --charcoal: 0 0% 15%; /* Rich charcoal text */
     --pure-white: 0 0% 100%; /* Pure white */
     
     /* Legacy Brand Colors (mapped to new palette) */
-    --primary-teal: 158 64% 20%; /* Now maps to Forest Green */
+    --primary-teal: 210 59% 25%; /* Now maps to Navy */
     --secondary-off-white: 0 0% 98%;
-    --accent-bright-green: 158 64% 20%; /* Forest green */
+    --accent-bright-green: 25 88% 55%; /* Warm orange */
     --text-charcoal: 0 0% 15%;
-    --brand-blue: 158 64% 20%; /* Forest green */
-    --brand-blue-light: 158 50% 30%;
-    --brand-navy: 158 80% 15%;
-    --brand-orange: 43 90% 55%; /* Gold */
-    --brand-orange-light: 43 85% 65%;
-    --brand-yellow: 43 90% 55%; /* Gold */
+    --brand-blue: 210 59% 25%; /* Navy */
+    --brand-blue-light: 210 55% 35%;
+    --brand-navy: 210 59% 25%; /* Navy */
+    --brand-orange: 25 88% 55%; /* Warm Orange */
+    --brand-orange-light: 25 88% 65%;
+    --brand-yellow: 25 88% 55%; /* Warm Orange */
     --brand-white: 0 0% 100%;
-    --brand-gray: 0 0% 98%;
+    --brand-gray: 0 0% 96%; /* Light Gray */
     --brand-gray-text: 0 0% 15%;
-    --moss-green: 158 64% 20%;
-    --moss-green-light: 158 50% 30%;
-    --slate-charcoal: 158 64% 20%;
-    --bright-orange: 43 90% 55%; /* Gold */
-    --navy: 158 80% 15%; /* Dark forest green */
-    --dark-teal: 158 80% 15%;
+    --moss-green: 210 59% 25%; /* Navy */
+    --moss-green-light: 210 55% 35%;
+    --slate-charcoal: 210 59% 25%; /* Navy */
+    --bright-orange: 25 88% 55%; /* Warm Orange */
+    --navy: 210 59% 25%; /* Navy */
+    --dark-teal: 210 65% 20%; /* Dark Navy */
     
     --card: 0 0% 100%;
     --card-foreground: 0 0% 15%;
@@ -54,75 +54,75 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 15%;
 
-    --primary: 158 64% 20%; /* Forest Green */
+    --primary: 210 59% 25%; /* Navy */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 98%;
+    --secondary: 0 0% 96%; /* Light Gray */
     --secondary-foreground: 0 0% 15%;
 
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 40%;
 
-    --accent: 43 90% 55%; /* Gold */
-    --accent-foreground: 0 0% 15%;
+    --accent: 25 88% 55%; /* Warm Orange */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 45%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 0 0% 88%;
     --input: 0 0% 92%;
-    --ring: 43 90% 55%;
+    --ring: 25 88% 55%;
 
     --radius: 0.75rem;
 
     /* Sidebar colors */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 210 100% 10%;
-    --sidebar-primary: 210 100% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-background: 0 0% 96%;
+    --sidebar-foreground: 210 59% 25%;
+    --sidebar-primary: 210 59% 25%;
+    --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 210 15% 95%;
-    --sidebar-accent-foreground: 210 100% 10%;
+    --sidebar-accent-foreground: 210 59% 25%;
     --sidebar-border: 210 20% 85%;
-    --sidebar-ring: 25 95% 50%;
+    --sidebar-ring: 25 88% 55%;
   }
 
   .dark {
-    --background: 210 100% 4%;
+    --background: 210 59% 8%;
     --foreground: 0 0% 98%;
 
-    --card: 210 100% 4%;
+    --card: 210 59% 8%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 210 100% 4%;
+    --popover: 210 59% 8%;
     --popover-foreground: 0 0% 98%;
 
     --primary: 0 0% 98%;
-    --primary-foreground: 210 100% 10%;
+    --primary-foreground: 210 59% 25%;
 
-    --secondary: 210 50% 10%;
+    --secondary: 210 50% 15%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 210 50% 10%;
+    --muted: 210 50% 15%;
     --muted-foreground: 210 20% 70%;
 
-    --accent: 25 95% 55%;
+    --accent: 25 88% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 210 50% 15%;
-    --input: 210 50% 15%;
-    --ring: 25 95% 55%;
+    --border: 210 50% 20%;
+    --input: 210 50% 20%;
+    --ring: 25 88% 55%;
     
-    --sidebar-background: 210 100% 5%;
+    --sidebar-background: 210 59% 10%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 25 95% 55%;
+    --sidebar-primary: 25 88% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 50% 10%;
+    --sidebar-accent: 210 50% 15%;
     --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 210 50% 15%;
-    --sidebar-ring: 25 95% 55%;
+    --sidebar-border: 210 50% 20%;
+    --sidebar-ring: 25 88% 55%;
   }
 }
 
