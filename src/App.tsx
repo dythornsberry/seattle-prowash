@@ -16,6 +16,7 @@ import RoofMoss from "./pages/RoofMoss";
 import Kenmore from "./pages/locations/Kenmore";
 import Bothell from "./pages/locations/Bothell";
 import Kirkland from "./pages/locations/Kirkland";
+import Reviews from "./pages/Reviews";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/kenmore" element={<Kenmore />} />
           <Route path="/bothell" element={<Bothell />} />
           <Route path="/kirkland" element={<Kirkland />} />
+          <Route path="/reviews" element={<Reviews />} />
           {/* Redirects for old services */}
           <Route path="/services" element={<RoofCleaning />} />
           <Route path="/moss-treatment" element={<RoofMoss />} />

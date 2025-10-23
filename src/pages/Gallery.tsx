@@ -681,7 +681,7 @@ const Gallery = () => {
                         {image.description}
                       </p>
                       <div className="flex items-center justify-between">
-                        <Badge variant="secondary" className="bg-brand-yellow text-brand-navy text-xs">
+                        <Badge variant="secondary" className="bg-brand-orange text-white text-xs">
                           {image.location}
                         </Badge>
                         <Badge variant="outline" className="border-white text-white text-xs">

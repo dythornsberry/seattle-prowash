@@ -79,19 +79,19 @@ const About = () => {
                   
                   <div className="grid grid-cols-4 gap-4 mt-8">
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-brand-yellow mb-2">2022</div>
+                      <div className="text-3xl font-bold text-brand-orange mb-2">2022</div>
                       <div className="text-sm text-muted-foreground">Founded Seattle ProWash</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-brand-yellow mb-2">500+</div>
+                      <div className="text-3xl font-bold text-brand-orange mb-2">500+</div>
                       <div className="text-sm text-muted-foreground">Properties Restored</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-brand-yellow mb-2">180+</div>
+                      <div className="text-3xl font-bold text-brand-orange mb-2">180+</div>
                       <div className="text-sm text-muted-foreground">5-Star Google Reviews</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-brand-yellow mb-2">15+</div>
+                      <div className="text-3xl font-bold text-brand-orange mb-2">15+</div>
                       <div className="text-sm text-muted-foreground">Communities Served</div>
                     </div>
                   </div>
@@ -104,7 +104,7 @@ const About = () => {
                       alt="Dylan, owner of Seattle ProWash, pressure washing a patio"
                       className="rounded-2xl shadow-2xl w-full"
                     />
-                    <div className="absolute -bottom-6 -right-6 bg-brand-yellow text-brand-navy px-6 py-3 rounded-xl font-bold shadow-lg">
+                    <div className="absolute -bottom-6 -right-6 bg-brand-orange text-white px-6 py-3 rounded-xl font-bold shadow-lg">
                       15+ Communities Served
                     </div>
                   </div>
@@ -160,33 +160,33 @@ const About = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <Card className="fade-up bg-brand-white border-brand-yellow/20 hover:shadow-lg transition-shadow">
+              <Card className="fade-up bg-brand-white border-brand-orange/20 hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">
-                  <Award className="w-12 h-12 text-brand-yellow mx-auto mb-4" />
+                  <Award className="w-12 h-12 text-brand-orange mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-brand-navy mb-3">True Local Mastery</h3>
                   <p className="text-muted-foreground">We're experts in protecting Pacific Northwest homes from our specific climate.</p>
                 </CardContent>
               </Card>
 
-              <Card className="fade-up bg-brand-white border-brand-yellow/20 hover:shadow-lg transition-shadow">
+              <Card className="fade-up bg-brand-white border-brand-orange/20 hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">
-                  <CheckCircle className="w-12 h-12 text-brand-yellow mx-auto mb-4" />
+                  <CheckCircle className="w-12 h-12 text-brand-orange mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-brand-navy mb-3">A Flawless Finish, Guaranteed</h3>
                   <p className="text-muted-foreground">Our gentle house washing cleans completely without risking damage to your property.</p>
                 </CardContent>
               </Card>
 
-              <Card className="fade-up bg-brand-white border-brand-yellow/20 hover:shadow-lg transition-shadow">
+              <Card className="fade-up bg-brand-white border-brand-orange/20 hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">
-                  <Users className="w-12 h-12 text-brand-yellow mx-auto mb-4" />
+                  <Users className="w-12 h-12 text-brand-orange mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-brand-navy mb-3">Unwavering Respect for Your Home</h3>
                   <p className="text-muted-foreground">We take pride in our professionalism, from clear communication to a spotless cleanup.</p>
                 </CardContent>
               </Card>
 
-              <Card className="fade-up bg-brand-white border-brand-yellow/20 hover:shadow-lg transition-shadow">
+              <Card className="fade-up bg-brand-white border-brand-orange/20 hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">
-                  <Calendar className="w-12 h-12 text-brand-yellow mx-auto mb-4" />
+                  <Calendar className="w-12 h-12 text-brand-orange mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-brand-navy mb-3">Results That Speak for Themselves</h3>
                   <p className="text-muted-foreground">With 500+ properties restored, we deliver transformations that boost your home's value and curb appeal.</p>
                 </CardContent>
@@ -201,7 +201,7 @@ const About = () => {
             <div className="max-w-4xl mx-auto text-center fade-up">
               <div className="bg-brand-white rounded-2xl p-8 shadow-lg border border-brand-orange/20">
                 <p className="text-lg text-muted-foreground mb-6">
-                  Ready for a moss-free roof? Call <a href="tel:+12067526690" className="text-brand-yellow hover:underline">206-752-6690</a> or get your free quote today.
+                  Ready for a moss-free roof? Call <a href="tel:+12067526690" className="text-brand-orange hover:underline">206-752-6690</a> or get your free quote today.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                   <Button 
@@ -301,7 +301,7 @@ const About = () => {
                   "Seattle", "Lynnwood", "Edmonds", "Mukilteo", "Mill Creek",
                   "Woodinville", "Sammamish", "Issaquah", "Renton"
                 ].map((city) => (
-                  <Badge key={city} variant="secondary" className="bg-brand-yellow text-brand-navy font-semibold py-2 px-4">
+                  <Badge key={city} variant="secondary" className="bg-brand-orange text-white font-semibold py-2 px-4">
                     {city}
                   </Badge>
                 ))}

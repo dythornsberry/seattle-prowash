@@ -26,8 +26,7 @@ const Header = () => {
     { name: "Gutter Cleaning", href: "/gutter-cleaning" },
     { 
       name: "Reviews", 
-      href: "/#reviews",
-      onClick: goToReviews
+      href: "/reviews"
     },
     { name: "Service Area", href: "/kenmore" },
     { name: "Gallery", href: "/gallery" },

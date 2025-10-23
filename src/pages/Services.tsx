@@ -316,7 +316,7 @@ const Services = () => {
                           alt={`${service.title} before and after results`}
                           className="rounded-2xl shadow-2xl w-full"
                         />
-                        <div className="absolute -bottom-6 -right-6 bg-brand-yellow text-brand-navy px-6 py-3 rounded-xl font-bold shadow-lg">
+                        <div className="absolute -bottom-6 -right-6 bg-brand-orange text-white px-6 py-3 rounded-xl font-bold shadow-lg">
                           Real Results
                         </div>
                       </div>
@@ -336,19 +336,19 @@ const Services = () => {
                 Why Choose Seattle ProWash?
               </h2>
               <div className="grid md:grid-cols-3 gap-8 mt-12">
-                <Card className="border-brand-yellow/20">
+                <Card className="border-brand-orange/20">
                   <CardHeader className="text-center">
                     <CardTitle className="text-brand-navy">PNW Climate Expertise</CardTitle>
                     <CardDescription>We specialize in cleaning techniques that are proven to combat the specific challenges of our Pacific Northwest climate, from heavy moss to stubborn grime.</CardDescription>
                   </CardHeader>
                 </Card>
-                <Card className="border-brand-yellow/20">
+                <Card className="border-brand-orange/20">
                   <CardHeader className="text-center">
                     <CardTitle className="text-brand-navy">Superior, Damage-Free Results</CardTitle>
                     <CardDescription>Professional-grade tools and techniques</CardDescription>
                   </CardHeader>
                 </Card>
-                <Card className="border-brand-yellow/20">
+                <Card className="border-brand-orange/20">
                   <CardHeader className="text-center">
                     <CardTitle className="text-brand-navy">A Track Record of Transformations</CardTitle>
                     <CardDescription>Proven transformations across Seattle area</CardDescription>
