@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -9,6 +10,11 @@ import StickyTopBar from "@/components/StickyTopBar";
 import MobileBottomBar from "@/components/MobileBottomBar";
 
 const Resources = () => {
+  // Scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const articles = [
     {
       id: "roof-gutter-cleaning-importance",

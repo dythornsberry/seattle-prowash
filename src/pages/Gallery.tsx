@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GalleryFilters from "@/components/GalleryFilters";
@@ -28,6 +28,11 @@ import drivewayBefore from "@/assets/driveway-moss-cleaning-before-after.jpg";
 const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState("Roof Cleaning & Moss Removal");
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  // Scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const categories = [
     "All",

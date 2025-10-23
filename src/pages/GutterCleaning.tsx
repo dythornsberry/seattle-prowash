@@ -23,6 +23,8 @@ const GutterCleaning = () => {
       );
     }
 
+    window.scrollTo(0, 0);
+
     // Intersection Observer for fade-up animations
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {

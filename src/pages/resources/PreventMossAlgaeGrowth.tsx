@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, ArrowLeft } from "lucide-react";
@@ -8,6 +9,11 @@ import StickyTopBar from "@/components/StickyTopBar";
 import MobileBottomBar from "@/components/MobileBottomBar";
 
 const PreventMossAlgaeGrowth = () => {
+  // Scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <StickyTopBar />

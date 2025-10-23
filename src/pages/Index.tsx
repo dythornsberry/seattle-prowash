@@ -22,8 +22,21 @@ import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
 
 const Index = () => {
-  // Intersection Observer for fade-up animations
+  // Scroll to top and set up fade-up animations
   useEffect(() => {
+    // Handle hash navigation or scroll to top
+    if (window.location.hash) {
+      const hash = window.location.hash.substring(1);
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      window.scrollTo(0, 0);
+    }
+
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {

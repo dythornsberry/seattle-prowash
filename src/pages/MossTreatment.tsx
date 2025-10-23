@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -8,6 +9,11 @@ import StickyTopBar from "@/components/StickyTopBar";
 import MobileBottomBar from "@/components/MobileBottomBar";
 
 const MossTreatment = () => {
+  // Scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <StickyTopBar />

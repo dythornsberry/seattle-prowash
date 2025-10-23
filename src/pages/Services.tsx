@@ -14,8 +14,10 @@ import houseWashing from "@/assets/house-softwash-before-after.jpg";
 import pressureWashing from "@/assets/patio-pressure-washing-before-after.jpg";
 
 const Services = () => {
-  // Intersection Observer for fade-up animations
+  // Scroll to top and set up fade-up animations
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {

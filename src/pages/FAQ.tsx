@@ -14,6 +14,7 @@ const FAQ = () => {
       "content", 
       "Get answers to common questions about our roof cleaning, pressure washing, and house washing services in Seattle. Learn about our process, guarantees, and more."
     );
+    window.scrollTo(0, 0);
   }, []);
 
   // Intersection Observer for fade-up animations
