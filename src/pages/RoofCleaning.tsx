@@ -222,14 +222,14 @@ const RoofCleaning = () => {
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <TestimonialCard 
-                  quote="My roof looks brand new! They were careful, thorough, and the moss is completely gone. Highly recommend!"
-                  author="Sarah M."
-                  service="Roof Cleaning - Kenmore"
+                  quote="These guys did an amazing job cleaning up my roof. They did a great job not damaging anything and I would definitely hire them again down the line."
+                  author="Daniel S."
+                  service="Roof Cleaning"
                 />
                 <TestimonialCard 
-                  quote="Professional service from start to finish. They explained everything and my roof has stayed clean for months now."
-                  author="Mike T."
-                  service="Roof Moss Treatment - Bothell"
+                  quote="ProWash has very good service and did an excellent job — they made my metal roof brand new again. I recommend these guys to everyone."
+                  author="Ajitesh S."
+                  service="Metal Roof Cleaning"
                 />
               </div>
             </div>
