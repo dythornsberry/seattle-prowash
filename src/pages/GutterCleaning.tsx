@@ -211,13 +211,13 @@ const GutterCleaning = () => {
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <TestimonialCard 
-                  quote="Dylan did an amazing job cleaning our gutters, roof and clearing branches!"
-                  author="Arielle S."
+                  quote="Great job on my roof and gutters, friendly crew. Customer‑first attitude; price fair. Recommend them!"
+                  author="Miguel Angel M."
                   service="Roof & Gutter Cleaning"
                 />
                 <TestimonialCard 
-                  quote="Seattle Pro Wash is a great company to work with! They do a great job with gutter cleaning, roof cleaning and window washing. I've used them for all of these services and highly recommend them!"
-                  author="Dafna S."
+                  quote="They did a great job cleaning my roof and gutters, also applying zinc to protect it throughout the summer months. I will definitely be using them again come September."
+                  author="Daniel B."
                   service="Roof & Gutter Cleaning"
                 />
               </div>

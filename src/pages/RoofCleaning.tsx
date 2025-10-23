@@ -227,9 +227,9 @@ const RoofCleaning = () => {
                   service="Roof Cleaning"
                 />
                 <TestimonialCard 
-                  quote="ProWash has very good service and did an excellent job — they made my metal roof brand new again. I recommend these guys to everyone."
-                  author="Ajitesh S."
-                  service="Metal Roof Cleaning"
+                  quote="Really happy with the work the Seattle Pro Wash team did to clean the transparent roof of my backyard pergola. Quick, friendly and efficient – highly recommended!"
+                  author="Aileen I."
+                  service="Pergola Roof Cleaning"
                 />
               </div>
             </div>

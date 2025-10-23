@@ -29,18 +29,25 @@ const TestimonialSlider = () => {
       service: "Metal Roof Cleaning"
     },
     {
-      content: "Dylan did an amazing job cleaning our gutters, roof and clearing branches!",
-      author: "Arielle S.",
+      content: "Great job on my roof and gutters, friendly crew. Customer‑first attitude; price fair. Recommend them!",
+      author: "Miguel Angel M.",
       location: "Seattle Area",
       rating: 5,
       service: "Roof & Gutter Cleaning"
     },
     {
-      content: "Seattle Pro Wash is a great company to work with! They do a great job with gutter cleaning, roof cleaning and window washing. I've used them for all of these services and highly recommend them!",
-      author: "Dafna S.",
+      content: "They did a great job cleaning my roof and gutters, also applying zinc to protect it throughout the summer months. I will definitely be using them again come September.",
+      author: "Daniel B.",
       location: "Seattle Area",
       rating: 5,
       service: "Roof & Gutter Cleaning"
+    },
+    {
+      content: "I needed my deck power washed immediately and heard from my neighbors that Seattle Prowash was legit. Dylan and his team did an excellent job and I was thoroughly impressed with their work. Dylan is easily reachable and his team does great work.",
+      author: "Lucas H.",
+      location: "Seattle Area",
+      rating: 5,
+      service: "Deck Power Washing"
     }
   ];
 
@@ -79,12 +86,12 @@ const TestimonialSlider = () => {
               >
                 {testimonials.map((testimonial, index) => (
                   <div key={index} className="w-full flex-shrink-0">
-                    <Card className="mx-4 border-2 border-brand-yellow/20 shadow-xl">
+                    <Card className="mx-4 border-2 border-brand-orange/20 shadow-xl">
                       <CardContent className="p-8 md:p-12 text-center">
                         {/* Stars */}
                         <div className="flex justify-center mb-6">
                           {[...Array(testimonial.rating)].map((_, i) => (
-                            <Star key={i} className="w-6 h-6 fill-brand-yellow text-brand-yellow" />
+                            <Star key={i} className="w-6 h-6 fill-brand-orange text-brand-orange" />
                           ))}
                         </div>
                         
@@ -95,7 +102,7 @@ const TestimonialSlider = () => {
                         
                         {/* Author Info */}
                         <div className="space-y-2">
-                          <div className="font-bold text-brand-blue text-lg">
+                          <div className="font-bold text-brand-navy text-lg">
                             {testimonial.author}
                           </div>
                           <div className="text-brand-gray-text font-medium">
@@ -116,7 +123,7 @@ const TestimonialSlider = () => {
             <Button
               variant="outline"
               size="icon"
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-brand-white border-brand-yellow hover:bg-brand-yellow hover:text-brand-navy"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-brand-white border-brand-orange hover:bg-brand-orange hover:text-white"
               onClick={prevSlide}
             >
               <ChevronLeft className="w-5 h-5" />
@@ -125,7 +132,7 @@ const TestimonialSlider = () => {
             <Button
               variant="outline"
               size="icon"
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-brand-white border-brand-yellow hover:bg-brand-yellow hover:text-brand-navy"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-brand-white border-brand-orange hover:bg-brand-orange hover:text-white"
               onClick={nextSlide}
             >
               <ChevronRight className="w-5 h-5" />
@@ -138,7 +145,7 @@ const TestimonialSlider = () => {
               <button
                 key={index}
                 className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                  index === currentSlide ? 'bg-brand-yellow' : 'bg-brand-yellow/30'
+                  index === currentSlide ? 'bg-brand-orange' : 'bg-brand-orange/30'
                 }`}
                 onClick={() => setCurrentSlide(index)}
               />
