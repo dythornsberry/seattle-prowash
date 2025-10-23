@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { Phone, Mail, MapPin, CheckCircle, Clock, Shield, ArrowRight, ArrowLeft } from "lucide-react";
+import { Phone, Mail, MapPin, CheckCircle, Clock, Shield } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -25,7 +25,6 @@ const formSchema = z.object({
 const TwoStepQuoteForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [currentStep, setCurrentStep] = useState(1);
   const EDGE_FUNCTION_NAME = "submit-quote";
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -65,13 +64,6 @@ const TwoStepQuoteForm = () => {
     if (!data?.ok) throw new Error("Proxy failed");
   };
 
-  const validateStep1 = async () => {
-    const isValid = await form.trigger(["name", "phone", "email"]);
-    if (isValid) {
-      setCurrentStep(2);
-    }
-  };
-
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
     
@@ -86,7 +78,6 @@ const TwoStepQuoteForm = () => {
       });
       
       form.reset();
-      setCurrentStep(1);
       
     } catch (error) {
       console.error("Quote submit error:", error);
@@ -190,35 +181,15 @@ const TwoStepQuoteForm = () => {
               </div>
             </div>
 
-            {/* 2-Step Quote Form */}
+            {/* Quote Form */}
             <div className="lg:col-span-2 fade-up">
               <Card className="border-2 border-brand-navy/20 shadow-xl rounded-xl">
                 <CardHeader>
-                  {/* Progress Indicator */}
-                  <div className="mb-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-semibold text-brand-navy">
-                        Step {currentStep} of 2
-                      </span>
-                      <span className="text-sm text-muted-foreground">
-                        {currentStep === 1 ? "Contact Info" : "Project Details"}
-                      </span>
-                    </div>
-                    <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-                      <div 
-                        className="h-full bg-brand-orange transition-all duration-300"
-                        style={{ width: `${(currentStep / 2) * 100}%` }}
-                      />
-                    </div>
-                  </div>
-
                   <CardTitle className="text-brand-navy font-heading">
-                    {currentStep === 1 ? "Your Contact Information" : "Tell Us About Your Project"}
+                    Request Your Free Quote
                   </CardTitle>
                   <CardDescription>
-                    {currentStep === 1 
-                      ? "We'll use this to send your quote"
-                      : "Help us provide an accurate estimate"}
+                    Fill out the form below and we'll send you an estimate
                   </CardDescription>
                   <div className="mt-3 p-3 bg-brand-orange/10 rounded-lg border border-brand-orange/20">
                     <p className="text-sm text-brand-navy font-medium">
@@ -228,202 +199,158 @@ const TwoStepQuoteForm = () => {
                 </CardHeader>
                 <CardContent>
                   <Form {...form}>
-                    {currentStep === 1 ? (
-                      <form className="space-y-6" autoComplete="on" onSubmit={(e) => e.preventDefault()}>
-                        {/* Step 1: Contact Information */}
-                        <div className="space-y-6">
-                          <FormField
-                            control={form.control}
-                            name="name"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel className="text-brand-navy font-semibold">Full Name *</FormLabel>
-                                <FormControl>
-                                  <Input
-                                    placeholder="Your Name"
-                                    className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
-                                    autoComplete="section-contact name"
-                                    {...field}
-                                  />
-                                </FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
-                          
-                          <FormField
-                            control={form.control}
-                            name="phone"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel className="text-brand-navy font-semibold">Phone Number *</FormLabel>
-                                <FormControl>
-                                  <Input
-                                    type="tel"
-                                    placeholder="Mobile Number"
-                                    className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
-                                    autoComplete="section-contact tel"
-                                    {...field}
-                                  />
-                                </FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
-                          
-                          <FormField
-                            control={form.control}
-                            name="email"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel className="text-brand-navy font-semibold">Email *</FormLabel>
-                                <FormControl>
-                                  <Input
-                                    type="email"
-                                    placeholder="Email Address"
-                                    className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
-                                    autoComplete="section-contact email"
-                                    {...field}
-                                  />
-                                </FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
+                    <form className="space-y-6" autoComplete="on" onSubmit={form.handleSubmit(onSubmit)}>
+                      <FormField
+                        control={form.control}
+                        name="name"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-brand-navy font-semibold">Full Name *</FormLabel>
+                            <FormControl>
+                              <Input
+                                placeholder="Your Name"
+                                className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
+                                autoComplete="name"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      
+                      <FormField
+                        control={form.control}
+                        name="phone"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-brand-navy font-semibold">Phone Number *</FormLabel>
+                            <FormControl>
+                              <Input
+                                type="tel"
+                                placeholder="(206) 555-0123"
+                                className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
+                                autoComplete="tel"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-brand-navy font-semibold">Email *</FormLabel>
+                            <FormControl>
+                              <Input
+                                type="email"
+                                placeholder="you@example.com"
+                                className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
+                                autoComplete="email"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
 
-                          <FormField
-                            control={form.control}
-                            name="preferText"
-                            render={({ field }) => (
-                              <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
-                                <FormControl>
-                                  <Checkbox
-                                    checked={field.value}
-                                    onCheckedChange={field.onChange}
-                                  />
-                                </FormControl>
-                                <div className="space-y-1 leading-none">
-                                  <FormLabel className="text-sm font-semibold text-brand-navy">
-                                    Prefer text message follow-up
-                                  </FormLabel>
-                                  <p className="text-sm text-muted-foreground">
-                                    We'll text you instead of calling
-                                  </p>
-                                </div>
-                              </FormItem>
-                            )}
-                          />
+                      <FormField
+                        control={form.control}
+                        name="address"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-brand-navy font-semibold">Property Address</FormLabel>
+                            <FormControl>
+                              <Input
+                                placeholder="123 Main St, Kenmore, WA 98028"
+                                className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
+                                autoComplete="street-address"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
 
-                          <Button
-                            type="button"
-                            variant="cta-orange"
-                            className="w-full h-12 text-lg font-bold rounded-xl"
-                            onClick={validateStep1}
-                          >
-                            Next: Project Details
-                            <ArrowRight className="ml-2 w-5 h-5" />
-                          </Button>
+                      <FormField
+                        control={form.control}
+                        name="serviceNeeded"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-brand-navy font-semibold">Service Needed</FormLabel>
+                            <FormControl>
+                              <Input
+                                placeholder="e.g., Roof moss removal, Gutter cleaning"
+                                className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
 
-                          <p className="text-xs text-center text-muted-foreground">
-                            🔒 No spam. No obligation. We respect your privacy.
-                          </p>
-                        </div>
-                      </form>
-                    ) : (
-                      <form className="space-y-6" autoComplete="off" onSubmit={form.handleSubmit(onSubmit)}>
-                        {/* Step 2: Project Details */}
-                        <div className="space-y-6">
-                          <FormField
-                            control={form.control}
-                            name="address"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel className="text-brand-navy font-semibold">Property Address *</FormLabel>
-                                <FormControl>
-                                  <Input
-                                    placeholder="123 Main St, Kenmore, WA 98028"
-                                    className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
-                                    autoComplete="new-password"
-                                    data-lpignore="true"
-                                    data-form-type="other"
-                                    {...field}
-                                  />
-                                </FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
+                      <FormField
+                        control={form.control}
+                        name="preferText"
+                        render={({ field }) => (
+                          <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
+                            <FormControl>
+                              <Checkbox
+                                checked={field.value}
+                                onCheckedChange={field.onChange}
+                              />
+                            </FormControl>
+                            <div className="space-y-1 leading-none">
+                              <FormLabel className="text-sm font-semibold text-brand-navy">
+                                Prefer text message follow-up
+                              </FormLabel>
+                              <p className="text-sm text-muted-foreground">
+                                We'll text you instead of calling
+                              </p>
+                            </div>
+                          </FormItem>
+                        )}
+                      />
+                      
+                      <FormField
+                        control={form.control}
+                        name="details"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-brand-navy font-semibold">Additional Details *</FormLabel>
+                            <FormControl>
+                              <Textarea
+                                placeholder="Tell us about your project — e.g., 'Heavy moss on north side' or 'Link to photos: dropbox.com/'"
+                                rows={4}
+                                className="border-brand-navy/30 focus:border-brand-orange rounded-xl"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
 
-                          <FormField
-                            control={form.control}
-                            name="serviceNeeded"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel className="text-brand-navy font-semibold">Service Needed (Optional)</FormLabel>
-                                <FormControl>
-                                  <Input
-                                    placeholder="e.g., Roof moss removal, Gutter cleaning"
-                                    className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
-                                    autoComplete="new-password"
-                                    data-lpignore="true"
-                                    data-form-type="other"
-                                    {...field}
-                                  />
-                                </FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
-                          
-                          <FormField
-                            control={form.control}
-                            name="details"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel className="text-brand-navy font-semibold">Additional Details *</FormLabel>
-                                <FormControl>
-                                  <Textarea
-                                    placeholder="Add photos link or describe your needs (optional) — e.g., 'Heavy moss on north side' or 'Link to photos: dropbox.com/'"
-                                    rows={4}
-                                    className="border-brand-navy/30 focus:border-brand-orange rounded-xl"
-                                    autoComplete="new-password"
-                                    data-lpignore="true"
-                                    data-form-type="other"
-                                    {...field}
-                                  />
-                                </FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
+                      <Button
+                        type="submit"
+                        variant="cta-orange"
+                        className="w-full h-12 text-lg font-bold rounded-xl"
+                        disabled={isSubmitting}
+                      >
+                        {isSubmitting ? "Sending..." : "Get My Quote"}
+                      </Button>
 
-                          <div className="flex gap-3">
-                            <Button
-                              type="button"
-                              variant="outline"
-                              className="flex-1 h-12 border-brand-navy text-brand-navy hover:bg-brand-orange hover:text-white rounded-xl"
-                              onClick={() => setCurrentStep(1)}
-                            >
-                              <ArrowLeft className="mr-2 w-5 h-5" />
-                              Back
-                            </Button>
-
-                            <Button
-                              type="submit"
-                              variant="cta-orange"
-                              className="flex-[2] h-12 text-lg font-bold rounded-xl"
-                              disabled={isSubmitting}
-                            >
-                              {isSubmitting ? "Sending..." : "Get My Free Quote"}
-                            </Button>
-                          </div>
-
-                          <p className="text-sm text-center text-muted-foreground">
-                            Most quotes delivered same day • Free on-site visit when helpful
-                          </p>
-                        </div>
-                      </form>
-                    )}
+                      <p className="text-xs text-center text-muted-foreground">
+                        🔒 No spam. No obligation. We respect your privacy.
+                      </p>
+                    </form>
                   </Form>
                 </CardContent>
               </Card>
