@@ -48,7 +48,6 @@ export default defineConfig(({ mode }) => ({
         safari10: true,
       },
     },
-    cssMinify: 'lightningcss',
     chunkSizeWarningLimit: 600,
   },
   optimizeDeps: {
