@@ -23,74 +23,74 @@ const BeforeAfterSlider = () => {
   const beforeAfterProjects = [
     {
       id: 1,
-      title: "Metal Roof Deep Clean - Seattle",
+      title: "Metal Roof Cleaning - Seattle",
       location: "Seattle, WA",
       service: "Moss Removal + Roof Treatment",
       beforeImage: newRoofBefore1,
       afterImage: newRoofAfter1,
       beforeImageWebP: newRoofBefore1WebP,
       afterImageWebP: newRoofAfter1WebP,
-      beforeAlt: "Moss-covered metal roof before professional cleaning",
-      afterAlt: "Clean metal roof after moss removal treatment",
+      beforeAlt: "Seattle metal roof before moss removal treatment showing heavy moss growth and discoloration",
+      afterAlt: "Seattle metal roof after professional moss removal and treatment - clean and restored",
       completionDate: "December 2024"
     },
     {
       id: 2,
-      title: "Metal Roof & Skylight Restoration - Bellevue",
+      title: "Metal Roof & Skylight Cleaning - Bellevue",
       location: "Bellevue, WA", 
       service: "Metal Roof Cleaning + Skylight Clean",
       beforeImage: newMetalRoofBefore2,
       afterImage: newMetalRoofAfter2,
       beforeImageWebP: newMetalRoofBefore2WebP,
       afterImageWebP: newMetalRoofAfter2WebP,
-      beforeAlt: "Weathered metal roof with debris before professional cleaning",
-      afterAlt: "Restored metal roof and skylights after specialized cleaning treatment",
+      beforeAlt: "Bellevue metal roof with debris and weathering before professional cleaning",
+      afterAlt: "Bellevue metal roof and skylights after specialized cleaning - restored to original condition",
       completionDate: "December 2024"
     },
     {
       id: 3,
-      title: "Residential Patio Revival - Kirkland",
+      title: "Concrete Cleaning - Kirkland",
       location: "Kirkland, WA",
-      service: "Concrete Pressure Washing", 
+      service: "Concrete Surface Cleaning", 
       beforeImage: newPatioBefore3,
       afterImage: newPatioAfter3,
       beforeImageWebP: newPatioBefore3WebP,
       afterImageWebP: newPatioAfter3WebP,
-      beforeAlt: "Stained concrete patio with moss before pressure washing",
-      afterAlt: "Clean, restored concrete patio after pressure washing",
+      beforeAlt: "Kirkland concrete surface with moss and staining before cleaning",
+      afterAlt: "Kirkland concrete surface after professional cleaning - restored appearance",
       completionDate: "December 2024"
     },
     {
       id: 4,
-      title: "Extreme Concrete Patio Recovery - Lake Forest Park",
+      title: "Heavy Moss Concrete Cleaning - Lake Forest Park",
       location: "Lake Forest Park, WA",
-      service: "Extreme Pressure Washing",
+      service: "Concrete Surface Cleaning",
       beforeImage: "/lovable-uploads/30f25fb0-b625-4f3e-8328-3084ca71c36b.png",
       afterImage: "/lovable-uploads/0d94bc5e-3592-4aa4-877a-d124110a3d0e.png",
-      beforeAlt: "Severely neglected concrete patio with heavy moss and algae buildup",
-      afterAlt: "Dramatically restored concrete patio after intensive pressure washing",
+      beforeAlt: "Lake Forest Park concrete heavily covered with moss and algae before cleaning",
+      afterAlt: "Lake Forest Park concrete fully restored after intensive cleaning treatment",
       completionDate: "January 2025"
     },
     {
       id: 5,
-      title: "Asphalt Roof Moss Recovery - Seattle",
+      title: "Asphalt Roof Moss Treatment - Seattle",
       location: "Seattle, WA",
       service: "Roof Moss Removal + Treatment",
       beforeImage: "/lovable-uploads/7cdfb095-76e6-4419-b395-a8272819a23b.png",
       afterImage: "/lovable-uploads/cd85dd92-8acb-405d-a73c-44650e962bd8.png",
-      beforeAlt: "Asphalt roof heavily covered in moss and debris before professional cleaning",
-      afterAlt: "Clean asphalt roof after professional moss removal and moss protection treatment",
+      beforeAlt: "Seattle asphalt roof heavily covered in moss and debris before professional treatment",
+      afterAlt: "Seattle asphalt roof after professional moss removal and protection treatment - fully restored",
       completionDate: "January 2025"
     },
     {
       id: 6,
-      title: "Front Walkway Revival - Seattle",
+      title: "Concrete Walkway Cleaning - Seattle",
       location: "Seattle Area, WA",
-      service: "Concrete Walkway Pressure Washing",
+      service: "Concrete Surface Cleaning",
       beforeImage: "/lovable-uploads/61bfb1f1-0bee-423a-be7a-c49142b6fd6b.png",
       afterImage: "/lovable-uploads/7a0d1b2c-03a2-4054-8cf2-6bdc1dca519c.png",
-      beforeAlt: "Front walkway before pressure washing showing heavy moss and staining",
-      afterAlt: "Clean front walkway after professional pressure washing transformation",
+      beforeAlt: "Seattle walkway before cleaning showing heavy moss growth and staining",
+      afterAlt: "Seattle walkway after professional cleaning - clean and restored surface",
       completionDate: "January 2025"
     }
   ];
@@ -108,19 +108,19 @@ const BeforeAfterSlider = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 fade-up">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy mb-6">
-            Before & After: Real Exterior Cleaning Results
+            Real Seattle Roof Cleaning Results
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Authentic transformations from your neighbors across Kenmore, Bothell, and Kirkland. No stock photos, just real Seattle ProWash results.
+            Authentic transformations from neighbors across the Seattle Metro. No stock photos—just real results.
           </p>
         </div>
 
         <div className="max-w-6xl mx-auto">
           <div className="relative">
             {/* Project Slider */}
-            <div className="overflow-hidden rounded-2xl shadow-2xl">
+            <div className="overflow-hidden rounded-2xl shadow-2xl bg-white">
               <div 
-                className="flex transition-transform duration-500 ease-in-out"
+                className="flex transition-all duration-500 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
                 {beforeAfterProjects.map((project, index) => (

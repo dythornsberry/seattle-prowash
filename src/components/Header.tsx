@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 import { navigateToContact as goToContact, navigateToReviews as goToReviews, navigateToHome as goHome } from "@/lib/navigation";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
+import { useScrollShadow } from "./ScrollHeader";
 
 
 const Header = () => {
-  
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const hasScrolled = useScrollShadow();
 
   const phoneNumber = "206-752-6690";
   
@@ -34,7 +35,7 @@ const Header = () => {
   ];
 
   return (
-    <header id="site-header" className="fixed top-10 md:top-11 z-40 w-full bg-brand-navy/95 backdrop-blur-sm border-b border-brand-orange/20 shadow-md transition-shadow duration-300">
+    <header id="site-header" className={`fixed top-10 md:top-11 z-40 w-full bg-brand-navy/95 backdrop-blur-sm border-b border-brand-orange/20 transition-shadow duration-300 ${hasScrolled ? 'shadow-lg' : 'shadow-md'}`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-12 md:h-20">
           {/* Brand Text */}

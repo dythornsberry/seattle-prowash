@@ -17,8 +17,10 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img 
           src={heroImage}
-          alt="Professional roof cleaner washing roof in Seattle"
+          alt="Professional roof cleaning service in Seattle - moss removal and roof treatment"
           className="w-full h-full object-cover object-center"
+          width={1920}
+          height={1080}
           loading="eager"
           fetchPriority="high"
         />
