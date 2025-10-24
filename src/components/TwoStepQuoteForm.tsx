@@ -160,22 +160,18 @@ const TwoStepQuoteForm = () => {
               </Card>
 
               {/* Trust Badges with Icons */}
-              <div className="space-y-3">
+                <div className="space-y-3">
                 <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-brand-navy/10">
                   <Shield className="w-5 h-5 text-brand-orange flex-shrink-0" />
-                  <span className="text-sm font-semibold text-brand-navy">Licensed & Insured</span>
-                </div>
-                <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-brand-navy/10">
-                  <Clock className="w-5 h-5 text-brand-orange flex-shrink-0" />
-                  <span className="text-sm font-semibold text-brand-navy">Same-Day Estimates</span>
+                  <span className="text-sm font-semibold text-brand-navy">Licensed & Insured in Washington</span>
                 </div>
                 <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-brand-navy/10">
                   <CheckCircle className="w-5 h-5 text-brand-orange flex-shrink-0" />
-                  <span className="text-sm font-semibold text-brand-navy">12-Month Moss-Free Guarantee</span>
+                  <span className="text-sm font-semibold text-brand-navy">100% Satisfaction Guarantee</span>
                 </div>
                 <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-brand-navy/10">
                   <CheckCircle className="w-5 h-5 text-brand-orange flex-shrink-0" />
-                  <span className="text-sm font-semibold text-brand-navy">180+ Five-Star Reviews</span>
+                  <span className="text-sm font-semibold text-brand-navy">Serving Greater Seattle Metro</span>
                 </div>
               </div>
             </div>

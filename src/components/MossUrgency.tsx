@@ -10,41 +10,52 @@ const MossUrgency = () => {
             <div className="flex items-center justify-center gap-3 mb-4">
               <AlertTriangle className="w-8 h-8 text-brand-orange" />
               <h2 className="text-3xl md:text-4xl font-bold text-brand-navy">
-                Why Act Now
+                Don't Wait Until Moss Damages Your Roof
               </h2>
             </div>
             <p className="text-lg text-muted-foreground">
-              Moss damage compounds fast. Every season you wait increases the risk.
+              Each season of delay increases damage and repair costs.
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="fade-up border-brand-orange/20">
               <CardContent className="p-6">
-                <h3 className="font-bold text-brand-navy mb-2">Lifts Shingles</h3>
+                <h3 className="font-bold text-brand-navy text-lg mb-2">Lifts Shingles → Prevents Leaks</h3>
                 <p className="text-sm text-muted-foreground">
-                  Moss roots grow under shingles, breaking the seal and creating entry points for water.
+                  Moss roots break the seal and create water entry points.
                 </p>
               </CardContent>
             </Card>
             
             <Card className="fade-up border-brand-orange/20">
               <CardContent className="p-6">
-                <h3 className="font-bold text-brand-navy mb-2">Traps Moisture</h3>
+                <h3 className="font-bold text-brand-navy text-lg mb-2">Traps Moisture → Stops Rot</h3>
                 <p className="text-sm text-muted-foreground">
-                  Moss holds water against your roof like a sponge, accelerating decay and rot.
+                  Moss holds water like a sponge, accelerating decay.
                 </p>
               </CardContent>
             </Card>
             
             <Card className="fade-up border-brand-orange/20">
               <CardContent className="p-6">
-                <h3 className="font-bold text-brand-navy mb-2">Voids Warranties</h3>
+                <h3 className="font-bold text-brand-navy text-lg mb-2">Voids Warranties → Protects Home Value</h3>
                 <p className="text-sm text-muted-foreground">
-                  Most roofing warranties require regular maintenance. Neglected moss can void your coverage.
+                  Neglected moss can void roofing warranty coverage.
                 </p>
               </CardContent>
             </Card>
+          </div>
+          
+          <div className="text-center mt-8 fade-up">
+            <button
+              onClick={() => {
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-brand-orange hover:text-brand-orange/80 font-semibold text-lg transition-colors inline-flex items-center gap-2"
+            >
+              Request a Roof Check →
+            </button>
           </div>
         </div>
       </div>

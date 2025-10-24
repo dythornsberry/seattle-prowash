@@ -22,13 +22,10 @@ const Header = () => {
   const navigation: NavigationItem[] = [
     { name: "Home", href: "/", onClick: goHome },
     { name: "Roof Services", href: "/roof-cleaning" },
-    { name: "Gutter Cleaning", href: "/gutter-cleaning" },
     { 
       name: "Reviews", 
       href: "/reviews"
     },
-    { name: "FAQ", href: "/faq" },
-    { name: "About", href: "/about" },
     { 
       name: "Contact", 
       href: "/#contact",

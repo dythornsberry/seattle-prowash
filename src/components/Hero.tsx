@@ -42,12 +42,12 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="text-white font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight">
-            Seattle Roof Cleaning Specialists
+            Seattle Roof Cleaning & Moss Removal Specialists
           </h1>
 
           {/* Sub-headline */}
           <p className="text-xl md:text-2xl text-white/95 font-medium max-w-2xl mx-auto">
-            Safe, no-damage roof moss removal with a 12-month moss-free guarantee.
+            Guaranteed results. Fast, reliable, and locally trusted.
           </p>
 
           {/* Service Area */}
