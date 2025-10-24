@@ -21,15 +21,12 @@ const Header = () => {
   
   const navigation: NavigationItem[] = [
     { name: "Home", href: "/", onClick: goHome },
-    { name: "Roof Moss Treatment", href: "/roof-moss" },
-    { name: "Roof Cleaning", href: "/roof-cleaning" },
+    { name: "Roof Services", href: "/roof-cleaning" },
     { name: "Gutter Cleaning", href: "/gutter-cleaning" },
     { 
       name: "Reviews", 
       href: "/reviews"
     },
-    { name: "Service Area", href: "/service-areas" },
-    { name: "Gallery", href: "/gallery" },
     { name: "FAQ", href: "/faq" },
     { name: "About", href: "/about" },
     { 
@@ -83,7 +80,7 @@ const Header = () => {
               onClick={goToContact}
               className="font-bold text-base px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              Get Moss Removal Quote
+              Get Free Quote
             </Button>
             <Button 
               variant="outline" 
@@ -155,7 +152,7 @@ const Header = () => {
                     goToContact();
                   }}
                 >
-                  Get Moss Removal Quote
+                  Get Free Quote
                 </Button>
               </div>
             </nav>

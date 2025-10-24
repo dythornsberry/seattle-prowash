@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, ArrowRight, Star, Shield, Clock } from "lucide-react";
+import { Phone, ArrowRight, Star, Shield } from "lucide-react";
 import heroImage from "@/assets/hero-roof-cleaning.jpg";
 
 const Hero = () => {
@@ -42,33 +42,18 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="text-white font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight">
-            Roof Cleaning in Seattle Metro
+            Seattle Roof Cleaning Specialists
           </h1>
 
           {/* Sub-headline */}
           <p className="text-xl md:text-2xl text-white/95 font-medium max-w-2xl mx-auto">
-            Safe, no-damage roof moss removal & treatment for long-lasting, spotless roofs.
+            Safe, no-damage roof moss removal with a 12-month moss-free guarantee.
           </p>
 
-          {/* Local credibility - Proof line */}
+          {/* Service Area */}
           <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-            Serving Seattle, Kenmore, Bothell, Kirkland, Lynnwood, Snohomish & Shoreline • Licensed & Insured • Photos & Pricing Fast
+            Serving the Seattle Metro Area
           </p>
-
-          {/* Speed emphasis */}
-          <p className="text-lg md:text-xl text-brand-orange font-semibold flex items-center justify-center gap-2">
-            <Clock className="w-5 h-5" />
-            Most quotes delivered same day
-          </p>
-
-          {/* 12-Month Guarantee Badge */}
-          <div className="inline-flex items-center gap-3 bg-brand-orange backdrop-blur-sm text-white px-6 py-4 rounded-2xl shadow-xl">
-            <Shield className="w-8 h-8" />
-            <div className="text-left">
-              <div className="text-2xl font-bold font-heading">12-Month</div>
-              <div className="text-sm font-semibold">Moss-Free Guarantee</div>
-            </div>
-          </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
@@ -78,30 +63,18 @@ const Hero = () => {
               className="group text-lg px-8 py-6 w-full sm:w-auto"
               onClick={handleGetQuote}
             >
-              Get Free Quote Today
+              Get Free Quote
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
-            <Button 
-              size="xl" 
-              variant="prowash-outline"
-              className="text-lg px-8 py-6 w-full sm:w-auto"
-              onClick={handleCall}
+            <a 
+              href="tel:12067526690"
+              className="text-white/90 hover:text-white font-semibold text-lg flex items-center gap-2 transition-colors"
             >
-              <Phone className="mr-2 w-5 h-5" />
-              Call 206-752-6690
-            </Button>
+              <Phone className="w-5 h-5" />
+              206-752-6690
+            </a>
           </div>
-
-          {/* Trust Reassurance */}
-          <p className="text-white/90 text-sm md:text-base pt-4">
-            No spam, same-day estimate.
-          </p>
-
-          {/* Additional Trust Info */}
-          <p className="text-white/80 text-sm pt-2">
-            180+ Five-Star Reviews • Family-Owned • Serving Seattle Since 2022
-          </p>
         </div>
       </div>
 
