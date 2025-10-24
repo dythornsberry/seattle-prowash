@@ -140,6 +140,7 @@ const Index = () => {
         <main>
           <Hero />
           <MossUrgency />
+          <CostOfWaiting />
           <div className="bg-off-white">
             <ServicesPreview />
           </div>
