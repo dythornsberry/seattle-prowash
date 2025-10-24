@@ -80,16 +80,19 @@ const RoofCleaning = () => {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="fade-up">
                   <Badge variant="outline" className="text-brand-orange border-brand-orange mb-4">
-                    Roof Cleaning Specialists
+                    Roof & Moss Cleaning Specialists
                   </Badge>
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-                    Roof Cleaning in Kenmore, Bothell, and Kirkland
+                    Roof & Moss Cleaning in Kenmore, Bothell, and Kirkland
                   </h1>
                   <p className="text-xl md:text-2xl mb-6 text-white/90 font-semibold">
                     Safe moss removal and treatment. No pressure on shingles.
                   </p>
+                  <p className="text-lg mb-4 text-white/80">
+                    Most roof cleanings are actually leaf or debris removals, which we include with our premium gutter service. Full moss removal is available when your roof truly needs it.
+                  </p>
                   <p className="text-lg mb-8 text-white/80">
-                    We clean roofs the right way. Seattle ProWash uses a soft wash process that kills moss at the roots and protects your shingles. We bag light debris, flush gutters if needed, and show clear before and after photos.
+                    Seattle ProWash uses a soft wash process that kills moss at the roots and protects your shingles. We bag light debris, flush gutters if needed, and show clear before and after photos.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button 
@@ -129,13 +132,72 @@ const RoofCleaning = () => {
           </div>
         </section>
 
+        {/* Service Tiers Section */}
+        <section className="section-spacing bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-12 fade-up">
+                <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">
+                  Our Roof Service Levels
+                </h2>
+                <p className="text-lg text-muted-foreground">
+                  Choose the right level of care for your roof
+                </p>
+              </div>
+              <div className="grid md:grid-cols-3 gap-6">
+                <Card className="fade-up">
+                  <CardHeader>
+                    <CardTitle className="text-brand-navy">Roof Blow-Offs</CardTitle>
+                    <CardDescription>Light debris removal</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground mb-4">
+                      Quick removal of leaves, needles, and surface debris. Perfect for regular maintenance.
+                    </p>
+                    <p className="text-sm text-muted-foreground italic">
+                      Often included with premium gutter service
+                    </p>
+                  </CardContent>
+                </Card>
+                <Card className="fade-up border-brand-orange border-2">
+                  <CardHeader>
+                    <Badge className="bg-brand-orange mb-2 w-fit">Most Popular</Badge>
+                    <CardTitle className="text-brand-navy">Moss Prevention</CardTitle>
+                    <CardDescription>Maintenance treatment</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground mb-4">
+                      Soft-wash treatment to prevent moss growth. Ideal for roofs with early moss signs or shaded areas.
+                    </p>
+                    <p className="text-2xl font-bold text-brand-orange">Starting at $499</p>
+                  </CardContent>
+                </Card>
+                <Card className="fade-up">
+                  <CardHeader>
+                    <CardTitle className="text-brand-navy">Full Moss Removal</CardTitle>
+                    <CardDescription>Complete restoration</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground mb-4">
+                      Hand-removal of heavy moss buildup, followed by soft-wash treatment and preventative application.
+                    </p>
+                    <p className="text-sm text-muted-foreground italic">
+                      Custom pricing based on coverage
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* What We Do Section */}
         <section className="section-spacing">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12 fade-up">
                 <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-6">
-                  What We Do
+                  What's Included
                 </h2>
               </div>
               <div className="grid md:grid-cols-2 gap-8">
@@ -150,19 +212,22 @@ const RoofCleaning = () => {
                   </ul>
                 </div>
                 <div className="fade-up">
-                  <Card className="h-full">
+                  <Card className="h-full bg-gradient-to-br from-brand-orange/10 to-brand-orange/5 border-brand-orange/20">
                     <CardHeader>
-                      <CardTitle className="text-brand-navy">Pricing</CardTitle>
+                      <CardTitle className="text-brand-navy">Bundle & Save</CardTitle>
                       <CardDescription>
-                        Final price after quick photo or drive-by evaluation.
+                        Combine services for maximum value
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-2xl font-bold text-brand-orange mb-2">
-                        Starting at $499
+                      <p className="text-lg font-semibold text-brand-navy mb-2">
+                        Gutter Cleaning + Roof Blow-Off
+                      </p>
+                      <p className="text-3xl font-bold text-brand-orange mb-3">
+                        Save 15%
                       </p>
                       <p className="text-sm text-muted-foreground">
-                        For typical single-story homes
+                        Keep your entire exterior protection system in top shape
                       </p>
                     </CardContent>
                   </Card>

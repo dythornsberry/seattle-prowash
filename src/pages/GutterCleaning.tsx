@@ -94,10 +94,13 @@ const GutterCleaning = () => {
                     Gutter Cleaning and Downspout Flushing
                   </h1>
                   <p className="text-xl md:text-2xl mb-6 text-white/90 font-semibold">
-                    Clear flow. Clean edges. Photos included.
+                    Our main recurring service — keeps your home safe year-round
+                  </p>
+                  <p className="text-lg mb-4 text-white/80">
+                    With Seattle's heavy rain and mossy trees, we recommend 1–2 cleanings per year. Our gutter cleaning keeps water flowing properly, protecting your foundation and preventing costly damage.
                   </p>
                   <p className="text-lg mb-8 text-white/80">
-                    Keep water moving away from your home. We hand clean gutters, bag debris, and flush downspouts so you can see clean flow. We finish with photos so you know the job was done right.
+                    <strong>Ask about our Gutter Maintenance Plans</strong> for hassle-free scheduling and priority service.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button 
@@ -158,20 +161,30 @@ const GutterCleaning = () => {
                   </ul>
                 </div>
                 <div className="fade-up">
-                  <Card className="h-full">
+                  <Card className="h-full bg-gradient-to-br from-brand-orange/10 to-brand-orange/5 border-brand-orange/20">
                     <CardHeader>
-                      <CardTitle className="text-brand-navy">Pricing</CardTitle>
+                      <CardTitle className="text-brand-navy flex items-center gap-2">
+                        Bundle & Save 15%
+                        <Badge className="bg-bright-green">Popular</Badge>
+                      </CardTitle>
                       <CardDescription>
-                        Final price after quick photo or drive-by evaluation.
+                        Complete exterior protection
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-2xl font-bold text-brand-orange mb-2">
-                        Starting at $249
+                      <p className="text-lg font-semibold text-brand-navy mb-3">
+                        Gutter Cleaning + Roof Blow-Off
                       </p>
-                      <p className="text-sm text-muted-foreground">
-                        For typical residential homes
+                      <p className="text-muted-foreground mb-4">
+                        Clear leaves and debris from both your gutters and roof in one visit. Most efficient way to maintain your home's exterior.
                       </p>
+                      <div className="space-y-2 pt-4 border-t">
+                        <p className="text-sm font-semibold text-brand-navy">Standard Pricing:</p>
+                        <div className="text-sm text-muted-foreground space-y-1">
+                          <p>• Single-story: $199 - $299</p>
+                          <p>• Two-story: $299 - $499</p>
+                        </div>
+                      </div>
                     </CardContent>
                   </Card>
                 </div>

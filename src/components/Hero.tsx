@@ -45,12 +45,12 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="text-white font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight animate-fade-in">
-            Seattle Roof Cleaning & Moss Removal Specialists
+            Seattle's Trusted Gutter & Roof Maintenance Experts
           </h1>
 
           {/* Sub-headline */}
           <p className="text-xl md:text-2xl text-white/95 font-medium max-w-2xl mx-auto animate-fade-in">
-            Guaranteed results. Fast, reliable, and locally trusted.
+            We remove leaves, clear gutters, and stop moss before it starts.
           </p>
 
           {/* Service Area */}
