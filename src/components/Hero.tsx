@@ -23,6 +23,7 @@ const Hero = () => {
           height={1080}
           loading="eager"
           fetchPriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-brand-navy/55"></div>
       </div>

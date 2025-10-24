@@ -37,8 +37,8 @@ const ServicesPreview = () => {
             return (
               <Card key={index} className={`group hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 hover:border-brand-orange/50 fade-up ${isLarge ? 'md:col-span-3' : ''}`}>
                 <CardHeader className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-orange/10 rounded-full mb-4 mx-auto group-hover:bg-brand-orange/20 transition-colors">
-                    <IconComponent className="w-8 h-8 text-brand-orange" />
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-brand-orange/10 rounded-full mb-4 mx-auto group-hover:bg-brand-orange/20 transition-colors">
+                    <IconComponent className="w-10 h-10 text-brand-orange" />
                   </div>
                   <CardTitle className="text-xl font-bold text-brand-blue">
                     {service.title}

@@ -27,12 +27,13 @@ const CostOfWaiting = () => {
                 <div className="mb-6">
                   <img
                     src="/lovable-uploads/8cb3c10f-c05a-4727-93c9-247d82982b7a.png"
-                    alt="Damaged, mossy roof showing potential problems"
+                    alt="Damaged moss-covered roof showing years of neglect and deterioration"
                     className="w-full h-48 object-cover rounded-lg grayscale opacity-75"
                     width="400"
                     height="192"
                     loading="lazy"
                   />
+                  <p className="text-sm text-gray-600 mt-2 italic">Years of moss damage and neglect</p>
                 </div>
                 
                 <ul className="space-y-3">
@@ -67,12 +68,13 @@ const CostOfWaiting = () => {
                 <div className="mb-6">
                   <img
                     src="/lovable-uploads/0189ddf5-dfd1-4746-b6b4-7b665e561954.png"
-                    alt="Clean, pristine roof after professional cleaning"
+                    alt="Clean, professionally maintained roof after expert treatment and moss removal"
                     className="w-full h-48 object-cover rounded-lg object-[center_80%]"
                     width="400"
                     height="192"
                     loading="lazy"
                   />
+                  <p className="text-sm text-gray-600 mt-2 italic">Professional cleaning results that last</p>
                 </div>
                 
                 <ul className="space-y-3 mb-6">

@@ -321,7 +321,7 @@ const TwoStepQuoteForm = () => {
                         className="w-full h-12 text-lg font-bold rounded-xl"
                         disabled={isSubmitting}
                       >
-                        {isSubmitting ? "Sending..." : "Get My Free Quote →"}
+                        {isSubmitting ? "Sending..." : "Get My Free Quote"}
                       </Button>
 
                       <p className="text-xs text-center text-muted-foreground">
