@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, Star, Shield, Clock } from "lucide-react";
-import heroImage from "@/assets/hero-gray-house.webp";
+import heroImage from "@/assets/hero-roof-cleaning.webp";
 
 const Hero = () => {
   const handleGetQuote = () => {
@@ -17,12 +17,12 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img 
           src={heroImage}
-          alt="Professional Seattle roof cleaning services - Clean residential home exterior showcasing ProWash quality work"
+          alt="Professional roof moss removal and treatment service - ProWash technician applying safe moss treatment to Seattle area roof"
           className="w-full h-full object-cover object-center"
           loading="eager"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-brand-navy/40"></div>
+        <div className="absolute inset-0 bg-brand-navy/50"></div>
       </div>
 
       {/* Hero Content */}
