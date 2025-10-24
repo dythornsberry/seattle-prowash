@@ -22,7 +22,7 @@ const Hero = () => {
           loading="eager"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-brand-navy/60"></div>
+        <div className="absolute inset-0 bg-brand-navy/55"></div>
       </div>
 
       {/* Hero Content */}
@@ -41,12 +41,12 @@ const Hero = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-white font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight">
+          <h1 className="text-white font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight animate-fade-in">
             Seattle Roof Cleaning & Moss Removal Specialists
           </h1>
 
           {/* Sub-headline */}
-          <p className="text-xl md:text-2xl text-white/95 font-medium max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-white/95 font-medium max-w-2xl mx-auto animate-fade-in">
             Guaranteed results. Fast, reliable, and locally trusted.
           </p>
 
@@ -56,7 +56,7 @@ const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4 animate-fade-in">
             <Button 
               size="xl" 
               variant="cta-orange"

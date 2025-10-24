@@ -9,7 +9,7 @@ interface TestimonialCardProps {
 
 const TestimonialCard = ({ quote, author, service }: TestimonialCardProps) => {
   return (
-    <Card className="bg-white border-brand-orange/10 shadow-lg">
+    <Card className="bg-white border-brand-orange/10 shadow-lg transition-transform duration-200 hover:-translate-y-1">
       <CardContent className="p-6">
         <div className="flex gap-1 mb-4">
           {[...Array(5)].map((_, i) => (

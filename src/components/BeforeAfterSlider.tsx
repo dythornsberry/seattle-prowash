@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, Expand, ExternalLink } from "lucide-react";
-import OptimizedImage from "./OptimizedImage";
+import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import InteractiveBeforeAfter from "./InteractiveBeforeAfter";
 // WebP images with JPG fallbacks
 import newRoofBefore1WebP from "@/assets/new-roof-before-1.webp";
 import newRoofAfter1WebP from "@/assets/new-roof-after-1.webp";
@@ -19,7 +19,6 @@ import newPatioAfter3 from "@/assets/new-patio-after-3.jpg";
 
 const BeforeAfterSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   
   const beforeAfterProjects = [
     {
@@ -138,71 +137,21 @@ const BeforeAfterSlider = () => {
                         </span>
                       </div>
 
-                      {/* Before/After Images */}
-                      <div className="grid md:grid-cols-2 gap-8">
-                        {/* Before */}
-                        <div className="space-y-4">
-                          <div className="flex items-center justify-center gap-2">
-                            <h4 className="text-lg font-semibold text-brand-navy">Before</h4>
-                            <span className="text-xs text-red-600 bg-red-50 px-2 py-1 rounded-full font-medium">Problem</span>
-                          </div>
-                          <div 
-                            className="relative rounded-xl overflow-hidden shadow-lg cursor-pointer group transition-transform hover:scale-[1.02]"
-                            onClick={() => setSelectedImage(project.beforeImage)}
-                          >
-                            <OptimizedImage
-                              src={project.beforeImage}
-                              srcWebP={project.beforeImageWebP}
-                              alt={project.beforeAlt}
-                              className="aspect-[4/3] w-full object-cover"
-                              width={600}
-                              height={450}
-                              loading="lazy"
-                            />
-                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
-                              <Expand className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
-                            </div>
-                          </div>
-                          <p className="text-sm text-muted-foreground text-center px-2">
-                            {project.service.toLowerCase().includes('roof') ? `Roof moss treatment in ${project.location.split(',')[0]} – before moss removal` :
-                             project.service.toLowerCase().includes('pressure') ? `Pressure washing in ${project.location.split(',')[0]} – before cleaning` :
-                             `House washing in ${project.location.split(',')[0]} – before treatment`}
-                          </p>
-                        </div>
-
-                        {/* After */}
-                        <div className="space-y-4">
-                          <div className="flex items-center justify-center gap-2">
-                            <h4 className="text-lg font-semibold text-brand-navy">After</h4>
-                            <span className="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full font-medium">Solved</span>
-                          </div>
-                          <div 
-                            className="relative rounded-xl overflow-hidden shadow-lg cursor-pointer group transition-transform hover:scale-[1.02]"
-                            onClick={() => setSelectedImage(project.afterImage)}
-                          >
-                            <OptimizedImage
-                              src={project.afterImage}
-                              srcWebP={project.afterImageWebP}
-                              alt={project.afterAlt}
-                              className="aspect-[4/3] w-full object-cover"
-                              width={600}
-                              height={450}
-                              loading="lazy"
-                            />
-                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
-                              <Expand className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
-                            </div>
-                            {/* Completion Date Badge */}
-                            <div className="absolute top-4 right-4 bg-brand-yellow text-brand-navy px-3 py-1 rounded-full text-sm font-bold shadow-lg">
-                              {project.completionDate}
-                            </div>
-                          </div>
-                          <p className="text-sm text-muted-foreground text-center px-2">
-                            {project.service.toLowerCase().includes('roof') ? `Roof moss treatment in ${project.location.split(',')[0]} – after moss removal` :
-                             project.service.toLowerCase().includes('pressure') ? `Pressure washing in ${project.location.split(',')[0]} – after cleaning` :
-                             `House washing in ${project.location.split(',')[0]} – after treatment`}
-                          </p>
-                        </div>
+                      {/* Interactive Before/After Comparison */}
+                      <InteractiveBeforeAfter
+                        beforeImage={project.beforeImage}
+                        afterImage={project.afterImage}
+                        beforeImageWebP={project.beforeImageWebP}
+                        afterImageWebP={project.afterImageWebP}
+                        beforeAlt={project.beforeAlt}
+                        afterAlt={project.afterAlt}
+                      />
+                      
+                      {/* Completion Date */}
+                      <div className="text-center mt-4">
+                        <span className="inline-block bg-brand-yellow text-brand-navy px-3 py-1 rounded-full text-sm font-bold">
+                          {project.completionDate}
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -278,29 +227,6 @@ const BeforeAfterSlider = () => {
         </div>
       </div>
 
-      {/* Image Modal */}
-      {selectedImage && (
-        <div 
-          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <div className="relative max-w-4xl max-h-[90vh] w-full">
-            <img
-              src={selectedImage}
-              alt="Expanded view"
-              className="w-full h-full object-contain rounded-lg"
-            />
-            <Button
-              variant="outline"
-              size="icon"
-              className="absolute top-4 right-4 bg-white/90 hover:bg-white"
-              onClick={() => setSelectedImage(null)}
-            >
-              <ChevronRight className="w-5 h-5 rotate-45 transform" />
-            </Button>
-          </div>
-        </div>
-      )}
     </section>
   );
 };

@@ -191,9 +191,14 @@ const Footer = () => {
       <div className="border-t border-white/20 py-6">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-white/60">
-              © {currentYear} Seattle ProWash. All rights reserved.
-            </p>
+            <div className="text-center md:text-left">
+              <p className="text-sm text-white/80 mb-1 font-medium">
+                Serving the Greater Seattle Area — Licensed & Insured
+              </p>
+              <p className="text-sm text-white/60">
+                © {currentYear} Seattle ProWash. All rights reserved.
+              </p>
+            </div>
             <div className="flex gap-6 text-sm">
               <Link to="/faq" className="text-white/60 hover:text-white transition-colors">
                 FAQ
