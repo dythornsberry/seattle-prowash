@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, Star, Shield } from "lucide-react";
 import heroImage from "@/assets/hero-roof-cleaning.jpg";
-import heroImageWebP from "@/assets/hero-roof-cleaning.webp";
 
 const Hero = () => {
   const handleGetQuote = () => {
@@ -16,19 +15,16 @@ const Hero = () => {
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       {/* Hero Background with Navy Overlay */}
       <div className="absolute inset-0 z-0">
-        <picture>
-          <source srcSet={heroImageWebP} type="image/webp" />
-          <img 
-            src={heroImage}
-            alt="Professional roof cleaning service in Seattle - moss removal and roof treatment"
-            className="w-full h-full object-cover object-center"
-            width={1920}
-            height={1080}
-            loading="eager"
-            fetchPriority="high"
-            decoding="async"
-          />
-        </picture>
+        <img 
+          src={heroImage}
+          alt="Professional roof cleaning service in Seattle - moss removal and roof treatment"
+          className="w-full h-full object-cover object-center"
+          width={1920}
+          height={1080}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+        />
         <div className="absolute inset-0 bg-brand-navy/55"></div>
       </div>
 
