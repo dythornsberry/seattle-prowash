@@ -124,7 +124,9 @@ const BeforeAfterSlider = () => {
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
                 {beforeAfterProjects.map((project, index) => (
-                  <div key={project.id} className="w-full flex-shrink-0">
+                  <div key={project.id} className="w-full flex-shrink-0 fade-up gallery-item"
+                    style={{ transitionDelay: `${index * 100}ms` }}
+                  >
                     <div className="bg-brand-white p-8">
                       {/* Project Info */}
                       <div className="text-center mb-8">

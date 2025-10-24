@@ -24,6 +24,14 @@ import IntroSection from "@/components/IntroSection";
 import GutterAddonSection from "@/components/GutterAddonSection";
 
 const Index = () => {
+  // Enable smooth scrolling globally
+  useEffect(() => {
+    document.documentElement.style.scrollBehavior = 'smooth';
+    return () => {
+      document.documentElement.style.scrollBehavior = '';
+    };
+  }, []);
+
   // Scroll to top and set up fade-up animations
   useEffect(() => {
     // Handle hash navigation or scroll to top
@@ -52,9 +60,15 @@ const Index = () => {
       rootMargin: '0px 0px -50px 0px'
     });
 
-    // Observe all fade-up elements
+    // Observe all fade-up elements with staggered delay
     const fadeElements = document.querySelectorAll('.fade-up');
-    fadeElements.forEach((el) => observer.observe(el));
+    fadeElements.forEach((el, index) => {
+      // Add staggered delay for gallery items
+      if (el.classList.contains('gallery-item') || el.closest('[class*="grid"]')) {
+        (el as HTMLElement).style.transitionDelay = `${index * 100}ms`;
+      }
+      observer.observe(el);
+    });
 
     return () => {
       fadeElements.forEach((el) => observer.unobserve(el));

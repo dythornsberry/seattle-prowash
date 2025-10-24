@@ -23,6 +23,7 @@ const InteractiveBeforeAfter = ({
   const [hasAutoPlayed, setHasAutoPlayed] = useState(false);
   const [showHint, setShowHint] = useState(true);
   const [isUserInteracting, setIsUserInteracting] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
 
@@ -148,16 +149,24 @@ const InteractiveBeforeAfter = ({
       style={{ touchAction: 'none' }}
     >
       {/* After Image (Background) */}
-      <picture>
-        {afterImageWebP && <source srcSet={afterImageWebP} type="image/webp" />}
-        <img
-          src={afterImage}
-          alt={afterAlt}
-          className="absolute inset-0 w-full h-full object-cover"
-          loading="lazy"
-          decoding="async"
-        />
-      </picture>
+      <div className={`absolute inset-0 transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+        <picture>
+          {afterImageWebP && <source srcSet={afterImageWebP} type="image/webp" />}
+          <img
+            src={afterImage}
+            alt={afterAlt}
+            className="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
+            onLoad={() => setIsLoaded(true)}
+          />
+        </picture>
+      </div>
+
+      {/* Blur placeholder */}
+      {!isLoaded && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse" />
+      )}
 
       {/* Before Image (Clipped) */}
       <div
@@ -191,7 +200,7 @@ const InteractiveBeforeAfter = ({
         className="absolute top-0 bottom-0 w-1 bg-white shadow-lg z-20 cursor-ew-resize"
         style={{ left: `${sliderPosition}%` }}
       >
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-xl border-4 border-gray-300 flex items-center justify-center cursor-ew-resize">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-xl border-4 border-gray-300 flex items-center justify-center cursor-ew-resize transition-shadow duration-200 hover:shadow-2xl hover:border-brand-orange">
           <div className="flex gap-1">
             <div className="w-0.5 h-5 bg-gray-600"></div>
             <div className="w-0.5 h-5 bg-gray-600"></div>
@@ -201,8 +210,9 @@ const InteractiveBeforeAfter = ({
 
       {/* Drag Hint */}
       {showHint && (
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/75 text-white px-4 py-2 rounded-full text-sm font-medium animate-pulse z-30">
-          ← Drag to compare →
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/75 text-white px-4 py-2 rounded-full text-sm font-medium z-30 animate-[pulse_2s_ease-in-out_infinite]">
+          <span className="hidden sm:inline">← Drag to compare →</span>
+          <span className="sm:hidden">Tap or drag ↔</span>
         </div>
       )}
     </div>
