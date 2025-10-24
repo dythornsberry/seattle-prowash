@@ -23,6 +23,7 @@ const Header = () => {
   const navigation: NavigationItem[] = [
     { name: "Home", href: "/", onClick: goHome },
     { name: "Roof Services", href: "/roof-cleaning" },
+    { name: "Gallery", href: "/gallery" },
     { 
       name: "Reviews", 
       href: "/reviews"
