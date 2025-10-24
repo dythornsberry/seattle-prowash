@@ -44,8 +44,8 @@ const BlurImage = ({
         loading={loading}
         fetchPriority={fetchPriority}
         decoding="async"
-        className={`w-full h-full object-cover transition-all duration-300 ease-out ${
-          isLoaded ? 'blur-0 scale-100' : 'blur-xl scale-105'
+        className={`w-full h-full object-cover transition-all duration-200 ease-out ${
+          isLoaded ? 'blur-0 scale-100' : 'blur-lg scale-102'
         }`}
         style={{
           aspectRatio: width && height ? `${width}/${height}` : undefined

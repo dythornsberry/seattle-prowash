@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, Star, Shield } from "lucide-react";
-import heroImage from "@/assets/hero-roof-cleaning.jpg";
+import heroImage from "@/assets/hero-roof-cleaning.webp";
 
 const Hero = () => {
   const handleGetQuote = () => {
