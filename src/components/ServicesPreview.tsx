@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Droplet, Home, Zap, Car } from "lucide-react";
+import { Droplet, Car } from "lucide-react";
 
 const ServicesPreview = () => {
   const services = [
@@ -18,13 +18,6 @@ const ServicesPreview = () => {
       description: "Complete hand cleaning with downspout flush.",
       link: "/gutter-cleaning",
       size: "small"
-    },
-    {
-      icon: Home,
-      title: "Pressure Washing",
-      description: "Driveways, patios, and exterior surfaces.",
-      link: "/services",
-      size: "small"
     }
   ];
 
@@ -33,11 +26,11 @@ const ServicesPreview = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 fade-up">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-blue mb-6">
-            Our Roof & Exterior Services
+            Our Roof & Gutter Services
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             const isLarge = service.size === "large";
