@@ -22,6 +22,7 @@ import Footer from "@/components/Footer";
 import IntroSection from "@/components/IntroSection";
 import GutterAddonSection from "@/components/GutterAddonSection";
 import UnifiedContactBar from "@/components/UnifiedContactBar";
+import ServiceAreaMap from "@/components/ServiceAreaMap";
 
 const Index = () => {
   // Enable smooth scrolling globally
@@ -123,6 +124,7 @@ const Index = () => {
           </div>
           <GoogleReviewsCarousel />
           <HomeFAQ />
+          <ServiceAreaMap />
           <div id="contact" className="bg-off-white">
             <TwoStepQuoteForm />
           </div>
