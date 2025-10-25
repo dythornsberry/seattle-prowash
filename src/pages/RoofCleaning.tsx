@@ -47,26 +47,6 @@ const RoofCleaning = () => {
     };
   }, []);
 
-  const processSteps = [
-    "Send a few photos or request a quick site visit",
-    "We give a fast, firm quote",
-    "We clean the roof and provide photos. Easy pay when finished"
-  ];
-
-  const whatWeDo = [
-    "Hand-remove moss and debris to restore your home's curb appeal",
-    "Soft-wash treatment protects shingles while eliminating moss at the roots",
-    "Preventative application slows future moss and algae growth",
-    "Clean up debris around your property—leave no mess behind",
-    "Optional gutter flush ensures water flows freely away from your foundation"
-  ];
-
-  const whyChooseUs = [
-    "No high pressure on roofs",
-    "Trained, insured technicians with proper safety gear",
-    "Photos on every job",
-    "Honest advice and maintenance options"
-  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -83,16 +63,10 @@ const RoofCleaning = () => {
                     Roof & Moss Cleaning Specialists
                   </Badge>
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-                    Roof & Moss Cleaning in Kenmore, Bothell, and Kirkland
+                    Roof & Moss Cleaning Specialists
                   </h1>
-                  <p className="text-xl md:text-2xl mb-6 text-white/90 font-semibold">
-                    Safe moss removal and treatment. No pressure on shingles.
-                  </p>
-                  <p className="text-lg mb-4 text-white/80">
-                    Most roof cleanings are actually leaf or debris removals, which we include with our premium gutter service. Full moss removal is available when your roof truly needs it.
-                  </p>
-                  <p className="text-lg mb-8 text-white/80">
-                    Seattle ProWash uses a soft wash process that kills moss at the roots and protects your shingles. We bag light debris, flush gutters if needed, and show clear before and after photos.
+                  <p className="text-xl md:text-2xl mb-8 text-white/90">
+                    We use a gentle soft-wash process to remove debris and moss from roofs and gutters, protect your shingles and keep moss away for 12 months—guaranteed.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button 
@@ -132,58 +106,147 @@ const RoofCleaning = () => {
           </div>
         </section>
 
-        {/* Service Tiers Section */}
+        {/* Benefits Overview */}
+        <section className="section-spacing">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto fade-up">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-brand-orange mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-brand-navy mb-1">No Pressure on Roofs</h3>
+                    <p className="text-sm text-muted-foreground">Gentle soft-wash protects your shingles</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-brand-orange mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-brand-navy mb-1">Trained & Insured</h3>
+                    <p className="text-sm text-muted-foreground">Licensed technicians with proper safety gear</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-brand-orange mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-brand-navy mb-1">Same-Week Scheduling</h3>
+                    <p className="text-sm text-muted-foreground">Fast turnaround for urgent needs</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-brand-orange mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-brand-navy mb-1">Eco-Friendly Treatment</h3>
+                    <p className="text-sm text-muted-foreground">Safe for plants, pets, and your property</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-brand-orange mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-brand-navy mb-1">Before & After Photos</h3>
+                    <p className="text-sm text-muted-foreground">See exactly what we accomplished</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-brand-orange mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-brand-navy mb-1">12-Month Guarantee</h3>
+                    <p className="text-sm text-muted-foreground">Moss-free protection for a full year</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Services - Three Clear Options */}
         <section className="section-spacing bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-12 fade-up">
                 <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">
-                  Our Roof Service Levels
+                  Our Services
                 </h2>
                 <p className="text-lg text-muted-foreground">
-                  Choose the right level of care for your roof
+                  Three clear options to keep your roof and gutters in top shape
                 </p>
               </div>
               <div className="grid md:grid-cols-3 gap-6">
                 <Card className="fade-up">
                   <CardHeader>
-                    <CardTitle className="text-brand-navy">Roof Blow-Offs</CardTitle>
-                    <CardDescription>Light debris removal</CardDescription>
+                    <CardTitle className="text-brand-navy">Gutter Cleaning Only</CardTitle>
+                    <CardDescription>Perfect for clear roofs</CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">
-                      Quick removal of leaves, needles, and surface debris. Perfect for regular maintenance.
+                  <CardContent className="space-y-4">
+                    <p className="text-muted-foreground">
+                      Remove leaves and debris from gutters and downspouts. Ideal for homes where the roof itself is already clear.
                     </p>
-                    <p className="text-sm text-muted-foreground italic">
-                      Often included with premium gutter service
-                    </p>
+                    <Button 
+                      variant="outline" 
+                      className="w-full"
+                      onClick={() => {
+                        const contactElement = document.getElementById('contact');
+                        if (contactElement) {
+                          contactElement.scrollIntoView({ behavior: 'smooth' });
+                        } else {
+                          window.location.href = '/#contact';
+                        }
+                      }}
+                    >
+                      Get Free Quote
+                    </Button>
                   </CardContent>
                 </Card>
-                <Card className="fade-up border-brand-orange border-2">
-                  <CardHeader>
-                    <Badge className="bg-brand-orange mb-2 w-fit">Most Popular</Badge>
-                    <CardTitle className="text-brand-navy">Moss Prevention</CardTitle>
-                    <CardDescription>Maintenance treatment</CardDescription>
+                <Card className="fade-up border-brand-orange border-2 relative">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                    <Badge className="bg-brand-orange">Most Popular • Save 15%</Badge>
+                  </div>
+                  <CardHeader className="pt-6">
+                    <CardTitle className="text-brand-navy">Roof & Gutter Cleaning</CardTitle>
+                    <CardDescription>Complete exterior protection</CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">
-                      Soft-wash treatment to prevent moss growth. Ideal for roofs with early moss signs or shaded areas.
+                  <CardContent className="space-y-4">
+                    <p className="text-muted-foreground">
+                      Combines gutter cleaning with roof blow-off and soft debris removal (leaves, needles). Our most common package—keeps your entire system in top shape.
                     </p>
-                    <p className="text-2xl font-bold text-brand-orange">Starting at $499</p>
+                    <Button 
+                      variant="prowash-primary" 
+                      className="w-full"
+                      onClick={() => {
+                        const contactElement = document.getElementById('contact');
+                        if (contactElement) {
+                          contactElement.scrollIntoView({ behavior: 'smooth' });
+                        } else {
+                          window.location.href = '/#contact';
+                        }
+                      }}
+                    >
+                      Get Free Quote
+                    </Button>
                   </CardContent>
                 </Card>
                 <Card className="fade-up">
                   <CardHeader>
-                    <CardTitle className="text-brand-navy">Full Moss Removal</CardTitle>
+                    <CardTitle className="text-brand-navy">Roof & Gutter + Moss Treatment</CardTitle>
                     <CardDescription>Complete restoration</CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">
-                      Hand-removal of heavy moss buildup, followed by soft-wash treatment and preventative application.
+                  <CardContent className="space-y-4">
+                    <p className="text-muted-foreground">
+                      Hand-removal of heavy moss, soft-wash treatment, and preventative application. Includes gutter cleaning. Custom pricing based on moss coverage.
                     </p>
-                    <p className="text-sm text-muted-foreground italic">
-                      Custom pricing based on coverage
-                    </p>
+                    <Button 
+                      variant="outline" 
+                      className="w-full"
+                      onClick={() => {
+                        const contactElement = document.getElementById('contact');
+                        if (contactElement) {
+                          contactElement.scrollIntoView({ behavior: 'smooth' });
+                        } else {
+                          window.location.href = '/#contact';
+                        }
+                      }}
+                    >
+                      Get Free Quote
+                    </Button>
                   </CardContent>
                 </Card>
               </div>
@@ -191,97 +254,98 @@ const RoofCleaning = () => {
           </div>
         </section>
 
-        {/* What We Do Section */}
+
+        {/* How It Works Section */}
         <section className="section-spacing">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12 fade-up">
-                <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-6">
-                  What's Included
-                </h2>
-              </div>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="fade-up">
-                  <ul className="space-y-4">
-                    {whatWeDo.map((item, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="fade-up">
-                  <Card className="h-full bg-gradient-to-br from-brand-orange/10 to-brand-orange/5 border-brand-orange/20">
-                    <CardHeader>
-                      <CardTitle className="text-brand-navy">Bundle & Save</CardTitle>
-                      <CardDescription>
-                        Combine services for maximum value
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-lg font-semibold text-brand-navy mb-2">
-                        Gutter Cleaning + Roof Blow-Off
-                      </p>
-                      <p className="text-3xl font-bold text-brand-orange mb-3">
-                        Save 15%
-                      </p>
-                      <p className="text-sm text-muted-foreground">
-                        Keep your entire exterior protection system in top shape
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* How It Works Section */}
-        <section className="section-spacing bg-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-12 fade-up">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-12 text-center fade-up">
                 How It Works
               </h2>
-              <div className="grid md:grid-cols-3 gap-8">
-                {processSteps.map((step, index) => (
-                  <div key={index} className="fade-up">
-                    <div className="bg-brand-orange text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                      {index + 1}
-                    </div>
-                    <p className="text-muted-foreground">{step}</p>
+              <div className="grid md:grid-cols-3 gap-8 text-center">
+                <div className="fade-up">
+                  <div className="bg-brand-orange text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                    1
                   </div>
-                ))}
+                  <h3 className="font-semibold text-brand-navy mb-2">Inspect</h3>
+                  <p className="text-muted-foreground">We assess your roof and gutters to recommend the right service level.</p>
+                </div>
+                <div className="fade-up">
+                  <div className="bg-brand-orange text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                    2
+                  </div>
+                  <h3 className="font-semibold text-brand-navy mb-2">Treat</h3>
+                  <p className="text-muted-foreground">Gentle soft-wash removes moss and debris without damaging shingles.</p>
+                </div>
+                <div className="fade-up">
+                  <div className="bg-brand-orange text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                    3
+                  </div>
+                  <h3 className="font-semibold text-brand-navy mb-2">Protect</h3>
+                  <p className="text-muted-foreground">Preventative treatment keeps moss away for 12 months—guaranteed.</p>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Why Choose Us Section */}
-        <section className="section-spacing">
+        <section className="section-spacing bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-12 text-center fade-up">
-                Why Choose Us
+                Why Choose Seattle ProWash
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
-                {whyChooseUs.map((reason, index) => (
-                  <div key={index} className="flex items-start gap-3 fade-up">
-                    <div className="w-2 h-2 bg-brand-orange rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">{reason}</span>
+                <div className="flex items-start gap-3 fade-up">
+                  <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-brand-navy mb-1">No High Pressure on Roofs</h3>
+                    <p className="text-sm text-muted-foreground">Our soft-wash method is safe for all shingle types</p>
                   </div>
-                ))}
+                </div>
+                <div className="flex items-start gap-3 fade-up">
+                  <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-brand-navy mb-1">Trained & Insured Technicians</h3>
+                    <p className="text-sm text-muted-foreground">Licensed professionals with proper safety equipment</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 fade-up">
+                  <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-brand-navy mb-1">Photos on Every Job</h3>
+                    <p className="text-sm text-muted-foreground">Clear before-and-after documentation of all work</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 fade-up">
+                  <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-brand-navy mb-1">Honest Advice & Maintenance</h3>
+                    <p className="text-sm text-muted-foreground">We recommend only what your roof truly needs</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 fade-up">
+                  <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-brand-navy mb-1">12-Month Moss-Free Guarantee</h3>
+                    <p className="text-sm text-muted-foreground">Your roof stays protected for a full year</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 fade-up">
+                  <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-brand-navy mb-1">Same-Week Availability</h3>
+                    <p className="text-sm text-muted-foreground">Fast scheduling when you need service quickly</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Process Section */}
-        <ProcessSection />
-
         {/* Testimonials Section */}
-        <section className="section-spacing bg-muted/30">
+        <section className="section-spacing">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-12 text-center fade-up">
@@ -299,20 +363,6 @@ const RoofCleaning = () => {
                   service="Pergola Roof Cleaning"
                 />
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Care After Cleaning Section */}
-        <section className="section-spacing">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center fade-up">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-6">
-                Care After Cleaning
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Killed moss dries out and weathers off over time. Do not pressure wash or scrape shingles. Ask about maintenance treatment for shaded lots.
-              </p>
             </div>
           </div>
         </section>
@@ -352,17 +402,9 @@ const RoofCleaning = () => {
                   Call 206-752-6690
                 </Button>
               </div>
-              <div className="space-y-2">
-                <p className="text-white/70 text-sm">
-                  Need gutter cleaning too? <a href="/gutter-cleaning" className="text-brand-orange hover:underline">Click here</a>
-                </p>
-                <p className="text-white/70 text-sm">
-                  <a href="#faq" className="text-brand-orange hover:underline">Got questions? Jump to FAQs</a>
-                </p>
-                <p className="text-white/70 text-sm">
-                  Have questions? <a href="/faq" className="text-brand-orange hover:underline">Visit our FAQ page</a>
-                </p>
-              </div>
+              <p className="text-white/70 text-sm mt-4">
+                Have questions? <a href="/faq" className="text-brand-orange hover:underline">Visit our FAQ page</a>
+              </p>
             </div>
           </div>
         </section>
