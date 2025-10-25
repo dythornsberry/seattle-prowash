@@ -17,7 +17,7 @@ import GoogleReviewsCarousel from "@/components/GoogleReviewsCarousel";
 import HomeFAQ from "@/components/HomeFAQ";
 import SeasonalPromotions from "@/components/SeasonalPromotions";
 import MossUrgency from "@/components/MossUrgency";
-import FloatingMossCTA from "@/components/FloatingMossCTA";
+import SlimUrgencyBanner from "@/components/SlimUrgencyBanner";
 import Footer from "@/components/Footer";
 import IntroSection from "@/components/IntroSection";
 import GutterAddonSection from "@/components/GutterAddonSection";
@@ -129,7 +129,7 @@ const Index = () => {
         </main>
       <Footer />
       <UnifiedContactBar />
-      <FloatingMossCTA />
+      <SlimUrgencyBanner />
       </div>
     </div>
   );
