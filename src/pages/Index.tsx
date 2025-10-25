@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Shield } from "lucide-react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TrustSignalSection from "@/components/TrustSignalSection";
@@ -109,6 +110,22 @@ const Index = () => {
         
         <main>
           <Hero />
+          
+          {/* Trust Badges Row */}
+          <div className="bg-background py-4 border-b border-muted">
+            <div className="container mx-auto px-4">
+              <p className="text-center text-muted-foreground text-sm flex flex-wrap items-center justify-center gap-2">
+                <span className="flex items-center gap-2">
+                  <Shield className="w-4 h-4" />
+                  Licensed & Insured
+                </span>
+                <span className="text-muted-foreground/50">•</span>
+                <span>Locally Owned</span>
+                <span className="text-muted-foreground/50">•</span>
+                <span>Same-Day Estimates</span>
+              </p>
+            </div>
+          </div>
           
           {/* Service Area Proof */}
           <div className="bg-brand-navy py-3">

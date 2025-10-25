@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <header id="site-header" className={`fixed top-10 md:top-11 z-40 w-full bg-brand-navy/95 backdrop-blur-sm border-b border-brand-orange/20 transition-shadow duration-300 ${hasScrolled ? 'shadow-lg' : 'shadow-md'}`}>
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-12 md:h-16">
+        <div className="flex items-center justify-between h-11 md:h-16">
           {/* Brand Text */}
           <div className="flex items-center">
             <Link to="/">
