@@ -237,4 +237,21 @@
   .pulse {
     animation: gentle-pulse 2s ease-in-out infinite;
   }
+
+  /* Tidio Chat Widget - Bottom-Left Positioning */
+  #tidio-chat-iframe {
+    left: 20px !important;
+    right: auto !important;
+  }
+
+  #tidio-chat {
+    left: 20px !important;
+    right: auto !important;
+  }
+
+  /* Style Tidio to match site colors */
+  #tidio-chat-code {
+    --tidio-primary-color: hsl(var(--accent)) !important;
+    --tidio-secondary-color: hsl(var(--primary)) !important;
+  }
 }
