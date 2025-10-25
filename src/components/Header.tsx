@@ -38,7 +38,7 @@ const Header = () => {
   return (
     <header id="site-header" className={`fixed top-10 md:top-11 z-40 w-full bg-brand-navy/95 backdrop-blur-sm border-b border-brand-orange/20 transition-shadow duration-300 ${hasScrolled ? 'shadow-lg' : 'shadow-md'}`}>
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-12 md:h-20">
+        <div className="flex items-center justify-between h-12 md:h-16">
           {/* Brand Text */}
           <div className="flex items-center">
             <Link to="/">
@@ -72,12 +72,19 @@ const Header = () => {
           </nav>
 
           {/* Desktop CTAs */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-3">
+            <a 
+              href={`tel:1${phoneNumber.replace(/[^0-9]/g, '')}`}
+              className="flex items-center gap-2 text-white hover:text-brand-orange font-medium transition-colors duration-250"
+            >
+              <Phone className="w-4 h-4" />
+              {phoneNumber}
+            </a>
             <Button 
               variant="cta-orange" 
               size="lg"
               onClick={goToContact}
-              className="font-bold text-base px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="font-bold text-base px-6 py-3 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               Get Free Quote
             </Button>
