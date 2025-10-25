@@ -13,6 +13,7 @@ import TestimonialSlider from "@/components/TestimonialSlider";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import CTABanner from "@/components/CTABanner";
 import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
+import GoogleReviewsCarousel from "@/components/GoogleReviewsCarousel";
 import HomeFAQ from "@/components/HomeFAQ";
 import SeasonalPromotions from "@/components/SeasonalPromotions";
 import MossUrgency from "@/components/MossUrgency";
@@ -120,6 +121,7 @@ const Index = () => {
           <div id="reviews" className="bg-off-white">
             <TestimonialSlider />
           </div>
+          <GoogleReviewsCarousel />
           <HomeFAQ />
           <div id="contact" className="bg-off-white">
             <TwoStepQuoteForm />
