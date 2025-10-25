@@ -22,7 +22,8 @@ const Header = () => {
   
   const navigation: NavigationItem[] = [
     { name: "Home", href: "/", onClick: goHome },
-    { name: "Roof & Moss Cleaning", href: "/roof-cleaning" },
+    { name: "Roof Cleaning", href: "/roof-cleaning" },
+    { name: "Gutter Cleaning", href: "/gutter-cleaning" },
     { name: "Gallery", href: "/gallery" },
     { 
       name: "Reviews", 
@@ -80,14 +81,6 @@ const Header = () => {
               <Phone className="w-4 h-4" />
               {phoneNumber}
             </a>
-            <Button 
-              variant="cta-orange" 
-              size="lg"
-              onClick={goToContact}
-              className="font-bold text-base px-6 py-3 shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              Get Free Quote
-            </Button>
           </div>
 
           {/* Mobile Controls */}

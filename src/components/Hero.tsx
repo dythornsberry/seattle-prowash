@@ -31,57 +31,27 @@ const Hero = () => {
       {/* Hero Content */}
       <div className="container mx-auto px-4 relative z-10 py-20">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          {/* Trust Badges */}
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mb-6">
-            <div className="flex items-center gap-2 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
-              <Star className="w-5 h-5 fill-brand-orange text-brand-orange" />
-              <span className="font-semibold text-brand-navy">5.0 Google Rating</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
-              <Shield className="w-5 h-5 text-brand-orange" />
-              <span className="font-semibold text-brand-navy">Licensed & Insured</span>
-            </div>
-          </div>
-
           {/* Main Headline */}
-          <h1 className="text-white font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight animate-fade-in">
-            Seattle's Trusted Gutter & Roof Maintenance Experts
+          <h1 className="text-white font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight animate-fade-in mb-6">
+            Roof & Gutter Cleaning for Seattle Homes
           </h1>
 
-          {/* Sub-headline */}
-          <p className="text-xl md:text-2xl text-white/95 font-medium max-w-2xl mx-auto animate-fade-in">
-            We remove leaves, clear gutters, and stop moss before it starts.
+          {/* Trust Line */}
+          <p className="text-xl md:text-2xl text-white/95 font-medium max-w-3xl mx-auto animate-fade-in mb-8">
+            4.9★ from 180+ neighbors • Licensed & Insured • Same-Day Estimates
           </p>
 
-          {/* Urgency Message */}
-          <p className="text-lg md:text-xl text-brand-orange font-semibold">
-            Limited spots available each week—book now!
-          </p>
-
-          {/* Service Area */}
-          <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-            Serving the Seattle Metro Area
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4 animate-fade-in">
+          {/* Primary CTA */}
+          <div className="flex justify-center animate-fade-in">
             <Button 
               size="xl" 
               variant="cta-orange"
-              className="group text-lg px-8 py-6 w-full sm:w-auto"
+              className="group text-lg px-10 py-7 text-xl font-semibold shadow-xl"
               onClick={handleGetQuote}
             >
-              Get Free Quote
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              Get a Fast Quote
+              <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </Button>
-            
-            <a 
-              href="tel:12067526690"
-              className="text-white/90 hover:text-white font-semibold text-lg flex items-center gap-2 transition-colors"
-            >
-              <Phone className="w-5 h-5" />
-              206-752-6690
-            </a>
           </div>
         </div>
       </div>
