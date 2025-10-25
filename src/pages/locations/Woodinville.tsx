@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Star, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import StickyTopBar from "@/components/StickyTopBar";
+
 import MobileBottomBar from "@/components/MobileBottomBar";
 
 const Woodinville = () => {
@@ -15,9 +15,7 @@ const Woodinville = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <StickyTopBar />
-      <div style={{ paddingTop: '60px' }}>
-        <Header />
+      <Header />
         
         <main>
           {/* Hero Section */}
@@ -194,11 +192,10 @@ const Woodinville = () => {
               </div>
             </div>
           </section>
-        </main>
+      </main>
 
-        <Footer />
-        <MobileBottomBar />
-      </div>
+      <Footer />
+      <MobileBottomBar />
     </div>
   );
 };

@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import StickyTopBar from "@/components/StickyTopBar";
 import MobileBottomBar from "@/components/MobileBottomBar";
 import TestimonialCard from "@/components/TestimonialCard";
 import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
@@ -80,7 +79,6 @@ const GutterCleaning = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <StickyTopBar />
       <Header />
       <main>
         {/* Hero Section */}

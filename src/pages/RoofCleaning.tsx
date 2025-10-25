@@ -54,7 +54,6 @@ const RoofCleaning = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <StickyTopBar />
       <Header />
       <main>
         {/* Hero Section */}
@@ -386,7 +385,7 @@ const RoofCleaning = () => {
                     }
                   }}
                 >
-                  Get Free Quote Today
+                  Get a Fast Quote
                 </Button>
                 <Button 
                   variant="outline" 

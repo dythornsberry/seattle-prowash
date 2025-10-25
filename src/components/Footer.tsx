@@ -180,7 +180,7 @@ const Footer = () => {
                   }
                 }}
               >
-                Get Free Quote
+                Get a Fast Quote
               </Button>
             </div>
           </div>

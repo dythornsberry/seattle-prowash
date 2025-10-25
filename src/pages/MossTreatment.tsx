@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Check, Shield, Clock, Award } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import StickyTopBar from "@/components/StickyTopBar";
+
 import MobileBottomBar from "@/components/MobileBottomBar";
 
 const MossTreatment = () => {
@@ -16,9 +16,7 @@ const MossTreatment = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <StickyTopBar />
-      <div className="pt-[120px] md:pt-[120px]">
-        <Header />
+      <Header />
         
         <main>
           {/* Hero Section */}
@@ -224,8 +222,7 @@ const MossTreatment = () => {
         </main>
 
         <Footer />
-        <MobileBottomBar />
-      </div>
+      <MobileBottomBar />
     </div>
   );
 };

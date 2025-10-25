@@ -58,7 +58,7 @@ const UnifiedContactBar = () => {
               className="w-full justify-start gap-2"
             >
               <FileText className="w-4 h-4" />
-              Get Free Quote
+              Get a Fast Quote
             </Button>
           </div>
         ) : (
@@ -110,7 +110,7 @@ const UnifiedContactBar = () => {
               className="w-full justify-start gap-2"
             >
               <FileText className="w-4 h-4" />
-              Get Free Quote
+              Get a Fast Quote
             </Button>
           </div>
         ) : (

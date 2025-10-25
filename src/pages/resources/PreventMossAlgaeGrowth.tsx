@@ -5,7 +5,7 @@ import { Calendar, Clock, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import StickyTopBar from "@/components/StickyTopBar";
+
 import MobileBottomBar from "@/components/MobileBottomBar";
 
 const PreventMossAlgaeGrowth = () => {
@@ -16,9 +16,7 @@ const PreventMossAlgaeGrowth = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <StickyTopBar />
-      <div style={{ paddingTop: '60px' }}>
-        <Header />
+      <Header />
         
         <main>
           {/* Header */}
@@ -159,7 +157,7 @@ const PreventMossAlgaeGrowth = () => {
                         window.location.href = '/#contact';
                       }}
                     >
-                      Get Free Quote
+                      Get a Fast Quote
                     </Button>
                     <Button 
                       variant="outline"
@@ -174,11 +172,10 @@ const PreventMossAlgaeGrowth = () => {
               </div>
             </div>
           </section>
-        </main>
+      </main>
 
-        <Footer />
-        <MobileBottomBar />
-      </div>
+      <Footer />
+      <MobileBottomBar />
     </div>
   );
 };

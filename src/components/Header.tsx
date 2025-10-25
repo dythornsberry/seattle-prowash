@@ -25,15 +25,8 @@ const Header = () => {
     { name: "Roof Cleaning", href: "/roof-cleaning" },
     { name: "Gutter Cleaning", href: "/gutter-cleaning" },
     { name: "Gallery", href: "/gallery" },
-    { 
-      name: "Reviews", 
-      href: "/reviews"
-    },
-    { 
-      name: "Contact", 
-      href: "/#contact",
-      onClick: goToContact
-    }
+    { name: "Reviews", href: "/reviews" },
+    { name: "Contact", href: "/#contact", onClick: goToContact }
   ];
 
   return (
@@ -142,7 +135,7 @@ const Header = () => {
                     goToContact();
                   }}
                 >
-                  Get Free Quote
+                  Get a Fast Quote
                 </Button>
               </div>
             </nav>

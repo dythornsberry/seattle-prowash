@@ -67,7 +67,7 @@ const SeasonalPromotions = () => {
                   onClick={handleGetQuote}
                   className="w-full bg-bright-green hover:bg-bright-green/90 text-white font-semibold py-3 rounded-lg transition-all duration-300 hover:shadow-lg"
                 >
-                  Get Free Quote Today
+                  Get a Fast Quote
                 </Button>
                 <p className="text-xs italic text-text-charcoal/70 mt-3 text-center">
                   *Offers cannot be combined. Valid for new customers only. Seattle metro area including <Link to="/kenmore" className="hover:text-primary-teal transition-colors">Kenmore</Link>, <Link to="/bothell" className="hover:text-primary-teal transition-colors">Bothell</Link>, and <Link to="/kirkland" className="hover:text-primary-teal transition-colors">Kirkland</Link>.

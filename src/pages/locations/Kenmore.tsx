@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Star, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import StickyTopBar from "@/components/StickyTopBar";
+
 import MobileBottomBar from "@/components/MobileBottomBar";
 
 const Kenmore = () => {
@@ -27,7 +27,7 @@ const Kenmore = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <StickyTopBar />
+      
       <div style={{ paddingTop: '60px' }}>
         <Header />
         
@@ -279,7 +279,7 @@ const Kenmore = () => {
                       window.location.href = '/#contact';
                     }}
                   >
-                    Get Free Quote Today
+                    Get a Fast Quote
                   </Button>
                   <Button 
                     variant="outline"

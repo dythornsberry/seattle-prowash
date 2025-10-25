@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import Header from "@/components/Header";
-import StickyTopBar from "@/components/StickyTopBar";
 import Hero from "@/components/Hero";
 import TrustSignalSection from "@/components/TrustSignalSection";
 import TrustBar from "@/components/TrustBar";

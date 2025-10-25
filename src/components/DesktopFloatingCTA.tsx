@@ -44,8 +44,7 @@ const DesktopFloatingCTA = () => {
           className="font-bold shadow-md pulse"
           title="Get quote"
         >
-          <FileText className="w-4 h-4 mr-2" />
-          Quote
+          Get a Fast Quote
         </Button>
       </div>
     </div>

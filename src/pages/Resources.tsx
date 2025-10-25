@@ -6,7 +6,7 @@ import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import StickyTopBar from "@/components/StickyTopBar";
+
 import MobileBottomBar from "@/components/MobileBottomBar";
 
 const Resources = () => {
@@ -44,9 +44,7 @@ const Resources = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <StickyTopBar />
-      <div style={{ paddingTop: '60px' }}>
-        <Header />
+      <Header />
         
         <main>
           {/* Hero Section */}
@@ -189,9 +187,8 @@ const Resources = () => {
           </section>
         </main>
 
-        <Footer />
-        <MobileBottomBar />
-      </div>
+      <Footer />
+      <MobileBottomBar />
     </div>
   );
 };

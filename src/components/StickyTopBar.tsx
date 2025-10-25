@@ -25,7 +25,7 @@ const StickyTopBar = () => {
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              Get Free Quote
+              Get a Fast Quote
             </Button>
           </div>
         </div>

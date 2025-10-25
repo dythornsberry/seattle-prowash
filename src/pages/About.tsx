@@ -227,7 +227,7 @@ const About = () => {
                     size="xl"
                     onClick={navigateToContact}
                   >
-                    Get Free Quote
+                    Get a Fast Quote
                   </Button>
                    <Button 
                      variant="prowash-phone" 

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import StickyTopBar from "@/components/StickyTopBar";
+
 import MobileBottomBar from "@/components/MobileBottomBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -194,7 +194,6 @@ const Reviews = () => {
 
   return (
     <>
-      <StickyTopBar />
       <Header />
       <main className="min-h-screen pt-24 md:pt-32">
         {/* Hero Section */}

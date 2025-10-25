@@ -30,7 +30,7 @@ const CTABanner = () => {
                 }
               }}
             >
-              Get Free Quote Today
+              Get a Fast Quote
             </Button>
             
             <div className="text-center mt-4">

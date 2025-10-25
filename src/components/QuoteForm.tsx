@@ -14,14 +14,19 @@ import { supabase } from "@/integrations/supabase/client";
 const formSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
   phone: z.string().trim().min(1, "Phone number is required").max(20, "Phone must be less than 20 characters"),
-  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters").optional().or(z.literal("")),
   address: z.string().trim().min(1, "Address is required").max(300, "Address must be less than 300 characters"),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters").optional().or(z.literal("")),
   details: z.string().trim().max(1000, "Details must be less than 1000 characters").optional(),
+  textUpdates: z.boolean().optional(),
+  utmSource: z.string().optional(),
+  utmMedium: z.string().optional(),
+  pageContext: z.string().optional(),
 });
 
 const QuoteForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showConfirmation, setShowConfirmation] = useState(false);
   const EDGE_FUNCTION_NAME = "submit-quote";
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -29,9 +34,13 @@ const QuoteForm = () => {
     defaultValues: {
       name: "",
       phone: "",
-      email: "",
       address: "",
+      email: "",
       details: "",
+      textUpdates: false,
+      utmSource: new URLSearchParams(window.location.search).get('utm_source') || "",
+      utmMedium: new URLSearchParams(window.location.search).get('utm_medium') || "",
+      pageContext: window.location.pathname,
     },
   });
 
@@ -39,9 +48,13 @@ const QuoteForm = () => {
   const buildPayload = (values: z.infer<typeof formSchema>) => ({
     name: values.name,
     phone: values.phone,
-    email: values.email || "",
     address: values.address,
+    email: values.email || "",
     details: values.details || "",
+    textUpdates: values.textUpdates || false,
+    utmSource: values.utmSource || "",
+    utmMedium: values.utmMedium || "",
+    pageContext: values.pageContext || "",
     timestamp: new Date().toISOString(),
     source: "Website Quote Form",
     business_name: "Seattle ProWash",
@@ -77,12 +90,7 @@ const QuoteForm = () => {
     
     try {
       await sendToWebhook(values);
-
-      toast({
-        title: "Request sent",
-        description: "We received your request. We'll respond within 1 hour.",
-      });
-      
+      setShowConfirmation(true);
       form.reset();
       
     } catch (error) {
@@ -95,6 +103,18 @@ const QuoteForm = () => {
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const formatPhoneNumber = (value: string) => {
+    const cleaned = value.replace(/\D/g, '');
+    const match = cleaned.match(/^(\d{0,3})(\d{0,3})(\d{0,4})$/);
+    if (!match) return value;
+    
+    const [, area, prefix, line] = match;
+    if (line) return `(${area}) ${prefix}-${line}`;
+    if (prefix) return `(${area}) ${prefix}`;
+    if (area) return `(${area}`;
+    return cleaned;
   };
 
   return (
@@ -174,14 +194,40 @@ const QuoteForm = () => {
 
             {/* Quote Form */}
             <div className="lg:col-span-2 fade-up">
-              <Card className="border-brand-yellow/20 shadow-xl">
-                <CardHeader>
-                  <CardTitle className="text-brand-navy">Request Your Free Quote</CardTitle>
-                  <CardDescription>
-                    Tell us about your project and we'll provide a detailed estimate.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
+              {showConfirmation ? (
+                <Card className="border-brand-yellow/20 shadow-xl bg-green-50">
+                  <CardContent className="pt-8 pb-8 text-center">
+                    <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold text-brand-navy mb-2">Thanks! We'll contact you shortly.</h3>
+                    <p className="text-muted-foreground mb-6">Most quotes are sent within 1 hour during business hours.</p>
+                    <p className="text-lg font-semibold text-brand-navy mb-4">If urgent, tap to call:</p>
+                    <Button
+                      variant="cta-orange"
+                      size="lg"
+                      onClick={() => window.location.href = 'tel:12067526690'}
+                    >
+                      <Phone className="w-5 h-5 mr-2" />
+                      Call (206) 752-6690
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => setShowConfirmation(false)}
+                      className="mt-4 block mx-auto"
+                    >
+                      Submit another request
+                    </Button>
+                  </CardContent>
+                </Card>
+              ) : (
+                <Card className="border-brand-yellow/20 shadow-xl">
+                  <CardHeader>
+                    <CardTitle className="text-brand-navy">Request Your Free Quote</CardTitle>
+                    <CardDescription>
+                      Tell us about your project and we'll provide a detailed estimate.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
                   <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                       <div className="space-y-6">
@@ -208,32 +254,17 @@ const QuoteForm = () => {
                           name="phone"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel className="text-brand-navy font-semibold">Mobile *</FormLabel>
+                              <FormLabel className="text-brand-navy font-semibold">Phone *</FormLabel>
                               <FormControl>
                                 <Input
                                   type="tel"
-                                  placeholder="Mobile Number"
+                                  placeholder="(206) 555-1234"
                                   className="border-brand-yellow/30 focus:border-brand-yellow"
                                   {...field}
-                                />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                        
-                        <FormField
-                          control={form.control}
-                          name="email"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel className="text-brand-navy font-semibold">Email</FormLabel>
-                              <FormControl>
-                                <Input
-                                  type="email"
-                                  placeholder="Email Address"
-                                  className="border-brand-yellow/30 focus:border-brand-yellow"
-                                  {...field}
+                                  onChange={(e) => {
+                                    const formatted = formatPhoneNumber(e.target.value);
+                                    field.onChange(formatted);
+                                  }}
                                 />
                               </FormControl>
                               <FormMessage />
@@ -261,6 +292,25 @@ const QuoteForm = () => {
                         
                         <FormField
                           control={form.control}
+                          name="email"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-brand-navy font-semibold">Email (optional)</FormLabel>
+                              <FormControl>
+                                <Input
+                                  type="email"
+                                  placeholder="your@email.com"
+                                  className="border-brand-yellow/30 focus:border-brand-yellow"
+                                  {...field}
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        
+                        <FormField
+                          control={form.control}
                           name="details"
                           render={({ field }) => (
                             <FormItem>
@@ -277,6 +327,28 @@ const QuoteForm = () => {
                             </FormItem>
                           )}
                         />
+                        
+                        <FormField
+                          control={form.control}
+                          name="textUpdates"
+                          render={({ field }) => (
+                            <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                              <FormControl>
+                                <input
+                                  type="checkbox"
+                                  checked={field.value}
+                                  onChange={field.onChange}
+                                  className="mt-1 h-4 w-4 rounded border-brand-yellow/30 text-brand-yellow focus:ring-brand-yellow"
+                                />
+                              </FormControl>
+                              <div className="space-y-1 leading-none">
+                                <FormLabel className="text-sm font-normal text-brand-navy">
+                                  Text me updates about my quote
+                                </FormLabel>
+                              </div>
+                            </FormItem>
+                          )}
+                        />
                       </div>
 
                       <Button
@@ -286,7 +358,7 @@ const QuoteForm = () => {
                         size="xl"
                         disabled={isSubmitting}
                       >
-                        {isSubmitting ? "Sending..." : "GET YOUR FREE QUOTE TODAY"}
+                        {isSubmitting ? "Sending..." : "Get a Fast Quote"}
                       </Button>
 
                     {/* Trust Copy and Service Areas */}
@@ -304,6 +376,7 @@ const QuoteForm = () => {
                   </Form>
                 </CardContent>
               </Card>
+              )}
             </div>
           </div>
         </div>
