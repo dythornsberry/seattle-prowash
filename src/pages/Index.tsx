@@ -17,11 +17,10 @@ import HomeFAQ from "@/components/HomeFAQ";
 import SeasonalPromotions from "@/components/SeasonalPromotions";
 import MossUrgency from "@/components/MossUrgency";
 import FloatingMossCTA from "@/components/FloatingMossCTA";
-import DesktopFloatingCTA from "@/components/DesktopFloatingCTA";
 import Footer from "@/components/Footer";
-import MobileBottomBar from "@/components/MobileBottomBar";
 import IntroSection from "@/components/IntroSection";
 import GutterAddonSection from "@/components/GutterAddonSection";
+import UnifiedContactBar from "@/components/UnifiedContactBar";
 
 const Index = () => {
   // Enable smooth scrolling globally
@@ -102,39 +101,10 @@ const Index = () => {
     }
   }, []);
 
-  // Dynamically offset content by actual fixed bars height
-  useEffect(() => {
-    const applyOffset = () => {
-      const topbar = document.getElementById('sticky-top-bar');
-      const header = document.getElementById('site-header');
-      const content = document.getElementById('content-with-offset');
-      if (topbar && header && content) {
-        const offset = topbar.offsetHeight + header.offsetHeight;
-        content.style.paddingTop = `${offset}px`;
-      }
-    };
-
-    applyOffset();
-    window.addEventListener('resize', applyOffset);
-
-    // Recalculate when fonts/layout settle
-    (document as any).fonts?.ready?.then(applyOffset).catch(() => {});
-
-    // Observe header size changes (e.g., nav wrapping)
-    const headerEl = document.getElementById('site-header');
-    const ro = headerEl ? new ResizeObserver(applyOffset) : null;
-    if (headerEl && ro) ro.observe(headerEl);
-
-    return () => {
-      window.removeEventListener('resize', applyOffset);
-      ro?.disconnect();
-    };
-  }, []);
 
   return (
     <div className="min-h-screen bg-background">
-      <StickyTopBar />
-      <div id="content-with-offset" className="pt-[5.5rem] md:pt-[7.75rem]">
+      <div id="content-with-offset">
         <Header />
         
         <main>
@@ -150,13 +120,13 @@ const Index = () => {
           <div id="reviews" className="bg-off-white">
             <TestimonialSlider />
           </div>
+          <HomeFAQ />
           <div id="contact" className="bg-off-white">
             <TwoStepQuoteForm />
           </div>
         </main>
       <Footer />
-      <MobileBottomBar />
-      <DesktopFloatingCTA />
+      <UnifiedContactBar />
       <FloatingMossCTA />
       </div>
     </div>
