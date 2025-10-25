@@ -201,27 +201,15 @@ const Reviews = () => {
         <section className="section-spacing bg-gradient-to-b from-brand-navy to-brand-navy/95">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge className="bg-brand-orange text-white mb-6 text-lg px-6 py-2">
-                <Star className="w-5 h-5 mr-2 fill-white" />
-                180+ Five-Star Reviews
-              </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white font-heading">
-                What Our Customers Say
+                What Seattle Neighbors Say
               </h1>
-              <p className="text-xl md:text-2xl text-white/90 mb-8">
-                Real reviews from real customers across Kenmore, Bothell, Kirkland and Greater Seattle
+              <p className="text-3xl md:text-4xl text-white mb-8">
+                <strong className="text-brand-orange">4.9★</strong> from <strong>180+ reviews</strong>
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="flex justify-center gap-4">
                 <Button
                   variant="cta-orange"
-                  size="lg"
-                  onClick={() => window.open('https://g.page/r/CZ1YhG3KQ4_8EAE/review', '_blank')}
-                >
-                  <ExternalLink className="w-5 h-5 mr-2" />
-                  Read All Google Reviews
-                </Button>
-                <Button
-                  variant="prowash-outline"
                   size="lg"
                   onClick={() => {
                     if (window.location.pathname === '/') {
@@ -231,37 +219,52 @@ const Reviews = () => {
                     }
                   }}
                 >
-                  Get Free Quote Today
+                  Get a Fast Quote
                 </Button>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Trust Stats */}
-        <section className="py-16 bg-off-white">
+        {/* Featured Reviews - Quick Snippets */}
+        <section className="py-12 bg-off-white">
           <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="text-6xl font-bold text-brand-orange mb-3">5.0</div>
-                <div className="flex justify-center gap-1 mb-3">
-                  <Star className="w-6 h-6 fill-brand-orange text-brand-orange" />
-                  <Star className="w-6 h-6 fill-brand-orange text-brand-orange" />
-                  <Star className="w-6 h-6 fill-brand-orange text-brand-orange" />
-                  <Star className="w-6 h-6 fill-brand-orange text-brand-orange" />
-                  <Star className="w-6 h-6 fill-brand-orange text-brand-orange" />
-                </div>
-                <div className="text-brand-navy font-bold text-lg">Average Rating</div>
-              </div>
-              <div>
-                <div className="text-6xl font-bold text-brand-orange mb-3">180+</div>
-                <div className="text-brand-navy font-bold text-lg mb-2">Five-Star Reviews</div>
-                <div className="text-sm text-muted-foreground">Verified Google Reviews</div>
-              </div>
-              <div>
-                <div className="text-6xl font-bold text-brand-orange mb-3">100%</div>
-                <div className="text-brand-navy font-bold text-lg mb-2">Customer Satisfaction</div>
-                <div className="text-sm text-muted-foreground">Licensed & Insured</div>
+            <div className="max-w-5xl mx-auto">
+              <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <li className="bg-white p-6 rounded-lg shadow-md border-l-4 border-brand-orange">
+                  <p className="text-brand-navy italic mb-3">"Fast and professional—roof looks new."</p>
+                  <p className="text-sm text-muted-foreground font-semibold">— J.S., Kenmore</p>
+                </li>
+                <li className="bg-white p-6 rounded-lg shadow-md border-l-4 border-brand-orange">
+                  <p className="text-brand-navy italic mb-3">"Cleared our gutters same day."</p>
+                  <p className="text-sm text-muted-foreground font-semibold">— M.B., Bothell</p>
+                </li>
+                <li className="bg-white p-6 rounded-lg shadow-md border-l-4 border-brand-orange">
+                  <p className="text-brand-navy italic mb-3">"Before/after photos were super helpful."</p>
+                  <p className="text-sm text-muted-foreground font-semibold">— T.K., Kirkland</p>
+                </li>
+                <li className="bg-white p-6 rounded-lg shadow-md border-l-4 border-brand-orange">
+                  <p className="text-brand-navy italic mb-3">"Fair price and careful on shingles."</p>
+                  <p className="text-sm text-muted-foreground font-semibold">— R.L., Shoreline</p>
+                </li>
+                <li className="bg-white p-6 rounded-lg shadow-md border-l-4 border-brand-orange">
+                  <p className="text-brand-navy italic mb-3">"Dylan's team kept me updated throughout."</p>
+                  <p className="text-sm text-muted-foreground font-semibold">— K.G., Seattle</p>
+                </li>
+                <li className="bg-white p-6 rounded-lg shadow-md border-l-4 border-brand-orange">
+                  <p className="text-brand-navy italic mb-3">"Great company and easy to work with."</p>
+                  <p className="text-sm text-muted-foreground font-semibold">— M.T., Redmond</p>
+                </li>
+              </ul>
+              <div className="text-center mt-8">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  onClick={() => window.open('https://g.page/r/CZ1YhG3KQ4_8EAE/review', '_blank', 'noopener')}
+                >
+                  <ExternalLink className="w-5 h-5 mr-2" />
+                  Read more reviews
+                </Button>
               </div>
             </div>
           </div>
@@ -337,7 +340,7 @@ const Reviews = () => {
               <p className="text-xl text-white/90 mb-8">
                 Experience the same professional service that earned us 180+ five-star reviews
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex justify-center gap-4">
                 <Button
                   variant="cta-orange"
                   size="lg"
@@ -349,20 +352,9 @@ const Reviews = () => {
                     }
                   }}
                 >
-                  Get Free Quote Today
-                </Button>
-                <Button
-                  variant="prowash-outline"
-                  size="lg"
-                  onClick={() => window.location.href = 'tel:206-752-6690'}
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call 206-752-6690
+                  Get a Fast Quote
                 </Button>
               </div>
-              <p className="text-white/70 text-sm mt-6">
-                Same-day estimates • 12-month moss-free guarantee • Licensed & insured
-              </p>
             </div>
           </div>
         </section>

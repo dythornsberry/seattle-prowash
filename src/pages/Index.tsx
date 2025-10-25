@@ -110,6 +110,16 @@ const Index = () => {
         
         <main>
           <Hero />
+          
+          {/* Service Area Proof */}
+          <div className="bg-brand-navy py-3">
+            <div className="container mx-auto px-4">
+              <p className="text-center text-white/90 text-sm md:text-base font-medium">
+                Local to Kenmore, Bothell, Kirkland, Shoreline
+              </p>
+            </div>
+          </div>
+          
           <MossUrgency />
           <CostOfWaiting />
           <div className="bg-off-white">
@@ -124,6 +134,16 @@ const Index = () => {
           <GoogleReviewsCarousel />
           <HomeFAQ />
           <ServiceAreaMap />
+          
+          {/* Service Area Proof - Footer */}
+          <div className="bg-muted/30 py-6">
+            <div className="container mx-auto px-4">
+              <p className="text-center text-brand-navy text-sm md:text-base font-medium">
+                Proudly serving Kenmore, Bothell, Kirkland, Shoreline & surrounding areas
+              </p>
+            </div>
+          </div>
+          
           <div id="contact" className="bg-off-white">
             <TwoStepQuoteForm />
           </div>

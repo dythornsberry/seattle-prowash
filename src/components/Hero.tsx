@@ -38,7 +38,7 @@ const Hero = () => {
 
           {/* Trust Line */}
           <p className="text-xl md:text-2xl text-white/95 font-medium max-w-3xl mx-auto animate-fade-in mb-8">
-            4.9★ from 180+ neighbors • Licensed & Insured • Same-Day Estimates
+            <a href="/reviews" className="hover:text-brand-orange transition-colors">4.9★ from 180+ neighbors</a> • Licensed & Insured • Same-Day Estimates
           </p>
 
           {/* Primary CTA */}
