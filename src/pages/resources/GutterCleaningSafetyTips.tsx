@@ -18,7 +18,7 @@ const GutterCleaningSafetyTips = () => {
     <div className="min-h-screen bg-background">
       <Header />
         
-        <main>
+        <main className="pt-16 md:pt-20">
           {/* Header */}
           <section className="bg-primary-teal text-white py-16">
             <div className="container mx-auto px-4">

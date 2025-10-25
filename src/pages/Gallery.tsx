@@ -605,7 +605,7 @@ const Gallery = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main>
+      <main className="pt-16 md:pt-20">
         {/* Hero Section */}
         <section className="section-spacing bg-gradient-to-b from-brand-navy to-brand-navy/90">
           <div className="container mx-auto px-4">

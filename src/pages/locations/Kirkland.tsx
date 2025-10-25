@@ -27,11 +27,9 @@ const Kirkland = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      
-      <div style={{ paddingTop: '60px' }}>
-        <Header />
+      <Header />
         
-        <main>
+        <main className="pt-16 md:pt-20">
           {/* Hero Section */}
           <section className="bg-primary-teal text-white py-20">
             <div className="container mx-auto px-4">
@@ -296,7 +294,6 @@ const Kirkland = () => {
 
         <Footer />
         <MobileBottomBar />
-      </div>
     </div>
   );
 };
