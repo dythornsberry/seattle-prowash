@@ -10,23 +10,33 @@ import { Shield, Clock, CheckCircle, ArrowRight } from "lucide-react";
 const HomeFAQ = () => {
   const topFAQs = [
     {
-      question: "How long does roof and gutter cleaning take?",
-      answer: "Most residential jobs take 2-4 hours. We'll give you an accurate time estimate when we provide your free quote.",
-      icon: Clock
-    },
-    {
-      question: "Are estimates free?",
-      answer: "Yes, all estimates are completely free with no obligation. We can often provide quotes the same day.",
+      question: "What does roof or gutter cleaning cost?",
+      answer: "Roof cleaning typically ranges from $500–$1,000, while gutter cleaning is $250–$500. Final pricing depends on roof size, pitch, condition and how long it's been since your last service.",
       icon: CheckCircle
     },
     {
+      question: "How soon can you do the job?",
+      answer: "We strive to schedule most jobs within the same week. Peak seasons fill up quickly, so contact us early to secure your preferred date.",
+      icon: Clock
+    },
+    {
       question: "Are you licensed and insured?",
-      answer: "Absolutely. We're fully licensed, bonded, and insured to protect your property and give you complete peace of mind.",
+      answer: "Yes. Seattle ProWash is fully licensed, bonded and insured, so your property is protected.",
       icon: Shield
     },
     {
-      question: "Which areas do you service?",
-      answer: "We serve Seattle and the greater Eastside, including Bellevue, Kirkland, Redmond, Sammamish, Woodinville, Bothell, and Kenmore.",
+      question: "Do you remove moss? Do you offer treatments?",
+      answer: "Absolutely. We safely remove moss and apply long-lasting moss treatments to prevent regrowth. Our treatments are eco-friendly and tailored to the Pacific Northwest climate.",
+      icon: CheckCircle
+    },
+    {
+      question: "How do I get a quote?",
+      answer: "Simply fill out the 'Get My Free Quote' form or call/text us. We'll gather a few details and provide a no-obligation estimate.",
+      icon: CheckCircle
+    },
+    {
+      question: "What types of roofs do you service?",
+      answer: "We clean most residential roof types including asphalt shingles, metal, tile and cedar shake. For unique materials, please contact us.",
       icon: CheckCircle
     },
   ];
