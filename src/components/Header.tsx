@@ -81,15 +81,6 @@ const Header = () => {
             >
               Get Free Quote
             </Button>
-            <Button 
-              variant="outline" 
-              size="sm"
-              onClick={() => window.location.href = `tel:1${phoneNumber.replace(/[^0-9]/g, '')}`}
-              className="border-white text-white hover:bg-white hover:text-brand-navy transition-all duration-300"
-            >
-              <Phone className="w-4 h-4" />
-              Call {phoneNumber}
-            </Button>
           </div>
 
           {/* Mobile Controls */}

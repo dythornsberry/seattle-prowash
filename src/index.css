@@ -238,27 +238,11 @@
     animation: gentle-pulse 2s ease-in-out infinite;
   }
 
-  /* Tidio Chat Widget - Bottom-Left Positioning */
+  /* Hide Tidio Chat Widget */
   #tidio-chat-iframe,
   #tidio-chat,
   #tidio-chat-widget {
-    left: 20px !important;
-    right: auto !important;
-    bottom: 20px !important;
-  }
-
-  /* Mobile: Add extra bottom spacing to avoid Contact Us bar */
-  @media (max-width: 768px) {
-    #tidio-chat-iframe,
-    #tidio-chat,
-    #tidio-chat-widget {
-      bottom: 80px !important;
-    }
-  }
-
-  /* Style Tidio to match site colors */
-  #tidio-chat-code {
-    --tidio-primary-color: hsl(var(--accent)) !important;
-    --tidio-secondary-color: hsl(var(--primary)) !important;
+    display: none !important;
+    visibility: hidden !important;
   }
 }

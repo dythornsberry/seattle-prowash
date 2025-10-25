@@ -53,6 +53,11 @@ const Hero = () => {
             We remove leaves, clear gutters, and stop moss before it starts.
           </p>
 
+          {/* Urgency Message */}
+          <p className="text-lg md:text-xl text-brand-orange font-semibold">
+            Limited spots available each week—book now!
+          </p>
+
           {/* Service Area */}
           <p className="text-lg md:text-xl text-white/90 leading-relaxed">
             Serving the Seattle Metro Area
