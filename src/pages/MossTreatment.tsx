@@ -50,7 +50,7 @@ const MossTreatment = () => {
                     Why Moss Removal is Critical for Your Roof
                   </h2>
                   <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                    In the Pacific Northwest, moss growth isn't just unsightly—it's a serious threat to your roof's longevity and your home's protection.
+                    In the Pacific Northwest, moss growth is a serious threat to your roof's longevity and your home's protection.
                   </p>
                 </div>
 

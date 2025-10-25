@@ -203,7 +203,7 @@ const Kenmore = () => {
 
                 <div className="text-center mt-8 space-y-2">
                   <p className="text-gray-600 mb-3">
-                    Don't see your neighborhood? We likely still serve you—call us today!
+                    Don't see your neighborhood? We likely still serve you. Call us today!
                   </p>
                   <Button 
                     variant="outline"

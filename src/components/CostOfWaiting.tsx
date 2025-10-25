@@ -12,7 +12,7 @@ const CostOfWaiting = () => {
             The Cost of Waiting vs. The Peace of Mind We Deliver
           </h2>
           <p className="text-center text-lg text-text-charcoal max-w-3xl mx-auto mb-12">
-            Moss isn't just ugly—it's actively destroying your roof right now. Here's what happens when you delay.
+            Moss actively destroys your roof. Here's what happens when you delay.
           </p>
           
           <div className="grid lg:grid-cols-2 gap-8">

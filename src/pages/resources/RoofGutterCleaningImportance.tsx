@@ -47,7 +47,7 @@ const RoofGutterCleaningImportance = () => {
                 </h1>
                 
                 <p className="text-xl text-white/90 leading-relaxed">
-                  In the Pacific Northwest, regular roof and gutter maintenance isn't just recommended—it's essential for protecting your home investment.
+                  In the Pacific Northwest, regular roof and gutter maintenance is essential for protecting your home investment.
                 </p>
               </div>
             </div>
@@ -70,7 +70,7 @@ const RoofGutterCleaningImportance = () => {
 
                   <h3>Roof Longevity</h3>
                   <p>
-                    Moss, algae, and debris don't just affect your home's appearance—they can significantly shorten your roof's lifespan. Moss holds moisture against roofing materials, causing rot and deterioration. Professional cleaning and treatment can extend your roof's life by years.
+                    Moss, algae, and debris significantly shorten your roof's lifespan. Moss holds moisture against roofing materials, causing rot and deterioration. Professional cleaning and treatment can extend your roof's life by years.
                   </p>
 
                   <h3>Energy Efficiency</h3>

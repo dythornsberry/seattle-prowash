@@ -231,28 +231,28 @@ const Reviews = () => {
             <div className="max-w-5xl mx-auto">
               <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <li className="bg-white p-6 rounded-lg shadow-md border-l-4 border-brand-orange">
-                  <p className="text-brand-navy italic mb-3">"Fast and professional—roof looks new."</p>
-                  <p className="text-sm text-muted-foreground font-semibold">— J.S., Kenmore</p>
+                  <p className="text-brand-navy italic mb-3">"Fast and professional. Roof looks new."</p>
+                  <p className="text-sm text-muted-foreground font-semibold">- J.S., Kenmore</p>
                 </li>
                 <li className="bg-white p-6 rounded-lg shadow-md border-l-4 border-brand-orange">
                   <p className="text-brand-navy italic mb-3">"Cleared our gutters same day."</p>
-                  <p className="text-sm text-muted-foreground font-semibold">— M.B., Bothell</p>
+                  <p className="text-sm text-muted-foreground font-semibold">- M.B., Bothell</p>
                 </li>
                 <li className="bg-white p-6 rounded-lg shadow-md border-l-4 border-brand-orange">
                   <p className="text-brand-navy italic mb-3">"Before/after photos were super helpful."</p>
-                  <p className="text-sm text-muted-foreground font-semibold">— T.K., Kirkland</p>
+                  <p className="text-sm text-muted-foreground font-semibold">- T.K., Kirkland</p>
                 </li>
                 <li className="bg-white p-6 rounded-lg shadow-md border-l-4 border-brand-orange">
                   <p className="text-brand-navy italic mb-3">"Fair price and careful on shingles."</p>
-                  <p className="text-sm text-muted-foreground font-semibold">— R.L., Shoreline</p>
+                  <p className="text-sm text-muted-foreground font-semibold">- R.L., Shoreline</p>
                 </li>
                 <li className="bg-white p-6 rounded-lg shadow-md border-l-4 border-brand-orange">
                   <p className="text-brand-navy italic mb-3">"Dylan's team kept me updated throughout."</p>
-                  <p className="text-sm text-muted-foreground font-semibold">— K.G., Seattle</p>
+                  <p className="text-sm text-muted-foreground font-semibold">- K.G., Seattle</p>
                 </li>
                 <li className="bg-white p-6 rounded-lg shadow-md border-l-4 border-brand-orange">
                   <p className="text-brand-navy italic mb-3">"Great company and easy to work with."</p>
-                  <p className="text-sm text-muted-foreground font-semibold">— M.T., Redmond</p>
+                  <p className="text-sm text-muted-foreground font-semibold">- M.T., Redmond</p>
                 </li>
               </ul>
               <div className="text-center mt-8">

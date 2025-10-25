@@ -304,7 +304,7 @@ const TwoStepQuoteForm = () => {
                             <FormLabel className="text-brand-navy font-semibold">Additional Details *</FormLabel>
                             <FormControl>
                               <Textarea
-                                placeholder="Tell us about your project — e.g., 'Heavy moss on north side' or 'Link to photos: dropbox.com/'"
+                                placeholder="Tell us about your project - e.g., 'Heavy moss on north side' or 'Link to photos: dropbox.com/'"
                                 rows={4}
                                 className="border-brand-navy/30 focus:border-brand-orange rounded-xl"
                                 {...field}

@@ -118,7 +118,7 @@ const GutterCleaningSafetyTips = () => {
                   <ul>
                     <li>Place ladder on firm, level ground</li>
                     <li>Have someone spot you when possible</li>
-                    <li>Never lean out to reach—move the ladder instead</li>
+                    <li>Never lean out to reach, move the ladder instead</li>
                     <li>Keep your belt buckle between the ladder rails</li>
                     <li>Maintain three points of contact (two hands and one foot, or two feet and one hand)</li>
                   </ul>

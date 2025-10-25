@@ -70,7 +70,7 @@ const FloatingMossCTA = () => {
               Every day moss sits on your roof costs you money. Get protected before it's too late.
             </p>
             <p className="text-brand-orange text-xs font-semibold">
-              ⚡ Limited spots available this week—lock in your price now
+              ⚡ Limited spots available this week. Lock in your price now
             </p>
           </div>
         </div>

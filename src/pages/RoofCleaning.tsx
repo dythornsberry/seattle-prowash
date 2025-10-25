@@ -63,7 +63,7 @@ const RoofCleaning = () => {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="fade-up">
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
-                    Roof Cleaning—Soft on Shingles, Tough on Grime
+                    Roof Cleaning: Soft on Shingles, Tough on Grime
                   </h1>
                   
                   {/* Mini Trust Line */}
@@ -75,7 +75,7 @@ const RoofCleaning = () => {
                   <ul className="flex flex-wrap gap-2 md:gap-4 text-white/90 mb-8 text-sm md:text-base">
                     <li><strong className="text-brand-orange">1)</strong> Request a Quote</li>
                     <li><strong className="text-brand-orange">2)</strong> Schedule</li>
-                    <li><strong className="text-brand-orange">3)</strong> Relax—before/after photos provided</li>
+                    <li><strong className="text-brand-orange">3)</strong> Relax while we work, before/after photos provided</li>
                   </ul>
 
                   <div className="mb-8">
@@ -140,7 +140,7 @@ const RoofCleaning = () => {
           faqs={[
             {
               question: "Do you pressure wash shingles?",
-              answer: "No—We use a soft-wash process that protects shingles while removing organic growth."
+              answer: "No. We use a soft-wash process that protects shingles while removing organic growth."
             },
             {
               question: "How soon can you schedule?",
@@ -201,7 +201,7 @@ const RoofCleaning = () => {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-muted-foreground">
-                      Combines gutter cleaning with roof blow-off and soft debris removal (leaves, needles). Our most common package—keeps your entire system in top shape.
+                      Combines gutter cleaning with roof blow-off and soft debris removal (leaves, needles). Our most common package keeps your entire system in top shape.
                     </p>
                     <Button 
                       variant="prowash-primary" 
@@ -277,7 +277,7 @@ const RoofCleaning = () => {
                     3
                   </div>
                   <h3 className="font-semibold text-brand-navy mb-2">Protect</h3>
-                  <p className="text-muted-foreground">Preventative treatment keeps moss away for 12 months—guaranteed.</p>
+                  <p className="text-muted-foreground">Preventative treatment keeps moss away for 12 months, guaranteed.</p>
                 </div>
               </div>
             </div>

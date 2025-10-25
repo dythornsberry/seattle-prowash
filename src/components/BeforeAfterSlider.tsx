@@ -111,7 +111,7 @@ const BeforeAfterSlider = () => {
             Real Seattle Roof Cleaning Results
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Authentic transformations from neighbors across the Seattle Metro. No stock photos—just real results.
+            Authentic transformations from neighbors across the Seattle Metro. No stock photos, just real results.
           </p>
         </div>
 

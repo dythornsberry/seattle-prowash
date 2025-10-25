@@ -53,7 +53,7 @@ const Hero = () => {
               <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </Button>
             <p className="text-white/80 text-sm md:text-base font-normal max-w-2xl">
-              Fast quotes. Fair prices. Expert results — trusted by Seattle-area homeowners.
+              Fast quotes. Fair prices. Expert results trusted by Seattle-area homeowners.
             </p>
           </div>
         </div>

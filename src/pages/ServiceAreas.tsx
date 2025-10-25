@@ -48,7 +48,7 @@ const ServiceAreas = () => {
                   Serving the Seattle Metro Area
                 </h1>
                 <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
-                  Based in Kenmore, we provide professional roof cleaning and moss removal services to homeowners within ~15 miles across the Seattle metro area — including Seattle, North Seattle, Bellevue, Redmond, Sammamish, Woodinville, Kirkland, Bothell, Shoreline, Mukilteo, Mill Creek, Lynnwood, Snohomish and other nearby communities.
+                  Based in Kenmore, we provide professional roof cleaning and moss removal services to homeowners within ~15 miles across the Seattle metro area, including Seattle, North Seattle, Bellevue, Redmond, Sammamish, Woodinville, Kirkland, Bothell, Shoreline, Mukilteo, Mill Creek, Lynnwood, Snohomish and other nearby communities.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <span className="bg-white/10 px-4 py-2 rounded-full">12-Month Moss-Free Guarantee</span>

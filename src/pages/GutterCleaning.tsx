@@ -51,7 +51,7 @@ const GutterCleaning = () => {
   const whatYouGet = [
     "Hand-scoop all leaves and debris to restore proper water flow",
     "Flush downspouts to ensure drainage works perfectly",
-    "Remove all debris from your property—no mess left behind",
+    "Remove all debris from your property, no mess left behind",
     "Clean visible drips from fascia to improve your home's appearance",
     "Receive completion photos showing the work was done right"
   ];
@@ -88,7 +88,7 @@ const GutterCleaning = () => {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="fade-up">
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
-                    Gutter Cleaning—Clog-Free and Flowing
+                    Gutter Cleaning: Clog-Free and Flowing
                   </h1>
                   
                   {/* Mini Trust Line */}
@@ -100,7 +100,7 @@ const GutterCleaning = () => {
                   <ul className="flex flex-wrap gap-2 md:gap-4 text-white/90 mb-8 text-sm md:text-base">
                     <li><strong className="text-brand-orange">1)</strong> Request a Quote</li>
                     <li><strong className="text-brand-orange">2)</strong> Schedule</li>
-                    <li><strong className="text-brand-orange">3)</strong> Relax—before/after photos provided</li>
+                    <li><strong className="text-brand-orange">3)</strong> Relax while we work, before/after photos provided</li>
                   </ul>
 
                   <div className="mb-8">
@@ -165,7 +165,7 @@ const GutterCleaning = () => {
           faqs={[
             {
               question: "Do you pressure wash shingles?",
-              answer: "No—We use a soft-wash process that protects shingles while removing organic growth."
+              answer: "No. We use a soft-wash process that protects shingles while removing organic growth."
             },
             {
               question: "How soon can you schedule?",
@@ -203,7 +203,7 @@ const GutterCleaning = () => {
                 <div className="flex items-start gap-3 fade-up">
                   <CheckCircle className="w-5 h-5 text-brand-orange mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-muted-foreground">Remove all debris—no mess left behind</p>
+                    <p className="text-muted-foreground">Remove all debris, no mess left behind</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 fade-up">

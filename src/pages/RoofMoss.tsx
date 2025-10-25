@@ -125,7 +125,7 @@ const RoofMoss = () => {
               <Card className="bg-brand-orange/10 border-brand-orange/20">
                 <CardContent className="p-8">
                   <p className="text-lg text-muted-foreground">
-                    Homeowners search for moss removal and moss treatment. We do both—removal of loose growth today and treatment to kill what remains.
+                    Homeowners search for moss removal and moss treatment. We do both: removal of loose growth today and treatment to kill what remains.
                   </p>
                 </CardContent>
               </Card>
