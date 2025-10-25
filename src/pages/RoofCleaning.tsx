@@ -3,13 +3,17 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyTopBar from "@/components/StickyTopBar";
 import MobileBottomBar from "@/components/MobileBottomBar";
-import ProcessSection from "@/components/ProcessSection";
 import TestimonialCard from "@/components/TestimonialCard";
+import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
+import ServiceFAQ from "@/components/ServiceFAQ";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Phone, ArrowRight } from "lucide-react";
+import { CheckCircle, Phone } from "lucide-react";
 import roofCleaningImage from "@/assets/roof-moss-removal-detailed-before-after.jpg";
+import roofBA1 from "@/assets/asphalt-roof-moss-cleaning-before-after.jpg";
+import roofBA2 from "@/assets/metal-roof-cleaning-before-after.jpg";
+import roofBA3 from "@/assets/roof-softwash-before-after.jpg";
 
 const RoofCleaning = () => {
   useEffect(() => {
@@ -59,16 +63,23 @@ const RoofCleaning = () => {
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="fade-up">
-                  <Badge variant="outline" className="text-brand-orange border-brand-orange mb-4">
-                    Roof & Moss Cleaning Specialists
-                  </Badge>
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-                    Roof & Moss Cleaning Specialists
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
+                    Roof Cleaning—Soft on Shingles, Tough on Grime
                   </h1>
-                  <p className="text-xl md:text-2xl mb-8 text-white/90">
-                    We use a gentle soft-wash process to remove debris and moss from roofs and gutters, protect your shingles and keep moss away for 12 months—guaranteed.
+                  
+                  {/* Mini Trust Line */}
+                  <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
+                    4.9★ from 180+ neighbors • Licensed & Insured • Same-Day Estimates
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4">
+
+                  {/* 1-2-3 Process */}
+                  <ul className="flex flex-wrap gap-2 md:gap-4 text-white/90 mb-8 text-sm md:text-base">
+                    <li><strong className="text-brand-orange">1)</strong> Request a Quote</li>
+                    <li><strong className="text-brand-orange">2)</strong> Schedule</li>
+                    <li><strong className="text-brand-orange">3)</strong> Relax—before/after photos provided</li>
+                  </ul>
+
+                  <div className="mb-8">
                     <Button 
                       variant="prowash-secondary" 
                       size="xl"
@@ -81,24 +92,18 @@ const RoofCleaning = () => {
                         }
                       }}
                     >
-                      Get Free Quote Today
-                    </Button>
-                    <Button 
-                      variant="outline" 
-                      size="xl"
-                      className="bg-white/10 backdrop-blur-sm text-white border-white/20 hover:bg-white/20"
-                      onClick={() => window.location.href = 'tel:206-752-6690'}
-                    >
-                      <Phone className="w-4 h-4 mr-2" />
-                      Call 206-752-6690
+                      Get a Fast Quote
                     </Button>
                   </div>
                 </div>
                 <div className="fade-up">
                   <img
                     src={roofCleaningImage}
-                    alt="Seattle roof cleaning before and after - Professional moss removal results on residential roof in Kenmore and Kirkland area"
+                    alt="Asphalt roof before and after soft-wash cleaning - Professional moss removal in Kenmore and Kirkland"
                     className="rounded-2xl shadow-2xl w-full"
+                    width={1200}
+                    height={800}
+                    loading="eager"
                   />
                 </div>
               </div>
@@ -106,57 +111,48 @@ const RoofCleaning = () => {
           </div>
         </section>
 
-        {/* Benefits Overview */}
-        <section className="section-spacing">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto fade-up">
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-brand-orange mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-brand-navy mb-1">No Pressure on Roofs</h3>
-                    <p className="text-sm text-muted-foreground">Gentle soft-wash protects your shingles</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-brand-orange mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-brand-navy mb-1">Trained & Insured</h3>
-                    <p className="text-sm text-muted-foreground">Licensed technicians with proper safety gear</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-brand-orange mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-brand-navy mb-1">Same-Week Scheduling</h3>
-                    <p className="text-sm text-muted-foreground">Fast turnaround for urgent needs</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-brand-orange mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-brand-navy mb-1">Eco-Friendly Treatment</h3>
-                    <p className="text-sm text-muted-foreground">Safe for plants, pets, and your property</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-brand-orange mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-brand-navy mb-1">Before & After Photos</h3>
-                    <p className="text-sm text-muted-foreground">See exactly what we accomplished</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-brand-orange mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-brand-navy mb-1">12-Month Guarantee</h3>
-                    <p className="text-sm text-muted-foreground">Moss-free protection for a full year</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Before/After Showcase */}
+        <BeforeAfterShowcase
+          images={[
+            {
+              src: roofBA1,
+              alt: "Asphalt roof before and after soft-wash cleaning",
+              width: 1200,
+              height: 800
+            },
+            {
+              src: roofBA2,
+              alt: "Metal roof moss removal before and after treatment",
+              width: 1200,
+              height: 800
+            },
+            {
+              src: roofBA3,
+              alt: "Roof soft-wash cleaning results showing moss and algae removal",
+              width: 1200,
+              height: 800
+            }
+          ]}
+        />
+
+        {/* FAQ Section */}
+        <ServiceFAQ
+          schemaContext="roof"
+          faqs={[
+            {
+              question: "Do you pressure wash shingles?",
+              answer: "No—We use a soft-wash process that protects shingles while removing organic growth."
+            },
+            {
+              question: "How soon can you schedule?",
+              answer: "Most jobs are scheduled within 24–72 hours depending on demand."
+            },
+            {
+              question: "Do you bag debris & flush downspouts?",
+              answer: "Yes. We bag debris and can flush/test downspouts on request."
+            }
+          ]}
+        />
 
         {/* Our Services - Three Clear Options */}
         <section className="section-spacing bg-muted/30">
@@ -192,7 +188,7 @@ const RoofCleaning = () => {
                         }
                       }}
                     >
-                      Get Free Quote
+                      Get a Fast Quote
                     </Button>
                   </CardContent>
                 </Card>
@@ -220,7 +216,7 @@ const RoofCleaning = () => {
                         }
                       }}
                     >
-                      Get Free Quote
+                      Get a Fast Quote
                     </Button>
                   </CardContent>
                 </Card>
@@ -245,7 +241,7 @@ const RoofCleaning = () => {
                         }
                       }}
                     >
-                      Get Free Quote
+                      Get a Fast Quote
                     </Button>
                   </CardContent>
                 </Card>
