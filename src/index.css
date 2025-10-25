@@ -239,14 +239,21 @@
   }
 
   /* Tidio Chat Widget - Bottom-Left Positioning */
-  #tidio-chat-iframe {
+  #tidio-chat-iframe,
+  #tidio-chat,
+  #tidio-chat-widget {
     left: 20px !important;
     right: auto !important;
+    bottom: 20px !important;
   }
 
-  #tidio-chat {
-    left: 20px !important;
-    right: auto !important;
+  /* Mobile: Add extra bottom spacing to avoid Contact Us bar */
+  @media (max-width: 768px) {
+    #tidio-chat-iframe,
+    #tidio-chat,
+    #tidio-chat-widget {
+      bottom: 80px !important;
+    }
   }
 
   /* Style Tidio to match site colors */
