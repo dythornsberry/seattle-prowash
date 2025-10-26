@@ -11,7 +11,7 @@ const HomeFAQ = () => {
   const topFAQs = [
     {
       question: "What does roof or gutter cleaning cost?",
-      answer: "Most homes in our area range from $300–$1,200 depending on roof size, pitch, and access. Typical starting prices: Gutter Cleaning + Roof Blow-Off $300+, Roof Cleaning & Moss Removal $500+. We send same-day estimates.",
+      answer: "Most homes in our area range from $300–$1,200 depending on roof size, pitch, and access. Typical starting prices: Gutter cleaning $300+, Roof cleaning $500+. We send same-day estimates.",
       icon: CheckCircle,
       cta: true
     },

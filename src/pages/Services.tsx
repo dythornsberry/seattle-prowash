@@ -43,7 +43,7 @@ const Services = () => {
     {
       id: "roof-cleaning",
       icon: Droplet,
-      title: "Roof Cleaning & Moss Removal",
+      title: "Roof cleaning",
       subtitle: "Is moss slowly destroying your roof?",
       image: roofMossRemoval,
       description: "Left untreated, roof moss shortens the life of your shingles and can cause major water damage. We remove the moss, treat the roof, and keep your home protected, all backed by our 12-month moss-free guarantee.",
@@ -58,13 +58,13 @@ const Services = () => {
       ],
       priceNote: "Starting at $500",
       priceHelper: "Most homes range from $300–$1,200 depending on roof size, pitch, and access. Get your exact price with a free quote.",
-      crossPromo: "For complete protection, pair this with our Gutter Cleaning service. Ask about our package discount!"
+      crossPromo: "For complete protection, pair this with our gutter cleaning service. Ask about our package discount!"
     },
     {
       id: "gutter-cleaning",
       icon: Car,
-      title: "Gutter Cleaning",
-      subtitle: "Complete gutter system maintenance and cleaning",
+      title: "Gutter cleaning",
+      subtitle: "Complete gutter system maintenance and cleaning (includes roof blow-off)",
       image: gutterCleaning,
       description: "Comprehensive gutter cleaning service that prevents water damage and maintains proper drainage around your home. In the Pacific Northwest, we recommend cleaning gutters twice per year to prevent damage to your home",
       process: [

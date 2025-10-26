@@ -228,25 +228,28 @@ const TwoStepQuoteForm = () => {
                           <FormItem>
                             <FormLabel className="text-brand-navy font-semibold">Services Needed *</FormLabel>
                             <div className="space-y-3">
-                              <FormField
+                                <FormField
                                 control={form.control}
                                 name="services"
                                 render={({ field }) => (
                                   <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
                                     <FormControl>
                                       <Checkbox
-                                        checked={field.value?.includes("Roof Cleaning & Moss Removal")}
+                                        checked={field.value?.includes("Roof cleaning (moss removal & treatment)")}
                                         onCheckedChange={(checked) => {
-                                          const value = "Roof Cleaning & Moss Removal";
+                                          const value = "Roof cleaning (moss removal & treatment)";
                                           return checked
                                             ? field.onChange([...field.value, value])
                                             : field.onChange(field.value?.filter((v) => v !== value));
                                         }}
                                       />
                                     </FormControl>
-                                    <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
-                                      Roof Cleaning & Moss Removal
-                                    </FormLabel>
+                                    <div className="flex flex-col space-y-1">
+                                      <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
+                                        Roof cleaning (moss removal & treatment)
+                                      </FormLabel>
+                                      <span className="text-xs text-muted-foreground">Starting at $500</span>
+                                    </div>
                                   </FormItem>
                                 )}
                               />
@@ -257,18 +260,21 @@ const TwoStepQuoteForm = () => {
                                   <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
                                     <FormControl>
                                       <Checkbox
-                                        checked={field.value?.includes("Gutter Cleaning + Roof Blow-Off")}
+                                        checked={field.value?.includes("Gutter cleaning (includes roof blow-off)")}
                                         onCheckedChange={(checked) => {
-                                          const value = "Gutter Cleaning + Roof Blow-Off";
+                                          const value = "Gutter cleaning (includes roof blow-off)";
                                           return checked
                                             ? field.onChange([...field.value, value])
                                             : field.onChange(field.value?.filter((v) => v !== value));
                                         }}
                                       />
                                     </FormControl>
-                                    <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
-                                      Gutter Cleaning + Roof Blow-Off
-                                    </FormLabel>
+                                    <div className="flex flex-col space-y-1">
+                                      <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
+                                        Gutter cleaning (includes roof blow-off)
+                                      </FormLabel>
+                                      <span className="text-xs text-muted-foreground">Starting at $300</span>
+                                    </div>
                                   </FormItem>
                                 )}
                               />

@@ -8,16 +8,16 @@ const ServicesPreview = () => {
   const services = [
     {
       icon: Droplet,
-      title: "Roof Cleaning & Moss Removal",
-      description: "Safe moss removal and treatment with a 12-month guarantee.",
+      title: "Roof cleaning",
+      description: "Safe moss removal and treatment with a 12-month moss-free guarantee.",
       price: "Starting at $500",
       link: "/roof-cleaning",
       size: "large"
     },
     {
       icon: Car,
-      title: "Gutter Cleaning + Roof Blow-Off",
-      description: "Complete hand cleaning with downspout flush.",
+      title: "Gutter cleaning",
+      description: "Complete hand cleaning with downspout flush (includes roof blow-off).",
       price: "Starting at $300",
       link: "/gutter-cleaning",
       size: "small"
