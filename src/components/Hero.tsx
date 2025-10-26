@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, Star, Shield } from "lucide-react";
 import heroImage from "@/assets/hero-roof-cleaning.jpg";
+import { navigateToContact } from "@/lib/navigation";
 
 const Hero = () => {
   const handleGetQuote = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    navigateToContact();
   };
 
   const handleCall = () => {

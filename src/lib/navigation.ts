@@ -14,17 +14,17 @@ export const navigateToContact = () => {
       const formElement = contactElement.querySelector('form') as HTMLElement | null;
       const target = (formElement ?? (contactElement as HTMLElement));
 
-      // Compute dynamic offset: sticky top bar + header position + height
+      // Compute dynamic offset using element bottoms + small padding
       const topBar = document.getElementById('sticky-top-bar') as HTMLElement | null;
       const header = document.getElementById('site-header') as HTMLElement | null;
       let offset = 0;
+      const extra = 12; // small buffer so content clears the header shadow
       if (header) {
-        const headerTop = parseInt(getComputedStyle(header).top) || 0;
-        offset = headerTop + header.offsetHeight;
+        offset = header.getBoundingClientRect().bottom + extra;
       } else if (topBar) {
-        offset = topBar.offsetHeight;
+        offset = topBar.getBoundingClientRect().bottom + extra;
       } else {
-        offset = 80; // sensible default
+        offset = 92; // default reasonable offset
       }
       const y = target.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top: y, behavior: 'smooth' });

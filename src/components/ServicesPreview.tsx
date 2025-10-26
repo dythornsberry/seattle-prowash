@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Droplet, Car } from "lucide-react";
+import { navigateToContact } from "@/lib/navigation";
 
 const ServicesPreview = () => {
   const services = [
@@ -52,13 +53,7 @@ const ServicesPreview = () => {
                   <Button 
                     variant="cta-orange" 
                     size="sm"
-                    onClick={() => {
-                      if (window.location.pathname === '/') {
-                        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                      } else {
-                        window.location.href = '/#contact';
-                      }
-                    }}
+                    onClick={navigateToContact}
                   >
                     Get My Free Quote →
                   </Button>
@@ -72,13 +67,7 @@ const ServicesPreview = () => {
           <Button 
             variant="cta-orange" 
             size="xl"
-            onClick={() => {
-              if (window.location.pathname === '/') {
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-              } else {
-                window.location.href = '/#contact';
-              }
-            }}
+            onClick={navigateToContact}
           >
             Get My Free Quote →
           </Button>

@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MessageSquare, FileText } from "lucide-react";
+import { navigateToContact } from "@/lib/navigation";
 
 const DesktopFloatingCTA = () => {
   const handleQuote = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    navigateToContact();
   };
 
   const handleCall = () => {

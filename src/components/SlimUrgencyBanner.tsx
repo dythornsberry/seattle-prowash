@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { AlertTriangle } from "lucide-react";
+import { navigateToContact } from "@/lib/navigation";
 
 const SlimUrgencyBanner = () => {
   return (
@@ -16,9 +17,7 @@ const SlimUrgencyBanner = () => {
             variant="cta-orange"
             size="sm"
             className="whitespace-nowrap"
-            onClick={() => {
-              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-            }}
+            onClick={navigateToContact}
           >
             Get a Fast Quote
           </Button>

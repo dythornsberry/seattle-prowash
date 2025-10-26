@@ -203,13 +203,7 @@ const BeforeAfterSlider = () => {
               <Button 
                 variant="prowash-primary" 
                 size="xl"
-                onClick={() => {
-                  if (window.location.pathname === '/') {
-                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                  } else {
-                    window.location.href = '/#contact';
-                  }
-                }}
+                onClick={navigateToContact}
               >
                 Get My Free Quote
               </Button>

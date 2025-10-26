@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
+import { navigateToContact } from "@/lib/navigation";
 
 const MobileBottomBar = () => {
   const handleCall = () => {
@@ -20,7 +21,7 @@ const MobileBottomBar = () => {
         location: 'mobile_bottom_bar'
       });
     }
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    navigateToContact();
   };
 
   return (

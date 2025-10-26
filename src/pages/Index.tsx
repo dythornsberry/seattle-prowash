@@ -46,17 +46,17 @@ const Index = () => {
           // Prefer the form inside contact on all devices if present
           const formElement = element.querySelector('form') as HTMLElement | null;
           const target = (formElement && hash === 'contact') ? formElement : (element as HTMLElement);
-          // Compute dynamic offset
+          // Compute dynamic offset using element bottoms + small padding
           const topBar = document.getElementById('sticky-top-bar') as HTMLElement | null;
           const header = document.getElementById('site-header') as HTMLElement | null;
+          const extra = 12;
           let offset = 0;
           if (header) {
-            const headerTop = parseInt(getComputedStyle(header).top) || 0;
-            offset = headerTop + header.offsetHeight;
+            offset = header.getBoundingClientRect().bottom + extra;
           } else if (topBar) {
-            offset = topBar.offsetHeight;
+            offset = topBar.getBoundingClientRect().bottom + extra;
           } else {
-            offset = 80;
+            offset = 92;
           }
           const y = target.getBoundingClientRect().top + window.scrollY - offset;
           window.scrollTo({ top: y, behavior: 'smooth' });
@@ -105,14 +105,14 @@ const Index = () => {
           const target = (formElement && hash === '#contact') ? formElement : (element as HTMLElement);
           const topBar = document.getElementById('sticky-top-bar') as HTMLElement | null;
           const header = document.getElementById('site-header') as HTMLElement | null;
+          const extra = 12;
           let offset = 0;
           if (header) {
-            const headerTop = parseInt(getComputedStyle(header).top) || 0;
-            offset = headerTop + header.offsetHeight;
+            offset = header.getBoundingClientRect().bottom + extra;
           } else if (topBar) {
-            offset = topBar.offsetHeight;
+            offset = topBar.getBoundingClientRect().bottom + extra;
           } else {
-            offset = 80;
+            offset = 92;
           }
           const y = target.getBoundingClientRect().top + window.scrollY - offset;
           window.scrollTo({ top: y, behavior: 'smooth' });

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { AlertTriangle, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { navigateToContact } from "@/lib/navigation";
 
 const FloatingMossCTA = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -79,9 +80,7 @@ const FloatingMossCTA = () => {
           variant="cta-orange"
           size="sm"
           className="w-full bg-bright-orange hover:bg-bright-orange/90 text-white font-bold"
-          onClick={() => {
-            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-          }}
+          onClick={navigateToContact}
         >
           Get a Fast Quote
         </Button>

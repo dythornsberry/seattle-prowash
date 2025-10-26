@@ -1,5 +1,6 @@
 import { Star, Shield, Clock, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { navigateToContact } from "@/lib/navigation";
 
 const TrustBar = () => {
   const trustPoints = [
@@ -59,9 +60,7 @@ const TrustBar = () => {
               variant="cta-orange" 
               size="sm"
               className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold"
-              onClick={() => {
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-              }}
+            onClick={navigateToContact}
             >
               GET YOUR FREE QUOTE TODAY
             </Button>

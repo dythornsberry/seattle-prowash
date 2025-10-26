@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MessageSquare, FileText, X } from "lucide-react";
 import { useState } from "react";
+import { navigateToContact } from "@/lib/navigation";
 
 const UnifiedContactBar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -15,7 +16,7 @@ const UnifiedContactBar = () => {
 
   const handleQuote = () => {
     setIsExpanded(false);
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    navigateToContact();
   };
 
   return (

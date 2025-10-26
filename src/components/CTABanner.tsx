@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Clock, Phone } from "lucide-react";
+import { navigateToContact } from "@/lib/navigation";
 
 const CTABanner = () => {
   return (
@@ -22,13 +23,7 @@ const CTABanner = () => {
             <Button 
               size="xl" 
               className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 text-lg rounded-lg shadow-lg"
-              onClick={() => {
-                if (window.location.pathname === '/') {
-                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                  window.location.href = '/#contact';
-                }
-              }}
+              onClick={navigateToContact}
             >
               Get a Fast Quote
             </Button>
