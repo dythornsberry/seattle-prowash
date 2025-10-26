@@ -14,6 +14,7 @@ import roofCleaningImage from "@/assets/roof-moss-removal-detailed-before-after.
 import roofBA1 from "@/assets/asphalt-roof-moss-cleaning-before-after.jpg";
 import roofBA2 from "@/assets/metal-roof-cleaning-before-after.jpg";
 import roofBA3 from "@/assets/roof-softwash-before-after.jpg";
+import { navigateToContact } from "@/lib/navigation";
 
 const RoofCleaning = () => {
   useEffect(() => {
@@ -82,14 +83,7 @@ const RoofCleaning = () => {
                     <Button 
                       variant="cta-orange" 
                       size="xl"
-                      onClick={() => {
-                        const contactElement = document.getElementById('contact');
-                        if (contactElement) {
-                          contactElement.scrollIntoView({ behavior: 'smooth' });
-                        } else {
-                          window.location.href = '/#contact';
-                        }
-                      }}
+                      onClick={navigateToContact}
                     >
                       Get My Free Quote →
                     </Button>
@@ -190,14 +184,7 @@ const RoofCleaning = () => {
                     <Button 
                       variant="outline" 
                       className="w-full"
-                      onClick={() => {
-                        const contactElement = document.getElementById('contact');
-                        if (contactElement) {
-                          contactElement.scrollIntoView({ behavior: 'smooth' });
-                        } else {
-                          window.location.href = '/#contact';
-                        }
-                      }}
+                      onClick={navigateToContact}
                     >
                       Get a Fast Quote
                     </Button>
@@ -218,14 +205,7 @@ const RoofCleaning = () => {
                     <Button 
                       variant="prowash-primary" 
                       className="w-full"
-                      onClick={() => {
-                        const contactElement = document.getElementById('contact');
-                        if (contactElement) {
-                          contactElement.scrollIntoView({ behavior: 'smooth' });
-                        } else {
-                          window.location.href = '/#contact';
-                        }
-                      }}
+                      onClick={navigateToContact}
                     >
                       Get a Fast Quote
                     </Button>
@@ -243,14 +223,7 @@ const RoofCleaning = () => {
                     <Button 
                       variant="outline" 
                       className="w-full"
-                      onClick={() => {
-                        const contactElement = document.getElementById('contact');
-                        if (contactElement) {
-                          contactElement.scrollIntoView({ behavior: 'smooth' });
-                        } else {
-                          window.location.href = '/#contact';
-                        }
-                      }}
+                      onClick={navigateToContact}
                     >
                       Get a Fast Quote
                     </Button>
@@ -388,14 +361,7 @@ const RoofCleaning = () => {
                 <Button 
                   variant="prowash-secondary" 
                   size="xl"
-                  onClick={() => {
-                    const contactElement = document.getElementById('contact');
-                    if (contactElement) {
-                      contactElement.scrollIntoView({ behavior: 'smooth' });
-                    } else {
-                      window.location.href = '/#contact';
-                    }
-                  }}
+                  onClick={navigateToContact}
                 >
                   Get a Fast Quote
                 </Button>

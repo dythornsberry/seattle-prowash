@@ -13,6 +13,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Phone, AlertTriangle } from "lucide-react";
 import mossRemovalImage from "@/assets/roof-moss-removal-detailed-before-after.jpg";
+import { navigateToContact } from "@/lib/navigation";
 
 const RoofMoss = () => {
   useEffect(() => {
@@ -81,14 +82,7 @@ const RoofMoss = () => {
                     <Button 
                       variant="prowash-secondary" 
                       size="xl"
-                      onClick={() => {
-                        const contactElement = document.getElementById('contact');
-                        if (contactElement) {
-                          contactElement.scrollIntoView({ behavior: 'smooth' });
-                        } else {
-                          window.location.href = '/#contact';
-                        }
-                      }}
+                      onClick={navigateToContact}
                     >
                       Get a Fast Quote
                     </Button>
@@ -234,14 +228,7 @@ const RoofMoss = () => {
                 <Button 
                   variant="prowash-secondary" 
                   size="xl"
-                  onClick={() => {
-                    const contactElement = document.getElementById('contact');
-                    if (contactElement) {
-                      contactElement.scrollIntoView({ behavior: 'smooth' });
-                    } else {
-                      window.location.href = '/#contact';
-                    }
-                  }}
+                  onClick={navigateToContact}
                 >
                   Get a Fast Quote
                 </Button>

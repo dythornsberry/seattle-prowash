@@ -11,6 +11,7 @@ import { CheckCircle, Phone } from "lucide-react";
 import gutterCleaningImage from "@/assets/gutter-cleaning-before-after.jpg";
 import gutterBA1 from "@/assets/gutter-brightening-before-after.jpg";
 import gutterBA2 from "@/assets/gutter-cleaning-before-after.jpg";
+import { navigateToContact } from "@/lib/navigation";
 
 const GutterCleaning = () => {
   useEffect(() => {
@@ -107,14 +108,7 @@ const GutterCleaning = () => {
                     <Button 
                       variant="cta-orange" 
                       size="xl"
-                      onClick={() => {
-                        const contactElement = document.getElementById('contact');
-                        if (contactElement) {
-                          contactElement.scrollIntoView({ behavior: 'smooth' });
-                        } else {
-                          window.location.href = '/#contact';
-                        }
-                      }}
+                      onClick={navigateToContact}
                     >
                       Get My Free Quote →
                     </Button>
@@ -279,14 +273,7 @@ const GutterCleaning = () => {
                 <Button 
                   variant="prowash-secondary" 
                   size="xl"
-                  onClick={() => {
-                    const contactElement = document.getElementById('contact');
-                    if (contactElement) {
-                      contactElement.scrollIntoView({ behavior: 'smooth' });
-                    } else {
-                      window.location.href = '/#contact';
-                    }
-                  }}
+                  onClick={navigateToContact}
                 >
                   Get a Fast Quote
                 </Button>
