@@ -78,7 +78,7 @@ const RoofCleaning = () => {
                     <li><strong className="text-brand-orange">3)</strong> Relax while we work, before/after photos provided</li>
                   </ul>
 
-                  <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                  <div className="flex flex-col sm:flex-row gap-4 mb-6">
                     <Button 
                       variant="cta-orange" 
                       size="xl"
@@ -96,12 +96,17 @@ const RoofCleaning = () => {
                     <Button 
                       variant="outline"
                       size="xl"
-                      className="border-white text-white hover:bg-white hover:text-brand-navy"
+                      className="border-2 border-white text-white hover:bg-white hover:text-brand-navy"
                       onClick={() => window.location.href = 'tel:2067526690'}
                     >
                       Call 206-752-6690
                     </Button>
                   </div>
+                  
+                  {/* Trust Indicators */}
+                  <p className="text-white/80 text-sm">
+                    ✓ 12-Month Guarantee  ✓ Same-Day Quotes  ✓ 180+ Reviews
+                  </p>
                 </div>
                 <div className="fade-up">
                   <img

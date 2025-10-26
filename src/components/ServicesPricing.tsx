@@ -31,7 +31,15 @@ const PRICING = {
 };
 
 const ServicesPricing = () => {
-  const handleGetQuote = (service: string) => {
+  const handleGetQuote = (service: string, price: string) => {
+    // Track pricing card click
+    if (typeof (window as any).gtag !== 'undefined') {
+      (window as any).gtag('event', 'pricing_card_click', {
+        service_type: service,
+        starting_price: price
+      });
+    }
+    
     // Store the selected service preference
     sessionStorage.setItem('preselectedService', service);
     navigateToContact();
@@ -76,7 +84,7 @@ const ServicesPricing = () => {
                 variant="outline" 
                 size="lg" 
                 className="w-full"
-                onClick={() => handleGetQuote('Gutter Cleaning')}
+                onClick={() => handleGetQuote('Gutter Cleaning', PRICING.gutterCleaning.price)}
               >
                 Get Quote →
               </Button>
@@ -109,7 +117,7 @@ const ServicesPricing = () => {
                 variant="prowash" 
                 size="lg" 
                 className="w-full"
-                onClick={() => handleGetQuote('Roof Cleaning & Moss Removal')}
+                onClick={() => handleGetQuote('Roof Cleaning & Moss Removal', PRICING.roofCleaning.price)}
               >
                 Get Quote →
               </Button>

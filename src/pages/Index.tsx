@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { initScrollTracking } from "@/utils/scrollTracking";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TrustSignalSection from "@/components/TrustSignalSection";
@@ -24,11 +25,13 @@ import ServiceAreaMap from "@/components/ServiceAreaMap";
 import ServicesPricing from "@/components/ServicesPricing";
 
 const Index = () => {
-  // Enable smooth scrolling globally
+  // Enable smooth scrolling globally and scroll tracking
   useEffect(() => {
     document.documentElement.style.scrollBehavior = 'smooth';
+    const cleanup = initScrollTracking();
     return () => {
       document.documentElement.style.scrollBehavior = '';
+      cleanup?.();
     };
   }, []);
 
@@ -145,6 +148,37 @@ const Index = () => {
           </div>
           
           <ServicesPricing />
+          
+          {/* Why Choose Us Section */}
+          <div className="bg-background py-12">
+            <div className="container mx-auto px-4 max-w-4xl">
+              <div className="bg-brand-navy text-white py-8 px-6 rounded-lg">
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">Why Choose Seattle ProWash?</h3>
+                <ul className="space-y-3 max-w-2xl mx-auto">
+                  <li className="flex items-start gap-3">
+                    <span className="text-brand-orange text-xl">✓</span>
+                    <span className="text-base">Family-owned & operated in Kenmore</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-brand-orange text-xl">✓</span>
+                    <span className="text-base">180+ five-star Google reviews</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-brand-orange text-xl">✓</span>
+                    <span className="text-base">12-month moss-free guarantee</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-brand-orange text-xl">✓</span>
+                    <span className="text-base">Licensed, bonded & insured</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-brand-orange text-xl">✓</span>
+                    <span className="text-base">Same-day quotes available</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
           
           <div id="contact" className="bg-off-white">
             <TwoStepQuoteForm />

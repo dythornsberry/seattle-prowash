@@ -81,8 +81,9 @@ const TwoStepQuoteForm = () => {
     try {
       // Track analytics
       if (typeof (window as any).gtag !== 'undefined') {
-        (window as any).gtag('event', 'quote_submit', {
-          services: values.services.join(", "),
+        (window as any).gtag('event', 'quote_form_submit', {
+          service_selected: values.services.join(", "),
+          page_location: window.location.pathname
         });
       }
 
@@ -368,6 +369,22 @@ const TwoStepQuoteForm = () => {
                         )}
                       />
 
+                      {/* Trust Badges Above Submit */}
+                      <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 py-3 px-3 bg-muted/30 rounded-lg">
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-brand-orange" />
+                          <span className="text-xs md:text-sm font-medium text-foreground">180+ ⭐⭐⭐⭐⭐ Reviews</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Shield className="w-4 h-4 text-brand-orange" />
+                          <span className="text-xs md:text-sm font-medium text-foreground">12-Month Guarantee</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-brand-orange" />
+                          <span className="text-xs md:text-sm font-medium text-foreground">Licensed & Insured</span>
+                        </div>
+                      </div>
+
                       <Button
                         type="submit"
                         variant="cta-orange"
@@ -376,19 +393,6 @@ const TwoStepQuoteForm = () => {
                       >
                         {isSubmitting ? "Sending..." : "Get My Free Quote →"}
                       </Button>
-
-                      <div className="text-center space-y-1">
-                        <p className="text-sm font-semibold text-brand-navy flex items-center justify-center gap-2 flex-wrap">
-                          <span className="flex items-center gap-1">
-                            <CheckCircle className="w-4 h-4 text-brand-orange" />
-                            180+ Five-Star Reviews
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <CheckCircle className="w-4 h-4 text-brand-orange" />
-                            12-Month Moss-Free Guarantee
-                          </span>
-                        </p>
-                      </div>
                     </form>
                   </Form>
                 </CardContent>

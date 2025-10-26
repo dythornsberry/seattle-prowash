@@ -12,6 +12,17 @@ const Header = () => {
 
   const phoneNumber = "206-752-6690";
   
+  const handleCallClick = () => {
+    // Track phone call click
+    if (typeof (window as any).gtag !== 'undefined') {
+      (window as any).gtag('event', 'phone_call_click', {
+        location: 'header',
+        phone_number: '2067526690'
+      });
+    }
+    window.location.href = `tel:1${phoneNumber.replace(/[^0-9]/g, '')}`;
+  };
+  
   interface NavigationItem {
     name: string;
     href: string;
@@ -66,13 +77,13 @@ const Header = () => {
 
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center space-x-3">
-            <a 
-              href={`tel:1${phoneNumber.replace(/[^0-9]/g, '')}`}
+            <button
+              onClick={handleCallClick}
               className="flex items-center gap-2 text-white hover:text-brand-orange font-medium transition-colors duration-250"
             >
               <Phone className="w-4 h-4" />
               {phoneNumber}
-            </a>
+            </button>
           </div>
 
           {/* Mobile Controls */}
@@ -80,7 +91,7 @@ const Header = () => {
             <Button 
               variant="prowash-phone" 
               size="sm"
-              onClick={() => window.location.href = `tel:1${phoneNumber.replace(/[^0-9]/g, '')}`}
+              onClick={handleCallClick}
               className="border-white text-white hover:bg-white hover:text-brand-navy"
             >
               <Phone className="w-4 h-4" />
