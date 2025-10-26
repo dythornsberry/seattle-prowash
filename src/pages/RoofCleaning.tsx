@@ -152,7 +152,7 @@ const RoofCleaning = () => {
           faqs={[
             {
               question: "Will you damage my shingles with high pressure?",
-              answer: "No. We never use high pressure on asphalt shingles. Our soft-wash process uses low pressure and specialized solutions to safely remove moss, algae, and lichen without damaging your roof or voiding warranties."
+              answer: "We never use high pressure on asphalt shingles. Our soft-wash process uses low pressure and specialized solutions to safely remove moss, algae, and lichen without damaging your roof or voiding warranties."
             },
             {
               question: "How long does the moss treatment last?",
@@ -160,7 +160,7 @@ const RoofCleaning = () => {
             },
             {
               question: "Do I need to be home during the roof cleaning?",
-              answer: "No, you don't need to be home. We work on the exterior only and will send you before/after photos when the job is complete. Just make sure we have clear access to your roof."
+              answer: "You don't need to be home. We work on the exterior only and will send you before/after photos when the job is complete. Just make sure we have clear access to your roof."
             }
           ]}
         />
@@ -365,7 +365,7 @@ const RoofCleaning = () => {
                   service="Roof Cleaning"
                 />
                 <TestimonialCard 
-                  quote="Really happy with the work the Seattle Pro Wash team did to clean the transparent roof of my backyard pergola. Quick, friendly and efficient – highly recommended!"
+                  quote="Really happy with the work the Seattle Pro Wash team did to clean the transparent roof of my backyard pergola. Quick, friendly and efficient. Highly recommended!"
                   author="Aileen I."
                   service="Pergola Roof Cleaning"
                 />

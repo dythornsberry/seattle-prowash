@@ -229,7 +229,7 @@ const Services = () => {
                             <>
                               <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-4">
                                 <h4 className="font-bold text-brand-navy mb-2 text-sm">Q: Will pressure washing damage my surfaces?</h4>
-                                <p className="text-muted-foreground text-sm">A: No. We use appropriate pressure levels and professional surface cleaners to protect your concrete while removing all buildup.</p>
+                                <p className="text-muted-foreground text-sm">A: We use appropriate pressure levels and professional surface cleaners to protect your concrete while removing all buildup.</p>
                               </div>
                               <div className="bg-brand-white border border-brand-orange/20 rounded-lg p-4">
                                 <h4 className="font-bold text-brand-navy mb-2 text-sm">Q: How long does pressure washing take?</h4>

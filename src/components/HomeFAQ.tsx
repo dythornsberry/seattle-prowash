@@ -11,7 +11,7 @@ const HomeFAQ = () => {
   const topFAQs = [
     {
       question: "What does roof or gutter cleaning cost?",
-      answer: "Roof cleaning typically ranges from $500–$1,000, while gutter cleaning is $250–$500. Final pricing depends on roof size, pitch, condition and how long it's been since your last service.",
+      answer: "Roof cleaning typically ranges from $500-$1,000, while gutter cleaning is $250-$500. Final pricing depends on roof size, pitch, condition and how long it's been since your last service.",
       icon: CheckCircle
     },
     {

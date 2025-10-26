@@ -185,7 +185,7 @@ const GutterCleaning = () => {
             },
             {
               question: "Do you remove the debris from my property?",
-              answer: "Absolutely. We bag all gutter debris and remove it from your property. You won't have any mess to clean up after we're done."
+              answer: "We bag all gutter debris and remove it from your property. There's no mess to clean up after we're done."
             }
           ]}
         />
