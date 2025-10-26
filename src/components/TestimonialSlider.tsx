@@ -8,60 +8,32 @@ const TestimonialSlider = () => {
   
   const testimonials = [
     {
-      content: "I needed my deck power washed immediately and heard from my neighbors that Seattle Prowash was legit. Dylan and his team did an excellent job and I was thoroughly impressed with their work. Dylan is easily reachable and his team does great work.",
-      author: "Lucas H.",
-      location: "Kenmore",
-      rating: 5,
-      service: "Deck Power Washing"
-    },
-    {
-      content: "Really happy with the work the Seattle Pro Wash team did to clean the transparent roof of my backyard pergola. It's a pretty high structure and a bit awkward to access, but they had the skills and tools to do the job right. The roof looks like new again. Quick friendly and efficient, highly recommended!",
-      author: "Aileen I.",
-      location: "Seattle Area",
-      rating: 5,
-      service: "Pergola Roof Cleaning"
-    },
-    {
       content: "These guys did an amazing job cleaning up my roof. They did a great job not damaging anything and i would definitely hire them again down the line.",
       author: "Daniel S.",
       location: "Bothell",
       rating: 5,
-      service: "Roof Cleaning in Bothell"
-    },
-    {
-      content: "My experience with Seattle pro wash has always been very good. They follow up on my calls, they use modern scheduling software that sends text confirmation/reminders which I like. On site they have always been very professional.",
-      author: "Jon R.",
-      location: "Seattle Area",
-      rating: 5,
-      service: "Roof & Concrete Cleaning"
-    },
-    {
-      content: "Seattle Pro Wash did an amazing job on my driveway! Service was friendly and efficient, they got it done in no time! Would definitely recommend.",
-      author: "Kai C.",
-      location: "Seattle Area",
-      rating: 5,
-      service: "Driveway Pressure Washing"
-    },
-    {
-      content: "Dylan is prompt, attentive to details and caring. He power washed our front driveway and back yard. The work was meticulously done and he made sure all the furniture was moved back in place before leaving. He even cleaned our side walkway!",
-      author: "YT C.",
-      location: "Seattle Area",
-      rating: 5,
-      service: "Driveway & Patio Cleaning"
+      service: "Roof Cleaning"
     },
     {
       content: "Prowash has very good service and did an excellent job they made my metal roof brand new again. I recommend these guys to everyone.",
       author: "Ajitesh S.",
       location: "Kirkland",
       rating: 5,
-      service: "Metal Roof Cleaning in Kirkland"
+      service: "Metal Roof Cleaning"
     },
     {
-      content: "These guys did a great job! They sent me a price quote very quickly after I inquired. We talked about all the different things that would be included in the service. Their prices were very reasonable for the scope they were going to handle.",
-      author: "Jolene G.",
+      content: "Really happy with the work the Seattle Pro Wash team did to clean the transparent roof of my backyard pergola. It's a pretty high structure and a bit awkward to access, but they had the skills and tools to do the job right. The roof looks like new again. Quick friendly and efficient, highly recommended!",
+      author: "Aileen I.",
       location: "Seattle Area",
       rating: 5,
-      service: "Quote Service"
+      service: "Roof Cleaning"
+    },
+    {
+      content: "My experience with Seattle pro wash has always been very good. They follow up on my calls, they use modern scheduling software that sends text confirmation/reminders which I like. On site they have always been very professional.",
+      author: "Jon R.",
+      location: "Seattle Area",
+      rating: 5,
+      service: "Roof & Gutter Cleaning"
     }
   ];
 

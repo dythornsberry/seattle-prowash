@@ -11,34 +11,40 @@ const HomeFAQ = () => {
   const topFAQs = [
     {
       question: "What does roof or gutter cleaning cost?",
-      answer: "Roof cleaning typically ranges from $500-$1,000, while gutter cleaning is $250-$500. Final pricing depends on roof size, pitch, condition and how long it's been since your last service.",
-      icon: CheckCircle
+      answer: "Most homes in our area range from $300–$1,200 depending on roof size, pitch, and access. Typical starting prices: Gutter Cleaning + Roof Blow-Off $300+, Roof Cleaning & Moss Removal $500+. We send same-day estimates.",
+      icon: CheckCircle,
+      cta: true
     },
     {
-      question: "How soon can you do the job?",
-      answer: "We strive to schedule most jobs within the same week. Peak seasons fill up quickly, so contact us early to secure your preferred date.",
-      icon: Clock
+      question: "How soon can you schedule my service?",
+      answer: "Most quotes same day; we usually schedule within 3–7 days (weather dependent). Urgent roof/gutter issues get priority.",
+      icon: Clock,
+      cta: true
     },
     {
       question: "Are you licensed and insured?",
-      answer: "Yes. Seattle ProWash is fully licensed, bonded and insured, so your property is protected.",
-      icon: Shield
+      answer: "Yes. Seattle ProWash is fully licensed, bonded and insured, so your property is protected. We follow all safety protocols and carry comprehensive liability coverage.",
+      icon: Shield,
+      cta: false
     },
     {
       question: "Do you remove moss? Do you offer treatments?",
-      answer: "Absolutely. We safely remove moss and apply long-lasting moss treatments to prevent regrowth. Our treatments are eco-friendly and tailored to the Pacific Northwest climate.",
-      icon: CheckCircle
+      answer: "Absolutely. We safely remove moss using gentle methods and apply our professional moss treatment with a 12-month moss-free guarantee (with basic maintenance).",
+      icon: CheckCircle,
+      cta: true
     },
     {
       question: "How do I get a quote?",
-      answer: "Simply fill out the 'Get My Free Quote' form or call/text us. We'll gather a few details and provide a no-obligation estimate.",
-      icon: CheckCircle
+      answer: "60-second form: name, address, phone, service needed. We look up your roof and text a firm price.",
+      icon: CheckCircle,
+      cta: true
     },
     {
       question: "What types of roofs do you service?",
-      answer: "We clean most residential roof types including asphalt shingles, metal, tile and cedar shake. For unique materials, please contact us.",
-      icon: CheckCircle
-    },
+      answer: "We service asphalt, metal, and many composite roof types. We use no pressure on shingles to protect your roof while removing moss and debris.",
+      icon: CheckCircle,
+      cta: false
+    }
   ];
 
   return (
@@ -69,7 +75,24 @@ const HomeFAQ = () => {
                     </span>
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pb-5 text-sm leading-relaxed">
-                    {faq.answer}
+                    <p className="mb-3">{faq.answer}</p>
+                    {faq.cta && (
+                      <a 
+                        href="#contact" 
+                        className="inline-flex items-center text-brand-orange hover:text-brand-orange/80 font-medium text-sm"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          const element = document.getElementById('contact');
+                          if (element) {
+                            const offset = 120;
+                            const y = element.getBoundingClientRect().top + window.scrollY - offset;
+                            window.scrollTo({ top: y, behavior: 'smooth' });
+                          }
+                        }}
+                      >
+                        Get My Free Quote <ArrowRight className="ml-1 w-4 h-4" />
+                      </a>
+                    )}
                   </AccordionContent>
                 </AccordionItem>
               );

@@ -120,7 +120,7 @@ const TwoStepQuoteForm = () => {
   const offerExpiryStr = offerExpiry.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 
   return (
-    <section id="contact" className="section-spacing bg-off-white/50">
+    <section id="contact" className="section-spacing bg-off-white/50 scroll-mt-20">{/* Added scroll-mt for anchor */}
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8 fade-up">

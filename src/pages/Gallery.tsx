@@ -26,7 +26,7 @@ import houseBefore from "@/assets/house-wash-exterior-before-after.jpg";
 import drivewayBefore from "@/assets/driveway-moss-cleaning-before-after.jpg";
 
 const Gallery = () => {
-  const [activeCategory, setActiveCategory] = useState("Roof Cleaning & Moss Removal");
+  const [activeCategory, setActiveCategory] = useState("All");
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   // Scroll to top on mount
@@ -38,8 +38,6 @@ const Gallery = () => {
     "All",
     "Roof Cleaning & Moss Removal", 
     "Gutter Cleaning",
-    "House Washing",
-    "Pressure Washing", 
     "Team at Work"
   ];
 
@@ -158,40 +156,6 @@ const Gallery = () => {
         service: "Roof Cleaning & Moss Removal"
       }
     ],
-    "House Washing": [
-      { 
-        src: houseBefore, 
-        alt: "House exterior cleaning before and after in Kenmore", 
-        title: "House Washing - Gentle Exterior Cleaning", 
-        location: "Kenmore", 
-        description: "Professional soft wash house cleaning safely removed dirt, mildew, and organic stains without damage to siding",
-        service: "House Washing"
-      },
-      { 
-        src: "/lovable-uploads/a1418643-21de-4dd3-a77d-eebe9209eaef.png", 
-        alt: "House siding cleaning before and after showing dramatic cleaning results", 
-        title: "Siding Cleaning Transformation", 
-        location: "Seattle Area", 
-        description: "Professional house siding cleaning - removing dirt, algae, and staining to restore clean appearance",
-        service: "House Washing"
-      },
-      { 
-        src: "/lovable-uploads/da123d29-831c-41a6-be6e-0dab3deef9f0.png", 
-        alt: "House washing before and after showing siding transformation", 
-        title: "Professional House Washing", 
-        location: "Seattle Area", 
-        description: "Complete house exterior washing - gentle yet effective cleaning that restores siding appearance",
-        service: "House Washing"
-      },
-      { 
-        src: "/lovable-uploads/11602706-3a5c-4674-b4c2-f6957b0984d2.png", 
-        alt: "Professional technician performing house washing service", 
-        title: "House Washing in Progress", 
-        location: "Seattle Area", 
-        description: "Our experienced technician applying gentle house washing treatment to exterior siding for optimal results",
-        service: "House Washing"
-      }
-    ],
     "Gutter Cleaning": [
       { 
         src: gutterBefore, 
@@ -232,258 +196,6 @@ const Gallery = () => {
         location: "Seattle Area", 
         description: "Complete roof and gutter cleaning service - removing moss, debris, and organic buildup from gutters and roof surface",
         service: "Gutter Cleaning"
-      }
-    ],
-    "Pressure Washing": [
-      { 
-        src: patioBefore, 
-        alt: "Patio pressure washing transformation in Seattle", 
-        title: "Concrete Surface Restoration", 
-        location: "Seattle", 
-        description: "Complete concrete patio restoration. Pressure washed to remove heavy moss buildup, stains, and years of accumulated grime",
-        service: "Pressure Washing"
-      },
-      { 
-        src: drivewayBefore, 
-        alt: "Driveway moss removal and cleaning in Kirkland", 
-        title: "Driveway Surface Cleaning", 
-        location: "Kirkland", 
-        description: "Professional driveway pressure washing removed embedded moss, oil stains, and dirt to restore clean appearance",
-        service: "Pressure Washing"
-      },
-      { 
-        src: dylanOwnerPatioPressureWashing, 
-        alt: "Dylan pressure washing patio surface", 
-        title: "Professional Surface Cleaning", 
-        location: "Bellevue", 
-        description: "Professional surface cleaning service in action",
-        service: "Pressure Washing"
-      },
-      { 
-        src: "/lovable-uploads/b629f07e-3990-42a8-920f-554f60488376.png", 
-        alt: "Second story patio pressure washing before and after transformation", 
-        title: "2nd Story Patio Restoration", 
-        location: "Seattle Area", 
-        description: "Dramatic transformation of 2nd story concrete patio - before and after pressure washing",
-        service: "Pressure Washing"
-      },
-      { 
-        src: "/lovable-uploads/d07dd994-a56c-4706-8503-37b4bdde1119.png", 
-        alt: "Vinyl fence pressure washing before and after cleaning", 
-        title: "Vinyl Fence Restoration", 
-        location: "Seattle Area", 
-        description: "Professional vinyl fence pressure washing - removing dirt, moss, and stains to restore like-new appearance",
-        service: "Pressure Washing"
-      },
-      { 
-        src: "/lovable-uploads/405b2518-e88f-4784-9f29-4abab64c56e4.png", 
-        alt: "Concrete staircase pressure washing dramatic before and after transformation", 
-        title: "Concrete Staircase Restoration", 
-        location: "Seattle, WA", 
-        description: "Incredible transformation of heavily soiled concrete stairs - professional pressure washing removes years of buildup",
-        service: "Pressure Washing"
-      },
-      { 
-        src: "/lovable-uploads/6792eaac-aa82-4a1d-bbea-f66f775c2275.png", 
-        alt: "Retaining wall and brick walkway pressure washing before and after transformation", 
-        title: "Retaining Wall & Brick Restoration", 
-        location: "Seattle, WA", 
-        description: "Amazing transformation of moss-covered retaining wall and brick walkway - professional pressure washing restoration",
-        service: "Pressure Washing"
-      },
-      { 
-        src: "/lovable-uploads/30f25fb0-b625-4f3e-8328-3084ca71c36b.png", 
-        alt: "Heavily soiled concrete patio before cleaning showing extreme moss and dirt buildup", 
-        title: "Extreme Concrete Patio Restoration - Before", 
-        location: "Lake Forest Park", 
-        description: "Severely neglected concrete patio with heavy moss, algae, and dirt accumulation requiring intensive pressure washing",
-        service: "Pressure Washing"
-      },
-      { 
-        src: "/lovable-uploads/0d94bc5e-3592-4aa4-877a-d124110a3d0e.png", 
-        alt: "Concrete patio after professional pressure washing showing dramatic transformation", 
-        title: "Extreme Concrete Patio Restoration - After", 
-        location: "Lake Forest Park", 
-        description: "Incredible transformation of concrete patio - professional pressure washing reveals clean, like-new surface",
-        service: "Pressure Washing"
-      },
-      { 
-        src: "/lovable-uploads/61bfb1f1-0bee-423a-be7a-c49142b6fd6b.png", 
-        alt: "Front walkway before pressure washing showing heavy moss and staining", 
-        title: "Front Walkway Restoration - Before", 
-        location: "Seattle Area", 
-        description: "Heavily stained concrete walkway with moss growth requiring professional pressure washing treatment",
-        service: "Pressure Washing"
-      },
-      { 
-        src: "/lovable-uploads/7a0d1b2c-03a2-4054-8cf2-6bdc1dca519c.png", 
-        alt: "Clean front walkway after professional pressure washing transformation", 
-        title: "Front Walkway Restoration - After", 
-        location: "Seattle Area", 
-        description: "Dramatic transformation of front walkway - professional pressure washing removes years of buildup and staining",
-        service: "Pressure Washing"
-      },
-      { 
-        src: "/lovable-uploads/93a442fb-b597-4fdb-95b1-e0ca6294ae45.png", 
-        alt: "Composite deck before and after gentle cleaning restoration", 
-        title: "Composite Deck Restoration", 
-        location: "Seattle Area", 
-        description: "Professional gentle cleaning restores composite deck to original color and beauty",
-        service: "Pressure Washing"
-      },
-      { 
-        src: "/lovable-uploads/df415af5-fda0-44d2-aefc-2dd719bd41fd.png", 
-        alt: "Composite deck staircase before and after pressure washing", 
-        title: "Deck Staircase Cleaning", 
-        location: "Seattle Area", 
-        description: "Professional composite deck and staircase cleaning - removing buildup and restoring original appearance",
-        service: "Pressure Washing"
-      },
-      { 
-        src: "/lovable-uploads/421f2edc-aeab-4325-add0-bfac9af5b8e0.png", 
-        alt: "Asphalt driveway pressure washing before and after showing moss removal", 
-        title: "Asphalt Driveway Deep Clean", 
-        location: "Seattle Area", 
-        description: "Professional asphalt driveway pressure washing - removing heavy moss buildup and restoring clean appearance",
-        service: "Pressure Washing"
-      },
-      { 
-        src: "/lovable-uploads/0c381942-caa7-4984-890e-3512190e2d02.png", 
-        alt: "Residential walkway pressure washing before and after transformation", 
-        title: "Residential Walkway Restoration", 
-        location: "Seattle Area", 
-        description: "Complete walkway transformation - professional pressure washing removes moss and organic buildup",
-        service: "Pressure Washing"
-      },
-      { 
-        src: "/lovable-uploads/5addf656-858e-47e3-87a9-1db331528b89.png", 
-        alt: "Retaining wall pressure washing in progress showing dramatic clean vs dirty comparison", 
-        title: "Retaining Wall Restoration In Progress", 
-        location: "Seattle Area", 
-        description: "Professional retaining wall pressure washing in action - dramatic difference between cleaned and uncleaned sections",
-        service: "Pressure Washing"
-      },
-      { 
-        src: "/lovable-uploads/3ea4a872-b0d7-4474-bd88-15f516d47269.png", 
-        alt: "Concrete staircase before and after pressure washing showing dramatic transformation", 
-        title: "Concrete Staircase Deep Clean", 
-        location: "Seattle Area", 
-        description: "Professional concrete staircase pressure washing - removing moss, debris, and organic buildup for dramatic results",
-        service: "Pressure Washing"
-      },
-      { 
-        src: "/lovable-uploads/c3386497-89a0-4539-b130-d2f2a5b71098.png", 
-        alt: "Professional technician using surface cleaner on driveway", 
-        title: "Surface Cleaner in Action", 
-        location: "Seattle Area", 
-        description: "Our experienced technician using professional surface cleaning equipment for even, thorough results",
-        service: "Pressure Washing"
-      },
-      { 
-        src: "/lovable-uploads/e71dc1ab-f8e0-4119-955e-97c1575a9493.png", 
-        alt: "Professional technician with surface cleaner equipment on patio", 
-        title: "Professional Surface Cleaning", 
-        location: "Seattle Area", 
-        description: "Expert technician performing professional surface cleaning with specialized equipment for optimal results",
-        service: "Pressure Washing"
-      },
-      { 
-        src: "/lovable-uploads/f5ad7abe-66c3-4d28-9e13-0b6502f2accb.png", 
-        alt: "Paver patio pressure washing before and after showing color restoration", 
-        title: "Paver Patio Color Restoration", 
-        location: "Seattle Area", 
-        description: "Amazing transformation of paver patio - professional pressure washing brings back original colors and beauty",
-        service: "Pressure Washing"
-      },
-      { 
-        src: "/lovable-uploads/a11c1a99-bb8a-4f6e-9560-6fb43b8f452d.png", 
-        alt: "Concrete driveway pressure washing before and after showing dramatic cleaning results", 
-        title: "Driveway Deep Clean Transformation", 
-        location: "Seattle Area", 
-        description: "Professional concrete driveway pressure washing - removing stains, moss, and buildup for dramatic results",
-        service: "Pressure Washing"
-      },
-      { 
-        src: "/lovable-uploads/a5496294-1c91-46fa-b818-fc3078124376.png", 
-        alt: "Paver patio pressure washing before and after showing color restoration", 
-        title: "Paver Patio Deep Clean", 
-        location: "Seattle Area", 
-        description: "Professional paver patio pressure washing - removing organic buildup and restoring original colors",
-        service: "Pressure Washing"
-      },
-      { 
-        src: "/lovable-uploads/9147ed99-2a8c-4306-8495-352fc0ed8049.png", 
-        alt: "Concrete garage pad pressure washing before and after transformation", 
-        title: "Garage Pad Restoration", 
-        location: "Seattle Area", 
-        description: "Professional concrete garage pad pressure washing - removing heavy staining and buildup",
-        service: "Pressure Washing"
-      },
-      { 
-        src: "/lovable-uploads/ec1b3a15-96fe-4ee4-a4e5-a3ac395e72bc.png", 
-        alt: "HOA community patio pressure washing before and after transformation", 
-        title: "HOA Community Patio Cleaning", 
-        location: "Seattle Area", 
-        description: "Professional patio cleaning for HOA community - restoring walkways and common areas",
-        service: "Pressure Washing"
-      },
-      { 
-        src: "/lovable-uploads/4c0b025c-98d6-4265-931f-3290ae71575e.png", 
-        alt: "Residential driveway pressure washing before and after showing moss removal", 
-        title: "Residential Driveway Restoration", 
-        location: "Seattle Area", 
-        description: "Professional residential driveway pressure washing - removing moss, debris, and organic buildup",
-        service: "Pressure Washing"
-      }
-    ],
-    "Commercial": [
-      { 
-        src: "https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-6/505253534_10221752307676177_2976856671973644899_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=NjUx8nup8JoQ7kNvwEvGqBK&_nc_oc=AdlXg8sTnsgV_4z2xolrpzaZkOt6jY5s0lvaQlhmDBkIYJALJtkPj1BVWg4xs8KLjjw&_nc_zt=23&_nc_ht=scontent-sea1-1.xx&_nc_gid=AGdv05BUdz6gSfsO_buvlg&oh=00_AfWYIUBhJ2oub2DlK2fHgazA2ZS0TOAckx3VFBMEB4OBGg&oe=689686D5", 
-        alt: "Wells Fargo bank sidewalk pressure washing before and after", 
-        title: "Bank Sidewalk Cleaning", 
-        location: "Marysville", 
-        description: "Professional sidewalk pressure washing at Wells Fargo bank location",
-        service: "Commercial"
-      },
-      { 
-        src: "https://scontent-sea5-1.xx.fbcdn.net/v/t39.30808-6/505108295_10221752306196140_7014226768814137650_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Wm28A_u7HC0Q7kNvwH02PaT&_nc_oc=AdmZgHGzW6Qrq5mLbgwD0zsAMxkykiRV2DjE545smgFz-acE_NS4L2xuNdmFdbLegxk&_nc_zt=23&_nc_ht=scontent-sea5-1.xx&_nc_gid=PrPovnSq4HwMHVThzZBvWg&oh=00_AfXna9BXdR-6a37Aw4YPtcEXIkQJjUmkzFTmYtACUIFbNg&oe=689689CA", 
-        alt: "Wells Fargo bank sidewalk pressure washing second section", 
-        title: "Bank Sidewalk Cleaning - Section 2", 
-        location: "Marysville", 
-        description: "Additional sidewalk section at Wells Fargo bank after professional pressure washing",
-        service: "Commercial"
-      },
-      { 
-        src: "https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-6/505414342_10221752306076137_3126692555457843088_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=ZqhOH46OLDsQ7kNvwFSeAGM&_nc_oc=AdnrFUFDPBNwwBgCME854GPT2zZWX1vup5QEmrUVioolG3er0Sngzj_t3i2U_8vTuIQ&_nc_zt=23&_nc_ht=scontent-sea1-1.xx&_nc_gid=pgqqRIciJIDVsapJlvumxw&oh=00_AfW6hp7tulMWl9R27juqBGw4MK-S7e3NIfgnvZzESeUx3w&oe=68967D91", 
-        alt: "Wells Fargo ATM area pressure washing before and after", 
-        title: "ATM Area Cleaning", 
-        location: "Marysville", 
-        description: "Professional cleaning of ATM entrance area at Wells Fargo bank",
-        service: "Commercial"
-      },
-      { 
-        src: "/lovable-uploads/4b6fff3e-567e-4898-916f-6985b5ac941e.png", 
-        alt: "Wells Fargo bank interior floor pressure washing before and after", 
-        title: "Bank Interior Floor Cleaning", 
-        location: "Seattle", 
-        description: "Professional interior floor pressure washing at Wells Fargo bank - dramatic transformation",
-        service: "Commercial"
-      },
-      { 
-        src: "/lovable-uploads/b6f5f7ae-fe57-44dc-99a7-17e3d06139ee.png", 
-        alt: "Wells Fargo bank entrance sidewalk before and after pressure washing", 
-        title: "Wells Fargo Sidewalk Cleaning", 
-        location: "Seattle Area", 
-        description: "Professional commercial sidewalk pressure washing for Wells Fargo bank entrance - dramatic transformation from heavily stained to spotless",
-        service: "Commercial"
-      },
-      { 
-        src: "/lovable-uploads/b075ca80-743b-42a6-830e-f31f8831ca56.png", 
-        alt: "Professional team pressure washing CVS Pharmacy sidewalk for grand opening", 
-        title: "CVS Grand Opening Preparation", 
-        location: "Mountlake Terrace", 
-        description: "Professional commercial pressure washing services for CVS Pharmacy grand opening - ensuring spotless sidewalks and entrance areas",
-        service: "Commercial"
       }
     ],
     "Team at Work": [
@@ -544,55 +256,32 @@ const Gallery = () => {
         service: "Service"
       },
       { 
-        src: "/lovable-uploads/69a00574-1236-42ac-8dad-f347524ce62e.png", 
-        alt: "Team performing 3-story townhome washing with professional equipment", 
-        title: "3-Story Townhome Washing", 
-        location: "Seattle Area", 
-        description: "Professional team and equipment setup for multi-story townhome washing project",
-        service: "House Washing"
-      },
-      { 
-        src: "/lovable-uploads/2c817c93-c905-4c9d-9f5c-9a73cbf8ad86.png", 
-        alt: "Team member performing building washing in Seattle", 
-        title: "Commercial Building Washing", 
-        location: "Seattle", 
-        description: "Professional team member in action during commercial building washing project",
-        service: "House Washing"
-      },
-      { 
-        src: "/lovable-uploads/b075ca80-743b-42a6-830e-f31f8831ca56.png", 
-        alt: "Professional team member pressure washing CVS Pharmacy sidewalk", 
-        title: "Team in Action - CVS Grand Opening", 
-        location: "Mountlake Terrace", 
-        description: "Professional team member performing commercial pressure washing for CVS Pharmacy grand opening preparation",
-        service: "Commercial Cleaning"
+        src: dylanRoofWork, 
+        alt: "Dylan working on roof cleaning project", 
+        title: "Roof Cleaning in Action", 
+        location: "Kirkland", 
+        description: "Professional roof cleaning specialist at work",
+        service: "Roof Cleaning"
       }
     ]
   };
 
   const getFilteredImages = () => {
     if (activeCategory === "All") {
-      // Intersperse different service types for better variety in "All Projects"
       const roofImages = galleryImages["Roof Cleaning & Moss Removal"] || [];
-      const houseImages = galleryImages["House Washing"] || [];
       const gutterImages = galleryImages["Gutter Cleaning"] || [];
-      const pressureImages = galleryImages["Pressure Washing"] || [];
       const teamImages = galleryImages["Team at Work"] || [];
       
       const interspersedImages = [];
       const maxLength = Math.max(
         roofImages.length,
-        houseImages.length,
         gutterImages.length,
-        pressureImages.length,
         teamImages.length
       );
       
       // Alternate between service types to create variety
       for (let i = 0; i < maxLength; i++) {
         if (i < roofImages.length) interspersedImages.push(roofImages[i]);
-        if (i < pressureImages.length) interspersedImages.push(pressureImages[i]);
-        if (i < houseImages.length) interspersedImages.push(houseImages[i]);
         if (i < gutterImages.length) interspersedImages.push(gutterImages[i]);
         if (i < teamImages.length) interspersedImages.push(teamImages[i]);
       }

@@ -8,15 +8,17 @@ const ServicesPreview = () => {
   const services = [
     {
       icon: Droplet,
-      title: "Roof Cleaning",
+      title: "Roof Cleaning & Moss Removal",
       description: "Safe moss removal and treatment with a 12-month guarantee.",
+      price: "Starting at $500",
       link: "/roof-cleaning",
       size: "large"
     },
     {
       icon: Car,
-      title: "Gutter Cleaning",
+      title: "Gutter Cleaning + Roof Blow-Off",
       description: "Complete hand cleaning with downspout flush.",
+      price: "Starting at $300",
       link: "/gutter-cleaning",
       size: "small"
     }
@@ -44,9 +46,12 @@ const ServicesPreview = () => {
                   <CardTitle className="text-xl font-bold text-brand-blue">
                     {service.title}
                   </CardTitle>
-                  <CardDescription className="text-center">
+                  <CardDescription className="text-center mb-2">
                     {service.description}
                   </CardDescription>
+                  <div className="text-brand-orange font-bold text-lg">
+                    {service.price}
+                  </div>
                 </CardHeader>
                 
                 <CardContent className="text-center">
@@ -64,6 +69,9 @@ const ServicesPreview = () => {
         </div>
 
         <div className="text-center mt-12 fade-up">
+          <p className="text-sm text-muted-foreground mb-4">
+            Most homes range from $300–$1,200 depending on roof size, pitch, and access. Get your exact price with a free quote.
+          </p>
           <Button 
             variant="cta-orange" 
             size="xl"

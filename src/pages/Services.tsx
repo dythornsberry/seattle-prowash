@@ -56,8 +56,8 @@ const Services = () => {
         "Maintains roofing manufacturer warranty compliance",
         "Improves curb appeal and property value"
       ],
-      priceNote: "Starting at $499 for typical single-story homes",
-      priceHelper: "Final price after quick photo or drive-by evaluation.",
+      priceNote: "Starting at $500",
+      priceHelper: "Most homes range from $300–$1,200 depending on roof size, pitch, and access. Get your exact price with a free quote.",
       crossPromo: "For complete protection, pair this with our Gutter Cleaning service. Ask about our package discount!"
     },
     {
@@ -79,8 +79,8 @@ const Services = () => {
         "Maintains proper roof drainage",
         "Extends gutter system lifespan"
       ],
-      priceNote: "The perfect partner to our Roof Cleaning service. Standalone gutter cleaning starts at $249. Ask about our package discount when you book both!",
-      priceHelper: "Final price after quick photo or drive-by evaluation."
+      priceNote: "Starting at $300",
+      priceHelper: "Most homes range from $300–$1,200 depending on roof size, pitch, and access. Get your exact price with a free quote."
     },
     {
       id: "pressure-washing", 
