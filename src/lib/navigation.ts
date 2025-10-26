@@ -7,30 +7,22 @@
  * This works from any page and ensures proper scrolling
  */
 export const navigateToContact = () => {
-  // If we're already on the home page, just scroll to contact
+  // If we're already on the home page, just scroll to contact with offset for sticky bars
   if (window.location.pathname === '/') {
     const contactElement = document.getElementById('contact');
     if (contactElement) {
-      // On mobile, scroll to the form specifically for better UX
       const isMobile = window.innerWidth < 1024;
-      const formElement = contactElement.querySelector('form');
-      
-      if (isMobile && formElement) {
-        formElement.scrollIntoView({ 
-          behavior: 'smooth',
-          block: 'start'
-        });
-      } else {
-        contactElement.scrollIntoView({ 
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
+      const formElement = contactElement.querySelector('form') as HTMLElement | null;
+      const target = (isMobile && formElement) ? formElement : (contactElement as HTMLElement);
+
+      const offset = 60; // account for sticky header/top bar
+      const y = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+      return;
     }
-  } else {
-    // Navigate to home page with hash
-    window.location.href = '/#contact';
   }
+  // Navigate to home page with hash (Index will handle offset scrolling)
+  window.location.href = '/#contact';
 };
 
 /**

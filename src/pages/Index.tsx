@@ -43,7 +43,12 @@ const Index = () => {
       setTimeout(() => {
         const element = document.getElementById(hash);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+          const isMobile = window.innerWidth < 1024;
+          const formElement = element.querySelector('form') as HTMLElement | null;
+          const target = (isMobile && formElement && hash === 'contact') ? formElement : (element as HTMLElement);
+          const offset = 60;
+          const y = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
         }
       }, 100);
     } else {
@@ -85,21 +90,12 @@ const Index = () => {
       setTimeout(() => {
         const element = document.getElementById(hash.substring(1));
         if (element) {
-          // On mobile, scroll to the form specifically for better UX
           const isMobile = window.innerWidth < 1024;
-          const formElement = element.querySelector('form');
-          
-          if (isMobile && formElement && hash === '#contact') {
-            formElement.scrollIntoView({ 
-              behavior: 'smooth',
-              block: 'start'
-            });
-          } else {
-            element.scrollIntoView({ 
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }
+          const formElement = element.querySelector('form') as HTMLElement | null;
+          const target = (isMobile && formElement && hash === '#contact') ? formElement : (element as HTMLElement);
+          const offset = 60;
+          const y = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
         }
       }, 100);
     }
