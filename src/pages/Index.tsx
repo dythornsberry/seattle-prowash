@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TrustSignalSection from "@/components/TrustSignalSection";
@@ -11,7 +11,6 @@ import AboutPreview from "@/components/AboutPreview";
 import TestimonialSlider from "@/components/TestimonialSlider";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import CTABanner from "@/components/CTABanner";
-import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 import GoogleReviewsCarousel from "@/components/GoogleReviewsCarousel";
 import HomeFAQ from "@/components/HomeFAQ";
 import SeasonalPromotions from "@/components/SeasonalPromotions";
@@ -21,13 +20,45 @@ import IntroSection from "@/components/IntroSection";
 import GutterAddonSection from "@/components/GutterAddonSection";
 import UnifiedContactBar from "@/components/UnifiedContactBar";
 import ServiceAreaMap from "@/components/ServiceAreaMap";
+import QuoteFormSkeleton from "@/components/QuoteFormSkeleton";
+
+// Lazy load the quote form for better initial page load
+const TwoStepQuoteForm = lazy(() => import("@/components/TwoStepQuoteForm"));
 
 const Index = () => {
+  const [shouldLoadForm, setShouldLoadForm] = useState(false);
+
   // Enable smooth scrolling globally
   useEffect(() => {
     document.documentElement.style.scrollBehavior = 'smooth';
     return () => {
       document.documentElement.style.scrollBehavior = '';
+    };
+  }, []);
+
+  // Intersection Observer to load form when near viewport
+  useEffect(() => {
+    const formSection = document.getElementById('contact');
+    if (!formSection) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setShouldLoadForm(true);
+            observer.disconnect();
+          }
+        });
+      },
+      {
+        rootMargin: '200px', // Start loading 200px before the form comes into view
+      }
+    );
+
+    observer.observe(formSection);
+
+    return () => {
+      observer.disconnect();
     };
   }, []);
 
@@ -144,7 +175,9 @@ const Index = () => {
           </div>
           
           <div id="contact" className="bg-off-white">
-            <TwoStepQuoteForm />
+            <Suspense fallback={<QuoteFormSkeleton />}>
+              {shouldLoadForm ? <TwoStepQuoteForm /> : <QuoteFormSkeleton />}
+            </Suspense>
           </div>
         </main>
       <Footer />
