@@ -123,79 +123,16 @@ const TwoStepQuoteForm = () => {
     <section id="contact" className="section-spacing bg-off-white/50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12 fade-up">
+          <div className="text-center mb-8 fade-up">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy mb-4 font-heading">
-              Get Your Free Quote Today
+              Request Your Free Quote
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Most quotes sent same day • No obligation • Free consultation
+            <p className="text-sm text-muted-foreground">
+              Prefer to call? <a href="tel:12067526690" className="hover:text-brand-orange transition-colors" onClick={handleCallClick}>206-752-6690</a> (call or text anytime)
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-12">
-            {/* Contact Info & Trust Badges */}
-            <div className="lg:col-span-1 space-y-6 fade-up">
-              <Card className="border-2 border-brand-navy/20 shadow-lg rounded-xl">
-                <CardHeader>
-                  <CardTitle className="text-brand-navy font-heading">Quick Contact</CardTitle>
-                  <CardDescription>
-                    Prefer to call? We're here to help!
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <Phone className="w-5 h-5 text-brand-orange" />
-                    <div>
-                      <a 
-                        href="tel:12067526690" 
-                        className="font-semibold text-brand-navy hover:text-brand-orange transition-colors"
-                        onClick={handleCallClick}
-                      >
-                        206-752-6690
-                      </a>
-                      <p className="text-sm text-muted-foreground">Call or text anytime</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center gap-3">
-                    <Mail className="w-5 h-5 text-brand-orange" />
-                    <div>
-                      <a href="mailto:seattleprowash@gmail.com" className="text-sm text-brand-navy hover:text-brand-orange transition-colors break-all">
-                        seattleprowash@gmail.com
-                      </a>
-                      <p className="text-sm text-muted-foreground">1-hour response time</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-brand-orange mt-1" />
-                    <div>
-                      <p className="text-sm text-brand-navy">Kenmore & Greater Seattle</p>
-                      <p className="text-sm text-muted-foreground">Bothell, Kirkland, Shoreline</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Trust Badges with Icons */}
-                <div className="space-y-3">
-                <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-brand-navy/10">
-                  <Shield className="w-5 h-5 text-brand-orange flex-shrink-0" />
-                  <span className="text-sm font-semibold text-brand-navy">Licensed & Insured in Washington</span>
-                </div>
-                <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-brand-navy/10">
-                  <CheckCircle className="w-5 h-5 text-brand-orange flex-shrink-0" />
-                  <span className="text-sm font-semibold text-brand-navy">100% Satisfaction Guarantee</span>
-                </div>
-                <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-brand-navy/10">
-                  <CheckCircle className="w-5 h-5 text-brand-orange flex-shrink-0" />
-                  <span className="text-sm font-semibold text-brand-navy">Serving Greater Seattle Metro</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Quote Form */}
-            <div className="lg:col-span-2 fade-up">
+          <div className="max-w-2xl mx-auto fade-up">
               <Card className="border-2 border-brand-navy/20 shadow-xl rounded-xl">
                 <CardHeader>
                   <CardTitle className="text-brand-navy font-heading text-2xl">
@@ -357,7 +294,6 @@ const TwoStepQuoteForm = () => {
                   </Form>
                 </CardContent>
               </Card>
-            </div>
           </div>
         </div>
       </div>
