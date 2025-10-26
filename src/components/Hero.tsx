@@ -41,20 +41,28 @@ const Hero = () => {
             <a href="/reviews" className="hover:text-brand-orange transition-colors">4.9★ from 180+ neighbors</a> • 12-Month Moss-Free Guarantee • Same-Day Estimates
           </p>
 
-          {/* Primary CTA */}
-          <div className="flex flex-col items-center gap-3 animate-fade-in">
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in">
             <Button 
               size="xl" 
               variant="cta-orange"
-              className="group text-lg px-10 py-7 text-xl font-semibold shadow-xl"
+              className="text-lg px-10 py-7 text-xl font-semibold shadow-xl"
               onClick={handleGetQuote}
             >
               Get My Free Quote →
             </Button>
-            <p className="text-white/80 text-sm md:text-base font-normal max-w-2xl">
-              Fast quotes. Fair prices. Expert moss removal and gutter protection.
-            </p>
+            <Button 
+              size="xl"
+              variant="outline"
+              className="text-lg px-10 py-7 text-xl font-semibold border-white text-white hover:bg-white hover:text-brand-navy"
+              onClick={handleCall}
+            >
+              Call 206-752-6690
+            </Button>
           </div>
+          <p className="text-white/80 text-sm md:text-base font-normal max-w-2xl mt-4 animate-fade-in">
+            Fast quotes. Fair prices. Expert moss removal and gutter protection.
+          </p>
         </div>
       </div>
 

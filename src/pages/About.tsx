@@ -50,7 +50,7 @@ const About = () => {
                 Meet Dylan, Owner of Seattle ProWash
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-white/90">
-                Helping Seattle-area homeowners restore their homes with safe, effective roof moss protection and pressure washing since 2022.
+                Helping Seattle-area homeowners protect their roofs and gutters with safe, effective moss removal and drainage solutions since 2022.
               </p>
             </div>
           </div>
@@ -67,23 +67,23 @@ const About = () => {
                   </h2>
                   <div className="space-y-6 text-lg text-muted-foreground">
                     <p>
-                      Seattle ProWash is owned and operated by Dylan Thornsberry, a Kenmore-based local who built this company to serve Seattle-area homeowners with honest, effective roof cleaning services.
+                      Seattle ProWash is owned and operated by Dylan Thornsberry, a Kenmore-based local who built this company to serve Seattle-area homeowners with honest, effective roof and gutter cleaning services.
                     </p>
                     
                     <p>
-                      After years of working for other pressure washing companies, Dylan knew there was a better way to serve local homeowners.
+                      After years of working for other roof cleaning companies, Dylan knew there was a better way to serve local homeowners.
                     </p>
                     
                     <p>
-                      So in 2022, he launched Seattle ProWash with a mission to deliver reliable, top-quality cleaning using real professional gear and a no-corners-cut mindset.
+                      So in 2022, he launched Seattle ProWash with a mission to deliver reliable, top-quality roof and gutter cleaning using real professional gear and a no-corners-cut mindset.
                     </p>
                     
                     <p className="italic text-brand-navy font-medium">
-                      "I've worked on every kind of roof, siding, and driveway you can imagine. I know what works best for each property. I started Seattle ProWash to bring honest, reliable cleaning to the people in my community."
+                      "I've worked on every kind of roof and gutter system you can imagine. I know what works best for each property. I started Seattle ProWash to bring honest, reliable cleaning to the people in my community."
                     </p>
                     
                     <p>
-                      Dylan's passion lies in property restoration. He genuinely believes that professional cleaning is the single greatest return on investment any homeowner can make.
+                      Dylan's passion lies in property protection. He genuinely believes that professional roof and gutter maintenance is the single greatest investment any homeowner can make.
                     </p>
                     
                     <p>
@@ -91,7 +91,7 @@ const About = () => {
                     </p>
                     
                     <p className="italic text-brand-navy font-medium">
-                      "When you see a moss-covered roof or stained driveway transformed back to like-new condition, you understand the incredible value we provide."
+                      "When you see a moss-covered roof or clogged gutter transformed back to like-new condition, you understand the incredible value we provide."
                     </p>
                   </div>
                   
@@ -119,7 +119,7 @@ const About = () => {
                   <div className="relative">
                     <img
                       src={dylanOwnerPhoto}
-                      alt="Dylan, owner of Seattle ProWash, pressure washing a patio"
+                      alt="Dylan, owner of Seattle ProWash, performing professional roof cleaning services"
                       className="rounded-2xl shadow-2xl w-full"
                     />
                     <div className="absolute -bottom-6 -right-6 bg-brand-orange text-white px-6 py-3 rounded-xl font-bold shadow-lg">
@@ -151,14 +151,22 @@ const About = () => {
                   <p className="text-lg text-muted-foreground mb-6">
                     "I started this company to provide the honest, high-quality service our community deserves. Contact us today for your free, no-pressure quote, and let us earn your trust."
                   </p>
-                  <Button 
-                    variant="prowash-primary" 
-                    size="xl"
-                    onClick={navigateToContact}
-                    className="bg-moss-green hover:bg-moss-green-light"
-                  >
-                    Get My Free Quote
-                  </Button>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button 
+                      variant="cta-orange" 
+                      size="xl"
+                      onClick={navigateToContact}
+                    >
+                      Get My Free Quote →
+                    </Button>
+                    <Button 
+                      variant="outline"
+                      size="xl"
+                      onClick={() => window.location.href = 'tel:2067526690'}
+                    >
+                      Call 206-752-6690
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
