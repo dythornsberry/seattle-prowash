@@ -208,17 +208,9 @@ const TwoStepQuoteForm = () => {
             <div className="lg:col-span-2 fade-up">
               <Card className="border-2 border-brand-navy/20 shadow-xl rounded-xl">
                 <CardHeader>
-                  <CardTitle className="text-brand-navy font-heading">
+                  <CardTitle className="text-brand-navy font-heading text-2xl">
                     Request Your Free Quote
                   </CardTitle>
-                  <CardDescription>
-                    Fill out the form below and we'll send you an estimate
-                  </CardDescription>
-                  <div className="mt-3 p-3 bg-brand-orange/10 rounded-lg border border-brand-orange/20">
-                    <p className="text-sm text-brand-navy font-medium">
-                      🔒 Your information is secure. No spam. No obligation.
-                    </p>
-                  </div>
                 </CardHeader>
                 <CardContent>
                   <Form {...form}>
@@ -316,23 +308,18 @@ const TwoStepQuoteForm = () => {
                                   <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
                                     <FormControl>
                                       <Checkbox
-                                        checked={field.value?.includes("Roof Cleaning & Moss Removal ($500–1,000)")}
+                                        checked={field.value?.includes("Roof Cleaning & Moss Removal")}
                                         onCheckedChange={(checked) => {
-                                          const value = "Roof Cleaning & Moss Removal ($500–1,000)";
+                                          const value = "Roof Cleaning & Moss Removal";
                                           return checked
                                             ? field.onChange([...field.value, value])
                                             : field.onChange(field.value?.filter((v) => v !== value));
                                         }}
                                       />
                                     </FormControl>
-                                    <div className="space-y-1 leading-none">
-                                      <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer">
-                                        Roof Cleaning & Moss Removal
-                                      </FormLabel>
-                                      <p className="text-sm text-muted-foreground">
-                                        $500–1,000
-                                      </p>
-                                    </div>
+                                    <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
+                                      Roof Cleaning & Moss Removal
+                                    </FormLabel>
                                   </FormItem>
                                 )}
                               />
@@ -343,23 +330,18 @@ const TwoStepQuoteForm = () => {
                                   <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
                                     <FormControl>
                                       <Checkbox
-                                        checked={field.value?.includes("Gutter Cleaning + Roof Blow-Off ($200–500)")}
+                                        checked={field.value?.includes("Gutter Cleaning + Roof Blow-Off")}
                                         onCheckedChange={(checked) => {
-                                          const value = "Gutter Cleaning + Roof Blow-Off ($200–500)";
+                                          const value = "Gutter Cleaning + Roof Blow-Off";
                                           return checked
                                             ? field.onChange([...field.value, value])
                                             : field.onChange(field.value?.filter((v) => v !== value));
                                         }}
                                       />
                                     </FormControl>
-                                    <div className="space-y-1 leading-none">
-                                      <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer">
-                                        Gutter Cleaning + Roof Blow-Off
-                                      </FormLabel>
-                                      <p className="text-sm text-muted-foreground">
-                                        $200–500
-                                      </p>
-                                    </div>
+                                    <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
+                                      Gutter Cleaning + Roof Blow-Off
+                                    </FormLabel>
                                   </FormItem>
                                 )}
                               />
@@ -370,16 +352,16 @@ const TwoStepQuoteForm = () => {
                       />
 
                       {/* Trust Badges Above Submit */}
-                      <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 py-3 px-3 bg-muted/30 rounded-lg">
-                        <div className="flex items-center gap-2">
+                      <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 py-3 px-3 bg-muted/30 rounded-lg">
+                        <div className="flex items-center gap-1.5">
                           <CheckCircle className="w-4 h-4 text-brand-orange" />
                           <span className="text-xs md:text-sm font-medium text-foreground">180+ ⭐⭐⭐⭐⭐ Reviews</span>
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-1.5">
                           <Shield className="w-4 h-4 text-brand-orange" />
                           <span className="text-xs md:text-sm font-medium text-foreground">12-Month Guarantee</span>
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-1.5">
                           <CheckCircle className="w-4 h-4 text-brand-orange" />
                           <span className="text-xs md:text-sm font-medium text-foreground">Licensed & Insured</span>
                         </div>
@@ -393,6 +375,10 @@ const TwoStepQuoteForm = () => {
                       >
                         {isSubmitting ? "Sending..." : "Get My Free Quote →"}
                       </Button>
+
+                      <p className="text-center text-muted-foreground text-xs">
+                        180+ ⭐⭐⭐⭐⭐ Reviews  •  12-Month Guarantee  •  Licensed & Insured
+                      </p>
                     </form>
                   </Form>
                 </CardContent>
