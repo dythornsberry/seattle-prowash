@@ -26,7 +26,7 @@ const ServicesPreview = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 fade-up">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-blue mb-6">
-            Our Gutter & Roof Services
+            Our Roof & Gutter Services
           </h2>
         </div>
 
@@ -64,7 +64,7 @@ const ServicesPreview = () => {
 
         <div className="text-center mt-12 fade-up">
           <Button 
-            variant="prowash-primary" 
+            variant="cta-orange" 
             size="xl"
             onClick={() => {
               if (window.location.pathname === '/') {
@@ -74,7 +74,7 @@ const ServicesPreview = () => {
               }
             }}
           >
-            Book Your Roof Cleaning Today
+            Get My Free Quote →
           </Button>
         </div>
       </div>

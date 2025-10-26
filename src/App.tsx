@@ -3,10 +3,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import About from "./pages/About";
-import Services from "./pages/Services";
 import Gallery from "./pages/Gallery";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
@@ -49,9 +48,15 @@ const App = () => (
           <Route path="/sammamish" element={<Sammamish />} />
           <Route path="/woodinville" element={<Woodinville />} />
           <Route path="/reviews" element={<Reviews />} />
-          {/* Redirects for old services */}
-          <Route path="/services" element={<RoofCleaning />} />
-          <Route path="/moss-treatment" element={<RoofMoss />} />
+          
+          {/* 301 Redirects for deprecated services */}
+          <Route path="/services" element={<Navigate to="/roof-cleaning" replace />} />
+          <Route path="/moss-treatment" element={<Navigate to="/roof-moss" replace />} />
+          <Route path="/window-cleaning" element={<Navigate to="/roof-cleaning" replace />} />
+          <Route path="/pressure-washing" element={<Navigate to="/roof-cleaning" replace />} />
+          <Route path="/house-washing" element={<Navigate to="/roof-cleaning" replace />} />
+          <Route path="/soft-wash" element={<Navigate to="/roof-cleaning" replace />} />
+          
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

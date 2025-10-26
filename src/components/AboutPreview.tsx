@@ -19,7 +19,7 @@ const AboutPreview = () => {
                   Hi, I'm Dylan, owner of Seattle ProWash.
                 </p>
                 <p>
-                  I started this company after working for others who cut corners. I wanted to offer something better: legit gear, honest pricing, and a crew that actually cares about the homes we work on. Whether we're on a steep roof or power washing a walkway, we treat it like it's our own place.
+                  I started this company after working for others who cut corners. I wanted to offer something better: legit gear, honest pricing, and a crew that cares about protecting your roof and gutters. Whether we're treating moss on a steep roof or hand-cleaning clogged gutters, we treat every home like it's our own.
                 </p>
               </div>
               
@@ -41,7 +41,7 @@ const AboutPreview = () => {
                     <OptimizedImage
                       src={dylanOwnerPhoto}
                       srcWebP={dylanOwnerPhotoWebP}
-                      alt="Dylan, owner of Seattle ProWash, pressure washing a patio"
+                      alt="Dylan, owner of Seattle ProWash, performing professional roof and gutter cleaning"
                       className="w-full h-[400px] object-cover"
                       width={400}
                       height={400}

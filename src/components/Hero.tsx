@@ -33,12 +33,12 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Main Headline */}
           <h1 className="text-white font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight animate-fade-in mb-6">
-            Roof & Gutter Cleaning for Seattle Homes
+            Expert Roof & Gutter Cleaning for Seattle Homes
           </h1>
 
           {/* Trust Line */}
           <p className="text-xl md:text-2xl text-white/95 font-medium max-w-3xl mx-auto animate-fade-in mb-8">
-            <a href="/reviews" className="hover:text-brand-orange transition-colors">4.9★ from 180+ neighbors</a> • Licensed & Insured • Same-Day Estimates
+            <a href="/reviews" className="hover:text-brand-orange transition-colors">4.9★ from 180+ neighbors</a> • 12-Month Moss-Free Guarantee • Same-Day Estimates
           </p>
 
           {/* Primary CTA */}
@@ -49,11 +49,10 @@ const Hero = () => {
               className="group text-lg px-10 py-7 text-xl font-semibold shadow-xl"
               onClick={handleGetQuote}
             >
-              Get a Fast Quote
-              <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              Get My Free Quote →
             </Button>
             <p className="text-white/80 text-sm md:text-base font-normal max-w-2xl">
-              Fast quotes. Fair prices. Expert results trusted by Seattle-area homeowners.
+              Fast quotes. Fair prices. Expert moss removal and gutter protection.
             </p>
           </div>
         </div>
