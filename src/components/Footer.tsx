@@ -173,7 +173,13 @@ const Footer = () => {
                 variant="cta-orange" 
                 size="lg" 
                 className="w-full"
-                onClick={navigateToContact}
+                onClick={() => {
+                  if (window.location.pathname === '/') {
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    window.location.href = '/#contact';
+                  }
+                }}
               >
                 Get My Free Quote →
               </Button>
