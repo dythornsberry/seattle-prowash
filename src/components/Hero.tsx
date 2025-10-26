@@ -54,7 +54,7 @@ const Hero = () => {
             <Button 
               size="xl"
               variant="outline"
-              className="text-lg px-10 py-7 text-xl font-semibold border-white text-white hover:bg-white hover:text-brand-navy"
+              className="text-lg px-10 py-7 text-xl font-semibold border-2 border-white bg-transparent text-white hover:bg-white hover:text-brand-navy shadow-xl"
               onClick={handleCall}
             >
               Call 206-752-6690
