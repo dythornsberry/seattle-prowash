@@ -49,30 +49,6 @@ const BeforeAfterSlider = () => {
       completionDate: "December 2024"
     },
     {
-      id: 3,
-      title: "Concrete Cleaning - Kirkland",
-      location: "Kirkland, WA",
-      service: "Concrete Surface Cleaning", 
-      beforeImage: newPatioBefore3,
-      afterImage: newPatioAfter3,
-      beforeImageWebP: newPatioBefore3WebP,
-      afterImageWebP: newPatioAfter3WebP,
-      beforeAlt: "Kirkland concrete surface with moss and staining before cleaning",
-      afterAlt: "Kirkland concrete surface after professional cleaning - restored appearance",
-      completionDate: "December 2024"
-    },
-    {
-      id: 4,
-      title: "Heavy Moss Concrete Cleaning - Lake Forest Park",
-      location: "Lake Forest Park, WA",
-      service: "Concrete Surface Cleaning",
-      beforeImage: "/lovable-uploads/30f25fb0-b625-4f3e-8328-3084ca71c36b.png",
-      afterImage: "/lovable-uploads/0d94bc5e-3592-4aa4-877a-d124110a3d0e.png",
-      beforeAlt: "Lake Forest Park concrete heavily covered with moss and algae before cleaning",
-      afterAlt: "Lake Forest Park concrete fully restored after intensive cleaning treatment",
-      completionDate: "January 2025"
-    },
-    {
       id: 5,
       title: "Asphalt Roof Moss Treatment - Seattle",
       location: "Seattle, WA",
@@ -81,17 +57,6 @@ const BeforeAfterSlider = () => {
       afterImage: "/lovable-uploads/cd85dd92-8acb-405d-a73c-44650e962bd8.png",
       beforeAlt: "Seattle asphalt roof heavily covered in moss and debris before professional treatment",
       afterAlt: "Seattle asphalt roof after professional moss removal and protection treatment - fully restored",
-      completionDate: "January 2025"
-    },
-    {
-      id: 6,
-      title: "Concrete Walkway Cleaning - Seattle",
-      location: "Seattle Area, WA",
-      service: "Concrete Surface Cleaning",
-      beforeImage: "/lovable-uploads/61bfb1f1-0bee-423a-be7a-c49142b6fd6b.png",
-      afterImage: "/lovable-uploads/7a0d1b2c-03a2-4054-8cf2-6bdc1dca519c.png",
-      beforeAlt: "Seattle walkway before cleaning showing heavy moss growth and staining",
-      afterAlt: "Seattle walkway after professional cleaning - clean and restored surface",
       completionDate: "January 2025"
     }
   ];

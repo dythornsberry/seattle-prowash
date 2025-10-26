@@ -134,10 +134,10 @@ const TwoStepQuoteForm = () => {
 
           <div className="max-w-2xl mx-auto fade-up">
               <Card className="border-2 border-brand-navy/20 shadow-xl rounded-xl">
-                <CardHeader>
-                  <CardTitle className="text-brand-navy font-heading text-2xl">
-                    Request Your Free Quote
-                  </CardTitle>
+                <CardHeader className="pb-4">
+                  <CardDescription className="text-base text-muted-foreground">
+                    We typically respond within 1 hour during business hours
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Form {...form}>
