@@ -133,73 +133,17 @@ const Index = () => {
         
         <main>
           <Hero />
-          
-          {/* Service Area Proof */}
-          <div className="bg-brand-navy py-3">
-            <div className="container mx-auto px-4">
-              <p className="text-center text-white/90 text-sm md:text-base font-medium">
-                Local to Kenmore, Bothell, Kirkland, Shoreline
-              </p>
-            </div>
-          </div>
-          
-          <MossUrgency />
+          <TrustBar />
           <CostOfWaiting />
+          <ServicesPreview />
           <div className="bg-navy">
             <BeforeAfterSlider />
           </div>
-          <div id="reviews" className="bg-off-white">
-            <TestimonialSlider />
-          </div>
-          <GoogleReviewsCarousel />
-          <HomeFAQ />
-          <ServiceAreaMap />
-          
-          {/* Service Area Proof - Footer */}
-          <div className="bg-muted/30 py-6">
-            <div className="container mx-auto px-4">
-              <p className="text-center text-brand-navy text-sm md:text-base font-medium">
-                Proudly serving Kenmore, Bothell, Kirkland, Shoreline & surrounding areas
-              </p>
-            </div>
-          </div>
-          
-          <ServicesPricing />
-          
-          {/* Why Choose Us Section */}
-          <div className="bg-background py-12">
-            <div className="container mx-auto px-4 max-w-4xl">
-              <div className="bg-brand-navy text-white py-8 px-6 rounded-lg">
-                <h3 className="text-2xl font-bold text-white mb-6 text-center">Why Choose Seattle ProWash?</h3>
-                <ul className="space-y-3 max-w-2xl mx-auto">
-                  <li className="flex items-start gap-3">
-                    <span className="text-brand-orange text-xl">✓</span>
-                    <span className="text-base">Family-owned & operated in Kenmore</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-brand-orange text-xl">✓</span>
-                    <span className="text-base">180+ five-star Google reviews</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-brand-orange text-xl">✓</span>
-                    <span className="text-base">12-month moss-free guarantee</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-brand-orange text-xl">✓</span>
-                    <span className="text-base">Licensed, bonded & insured</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-brand-orange text-xl">✓</span>
-                    <span className="text-base">Same-day quotes available</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
           <div className="bg-off-white">
             <TwoStepQuoteForm />
           </div>
+          <HomeFAQ />
+          <ServiceAreaMap />
         </main>
       <Footer />
       <UnifiedContactBar />
