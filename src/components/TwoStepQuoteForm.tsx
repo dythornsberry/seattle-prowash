@@ -13,11 +13,10 @@ import { useToast } from "@/hooks/use-toast";
 
 const formSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
-  phone: z.string().trim().min(10, "Valid phone number is required").max(20),
-  email: z.string().trim().min(1, "Email is required").email("Invalid email address").max(255),
-  preferText: z.boolean().default(false),
   address: z.string().trim().min(1, "Address is required").max(300),
-  details: z.string().trim().min(1, "Please tell us about your service needs").max(1000),
+  phone: z.string().trim().min(10, "Valid phone number is required").max(20),
+  services: z.array(z.string()).min(1, "Please select at least one service"),
+  company: z.string().max(0, "Invalid submission"), // honeypot
 });
 
 const TwoStepQuoteForm = () => {
@@ -29,21 +28,26 @@ const TwoStepQuoteForm = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
-      phone: "",
-      email: "",
-      preferText: false,
       address: "",
-      details: "",
+      phone: "",
+      services: [],
+      company: "",
     },
   });
 
+  // Phone formatting
+  const formatPhoneNumber = (value: string) => {
+    const cleaned = value.replace(/\D/g, '');
+    if (cleaned.length <= 3) return cleaned;
+    if (cleaned.length <= 6) return `(${cleaned.slice(0, 3)}) ${cleaned.slice(3)}`;
+    return `(${cleaned.slice(0, 3)}) ${cleaned.slice(3, 6)}-${cleaned.slice(6, 10)}`;
+  };
+
   const buildPayload = (values: z.infer<typeof formSchema>) => ({
     name: values.name,
-    phone: values.phone,
-    email: values.email || "",
-    preferText: values.preferText,
     address: values.address,
-    details: values.details || "",
+    phone: values.phone,
+    services: values.services.join(", "),
     timestamp: new Date().toISOString(),
     source: "Website Quote Form",
     business_name: "Seattle ProWash",
@@ -66,9 +70,22 @@ const TwoStepQuoteForm = () => {
   };
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    // Honeypot check
+    if (values.company) {
+      console.warn("Spam detected");
+      return;
+    }
+
     setIsSubmitting(true);
     
     try {
+      // Track analytics
+      if (typeof (window as any).gtag !== 'undefined') {
+        (window as any).gtag('event', 'quote_submit', {
+          services: values.services.join(", "),
+        });
+      }
+
       await sendToWebhook(values);
 
       toast({
@@ -87,6 +104,12 @@ const TwoStepQuoteForm = () => {
       });
     } finally {
       setIsSubmitting(false);
+    }
+  };
+
+  const handleCallClick = () => {
+    if (typeof (window as any).gtag !== 'undefined') {
+      (window as any).gtag('event', 'click_to_call');
     }
   };
 
@@ -132,7 +155,11 @@ const TwoStepQuoteForm = () => {
                   <div className="flex items-center gap-3">
                     <Phone className="w-5 h-5 text-brand-orange" />
                     <div>
-                      <a href="tel:12067526690" className="font-semibold text-brand-navy hover:text-brand-orange transition-colors">
+                      <a 
+                        href="tel:12067526690" 
+                        className="font-semibold text-brand-navy hover:text-brand-orange transition-colors"
+                        onClick={handleCallClick}
+                      >
                         206-752-6690
                       </a>
                       <p className="text-sm text-muted-foreground">Call or text anytime</p>
@@ -195,57 +222,34 @@ const TwoStepQuoteForm = () => {
                 <CardContent>
                   <Form {...form}>
                     <form className="space-y-6" autoComplete="on" onSubmit={form.handleSubmit(onSubmit)}>
+                      {/* Honeypot field - hidden */}
+                      <FormField
+                        control={form.control}
+                        name="company"
+                        render={({ field }) => (
+                          <FormItem className="hidden">
+                            <FormControl>
+                              <Input
+                                tabIndex={-1}
+                                autoComplete="off"
+                                {...field}
+                              />
+                            </FormControl>
+                          </FormItem>
+                        )}
+                      />
+
                       <FormField
                         control={form.control}
                         name="name"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-brand-navy font-semibold">Full Name *</FormLabel>
+                            <FormLabel className="text-brand-navy font-semibold">Name *</FormLabel>
                             <FormControl>
                               <Input
-                                placeholder="Your Name"
-                                className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
+                                placeholder="Your name"
+                                className="border-brand-navy/30 focus:border-brand-orange min-h-[56px] text-lg md:text-sm md:min-h-[48px] rounded-xl"
                                 autoComplete="name"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      
-                      <FormField
-                        control={form.control}
-                        name="phone"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-brand-navy font-semibold">Phone Number *</FormLabel>
-                            <FormControl>
-                              <Input
-                                type="tel"
-                                placeholder="(206) 555-0123"
-                                className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
-                                autoComplete="tel"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      
-                      <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-brand-navy font-semibold">Email *</FormLabel>
-                            <FormControl>
-                              <Input
-                                type="email"
-                                placeholder="you@example.com"
-                                className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
-                                autoComplete="email"
                                 {...field}
                               />
                             </FormControl>
@@ -259,11 +263,11 @@ const TwoStepQuoteForm = () => {
                         name="address"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-brand-navy font-semibold">Property Address</FormLabel>
+                            <FormLabel className="text-brand-navy font-semibold">Address *</FormLabel>
                             <FormControl>
                               <Input
-                                placeholder="123 Main St, Kenmore, WA 98028"
-                                className="border-brand-navy/30 focus:border-brand-orange h-12 rounded-xl"
+                                placeholder="Your address"
+                                className="border-brand-navy/30 focus:border-brand-orange min-h-[56px] text-lg md:text-sm md:min-h-[48px] rounded-xl"
                                 autoComplete="street-address"
                                 {...field}
                               />
@@ -272,44 +276,93 @@ const TwoStepQuoteForm = () => {
                           </FormItem>
                         )}
                       />
-
-                      <FormField
-                        control={form.control}
-                        name="preferText"
-                        render={({ field }) => (
-                          <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
-                            <FormControl>
-                              <Checkbox
-                                checked={field.value}
-                                onCheckedChange={field.onChange}
-                              />
-                            </FormControl>
-                            <div className="space-y-1 leading-none">
-                              <FormLabel className="text-sm font-semibold text-brand-navy">
-                                Prefer text message follow-up
-                              </FormLabel>
-                              <p className="text-sm text-muted-foreground">
-                                We'll text you instead of calling
-                              </p>
-                            </div>
-                          </FormItem>
-                        )}
-                      />
                       
                       <FormField
                         control={form.control}
-                        name="details"
+                        name="phone"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-brand-navy font-semibold">Additional Details *</FormLabel>
+                            <FormLabel className="text-brand-navy font-semibold">Phone *</FormLabel>
                             <FormControl>
-                              <Textarea
-                                placeholder="Tell us about your project - e.g., 'Heavy moss on north side' or 'Link to photos: dropbox.com/'"
-                                rows={4}
-                                className="border-brand-navy/30 focus:border-brand-orange rounded-xl"
+                              <Input
+                                type="tel"
+                                placeholder="(206) XXX-XXXX"
+                                className="border-brand-navy/30 focus:border-brand-orange min-h-[56px] text-lg md:text-sm md:min-h-[48px] rounded-xl"
+                                autoComplete="tel"
                                 {...field}
+                                onChange={(e) => {
+                                  const formatted = formatPhoneNumber(e.target.value);
+                                  field.onChange(formatted);
+                                }}
                               />
                             </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name="services"
+                        render={() => (
+                          <FormItem>
+                            <FormLabel className="text-brand-navy font-semibold">Services Needed *</FormLabel>
+                            <div className="space-y-3">
+                              <FormField
+                                control={form.control}
+                                name="services"
+                                render={({ field }) => (
+                                  <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
+                                    <FormControl>
+                                      <Checkbox
+                                        checked={field.value?.includes("Roof Cleaning & Moss Removal ($500–1,000)")}
+                                        onCheckedChange={(checked) => {
+                                          const value = "Roof Cleaning & Moss Removal ($500–1,000)";
+                                          return checked
+                                            ? field.onChange([...field.value, value])
+                                            : field.onChange(field.value?.filter((v) => v !== value));
+                                        }}
+                                      />
+                                    </FormControl>
+                                    <div className="space-y-1 leading-none">
+                                      <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer">
+                                        Roof Cleaning & Moss Removal
+                                      </FormLabel>
+                                      <p className="text-sm text-muted-foreground">
+                                        $500–1,000
+                                      </p>
+                                    </div>
+                                  </FormItem>
+                                )}
+                              />
+                              <FormField
+                                control={form.control}
+                                name="services"
+                                render={({ field }) => (
+                                  <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
+                                    <FormControl>
+                                      <Checkbox
+                                        checked={field.value?.includes("Gutter Cleaning + Roof Blow-Off ($200–500)")}
+                                        onCheckedChange={(checked) => {
+                                          const value = "Gutter Cleaning + Roof Blow-Off ($200–500)";
+                                          return checked
+                                            ? field.onChange([...field.value, value])
+                                            : field.onChange(field.value?.filter((v) => v !== value));
+                                        }}
+                                      />
+                                    </FormControl>
+                                    <div className="space-y-1 leading-none">
+                                      <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer">
+                                        Gutter Cleaning + Roof Blow-Off
+                                      </FormLabel>
+                                      <p className="text-sm text-muted-foreground">
+                                        $200–500
+                                      </p>
+                                    </div>
+                                  </FormItem>
+                                )}
+                              />
+                            </div>
                             <FormMessage />
                           </FormItem>
                         )}
@@ -318,15 +371,24 @@ const TwoStepQuoteForm = () => {
                       <Button
                         type="submit"
                         variant="cta-orange"
-                        className="w-full h-12 text-lg font-bold rounded-xl"
+                        className="w-full min-h-[56px] text-lg font-bold rounded-xl"
                         disabled={isSubmitting}
                       >
-                        {isSubmitting ? "Sending..." : "Get My Free Quote"}
+                        {isSubmitting ? "Sending..." : "Get My Free Quote →"}
                       </Button>
 
-                      <p className="text-xs text-center text-muted-foreground">
-                        🔒 No spam. No obligation. We respect your privacy.
-                      </p>
+                      <div className="text-center space-y-1">
+                        <p className="text-sm font-semibold text-brand-navy flex items-center justify-center gap-2 flex-wrap">
+                          <span className="flex items-center gap-1">
+                            <CheckCircle className="w-4 h-4 text-brand-orange" />
+                            180+ Five-Star Reviews
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <CheckCircle className="w-4 h-4 text-brand-orange" />
+                            12-Month Moss-Free Guarantee
+                          </span>
+                        </p>
+                      </div>
                     </form>
                   </Form>
                 </CardContent>
