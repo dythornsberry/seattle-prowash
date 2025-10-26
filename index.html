@@ -36,19 +36,20 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     
-    <!-- LocalBusiness Schema for SEO -->
+    <!-- LocalBusiness and Services Schema for SEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "RoofingContractor",
+      "@type": "LocalBusiness",
       "name": "Seattle ProWash",
       "description": "Expert roof cleaning, moss removal, and gutter cleaning in the Seattle area. 12-month moss-free guarantee. Fast, professional service.",
       "url": "https://seattleprowash.com",
-      "telephone": "+1-206-752-6690",
+      "telephone": "206-752-6690",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Kenmore",
         "addressRegion": "WA",
+        "postalCode": "98028",
         "addressCountry": "US"
       },
       "geo": {
@@ -57,22 +58,115 @@
         "longitude": "-122.2429"
       },
       "areaServed": [
-        "Kenmore, WA",
-        "Bothell, WA", 
-        "Kirkland, WA",
-        "Shoreline, WA",
-        "Woodinville, WA"
-      ],
-      "serviceType": [
-        "Roof Cleaning",
-        "Moss Treatment",
-        "Roof Moss Removal",
-        "Gutter Cleaning"
+        {
+          "@type": "City",
+          "name": "Kenmore",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Washington"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Bothell",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Washington"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Kirkland",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Washington"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Shoreline",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Washington"
+          }
+        }
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "5.0",
+        "ratingValue": "4.9",
         "reviewCount": "180"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Roof and Gutter Services",
+        "itemListElement": [
+          {
+            "@type": "Service",
+            "name": "Roof Cleaning & Moss Removal",
+            "description": "Professional roof cleaning with moss removal and treatment. Includes 12-month moss-free guarantee. Safe for all roof types.",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Seattle ProWash"
+            },
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "Kenmore"
+              },
+              {
+                "@type": "City",
+                "name": "Bothell"
+              },
+              {
+                "@type": "City",
+                "name": "Kirkland"
+              },
+              {
+                "@type": "City",
+                "name": "Shoreline"
+              }
+            ],
+            "offers": {
+              "@type": "Offer",
+              "priceRange": "$500-$1000",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock"
+            }
+          },
+          {
+            "@type": "Service",
+            "name": "Gutter Cleaning + Roof Blow-Off",
+            "description": "Complete gutter cleaning with hand removal of debris, downspout flush, and roof blow-off. Prevents water damage and maintains proper drainage.",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Seattle ProWash"
+            },
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "Kenmore"
+              },
+              {
+                "@type": "City",
+                "name": "Bothell"
+              },
+              {
+                "@type": "City",
+                "name": "Kirkland"
+              },
+              {
+                "@type": "City",
+                "name": "Shoreline"
+              }
+            ],
+            "offers": {
+              "@type": "Offer",
+              "priceRange": "$200-$500",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        ]
       }
     }
     </script>
