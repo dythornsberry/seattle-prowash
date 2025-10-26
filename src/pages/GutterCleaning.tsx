@@ -242,42 +242,6 @@ const GutterCleaning = () => {
           </div>
         </section>
 
-        {/* Bundle Option */}
-        <section className="section-spacing">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
-              <Card className="fade-up bg-gradient-to-br from-brand-orange/10 to-brand-orange/5 border-brand-orange/20">
-                <CardContent className="p-8">
-                  <div className="text-center">
-                    <h3 className="text-2xl md:text-3xl font-bold text-brand-navy mb-4">
-                      Bundle & Save 15%
-                    </h3>
-                    <p className="text-lg text-muted-foreground mb-6">
-                      <strong className="text-brand-navy">Gutter Cleaning + Roof Blow-Off</strong>
-                    </p>
-                    <p className="text-muted-foreground mb-6">
-                      Clear leaves and debris from both your gutters and roof in one visit. Most efficient way to maintain your home's exterior.
-                    </p>
-                    <Button 
-                      variant="prowash-primary" 
-                      size="lg"
-                      onClick={() => {
-                        const contactElement = document.getElementById('contact');
-                        if (contactElement) {
-                          contactElement.scrollIntoView({ behavior: 'smooth' });
-                        } else {
-                          window.location.href = '/#contact';
-                        }
-                      }}
-                    >
-                      Get a Fast Quote
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
 
         {/* Testimonials Section */}
         <section className="section-spacing">

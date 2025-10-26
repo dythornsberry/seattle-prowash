@@ -206,7 +206,7 @@ const RoofCleaning = () => {
                 </Card>
                 <Card className="fade-up border-brand-orange border-2 relative">
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <Badge className="bg-brand-orange">Most Popular • Save 15%</Badge>
+                    <Badge className="bg-brand-orange">Most Popular</Badge>
                   </div>
                   <CardHeader className="pt-6">
                     <CardTitle className="text-brand-navy">Roof & Gutter Cleaning</CardTitle>
