@@ -21,6 +21,7 @@ import IntroSection from "@/components/IntroSection";
 import GutterAddonSection from "@/components/GutterAddonSection";
 import UnifiedContactBar from "@/components/UnifiedContactBar";
 import ServiceAreaMap from "@/components/ServiceAreaMap";
+import ServicesPricing from "@/components/ServicesPricing";
 
 const Index = () => {
   // Enable smooth scrolling globally
@@ -142,6 +143,8 @@ const Index = () => {
               </p>
             </div>
           </div>
+          
+          <ServicesPricing />
           
           <div id="contact" className="bg-off-white">
             <TwoStepQuoteForm />
