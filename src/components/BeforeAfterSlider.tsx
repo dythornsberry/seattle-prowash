@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import InteractiveBeforeAfter from "./InteractiveBeforeAfter";
+import { navigateToContact } from "@/lib/navigation";
 // WebP images with JPG fallbacks
 import newRoofBefore1WebP from "@/assets/new-roof-before-1.webp";
 import newRoofAfter1WebP from "@/assets/new-roof-after-1.webp";

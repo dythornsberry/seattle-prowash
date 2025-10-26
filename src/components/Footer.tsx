@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Star } from "lucide-react";
 import { Link } from "react-router-dom";
+import { navigateToContact } from "@/lib/navigation";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
