@@ -125,9 +125,6 @@ const Index = () => {
           
           <MossUrgency />
           <CostOfWaiting />
-          <div className="bg-off-white">
-            <ServicesPreview />
-          </div>
           <div className="bg-navy">
             <BeforeAfterSlider />
           </div>

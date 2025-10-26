@@ -46,17 +46,6 @@ const MossUrgency = () => {
               </CardContent>
             </Card>
           </div>
-          
-          <div className="text-center mt-8 fade-up">
-            <button
-              onClick={() => {
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="text-brand-orange hover:text-brand-orange/80 font-semibold text-lg transition-colors inline-flex items-center gap-2"
-            >
-              Request a Roof Check →
-            </button>
-          </div>
         </div>
       </div>
     </section>

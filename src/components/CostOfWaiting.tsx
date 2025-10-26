@@ -95,19 +95,6 @@ const CostOfWaiting = () => {
               </CardContent>
             </Card>
           </div>
-          
-          <div className="text-center mt-12">
-            <Button 
-              variant="cta-orange" 
-              size="xl"
-              className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-              onClick={() => {
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              GET YOUR FREE QUOTE TODAY
-            </Button>
-          </div>
         </div>
       </div>
     </section>

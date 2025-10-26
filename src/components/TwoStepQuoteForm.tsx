@@ -123,16 +123,6 @@ const TwoStepQuoteForm = () => {
     <section id="contact" className="section-spacing bg-off-white/50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          {/* Urgency Banner */}
-          <div className="mb-8 text-center fade-up">
-            <div className="inline-block bg-brand-orange/10 border-2 border-brand-orange rounded-xl px-6 py-3 animate-pulse">
-              <p className="text-brand-navy font-bold flex items-center justify-center gap-2">
-                <Clock className="w-5 h-5" />
-                Book before {offerExpiryStr} and lock in this year's rates
-              </p>
-            </div>
-          </div>
-
           <div className="text-center mb-12 fade-up">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy mb-4 font-heading">
               Get Your Free Quote Today
@@ -351,22 +341,6 @@ const TwoStepQuoteForm = () => {
                         )}
                       />
 
-                      {/* Trust Badges Above Submit */}
-                      <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 py-3 px-3 bg-muted/30 rounded-lg">
-                        <div className="flex items-center gap-1.5">
-                          <CheckCircle className="w-4 h-4 text-brand-orange" />
-                          <span className="text-xs md:text-sm font-medium text-foreground">180+ ⭐⭐⭐⭐⭐ Reviews</span>
-                        </div>
-                        <div className="flex items-center gap-1.5">
-                          <Shield className="w-4 h-4 text-brand-orange" />
-                          <span className="text-xs md:text-sm font-medium text-foreground">12-Month Guarantee</span>
-                        </div>
-                        <div className="flex items-center gap-1.5">
-                          <CheckCircle className="w-4 h-4 text-brand-orange" />
-                          <span className="text-xs md:text-sm font-medium text-foreground">Licensed & Insured</span>
-                        </div>
-                      </div>
-
                       <Button
                         type="submit"
                         variant="cta-orange"
@@ -376,7 +350,7 @@ const TwoStepQuoteForm = () => {
                         {isSubmitting ? "Sending..." : "Get My Free Quote →"}
                       </Button>
 
-                      <p className="text-center text-muted-foreground text-xs">
+                      <p className="text-center text-muted-foreground text-sm">
                         180+ ⭐⭐⭐⭐⭐ Reviews  •  12-Month Guarantee  •  Licensed & Insured
                       </p>
                     </form>
