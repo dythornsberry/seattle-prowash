@@ -98,26 +98,30 @@ const Index = () => {
   useEffect(() => {
     const hash = window.location.hash;
     if (hash) {
+      // Use longer timeout for cross-page navigation to ensure elements are rendered
       setTimeout(() => {
         const element = document.getElementById(hash.substring(1));
         if (element) {
           const formElement = element.querySelector('form') as HTMLElement | null;
           const target = (formElement && hash === '#contact') ? formElement : (element as HTMLElement);
+          
+          // For cross-page navigation, use a more reliable offset calculation
+          let offset = 120; // Default safe offset
+          
+          // Try to get actual header heights if available
           const topBar = document.getElementById('sticky-top-bar') as HTMLElement | null;
           const header = document.getElementById('site-header') as HTMLElement | null;
-          const extra = 12;
-          let offset = 0;
-          if (header) {
-            offset = header.getBoundingClientRect().bottom + extra;
-          } else if (topBar) {
-            offset = topBar.getBoundingClientRect().bottom + extra;
-          } else {
-            offset = 92;
+          
+          if (header && header.offsetHeight > 0) {
+            offset = topBar ? topBar.offsetHeight + header.offsetHeight + 20 : header.offsetHeight + 20;
+          } else if (topBar && topBar.offsetHeight > 0) {
+            offset = topBar.offsetHeight + 20;
           }
+          
           const y = target.getBoundingClientRect().top + window.scrollY - offset;
           window.scrollTo({ top: y, behavior: 'smooth' });
         }
-      }, 100);
+      }, 300); // Increased timeout for cross-page navigation
     }
   }, []);
 
