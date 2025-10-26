@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
+import { navigateToContact } from "@/lib/navigation";
 
 const StickyTopBar = () => {
   return (
@@ -21,9 +22,7 @@ const StickyTopBar = () => {
               variant="cta-orange"
               size="sm"
               className="shadow-md"
-              onClick={() => {
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-              }}
+              onClick={navigateToContact}
             >
               Get a Fast Quote
             </Button>

@@ -210,7 +210,7 @@ const RoofMoss = () => {
         <CostOfWaiting />
 
         {/* Quote Form */}
-        <div id="contact" className="bg-off-white">
+        <div className="bg-off-white">
           <QuoteForm />
         </div>
 

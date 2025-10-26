@@ -43,10 +43,21 @@ const Index = () => {
       setTimeout(() => {
         const element = document.getElementById(hash);
         if (element) {
-          const isMobile = window.innerWidth < 1024;
+          // Prefer the form inside contact on all devices if present
           const formElement = element.querySelector('form') as HTMLElement | null;
-          const target = (isMobile && formElement && hash === 'contact') ? formElement : (element as HTMLElement);
-          const offset = 60;
+          const target = (formElement && hash === 'contact') ? formElement : (element as HTMLElement);
+          // Compute dynamic offset
+          const topBar = document.getElementById('sticky-top-bar') as HTMLElement | null;
+          const header = document.getElementById('site-header') as HTMLElement | null;
+          let offset = 0;
+          if (header) {
+            const headerTop = parseInt(getComputedStyle(header).top) || 0;
+            offset = headerTop + header.offsetHeight;
+          } else if (topBar) {
+            offset = topBar.offsetHeight;
+          } else {
+            offset = 80;
+          }
           const y = target.getBoundingClientRect().top + window.scrollY - offset;
           window.scrollTo({ top: y, behavior: 'smooth' });
         }
@@ -90,10 +101,19 @@ const Index = () => {
       setTimeout(() => {
         const element = document.getElementById(hash.substring(1));
         if (element) {
-          const isMobile = window.innerWidth < 1024;
           const formElement = element.querySelector('form') as HTMLElement | null;
-          const target = (isMobile && formElement && hash === '#contact') ? formElement : (element as HTMLElement);
-          const offset = 60;
+          const target = (formElement && hash === '#contact') ? formElement : (element as HTMLElement);
+          const topBar = document.getElementById('sticky-top-bar') as HTMLElement | null;
+          const header = document.getElementById('site-header') as HTMLElement | null;
+          let offset = 0;
+          if (header) {
+            const headerTop = parseInt(getComputedStyle(header).top) || 0;
+            offset = headerTop + header.offsetHeight;
+          } else if (topBar) {
+            offset = topBar.offsetHeight;
+          } else {
+            offset = 80;
+          }
           const y = target.getBoundingClientRect().top + window.scrollY - offset;
           window.scrollTo({ top: y, behavior: 'smooth' });
         }
@@ -173,7 +193,7 @@ const Index = () => {
             </div>
           </div>
           
-          <div id="contact" className="bg-off-white">
+          <div className="bg-off-white">
             <TwoStepQuoteForm />
           </div>
         </main>

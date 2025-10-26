@@ -11,11 +11,21 @@ export const navigateToContact = () => {
   if (window.location.pathname === '/') {
     const contactElement = document.getElementById('contact');
     if (contactElement) {
-      const isMobile = window.innerWidth < 1024;
       const formElement = contactElement.querySelector('form') as HTMLElement | null;
-      const target = (isMobile && formElement) ? formElement : (contactElement as HTMLElement);
+      const target = (formElement ?? (contactElement as HTMLElement));
 
-      const offset = 60; // account for sticky header/top bar
+      // Compute dynamic offset: sticky top bar + header position + height
+      const topBar = document.getElementById('sticky-top-bar') as HTMLElement | null;
+      const header = document.getElementById('site-header') as HTMLElement | null;
+      let offset = 0;
+      if (header) {
+        const headerTop = parseInt(getComputedStyle(header).top) || 0;
+        offset = headerTop + header.offsetHeight;
+      } else if (topBar) {
+        offset = topBar.offsetHeight;
+      } else {
+        offset = 80; // sensible default
+      }
       const y = target.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top: y, behavior: 'smooth' });
       return;
