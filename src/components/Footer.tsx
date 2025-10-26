@@ -50,7 +50,7 @@ const Footer = () => {
                   Seattle <span className="text-brand-orange">ProWash</span>
                 </h2>
                 <p className="text-white/80 leading-relaxed">
-                  Trusted roof & gutter cleaning specialists serving Kenmore, Bothell, Kirkland and the greater Seattle area. Protecting Pacific Northwest homes with safe, effective cleaning solutions
+                  Trusted roof cleaning and gutter specialists serving Kenmore, Bothell, Kirkland and greater Seattle. Protecting Pacific Northwest homes with safe, effective moss removal and drainage solutions.
                 </p>
               </div>
               
@@ -169,7 +169,7 @@ const Footer = () => {
               </div>
 
               <Button 
-                variant="prowash-primary" 
+                variant="cta-orange" 
                 size="lg" 
                 className="w-full"
                 onClick={() => {
@@ -180,7 +180,7 @@ const Footer = () => {
                   }
                 }}
               >
-                Get a Fast Quote
+                Get My Free Quote →
               </Button>
             </div>
           </div>

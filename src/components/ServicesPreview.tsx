@@ -50,11 +50,17 @@ const ServicesPreview = () => {
                 
                 <CardContent className="text-center">
                   <Button 
-                    variant="prowash-secondary" 
+                    variant="cta-orange" 
                     size="sm"
-                    onClick={() => window.location.href = service.link}
+                    onClick={() => {
+                      if (window.location.pathname === '/') {
+                        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                      } else {
+                        window.location.href = '/#contact';
+                      }
+                    }}
                   >
-                    Learn More →
+                    Get My Free Quote →
                   </Button>
                 </CardContent>
               </Card>
