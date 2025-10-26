@@ -119,9 +119,8 @@ const GutterCleaning = () => {
                       Get My Free Quote →
                     </Button>
                     <Button 
-                      variant="outline"
+                      variant="prowash-outline"
                       size="xl"
-                      className="border-2 border-white text-white hover:bg-white hover:text-brand-navy"
                       onClick={() => window.location.href = 'tel:2067526690'}
                     >
                       Call 206-752-6690
@@ -177,16 +176,16 @@ const GutterCleaning = () => {
           schemaContext="gutter"
           faqs={[
             {
-              question: "Do you pressure wash shingles?",
-              answer: "No. We use a soft-wash process that protects shingles while removing organic growth."
+              question: "How often should I get my gutters cleaned?",
+              answer: "We recommend twice a year - spring and fall. If you have overhanging trees or heavy leaf buildup, you may need quarterly cleanings to prevent clogs and overflow."
             },
             {
-              question: "How soon can you schedule?",
-              answer: "Most jobs are scheduled within 24–72 hours depending on demand."
+              question: "Will you clean out the downspouts too?",
+              answer: "Yes! We hand-scoop all debris from gutters and flush downspouts to ensure complete water flow from roof to ground. If a downspout is clogged underground, we'll let you know."
             },
             {
-              question: "Do you bag debris & flush downspouts?",
-              answer: "Yes. We bag debris and can flush/test downspouts on request."
+              question: "Do you remove the debris from my property?",
+              answer: "Absolutely. We bag all gutter debris and remove it from your property. You won't have any mess to clean up after we're done."
             }
           ]}
         />

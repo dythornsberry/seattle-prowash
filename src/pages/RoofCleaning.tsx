@@ -94,9 +94,8 @@ const RoofCleaning = () => {
                       Get My Free Quote →
                     </Button>
                     <Button 
-                      variant="outline"
+                      variant="prowash-outline"
                       size="xl"
-                      className="border-2 border-white text-white hover:bg-white hover:text-brand-navy"
                       onClick={() => window.location.href = 'tel:2067526690'}
                     >
                       Call 206-752-6690
@@ -152,16 +151,16 @@ const RoofCleaning = () => {
           schemaContext="roof"
           faqs={[
             {
-              question: "Do you pressure wash shingles?",
-              answer: "No. We use a soft-wash process that protects shingles while removing organic growth."
+              question: "Will you damage my shingles with high pressure?",
+              answer: "No. We never use high pressure on asphalt shingles. Our soft-wash process uses low pressure and specialized solutions to safely remove moss, algae, and lichen without damaging your roof or voiding warranties."
             },
             {
-              question: "How soon can you schedule?",
-              answer: "Most jobs are scheduled within 24–72 hours depending on demand."
+              question: "How long does the moss treatment last?",
+              answer: "Our moss prevention treatment typically lasts 12 months. The treatment kills existing moss at the root and prevents new growth for up to a year, depending on weather and tree coverage."
             },
             {
-              question: "Do you bag debris & flush downspouts?",
-              answer: "Yes. We bag debris and can flush/test downspouts on request."
+              question: "Do I need to be home during the roof cleaning?",
+              answer: "No, you don't need to be home. We work on the exterior only and will send you before/after photos when the job is complete. Just make sure we have clear access to your roof."
             }
           ]}
         />
@@ -401,9 +400,8 @@ const RoofCleaning = () => {
                   Get a Fast Quote
                 </Button>
                 <Button 
-                  variant="outline" 
+                  variant="prowash-outline"
                   size="xl"
-                  className="bg-white/10 backdrop-blur-sm text-white border-white/20 hover:bg-white/20"
                   onClick={() => window.location.href = 'tel:206-752-6690'}
                 >
                   <Phone className="w-4 h-4 mr-2" />
