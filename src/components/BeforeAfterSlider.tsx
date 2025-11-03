@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import InteractiveBeforeAfter from "./InteractiveBeforeAfter";
@@ -194,4 +194,4 @@ const BeforeAfterSlider = () => {
   );
 };
 
-export default BeforeAfterSlider;
+export default memo(BeforeAfterSlider);

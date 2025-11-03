@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, memo } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { throttleRAF, rafAnimate } from "@/utils/performanceUtils";
 
@@ -239,4 +239,4 @@ const InteractiveBeforeAfter = ({
   );
 };
 
-export default InteractiveBeforeAfter;
+export default memo(InteractiveBeforeAfter);
