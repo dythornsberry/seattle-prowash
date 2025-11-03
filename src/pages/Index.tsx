@@ -7,6 +7,7 @@ import ServicesPreview from "@/components/ServicesPreview";
 import CostOfWaiting from "@/components/CostOfWaiting";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
+import GoogleReviewsCarousel from "@/components/GoogleReviewsCarousel";
 import HomeFAQ from "@/components/HomeFAQ";
 import ServiceAreaMap from "@/components/ServiceAreaMap";
 import Footer from "@/components/Footer";
@@ -102,6 +103,7 @@ const Index = () => {
           <div className="bg-off-white">
             <TwoStepQuoteForm />
           </div>
+          <GoogleReviewsCarousel />
           <HomeFAQ />
           <ServiceAreaMap />
         </main>
