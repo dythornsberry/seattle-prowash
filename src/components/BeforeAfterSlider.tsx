@@ -87,12 +87,13 @@ const BeforeAfterSlider = () => {
             <div className="overflow-hidden rounded-2xl shadow-2xl bg-white">
               <div 
                 className="flex transition-all duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                style={{ 
+                  transform: `translateX(-${currentSlide * 100}%) translateZ(0)`,
+                  backfaceVisibility: 'hidden' as const
+                }}
               >
-                {beforeAfterProjects.map((project, index) => (
-                  <div key={project.id} className="w-full flex-shrink-0 fade-up gallery-item"
-                    style={{ transitionDelay: `${index * 100}ms` }}
-                  >
+                {beforeAfterProjects.map((project) => (
+                  <div key={project.id} className="w-full flex-shrink-0 fade-up gallery-item">
                     <div className="bg-brand-white p-8">
                       {/* Project Info */}
                       <div className="text-center mb-8">

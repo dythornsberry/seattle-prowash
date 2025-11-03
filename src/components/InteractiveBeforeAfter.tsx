@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { throttleRAF, rafAnimate } from "@/utils/performanceUtils";
 
 interface InteractiveBeforeAfterProps {
   beforeImage: string;
@@ -25,6 +26,7 @@ const InteractiveBeforeAfter = ({
   const [isUserInteracting, setIsUserInteracting] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const animationCleanupRef = useRef<(() => void) | null>(null);
   const isMobile = useIsMobile();
 
   // Hide hint after 4 seconds
@@ -33,7 +35,7 @@ const InteractiveBeforeAfter = ({
     return () => clearTimeout(timer);
   }, []);
 
-  // Auto-scroll animation on mobile (once per page load, pause if user touches)
+  // Optimized auto-scroll animation using RAF
   useEffect(() => {
     if (!isMobile || hasAutoPlayed || isUserInteracting) return;
 
@@ -43,41 +45,33 @@ const InteractiveBeforeAfter = ({
           if (entry.isIntersecting && !hasAutoPlayed && !isUserInteracting) {
             setHasAutoPlayed(true);
             
-            // Animate from 50% to 0% (reveal after), then back to 50%
+            // Debounce initial animation by 500ms
             setTimeout(() => {
-              let progress = 50;
-              const animateToZero = setInterval(() => {
-                if (isUserInteracting) {
-                  clearInterval(animateToZero);
-                  return;
-                }
-                progress -= 1.5; // Slower animation
-                if (progress <= 0) {
-                  clearInterval(animateToZero);
-                  setSliderPosition(0);
-                  
-                  // Wait 1000ms then animate back
-                  setTimeout(() => {
-                    if (isUserInteracting) return;
-                    let returnProgress = 0;
-                    const animateBack = setInterval(() => {
-                      if (isUserInteracting) {
-                        clearInterval(animateBack);
-                        return;
-                      }
-                      returnProgress += 1.5;
-                      if (returnProgress >= 50) {
-                        clearInterval(animateBack);
-                        setSliderPosition(50);
-                      } else {
-                        setSliderPosition(returnProgress);
-                      }
-                    }, 20);
-                  }, 1000);
-                } else {
-                  setSliderPosition(progress);
-                }
-              }, 20);
+              if (isUserInteracting) return;
+
+              // Animate from 50% to 0% using RAF
+              const cleanup1 = rafAnimate((progress) => {
+                if (isUserInteracting) return false;
+                const newPos = 50 - (50 * progress);
+                setSliderPosition(newPos);
+                return true;
+              }, 1500);
+
+              animationCleanupRef.current = cleanup1;
+
+              // After first animation completes, wait then animate back
+              setTimeout(() => {
+                if (isUserInteracting) return;
+                
+                const cleanup2 = rafAnimate((progress) => {
+                  if (isUserInteracting) return false;
+                  const newPos = 0 + (50 * progress);
+                  setSliderPosition(newPos);
+                  return true;
+                }, 1500);
+
+                animationCleanupRef.current = cleanup2;
+              }, 2500);
             }, 500);
           }
         });
@@ -89,21 +83,35 @@ const InteractiveBeforeAfter = ({
       observer.observe(containerRef.current);
     }
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      if (animationCleanupRef.current) {
+        animationCleanupRef.current();
+      }
+    };
   }, [isMobile, hasAutoPlayed, isUserInteracting]);
 
-  const handleMove = (clientX: number) => {
-    if (!containerRef.current) return;
-    
-    setIsUserInteracting(true);
-    setShowHint(false);
-    
-    const rect = containerRef.current.getBoundingClientRect();
-    const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
-    const percent = Math.max(0, Math.min((x / rect.width) * 100, 100));
-    
-    setSliderPosition(percent);
-  };
+  // Throttled move handler using RAF for 60fps performance
+  const handleMove = useRef(
+    throttleRAF((clientX: number) => {
+      if (!containerRef.current) return;
+      
+      setIsUserInteracting(true);
+      setShowHint(false);
+      
+      // Cancel any ongoing animations
+      if (animationCleanupRef.current) {
+        animationCleanupRef.current();
+        animationCleanupRef.current = null;
+      }
+      
+      const rect = containerRef.current.getBoundingClientRect();
+      const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
+      const percent = Math.max(0, Math.min((x / rect.width) * 100, 100));
+      
+      setSliderPosition(percent);
+    })
+  ).current;
 
   // Tap to toggle between before/after
   const handleClick = () => {
@@ -128,6 +136,12 @@ const InteractiveBeforeAfter = ({
   const handleTouchStart = () => {
     setIsUserInteracting(true);
     setShowHint(false);
+    
+    // Cancel animations
+    if (animationCleanupRef.current) {
+      animationCleanupRef.current();
+      animationCleanupRef.current = null;
+    }
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
@@ -168,11 +182,13 @@ const InteractiveBeforeAfter = ({
         <div className="absolute inset-0 bg-gray-200 animate-pulse" />
       )}
 
-      {/* Before Image (Clipped) */}
+      {/* Before Image (Clipped) - GPU accelerated */}
       <div
         className="absolute inset-0 overflow-hidden"
         style={{
           clipPath: `inset(0 ${100 - sliderPosition}% 0 0)`,
+          transform: 'translateZ(0)',
+          backfaceVisibility: 'hidden' as const,
         }}
       >
         <picture>
@@ -195,10 +211,14 @@ const InteractiveBeforeAfter = ({
         After
       </div>
 
-      {/* Slider Line & Handle */}
+      {/* Slider Line & Handle - GPU accelerated */}
       <div
         className="absolute top-0 bottom-0 w-1 bg-white shadow-lg z-20 cursor-ew-resize"
-        style={{ left: `${sliderPosition}%` }}
+        style={{ 
+          left: `${sliderPosition}%`,
+          transform: 'translateZ(0)',
+          willChange: isDragging ? 'left' : 'auto'
+        }}
       >
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-xl border-4 border-gray-300 flex items-center justify-center cursor-ew-resize transition-shadow duration-200 hover:shadow-2xl hover:border-brand-orange">
           <div className="flex gap-1">
