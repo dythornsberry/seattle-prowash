@@ -19,6 +19,7 @@ import Bellevue from "./pages/locations/Bellevue";
 import Redmond from "./pages/locations/Redmond";
 import Sammamish from "./pages/locations/Sammamish";
 import Woodinville from "./pages/locations/Woodinville";
+import Seattle from "./pages/locations/Seattle";
 import Reviews from "./pages/Reviews";
 import ServiceAreas from "./pages/ServiceAreas";
 
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/faq" element={<FAQ />} />
           <Route path="/about" element={<About />} />
           <Route path="/service-areas" element={<ServiceAreas />} />
+          <Route path="/seattle" element={<Seattle />} />
           <Route path="/kenmore" element={<Kenmore />} />
           <Route path="/bothell" element={<Bothell />} />
           <Route path="/kirkland" element={<Kirkland />} />
