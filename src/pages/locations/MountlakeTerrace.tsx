@@ -7,6 +7,9 @@ import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import TestimonialCard from "@/components/TestimonialCard";
+import NearbyLocations from "@/components/NearbyLocations";
+import RelatedResources from "@/components/RelatedResources";
+import { nearbyCitiesData } from "@/lib/locationNearbyCities";
 import { generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
 
 const MountlakeTerrace = () => {
@@ -191,6 +194,15 @@ const MountlakeTerrace = () => {
               </div>
             </div>
           </section>
+
+          {/* Nearby Service Areas */}
+          <NearbyLocations 
+            currentCity="Mountlake Terrace"
+            cities={nearbyCitiesData["mountlake-terrace"]}
+          />
+
+          {/* Related Resources */}
+          <RelatedResources locationName="Mountlake Terrace" />
 
           {/* CTA Section */}
           <section className="py-16 bg-brand-navy text-white">

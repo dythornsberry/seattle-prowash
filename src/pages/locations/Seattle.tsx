@@ -6,8 +6,11 @@ import QuoteForm from "@/components/QuoteForm";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import TestimonialCard from "@/components/TestimonialCard";
+import NearbyLocations from "@/components/NearbyLocations";
+import RelatedResources from "@/components/RelatedResources";
 import { SEOHead } from "@/components/SEOHead";
 import { generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { nearbyCitiesData } from "@/lib/locationNearbyCities";
 
 const Seattle = () => {
   useEffect(() => {
@@ -343,6 +346,15 @@ const Seattle = () => {
             <QuoteForm />
           </div>
         </section>
+
+        {/* Nearby Service Areas */}
+        <NearbyLocations 
+          currentCity="Seattle"
+          cities={nearbyCitiesData.seattle}
+        />
+
+        {/* Related Resources */}
+        <RelatedResources locationName="Seattle" />
 
         {/* CTA Section */}
         <section className="py-16 px-4 bg-brand-navy text-white">

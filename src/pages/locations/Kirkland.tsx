@@ -8,6 +8,9 @@ import { MapPin, Star, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
+import NearbyLocations from "@/components/NearbyLocations";
+import RelatedResources from "@/components/RelatedResources";
+import { nearbyCitiesData } from "@/lib/locationNearbyCities";
 import MobileBottomBar from "@/components/MobileBottomBar";
 
 const Kirkland = () => {
@@ -376,6 +379,15 @@ const Kirkland = () => {
               </div>
             </div>
           </section>
+
+          {/* Nearby Service Areas */}
+          <NearbyLocations 
+            currentCity="Kirkland"
+            cities={nearbyCitiesData.kirkland}
+          />
+
+          {/* Related Resources */}
+          <RelatedResources locationName="Kirkland" />
 
           {/* CTA Section */}
           <section className="py-16 bg-brand-navy text-white">

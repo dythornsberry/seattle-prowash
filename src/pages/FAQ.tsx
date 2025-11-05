@@ -5,41 +5,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Phone, Shield, Clock, Leaf } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
+import { injectSchema } from "@/utils/schema";
 
 const FAQ = () => {
-  // SEO meta tags
-  useEffect(() => {
-    document.title = "FAQ - Seattle ProWash | Roof Cleaning & Pressure Washing";
-    document.querySelector('meta[name="description"]')?.setAttribute(
-      "content", 
-      "Get answers to common questions about our roof cleaning, pressure washing, and house washing services in Seattle. Learn about our process, guarantees, and more."
-    );
-    window.scrollTo(0, 0);
-  }, []);
-
-  // Intersection Observer for fade-up animations
-  useEffect(() => {
-    const observerCallback = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(observerCallback, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    });
-
-    const fadeElements = document.querySelectorAll('.fade-up');
-    fadeElements.forEach((el) => observer.observe(el));
-
-    return () => {
-      fadeElements.forEach((el) => observer.unobserve(el));
-    };
-  }, []);
-
+  // FAQ data array
   const faqs = [
     {
       icon: Shield,
@@ -94,7 +63,25 @@ const FAQ = () => {
       question: "What's the best time of year to get my home cleaned?",
       answer: "The best time was last year! Regular maintenance will improve your home's longevity and appearance.\n\n• If you see visible moss on your roof\n\n• If you notice clogged gutters\n\n• If there's algae on your home's siding\n\n• If there's moss on your driveway\n\n• If there's algae on your deck\n\nWe recommend cleaning ASAP before it gets worse. Don't wait, these issues only compound over time and become more expensive to address.",
       category: "Maintenance"
-    },
+    }
+  ];
+
+  // SEO meta tags and FAQ Schema
+  useEffect(() => {
+    document.title = "FAQ - Seattle ProWash | Roof Cleaning & Pressure Washing";
+    document.querySelector('meta[name="description"]')?.setAttribute(
+      "content", 
+      "Get answers to common questions about our roof cleaning, pressure washing, and house washing services in Seattle. Learn about our process, guarantees, and more."
+    );
+    
+    
+    // Note: FAQ schema will be more complete after data is loaded
+    window.scrollTo(0, 0);
+  }, []);
+
+
+  // Additional FAQ items (defined after initial faqs)
+  const additionalFaqs = [
     {
       icon: Clock,
       question: "How long does a typical service take?",
@@ -115,7 +102,62 @@ const FAQ = () => {
     }
   ];
 
-  const categories = [...new Set(faqs.map(faq => faq.category))];
+  // Combine all FAQs
+  const allFaqs = [...faqs, ...additionalFaqs];
+
+  // Intersection Observer for fade-up animations
+  useEffect(() => {
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    const fadeElements = document.querySelectorAll('.fade-up');
+    fadeElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      fadeElements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
+  const categories = [...new Set(allFaqs.map(faq => faq.category))];
+
+  // Inject FAQ Schema with all FAQ data
+  useEffect(() => {
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": allFaqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer.replace(/✅|❌|•/g, '').trim()
+        }
+      }))
+    };
+    
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = 'faq-page-schema';
+    script.text = JSON.stringify(faqSchema);
+    document.head.appendChild(script);
+    
+    return () => {
+      const existingScript = document.getElementById('faq-page-schema');
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, [allFaqs]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -149,7 +191,7 @@ const FAQ = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               {categories.map((category) => {
-                const categoryFAQs = faqs.filter(faq => faq.category === category);
+                const categoryFAQs = allFaqs.filter(faq => faq.category === category);
                 
                 return (
                   <div key={category} className="mb-12 fade-up">
