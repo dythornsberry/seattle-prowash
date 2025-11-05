@@ -5,6 +5,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
 import TestimonialCard from "@/components/TestimonialCard";
+import ServiceAreasSection from "@/components/ServiceAreasSection";
+import RelatedResources from "@/components/RelatedResources";
 import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 import ServiceFAQ from "@/components/ServiceFAQ";
 import { Button } from "@/components/ui/button";
@@ -331,6 +333,47 @@ const GutterCleaning = () => {
             </div>
           </div>
         </section>
+
+        {/* Service Areas */}
+        <ServiceAreasSection
+          title="Gutter Cleaning Service Areas"
+          description="Professional gutter cleaning services throughout the Greater Seattle area"
+          areas={[
+            { name: "Seattle", path: "/locations/seattle" },
+            { name: "Bellevue", path: "/locations/bellevue" },
+            { name: "Kirkland", path: "/locations/kirkland" },
+            { name: "Redmond", path: "/locations/redmond" },
+            { name: "Bothell", path: "/locations/bothell" },
+            { name: "Kenmore", path: "/locations/kenmore" },
+            { name: "Woodinville", path: "/locations/woodinville" },
+            { name: "Sammamish", path: "/locations/sammamish" },
+            { name: "Lynnwood", path: "/locations/lynnwood" },
+            { name: "Shoreline", path: "/locations/shoreline" },
+            { name: "Edmonds", path: "/locations/edmonds" },
+            { name: "Mill Creek", path: "/locations/mill-creek" }
+          ]}
+        />
+
+        {/* Related Resources */}
+        <RelatedResources
+          resources={[
+            {
+              title: "Gutter Cleaning Safety Tips",
+              description: "Essential safety guidelines for maintaining your gutters.",
+              path: "/resources/gutter-cleaning-safety-tips"
+            },
+            {
+              title: "Roof & Gutter Maintenance",
+              description: "Why regular cleaning is crucial for your home.",
+              path: "/resources/roof-gutter-cleaning-importance"
+            },
+            {
+              title: "Prevent Moss & Algae Growth",
+              description: "Keep your home's exterior moss-free year-round.",
+              path: "/resources/prevent-moss-algae-growth"
+            }
+          ]}
+        />
 
         {/* CTA Section */}
         <section className="section-spacing bg-brand-navy">

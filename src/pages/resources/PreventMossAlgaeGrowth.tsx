@@ -143,6 +143,26 @@ const PreventMossAlgaeGrowth = () => {
                   </ul>
                 </div>
 
+                {/* Related Services */}
+                <div className="mt-12 p-6 bg-muted rounded-lg">
+                  <h3 className="text-xl font-bold mb-4 text-center">Related Services</h3>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <Link to="/roof-cleaning" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+                      <h4 className="font-semibold text-brand-navy mb-2">Roof Cleaning</h4>
+                      <p className="text-sm text-muted-foreground">Professional soft-wash roof cleaning and moss removal</p>
+                    </Link>
+                    <Link to="/gutter-cleaning" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+                      <h4 className="font-semibold text-brand-navy mb-2">Gutter Cleaning</h4>
+                      <p className="text-sm text-muted-foreground">Complete gutter cleaning and debris removal</p>
+                    </Link>
+                  </div>
+                  <div className="text-center mt-4">
+                    <Link to="/service-areas" className="text-brand-orange hover:underline font-semibold">
+                      View All Service Areas →
+                    </Link>
+                  </div>
+                </div>
+
                 {/* CTA */}
                 <div className="mt-12 p-8 bg-moss-green text-white rounded-lg text-center">
                   <h3 className="text-2xl font-bold mb-4">Protect Your Roof with Professional Moss Treatment</h3>

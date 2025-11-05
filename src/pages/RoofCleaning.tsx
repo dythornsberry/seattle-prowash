@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import StickyTopBar from "@/components/StickyTopBar";
 import MobileBottomBar from "@/components/MobileBottomBar";
 import TestimonialCard from "@/components/TestimonialCard";
+import ServiceAreasSection from "@/components/ServiceAreasSection";
+import RelatedResources from "@/components/RelatedResources";
 import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 import ServiceFAQ from "@/components/ServiceFAQ";
 import { Button } from "@/components/ui/button";
@@ -419,6 +421,29 @@ const RoofCleaning = () => {
             </div>
           </div>
         </section>
+
+        {/* Service Areas */}
+        <ServiceAreasSection
+          title="Roof Cleaning Service Areas"
+          description="Professional roof cleaning and moss treatment across the Greater Seattle area"
+          areas={[
+            { name: "Seattle", path: "/locations/seattle" },
+            { name: "Bellevue", path: "/locations/bellevue" },
+            { name: "Kirkland", path: "/locations/kirkland" },
+            { name: "Redmond", path: "/locations/redmond" },
+            { name: "Bothell", path: "/locations/bothell" },
+            { name: "Kenmore", path: "/locations/kenmore" },
+            { name: "Woodinville", path: "/locations/woodinville" },
+            { name: "Sammamish", path: "/locations/sammamish" },
+            { name: "Lynnwood", path: "/locations/lynnwood" },
+            { name: "Shoreline", path: "/locations/shoreline" },
+            { name: "Edmonds", path: "/locations/edmonds" },
+            { name: "Mill Creek", path: "/locations/mill-creek" }
+          ]}
+        />
+
+        {/* Related Resources */}
+        <RelatedResources />
 
         {/* CTA Section */}
         <section className="section-spacing bg-brand-navy">

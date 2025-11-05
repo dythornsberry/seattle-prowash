@@ -188,6 +188,26 @@ const GutterCleaningSafetyTips = () => {
                   </p>
                 </div>
 
+                {/* Related Services */}
+                <div className="mt-12 p-6 bg-muted rounded-lg">
+                  <h3 className="text-xl font-bold mb-4 text-center">Related Services</h3>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <Link to="/gutter-cleaning" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+                      <h4 className="font-semibold text-brand-navy mb-2">Gutter Cleaning</h4>
+                      <p className="text-sm text-muted-foreground">Safe, professional gutter cleaning by insured experts</p>
+                    </Link>
+                    <Link to="/roof-cleaning" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+                      <h4 className="font-semibold text-brand-navy mb-2">Roof Cleaning</h4>
+                      <p className="text-sm text-muted-foreground">Comprehensive roof and gutter maintenance</p>
+                    </Link>
+                  </div>
+                  <div className="text-center mt-4">
+                    <Link to="/service-areas" className="text-brand-orange hover:underline font-semibold">
+                      View All Service Areas →
+                    </Link>
+                  </div>
+                </div>
+
                 {/* CTA */}
                 <div className="mt-12 p-8 bg-dark-teal text-white rounded-lg text-center">
                   <h3 className="text-2xl font-bold mb-4">Your Safety is Our Priority</h3>
