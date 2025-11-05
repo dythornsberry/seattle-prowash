@@ -1,12 +1,13 @@
 import { useEffect } from "react";
-import { generateBreadcrumbSchema, injectSchema } from "@/utils/schema";
+import { generateBreadcrumbSchema, generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Star, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
+import TestimonialCard from "@/components/TestimonialCard";
 import MobileBottomBar from "@/components/MobileBottomBar";
 
 const Kenmore = () => {
@@ -37,6 +38,23 @@ const Kenmore = () => {
     addOrUpdateMetaTag('geo.position', '47.7574;-122.2429');
     addOrUpdateMetaTag('ICBM', '47.7574, -122.2429');
 
+    // Inject LocalBusiness Schema for Kenmore
+    const businessSchema = generateLocalBusinessSchema({
+      ...COMPANY_INFO,
+      name: `${COMPANY_INFO.name} - Kenmore`,
+      description: "Professional roof cleaning, gutter cleaning, and exterior washing services in Kenmore, WA. Serving Kenmore Highlands, Moorlands, and all local neighborhoods. 12-month moss-free guarantee.",
+      address: {
+        ...COMPANY_INFO.address,
+        addressLocality: "Kenmore"
+      },
+      geo: {
+        latitude: 47.7574,
+        longitude: -122.2429
+      },
+      areaServed: ["Kenmore", "Kenmore Highlands", "Moorlands", "Inglewood", "Kenmore Village"]
+    });
+    const cleanupBusiness = injectSchema(businessSchema);
+
     // Inject Breadcrumb Schema
     const breadcrumbSchema = generateBreadcrumbSchema([
       { name: "Home", url: "https://www.seattleprowash.com" },
@@ -48,6 +66,7 @@ const Kenmore = () => {
     window.scrollTo(0, 0);
 
     return () => {
+      cleanupBusiness();
       cleanupBreadcrumb();
     };
   }, []);
@@ -65,6 +84,11 @@ const Kenmore = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Roof & Gutter Cleaning in Kenmore, WA"
+        description="Expert roof cleaning, gutter cleaning, and moss removal in Kenmore, WA. Serving Kenmore Highlands, Moorlands, and all local neighborhoods. 12-month guarantee. Licensed & insured."
+        url="https://www.seattleprowash.com/service-areas/kenmore"
+      />
       <Header />
         
         <main className="pt-16 md:pt-20">

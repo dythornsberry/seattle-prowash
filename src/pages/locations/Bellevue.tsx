@@ -1,12 +1,13 @@
 import { useEffect } from "react";
-import { generateBreadcrumbSchema, injectSchema } from "@/utils/schema";
+import { generateBreadcrumbSchema, generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Star, Phone } from "lucide-react";
+import { MapPin, Star, Phone, CheckCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
+import TestimonialCard from "@/components/TestimonialCard";
 import MobileBottomBar from "@/components/MobileBottomBar";
 
 const Bellevue = () => {
@@ -37,6 +38,23 @@ const Bellevue = () => {
     addOrUpdateMetaTag('geo.position', '47.6101;-122.2015');
     addOrUpdateMetaTag('ICBM', '47.6101, -122.2015');
 
+    // Inject LocalBusiness Schema for Bellevue
+    const businessSchema = generateLocalBusinessSchema({
+      ...COMPANY_INFO,
+      name: `${COMPANY_INFO.name} - Bellevue`,
+      description: "Professional roof cleaning, gutter cleaning, and exterior washing services in Bellevue, WA. Serving all Bellevue neighborhoods with expert moss removal and 12-month guarantee.",
+      address: {
+        ...COMPANY_INFO.address,
+        addressLocality: "Bellevue"
+      },
+      geo: {
+        latitude: 47.6101,
+        longitude: -122.2015
+      },
+      areaServed: ["Bellevue", "Downtown Bellevue", "Crossroads", "Wilburton", "Somerset", "Factoria"]
+    });
+    const cleanupBusiness = injectSchema(businessSchema);
+
     // Inject Breadcrumb Schema
     const breadcrumbSchema = generateBreadcrumbSchema([
       { name: "Home", url: "https://www.seattleprowash.com" },
@@ -48,12 +66,18 @@ const Bellevue = () => {
     window.scrollTo(0, 0);
 
     return () => {
+      cleanupBusiness();
       cleanupBreadcrumb();
     };
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Roof & Gutter Cleaning in Bellevue, WA"
+        description="Expert roof cleaning, gutter cleaning, and moss removal in Bellevue, WA. Serving all Bellevue neighborhoods. 12-month moss-free guarantee. Licensed & insured. Same-day quotes."
+        url="https://www.seattleprowash.com/service-areas/bellevue"
+      />
       <Header />
         
         <main className="pt-16 md:pt-20">
@@ -200,28 +224,92 @@ const Bellevue = () => {
             </div>
           </section>
 
-          {/* CTA Section */}
+          {/* Testimonials Section */}
           <section className="py-16 bg-off-white">
             <div className="container mx-auto px-4">
+              <div className="max-w-6xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-12 text-center">
+                  What Bellevue Customers Say
+                </h2>
+                <div className="grid md:grid-cols-3 gap-6 mb-12">
+                  <TestimonialCard 
+                    quote="Dylan and team did our gutter cleaning, moss removal did an awesome job. We highly recommend them"
+                    author="Ashokraj"
+                    service="Roof & Gutter Cleaning"
+                  />
+                  <TestimonialCard 
+                    quote="They were responsive and reasonable in pricing. Did a great job with my grimy gutters getting them white again. Roof looks good, too."
+                    author="Kelly Sim"
+                    service="Gutter Cleaning & Brightening"
+                  />
+                  <TestimonialCard 
+                    quote="Excellent company to work with, Dylan and his guys are friendly and do great work with attention to detail. Professional and easy company to work with."
+                    author="Chris Olson"
+                    service="Complete Exterior Service"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Local FAQ Section */}
+          <section className="py-16 bg-white">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-12 text-center">
+                  Bellevue Service FAQs
+                </h2>
+                <div className="space-y-6">
+                  <Card>
+                    <CardContent className="p-6">
+                      <h3 className="font-bold text-dark-teal mb-3">Do I need a permit for roof cleaning in Bellevue?</h3>
+                      <p className="text-muted-foreground">
+                        No permit is required for routine roof and gutter cleaning services in Bellevue. Our soft-wash methods are non-invasive and comply with all local regulations.
+                      </p>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardContent className="p-6">
+                      <h3 className="font-bold text-dark-teal mb-3">What Bellevue neighborhoods do you serve?</h3>
+                      <p className="text-muted-foreground">
+                        We serve all Bellevue areas including Downtown Bellevue, Crossroads, Wilburton, Somerset, Factoria, Bridle Trails, and surrounding neighborhoods. Same-day estimates available throughout Bellevue.
+                      </p>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardContent className="p-6">
+                      <h3 className="font-bold text-dark-teal mb-3">How often should Bellevue homes get roof cleaning?</h3>
+                      <p className="text-muted-foreground">
+                        Due to Bellevue's wet climate and tree coverage, we recommend annual roof cleaning and moss treatment. Homes with heavy tree coverage may benefit from twice-yearly service.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="py-16 bg-brand-navy text-white">
+            <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
                   Ready to Protect Your Bellevue Home?
                 </h2>
-                <p className="text-lg text-gray-600 mb-8">
-                  Get your free estimate today and discover why Bellevue homeowners trust Seattle ProWash.
+                <p className="text-xl text-white/90 mb-8">
+                  Join 180+ satisfied customers. Get your free estimate today and see why Bellevue homeowners trust Seattle ProWash.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button 
-                    variant="cta-orange"
+                    variant="prowash-secondary"
                     size="xl"
-                    className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold"
                     onClick={() => window.location.href = '/#contact'}
                   >
                     GET YOUR FREE QUOTE TODAY
                   </Button>
                   <Button 
-                    variant="outline"
+                    variant="prowash-outline"
                     size="xl"
                     onClick={() => window.location.href = 'tel:206-752-6690'}
                   >

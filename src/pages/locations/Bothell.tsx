@@ -1,12 +1,13 @@
 import { useEffect } from "react";
-import { generateBreadcrumbSchema, injectSchema } from "@/utils/schema";
+import { generateBreadcrumbSchema, generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Star, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
+import TestimonialCard from "@/components/TestimonialCard";
 import MobileBottomBar from "@/components/MobileBottomBar";
 
 const Bothell = () => {
@@ -37,6 +38,23 @@ const Bothell = () => {
     addOrUpdateMetaTag('geo.position', '47.7623;-122.2054');
     addOrUpdateMetaTag('ICBM', '47.7623, -122.2054');
 
+    // Inject LocalBusiness Schema for Bothell
+    const businessSchema = generateLocalBusinessSchema({
+      ...COMPANY_INFO,
+      name: `${COMPANY_INFO.name} - Bothell`,
+      description: "Professional roof cleaning, gutter cleaning, and exterior washing services in Bothell, WA. Serving all Bothell neighborhoods including Canyon Park and Country Village. 12-month moss-free guarantee.",
+      address: {
+        ...COMPANY_INFO.address,
+        addressLocality: "Bothell"
+      },
+      geo: {
+        latitude: 47.7623,
+        longitude: -122.2054
+      },
+      areaServed: ["Bothell", "Downtown Bothell", "Canyon Park", "Country Village", "Fitzgerald", "North Creek"]
+    });
+    const cleanupBusiness = injectSchema(businessSchema);
+
     // Inject Breadcrumb Schema
     const breadcrumbSchema = generateBreadcrumbSchema([
       { name: "Home", url: "https://www.seattleprowash.com" },
@@ -48,6 +66,7 @@ const Bothell = () => {
     window.scrollTo(0, 0);
 
     return () => {
+      cleanupBusiness();
       cleanupBreadcrumb();
     };
   }, []);
@@ -65,6 +84,11 @@ const Bothell = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Roof & Gutter Cleaning in Bothell, WA"
+        description="Expert roof cleaning, gutter cleaning, and moss removal in Bothell, WA. Serving all Bothell neighborhoods including Canyon Park and Country Village. 12-month moss-free guarantee. Licensed & insured."
+        url="https://www.seattleprowash.com/service-areas/bothell"
+      />
       <Header />
         
         <main className="pt-16 md:pt-20">
@@ -288,22 +312,86 @@ const Bothell = () => {
             </div>
           </section>
 
-          {/* CTA Section */}
+          {/* Testimonials Section */}
           <section className="py-16 bg-off-white">
             <div className="container mx-auto px-4">
+              <div className="max-w-6xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-12 text-center">
+                  What Bothell Customers Say
+                </h2>
+                <div className="grid md:grid-cols-3 gap-6 mb-12">
+                  <TestimonialCard 
+                    quote="Great and effective work on our house in Bothell. Would highly recommend"
+                    author="Raoul Comaduran"
+                    service="House Wash"
+                  />
+                  <TestimonialCard 
+                    quote="Seattle ProWash did an amazing job on my roof and house wash! They arrived on time, were very professional, and delivered great results. Highly recommend!"
+                    author="Sarcanean Denis"
+                    service="Roof & House Wash"
+                  />
+                  <TestimonialCard 
+                    quote="Very nice and efficient! Also noticed my house gutters might need to be cleaned. Scheduled on the spot for this service, very convenient."
+                    author="Amy Healy"
+                    service="Roof & Gutter Cleaning"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Local FAQ Section */}
+          <section className="py-16 bg-white">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-12 text-center">
+                  Bothell Service FAQs
+                </h2>
+                <div className="space-y-6">
+                  <Card>
+                    <CardContent className="p-6">
+                      <h3 className="font-bold text-dark-teal mb-3">What Bothell neighborhoods do you serve?</h3>
+                      <p className="text-muted-foreground">
+                        We serve all Bothell areas including Downtown Bothell, Canyon Park, Country Village, Fitzgerald, North Creek, Queensboro, and Thrasher's Corner. Same-day estimates available throughout Bothell.
+                      </p>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardContent className="p-6">
+                      <h3 className="font-bold text-dark-teal mb-3">Why is moss so common on Bothell roofs?</h3>
+                      <p className="text-muted-foreground">
+                        Bothell's proximity to the Sammamish River and North Creek creates higher humidity levels, combined with heavy tree coverage in many neighborhoods. This creates ideal conditions for moss growth, making annual roof cleaning essential.
+                      </p>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardContent className="p-6">
+                      <h3 className="font-bold text-dark-teal mb-3">How quickly can you service my Bothell home?</h3>
+                      <p className="text-muted-foreground">
+                        Most Bothell customers receive same-day quotes and can be scheduled within 1-2 weeks. Emergency services available for urgent situations like overflowing gutters or heavy moss buildup.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="py-16 bg-brand-navy text-white">
+            <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
                   Protect Your Bothell Home Today
                 </h2>
-                <p className="text-lg text-gray-600 mb-8">
-                  Join hundreds of satisfied Bothell homeowners who trust Seattle ProWash for their exterior cleaning needs. Get your free estimate today.
+                <p className="text-xl text-white/90 mb-8">
+                  Join 180+ satisfied customers. Get your free estimate today and see why Bothell homeowners trust Seattle ProWash.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button 
-                    variant="cta-orange"
+                    variant="prowash-secondary"
                     size="xl"
-                    className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold"
                     onClick={() => {
                       window.location.href = '/#contact';
                     }}
@@ -311,7 +399,7 @@ const Bothell = () => {
                     GET YOUR FREE QUOTE TODAY
                   </Button>
                   <Button 
-                    variant="outline"
+                    variant="prowash-outline"
                     size="xl"
                     onClick={() => window.location.href = 'tel:206-752-6690'}
                   >

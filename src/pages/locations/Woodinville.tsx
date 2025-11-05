@@ -1,12 +1,13 @@
 import { useEffect } from "react";
-import { generateBreadcrumbSchema, injectSchema } from "@/utils/schema";
+import { generateBreadcrumbSchema, generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Star, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
+import TestimonialCard from "@/components/TestimonialCard";
 import MobileBottomBar from "@/components/MobileBottomBar";
 
 const Woodinville = () => {
@@ -37,6 +38,23 @@ const Woodinville = () => {
     addOrUpdateMetaTag('geo.position', '47.7540;-122.1632');
     addOrUpdateMetaTag('ICBM', '47.7540, -122.1632');
 
+    // Inject LocalBusiness Schema for Woodinville
+    const businessSchema = generateLocalBusinessSchema({
+      ...COMPANY_INFO,
+      name: `${COMPANY_INFO.name} - Woodinville`,
+      description: "Professional roof cleaning, gutter cleaning, and exterior washing services in Woodinville, WA. Serving all Woodinville neighborhoods. 12-month moss-free guarantee.",
+      address: {
+        ...COMPANY_INFO.address,
+        addressLocality: "Woodinville"
+      },
+      geo: {
+        latitude: 47.7540,
+        longitude: -122.1632
+      },
+      areaServed: ["Woodinville", "Hollywood Hill", "Cottage Lake", "Wellington"]
+    });
+    const cleanupBusiness = injectSchema(businessSchema);
+
     // Inject Breadcrumb Schema
     const breadcrumbSchema = generateBreadcrumbSchema([
       { name: "Home", url: "https://www.seattleprowash.com" },
@@ -48,12 +66,18 @@ const Woodinville = () => {
     window.scrollTo(0, 0);
 
     return () => {
+      cleanupBusiness();
       cleanupBreadcrumb();
     };
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Roof & Gutter Cleaning in Woodinville, WA"
+        description="Expert roof cleaning, gutter cleaning, and moss removal in Woodinville, WA. Professional service for all Woodinville neighborhoods. 12-month guarantee. Licensed & insured."
+        url="https://www.seattleprowash.com/service-areas/woodinville"
+      />
       <Header />
         
         <main className="pt-16 md:pt-20">

@@ -1,12 +1,13 @@
 import { useEffect } from "react";
-import { generateBreadcrumbSchema, injectSchema } from "@/utils/schema";
+import { generateBreadcrumbSchema, generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Star, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
+import TestimonialCard from "@/components/TestimonialCard";
 import MobileBottomBar from "@/components/MobileBottomBar";
 
 const Redmond = () => {
@@ -37,6 +38,23 @@ const Redmond = () => {
     addOrUpdateMetaTag('geo.position', '47.6740;-122.1215');
     addOrUpdateMetaTag('ICBM', '47.6740, -122.1215');
 
+    // Inject LocalBusiness Schema for Redmond
+    const businessSchema = generateLocalBusinessSchema({
+      ...COMPANY_INFO,
+      name: `${COMPANY_INFO.name} - Redmond`,
+      description: "Professional roof cleaning, gutter cleaning, and exterior washing services in Redmond, WA. Serving all Redmond neighborhoods. 12-month moss-free guarantee.",
+      address: {
+        ...COMPANY_INFO.address,
+        addressLocality: "Redmond"
+      },
+      geo: {
+        latitude: 47.6740,
+        longitude: -122.1215
+      },
+      areaServed: ["Redmond", "Downtown Redmond", "Education Hill", "Overlake", "Grasslawn"]
+    });
+    const cleanupBusiness = injectSchema(businessSchema);
+
     // Inject Breadcrumb Schema
     const breadcrumbSchema = generateBreadcrumbSchema([
       { name: "Home", url: "https://www.seattleprowash.com" },
@@ -48,12 +66,18 @@ const Redmond = () => {
     window.scrollTo(0, 0);
 
     return () => {
+      cleanupBusiness();
       cleanupBreadcrumb();
     };
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Roof & Gutter Cleaning in Redmond, WA"
+        description="Expert roof cleaning, gutter cleaning, and moss removal in Redmond, WA. Professional service for all Redmond neighborhoods. 12-month moss-free guarantee. Licensed & insured."
+        url="https://www.seattleprowash.com/service-areas/redmond"
+      />
       <Header />
         
         <main className="pt-16 md:pt-20">

@@ -1,12 +1,13 @@
 import { useEffect } from "react";
-import { generateBreadcrumbSchema, injectSchema } from "@/utils/schema";
+import { generateBreadcrumbSchema, generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Star, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
+import TestimonialCard from "@/components/TestimonialCard";
 import MobileBottomBar from "@/components/MobileBottomBar";
 
 const Sammamish = () => {
@@ -37,6 +38,23 @@ const Sammamish = () => {
     addOrUpdateMetaTag('geo.position', '47.6163;-122.0356');
     addOrUpdateMetaTag('ICBM', '47.6163, -122.0356');
 
+    // Inject LocalBusiness Schema for Sammamish
+    const businessSchema = generateLocalBusinessSchema({
+      ...COMPANY_INFO,
+      name: `${COMPANY_INFO.name} - Sammamish`,
+      description: "Professional roof cleaning, gutter cleaning, and exterior washing services in Sammamish, WA. Serving all Sammamish neighborhoods. 12-month moss-free guarantee.",
+      address: {
+        ...COMPANY_INFO.address,
+        addressLocality: "Sammamish"
+      },
+      geo: {
+        latitude: 47.6163,
+        longitude: -122.0356
+      },
+      areaServed: ["Sammamish", "Klahanie", "Sahalee", "Pine Lake", "Beaver Lake"]
+    });
+    const cleanupBusiness = injectSchema(businessSchema);
+
     // Inject Breadcrumb Schema
     const breadcrumbSchema = generateBreadcrumbSchema([
       { name: "Home", url: "https://www.seattleprowash.com" },
@@ -48,12 +66,18 @@ const Sammamish = () => {
     window.scrollTo(0, 0);
 
     return () => {
+      cleanupBusiness();
       cleanupBreadcrumb();
     };
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Roof & Gutter Cleaning in Sammamish, WA"
+        description="Expert roof cleaning, gutter cleaning, and moss removal in Sammamish, WA. Professional service for all Sammamish neighborhoods. 12-month guarantee. Licensed & insured."
+        url="https://www.seattleprowash.com/service-areas/sammamish"
+      />
       <Header />
         
         <main className="pt-16 md:pt-20">

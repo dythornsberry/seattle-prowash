@@ -1,12 +1,13 @@
 import { useEffect } from "react";
-import { generateBreadcrumbSchema, injectSchema } from "@/utils/schema";
+import { generateBreadcrumbSchema, generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Star, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
+import TestimonialCard from "@/components/TestimonialCard";
 import MobileBottomBar from "@/components/MobileBottomBar";
 
 const Kirkland = () => {
@@ -37,6 +38,23 @@ const Kirkland = () => {
     addOrUpdateMetaTag('geo.position', '47.6815;-122.2087');
     addOrUpdateMetaTag('ICBM', '47.6815, -122.2087');
 
+    // Inject LocalBusiness Schema for Kirkland
+    const businessSchema = generateLocalBusinessSchema({
+      ...COMPANY_INFO,
+      name: `${COMPANY_INFO.name} - Kirkland`,
+      description: "Professional roof cleaning, gutter cleaning, and exterior washing services in Kirkland, WA. Serving all Kirkland neighborhoods including Juanita, Totem Lake, and Houghton. 12-month moss-free guarantee.",
+      address: {
+        ...COMPANY_INFO.address,
+        addressLocality: "Kirkland"
+      },
+      geo: {
+        latitude: 47.6815,
+        longitude: -122.2087
+      },
+      areaServed: ["Kirkland", "Downtown Kirkland", "Juanita", "Totem Lake", "Houghton", "Finn Hill", "Kingsgate"]
+    });
+    const cleanupBusiness = injectSchema(businessSchema);
+
     // Inject Breadcrumb Schema
     const breadcrumbSchema = generateBreadcrumbSchema([
       { name: "Home", url: "https://www.seattleprowash.com" },
@@ -48,6 +66,7 @@ const Kirkland = () => {
     window.scrollTo(0, 0);
 
     return () => {
+      cleanupBusiness();
       cleanupBreadcrumb();
     };
   }, []);
@@ -65,6 +84,11 @@ const Kirkland = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Roof & Gutter Cleaning in Kirkland, WA"
+        description="Expert roof cleaning, gutter cleaning, and moss removal in Kirkland, WA. Serving Juanita, Totem Lake, Houghton, and all Kirkland neighborhoods. 12-month guarantee."
+        url="https://www.seattleprowash.com/service-areas/kirkland"
+      />
       <Header />
         
         <main className="pt-16 md:pt-20">
