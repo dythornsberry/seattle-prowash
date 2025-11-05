@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { generateServiceSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -14,9 +15,70 @@ import houseWashing from "@/assets/house-softwash-before-after.jpg";
 import pressureWashing from "@/assets/patio-pressure-washing-before-after.jpg";
 
 const Services = () => {
-  // Scroll to top and set up fade-up animations
+  // Scroll to top, set up fade-up animations, and inject schemas
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // Inject multiple service schemas
+    const schemas = [
+      generateServiceSchema({
+        name: "Roof Cleaning and Moss Removal",
+        description: "Professional roof cleaning service using safe soft-wash methods to remove moss, algae, and lichen. Includes 12-month moss-free guarantee.",
+        provider: COMPANY_INFO.name,
+        areaServed: COMPANY_INFO.serviceAreas,
+        serviceType: "Roof Cleaning",
+        url: `${COMPANY_INFO.url}/services#roof-cleaning`,
+        offers: {
+          priceRange: "$300-$1200",
+          priceCurrency: "USD"
+        }
+      }),
+      generateServiceSchema({
+        name: "Gutter Cleaning and Maintenance",
+        description: "Complete gutter cleaning service including hand-scooping debris, downspout flushing, and roof debris removal.",
+        provider: COMPANY_INFO.name,
+        areaServed: COMPANY_INFO.serviceAreas,
+        serviceType: "Gutter Cleaning",
+        url: `${COMPANY_INFO.url}/services#gutter-cleaning`,
+        offers: {
+          priceRange: "$150-$600",
+          priceCurrency: "USD"
+        }
+      }),
+      generateServiceSchema({
+        name: "Pressure Washing",
+        description: "Professional pressure washing service for driveways, patios, decks, and walkways. Removes years of buildup and restores original appearance.",
+        provider: COMPANY_INFO.name,
+        areaServed: COMPANY_INFO.serviceAreas,
+        serviceType: "Pressure Washing",
+        url: `${COMPANY_INFO.url}/services#pressure-washing`,
+        offers: {
+          price: "249",
+          priceCurrency: "USD"
+        }
+      }),
+      generateServiceSchema({
+        name: "House Washing",
+        description: "Gentle soft-wash house cleaning for all exterior surfaces including siding, trim, windows, and doors. Safe for all siding materials.",
+        provider: COMPANY_INFO.name,
+        areaServed: COMPANY_INFO.serviceAreas,
+        serviceType: "House Washing",
+        url: `${COMPANY_INFO.url}/services#house-washing`,
+        offers: {
+          price: "499",
+          priceCurrency: "USD"
+        }
+      })
+    ];
+
+    const cleanupFunctions = schemas.map(schema => injectSchema(schema));
+
+    return () => {
+      cleanupFunctions.forEach(cleanup => cleanup());
+    };
+  }, []);
+
+  useEffect(() => {
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {

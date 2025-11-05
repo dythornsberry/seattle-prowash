@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { generateServiceSchema, generateFAQSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyTopBar from "@/components/StickyTopBar";
@@ -28,6 +29,45 @@ const RoofCleaning = () => {
       );
     }
 
+    // Inject Service Schema
+    const serviceSchema = generateServiceSchema({
+      name: "Roof Cleaning and Moss Removal",
+      description: "Professional roof cleaning service using safe soft-wash methods to remove moss, algae, and lichen. Includes 12-month moss-free guarantee.",
+      provider: COMPANY_INFO.name,
+      areaServed: COMPANY_INFO.serviceAreas,
+      serviceType: "Roof Cleaning",
+      url: `${COMPANY_INFO.url}/roof-cleaning`,
+      offers: {
+        priceRange: "$300-$1200",
+        priceCurrency: "USD"
+      }
+    });
+    const cleanupService = injectSchema(serviceSchema);
+
+    // Inject FAQ Schema
+    const faqSchema = generateFAQSchema({
+      faqs: [
+        {
+          question: "Will you damage my shingles with high pressure?",
+          answer: "We never use high pressure on asphalt shingles. Our soft-wash process uses low pressure and specialized solutions to safely remove moss, algae, and lichen without damaging your roof or voiding warranties."
+        },
+        {
+          question: "How long does the moss treatment last?",
+          answer: "Our moss prevention treatment typically lasts 12 months. The treatment kills existing moss at the root and prevents new growth for up to a year, depending on weather and tree coverage."
+        },
+        {
+          question: "Do I need to be home during the roof cleaning?",
+          answer: "You don't need to be home. We work on the exterior only and will send you before/after photos when the job is complete. Just make sure we have clear access to your roof."
+        }
+      ]
+    });
+    const cleanupFAQ = injectSchema(faqSchema);
+
+    return () => {
+      cleanupService();
+      cleanupFAQ();
+    };
+
     // Add geographic meta tags for local SEO
     const addOrUpdateMetaTag = (name: string, content: string) => {
       let meta = document.querySelector(`meta[name="${name}"]`);
@@ -43,7 +83,9 @@ const RoofCleaning = () => {
     addOrUpdateMetaTag('geo.placename', 'Seattle');
     addOrUpdateMetaTag('geo.position', '47.7574;-122.2429');
     addOrUpdateMetaTag('ICBM', '47.7574, -122.2429');
+  }, []);
 
+  useEffect(() => {
     window.scrollTo(0, 0);
 
     // Intersection Observer for fade-up animations

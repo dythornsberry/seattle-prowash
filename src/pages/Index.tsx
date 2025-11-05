@@ -1,5 +1,6 @@
 import { useEffect, useCallback } from "react";
 import { initScrollTracking } from "@/utils/scrollTracking";
+import { generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
@@ -14,10 +15,28 @@ import Footer from "@/components/Footer";
 import UnifiedContactBar from "@/components/UnifiedContactBar";
 
 const Index = () => {
-  // Scroll tracking only (removed global smooth scroll for performance)
+  // Scroll tracking and Schema injection
   useEffect(() => {
     const cleanup = initScrollTracking();
-    return () => cleanup?.();
+    
+    // Inject LocalBusiness Schema
+    const schema = generateLocalBusinessSchema({
+      name: COMPANY_INFO.name,
+      description: COMPANY_INFO.description,
+      url: COMPANY_INFO.url,
+      telephone: COMPANY_INFO.telephone,
+      address: COMPANY_INFO.address,
+      geo: COMPANY_INFO.geo,
+      areaServed: COMPANY_INFO.serviceAreas,
+      priceRange: "$$",
+      rating: COMPANY_INFO.rating
+    });
+    const cleanupSchema = injectSchema(schema);
+    
+    return () => {
+      cleanup?.();
+      cleanupSchema();
+    };
   }, []);
 
   // Optimized hash navigation - merged duplicate logic

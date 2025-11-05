@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { generateServiceSchema, generateFAQSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
@@ -25,6 +26,45 @@ const GutterCleaning = () => {
       );
     }
 
+    // Inject Service Schema
+    const serviceSchema = generateServiceSchema({
+      name: "Gutter Cleaning and Maintenance",
+      description: "Professional gutter cleaning service including hand-scooping debris, downspout flushing, and roof debris removal. Complete gutter system maintenance to prevent water damage.",
+      provider: COMPANY_INFO.name,
+      areaServed: COMPANY_INFO.serviceAreas,
+      serviceType: "Gutter Cleaning",
+      url: `${COMPANY_INFO.url}/gutter-cleaning`,
+      offers: {
+        priceRange: "$150-$600",
+        priceCurrency: "USD"
+      }
+    });
+    const cleanupService = injectSchema(serviceSchema);
+
+    // Inject FAQ Schema
+    const faqSchema = generateFAQSchema({
+      faqs: [
+        {
+          question: "How often should I clean my gutters?",
+          answer: "In the Pacific Northwest, we recommend cleaning gutters twice per year - once in late fall after leaves drop, and once in spring. Homes with lots of trees may need more frequent cleaning."
+        },
+        {
+          question: "What's included in your gutter cleaning service?",
+          answer: "Our service includes hand-scooping all debris from gutters, flushing downspouts, blowing off roof debris, checking for damage, and cleaning up all debris from your property. We also provide before/after photos."
+        },
+        {
+          question: "Do you clean inside the downspouts?",
+          answer: "Yes! We flush all downspouts to ensure proper drainage. If we encounter a clog, we'll work to clear it or let you know if there's a structural issue."
+        }
+      ]
+    });
+    const cleanupFAQ = injectSchema(faqSchema);
+
+    return () => {
+      cleanupService();
+      cleanupFAQ();
+    };
+
     // Add geographic meta tags for local SEO
     const addOrUpdateMetaTag = (name: string, content: string) => {
       let meta = document.querySelector(`meta[name="${name}"]`);
@@ -40,7 +80,9 @@ const GutterCleaning = () => {
     addOrUpdateMetaTag('geo.placename', 'Seattle');
     addOrUpdateMetaTag('geo.position', '47.7574;-122.2429');
     addOrUpdateMetaTag('ICBM', '47.7574, -122.2429');
+  }, []);
 
+  useEffect(() => {
     window.scrollTo(0, 0);
 
     // Intersection Observer for fade-up animations
