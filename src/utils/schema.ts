@@ -190,6 +190,25 @@ export const generateReviewSchema = (props: ReviewSchemaProps) => {
   }));
 };
 
+// Breadcrumb Schema
+export interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
+export const generateBreadcrumbSchema = (items: BreadcrumbItem[]) => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": items.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "item": item.url
+    }))
+  };
+};
+
 // Helper function to inject schema into document head
 export const injectSchema = (schema: any) => {
   const script = document.createElement('script');

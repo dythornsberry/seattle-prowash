@@ -1,6 +1,6 @@
 import { useEffect, useCallback } from "react";
 import { initScrollTracking } from "@/utils/scrollTracking";
-import { generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { generateLocalBusinessSchema, generateBreadcrumbSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
 import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -21,7 +21,7 @@ const Index = () => {
     const cleanup = initScrollTracking();
     
     // Inject LocalBusiness Schema
-    const schema = generateLocalBusinessSchema({
+    const businessSchema = generateLocalBusinessSchema({
       name: COMPANY_INFO.name,
       description: COMPANY_INFO.description,
       url: COMPANY_INFO.url,
@@ -32,11 +32,18 @@ const Index = () => {
       priceRange: "$$",
       rating: COMPANY_INFO.rating
     });
-    const cleanupSchema = injectSchema(schema);
+    const cleanupBusinessSchema = injectSchema(businessSchema);
+
+    // Inject Breadcrumb Schema
+    const breadcrumbSchema = generateBreadcrumbSchema([
+      { name: "Home", url: "https://www.seattleprowash.com" }
+    ]);
+    const cleanupBreadcrumbSchema = injectSchema(breadcrumbSchema);
     
     return () => {
       cleanup?.();
-      cleanupSchema();
+      cleanupBusinessSchema();
+      cleanupBreadcrumbSchema();
     };
   }, []);
 

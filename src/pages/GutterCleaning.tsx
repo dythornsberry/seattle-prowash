@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { generateServiceSchema, generateFAQSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
 import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -61,9 +61,17 @@ const GutterCleaning = () => {
     });
     const cleanupFAQ = injectSchema(faqSchema);
 
+    // Inject Breadcrumb Schema
+    const breadcrumbSchema = generateBreadcrumbSchema([
+      { name: "Home", url: "https://www.seattleprowash.com" },
+      { name: "Gutter Cleaning", url: "https://www.seattleprowash.com/gutter-cleaning" }
+    ]);
+    const cleanupBreadcrumb = injectSchema(breadcrumbSchema);
+
     return () => {
       cleanupService();
       cleanupFAQ();
+      cleanupBreadcrumb();
     };
 
     // Add geographic meta tags for local SEO

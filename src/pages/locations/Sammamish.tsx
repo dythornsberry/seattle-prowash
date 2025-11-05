@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { generateBreadcrumbSchema, injectSchema } from "@/utils/schema";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -36,7 +37,19 @@ const Sammamish = () => {
     addOrUpdateMetaTag('geo.position', '47.6163;-122.0356');
     addOrUpdateMetaTag('ICBM', '47.6163, -122.0356');
 
+    // Inject Breadcrumb Schema
+    const breadcrumbSchema = generateBreadcrumbSchema([
+      { name: "Home", url: "https://www.seattleprowash.com" },
+      { name: "Service Areas", url: "https://www.seattleprowash.com/service-areas" },
+      { name: "Sammamish", url: "https://www.seattleprowash.com/service-areas/sammamish" }
+    ]);
+    const cleanupBreadcrumb = injectSchema(breadcrumbSchema);
+
     window.scrollTo(0, 0);
+
+    return () => {
+      cleanupBreadcrumb();
+    };
   }, []);
 
   return (

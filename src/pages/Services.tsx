@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { generateServiceSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
 import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -74,8 +74,16 @@ const Services = () => {
 
     const cleanupFunctions = schemas.map(schema => injectSchema(schema));
 
+    // Inject Breadcrumb Schema
+    const breadcrumbSchema = generateBreadcrumbSchema([
+      { name: "Home", url: "https://www.seattleprowash.com" },
+      { name: "Services", url: "https://www.seattleprowash.com/services" }
+    ]);
+    const cleanupBreadcrumb = injectSchema(breadcrumbSchema);
+
     return () => {
       cleanupFunctions.forEach(cleanup => cleanup());
+      cleanupBreadcrumb();
     };
   }, []);
 
