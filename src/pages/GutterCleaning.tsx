@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { generateServiceSchema, generateFAQSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
@@ -138,6 +139,12 @@ const GutterCleaning = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Professional Gutter Cleaning Services"
+        description="Expert gutter cleaning and maintenance in Seattle. Prevent water damage, protect your foundation, and extend gutter life. Licensed, insured, and guaranteed. Free quotes available."
+        url="https://www.seattleprowash.com/gutter-cleaning"
+        image="/lovable-uploads/61bfb1f1-0bee-423a-be7a-c49142b6fd6b.png"
+      />
       <Header />
       <main className="pt-16 md:pt-20">
         {/* Hero Section */}

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { generateServiceSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -187,6 +188,11 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Our Services - Roof, Gutter & Exterior Cleaning"
+        description="Complete exterior cleaning services in Seattle: roof cleaning, gutter cleaning, pressure washing, house washing, and more. Licensed, insured, eco-friendly solutions. Free quotes."
+        url="https://www.seattleprowash.com/services"
+      />
       <Header />
       <main className="pt-16 md:pt-20">
         {/* Hero Section */}

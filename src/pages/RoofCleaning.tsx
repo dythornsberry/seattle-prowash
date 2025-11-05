@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { generateServiceSchema, generateFAQSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyTopBar from "@/components/StickyTopBar";
@@ -113,6 +114,12 @@ const RoofCleaning = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Professional Roof Cleaning Services"
+        description="Expert roof cleaning and moss removal in Seattle. Eco-friendly soft washing extends roof life and prevents damage. Licensed, insured, and guaranteed. Free quotes available."
+        url="https://www.seattleprowash.com/roof-cleaning"
+        image="/lovable-uploads/cd85dd92-8acb-405d-a73c-44650e962bd8.png"
+      />
       <Header />
       <main className="pt-16 md:pt-20">
         {/* Hero Section */}

@@ -1,6 +1,7 @@
 import { useEffect, useCallback } from "react";
 import { initScrollTracking } from "@/utils/scrollTracking";
 import { generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
@@ -108,6 +109,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Professional Roof & Exterior Cleaning Services"
+        description="Seattle's trusted pressure washing and roof cleaning experts. Eco-friendly soft washing for roofs, gutters, siding & more. Licensed, insured, and 100% satisfaction guaranteed. Serving Greater Seattle area."
+        url="https://www.seattleprowash.com"
+      />
       <div id="content-with-offset">
         <Header />
         
