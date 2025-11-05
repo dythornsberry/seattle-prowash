@@ -9,8 +9,33 @@ import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
 
 const Kenmore = () => {
-  // Scroll to top on mount
   useEffect(() => {
+    document.title = "Roof & Gutter Cleaning in Kenmore, WA | Seattle ProWash";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content", 
+        "Expert roof & gutter cleaning in Kenmore, WA. Serving Kenmore Highlands, Moorlands, Inglewood. 12-month moss-free guarantee. Licensed & insured. Same-day quotes."
+      );
+    }
+
+    // Add geographic meta tags for Kenmore
+    const addOrUpdateMetaTag = (name: string, content: string) => {
+      let meta = document.querySelector(`meta[name="${name}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('name', name);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+
+    addOrUpdateMetaTag('geo.region', 'US-WA');
+    addOrUpdateMetaTag('geo.placename', 'Kenmore');
+    addOrUpdateMetaTag('geo.position', '47.7574;-122.2429');
+    addOrUpdateMetaTag('ICBM', '47.7574, -122.2429');
+
     window.scrollTo(0, 0);
   }, []);
 

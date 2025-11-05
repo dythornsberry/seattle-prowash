@@ -24,9 +24,25 @@ const RoofCleaning = () => {
     if (metaDescription) {
       metaDescription.setAttribute(
         "content", 
-        "Safe roof moss removal and treatment in Kenmore, Bothell, and Kirkland. No pressure on shingles. Licensed & insured."
+        "Professional roof moss removal & cleaning in Seattle, Bothell, Kirkland. No pressure, safe methods. 12-month moss-free guarantee. Licensed & insured. Same-day quotes available."
       );
     }
+
+    // Add geographic meta tags for local SEO
+    const addOrUpdateMetaTag = (name: string, content: string) => {
+      let meta = document.querySelector(`meta[name="${name}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('name', name);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+
+    addOrUpdateMetaTag('geo.region', 'US-WA');
+    addOrUpdateMetaTag('geo.placename', 'Seattle');
+    addOrUpdateMetaTag('geo.position', '47.7574;-122.2429');
+    addOrUpdateMetaTag('ICBM', '47.7574, -122.2429');
 
     window.scrollTo(0, 0);
 

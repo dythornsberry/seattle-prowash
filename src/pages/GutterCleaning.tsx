@@ -21,9 +21,25 @@ const GutterCleaning = () => {
     if (metaDescription) {
       metaDescription.setAttribute(
         "content", 
-        "Professional gutter cleaning and downspout flushing. Clear flow, clean edges, photos included. Serving Kenmore, Bothell, Kirkland."
+        "Expert gutter cleaning & downspout flushing in Seattle, Bothell, Kirkland. Hand-cleaned, roof debris removal, photos included. Licensed & insured. Same-day estimates."
       );
     }
+
+    // Add geographic meta tags for local SEO
+    const addOrUpdateMetaTag = (name: string, content: string) => {
+      let meta = document.querySelector(`meta[name="${name}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('name', name);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+
+    addOrUpdateMetaTag('geo.region', 'US-WA');
+    addOrUpdateMetaTag('geo.placename', 'Seattle');
+    addOrUpdateMetaTag('geo.position', '47.7574;-122.2429');
+    addOrUpdateMetaTag('ICBM', '47.7574, -122.2429');
 
     window.scrollTo(0, 0);
 

@@ -8,6 +8,23 @@ import {
 import { Shield, Clock, CheckCircle, ArrowRight } from "lucide-react";
 
 const HomeFAQ = () => {
+  // Generate FAQ Schema for SEO
+  const generateFAQSchema = () => {
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": topFAQs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    };
+    return JSON.stringify(faqSchema);
+  };
+
   const topFAQs = [
     {
       question: "What does roof or gutter cleaning cost?",
@@ -49,6 +66,12 @@ const HomeFAQ = () => {
 
   return (
     <section className="py-16 md:py-20 bg-background">
+      {/* FAQ Schema for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: generateFAQSchema() }}
+      />
+      
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
