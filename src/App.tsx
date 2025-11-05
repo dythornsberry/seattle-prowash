@@ -20,6 +20,11 @@ import Redmond from "./pages/locations/Redmond";
 import Sammamish from "./pages/locations/Sammamish";
 import Woodinville from "./pages/locations/Woodinville";
 import Seattle from "./pages/locations/Seattle";
+import Lynnwood from "./pages/locations/Lynnwood";
+import Shoreline from "./pages/locations/Shoreline";
+import Edmonds from "./pages/locations/Edmonds";
+import MountlakeTerrace from "./pages/locations/MountlakeTerrace";
+import MillCreek from "./pages/locations/MillCreek";
 import Reviews from "./pages/Reviews";
 import ServiceAreas from "./pages/ServiceAreas";
 
@@ -49,6 +54,11 @@ const App = () => (
           <Route path="/redmond" element={<Redmond />} />
           <Route path="/sammamish" element={<Sammamish />} />
           <Route path="/woodinville" element={<Woodinville />} />
+          <Route path="/lynnwood" element={<Lynnwood />} />
+          <Route path="/shoreline" element={<Shoreline />} />
+          <Route path="/edmonds" element={<Edmonds />} />
+          <Route path="/mountlake-terrace" element={<MountlakeTerrace />} />
+          <Route path="/mill-creek" element={<MillCreek />} />
           <Route path="/reviews" element={<Reviews />} />
           
           {/* 301 Redirects for deprecated services */}
