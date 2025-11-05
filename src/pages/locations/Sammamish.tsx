@@ -224,28 +224,92 @@ const Sammamish = () => {
             </div>
           </section>
 
-          {/* CTA Section */}
+          {/* Testimonials Section */}
           <section className="py-16 bg-off-white">
             <div className="container mx-auto px-4">
+              <div className="max-w-6xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-12 text-center">
+                  What Sammamish Customers Say
+                </h2>
+                <div className="grid md:grid-cols-3 gap-6 mb-12">
+                  <TestimonialCard 
+                    quote="Really happy with the work the Seattle Pro Wash team did to clean the transparent roof of my backyard pergola. It's a pretty high structure and a bit awkward to access, but they had the skills and tools to do the job right."
+                    author="Aileen Imperial"
+                    service="Pergola Roof Cleaning"
+                  />
+                  <TestimonialCard 
+                    quote="I am happy with the quality of the work done - roof cleaning, gutter cleaning."
+                    author="Sheikh Rahman"
+                    service="Roof & Gutter Cleaning"
+                  />
+                  <TestimonialCard 
+                    quote="Great quality work and professional service!"
+                    author="Abhishek Pandey"
+                    service="Professional Service"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Local FAQ Section */}
+          <section className="py-16 bg-white">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-12 text-center">
+                  Sammamish Service FAQs
+                </h2>
+                <div className="space-y-6">
+                  <Card>
+                    <CardContent className="p-6">
+                      <h3 className="font-bold text-dark-teal mb-3">What Sammamish neighborhoods do you serve?</h3>
+                      <p className="text-muted-foreground">
+                        We serve all Sammamish areas including Klahanie, Sahalee, Pine Lake, Beaver Lake, and all surrounding neighborhoods. Same-day estimates available throughout Sammamish.
+                      </p>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardContent className="p-6">
+                      <h3 className="font-bold text-dark-teal mb-3">Do you have experience with Sammamish's larger properties?</h3>
+                      <p className="text-muted-foreground">
+                        Yes! Sammamish is known for larger homes and properties. We have the equipment and expertise to handle extensive roof areas, long driveways, and multi-level homes common in the area.
+                      </p>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardContent className="p-6">
+                      <h3 className="font-bold text-dark-teal mb-3">How does Sammamish's elevation affect moss growth?</h3>
+                      <p className="text-muted-foreground">
+                        Sammamish's higher elevation and forested areas create ideal conditions for moss. The combination of shade from mature trees and Pacific Northwest rainfall makes annual roof treatment essential for home protection.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="py-16 bg-brand-navy text-white">
+            <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
                   Ready to Protect Your Sammamish Home?
                 </h2>
-                <p className="text-lg text-gray-600 mb-8">
-                  Get your free estimate today and discover why Sammamish homeowners trust Seattle ProWash.
+                <p className="text-xl text-white/90 mb-8">
+                  Join 180+ satisfied customers. Get your free estimate today and see why Sammamish homeowners trust Seattle ProWash.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button 
-                    variant="cta-orange"
+                    variant="prowash-secondary"
                     size="xl"
-                    className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold"
                     onClick={() => window.location.href = '/#contact'}
                   >
                     GET YOUR FREE QUOTE TODAY
                   </Button>
                   <Button 
-                    variant="outline"
+                    variant="prowash-outline"
                     size="xl"
                     onClick={() => window.location.href = 'tel:206-752-6690'}
                   >

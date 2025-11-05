@@ -312,22 +312,86 @@ const Kirkland = () => {
             </div>
           </section>
 
-          {/* CTA Section */}
+          {/* Testimonials Section */}
           <section className="py-16 bg-off-white">
             <div className="container mx-auto px-4">
+              <div className="max-w-6xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-12 text-center">
+                  What Kirkland Customers Say
+                </h2>
+                <div className="grid md:grid-cols-3 gap-6 mb-12">
+                  <TestimonialCard 
+                    quote="Seattle Pro Wash did a great job on my driveway and made it look like new! Would highly recommend."
+                    author="Robert Mintz"
+                    service="Driveway Pressure Washing"
+                  />
+                  <TestimonialCard 
+                    quote="Dylan is great to work with. Good price and good service. I used him again this year and even better. Attention to detail and good communication."
+                    author="Roger Wallace"
+                    service="Roof & Gutter Cleaning"
+                  />
+                  <TestimonialCard 
+                    quote="Great communication, transparent pricing, all around great experience."
+                    author="Y Kos"
+                    service="Complete Service"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Local FAQ Section */}
+          <section className="py-16 bg-white">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-12 text-center">
+                  Kirkland Service FAQs
+                </h2>
+                <div className="space-y-6">
+                  <Card>
+                    <CardContent className="p-6">
+                      <h3 className="font-bold text-dark-teal mb-3">What Kirkland neighborhoods do you serve?</h3>
+                      <p className="text-muted-foreground">
+                        We serve all Kirkland areas including Downtown Kirkland, Juanita, Totem Lake, Houghton, Finn Hill, Kingsgate, and Rose Hill. Same-day estimates available throughout Kirkland.
+                      </p>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardContent className="p-6">
+                      <h3 className="font-bold text-dark-teal mb-3">How does Kirkland's waterfront location affect roof maintenance?</h3>
+                      <p className="text-muted-foreground">
+                        Kirkland's extensive Lake Washington waterfront creates consistently high humidity. This moisture, combined with the area's mature trees and premium homes, makes professional roof and gutter maintenance particularly important for protecting your investment.
+                      </p>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardContent className="p-6">
+                      <h3 className="font-bold text-dark-teal mb-3">Do you work on high-end Kirkland properties?</h3>
+                      <p className="text-muted-foreground">
+                        Absolutely. We regularly service Kirkland's finest homes and understand the attention to detail required. Our team is fully insured with comprehensive coverage appropriate for high-value properties.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="py-16 bg-brand-navy text-white">
+            <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
                   Enhance Your Kirkland Property Today
                 </h2>
-                <p className="text-lg text-gray-600 mb-8">
-                  Experience the Seattle ProWash difference. Get your complimentary estimate and discover why Kirkland's finest homes trust our expertise.
+                <p className="text-xl text-white/90 mb-8">
+                  Join 180+ satisfied customers. Experience the Seattle ProWash difference with your free estimate.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button 
-                    variant="cta-orange"
+                    variant="prowash-secondary"
                     size="xl"
-                    className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold"
                     onClick={() => {
                       window.location.href = '/#contact';
                     }}
@@ -335,7 +399,7 @@ const Kirkland = () => {
                     GET YOUR FREE QUOTE TODAY
                   </Button>
                   <Button 
-                    variant="outline"
+                    variant="prowash-outline"
                     size="xl"
                     onClick={() => window.location.href = 'tel:206-752-6690'}
                   >

@@ -224,28 +224,92 @@ const Woodinville = () => {
             </div>
           </section>
 
-          {/* CTA Section */}
+          {/* Testimonials Section */}
           <section className="py-16 bg-off-white">
             <div className="container mx-auto px-4">
+              <div className="max-w-6xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-12 text-center">
+                  What Woodinville Customers Say
+                </h2>
+                <div className="grid md:grid-cols-3 gap-6 mb-12">
+                  <TestimonialCard 
+                    quote="These dudes are the way to go, very hard working and I was very satisfied with their work, thanks Dylan and the crew!"
+                    author="Owen Andresen"
+                    service="Complete Service"
+                  />
+                  <TestimonialCard 
+                    quote="Great price. Excellent service. These guys did an amazing job cleaning up my roof. They did a great job not damaging anything and i would definitely hire them again down the line."
+                    author="Daniel Shubert"
+                    service="Roof Cleaning"
+                  />
+                  <TestimonialCard 
+                    quote="Prowash has very good service and did an excellent job they made my metal roof brand new again. I recommend these guys to everyone."
+                    author="Ajitesh Sangar"
+                    service="Metal Roof Cleaning"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Local FAQ Section */}
+          <section className="py-16 bg-white">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-12 text-center">
+                  Woodinville Service FAQs
+                </h2>
+                <div className="space-y-6">
+                  <Card>
+                    <CardContent className="p-6">
+                      <h3 className="font-bold text-dark-teal mb-3">What Woodinville neighborhoods do you serve?</h3>
+                      <p className="text-muted-foreground">
+                        We serve all Woodinville areas including Hollywood Hill, Cottage Lake, Wellington, and all surrounding neighborhoods. Same-day estimates available throughout Woodinville.
+                      </p>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardContent className="p-6">
+                      <h3 className="font-bold text-dark-teal mb-3">Do you service Woodinville's rural properties?</h3>
+                      <p className="text-muted-foreground">
+                        Absolutely! Woodinville's mix of suburban and rural properties is our specialty. We handle properties with long driveways, extensive landscaping, and larger acreages with professional care.
+                      </p>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardContent className="p-6">
+                      <h3 className="font-bold text-dark-teal mb-3">How does Woodinville's wine country location affect maintenance needs?</h3>
+                      <p className="text-muted-foreground">
+                        Woodinville's lush, agricultural setting means heavy tree coverage and high moisture. This creates more frequent moss growth and debris accumulation, making regular roof and gutter maintenance particularly important.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="py-16 bg-brand-navy text-white">
+            <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
                   Ready to Protect Your Woodinville Home?
                 </h2>
-                <p className="text-lg text-gray-600 mb-8">
-                  Get your free estimate today and discover why Woodinville homeowners trust Seattle ProWash.
+                <p className="text-xl text-white/90 mb-8">
+                  Join 180+ satisfied customers. Get your free estimate today and see why Woodinville homeowners trust Seattle ProWash.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button 
-                    variant="cta-orange"
+                    variant="prowash-secondary"
                     size="xl"
-                    className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold"
                     onClick={() => window.location.href = '/#contact'}
                   >
                     GET YOUR FREE QUOTE TODAY
                   </Button>
                   <Button 
-                    variant="outline"
+                    variant="prowash-outline"
                     size="xl"
                     onClick={() => window.location.href = 'tel:206-752-6690'}
                   >

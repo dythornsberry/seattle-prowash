@@ -224,28 +224,92 @@ const Redmond = () => {
             </div>
           </section>
 
-          {/* CTA Section */}
+          {/* Testimonials Section */}
           <section className="py-16 bg-off-white">
             <div className="container mx-auto px-4">
+              <div className="max-w-6xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-12 text-center">
+                  What Redmond Customers Say
+                </h2>
+                <div className="grid md:grid-cols-3 gap-6 mb-12">
+                  <TestimonialCard 
+                    quote="Excellent service, he came in with a couple days of the rains, and during. Dylan kept us up to date before our scheduled time. He gave excellent service and the roof is still looking great months later."
+                    author="Lori XXX"
+                    service="Roof Cleaning"
+                  />
+                  <TestimonialCard 
+                    quote="Dylan was very professional, responsive and took the time to explain the soft wash processes."
+                    author="Emmanuell Sevieux"
+                    service="House Soft Wash"
+                  />
+                  <TestimonialCard 
+                    quote="Very professional and very smooth process right from the start. Highly recommend their service."
+                    author="Vishal Vasudevan"
+                    service="Complete Exterior Service"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Local FAQ Section */}
+          <section className="py-16 bg-white">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-12 text-center">
+                  Redmond Service FAQs
+                </h2>
+                <div className="space-y-6">
+                  <Card>
+                    <CardContent className="p-6">
+                      <h3 className="font-bold text-dark-teal mb-3">What Redmond neighborhoods do you serve?</h3>
+                      <p className="text-muted-foreground">
+                        We serve all Redmond areas including Downtown Redmond, Education Hill, Overlake, Grasslawn, and surrounding neighborhoods. Same-day estimates available throughout Redmond.
+                      </p>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardContent className="p-6">
+                      <h3 className="font-bold text-dark-teal mb-3">Do you service Redmond's tech campus areas?</h3>
+                      <p className="text-muted-foreground">
+                        Yes! We regularly service homes in the Overlake and Education Hill areas near major tech campuses. We understand busy professionals need flexible scheduling and efficient service.
+                      </p>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardContent className="p-6">
+                      <h3 className="font-bold text-dark-teal mb-3">How often do Redmond homes need roof cleaning?</h3>
+                      <p className="text-muted-foreground">
+                        Most Redmond homes benefit from annual roof cleaning. Newer developments with less tree coverage may extend to 18 months, while heavily wooded areas like Grasslawn may need bi-annual service.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="py-16 bg-brand-navy text-white">
+            <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
                   Ready to Protect Your Redmond Home?
                 </h2>
-                <p className="text-lg text-gray-600 mb-8">
-                  Get your free estimate today and discover why Redmond homeowners trust Seattle ProWash.
+                <p className="text-xl text-white/90 mb-8">
+                  Join 180+ satisfied customers. Get your free estimate today and see why Redmond homeowners trust Seattle ProWash.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button 
-                    variant="cta-orange"
+                    variant="prowash-secondary"
                     size="xl"
-                    className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold"
                     onClick={() => window.location.href = '/#contact'}
                   >
                     GET YOUR FREE QUOTE TODAY
                   </Button>
                   <Button 
-                    variant="outline"
+                    variant="prowash-outline"
                     size="xl"
                     onClick={() => window.location.href = 'tel:206-752-6690'}
                   >

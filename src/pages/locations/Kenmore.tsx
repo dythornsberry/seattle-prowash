@@ -319,30 +319,94 @@ const Kenmore = () => {
             </div>
           </section>
 
-          {/* CTA Section */}
+          {/* Testimonials Section */}
           <section className="py-16 bg-off-white">
             <div className="container mx-auto px-4">
+              <div className="max-w-6xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-12 text-center">
+                  What Kenmore Customers Say
+                </h2>
+                <div className="grid md:grid-cols-3 gap-6 mb-12">
+                  <TestimonialCard 
+                    quote="Dylan was very thorough with his works. Easy to communicate and schedule. My roof is nice and clean. I'll use the service again!"
+                    author="Mandy Muk"
+                    service="Roof Cleaning"
+                  />
+                  <TestimonialCard 
+                    quote="If you are looking for Pressure washing or Christmas Lights Installation Services in Kenmore and nearby cities, look no further; call Seattle ProWash instead. They will assist you with excellent service."
+                    author="Thang Tuang"
+                    service="Pressure Washing"
+                  />
+                  <TestimonialCard 
+                    quote="Thank you for a good job cleaning my roof and gutter today Dylan. Will definitely contact you again for future services! Highly recommend: can't beat price!"
+                    author="Hien H"
+                    service="Roof & Gutter Cleaning"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Local FAQ Section */}
+          <section className="py-16 bg-white">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-12 text-center">
+                  Kenmore Service FAQs
+                </h2>
+                <div className="space-y-6">
+                  <Card>
+                    <CardContent className="p-6">
+                      <h3 className="font-bold text-dark-teal mb-3">What Kenmore neighborhoods do you serve?</h3>
+                      <p className="text-muted-foreground">
+                        We serve all Kenmore areas including Kenmore Highlands, Moorlands, Inglewood, Kenmore Village, North Rose Hill, and South Kenmore. Same-day estimates available throughout Kenmore.
+                      </p>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardContent className="p-6">
+                      <h3 className="font-bold text-dark-teal mb-3">Why is Lake Washington's proximity important for Kenmore homes?</h3>
+                      <p className="text-muted-foreground">
+                        Kenmore's location on Lake Washington creates higher moisture levels year-round. Combined with mature tree coverage, this makes annual roof and gutter cleaning essential to prevent moss damage and water intrusion.
+                      </p>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardContent className="p-6">
+                      <h3 className="font-bold text-dark-teal mb-3">How long have you been serving Kenmore?</h3>
+                      <p className="text-muted-foreground">
+                        We've been serving Kenmore homeowners for years, building lasting relationships with repeat customers. Our deep understanding of local weather patterns helps us provide the best preventative care for your home.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="py-16 bg-brand-navy text-white">
+            <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
                   Ready to Protect Your Kenmore Home?
                 </h2>
-                <p className="text-lg text-gray-600 mb-8">
-                  Get your free estimate today and discover why Kenmore homeowners trust Seattle ProWash for their roof and gutter cleaning needs.
+                <p className="text-xl text-white/90 mb-8">
+                  Join 180+ satisfied customers. Get your free estimate today and see why Kenmore homeowners trust Seattle ProWash.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button 
-                    variant="cta-orange"
+                    variant="prowash-secondary"
                     size="xl"
-                    className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold"
                     onClick={() => {
                       window.location.href = '/#contact';
                     }}
                   >
-                    Get a Fast Quote
+                    GET YOUR FREE QUOTE TODAY
                   </Button>
                   <Button 
-                    variant="outline"
+                    variant="prowash-outline"
                     size="xl"
                     onClick={() => window.location.href = 'tel:206-752-6690'}
                   >
