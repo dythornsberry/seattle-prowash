@@ -1,356 +1,451 @@
 import { useEffect } from "react";
-import { MapPin, Shield, Clock, CheckCircle2 } from "lucide-react";
+import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
+import { injectSchema } from "@/utils/schema";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import QuoteForm from "@/components/QuoteForm";
+import MobileBottomBar from "@/components/MobileBottomBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import TestimonialCard from "@/components/TestimonialCard";
-import ServiceFAQ from "@/components/ServiceFAQ";
-import NearbyLocations from "@/components/NearbyLocations";
-import RelatedResources from "@/components/RelatedResources";
-import { SEOHead } from "@/components/SEOHead";
-import { generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
-import { nearbyCitiesData } from "@/lib/locationNearbyCities";
+import { CheckCircle, Phone, MapPin } from "lucide-react";
 
 const Seattle = () => {
   useEffect(() => {
-    // Generate schemas
-    const localBusinessSchema = generateLocalBusinessSchema({
-      name: "Seattle Pro-Wash - Professional Roof & Gutter Cleaning",
-      description: "Leading roof cleaning, gutter cleaning, and moss removal services in Seattle, WA. Serving Queen Anne, Capitol Hill, Ballard, and all Seattle neighborhoods.",
-      url: "https://seattleprowash.com/seattle",
-      telephone: COMPANY_INFO.telephone,
-      address: {
-        streetAddress: COMPANY_INFO.address.streetAddress,
-        addressLocality: "Seattle",
-        addressRegion: "WA",
-        postalCode: "98101",
-        addressCountry: "US"
-      },
-      geo: {
-        latitude: 47.6062,
-        longitude: -122.3321
-      },
-      areaServed: ["Seattle", "Queen Anne", "Capitol Hill", "Ballard", "Fremont", "Wallingford", "University District", "Green Lake"],
-      rating: {
-        ratingValue: 4.9,
-        reviewCount: 487
-      }
-    });
+    window.scrollTo(0, 0);
 
-    const breadcrumbSchema = {
+    // Inject Service Schema for Seattle
+    const serviceSchema = {
       "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
+      "@type": "Service",
+      "serviceType": "Roof and Gutter Cleaning",
+      "areaServed": { "@type": "City", "name": "Seattle" },
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Seattle ProWash",
+        "areaServed": "Seattle Metro"
+      }
+    };
+
+    // Inject FAQ Schema for Seattle
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": `${COMPANY_INFO.url}/`
+          "@type": "Question",
+          "name": "How often should gutters be cleaned in Seattle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In Seattle's wet climate with heavy leaf fall and needle drop from surrounding evergreens, we recommend cleaning gutters twice per year—typically in late spring after pollen season and again in late fall after leaves drop. This prevents clogging that can lead to foundation damage and roof leaks during our rainy winters."
+          }
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Service Areas",
-          "item": `${COMPANY_INFO.url}/service-areas`
+          "@type": "Question",
+          "name": "Is your roof cleaning warranty-safe in Seattle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We use a low-pressure soft-wash method specifically designed for Seattle's common roof types (composite, metal, asphalt). Our moss treatment kills growth at the root without damaging shingles or voiding manufacturer warranties, unlike high-pressure washing which can strip granules and cause premature aging."
+          }
         },
         {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Seattle",
-          "item": `${COMPANY_INFO.url}/seattle`
+          "@type": "Question",
+          "name": "Do you use high pressure or harsh chemicals?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No high pressure on roofing materials. We apply an eco-friendly moss treatment that breaks down naturally and won't harm your landscaping when properly rinsed. For gutters, we hand-scoop debris and use controlled water flow for downspout flushing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's a typical price range in Seattle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most Seattle homes range from $300-$600 for standard single-story roof cleaning and $400-$800 for two-story homes. Gutter cleaning typically runs $150-$400 depending on home size and gutter length. Final pricing depends on roof pitch, access, and specific conditions—we provide exact quotes after a quick photo review."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will moss treatment affect my landscaping?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our moss treatment is plant-safe when applied correctly. We pre-wet landscaping, cover sensitive plants, and thoroughly rinse all surfaces. The diluted runoff breaks down quickly and won't harm grass, shrubs, or garden beds around your Seattle home."
+          }
         }
       ]
     };
 
-    // Inject schemas
-    const cleanupBusiness = injectSchema(localBusinessSchema);
-    const cleanupBreadcrumb = injectSchema(breadcrumbSchema);
+    const cleanupService = injectSchema(serviceSchema);
+    const cleanupFAQ = injectSchema(faqSchema);
 
     return () => {
-      cleanupBusiness();
-      cleanupBreadcrumb();
+      cleanupService();
+      cleanupFAQ();
     };
   }, []);
 
+  const localJobs = [
+    {
+      neighborhood: "Queen Anne",
+      description: "2-story composite roof, moss removal + gutter flush",
+      image: "/lovable-uploads/new-roof-before-1.jpg"
+    },
+    {
+      neighborhood: "Ballard",
+      description: "1-story metal roof cleaning, downspout clearing",
+      image: "/lovable-uploads/metal-roof-cleaning-before-after.jpg"
+    },
+    {
+      neighborhood: "Green Lake",
+      description: "2-story asphalt, heavy moss + full gutter service",
+      image: "/lovable-uploads/roof-moss-removal-detailed-before-after.jpg"
+    },
+    {
+      neighborhood: "Capitol Hill",
+      description: "Multi-level composite, gutter guards cleaned",
+      image: "/lovable-uploads/gutter-cleaning-before-after.jpg"
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah M.",
+      neighborhood: "Fremont",
+      quote: "Dylan's team did an amazing job on our moss-covered roof. They were careful, thorough, and left everything spotless."
+    },
+    {
+      name: "James T.",
+      neighborhood: "Wallingford",
+      quote: "Finally found a company that doesn't use high pressure. Our shingles look great and warranty is still valid."
+    },
+    {
+      name: "Lisa K.",
+      neighborhood: "Greenwood",
+      quote: "Gutters were overflowing every rain. They cleared everything, tested downspouts, and sent before/after photos. Perfect."
+    }
+  ];
+
   return (
-    <>
+    <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Seattle Roof Cleaning & Gutter Cleaning | Pro-Wash Services"
-        description="Professional roof cleaning, gutter cleaning & moss removal in Seattle, WA. Serving Queen Anne, Capitol Hill, Ballard & all neighborhoods. Free quotes, licensed & insured."
-        url="https://seattleprowash.com/seattle"
+        title="Roof & Gutter Cleaning — Seattle"
+        description="Kenmore-based roof and gutter cleaning specialists serving Seattle. Warranty-safe moss removal for Queen Anne, Ballard, Green Lake, Capitol Hill and all Seattle neighborhoods."
+        url="https://www.seattleprowash.com/seattle-roof-gutter-cleaning"
       />
-      <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
-        <Header />
-        
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 bg-brand-navy text-white overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-prowash-teal/20 via-transparent to-transparent" />
-          <div className="container mx-auto relative z-10">
-            <div className="max-w-3xl">
-              <div className="flex items-center gap-2 mb-4">
-                <MapPin className="w-6 h-6 text-prowash-teal" />
-                <span className="text-prowash-teal font-semibold">Serving Seattle, WA</span>
+      <Header />
+      
+      <main className="pt-20 md:pt-24">
+        {/* Hero */}
+        <section className="section-spacing bg-gradient-to-b from-brand-navy to-brand-navy/90">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <MapPin className="w-5 h-5 text-brand-orange" />
+                <span className="text-brand-orange font-semibold">Serving Seattle</span>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Seattle's Trusted Roof & Gutter Cleaning Experts
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+                Roof & Gutter Cleaning in Seattle
               </h1>
-              <p className="text-xl text-gray-200 mb-8">
-                Professional roof cleaning, gutter cleaning, and moss removal services throughout Seattle. 
-                From Queen Anne to Capitol Hill, Ballard to Green Lake - we keep Seattle homes pristine.
+              <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto">
+                Kenmore-based specialists protecting Seattle homes from moss damage and drainage problems. From Queen Anne to Ballard, Green Lake to Capitol Hill—we serve all Seattle neighborhoods with warranty-safe roof cleaning and complete gutter maintenance.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-prowash-teal hover:bg-prowash-teal/90 text-brand-navy font-semibold">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  variant="cta-orange" 
+                  size="lg"
+                  onClick={() => window.location.href = '/#contact'}
+                >
+                  Get Seattle Quote
+                </Button>
+                <Button 
+                  variant="prowash-secondary" 
+                  size="lg"
+                  onClick={() => window.location.href = 'tel:+12067526690'}
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  206-752-6690
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Local Jobs Gallery */}
+        <section className="section-spacing bg-off-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-brand-navy">
+                Recent Seattle Projects
+              </h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {localJobs.map((job, index) => (
+                  <Card key={index} className="overflow-hidden">
+                    <img 
+                      src={job.image} 
+                      alt={`${job.neighborhood}, Seattle - ${job.description}`}
+                      className="w-full h-48 object-cover"
+                    />
+                    <CardContent className="p-4">
+                      <p className="font-bold text-brand-navy mb-1">{job.neighborhood}, Seattle</p>
+                      <p className="text-sm text-muted-foreground">{job.description}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Roof Cleaning in Seattle */}
+        <section className="section-spacing bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-brand-navy">
+                Roof Cleaning in Seattle
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Seattle's wet climate creates perfect conditions for moss, algae, and lichen growth on roofs. We specialize in safe removal for the composite, asphalt, and metal roofs common throughout Seattle neighborhoods.
+              </p>
+              
+              <div className="bg-off-white border-l-4 border-brand-orange p-6 rounded mb-8">
+                <h3 className="font-bold text-brand-navy mb-4">Our Warranty-Safe Process:</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                    <span>Soft-brush removal of moss, debris, and organic buildup</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                    <span>Low-pressure rinse (never high-pressure blasting)</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                    <span>Eco-friendly moss treatment applied at the root</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                    <span>Complete debris containment and cleanup</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                    <span>Before/after photos sent on completion</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-red-50 border border-red-200 p-4 rounded mb-8">
+                <p className="text-sm text-red-900">
+                  <strong>What We Never Do:</strong> High-pressure washing (damages shingles), harsh bleach (harms plants), walking on fragile tiles. We protect your warranty and your investment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Gutter Cleaning in Seattle */}
+        <section className="section-spacing bg-off-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-brand-navy">
+                Gutter Cleaning in Seattle
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Seattle's heavy rainfall demands fully functional gutters. Clogged systems lead to foundation damage, basement flooding, and landscape erosion.
+              </p>
+              
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                  <div>
+                    <strong className="text-brand-navy">Hand Removal:</strong> We scoop all debris—leaves, needles, granules—by hand
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                  <div>
+                    <strong className="text-brand-navy">Downspout Test:</strong> Every downspout is flushed to confirm full flow
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                  <div>
+                    <strong className="text-brand-navy">Debris Removal:</strong> All material is bagged and hauled away
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                  <div>
+                    <strong className="text-brand-navy">Photo Proof:</strong> Completion photos sent showing clean gutters and clear flow
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing */}
+        <section className="section-spacing bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-brand-navy text-center">
+                Seattle Pricing Guide
+              </h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                <Card>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold text-brand-navy mb-4">Roof Cleaning</h3>
+                    <p className="text-3xl font-bold text-brand-orange mb-2">$300 – $800</p>
+                    <p className="text-sm text-muted-foreground mb-4">Typical Seattle homes</p>
+                    <ul className="text-sm space-y-2 text-muted-foreground">
+                      <li>• 1-story: $300-$600</li>
+                      <li>• 2-story: $400-$800</li>
+                      <li>• Based on roof size, pitch, access</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold text-brand-navy mb-4">Gutter Cleaning</h3>
+                    <p className="text-3xl font-bold text-brand-orange mb-2">$150 – $400</p>
+                    <p className="text-sm text-muted-foreground mb-4">Most Seattle homes</p>
+                    <ul className="text-sm space-y-2 text-muted-foreground">
+                      <li>• 1-story: $150-$250</li>
+                      <li>• 2-story: $250-$400</li>
+                      <li>• Includes downspout flush & haul-away</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+              <p className="text-center text-sm text-muted-foreground mt-6">
+                Exact quote provided after quick photo review. No surprise charges.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Reviews */}
+        <section className="section-spacing bg-off-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-brand-navy text-center">
+                What Seattle Customers Say
+              </h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                {testimonials.map((review, index) => (
+                  <Card key={index}>
+                    <CardContent className="p-6">
+                      <div className="flex text-brand-orange mb-3">★★★★★</div>
+                      <p className="text-muted-foreground italic mb-4">"{review.quote}"</p>
+                      <p className="font-bold text-brand-navy">{review.name}</p>
+                      <p className="text-sm text-brand-orange">{review.neighborhood}, Seattle</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="section-spacing bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-brand-navy text-center">
+                Seattle FAQs
+              </h2>
+              <div className="space-y-6">
+                <Card>
+                  <CardContent className="p-6">
+                    <h3 className="font-bold text-brand-navy mb-2">How often should gutters be cleaned in Seattle?</h3>
+                    <p className="text-muted-foreground">In Seattle's wet climate with heavy leaf fall and needle drop from surrounding evergreens, we recommend cleaning gutters twice per year—typically in late spring after pollen season and again in late fall after leaves drop.</p>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardContent className="p-6">
+                    <h3 className="font-bold text-brand-navy mb-2">Is your roof cleaning warranty-safe in Seattle?</h3>
+                    <p className="text-muted-foreground">Yes. We use a low-pressure soft-wash method specifically designed for Seattle's common roof types (composite, metal, asphalt). Our moss treatment kills growth at the root without damaging shingles or voiding manufacturer warranties.</p>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardContent className="p-6">
+                    <h3 className="font-bold text-brand-navy mb-2">Do you use high pressure or harsh chemicals?</h3>
+                    <p className="text-muted-foreground">No high pressure on roofing materials. We apply an eco-friendly moss treatment that breaks down naturally and won't harm your landscaping when properly rinsed.</p>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardContent className="p-6">
+                    <h3 className="font-bold text-brand-navy mb-2">What's a typical price range in Seattle?</h3>
+                    <p className="text-muted-foreground">Most Seattle homes range from $300-$600 for standard single-story roof cleaning and $400-$800 for two-story homes. Gutter cleaning typically runs $150-$400 depending on home size and gutter length.</p>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardContent className="p-6">
+                    <h3 className="font-bold text-brand-navy mb-2">Will moss treatment affect my landscaping?</h3>
+                    <p className="text-muted-foreground">Our moss treatment is plant-safe when applied correctly. We pre-wet landscaping, cover sensitive plants, and thoroughly rinse all surfaces. The diluted runoff breaks down quickly and won't harm grass, shrubs, or garden beds.</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Internal Links */}
+        <section className="section-spacing bg-off-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-2xl font-bold mb-6 text-brand-navy">Learn More</h2>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link to="/roof-cleaning">
+                  <Button variant="outline">Roof Cleaning Details</Button>
+                </Link>
+                <Link to="/gutter-cleaning">
+                  <Button variant="outline">Gutter Cleaning Details</Button>
+                </Link>
+                <Link to="/service-areas">
+                  <Button variant="outline">All Service Areas</Button>
+                </Link>
+                <Link to="/#contact">
+                  <Button variant="prowash-secondary">Get Quote</Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="section-spacing bg-gradient-to-b from-brand-navy to-brand-navy/95">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Protect Your Seattle Home?
+              </h2>
+              <p className="text-xl text-white/90 mb-8">
+                Get your free quote today. Same-day estimates available.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  variant="cta-orange" 
+                  size="lg"
+                  onClick={() => window.location.href = '/#contact'}
+                >
                   Get Free Quote
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                  Call (206) 866-3728
+                <Button 
+                  variant="prowash-secondary" 
+                  size="lg"
+                  onClick={() => window.location.href = 'tel:+12067526690'}
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call Now
                 </Button>
               </div>
             </div>
           </div>
         </section>
-
-        {/* Trust Indicators */}
-        <section className="py-8 bg-white border-b">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="flex items-center gap-3">
-                <Shield className="w-8 h-8 text-prowash-teal" />
-                <div>
-                  <div className="font-semibold">Licensed & Insured</div>
-                  <div className="text-sm text-muted-foreground">Full Coverage</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <Clock className="w-8 h-8 text-prowash-teal" />
-                <div>
-                  <div className="font-semibold">10+ Years</div>
-                  <div className="text-sm text-muted-foreground">Seattle Experience</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <CheckCircle2 className="w-8 h-8 text-prowash-teal" />
-                <div>
-                  <div className="font-semibold">487+ Reviews</div>
-                  <div className="text-sm text-muted-foreground">4.9 Star Rating</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <MapPin className="w-8 h-8 text-prowash-teal" />
-                <div>
-                  <div className="font-semibold">All Neighborhoods</div>
-                  <div className="text-sm text-muted-foreground">Seattle Coverage</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Services Section */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Seattle Services</h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Comprehensive exterior cleaning solutions for Seattle's unique climate
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <Card className="border-2 hover:border-prowash-teal transition-colors">
-                <CardContent className="pt-6">
-                  <h3 className="text-xl font-bold mb-3">Roof Cleaning</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Expert moss, algae, and lichen removal using safe soft-wash techniques. Perfect for Seattle's damp climate.
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-prowash-teal shrink-0 mt-0.5" />
-                      <span>Composition, metal & tile roofs</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-prowash-teal shrink-0 mt-0.5" />
-                      <span>Moss & algae treatment</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-prowash-teal shrink-0 mt-0.5" />
-                      <span>Preventative treatments</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 hover:border-prowash-teal transition-colors">
-                <CardContent className="pt-6">
-                  <h3 className="text-xl font-bold mb-3">Gutter Cleaning</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Complete gutter cleaning and maintenance to handle Seattle's heavy rainfall.
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-prowash-teal shrink-0 mt-0.5" />
-                      <span>Debris removal</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-prowash-teal shrink-0 mt-0.5" />
-                      <span>Downspout flushing</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-prowash-teal shrink-0 mt-0.5" />
-                      <span>Gutter brightening</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 hover:border-prowash-teal transition-colors">
-                <CardContent className="pt-6">
-                  <h3 className="text-xl font-bold mb-3">Moss Treatment</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Targeted moss removal and prevention for roofs, walkways, and driveways.
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-prowash-teal shrink-0 mt-0.5" />
-                      <span>Roof moss removal</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-prowash-teal shrink-0 mt-0.5" />
-                      <span>Concrete cleaning</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-prowash-teal shrink-0 mt-0.5" />
-                      <span>Long-term prevention</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Seattle Neighborhoods */}
-        <section className="py-16 px-4 bg-gray-50">
-          <div className="container mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Seattle Neighborhoods We Serve</h2>
-              <p className="text-xl text-muted-foreground">
-                Professional service throughout all Seattle areas
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-              {[
-                "Queen Anne", "Capitol Hill", "Ballard", "Fremont",
-                "Wallingford", "University District", "Green Lake", "Magnolia",
-                "West Seattle", "Beacon Hill", "Ravenna", "Madison Park",
-                "Laurelhurst", "Montlake", "Leschi", "Madrona"
-              ].map((neighborhood) => (
-                <div key={neighborhood} className="flex items-center gap-2 p-3 bg-white rounded-lg border">
-                  <CheckCircle2 className="w-5 h-5 text-prowash-teal shrink-0" />
-                  <span className="font-medium">{neighborhood}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">What Seattle Customers Say</h2>
-              <p className="text-xl text-muted-foreground">
-                Real reviews from your neighbors
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <TestimonialCard
-                quote="Our Capitol Hill Victorian needed serious moss removal. Pro-Wash did an incredible job - roof looks brand new! They were respectful of our historic home and the results are outstanding."
-                author="Michael Chen"
-                service="Queen Anne, Seattle"
-              />
-              <TestimonialCard
-                quote="Best gutter cleaning service in Seattle! They handle our Ballard craftsman home twice a year. Always on time, thorough, and reasonably priced. Highly recommend!"
-                author="Jennifer Martinez"
-                service="Ballard, Seattle"
-              />
-              <TestimonialCard
-                quote="Professional crew, great communication, and fair pricing. They cleaned our roof and gutters in one day. The difference is amazing - no more moss! Will definitely use again."
-                author="David Thompson"
-                service="Green Lake, Seattle"
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* Local FAQ */}
-        <ServiceFAQ 
-          faqs={[
-            {
-              question: "How often should Seattle homes have roof cleaning?",
-              answer: "Due to Seattle's wet climate and heavy tree coverage, we recommend roof cleaning every 1-2 years. Homes with significant tree coverage (especially in neighborhoods like Queen Anne, Capitol Hill, or Wallingford) may benefit from annual cleaning to prevent moss buildup."
-            },
-            {
-              question: "Is soft-wash safe for Seattle's historic homes?",
-              answer: "Absolutely! Soft-wash is the preferred method for Seattle's many historic homes, especially in neighborhoods like Capitol Hill and Queen Anne. It's gentler than pressure washing and won't damage delicate shingles or historic materials while still effectively removing moss and algae."
-            },
-            {
-              question: "Do you work during Seattle's rainy season?",
-              answer: "Yes! We operate year-round, though we prefer dry conditions when possible. Seattle's mild winters allow us to clean roofs and gutters even in cooler months. We monitor weather closely and will reschedule if conditions aren't safe. Fall is actually an ideal time for gutter cleaning before heavy winter rains."
-            }
-          ]} 
-          schemaContext="roof" 
-        />
-
-        {/* Quote Form Section */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto max-w-2xl">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Get Your Free Seattle Quote</h2>
-              <p className="text-xl text-muted-foreground">
-                Fast response times for all Seattle neighborhoods
-              </p>
-            </div>
-            <QuoteForm />
-          </div>
-        </section>
-
-        {/* Nearby Service Areas */}
-        <NearbyLocations 
-          currentCity="Seattle"
-          cities={nearbyCitiesData.seattle}
-        />
-
-        {/* Related Resources */}
-        <RelatedResources locationName="Seattle" />
-
-        {/* CTA Section */}
-        <section className="py-16 px-4 bg-brand-navy text-white">
-          <div className="container mx-auto text-center max-w-3xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Restore Your Seattle Home?
-            </h2>
-            <p className="text-xl text-gray-200 mb-8">
-              Join hundreds of satisfied Seattle homeowners who trust Pro-Wash for their exterior cleaning needs.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Button size="lg" variant="prowash-secondary">
-                Get Free Estimate
-              </Button>
-              <Button size="lg" variant="prowash-outline">
-                Call (206) 866-3728
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        <Footer />
-      </div>
-    </>
+      </main>
+      
+      <Footer />
+      <MobileBottomBar />
+    </div>
   );
 };
 
