@@ -26,19 +26,19 @@ const Hero = () => {
           fetchPriority="high"
           decoding="async"
         />
-        <div className="absolute inset-0 bg-brand-navy/55"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
       </div>
 
       {/* Hero Content */}
       <div className="container mx-auto px-4 relative z-10 py-20">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Main Headline */}
-          <h1 className="text-white font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight animate-fade-in mb-6">
+          <h1 className="text-white font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight animate-fade-in mb-6 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
             Expert Roof & Gutter Cleaning for Seattle Homes
           </h1>
 
           {/* Trust Line */}
-          <p className="text-xl md:text-2xl text-white/95 font-medium max-w-3xl mx-auto animate-fade-in mb-8">
+          <p className="text-xl md:text-2xl text-white font-medium max-w-3xl mx-auto animate-fade-in mb-8 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
             <a href="/reviews" className="hover:text-brand-orange transition-colors">4.9★ from 180+ neighbors</a> • 12-Month Moss-Free Guarantee • Same-Day Estimates
           </p>
 
@@ -61,7 +61,7 @@ const Hero = () => {
               Call 206-752-6690
             </Button>
           </div>
-          <p className="text-white/80 text-sm md:text-base font-normal max-w-2xl mt-4 animate-fade-in">
+          <p className="text-white text-sm md:text-base font-normal max-w-2xl mt-4 animate-fade-in drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
             Fast quotes. Fair prices. Expert moss removal and gutter protection.
           </p>
         </div>
