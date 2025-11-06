@@ -12,6 +12,7 @@ import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 import GoogleReviewsCarousel from "@/components/GoogleReviewsCarousel";
 import HomeFAQ from "@/components/HomeFAQ";
 import ServiceAreaMap from "@/components/ServiceAreaMap";
+import ServiceAreasSection from "@/components/ServiceAreasSection";
 import Footer from "@/components/Footer";
 import UnifiedContactBar from "@/components/UnifiedContactBar";
 
@@ -137,6 +138,25 @@ const Index = () => {
             <TwoStepQuoteForm />
           </div>
           <HomeFAQ />
+          <ServiceAreasSection 
+            title="Trusted Throughout Greater Seattle"
+            description="Professional roof cleaning, pressure washing, and exterior cleaning services in Seattle and surrounding communities"
+            areas={[
+              { name: "Seattle", path: "/locations/seattle", description: "Premier cleaning services in the heart of the city" },
+              { name: "Bellevue", path: "/locations/bellevue", description: "Expert roof and exterior cleaning on the Eastside" },
+              { name: "Kirkland", path: "/locations/kirkland", description: "Waterfront property specialists" },
+              { name: "Redmond", path: "/locations/redmond", description: "Tech hub residential and commercial cleaning" },
+              { name: "Sammamish", path: "/locations/sammamish", description: "Premium services for luxury homes" },
+              { name: "Bothell", path: "/locations/bothell", description: "Northshore area roof and gutter experts" },
+              { name: "Woodinville", path: "/locations/woodinville", description: "Wine country property care" },
+              { name: "Kenmore", path: "/locations/kenmore", description: "Lake Washington community services" },
+              { name: "Edmonds", path: "/locations/edmonds", description: "Coastal property cleaning specialists" },
+              { name: "Lynnwood", path: "/locations/lynnwood", description: "North Seattle metro exterior cleaning" },
+              { name: "Shoreline", path: "/locations/shoreline", description: "Complete property maintenance services" },
+              { name: "Mill Creek", path: "/locations/mill-creek", description: "Family neighborhood cleaning experts" },
+              { name: "Mountlake Terrace", path: "/locations/mountlake-terrace", description: "Residential and commercial services" },
+            ]}
+          />
           <ServiceAreaMap />
         </main>
       <Footer />
