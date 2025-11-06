@@ -2,8 +2,14 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { navigateToContact as goToContact, navigateToReviews as goToReviews, navigateToHome as goHome } from "@/lib/navigation";
 import { Button } from "@/components/ui/button";
-import { Phone, Menu, X } from "lucide-react";
+import { Phone, Menu, X, ChevronDown } from "lucide-react";
 import { useScrollShadow } from "./ScrollHeader";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 
 const Header = () => {
@@ -33,10 +39,15 @@ const Header = () => {
   
   const navigation: NavigationItem[] = [
     { name: "Home", href: "/", onClick: goHome },
-    { name: "Roof Cleaning", href: "/roof-cleaning" },
-    { name: "Gutter Cleaning", href: "/gutter-cleaning" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/#contact", onClick: goToContact }
+  ];
+
+  const serviceLinks = [
+    { name: "All Services", href: "/services" },
+    { name: "Roof Cleaning", href: "/roof-cleaning" },
+    { name: "Gutter Cleaning", href: "/gutter-cleaning" },
+    { name: "Moss Treatment", href: "/moss-treatment" },
   ];
 
   return (
@@ -73,6 +84,26 @@ const Header = () => {
                 </Link>
               )
             ))}
+            
+            {/* Services Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center gap-1 text-white hover:text-brand-orange font-medium transition-colors duration-250 cursor-pointer">
+                Services
+                <ChevronDown className="w-4 h-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-white border-brand-orange/20">
+                {serviceLinks.map((service) => (
+                  <DropdownMenuItem key={service.name} asChild>
+                    <Link 
+                      to={service.href}
+                      className="cursor-pointer hover:text-brand-orange"
+                    >
+                      {service.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </nav>
 
           {/* Desktop CTAs */}
@@ -135,6 +166,24 @@ const Header = () => {
                   </Link>
                 )
               ))}
+              
+              {/* Services Section in Mobile */}
+              <div className="border-t border-brand-orange/20 pt-2 mt-2">
+                <div className="px-4 py-2 text-brand-orange font-semibold text-sm">
+                  Services
+                </div>
+                {serviceLinks.map((service) => (
+                  <Link
+                    key={service.name}
+                    to={service.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block px-6 py-2 text-white hover:bg-brand-orange/20 hover:text-brand-orange transition-colors duration-250"
+                  >
+                    {service.name}
+                  </Link>
+                ))}
+              </div>
+              
               <div className="px-4 pt-4 border-t border-brand-orange/20">
                 <Button 
                   variant="cta-orange" 

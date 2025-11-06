@@ -81,6 +81,14 @@ const Footer = () => {
                <ul className="space-y-3">
                 <li>
                   <Link 
+                     to="/services" 
+                    className="text-white/80 hover:text-brand-orange transition-colors duration-250 text-sm"
+                  >
+                    All Services
+                  </Link>
+                </li>
+                <li>
+                  <Link 
                      to="/roof-cleaning" 
                     className="text-white/80 hover:text-brand-orange transition-colors duration-250 text-sm"
                   >
@@ -93,6 +101,14 @@ const Footer = () => {
                     className="text-white/80 hover:text-brand-orange transition-colors duration-250 text-sm"
                   >
                     Gutter Cleaning
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                     to="/moss-treatment" 
+                    className="text-white/80 hover:text-brand-orange transition-colors duration-250 text-sm"
+                  >
+                    Moss Treatment
                   </Link>
                 </li>
               </ul>
