@@ -8,6 +8,7 @@ import { MapPin, Star, Phone, CheckCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
+import ServiceFAQ from "@/components/ServiceFAQ";
 import NearbyLocations from "@/components/NearbyLocations";
 import RelatedResources from "@/components/RelatedResources";
 import { nearbyCitiesData } from "@/lib/locationNearbyCities";
@@ -256,41 +257,23 @@ const Bellevue = () => {
           </section>
 
           {/* Local FAQ Section */}
-          <section className="py-16 bg-white">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-12 text-center">
-                  Bellevue Service FAQs
-                </h2>
-                <div className="space-y-6">
-                  <Card>
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-dark-teal mb-3">Do I need a permit for roof cleaning in Bellevue?</h3>
-                      <p className="text-muted-foreground">
-                        No permit is required for routine roof and gutter cleaning services in Bellevue. Our soft-wash methods are non-invasive and comply with all local regulations.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-dark-teal mb-3">What Bellevue neighborhoods do you serve?</h3>
-                      <p className="text-muted-foreground">
-                        We serve all Bellevue areas including Downtown Bellevue, Crossroads, Wilburton, Somerset, Factoria, Bridle Trails, and surrounding neighborhoods. Same-day estimates available throughout Bellevue.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-dark-teal mb-3">How often should Bellevue homes get roof cleaning?</h3>
-                      <p className="text-muted-foreground">
-                        Due to Bellevue's wet climate and tree coverage, we recommend annual roof cleaning and moss treatment. Homes with heavy tree coverage may benefit from twice-yearly service.
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-            </div>
-          </section>
+          <ServiceFAQ 
+            faqs={[
+              {
+                question: "Do I need a permit for roof cleaning in Bellevue?",
+                answer: "No permit is required for routine roof and gutter cleaning services in Bellevue. Our soft-wash methods are non-invasive and comply with all local regulations."
+              },
+              {
+                question: "What Bellevue neighborhoods do you serve?",
+                answer: "We serve all Bellevue areas including Downtown Bellevue, Crossroads, Wilburton, Somerset, Factoria, Bridle Trails, and surrounding neighborhoods. Same-day estimates available throughout Bellevue."
+              },
+              {
+                question: "How often should Bellevue homes get roof cleaning?",
+                answer: "Due to Bellevue's wet climate and tree coverage, we recommend annual roof cleaning and moss treatment. Homes with heavy tree coverage may benefit from twice-yearly service."
+              }
+            ]} 
+            schemaContext="roof" 
+          />
 
           {/* Nearby Service Areas */}
           <NearbyLocations 

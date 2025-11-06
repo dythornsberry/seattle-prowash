@@ -8,6 +8,7 @@ import { MapPin, Star, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
+import ServiceFAQ from "@/components/ServiceFAQ";
 import NearbyLocations from "@/components/NearbyLocations";
 import RelatedResources from "@/components/RelatedResources";
 import { nearbyCitiesData } from "@/lib/locationNearbyCities";
@@ -256,41 +257,23 @@ const Woodinville = () => {
           </section>
 
           {/* Local FAQ Section */}
-          <section className="py-16 bg-white">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-12 text-center">
-                  Woodinville Service FAQs
-                </h2>
-                <div className="space-y-6">
-                  <Card>
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-dark-teal mb-3">What Woodinville neighborhoods do you serve?</h3>
-                      <p className="text-muted-foreground">
-                        We serve all Woodinville areas including Hollywood Hill, Cottage Lake, Wellington, and all surrounding neighborhoods. Same-day estimates available throughout Woodinville.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-dark-teal mb-3">Do you service Woodinville's rural properties?</h3>
-                      <p className="text-muted-foreground">
-                        Absolutely! Woodinville's mix of suburban and rural properties is our specialty. We handle properties with long driveways, extensive landscaping, and larger acreages with professional care.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-dark-teal mb-3">How does Woodinville's wine country location affect maintenance needs?</h3>
-                      <p className="text-muted-foreground">
-                        Woodinville's lush, agricultural setting means heavy tree coverage and high moisture. This creates more frequent moss growth and debris accumulation, making regular roof and gutter maintenance particularly important.
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-            </div>
-          </section>
+          <ServiceFAQ 
+            faqs={[
+              {
+                question: "What Woodinville neighborhoods do you serve?",
+                answer: "We serve all Woodinville areas including Hollywood Hill, Cottage Lake, Wellington, and all surrounding neighborhoods. Same-day estimates available throughout Woodinville."
+              },
+              {
+                question: "Do you service Woodinville's rural properties?",
+                answer: "Absolutely! Woodinville's mix of suburban and rural properties is our specialty. We handle properties with long driveways, extensive landscaping, and larger acreages with professional care."
+              },
+              {
+                question: "How does Woodinville's wine country location affect maintenance needs?",
+                answer: "Woodinville's lush, agricultural setting means heavy tree coverage and high moisture. This creates more frequent moss growth and debris accumulation, making regular roof and gutter maintenance particularly important."
+              }
+            ]} 
+            schemaContext="roof" 
+          />
 
           {/* Nearby Service Areas */}
           <NearbyLocations 

@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import TestimonialCard from "@/components/TestimonialCard";
+import ServiceFAQ from "@/components/ServiceFAQ";
 import { generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
 
 const Lynnwood = () => {
@@ -170,27 +171,7 @@ const Lynnwood = () => {
           </section>
 
           {/* Local FAQs */}
-          <section className="py-16 bg-gray-50">
-            <div className="container mx-auto px-4">
-              <h2 className="text-3xl font-bold text-brand-navy mb-12 text-center">
-                Lynnwood Service FAQs
-              </h2>
-              <div className="max-w-3xl mx-auto space-y-6">
-                {localFAQs.map((faq, index) => (
-                  <Card key={index}>
-                    <CardContent className="p-6">
-                      <h3 className="text-lg font-semibold mb-3 text-brand-navy">
-                        {faq.question}
-                      </h3>
-                      <p className="text-muted-foreground">
-                        {faq.answer}
-                      </p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </section>
+          <ServiceFAQ faqs={localFAQs} schemaContext="roof" />
 
           {/* CTA Section */}
           <section className="py-16 bg-brand-navy text-white">

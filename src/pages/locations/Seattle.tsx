@@ -6,6 +6,7 @@ import QuoteForm from "@/components/QuoteForm";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import TestimonialCard from "@/components/TestimonialCard";
+import ServiceFAQ from "@/components/ServiceFAQ";
 import NearbyLocations from "@/components/NearbyLocations";
 import RelatedResources from "@/components/RelatedResources";
 import { SEOHead } from "@/components/SEOHead";
@@ -287,52 +288,23 @@ const Seattle = () => {
         </section>
 
         {/* Local FAQ */}
-        <section className="py-16 px-4 bg-gray-50">
-          <div className="container mx-auto max-w-4xl">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Seattle Homeowner FAQs</h2>
-              <p className="text-xl text-muted-foreground">
-                Common questions about roof & gutter services in Seattle
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              <Card>
-                <CardContent className="pt-6">
-                  <h3 className="text-xl font-bold mb-3">How often should Seattle homes have roof cleaning?</h3>
-                  <p className="text-muted-foreground">
-                    Due to Seattle's wet climate and heavy tree coverage, we recommend roof cleaning every 1-2 years. 
-                    Homes with significant tree coverage (especially in neighborhoods like Queen Anne, Capitol Hill, or 
-                    Wallingford) may benefit from annual cleaning to prevent moss buildup.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="pt-6">
-                  <h3 className="text-xl font-bold mb-3">Is soft-wash safe for Seattle's historic homes?</h3>
-                  <p className="text-muted-foreground">
-                    Absolutely! Soft-wash is the preferred method for Seattle's many historic homes, especially in 
-                    neighborhoods like Capitol Hill and Queen Anne. It's gentler than pressure washing and won't damage 
-                    delicate shingles or historic materials while still effectively removing moss and algae.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="pt-6">
-                  <h3 className="text-xl font-bold mb-3">Do you work during Seattle's rainy season?</h3>
-                  <p className="text-muted-foreground">
-                    Yes! We operate year-round, though we prefer dry conditions when possible. Seattle's mild winters 
-                    allow us to clean roofs and gutters even in cooler months. We monitor weather closely and will 
-                    reschedule if conditions aren't safe. Fall is actually an ideal time for gutter cleaning before 
-                    heavy winter rains.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
+        <ServiceFAQ 
+          faqs={[
+            {
+              question: "How often should Seattle homes have roof cleaning?",
+              answer: "Due to Seattle's wet climate and heavy tree coverage, we recommend roof cleaning every 1-2 years. Homes with significant tree coverage (especially in neighborhoods like Queen Anne, Capitol Hill, or Wallingford) may benefit from annual cleaning to prevent moss buildup."
+            },
+            {
+              question: "Is soft-wash safe for Seattle's historic homes?",
+              answer: "Absolutely! Soft-wash is the preferred method for Seattle's many historic homes, especially in neighborhoods like Capitol Hill and Queen Anne. It's gentler than pressure washing and won't damage delicate shingles or historic materials while still effectively removing moss and algae."
+            },
+            {
+              question: "Do you work during Seattle's rainy season?",
+              answer: "Yes! We operate year-round, though we prefer dry conditions when possible. Seattle's mild winters allow us to clean roofs and gutters even in cooler months. We monitor weather closely and will reschedule if conditions aren't safe. Fall is actually an ideal time for gutter cleaning before heavy winter rains."
+            }
+          ]} 
+          schemaContext="roof" 
+        />
 
         {/* Quote Form Section */}
         <section className="py-16 px-4">

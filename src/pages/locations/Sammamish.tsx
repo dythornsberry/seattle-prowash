@@ -8,6 +8,7 @@ import { MapPin, Star, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
+import ServiceFAQ from "@/components/ServiceFAQ";
 import NearbyLocations from "@/components/NearbyLocations";
 import RelatedResources from "@/components/RelatedResources";
 import { nearbyCitiesData } from "@/lib/locationNearbyCities";
@@ -256,41 +257,23 @@ const Sammamish = () => {
           </section>
 
           {/* Local FAQ Section */}
-          <section className="py-16 bg-white">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-12 text-center">
-                  Sammamish Service FAQs
-                </h2>
-                <div className="space-y-6">
-                  <Card>
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-dark-teal mb-3">What Sammamish neighborhoods do you serve?</h3>
-                      <p className="text-muted-foreground">
-                        We serve all Sammamish areas including Klahanie, Sahalee, Pine Lake, Beaver Lake, and all surrounding neighborhoods. Same-day estimates available throughout Sammamish.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-dark-teal mb-3">Do you have experience with Sammamish's larger properties?</h3>
-                      <p className="text-muted-foreground">
-                        Yes! Sammamish is known for larger homes and properties. We have the equipment and expertise to handle extensive roof areas, long driveways, and multi-level homes common in the area.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-dark-teal mb-3">How does Sammamish's elevation affect moss growth?</h3>
-                      <p className="text-muted-foreground">
-                        Sammamish's higher elevation and forested areas create ideal conditions for moss. The combination of shade from mature trees and Pacific Northwest rainfall makes annual roof treatment essential for home protection.
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-            </div>
-          </section>
+          <ServiceFAQ 
+            faqs={[
+              {
+                question: "What Sammamish neighborhoods do you serve?",
+                answer: "We serve all Sammamish areas including Klahanie, Sahalee, Pine Lake, Beaver Lake, and all surrounding neighborhoods. Same-day estimates available throughout Sammamish."
+              },
+              {
+                question: "Do you have experience with Sammamish's larger properties?",
+                answer: "Yes! Sammamish is known for larger homes and properties. We have the equipment and expertise to handle extensive roof areas, long driveways, and multi-level homes common in the area."
+              },
+              {
+                question: "How does Sammamish's elevation affect moss growth?",
+                answer: "Sammamish's higher elevation and forested areas create ideal conditions for moss. The combination of shade from mature trees and Pacific Northwest rainfall makes annual roof treatment essential for home protection."
+              }
+            ]} 
+            schemaContext="roof" 
+          />
 
           {/* Nearby Service Areas */}
           <NearbyLocations 

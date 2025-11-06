@@ -8,6 +8,7 @@ import { MapPin, Star, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
+import ServiceFAQ from "@/components/ServiceFAQ";
 import NearbyLocations from "@/components/NearbyLocations";
 import RelatedResources from "@/components/RelatedResources";
 import { nearbyCitiesData } from "@/lib/locationNearbyCities";
@@ -351,41 +352,23 @@ const Kenmore = () => {
           </section>
 
           {/* Local FAQ Section */}
-          <section className="py-16 bg-white">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-12 text-center">
-                  Kenmore Service FAQs
-                </h2>
-                <div className="space-y-6">
-                  <Card>
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-dark-teal mb-3">What Kenmore neighborhoods do you serve?</h3>
-                      <p className="text-muted-foreground">
-                        We serve all Kenmore areas including Kenmore Highlands, Moorlands, Inglewood, Kenmore Village, North Rose Hill, and South Kenmore. Same-day estimates available throughout Kenmore.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-dark-teal mb-3">Why is Lake Washington's proximity important for Kenmore homes?</h3>
-                      <p className="text-muted-foreground">
-                        Kenmore's location on Lake Washington creates higher moisture levels year-round. Combined with mature tree coverage, this makes annual roof and gutter cleaning essential to prevent moss damage and water intrusion.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-dark-teal mb-3">How long have you been serving Kenmore?</h3>
-                      <p className="text-muted-foreground">
-                        We've been serving Kenmore homeowners for years, building lasting relationships with repeat customers. Our deep understanding of local weather patterns helps us provide the best preventative care for your home.
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-            </div>
-          </section>
+          <ServiceFAQ 
+            faqs={[
+              {
+                question: "What Kenmore neighborhoods do you serve?",
+                answer: "We serve all Kenmore areas including Kenmore Highlands, Moorlands, Inglewood, Kenmore Village, North Rose Hill, and South Kenmore. Same-day estimates available throughout Kenmore."
+              },
+              {
+                question: "Why is Lake Washington's proximity important for Kenmore homes?",
+                answer: "Kenmore's location on Lake Washington creates higher moisture levels year-round. Combined with mature tree coverage, this makes annual roof and gutter cleaning essential to prevent moss damage and water intrusion."
+              },
+              {
+                question: "How long have you been serving Kenmore?",
+                answer: "We've been serving Kenmore homeowners for years, building lasting relationships with repeat customers. Our deep understanding of local weather patterns helps us provide the best preventative care for your home."
+              }
+            ]} 
+            schemaContext="roof" 
+          />
 
           {/* Nearby Service Areas */}
           <NearbyLocations 

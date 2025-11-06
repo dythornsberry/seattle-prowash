@@ -8,6 +8,7 @@ import { MapPin, Star, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
+import ServiceFAQ from "@/components/ServiceFAQ";
 import NearbyLocations from "@/components/NearbyLocations";
 import RelatedResources from "@/components/RelatedResources";
 import { nearbyCitiesData } from "@/lib/locationNearbyCities";
@@ -256,41 +257,23 @@ const Redmond = () => {
           </section>
 
           {/* Local FAQ Section */}
-          <section className="py-16 bg-white">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-12 text-center">
-                  Redmond Service FAQs
-                </h2>
-                <div className="space-y-6">
-                  <Card>
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-dark-teal mb-3">What Redmond neighborhoods do you serve?</h3>
-                      <p className="text-muted-foreground">
-                        We serve all Redmond areas including Downtown Redmond, Education Hill, Overlake, Grasslawn, and surrounding neighborhoods. Same-day estimates available throughout Redmond.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-dark-teal mb-3">Do you service Redmond's tech campus areas?</h3>
-                      <p className="text-muted-foreground">
-                        Yes! We regularly service homes in the Overlake and Education Hill areas near major tech campuses. We understand busy professionals need flexible scheduling and efficient service.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-dark-teal mb-3">How often do Redmond homes need roof cleaning?</h3>
-                      <p className="text-muted-foreground">
-                        Most Redmond homes benefit from annual roof cleaning. Newer developments with less tree coverage may extend to 18 months, while heavily wooded areas like Grasslawn may need bi-annual service.
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-            </div>
-          </section>
+          <ServiceFAQ 
+            faqs={[
+              {
+                question: "What Redmond neighborhoods do you serve?",
+                answer: "We serve all Redmond areas including Downtown Redmond, Education Hill, Overlake, Grasslawn, and surrounding neighborhoods. Same-day estimates available throughout Redmond."
+              },
+              {
+                question: "Do you service Redmond's tech campus areas?",
+                answer: "Yes! We regularly service homes in the Overlake and Education Hill areas near major tech campuses. We understand busy professionals need flexible scheduling and efficient service."
+              },
+              {
+                question: "How often do Redmond homes need roof cleaning?",
+                answer: "Most Redmond homes benefit from annual roof cleaning. Newer developments with less tree coverage may extend to 18 months, while heavily wooded areas like Grasslawn may need bi-annual service."
+              }
+            ]} 
+            schemaContext="roof" 
+          />
 
           {/* Nearby Service Areas */}
           <NearbyLocations 

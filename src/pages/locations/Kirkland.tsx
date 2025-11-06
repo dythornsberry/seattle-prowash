@@ -8,6 +8,7 @@ import { MapPin, Star, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
+import ServiceFAQ from "@/components/ServiceFAQ";
 import NearbyLocations from "@/components/NearbyLocations";
 import RelatedResources from "@/components/RelatedResources";
 import { nearbyCitiesData } from "@/lib/locationNearbyCities";
@@ -344,41 +345,23 @@ const Kirkland = () => {
           </section>
 
           {/* Local FAQ Section */}
-          <section className="py-16 bg-white">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-12 text-center">
-                  Kirkland Service FAQs
-                </h2>
-                <div className="space-y-6">
-                  <Card>
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-dark-teal mb-3">What Kirkland neighborhoods do you serve?</h3>
-                      <p className="text-muted-foreground">
-                        We serve all Kirkland areas including Downtown Kirkland, Juanita, Totem Lake, Houghton, Finn Hill, Kingsgate, and Rose Hill. Same-day estimates available throughout Kirkland.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-dark-teal mb-3">How does Kirkland's waterfront location affect roof maintenance?</h3>
-                      <p className="text-muted-foreground">
-                        Kirkland's extensive Lake Washington waterfront creates consistently high humidity. This moisture, combined with the area's mature trees and premium homes, makes professional roof and gutter maintenance particularly important for protecting your investment.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-dark-teal mb-3">Do you work on high-end Kirkland properties?</h3>
-                      <p className="text-muted-foreground">
-                        Absolutely. We regularly service Kirkland's finest homes and understand the attention to detail required. Our team is fully insured with comprehensive coverage appropriate for high-value properties.
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-            </div>
-          </section>
+          <ServiceFAQ 
+            faqs={[
+              {
+                question: "What Kirkland neighborhoods do you serve?",
+                answer: "We serve all Kirkland areas including Downtown Kirkland, Juanita, Totem Lake, Houghton, Finn Hill, Kingsgate, and Rose Hill. Same-day estimates available throughout Kirkland."
+              },
+              {
+                question: "How does Kirkland's waterfront location affect roof maintenance?",
+                answer: "Kirkland's extensive Lake Washington waterfront creates consistently high humidity. This moisture, combined with the area's mature trees and premium homes, makes professional roof and gutter maintenance particularly important for protecting your investment."
+              },
+              {
+                question: "Do you work on high-end Kirkland properties?",
+                answer: "Absolutely. We regularly service Kirkland's finest homes and understand the attention to detail required. Our team is fully insured with comprehensive coverage appropriate for high-value properties."
+              }
+            ]} 
+            schemaContext="roof" 
+          />
 
           {/* Nearby Service Areas */}
           <NearbyLocations 

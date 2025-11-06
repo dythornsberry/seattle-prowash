@@ -8,6 +8,7 @@ import { MapPin, Star, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
+import ServiceFAQ from "@/components/ServiceFAQ";
 import NearbyLocations from "@/components/NearbyLocations";
 import RelatedResources from "@/components/RelatedResources";
 import { nearbyCitiesData } from "@/lib/locationNearbyCities";
@@ -344,41 +345,23 @@ const Bothell = () => {
           </section>
 
           {/* Local FAQ Section */}
-          <section className="py-16 bg-white">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl md:text-4xl font-bold text-dark-teal mb-12 text-center">
-                  Bothell Service FAQs
-                </h2>
-                <div className="space-y-6">
-                  <Card>
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-dark-teal mb-3">What Bothell neighborhoods do you serve?</h3>
-                      <p className="text-muted-foreground">
-                        We serve all Bothell areas including Downtown Bothell, Canyon Park, Country Village, Fitzgerald, North Creek, Queensboro, and Thrasher's Corner. Same-day estimates available throughout Bothell.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-dark-teal mb-3">Why is moss so common on Bothell roofs?</h3>
-                      <p className="text-muted-foreground">
-                        Bothell's proximity to the Sammamish River and North Creek creates higher humidity levels, combined with heavy tree coverage in many neighborhoods. This creates ideal conditions for moss growth, making annual roof cleaning essential.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-dark-teal mb-3">How quickly can you service my Bothell home?</h3>
-                      <p className="text-muted-foreground">
-                        Most Bothell customers receive same-day quotes and can be scheduled within 1-2 weeks. Emergency services available for urgent situations like overflowing gutters or heavy moss buildup.
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-            </div>
-          </section>
+          <ServiceFAQ 
+            faqs={[
+              {
+                question: "What Bothell neighborhoods do you serve?",
+                answer: "We serve all Bothell areas including Downtown Bothell, Canyon Park, Country Village, Fitzgerald, North Creek, Queensboro, and Thrasher's Corner. Same-day estimates available throughout Bothell."
+              },
+              {
+                question: "Why is moss so common on Bothell roofs?",
+                answer: "Bothell's proximity to the Sammamish River and North Creek creates higher humidity levels, combined with heavy tree coverage in many neighborhoods. This creates ideal conditions for moss growth, making annual roof cleaning essential."
+              },
+              {
+                question: "How quickly can you service my Bothell home?",
+                answer: "Most Bothell customers receive same-day quotes and can be scheduled within 1-2 weeks. Emergency services available for urgent situations like overflowing gutters or heavy moss buildup."
+              }
+            ]} 
+            schemaContext="roof" 
+          />
 
           {/* Nearby Service Areas */}
           <NearbyLocations 
