@@ -24,6 +24,12 @@ export const SEOHead = ({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       
+      {/* Geo-targeting meta tags */}
+      <meta name="geo.region" content="US-WA" />
+      <meta name="geo.placename" content="Seattle" />
+      <meta name="geo.position" content="47.7574;-122.2429" />
+      <meta name="ICBM" content="47.7574, -122.2429" />
+      
       {/* OpenGraph tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
@@ -43,6 +49,11 @@ export const SEOHead = ({
       <link rel="me" href="https://www.facebook.com/SeattleProWash" />
       <link rel="me" href="https://share.google/VJ2xiQPvoc6E8IQvw" />
       <link rel="me" href="https://www.youtube.com/@seattleprowash" />
+      
+      {/* Additional SEO */}
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+      <meta name="author" content="Seattle ProWash" />
+      <meta name="copyright" content="Seattle ProWash LLC" />
       
       <link rel="canonical" href={currentUrl} />
     </Helmet>

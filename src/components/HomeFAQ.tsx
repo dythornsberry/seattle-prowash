@@ -6,24 +6,22 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Shield, Clock, CheckCircle, ArrowRight } from "lucide-react";
+import { useEffect } from "react";
+import { generateFAQSchema, injectSchema } from "@/utils/schema";
 
 const HomeFAQ = () => {
-  // Generate FAQ Schema for SEO
-  const generateFAQSchema = () => {
-    const faqSchema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": topFAQs.map(faq => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": faq.answer
-        }
-      }))
-    };
-    return JSON.stringify(faqSchema);
-  };
+  // Inject FAQ Schema for SEO
+  useEffect(() => {
+    const faqData = topFAQs.map(faq => ({
+      question: faq.question,
+      answer: faq.answer
+    }));
+
+    const schema = generateFAQSchema({ faqs: faqData });
+    const cleanup = injectSchema(schema);
+
+    return cleanup;
+  }, []);
 
   const topFAQs = [
     {
@@ -66,12 +64,6 @@ const HomeFAQ = () => {
 
   return (
     <section className="py-16 md:py-20 bg-background">
-      {/* FAQ Schema for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: generateFAQSchema() }}
-      />
-      
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
