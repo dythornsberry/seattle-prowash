@@ -16,6 +16,7 @@ const Hero = () => {
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       {/* Hero Background with Navy Overlay */}
       <div className="absolute inset-0 z-0">
+        <link rel="preload" as="image" href={heroImage} />
         <img 
           src={heroImage}
           alt="Professional roof cleaning service in Seattle - moss removal and roof treatment"
@@ -26,7 +27,7 @@ const Hero = () => {
           fetchPriority="high"
           decoding="async"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
       </div>
 
       {/* Hero Content */}

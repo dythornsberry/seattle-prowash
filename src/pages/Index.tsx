@@ -4,7 +4,8 @@ import { generateLocalBusinessSchema, generateBreadcrumbSchema, injectSchema, CO
 import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import TrustBar from "@/components/TrustBar";
+import EnhancedTrustBar from "@/components/EnhancedTrustBar";
+import AsSeenOn from "@/components/AsSeenOn";
 import ServicesPreview from "@/components/ServicesPreview";
 import CostOfWaiting from "@/components/CostOfWaiting";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
@@ -15,6 +16,8 @@ import ServiceAreaMap from "@/components/ServiceAreaMap";
 import ServiceAreasSection from "@/components/ServiceAreasSection";
 import Footer from "@/components/Footer";
 import UnifiedContactBar from "@/components/UnifiedContactBar";
+import ExitIntentPopup from "@/components/ExitIntentPopup";
+import LiveBookingNotification from "@/components/LiveBookingNotification";
 
 const Index = () => {
   // Scroll tracking and Schema injection
@@ -127,7 +130,8 @@ const Index = () => {
         
         <main>
           <Hero />
-          <TrustBar />
+          <EnhancedTrustBar />
+          <AsSeenOn />
           <CostOfWaiting />
           <ServicesPreview />
           <GoogleReviewsCarousel />
@@ -161,6 +165,8 @@ const Index = () => {
         </main>
       <Footer />
       <UnifiedContactBar />
+      <ExitIntentPopup />
+      <LiveBookingNotification />
       </div>
     </div>
   );
