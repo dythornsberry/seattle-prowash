@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
+import EnhancedTrustBar from "@/components/EnhancedTrustBar";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
@@ -83,6 +84,7 @@ const Lynnwood = () => {
 
       <div className="min-h-screen flex flex-col">
         <Header />
+        <EnhancedTrustBar />
         
         <main className="flex-grow pt-16">
           {/* Hero Section */}

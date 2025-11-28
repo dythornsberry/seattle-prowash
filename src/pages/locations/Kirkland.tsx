@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Star, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import EnhancedTrustBar from "@/components/EnhancedTrustBar";
 import TestimonialCard from "@/components/TestimonialCard";
 import ServiceFAQ from "@/components/ServiceFAQ";
 import NearbyLocations from "@/components/NearbyLocations";
@@ -94,6 +95,7 @@ const Kirkland = () => {
         url="https://www.seattleprowash.com/service-areas/kirkland"
       />
       <Header />
+      <EnhancedTrustBar />
         
         <main className="pt-16 md:pt-20">
           {/* Hero Section */}

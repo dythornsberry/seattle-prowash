@@ -5,6 +5,7 @@ import { injectSchema } from "@/utils/schema";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
+import EnhancedTrustBar from "@/components/EnhancedTrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Phone, MapPin } from "lucide-react";
@@ -132,6 +133,7 @@ const Seattle = () => {
         url="https://www.seattleprowash.com/seattle-roof-gutter-cleaning"
       />
       <Header />
+      <EnhancedTrustBar />
       
       <main className="pt-20 md:pt-24">
         {/* Hero */}

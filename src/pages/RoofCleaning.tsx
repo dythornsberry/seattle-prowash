@@ -5,6 +5,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyTopBar from "@/components/StickyTopBar";
 import MobileBottomBar from "@/components/MobileBottomBar";
+import EnhancedTrustBar from "@/components/EnhancedTrustBar";
+import AsSeenOn from "@/components/AsSeenOn";
 import TestimonialCard from "@/components/TestimonialCard";
 import ServiceAreasSection from "@/components/ServiceAreasSection";
 import RelatedResources from "@/components/RelatedResources";
@@ -131,6 +133,7 @@ const RoofCleaning = () => {
         image="/lovable-uploads/cd85dd92-8acb-405d-a73c-44650e962bd8.png"
       />
       <Header />
+      <EnhancedTrustBar />
       <main className="pt-16 md:pt-20">
         {/* Hero Section */}
         <section className="section-spacing bg-gradient-to-b from-brand-navy to-brand-navy/90">
@@ -214,6 +217,9 @@ const RoofCleaning = () => {
             }
           ]}
         />
+
+        {/* As Seen On Section */}
+        <AsSeenOn />
 
         {/* FAQ Section */}
         <ServiceFAQ

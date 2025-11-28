@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import EnhancedTrustBar from "@/components/EnhancedTrustBar";
+import AsSeenOn from "@/components/AsSeenOn";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Droplet, Sparkles } from "lucide-react";
@@ -20,6 +22,7 @@ const Services = () => {
         url="https://www.seattleprowash.com/services"
       />
       <Header />
+      <EnhancedTrustBar />
       
       <main className="pt-20 md:pt-24">
         {/* Hero */}
@@ -116,6 +119,9 @@ const Services = () => {
             </div>
           </div>
         </section>
+
+        {/* As Seen On Section */}
+        <AsSeenOn />
       </main>
       
       <Footer />
