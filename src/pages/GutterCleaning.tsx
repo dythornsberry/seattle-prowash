@@ -4,6 +4,8 @@ import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
+import EnhancedTrustBar from "@/components/EnhancedTrustBar";
+import AsSeenOn from "@/components/AsSeenOn";
 import TestimonialCard from "@/components/TestimonialCard";
 import ServiceAreasSection from "@/components/ServiceAreasSection";
 import RelatedResources from "@/components/RelatedResources";
@@ -156,6 +158,7 @@ const GutterCleaning = () => {
         image="/lovable-uploads/61bfb1f1-0bee-423a-be7a-c49142b6fd6b.png"
       />
       <Header />
+      <EnhancedTrustBar />
       <main className="pt-16 md:pt-20">
         {/* Hero Section */}
         <section className="section-spacing bg-gradient-to-b from-brand-navy to-brand-navy/90">
@@ -258,6 +261,9 @@ const GutterCleaning = () => {
             }
           ]}
         />
+
+        {/* As Seen On Section */}
+        <AsSeenOn />
 
         {/* What You Get Section */}
         <section className="section-spacing bg-muted/30">
