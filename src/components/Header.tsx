@@ -110,9 +110,9 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-3">
             <button
               onClick={handleCallClick}
-              className="flex items-center gap-2 text-white hover:text-brand-orange font-medium transition-colors duration-250"
+              className="flex items-center gap-2 text-white hover:text-brand-orange font-bold text-lg transition-colors duration-250 active:scale-95"
             >
-              <Phone className="w-4 h-4" />
+              <Phone className="w-5 h-5" />
               {phoneNumber}
             </button>
           </div>
