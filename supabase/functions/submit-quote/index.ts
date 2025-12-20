@@ -1,5 +1,9 @@
-// submit-quote edge function: proxies quote submissions to Zapier with retries and CORS
-// Uses secret ZAPIER_WEBHOOK_URL configured in Lovable Cloud
+// submit-quote edge function: proxies quote submissions to Zapier + sends email notification
+// Uses secrets: ZAPIER_WEBHOOK_URL, RESEND_API_KEY
+
+import { Resend } from "npm:resend@2.0.0";
+
+const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
 const corsHeaders: Record<string, string> = {
   "Access-Control-Allow-Origin": "*",
@@ -7,10 +11,13 @@ const corsHeaders: Record<string, string> = {
   "Access-Control-Allow-Methods": "POST, OPTIONS",
 };
 
+const NOTIFICATION_EMAIL = "dythornsberry@gmail.com";
+
 async function forwardToZapier(payload: Record<string, unknown>) {
   const url = Deno.env.get("ZAPIER_WEBHOOK_URL");
   if (!url) {
-    throw new Error("Missing ZAPIER_WEBHOOK_URL secret");
+    console.log("No ZAPIER_WEBHOOK_URL configured, skipping Zapier");
+    return { ok: true, status: 200, skipped: true };
   }
 
   // 3 retries with backoff: 0ms, 500ms, 1500ms
@@ -25,13 +32,63 @@ async function forwardToZapier(payload: Record<string, unknown>) {
         body: JSON.stringify(payload),
       });
       // Zapier returns 200/2xx on success
-      if (res.ok) return { ok: true, status: res.status };
+      if (res.ok) {
+        console.log("Successfully forwarded to Zapier:", res.status);
+        return { ok: true, status: res.status };
+      }
       lastErr = new Error(`Zapier responded ${res.status}`);
     } catch (e) {
       lastErr = e;
     }
   }
+  console.error("Failed to forward to Zapier after retries:", lastErr);
   throw lastErr ?? new Error("Unknown error forwarding to Zapier");
+}
+
+async function sendEmailNotification(body: Record<string, string>) {
+  try {
+    const emailResponse = await resend.emails.send({
+      from: "Seattle ProWash <onboarding@resend.dev>",
+      to: [NOTIFICATION_EMAIL],
+      subject: `🏠 New Quote Request from ${body.name}`,
+      html: `
+        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+          <h1 style="color: #1a365d; margin-bottom: 20px;">📋 New Quote Request</h1>
+          
+          <div style="background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+            <h2 style="color: #2d3748; margin: 0 0 15px 0; font-size: 18px;">Customer Details</h2>
+            
+            <p style="margin: 8px 0;"><strong>Name:</strong> ${body.name}</p>
+            <p style="margin: 8px 0;"><strong>Phone:</strong> <a href="tel:${body.phone.replace(/\D/g, '')}">${body.phone}</a></p>
+            <p style="margin: 8px 0;"><strong>Address:</strong> ${body.address}</p>
+            ${body.email ? `<p style="margin: 8px 0;"><strong>Email:</strong> <a href="mailto:${body.email}">${body.email}</a></p>` : ''}
+            ${body.details ? `<p style="margin: 8px 0;"><strong>Details:</strong> ${body.details}</p>` : ''}
+          </div>
+          
+          <div style="background: #fffbeb; border: 1px solid #fbbf24; border-radius: 8px; padding: 15px; margin-bottom: 20px;">
+            <p style="margin: 0; color: #92400e;">
+              <strong>⏰ Quick tip:</strong> Respond within 1 hour for best conversion!
+            </p>
+          </div>
+          
+          <p style="margin: 8px 0; color: #718096;"><strong>Submitted:</strong> ${body.timestamp}</p>
+          <p style="margin: 8px 0; color: #718096;"><strong>Source:</strong> ${body.source}</p>
+          
+          <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 20px 0;" />
+          
+          <p style="color: #a0aec0; font-size: 12px; text-align: center;">
+            Seattle ProWash Lead Notification System
+          </p>
+        </div>
+      `,
+    });
+
+    console.log("Email notification sent successfully:", emailResponse);
+    return { sent: true, response: emailResponse };
+  } catch (error) {
+    console.error("Failed to send email notification:", error);
+    return { sent: false, error: error.message };
+  }
 }
 
 Deno.serve(async (req: Request) => {
@@ -66,6 +123,8 @@ Deno.serve(async (req: Request) => {
       }
     }
 
+    console.log("Received quote submission:", payload.name, payload.phone);
+
     // Basic normalization and enrichment
     const body = {
       name: String(payload.name || ""),
@@ -80,9 +139,23 @@ Deno.serve(async (req: Request) => {
       referer: req.headers.get("referer") || undefined,
     };
 
-    const result = await forwardToZapier(body);
+    // Skip health check test submissions for email notifications
+    const isHealthCheck = body.name === "HEALTH_CHECK_TEST";
 
-    return new Response(JSON.stringify({ ok: true, status: result.status }), {
+    // Run Zapier and Email in parallel for speed
+    const [zapierResult, emailResult] = await Promise.all([
+      forwardToZapier(body),
+      isHealthCheck ? Promise.resolve({ sent: false, skipped: true }) : sendEmailNotification(body),
+    ]);
+
+    console.log("Zapier result:", zapierResult);
+    console.log("Email result:", emailResult);
+
+    return new Response(JSON.stringify({ 
+      ok: true, 
+      status: zapierResult.status,
+      emailSent: emailResult.sent 
+    }), {
       status: 200,
       headers: { "Content-Type": "application/json", ...corsHeaders },
     });
