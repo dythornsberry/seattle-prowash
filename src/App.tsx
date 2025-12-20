@@ -5,7 +5,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ExitIntentPopup from "@/components/ExitIntentPopup";
-import LiveBookingNotification from "@/components/LiveBookingNotification";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
@@ -34,7 +33,6 @@ const App = () => (
       <Toaster />
       <Sonner />
       <ExitIntentPopup />
-      <LiveBookingNotification />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
