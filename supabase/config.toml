@@ -2,3 +2,6 @@ project_id = "fhjtduunzqboizborzof"
 
 [functions.submit-quote]
 verify_jwt = false
+
+[functions.form-health-check]
+verify_jwt = false
