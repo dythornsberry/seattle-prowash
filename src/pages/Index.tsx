@@ -17,7 +17,6 @@ import ServiceAreasSection from "@/components/ServiceAreasSection";
 import Footer from "@/components/Footer";
 import UnifiedContactBar from "@/components/UnifiedContactBar";
 import ExitIntentPopup from "@/components/ExitIntentPopup";
-import LiveBookingNotification from "@/components/LiveBookingNotification";
 
 const Index = () => {
   // Scroll tracking and Schema injection
@@ -166,7 +165,6 @@ const Index = () => {
       <Footer />
       <UnifiedContactBar />
       <ExitIntentPopup />
-      <LiveBookingNotification />
       </div>
     </div>
   );
