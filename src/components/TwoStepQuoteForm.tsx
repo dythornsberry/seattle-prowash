@@ -14,6 +14,7 @@ import { supabase } from "@/integrations/supabase/client";
 
 const formSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
+  email: z.string().trim().email("Valid email is required").max(255),
   address: z.string().trim().min(1, "Address is required").max(300),
   phone: z.string().trim().min(10, "Valid phone number is required").max(20),
   services: z.array(z.string()).min(1, "Please select at least one service"),
@@ -29,6 +30,7 @@ const TwoStepQuoteForm = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
+      email: "",
       address: "",
       phone: "",
       services: [],
@@ -46,6 +48,7 @@ const TwoStepQuoteForm = () => {
 
   const buildPayload = (values: z.infer<typeof formSchema>) => ({
     name: values.name,
+    email: values.email,
     address: values.address,
     phone: values.phone,
     services: values.services.join(", "),
@@ -170,6 +173,26 @@ const TwoStepQuoteForm = () => {
                                 placeholder="Your name"
                                 className="border-brand-navy/30 focus:border-brand-orange min-h-[56px] text-lg md:text-sm md:min-h-[48px] rounded-xl"
                                 autoComplete="name"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-brand-navy font-semibold">Email *</FormLabel>
+                            <FormControl>
+                              <Input
+                                type="email"
+                                placeholder="your@email.com"
+                                className="border-brand-navy/30 focus:border-brand-orange min-h-[56px] text-lg md:text-sm md:min-h-[48px] rounded-xl"
+                                autoComplete="email"
                                 {...field}
                               />
                             </FormControl>
