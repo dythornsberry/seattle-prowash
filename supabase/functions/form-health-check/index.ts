@@ -129,7 +129,7 @@ Deno.serve(async (req: Request) => {
 
   try {
     // Get alert email from request body or use default
-    let alertEmail = "owner@seattleprowash.com"; // Default - user should update this
+    let alertEmail = "dythornsberry@gmail.com";
     
     try {
       const body = await req.json();
