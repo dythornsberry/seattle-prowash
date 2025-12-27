@@ -20,7 +20,7 @@ const Shoreline = () => {
 
     const localBusinessSchema = generateLocalBusinessSchema({
       name: "Seattle ProWash - Shoreline",
-      description: "Professional roof cleaning, moss removal, gutter cleaning, and pressure washing services in Shoreline, WA",
+      description: "Professional roof cleaning, moss removal, and gutter cleaning services in Shoreline, WA",
       url: "https://seattleprowash.com/shoreline",
       telephone: COMPANY_INFO.telephone,
       address: {
@@ -52,9 +52,9 @@ const Shoreline = () => {
       service: "Roof Cleaning"
     },
     {
-      quote: "They did a phenomenal job cleaning our driveway and walkway. Years of grime gone in a few hours. Very happy with Seattle ProWash!",
+      quote: "They did a great job on our gutters. Quick, efficient, and no mess left behind. Highly recommend Seattle ProWash!",
       author: "Susan K.",
-      service: "Pressure Washing"
+      service: "Gutter Cleaning"
     },
     {
       quote: "Professional moss removal service that actually works. Our roof has stayed clean for over a year now. Great value for Shoreline homeowners.",
@@ -66,7 +66,7 @@ const Shoreline = () => {
   const localFAQs = [
     {
       question: "Do you serve all Shoreline neighborhoods?",
-      answer: "Absolutely! We provide complete roof cleaning, gutter cleaning, and pressure washing services throughout Shoreline, including Richmond Beach, Ridgecrest, and all surrounding neighborhoods."
+      answer: "Absolutely! We provide complete roof cleaning and gutter cleaning services throughout Shoreline, including Richmond Beach, Ridgecrest, and all surrounding neighborhoods."
     },
     {
       question: "Why is roof cleaning important in Shoreline?",
@@ -81,8 +81,8 @@ const Shoreline = () => {
   return (
     <>
       <SEOHead 
-        title="Roof Cleaning & Pressure Washing Shoreline WA"
-        description="Professional roof cleaning, moss removal & pressure washing in Shoreline. Expert exterior cleaning services with 5-star reviews. Free quotes. Call (206) 508-4090"
+        title="Roof & Gutter Cleaning Shoreline WA"
+        description="Professional roof cleaning, moss removal & gutter cleaning in Shoreline. Expert roof and gutter services with 5-star reviews. Free quotes. Call (206) 752-6690"
       />
 
       <div className="min-h-screen flex flex-col">
@@ -95,10 +95,10 @@ const Shoreline = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl">
                 <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                  Professional Roof Cleaning & Pressure Washing in Shoreline, WA
+                  Professional Roof & Gutter Cleaning in Shoreline, WA
                 </h1>
                 <p className="text-xl mb-8 text-gray-100">
-                  Expert exterior cleaning services for Shoreline homes. Specializing in roof moss removal, gutter cleaning, and pressure washing.
+                  Expert roof and gutter cleaning services for Shoreline homes. Specializing in roof moss removal and gutter maintenance.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -111,10 +111,10 @@ const Shoreline = () => {
                   <Button 
                     size="lg" 
                     variant="prowash-outline"
-                    onClick={() => window.location.href = 'tel:+12065084090'}
+                    onClick={() => window.location.href = 'tel:+12067526690'}
                   >
                     <Phone className="mr-2 h-5 w-5" />
-                    (206) 508-4090
+                    (206) 752-6690
                   </Button>
                 </div>
               </div>
@@ -127,7 +127,7 @@ const Shoreline = () => {
               <h2 className="text-3xl font-bold text-brand-navy mb-8 text-center">
                 Our Shoreline Services
               </h2>
-              <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <Card>
                   <CardContent className="p-6">
                     <h3 className="text-xl font-semibold mb-3 text-brand-navy">Roof Cleaning</h3>
@@ -141,14 +141,6 @@ const Shoreline = () => {
                     <h3 className="text-xl font-semibold mb-3 text-brand-navy">Gutter Cleaning</h3>
                     <p className="text-muted-foreground">
                       Thorough gutter cleaning and maintenance to protect your Shoreline home from water damage and foundation issues.
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3 text-brand-navy">Pressure Washing</h3>
-                    <p className="text-muted-foreground">
-                      Professional pressure washing for driveways, patios, siding, and decks throughout the Shoreline area.
                     </p>
                   </CardContent>
                 </Card>
@@ -191,10 +183,10 @@ const Shoreline = () => {
           <section className="py-16 bg-brand-navy text-white">
             <div className="container mx-auto px-4 text-center">
               <h2 className="text-3xl font-bold mb-6">
-                Ready to Transform Your Shoreline Property?
+                Ready to Protect Your Shoreline Property?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Get a free, no-obligation quote for professional exterior cleaning services in Shoreline.
+                Get a free, no-obligation quote for professional roof and gutter cleaning services in Shoreline.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
@@ -207,7 +199,7 @@ const Shoreline = () => {
                 <Button 
                   size="lg" 
                   variant="prowash-outline"
-                  onClick={() => window.location.href = 'tel:+12065084090'}
+                  onClick={() => window.location.href = 'tel:+12067526690'}
                 >
                   <Phone className="mr-2 h-5 w-5" />
                   Call Now

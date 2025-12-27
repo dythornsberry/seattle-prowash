@@ -47,7 +47,7 @@ const Kirkland = () => {
     const businessSchema = generateLocalBusinessSchema({
       ...COMPANY_INFO,
       name: `${COMPANY_INFO.name} - Kirkland`,
-      description: "Professional roof cleaning, gutter cleaning, and exterior washing services in Kirkland, WA. Serving all Kirkland neighborhoods including Juanita, Totem Lake, and Houghton. 12-month moss-free guarantee.",
+      description: "Professional roof cleaning and gutter cleaning services in Kirkland, WA. Serving all Kirkland neighborhoods including Juanita, Totem Lake, and Houghton. 12-month moss-free guarantee.",
       address: {
         ...COMPANY_INFO.address,
         addressLocality: "Kirkland"
@@ -110,7 +110,7 @@ const Kirkland = () => {
                   Expert Roof & Gutter Cleaning Services in Kirkland
                 </h1>
                 <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
-                  Professional moss treatment and exterior cleaning for Kirkland homeowners since 2022
+                  Professional moss treatment and gutter cleaning for Kirkland homeowners since 2022
                 </p>
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <span className="bg-white/10 px-4 py-2 rounded-full">12-Month Moss-Free Guarantee</span>
@@ -220,22 +220,6 @@ const Kirkland = () => {
                     </p>
                     <div className="text-bright-orange font-semibold">Ongoing Care</div>
                   </div>
-
-                  <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">Luxury House Washing (Add-On)</h3>
-                    <p className="text-white/80 mb-4">
-                      Specialized gentle washing for high-end siding materials, preserving beauty while removing contaminants.
-                    </p>
-                    <div className="text-bright-orange font-semibold">Material-Safe Methods</div>
-                  </div>
-
-                  <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">Estate Pressure Washing (Add-On)</h3>
-                    <p className="text-white/80 mb-4">
-                      Professional cleaning for driveways, walkways, patios, and outdoor living spaces throughout Kirkland.
-                    </p>
-                    <div className="text-bright-orange font-semibold">Outdoor Living Care</div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -327,11 +311,6 @@ const Kirkland = () => {
                 </h2>
                 <div className="grid md:grid-cols-3 gap-6 mb-12">
                   <TestimonialCard 
-                    quote="Seattle Pro Wash did a great job on my driveway and made it look like new! Would highly recommend."
-                    author="Robert Mintz"
-                    service="Driveway Pressure Washing"
-                  />
-                  <TestimonialCard 
                     quote="Dylan is great to work with. Good price and good service. I used him again this year and even better. Attention to detail and good communication."
                     author="Roger Wallace"
                     service="Roof & Gutter Cleaning"
@@ -340,6 +319,11 @@ const Kirkland = () => {
                     quote="Great communication, transparent pricing, all around great experience."
                     author="Y Kos"
                     service="Complete Service"
+                  />
+                  <TestimonialCard 
+                    quote="Excellent company to work with, Dylan and his guys are friendly and do great work with attention to detail."
+                    author="Chris Olson"
+                    service="Roof Cleaning"
                   />
                 </div>
               </div>

@@ -97,7 +97,7 @@ const Redmond = () => {
                   Roof & Gutter Cleaning in Redmond, WA
                 </h1>
                 <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
-                  Professional moss treatment and exterior cleaning services for Redmond homeowners
+                  Professional moss treatment and gutter cleaning services for Redmond homeowners
                 </p>
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <span className="bg-white/10 px-4 py-2 rounded-full">12-Month Moss-Free Guarantee</span>
@@ -206,22 +206,6 @@ const Redmond = () => {
                       Restore your gutters' appearance by removing oxidation stains.
                     </p>
                     <div className="text-bright-orange font-semibold">Like-New Appearance</div>
-                  </div>
-
-                  <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">House Washing</h3>
-                    <p className="text-white/80 mb-4">
-                      Gentle exterior cleaning that removes algae, mildew, and dirt.
-                    </p>
-                    <div className="text-bright-orange font-semibold">Safe & Effective</div>
-                  </div>
-
-                  <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">Pressure Washing</h3>
-                    <p className="text-white/80 mb-4">
-                      Professional pressure washing for driveways, patios, and walkways.
-                    </p>
-                    <div className="text-bright-orange font-semibold">Concrete & Surfaces</div>
                   </div>
                 </div>
               </div>
