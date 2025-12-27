@@ -17,7 +17,8 @@ import Reviews from "./pages/Reviews";
 import ServiceAreas from "./pages/ServiceAreas";
 import Services from "./pages/Services";
 
-// City location pages - only the 6 primary cities
+// City location pages - primary cities (Kenmore is home base)
+import KenmoreLocation from "./pages/locations/Kenmore";
 import SeattleLocation from "./pages/locations/Seattle";
 import ShorelineLocation from "./pages/locations/Shoreline";
 import KirklandLocation from "./pages/locations/Kirkland";
@@ -45,12 +46,13 @@ const App = () => (
           {/* Service areas hub */}
           <Route path="/service-areas" element={<ServiceAreas />} />
           
-          {/* 6 Primary city location pages with SEO-friendly URLs */}
-          <Route path="/seattle-roof-gutter-cleaning" element={<SeattleLocation />} />
-          <Route path="/shoreline-roof-gutter-cleaning" element={<ShorelineLocation />} />
-          <Route path="/kirkland-roof-gutter-cleaning" element={<KirklandLocation />} />
+          {/* Primary city location pages with SEO-friendly URLs - Kenmore is home base */}
+          <Route path="/kenmore-roof-gutter-cleaning" element={<KenmoreLocation />} />
           <Route path="/bothell-roof-gutter-cleaning" element={<BothellLocation />} />
           <Route path="/lynnwood-roof-gutter-cleaning" element={<LynnwoodLocation />} />
+          <Route path="/kirkland-roof-gutter-cleaning" element={<KirklandLocation />} />
+          <Route path="/shoreline-roof-gutter-cleaning" element={<ShorelineLocation />} />
+          <Route path="/seattle-roof-gutter-cleaning" element={<SeattleLocation />} />
           <Route path="/woodinville-roof-gutter-cleaning" element={<WoodinvilleLocation />} />
           
           {/* Supporting pages */}
@@ -75,7 +77,7 @@ const App = () => (
           <Route path="/roof-moss-removal" element={<Navigate to="/roof-cleaning" replace />} />
           
           {/* Old location page redirects */}
-          <Route path="/kenmore" element={<Navigate to="/service-areas" replace />} />
+          <Route path="/kenmore" element={<Navigate to="/kenmore-roof-gutter-cleaning" replace />} />
           <Route path="/bothell" element={<Navigate to="/bothell-roof-gutter-cleaning" replace />} />
           <Route path="/kirkland" element={<Navigate to="/kirkland-roof-gutter-cleaning" replace />} />
           <Route path="/seattle" element={<Navigate to="/seattle-roof-gutter-cleaning" replace />} />

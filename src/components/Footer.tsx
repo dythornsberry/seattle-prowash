@@ -7,8 +7,8 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   const serviceAreas = [
-    "Kenmore", "Bothell", "Kirkland", "Shoreline", "Woodinville", 
-    "Redmond", "Bellevue", "Mukilteo", "Mill Creek", "Lynnwood"
+    "Kenmore", "Bothell", "Lynnwood", "Kirkland", "Shoreline", 
+    "Woodinville", "Seattle", "Bellevue", "Redmond", "Mill Creek"
   ];
 
   const services = [
@@ -50,8 +50,9 @@ const Footer = () => {
                 <h2 className="text-2xl font-bold mb-2 text-white">
                   Seattle <span className="text-brand-orange">ProWash</span>
                 </h2>
+                <p className="text-sm text-brand-orange font-medium mb-2">Based in Kenmore, WA</p>
                 <p className="text-white/80 leading-relaxed">
-                  Trusted roof cleaning and gutter specialists serving Kenmore, Bothell, Kirkland and greater Seattle. Protecting Pacific Northwest homes with safe, effective moss removal and drainage solutions.
+                  Trusted roof cleaning and gutter specialists serving Kenmore, Bothell, Lynnwood, Kirkland, Shoreline and greater Seattle. Protecting Pacific Northwest homes with safe, effective moss removal and drainage solutions.
                 </p>
               </div>
               
@@ -119,7 +120,7 @@ const Footer = () => {
               <h3 className="text-lg font-bold mb-6 text-white">Service Areas</h3>
               <div className="space-y-2">
                 {serviceAreas.map((area, index) => {
-                  const cityPages = ["Kenmore", "Bothell", "Kirkland", "Bellevue", "Redmond", "Sammamish", "Woodinville"];
+                  const cityPages = ["Kenmore", "Bothell", "Lynnwood", "Kirkland", "Shoreline", "Woodinville", "Seattle"];
                   const isLinkable = cityPages.includes(area);
                   const linkPath = isLinkable ? `/${area.toLowerCase()}` : null;
                   
@@ -210,7 +211,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-center md:text-left">
               <p className="text-sm text-white/60 mb-1">
-                Licensed & Insured • Locally Owned • Serving Greater Seattle
+                Licensed & Insured • Based in Kenmore, WA • Serving Greater Seattle
               </p>
               <p className="text-sm text-white/60">
                 © {currentYear} Seattle ProWash. All rights reserved.
