@@ -29,7 +29,7 @@ const AsSeenOn = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <p className="text-sm text-gray-600 uppercase tracking-wider font-semibold mb-4">
-            Trusted by Seattle Homeowners Since 2008
+            Trusted by Seattle Homeowners Since 2022
           </p>
         </div>
         
