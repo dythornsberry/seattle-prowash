@@ -63,7 +63,7 @@ const Kenmore = () => {
     const breadcrumbSchema = generateBreadcrumbSchema([
       { name: "Home", url: "https://www.seattleprowash.com" },
       { name: "Service Areas", url: "https://www.seattleprowash.com/service-areas" },
-      { name: "Kenmore", url: "https://www.seattleprowash.com/service-areas/kenmore" }
+      { name: "Kenmore", url: "https://www.seattleprowash.com/kenmore-roof-gutter-cleaning" }
     ]);
     const cleanupBreadcrumb = injectSchema(breadcrumbSchema);
 
@@ -91,7 +91,7 @@ const Kenmore = () => {
       <SEOHead 
         title="Roof & Gutter Cleaning in Kenmore, WA"
         description="Expert roof cleaning, gutter cleaning, and moss removal in Kenmore, WA. Serving Kenmore Highlands, Moorlands, and all local neighborhoods. 12-month guarantee. Licensed & insured."
-        url="https://www.seattleprowash.com/service-areas/kenmore"
+        url="https://www.seattleprowash.com/kenmore-roof-gutter-cleaning"
       />
       <Header />
         

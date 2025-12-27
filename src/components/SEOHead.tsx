@@ -24,11 +24,11 @@ export const SEOHead = ({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       
-      {/* Geo-targeting meta tags */}
+      {/* Geo-targeting meta tags - Based in Kenmore, WA */}
       <meta name="geo.region" content="US-WA" />
-      <meta name="geo.placename" content="Seattle" />
-      <meta name="geo.position" content="47.7574;-122.2429" />
-      <meta name="ICBM" content="47.7574, -122.2429" />
+      <meta name="geo.placename" content="Kenmore" />
+      <meta name="geo.position" content="47.7574;-122.2465" />
+      <meta name="ICBM" content="47.7574, -122.2465" />
       
       {/* OpenGraph tags */}
       <meta property="og:title" content={fullTitle} />

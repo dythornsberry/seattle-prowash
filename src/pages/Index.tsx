@@ -121,7 +121,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="Seattle Roof & Gutter Cleaning Experts | Seattle ProWash"
-        description="Seattle's trusted roof and gutter cleaning experts. Safe moss removal with 12-month guarantee. Professional gutter cleaning and maintenance. Licensed, insured, and 100% satisfaction guaranteed."
+        description="Based in Kenmore, serving Bothell, Lynnwood, Kirkland, Shoreline & greater Seattle. Expert roof cleaning and gutter cleaning with 12-month moss-free guarantee. Licensed, insured, 100% satisfaction guaranteed."
         url="https://www.seattleprowash.com"
       />
       <div id="content-with-offset">
@@ -142,22 +142,22 @@ const Index = () => {
           </div>
           <HomeFAQ />
           <ServiceAreasSection 
-            title="Trusted Throughout Greater Seattle"
-            description="Professional roof cleaning and gutter cleaning services in Seattle and surrounding communities"
+            title="Based in Kenmore, Serving Greater Seattle"
+            description="Professional roof cleaning and gutter cleaning services from our home base in Kenmore to communities throughout the north end and greater Seattle"
             areas={[
-              { name: "Seattle", path: "/locations/seattle", description: "Seattle's roof and gutter cleaning experts" },
-              { name: "Bellevue", path: "/locations/bellevue", description: "Expert roof and gutter cleaning on the Eastside" },
-              { name: "Kirkland", path: "/locations/kirkland", description: "Waterfront property roof specialists" },
-              { name: "Redmond", path: "/locations/redmond", description: "Roof and gutter cleaning for Redmond homes" },
-              { name: "Sammamish", path: "/locations/sammamish", description: "Premium roof cleaning for luxury homes" },
-              { name: "Bothell", path: "/locations/bothell", description: "Northshore area roof and gutter experts" },
-              { name: "Woodinville", path: "/locations/woodinville", description: "Wine country roof care specialists" },
-              { name: "Kenmore", path: "/locations/kenmore", description: "Lake Washington roof and gutter services" },
-              { name: "Edmonds", path: "/locations/edmonds", description: "Coastal property roof specialists" },
-              { name: "Lynnwood", path: "/locations/lynnwood", description: "North Seattle metro roof and gutter cleaning" },
-              { name: "Shoreline", path: "/locations/shoreline", description: "Shoreline roof and gutter experts" },
-              { name: "Mill Creek", path: "/locations/mill-creek", description: "Mill Creek roof cleaning specialists" },
-              { name: "Mountlake Terrace", path: "/locations/mountlake-terrace", description: "Roof and gutter cleaning services" },
+              { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning", description: "Our home base – Lake Washington roof & gutter experts" },
+              { name: "Bothell", path: "/bothell-roof-gutter-cleaning", description: "Northshore area roof and gutter specialists" },
+              { name: "Lynnwood", path: "/lynnwood-roof-gutter-cleaning", description: "North Seattle metro roof and gutter cleaning" },
+              { name: "Kirkland", path: "/kirkland-roof-gutter-cleaning", description: "Waterfront property roof specialists" },
+              { name: "Shoreline", path: "/shoreline-roof-gutter-cleaning", description: "Shoreline roof and gutter experts" },
+              { name: "Woodinville", path: "/woodinville-roof-gutter-cleaning", description: "Wine country roof care specialists" },
+              { name: "Seattle", path: "/seattle-roof-gutter-cleaning", description: "Seattle's roof and gutter cleaning experts" },
+              { name: "Bellevue", path: "/service-areas", description: "Expert roof and gutter cleaning on the Eastside" },
+              { name: "Redmond", path: "/service-areas", description: "Roof and gutter cleaning for Redmond homes" },
+              { name: "Sammamish", path: "/service-areas", description: "Premium roof cleaning for luxury homes" },
+              { name: "Edmonds", path: "/service-areas", description: "Coastal property roof specialists" },
+              { name: "Mill Creek", path: "/service-areas", description: "Mill Creek roof cleaning specialists" },
+              { name: "Mountlake Terrace", path: "/service-areas", description: "Roof and gutter cleaning services" },
             ]}
           />
           <ServiceAreaMap />

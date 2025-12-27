@@ -239,14 +239,16 @@ export const COMPANY_INFO = {
     longitude: -122.2465
   },
   serviceAreas: [
-    "Seattle",
-    "Kenmore",
-    "Bothell",
-    "Kirkland",
-    "Bellevue",
-    "Redmond",
-    "Woodinville",
-    "Sammamish"
+    "Kenmore",      // Home base
+    "Bothell",      // High job volume
+    "Lynnwood",     // High job volume
+    "Kirkland",     // High job volume
+    "Shoreline",    // High job volume
+    "Woodinville",  // Secondary
+    "Seattle",      // Brand awareness
+    "Bellevue",     // Secondary
+    "Redmond",      // Secondary
+    "Sammamish"     // Secondary
   ],
   rating: {
     ratingValue: 4.9,
