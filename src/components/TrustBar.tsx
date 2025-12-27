@@ -6,7 +6,7 @@ const TrustBar = () => {
   const trustPoints = [
     {
       icon: Star,
-      text: "180+ 5-Star Reviews",
+      text: "194+ 5-Star Reviews",
       link: "https://www.google.com/search?q=Seattle+ProWash+reviews"
     },
     {

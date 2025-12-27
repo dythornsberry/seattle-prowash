@@ -46,7 +46,7 @@ const TrustSignalSection = () => {
             <span className="text-2xl font-bold text-gray-900">5.0</span>
           </div>
           <p className="text-xl text-gray-700 font-medium">
-            Based on 180+ Google Reviews
+            Based on 194+ Google Reviews
           </p>
           <a 
             href="https://g.page/r/CZ1YhG3KQ4_8EAE/review" 

@@ -172,7 +172,7 @@ const GutterCleaning = () => {
                   
                   {/* Mini Trust Line */}
                   <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
-                    4.9★ from 180+ neighbors • Licensed & Insured • Same-Day Estimates
+                    4.9★ from 194+ neighbors • Licensed & Insured • Same-Day Estimates
                   </p>
 
                   {/* 1-2-3 Process */}
@@ -201,7 +201,7 @@ const GutterCleaning = () => {
                   
                   {/* Trust Indicators */}
                   <p className="text-white/80 text-sm">
-                    ✓ 12-Month Guarantee  ✓ Same-Day Quotes  ✓ 180+ Reviews
+                    ✓ 12-Month Guarantee  ✓ Same-Day Quotes  ✓ 194+ Reviews
                   </p>
                 </div>
                 <div className="fade-up">

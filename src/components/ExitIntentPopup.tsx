@@ -96,7 +96,7 @@ const ExitIntentPopup = () => {
 
             {/* Subheading */}
             <p className="text-gray-700 text-lg mb-6">
-              <strong>Limited spots available this week.</strong> Get your free quote before it's too late.
+              <strong>Winter moisture accelerates moss growth.</strong> Every week you wait, the damage spreads. Get a free inspection before it's too late.
             </p>
 
             {/* Trust Signals */}
@@ -104,7 +104,7 @@ const ExitIntentPopup = () => {
               <div className="text-center">
                 <Star className="w-6 h-6 text-brand-orange mx-auto mb-1 fill-brand-orange" />
                 <div className="text-sm font-semibold text-gray-900">4.9★ Rating</div>
-                <div className="text-xs text-gray-600">180+ Reviews</div>
+                <div className="text-xs text-gray-600">194+ Reviews</div>
               </div>
               <div className="text-center">
                 <Shield className="w-6 h-6 text-brand-orange mx-auto mb-1" />

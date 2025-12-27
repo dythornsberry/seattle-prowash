@@ -63,7 +63,7 @@ const Footer = () => {
                   </div>
                   <span className="font-bold">5.0</span>
                 </div>
-                <p className="text-sm text-white/80">180+ Google Reviews</p>
+                <p className="text-sm text-white/80">194+ Google Reviews</p>
                 <Button 
                   variant="prowash-secondary" 
                   size="sm" 

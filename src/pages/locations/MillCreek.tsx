@@ -36,7 +36,7 @@ const MillCreek = () => {
       areaServed: ["Mill Creek"],
       rating: {
         ratingValue: 4.9,
-        reviewCount: 180
+        reviewCount: 194
       }
     });
 
