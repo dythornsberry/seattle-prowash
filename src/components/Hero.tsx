@@ -40,7 +40,7 @@ const Hero = () => {
 
           {/* Trust Line */}
           <p className="text-xl md:text-2xl text-white font-medium max-w-3xl mx-auto animate-fade-in mb-8 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-            <a href="/reviews" className="hover:text-brand-orange transition-colors">4.9★ from 180+ neighbors</a> • 12-Month Moss-Free Guarantee • Same-Day Estimates
+            <a href="/reviews" className="hover:text-brand-orange transition-colors">4.9★ from 194+ neighbors</a> • 12-Month Moss-Free Guarantee • Same-Day Estimates
           </p>
 
           {/* CTAs */}
@@ -63,7 +63,7 @@ const Hero = () => {
             </Button>
           </div>
           <p className="text-white text-sm md:text-base font-normal max-w-2xl mt-4 animate-fade-in drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
-            Fast quotes. Fair prices. Expert moss removal and gutter protection.
+            Winter is peak moss season. Fast quotes. Fair prices. Expert moss removal.
           </p>
         </div>
       </div>

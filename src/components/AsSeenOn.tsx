@@ -5,7 +5,7 @@ const AsSeenOn = () => {
     {
       icon: Award,
       title: "Award-Winning Service",
-      description: "180+ Five-Star Reviews"
+      description: "194+ Five-Star Reviews"
     },
     {
       icon: Building2,

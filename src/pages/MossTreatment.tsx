@@ -239,7 +239,7 @@ const MossTreatment = () => {
                   </Button>
                 </div>
                 <p className="text-sm text-gray-500 mt-4">
-                  Same-day estimates • Licensed & Insured • 180+ 5-star reviews
+                  Same-day estimates • Licensed & Insured • 194+ 5-star reviews
                 </p>
               </div>
             </div>

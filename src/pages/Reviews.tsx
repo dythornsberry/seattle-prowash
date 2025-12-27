@@ -15,7 +15,7 @@ const Reviews = () => {
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Read authentic customer reviews for Seattle ProWash roof and gutter cleaning services. 180+ five-star reviews from satisfied customers in Kenmore, Bothell, and Kirkland."
+        "Read authentic customer reviews for Seattle ProWash roof and gutter cleaning services. 194+ five-star reviews from satisfied customers in Kenmore, Bothell, and Kirkland."
       );
     }
     window.scrollTo(0, 0);
@@ -204,7 +204,7 @@ const Reviews = () => {
                 What Seattle Neighbors Say
               </h1>
               <p className="text-3xl md:text-4xl text-white mb-8">
-                <strong className="text-brand-orange">4.9★</strong> from <strong>180+ reviews</strong>
+                <strong className="text-brand-orange">4.9★</strong> from <strong>194+ reviews</strong>
               </p>
               <div className="flex justify-center gap-4">
                 <Button
@@ -322,7 +322,7 @@ const Reviews = () => {
                   onClick={() => window.open('https://g.page/r/CZ1YhG3KQ4_8EAE/review', '_blank')}
                 >
                   <ExternalLink className="w-5 h-5 mr-2" />
-                  Read All 180+ Reviews on Google
+                  Read All 194+ Reviews on Google
                 </Button>
               </div>
             </div>
@@ -337,7 +337,7 @@ const Reviews = () => {
                 Join Our Satisfied Customers
               </h2>
               <p className="text-xl text-white/90 mb-8">
-                Experience the same professional service that earned us 180+ five-star reviews
+                Experience the same professional service that earned us 194+ five-star reviews
               </p>
               <div className="flex justify-center gap-4">
                 <Button

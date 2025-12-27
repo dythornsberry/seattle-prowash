@@ -3,7 +3,7 @@ import { CheckCircle } from "lucide-react";
 const WhyChooseUs = () => {
   const reasons = [
     "Family-owned & operated in Kenmore",
-    "180+ five-star Google reviews",
+    "194+ five-star Google reviews",
     "12-month moss-free guarantee",
     "Licensed, bonded & insured",
     "Same-day quotes available"

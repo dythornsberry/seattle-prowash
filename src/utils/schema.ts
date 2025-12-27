@@ -228,15 +228,15 @@ export const COMPANY_INFO = {
   telephone: "206-752-6690",
   description: "Professional roof cleaning, gutter cleaning, and pressure washing services in the Greater Seattle area. Specializing in moss removal with a 12-month guarantee.",
   address: {
-    streetAddress: "123 Main St", // Update with actual address if available
-    addressLocality: "Seattle",
+    streetAddress: "6516 NE 192nd Pl",
+    addressLocality: "Kenmore",
     addressRegion: "WA",
-    postalCode: "98101",
+    postalCode: "98028",
     addressCountry: "US"
   },
   geo: {
     latitude: 47.7574,
-    longitude: -122.2429
+    longitude: -122.2465
   },
   serviceAreas: [
     "Seattle",
@@ -250,6 +250,6 @@ export const COMPANY_INFO = {
   ],
   rating: {
     ratingValue: 4.9,
-    reviewCount: 180
+    reviewCount: 194
   }
 };

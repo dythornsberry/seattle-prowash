@@ -37,7 +37,7 @@ const Shoreline = () => {
       areaServed: ["Shoreline"],
       rating: {
         ratingValue: 4.9,
-        reviewCount: 180
+        reviewCount: 194
       }
     });
 
