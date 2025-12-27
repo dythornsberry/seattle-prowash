@@ -47,7 +47,7 @@ const Bothell = () => {
     const businessSchema = generateLocalBusinessSchema({
       ...COMPANY_INFO,
       name: `${COMPANY_INFO.name} - Bothell`,
-      description: "Professional roof cleaning, gutter cleaning, and exterior washing services in Bothell, WA. Serving all Bothell neighborhoods including Canyon Park and Country Village. 12-month moss-free guarantee.",
+      description: "Professional roof cleaning and gutter cleaning services in Bothell, WA. Serving all Bothell neighborhoods including Canyon Park and Country Village. 12-month moss-free guarantee.",
       address: {
         ...COMPANY_INFO.address,
         addressLocality: "Bothell"
@@ -110,7 +110,7 @@ const Bothell = () => {
                   Premium Roof & Gutter Cleaning in Bothell
                 </h1>
                 <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
-                  Protecting Bothell's beautiful homes with expert moss treatment and exterior cleaning services
+                  Protecting Bothell's beautiful homes with expert moss treatment and gutter cleaning services
                 </p>
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <span className="bg-white/10 px-4 py-2 rounded-full">12-Month Moss-Free Guarantee</span>
@@ -214,27 +214,11 @@ const Bothell = () => {
                   </div>
 
                   <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">Commercial Services</h3>
+                    <h3 className="text-xl font-bold mb-4">Gutter Brightening</h3>
                     <p className="text-white/80 mb-4">
-                      Professional exterior cleaning for Bothell businesses, maintaining curb appeal and property value.
+                      Restore your gutters' appearance by removing oxidation stains and returning them to like-new condition.
                     </p>
-                    <div className="text-bright-orange font-semibold">Business Solutions</div>
-                  </div>
-
-                  <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">House Washing (Add-On)</h3>
-                    <p className="text-white/80 mb-4">
-                      Gentle washing techniques that safely clean siding, removing moss, algae, and years of accumulated grime.
-                    </p>
-                    <div className="text-bright-orange font-semibold">Gentle & Effective</div>
-                  </div>
-
-                  <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">Concrete Cleaning (Add-On)</h3>
-                    <p className="text-white/80 mb-4">
-                      Professional pressure washing for driveways, walkways, and patios throughout Bothell neighborhoods.
-                    </p>
-                    <div className="text-bright-orange font-semibold">Surface Restoration</div>
+                    <div className="text-bright-orange font-semibold">Like-New Appearance</div>
                   </div>
                 </div>
               </div>

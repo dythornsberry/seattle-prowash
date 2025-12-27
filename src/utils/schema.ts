@@ -226,7 +226,7 @@ export const COMPANY_INFO = {
   legalName: "Seattle ProWash LLC",
   url: "https://www.seattleprowash.com",
   telephone: "206-752-6690",
-  description: "Professional roof cleaning, gutter cleaning, and pressure washing services in the Greater Seattle area. Specializing in moss removal with a 12-month guarantee.",
+  description: "Professional roof cleaning and gutter cleaning services in the Greater Seattle area. Specializing in moss removal with a 12-month guarantee.",
   address: {
     streetAddress: "6516 NE 192nd Pl",
     addressLocality: "Kenmore",

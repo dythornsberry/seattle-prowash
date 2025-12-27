@@ -46,7 +46,7 @@ const Bellevue = () => {
     const businessSchema = generateLocalBusinessSchema({
       ...COMPANY_INFO,
       name: `${COMPANY_INFO.name} - Bellevue`,
-      description: "Professional roof cleaning, gutter cleaning, and exterior washing services in Bellevue, WA. Serving all Bellevue neighborhoods with expert moss removal and 12-month guarantee.",
+      description: "Professional roof cleaning and gutter cleaning services in Bellevue, WA. Serving all Bellevue neighborhoods with expert moss removal and 12-month guarantee.",
       address: {
         ...COMPANY_INFO.address,
         addressLocality: "Bellevue"
@@ -97,7 +97,7 @@ const Bellevue = () => {
                   Roof & Gutter Cleaning in Bellevue, WA
                 </h1>
                 <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
-                  Professional moss treatment and exterior cleaning services for Bellevue homeowners
+                  Professional moss treatment and gutter cleaning services for Bellevue homeowners
                 </p>
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <span className="bg-white/10 px-4 py-2 rounded-full">12-Month Moss-Free Guarantee</span>
@@ -171,7 +171,7 @@ const Bellevue = () => {
                     Comprehensive Cleaning Services for Bellevue Homes
                   </h2>
                   <p className="text-xl text-white/90 max-w-3xl mx-auto">
-                    From moss treatment to gutter cleaning, we provide complete exterior care for your Bellevue property.
+                    From moss treatment to gutter cleaning, we provide expert care for your Bellevue property.
                   </p>
                 </div>
 
@@ -206,22 +206,6 @@ const Bellevue = () => {
                       Restore your gutters' appearance by removing oxidation stains.
                     </p>
                     <div className="text-bright-orange font-semibold">Like-New Appearance</div>
-                  </div>
-
-                  <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">House Washing</h3>
-                    <p className="text-white/80 mb-4">
-                      Gentle exterior cleaning that removes algae, mildew, and dirt.
-                    </p>
-                    <div className="text-bright-orange font-semibold">Safe & Effective</div>
-                  </div>
-
-                  <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">Pressure Washing</h3>
-                    <p className="text-white/80 mb-4">
-                      Professional pressure washing for driveways, patios, and walkways.
-                    </p>
-                    <div className="text-bright-orange font-semibold">Concrete & Surfaces</div>
                   </div>
                 </div>
               </div>

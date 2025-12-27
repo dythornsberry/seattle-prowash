@@ -46,7 +46,7 @@ const Kenmore = () => {
     const businessSchema = generateLocalBusinessSchema({
       ...COMPANY_INFO,
       name: `${COMPANY_INFO.name} - Kenmore`,
-      description: "Professional roof cleaning, gutter cleaning, and exterior washing services in Kenmore, WA. Serving Kenmore Highlands, Moorlands, and all local neighborhoods. 12-month moss-free guarantee.",
+      description: "Professional roof cleaning and gutter cleaning services in Kenmore, WA. Serving Kenmore Highlands, Moorlands, and all local neighborhoods. 12-month moss-free guarantee.",
       address: {
         ...COMPANY_INFO.address,
         addressLocality: "Kenmore"
@@ -113,7 +113,7 @@ const Kenmore = () => {
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <span className="bg-white/10 px-4 py-2 rounded-full">12-Month Moss-Free Guarantee</span>
                   <span className="bg-white/10 px-4 py-2 rounded-full">Same-Day Estimates</span>
-                  <span className="bg-white/10 px-4 py-2 rounded-full">180+ 5-Star Reviews</span>
+                  <span className="bg-white/10 px-4 py-2 rounded-full">194+ 5-Star Reviews</span>
                 </div>
               </div>
             </div>
@@ -152,7 +152,7 @@ const Kenmore = () => {
                       </div>
                       <h3 className="text-xl font-bold mb-4 text-dark-teal">5-Star Service</h3>
                       <p className="text-gray-600">
-                        Over 180 satisfied customers across Kenmore and surrounding areas trust our professional service.
+                        Over 194 satisfied customers across Kenmore and surrounding areas trust our professional service.
                       </p>
                     </CardContent>
                   </Card>
@@ -217,22 +217,6 @@ const Kenmore = () => {
                       Restore your gutters' appearance by removing oxidation stains and returning them to like-new condition.
                     </p>
                     <div className="text-bright-orange font-semibold">Like-New Appearance</div>
-                  </div>
-
-                  <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">House Washing (Add-On)</h3>
-                    <p className="text-white/80 mb-4">
-                      Gentle yet effective exterior cleaning that removes algae, mildew, and dirt without damaging your home's surfaces.
-                    </p>
-                    <div className="text-bright-orange font-semibold">Safe & Effective</div>
-                  </div>
-
-                  <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">Pressure Washing (Add-On)</h3>
-                    <p className="text-white/80 mb-4">
-                      Professional pressure washing for driveways, patios, decks, and walkways around your Kenmore property.
-                    </p>
-                    <div className="text-bright-orange font-semibold">Concrete & Surfaces</div>
                   </div>
                 </div>
               </div>
@@ -315,7 +299,7 @@ const Kenmore = () => {
                     
                     <h3 className="text-xl font-bold mb-4">✓ Customer Satisfaction</h3>
                     <p className="text-white/90">
-                      Over 180 five-star reviews from satisfied customers across Kenmore and the greater Seattle area.
+                      Over 194 five-star reviews from satisfied customers across Kenmore and the greater Seattle area.
                     </p>
                   </div>
                 </div>
