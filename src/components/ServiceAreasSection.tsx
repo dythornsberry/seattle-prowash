@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 
 interface ServiceArea {
   name: string;
