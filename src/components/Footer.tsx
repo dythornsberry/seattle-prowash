@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Star } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-import { navigateToContact } from "@/lib/navigation";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,11 +8,6 @@ const Footer = () => {
   const serviceAreas = [
     "Kenmore", "Bothell", "Lynnwood", "Kirkland", "Shoreline", 
     "Woodinville", "Seattle", "Bellevue", "Redmond", "Mill Creek"
-  ];
-
-  const services = [
-    "Roof Cleaning",
-    "Gutter Cleaning"
   ];
 
   return (

@@ -7,7 +7,7 @@ import EnhancedTrustBar from "@/components/EnhancedTrustBar";
 import AsSeenOn from "@/components/AsSeenOn";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Droplet, Sparkles } from "lucide-react";
+import { Droplet, Sparkles } from "lucide-react";
 
 const Services = () => {
   useEffect(() => {
@@ -59,15 +59,15 @@ const Services = () => {
                   
                   <ul className="space-y-3 mb-6">
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                      <span className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0">✓</span>
                       <span className="text-muted-foreground">No high-pressure damage to shingles</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                      <span className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0">✓</span>
                       <span className="text-muted-foreground">Moss treatment at the root</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                      <span className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0">✓</span>
                       <span className="text-muted-foreground">Complete debris containment & cleanup</span>
                     </li>
                   </ul>
@@ -95,15 +95,15 @@ const Services = () => {
                   
                   <ul className="space-y-3 mb-6">
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                      <span className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0">✓</span>
                       <span className="text-muted-foreground">Hand removal of all debris</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                      <span className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0">✓</span>
                       <span className="text-muted-foreground">Downspout test & flush</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                      <span className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0">✓</span>
                       <span className="text-muted-foreground">Debris bagged & hauled away</span>
                     </li>
                   </ul>
