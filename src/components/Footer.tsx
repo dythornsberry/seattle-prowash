@@ -122,7 +122,7 @@ const Footer = () => {
                 {serviceAreas.map((area, index) => {
                   const cityPages = ["Kenmore", "Bothell", "Lynnwood", "Kirkland", "Shoreline", "Woodinville", "Seattle"];
                   const isLinkable = cityPages.includes(area);
-                  const linkPath = isLinkable ? `/${area.toLowerCase()}` : null;
+                  const linkPath = isLinkable ? `/${area.toLowerCase()}-roof-gutter-cleaning` : null;
                   
                   return isLinkable && linkPath ? (
                     <Link 
@@ -221,12 +221,6 @@ const Footer = () => {
               <Link to="/faq" className="text-white/60 hover:text-white transition-colors">
                 FAQ
               </Link>
-              <a href="#privacy" className="text-white/60 hover:text-white transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#terms" className="text-white/60 hover:text-white transition-colors">
-                Terms of Service
-              </a>
             </div>
           </div>
         </div>

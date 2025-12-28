@@ -117,11 +117,6 @@ const TwoStepQuoteForm = () => {
     }
   };
 
-  // Time-sensitive offer - expires in 7 days
-  const offerExpiry = new Date();
-  offerExpiry.setDate(offerExpiry.getDate() + 7);
-  const offerExpiryStr = offerExpiry.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-
   return (
     <section id="contact" className="section-spacing bg-off-white/50 scroll-mt-20">{/* Added scroll-mt for anchor */}
       <div className="container mx-auto px-4">

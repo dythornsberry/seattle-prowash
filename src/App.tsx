@@ -72,7 +72,7 @@ const App = () => (
           <Route path="/house-washing" element={<Navigate to="/roof-cleaning" replace />} />
           <Route path="/soft-wash" element={<Navigate to="/roof-cleaning" replace />} />
           <Route path="/window-cleaning" element={<Navigate to="/roof-cleaning" replace />} />
-          <Route path="/moss-treatment" element={<Navigate to="/roof-cleaning" replace />} />
+          <Route path="/moss-treatment" element={<MossTreatment />} />
           <Route path="/roof-moss" element={<Navigate to="/roof-cleaning" replace />} />
           <Route path="/roof-moss-removal" element={<Navigate to="/roof-cleaning" replace />} />
           
