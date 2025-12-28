@@ -311,17 +311,17 @@ const Bothell = () => {
                 </h2>
                 <div className="grid md:grid-cols-3 gap-6 mb-12">
                   <TestimonialCard 
-                    quote="Great and effective work on our house in Bothell. Would highly recommend"
+                    quote="Great and effective work on our roof in Bothell. Would highly recommend!"
                     author="Raoul Comaduran"
-                    service="House Wash"
+                    service="Roof Cleaning"
                   />
                   <TestimonialCard 
-                    quote="Seattle ProWash did an amazing job on my roof and house wash! They arrived on time, were very professional, and delivered great results. Highly recommend!"
+                    quote="Seattle ProWash did an amazing job on my roof! They arrived on time, were very professional, and delivered great results. Highly recommend!"
                     author="Sarcanean Denis"
-                    service="Roof & House Wash"
+                    service="Roof Cleaning"
                   />
                   <TestimonialCard 
-                    quote="Very nice and efficient! Also noticed my house gutters might need to be cleaned. Scheduled on the spot for this service, very convenient."
+                    quote="Very nice and efficient! Also noticed my gutters might need to be cleaned. Scheduled on the spot for this service, very convenient."
                     author="Amy Healy"
                     service="Roof & Gutter Cleaning"
                   />
