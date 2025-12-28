@@ -17,32 +17,6 @@ import MobileBottomBar from "@/components/MobileBottomBar";
 
 const Kirkland = () => {
   useEffect(() => {
-    document.title = "Roof & Gutter Cleaning in Kirkland, WA | Seattle ProWash";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content", 
-        "Expert roof & gutter cleaning in Kirkland, WA. Serving all neighborhoods: Juanita, Totem Lake, Houghton. 12-month moss-free guarantee. Licensed & insured. Same-day quotes."
-      );
-    }
-
-    // Add geographic meta tags for Kirkland
-    const addOrUpdateMetaTag = (name: string, content: string) => {
-      let meta = document.querySelector(`meta[name="${name}"]`);
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute('name', name);
-        document.head.appendChild(meta);
-      }
-      meta.setAttribute('content', content);
-    };
-
-    addOrUpdateMetaTag('geo.region', 'US-WA');
-    addOrUpdateMetaTag('geo.placename', 'Kirkland');
-    addOrUpdateMetaTag('geo.position', '47.6815;-122.2087');
-    addOrUpdateMetaTag('ICBM', '47.6815, -122.2087');
-
     // Inject LocalBusiness Schema for Kirkland
     const businessSchema = generateLocalBusinessSchema({
       ...COMPANY_INFO,

@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
 import heroImage from "@/assets/hero-roof-cleaning.jpg";
 import { navigateToContact } from "@/lib/navigation";
 

@@ -16,32 +16,6 @@ import MobileBottomBar from "@/components/MobileBottomBar";
 
 const Sammamish = () => {
   useEffect(() => {
-    document.title = "Roof & Gutter Cleaning in Sammamish, WA | Seattle ProWash";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content", 
-        "Expert roof & gutter cleaning in Sammamish, WA. Professional moss removal & prevention. 12-month moss-free guarantee. Licensed & insured. Same-day quotes."
-      );
-    }
-
-    // Add geographic meta tags for Sammamish
-    const addOrUpdateMetaTag = (name: string, content: string) => {
-      let meta = document.querySelector(`meta[name="${name}"]`);
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute('name', name);
-        document.head.appendChild(meta);
-      }
-      meta.setAttribute('content', content);
-    };
-
-    addOrUpdateMetaTag('geo.region', 'US-WA');
-    addOrUpdateMetaTag('geo.placename', 'Sammamish');
-    addOrUpdateMetaTag('geo.position', '47.6163;-122.0356');
-    addOrUpdateMetaTag('ICBM', '47.6163, -122.0356');
-
     // Inject LocalBusiness Schema for Sammamish
     const businessSchema = generateLocalBusinessSchema({
       ...COMPANY_INFO,

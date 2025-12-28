@@ -3,10 +3,9 @@ import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Phone, Shield, Clock, Leaf } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
-import { injectSchema } from "@/utils/schema";
 
 const FAQ = () => {
   // FAQ data array
