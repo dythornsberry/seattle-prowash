@@ -1,7 +1,7 @@
 import { useEffect } from "react";
+import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
 import MobileBottomBar from "@/components/MobileBottomBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -10,14 +10,6 @@ import { Star, Phone, ExternalLink, ShieldCheck } from "lucide-react";
 
 const Reviews = () => {
   useEffect(() => {
-    document.title = "Customer Reviews | Seattle ProWash";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Read authentic customer reviews for Seattle ProWash roof and gutter cleaning services. 194+ five-star reviews from satisfied customers in Kenmore, Bothell, and Kirkland."
-      );
-    }
     window.scrollTo(0, 0);
   }, []);
 
@@ -152,6 +144,11 @@ const Reviews = () => {
 
   return (
     <>
+      <SEOHead 
+        title="Customer Reviews"
+        description="Read 194+ authentic 5-star reviews for Seattle ProWash roof and gutter cleaning. Real testimonials from satisfied customers in Kenmore, Bothell, Kirkland, and Seattle."
+        url="https://www.seattleprowash.com/reviews"
+      />
       <Header />
       <main className="min-h-screen pt-24 md:pt-32">
         {/* Hero Section */}

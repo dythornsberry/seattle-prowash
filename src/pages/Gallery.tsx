@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GalleryFilters from "@/components/GalleryFilters";
@@ -293,6 +294,11 @@ const Gallery = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Before & After Gallery"
+        description="See real roof and gutter cleaning transformations from Seattle ProWash. Before and after photos from Kenmore, Bothell, Kirkland, and Seattle area homes."
+        url="https://www.seattleprowash.com/gallery"
+      />
       <Header />
       <main className="pt-16 md:pt-20">
         {/* Hero Section */}

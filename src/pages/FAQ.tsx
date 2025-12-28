@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -66,16 +67,8 @@ const FAQ = () => {
     }
   ];
 
-  // SEO meta tags and FAQ Schema
+  // Scroll to top on mount
   useEffect(() => {
-    document.title = "FAQ - Seattle ProWash | Roof & Gutter Cleaning Experts";
-    document.querySelector('meta[name="description"]')?.setAttribute(
-      "content", 
-      "Get answers to common questions about our roof cleaning and gutter cleaning services in Seattle. Learn about our process, guarantees, and more."
-    );
-    
-    
-    // Note: FAQ schema will be more complete after data is loaded
     window.scrollTo(0, 0);
   }, []);
 
@@ -161,6 +154,11 @@ const FAQ = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Frequently Asked Questions"
+        description="Get answers to common questions about Seattle ProWash roof and gutter cleaning. Learn about our process, moss treatment guarantee, pricing, and service areas."
+        url="https://www.seattleprowash.com/faq"
+      />
       <Header />
       <main className="pt-16 md:pt-20">
         {/* Hero Section */}

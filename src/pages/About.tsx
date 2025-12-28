@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -40,6 +41,11 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="About Dylan & Seattle ProWash"
+        description="Meet Dylan Thornsberry, owner of Seattle ProWash. Kenmore-based roof and gutter cleaning specialists serving Seattle Metro since 2022. 194+ 5-star reviews."
+        url="https://www.seattleprowash.com/about"
+      />
       <Header />
       <main className="pt-16 md:pt-20">
         {/* Hero Section */}
@@ -198,7 +204,7 @@ const About = () => {
                 <CardContent className="p-6 text-center">
                   <CheckCircle className="w-12 h-12 text-brand-orange mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-brand-navy mb-3">A Flawless Finish, Guaranteed</h3>
-                  <p className="text-muted-foreground">Our gentle house washing cleans completely without risking damage to your property.</p>
+                  <p className="text-muted-foreground">Our gentle soft-wash method cleans completely without risking damage to your roof or gutters.</p>
                 </CardContent>
               </Card>
 
@@ -282,12 +288,12 @@ const About = () => {
                   <div className="relative rounded-2xl overflow-hidden shadow-xl">
                     <img
                       src={technicianHousWashing}
-                      alt="Professional technician house washing"
+                      alt="Professional technician performing roof cleaning"
                       className="w-full h-80 object-cover"
                     />
                     <div className="absolute bottom-4 left-4 bg-brand-navy/90 text-white px-4 py-2 rounded-lg">
-                      <div className="font-semibold">Teamwork on House Wash</div>
-                      <div className="text-sm">House Washing Experts</div>
+                      <div className="font-semibold">Team at Work</div>
+                      <div className="text-sm">Roof & Gutter Cleaning Experts</div>
                     </div>
                   </div>
                 </div>
