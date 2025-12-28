@@ -5,42 +5,21 @@ import { Badge } from "@/components/ui/badge";
 import { Check, Shield, Clock, Award } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
+import { SEOHead } from "@/components/SEOHead";
 import MobileBottomBar from "@/components/MobileBottomBar";
 
 const MossTreatment = () => {
   useEffect(() => {
-    document.title = "Professional Roof Moss Treatment | Seattle ProWash";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content", 
-        "Expert roof moss treatment in Seattle, Bothell, Kirkland. 12-month moss-free guarantee. Safe removal & prevention. Licensed & insured. Same-day quotes available."
-      );
-    }
-
-    // Add geographic meta tags for local SEO
-    const addOrUpdateMetaTag = (name: string, content: string) => {
-      let meta = document.querySelector(`meta[name="${name}"]`);
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute('name', name);
-        document.head.appendChild(meta);
-      }
-      meta.setAttribute('content', content);
-    };
-
-    addOrUpdateMetaTag('geo.region', 'US-WA');
-    addOrUpdateMetaTag('geo.placename', 'Seattle');
-    addOrUpdateMetaTag('geo.position', '47.7574;-122.2429');
-    addOrUpdateMetaTag('ICBM', '47.7574, -122.2429');
-
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Professional Roof Moss Treatment"
+        description="Expert roof moss treatment in Seattle, Bothell, Kirkland. 12-month moss-free guarantee. Safe removal & prevention. Licensed & insured. Same-day quotes available."
+        url="https://www.seattleprowash.com/moss-treatment"
+      />
       <Header />
         
         <main className="pt-16 md:pt-20">
