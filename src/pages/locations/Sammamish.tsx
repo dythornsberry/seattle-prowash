@@ -209,19 +209,11 @@ const Sammamish = () => {
                   </div>
 
                   <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">House Washing</h3>
+                    <h3 className="text-xl font-bold mb-4">Gutter Guards</h3>
                     <p className="text-white/80 mb-4">
-                      Gentle exterior cleaning that removes algae, mildew, and dirt.
+                      We can recommend trusted partners for gutter guard installation.
                     </p>
-                    <div className="text-bright-orange font-semibold">Safe & Effective</div>
-                  </div>
-
-                  <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">Pressure Washing</h3>
-                    <p className="text-white/80 mb-4">
-                      Professional pressure washing for driveways, patios, and walkways.
-                    </p>
-                    <div className="text-bright-orange font-semibold">Concrete & Surfaces</div>
+                    <div className="text-bright-orange font-semibold">Partner Referrals</div>
                   </div>
                 </div>
               </div>
