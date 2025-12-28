@@ -80,7 +80,7 @@ const App = () => (
           <Route path="/kenmore" element={<Navigate to="/kenmore-roof-gutter-cleaning" replace />} />
           <Route path="/locations/kenmore" element={<Navigate to="/kenmore-roof-gutter-cleaning" replace />} />
           <Route path="/bothell" element={<Navigate to="/bothell-roof-gutter-cleaning" replace />} />
-          <Route path="/locations/bothell" element={<Navigate to="/locations/bothell" replace />} />
+          <Route path="/locations/bothell" element={<Navigate to="/bothell-roof-gutter-cleaning" replace />} />
           <Route path="/kirkland" element={<Navigate to="/kirkland-roof-gutter-cleaning" replace />} />
           <Route path="/locations/kirkland" element={<Navigate to="/kirkland-roof-gutter-cleaning" replace />} />
           <Route path="/seattle" element={<Navigate to="/seattle-roof-gutter-cleaning" replace />} />
