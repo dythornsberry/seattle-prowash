@@ -19,7 +19,7 @@ const MountlakeTerrace = () => {
 
     const localBusinessSchema = generateLocalBusinessSchema({
       name: "Seattle ProWash - Mountlake Terrace",
-      description: "Professional roof cleaning, moss removal, gutter cleaning, and pressure washing services in Mountlake Terrace, WA",
+      description: "Professional roof cleaning, moss removal, and gutter cleaning services in Mountlake Terrace, WA",
       url: "https://seattleprowash.com/mountlake-terrace",
       telephone: COMPANY_INFO.telephone,
       address: {
@@ -56,16 +56,16 @@ const MountlakeTerrace = () => {
       service: "Gutter Cleaning"
     },
     {
-      quote: "The pressure washing transformed our driveway and patio. It looks brand new! Very impressed with their work in Mountlake Terrace.",
+      quote: "The roof cleaning transformed our home's appearance. It looks brand new! Very impressed with their work in Mountlake Terrace.",
       author: "Kevin P.",
-      service: "Pressure Washing"
+      service: "Roof Cleaning"
     }
   ];
 
   const localFAQs = [
     {
       question: "Do you provide services throughout Mountlake Terrace?",
-      answer: "Yes! We provide comprehensive roof cleaning, gutter cleaning, and pressure washing services throughout all of Mountlake Terrace and surrounding neighborhoods."
+      answer: "Yes! We provide comprehensive roof cleaning and gutter cleaning services throughout all of Mountlake Terrace and surrounding neighborhoods."
     },
     {
       question: "How often should I clean my roof in Mountlake Terrace?",
@@ -80,8 +80,8 @@ const MountlakeTerrace = () => {
   return (
     <>
       <SEOHead 
-        title="Roof Cleaning & Pressure Washing Mountlake Terrace WA"
-        description="Professional roof cleaning, moss removal & pressure washing in Mountlake Terrace. Expert exterior cleaning services with 5-star reviews. Free quotes. Call (206) 508-4090"
+        title="Roof Cleaning & Gutter Cleaning Mountlake Terrace WA"
+        description="Professional roof cleaning, moss removal & gutter cleaning in Mountlake Terrace. Expert exterior cleaning services with 5-star reviews. Free quotes. Call (206) 752-6690"
       />
 
       <div className="min-h-screen flex flex-col">
@@ -93,10 +93,10 @@ const MountlakeTerrace = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl">
                 <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                  Professional Roof Cleaning & Pressure Washing in Mountlake Terrace, WA
+                  Professional Roof & Gutter Cleaning in Mountlake Terrace, WA
                 </h1>
                 <p className="text-xl mb-8 text-gray-100">
-                  Expert exterior cleaning services for Mountlake Terrace homes. From roof moss removal to gutter cleaning and pressure washing.
+                  Expert roof cleaning and gutter cleaning services for Mountlake Terrace homes. Specializing in moss removal with our 12-month guarantee.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -109,10 +109,10 @@ const MountlakeTerrace = () => {
                   <Button 
                     size="lg" 
                     variant="prowash-outline"
-                    onClick={() => window.location.href = 'tel:+12065084090'}
+                    onClick={() => window.location.href = 'tel:+12067526690'}
                   >
                     <Phone className="mr-2 h-5 w-5" />
-                    (206) 508-4090
+                    (206) 752-6690
                   </Button>
                 </div>
               </div>
@@ -144,9 +144,9 @@ const MountlakeTerrace = () => {
                 </Card>
                 <Card>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3 text-brand-navy">Pressure Washing</h3>
+                    <h3 className="text-xl font-semibold mb-3 text-brand-navy">Moss Treatment</h3>
                     <p className="text-muted-foreground">
-                      Expert pressure washing for driveways, patios, siding, and all exterior surfaces around your Mountlake Terrace property.
+                      Professional moss treatment with our 12-month moss-free guarantee. Protect your Mountlake Terrace roof from damage.
                     </p>
                   </CardContent>
                 </Card>
@@ -205,7 +205,7 @@ const MountlakeTerrace = () => {
                 <Button 
                   size="lg" 
                   variant="prowash-outline"
-                  onClick={() => window.location.href = 'tel:+12065084090'}
+                  onClick={() => window.location.href = 'tel:+12067526690'}
                 >
                   <Phone className="mr-2 h-5 w-5" />
                   Call Now

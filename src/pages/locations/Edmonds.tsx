@@ -19,7 +19,7 @@ const Edmonds = () => {
 
     const localBusinessSchema = generateLocalBusinessSchema({
       name: "Seattle ProWash - Edmonds",
-      description: "Professional roof cleaning, moss removal, gutter cleaning, and pressure washing services in Edmonds, WA",
+      description: "Professional roof cleaning, moss removal, and gutter cleaning services in Edmonds, WA",
       url: "https://seattleprowash.com/edmonds",
       telephone: COMPANY_INFO.telephone,
       address: {
@@ -56,9 +56,9 @@ const Edmonds = () => {
       service: "Moss Removal"
     },
     {
-      quote: "Professional service from start to finish. Our driveway and walkway look brand new. Best pressure washing company in Edmonds!",
+      quote: "Professional service from start to finish. Our gutters were completely clogged and now they work perfectly. Best gutter cleaning company in Edmonds!",
       author: "Lisa M.",
-      service: "Pressure Washing"
+      service: "Gutter Cleaning"
     }
   ];
 
@@ -80,8 +80,8 @@ const Edmonds = () => {
   return (
     <>
       <SEOHead 
-        title="Roof Cleaning & Pressure Washing Edmonds WA"
-        description="Professional roof cleaning, moss removal & pressure washing in Edmonds. Expert exterior cleaning services with 5-star reviews. Free quotes. Call (206) 508-4090"
+        title="Roof Cleaning & Gutter Cleaning Edmonds WA"
+        description="Professional roof cleaning, moss removal & gutter cleaning in Edmonds. Expert exterior cleaning services with 5-star reviews. Free quotes. Call (206) 752-6690"
       />
 
       <div className="min-h-screen flex flex-col">
@@ -93,7 +93,7 @@ const Edmonds = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl">
                 <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                  Professional Roof Cleaning & Pressure Washing in Edmonds, WA
+                  Professional Roof & Gutter Cleaning in Edmonds, WA
                 </h1>
                 <p className="text-xl mb-8 text-gray-100">
                   Expert exterior cleaning services for Edmonds waterfront and hillside homes. Specializing in roof moss removal and coastal property care.
@@ -109,10 +109,10 @@ const Edmonds = () => {
                   <Button 
                     size="lg" 
                     variant="prowash-outline"
-                    onClick={() => window.location.href = 'tel:+12065084090'}
+                    onClick={() => window.location.href = 'tel:+12067526690'}
                   >
                     <Phone className="mr-2 h-5 w-5" />
-                    (206) 508-4090
+                    (206) 752-6690
                   </Button>
                 </div>
               </div>
@@ -144,9 +144,9 @@ const Edmonds = () => {
                 </Card>
                 <Card>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3 text-brand-navy">Pressure Washing</h3>
+                    <h3 className="text-xl font-semibold mb-3 text-brand-navy">Moss Treatment</h3>
                     <p className="text-muted-foreground">
-                      Expert pressure washing for driveways, patios, decks, and siding throughout Edmonds, including waterfront properties.
+                      Professional moss treatment with our 12-month moss-free guarantee. Perfect for Edmonds coastal homes.
                     </p>
                   </CardContent>
                 </Card>
@@ -205,7 +205,7 @@ const Edmonds = () => {
                 <Button 
                   size="lg" 
                   variant="prowash-outline"
-                  onClick={() => window.location.href = 'tel:+12065084090'}
+                  onClick={() => window.location.href = 'tel:+12067526690'}
                 >
                   <Phone className="mr-2 h-5 w-5" />
                   Call Now

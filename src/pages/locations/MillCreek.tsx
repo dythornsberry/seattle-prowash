@@ -19,7 +19,7 @@ const MillCreek = () => {
 
     const localBusinessSchema = generateLocalBusinessSchema({
       name: "Seattle ProWash - Mill Creek",
-      description: "Professional roof cleaning, moss removal, gutter cleaning, and pressure washing services in Mill Creek, WA",
+      description: "Professional roof cleaning, moss removal, and gutter cleaning services in Mill Creek, WA",
       url: "https://seattleprowash.com/mill-creek",
       telephone: COMPANY_INFO.telephone,
       address: {
@@ -65,7 +65,7 @@ const MillCreek = () => {
   const localFAQs = [
     {
       question: "Do you service all of Mill Creek?",
-      answer: "Yes! We provide complete roof cleaning, gutter cleaning, and pressure washing services throughout Mill Creek, including Country Club, North Creek, and all surrounding neighborhoods."
+      answer: "Yes! We provide complete roof cleaning and gutter cleaning services throughout Mill Creek, including Country Club, North Creek, and all surrounding neighborhoods."
     },
     {
       question: "What makes Mill Creek homes vulnerable to moss?",
@@ -80,8 +80,8 @@ const MillCreek = () => {
   return (
     <>
       <SEOHead 
-        title="Roof Cleaning & Pressure Washing Mill Creek WA"
-        description="Professional roof cleaning, moss removal & pressure washing in Mill Creek. Expert exterior cleaning services with 5-star reviews. Free quotes. Call (206) 508-4090"
+        title="Roof Cleaning & Gutter Cleaning Mill Creek WA"
+        description="Professional roof cleaning, moss removal & gutter cleaning in Mill Creek. Expert exterior cleaning services with 5-star reviews. Free quotes. Call (206) 752-6690"
       />
 
       <div className="min-h-screen flex flex-col">
@@ -93,10 +93,10 @@ const MillCreek = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl">
                 <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                  Professional Roof Cleaning & Pressure Washing in Mill Creek, WA
+                  Professional Roof & Gutter Cleaning in Mill Creek, WA
                 </h1>
                 <p className="text-xl mb-8 text-gray-100">
-                  Expert exterior cleaning services for Mill Creek homes. Specializing in roof moss removal, gutter cleaning, and pressure washing.
+                  Expert roof cleaning and gutter cleaning services for Mill Creek homes. Specializing in moss removal with our 12-month guarantee.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -109,10 +109,10 @@ const MillCreek = () => {
                   <Button 
                     size="lg" 
                     variant="prowash-outline"
-                    onClick={() => window.location.href = 'tel:+12065084090'}
+                    onClick={() => window.location.href = 'tel:+12067526690'}
                   >
                     <Phone className="mr-2 h-5 w-5" />
-                    (206) 508-4090
+                    (206) 752-6690
                   </Button>
                 </div>
               </div>
@@ -144,9 +144,9 @@ const MillCreek = () => {
                 </Card>
                 <Card>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3 text-brand-navy">Pressure Washing</h3>
+                    <h3 className="text-xl font-semibold mb-3 text-brand-navy">Moss Treatment</h3>
                     <p className="text-muted-foreground">
-                      Professional pressure washing for driveways, patios, siding, decks, and all exterior surfaces throughout Mill Creek.
+                      Professional moss treatment with our 12-month moss-free guarantee. Prevent roof damage from Mill Creek's wet climate.
                     </p>
                   </CardContent>
                 </Card>
@@ -205,7 +205,7 @@ const MillCreek = () => {
                 <Button 
                   size="lg" 
                   variant="prowash-outline"
-                  onClick={() => window.location.href = 'tel:+12065084090'}
+                  onClick={() => window.location.href = 'tel:+12067526690'}
                 >
                   <Phone className="mr-2 h-5 w-5" />
                   Call Now

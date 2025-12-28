@@ -228,7 +228,7 @@ const Redmond = () => {
                   <TestimonialCard 
                     quote="Dylan was very professional, responsive and took the time to explain the soft wash processes."
                     author="Emmanuell Sevieux"
-                    service="House Soft Wash"
+                    service="Roof Soft Wash"
                   />
                   <TestimonialCard 
                     quote="Very professional and very smooth process right from the start. Highly recommend their service."
