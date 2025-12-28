@@ -317,7 +317,7 @@ const TwoStepQuoteForm = () => {
                       </Button>
 
                       <p className="text-center text-muted-foreground text-sm">
-                        180+ ⭐⭐⭐⭐⭐ Reviews  •  12-Month Guarantee  •  Licensed & Insured
+                        194+ ⭐⭐⭐⭐⭐ Reviews  •  12-Month Guarantee  •  Licensed & Insured
                       </p>
                     </form>
                   </Form>

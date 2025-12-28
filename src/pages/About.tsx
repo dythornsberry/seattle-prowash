@@ -105,7 +105,7 @@ const About = () => {
                       <div className="text-sm text-muted-foreground">Properties Restored</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-brand-orange mb-2">180+</div>
+                      <div className="text-3xl font-bold text-brand-orange mb-2">194+</div>
                       <div className="text-sm text-muted-foreground">5-Star Google Reviews</div>
                     </div>
                     <div className="text-center">

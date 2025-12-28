@@ -78,12 +78,19 @@ const App = () => (
           
           {/* Old location page redirects */}
           <Route path="/kenmore" element={<Navigate to="/kenmore-roof-gutter-cleaning" replace />} />
+          <Route path="/locations/kenmore" element={<Navigate to="/kenmore-roof-gutter-cleaning" replace />} />
           <Route path="/bothell" element={<Navigate to="/bothell-roof-gutter-cleaning" replace />} />
+          <Route path="/locations/bothell" element={<Navigate to="/locations/bothell" replace />} />
           <Route path="/kirkland" element={<Navigate to="/kirkland-roof-gutter-cleaning" replace />} />
+          <Route path="/locations/kirkland" element={<Navigate to="/kirkland-roof-gutter-cleaning" replace />} />
           <Route path="/seattle" element={<Navigate to="/seattle-roof-gutter-cleaning" replace />} />
+          <Route path="/locations/seattle" element={<Navigate to="/seattle-roof-gutter-cleaning" replace />} />
           <Route path="/shoreline" element={<Navigate to="/shoreline-roof-gutter-cleaning" replace />} />
+          <Route path="/locations/shoreline" element={<Navigate to="/shoreline-roof-gutter-cleaning" replace />} />
           <Route path="/lynnwood" element={<Navigate to="/lynnwood-roof-gutter-cleaning" replace />} />
+          <Route path="/locations/lynnwood" element={<Navigate to="/lynnwood-roof-gutter-cleaning" replace />} />
           <Route path="/woodinville" element={<Navigate to="/woodinville-roof-gutter-cleaning" replace />} />
+          <Route path="/locations/woodinville" element={<Navigate to="/woodinville-roof-gutter-cleaning" replace />} />
           <Route path="/bellevue" element={<Navigate to="/service-areas" replace />} />
           <Route path="/redmond" element={<Navigate to="/service-areas" replace />} />
           <Route path="/sammamish" element={<Navigate to="/service-areas" replace />} />

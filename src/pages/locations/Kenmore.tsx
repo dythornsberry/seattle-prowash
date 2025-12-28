@@ -321,9 +321,9 @@ const Kenmore = () => {
                     service="Roof Cleaning"
                   />
                   <TestimonialCard 
-                    quote="If you are looking for Pressure washing or Christmas Lights Installation Services in Kenmore and nearby cities, look no further; call Seattle ProWash instead. They will assist you with excellent service."
+                    quote="If you are looking for roof or gutter cleaning services in Kenmore and nearby cities, look no further; call Seattle ProWash instead. Excellent service."
                     author="Thang Tuang"
-                    service="Pressure Washing"
+                    service="Roof & Gutter Cleaning"
                   />
                   <TestimonialCard 
                     quote="Thank you for a good job cleaning my roof and gutter today Dylan. Will definitely contact you again for future services! Highly recommend: can't beat price!"
@@ -371,7 +371,7 @@ const Kenmore = () => {
                   Ready to Protect Your Kenmore Home?
                 </h2>
                 <p className="text-xl text-white/90 mb-8">
-                  Join 180+ satisfied customers. Get your free estimate today and see why Kenmore homeowners trust Seattle ProWash.
+                  Join 194+ satisfied customers. Get your free estimate today and see why Kenmore homeowners trust Seattle ProWash.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -397,7 +397,7 @@ const Kenmore = () => {
                   <span>✓ Same-day estimates</span>
                   <span>✓ Licensed & Insured</span>
                   <span>✓ 12-month moss-free guarantee</span>
-                  <span>✓ 180+ 5-star reviews</span>
+                  <span>✓ 194+ 5-star reviews</span>
                 </div>
               </div>
             </div>
