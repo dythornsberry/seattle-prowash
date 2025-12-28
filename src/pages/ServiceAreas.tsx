@@ -6,7 +6,7 @@ import { MapPin, Phone, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
+import { SEOHead } from "@/components/SEOHead";
 import MobileBottomBar from "@/components/MobileBottomBar";
 
 const ServiceAreas = () => {
@@ -15,24 +15,31 @@ const ServiceAreas = () => {
   }, []);
 
   const serviceAreas = [
-    { name: "Bellevue", path: "/bellevue", featured: true },
-    { name: "Bothell", path: "/bothell", featured: true },
-    { name: "Kenmore", path: "/kenmore", featured: true },
-    { name: "Kirkland", path: "/kirkland", featured: true },
-    { name: "Redmond", path: "/redmond", featured: true },
-    { name: "Sammamish", path: "/sammamish", featured: true },
-    { name: "Woodinville", path: "/woodinville", featured: true },
-    { name: "Lynnwood", path: null, featured: false },
+    { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning", featured: true },
+    { name: "Bothell", path: "/bothell-roof-gutter-cleaning", featured: true },
+    { name: "Kirkland", path: "/kirkland-roof-gutter-cleaning", featured: true },
+    { name: "Woodinville", path: "/woodinville-roof-gutter-cleaning", featured: true },
+    { name: "Lynnwood", path: "/lynnwood-roof-gutter-cleaning", featured: true },
+    { name: "Shoreline", path: "/shoreline-roof-gutter-cleaning", featured: true },
+    { name: "Seattle", path: "/seattle-roof-gutter-cleaning", featured: true },
+    { name: "Bellevue", path: null, featured: false },
+    { name: "Redmond", path: null, featured: false },
+    { name: "Sammamish", path: null, featured: false },
     { name: "Mill Creek", path: null, featured: false },
     { name: "Mukilteo", path: null, featured: false },
     { name: "North Seattle", path: null, featured: false },
-    { name: "Seattle", path: null, featured: false },
-    { name: "Shoreline", path: null, featured: false },
     { name: "Snohomish", path: null, featured: false },
+    { name: "Edmonds", path: null, featured: false },
+    { name: "Mountlake Terrace", path: null, featured: false },
   ].sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Service Areas - Roof & Gutter Cleaning Near You"
+        description="Seattle ProWash serves the greater Seattle metro area including Kenmore, Bothell, Kirkland, Lynnwood, Shoreline, and surrounding communities. Professional roof and gutter cleaning within 15 miles of Kenmore."
+        url="https://www.seattleprowash.com/service-areas"
+      />
       <Header />
       
       <main className="pt-16 md:pt-20">

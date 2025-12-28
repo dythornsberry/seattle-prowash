@@ -5,7 +5,7 @@ import { Calendar, Clock, ArrowLeft, AlertTriangle } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
+import { SEOHead } from "@/components/SEOHead";
 import MobileBottomBar from "@/components/MobileBottomBar";
 
 const GutterCleaningSafetyTips = () => {
@@ -16,6 +16,11 @@ const GutterCleaningSafetyTips = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Safety Tips When Cleaning Gutters"
+        description="Essential safety tips for gutter cleaning. Learn proper equipment, techniques, and when to call professionals. Avoid common hazards and protect yourself."
+        url="https://www.seattleprowash.com/resources/gutter-cleaning-safety-tips"
+      />
       <Header />
         
         <main className="pt-16 md:pt-20">

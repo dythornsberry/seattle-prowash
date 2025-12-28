@@ -5,7 +5,7 @@ import { Calendar, Clock, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
+import { SEOHead } from "@/components/SEOHead";
 import MobileBottomBar from "@/components/MobileBottomBar";
 
 const PreventMossAlgaeGrowth = () => {
@@ -16,6 +16,11 @@ const PreventMossAlgaeGrowth = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="How to Prevent Moss and Algae Growth on Your Roof"
+        description="Discover proven strategies to prevent moss and algae growth on Pacific Northwest roofs. Professional tips for protecting your home's value and extending roof life."
+        url="https://www.seattleprowash.com/resources/prevent-moss-algae-growth"
+      />
       <Header />
         
         <main className="pt-16 md:pt-20">
