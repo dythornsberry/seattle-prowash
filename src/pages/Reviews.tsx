@@ -6,7 +6,7 @@ import MobileBottomBar from "@/components/MobileBottomBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Star, Phone, ExternalLink, ShieldCheck } from "lucide-react";
+import { Star, ExternalLink, ShieldCheck } from "lucide-react";
 
 const Reviews = () => {
   useEffect(() => {
