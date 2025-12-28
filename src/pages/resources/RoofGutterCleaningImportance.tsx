@@ -5,7 +5,7 @@ import { Calendar, Clock, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
+import { SEOHead } from "@/components/SEOHead";
 import MobileBottomBar from "@/components/MobileBottomBar";
 
 const RoofGutterCleaningImportance = () => {
@@ -16,6 +16,11 @@ const RoofGutterCleaningImportance = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Why Regular Roof and Gutter Cleaning Matters"
+        description="Learn why regular roof and gutter maintenance is essential for Pacific Northwest homes. Prevent water damage, extend roof life, and save on energy costs."
+        url="https://www.seattleprowash.com/resources/roof-gutter-cleaning-importance"
+      />
       <Header />
         
         <main className="pt-16 md:pt-20">
