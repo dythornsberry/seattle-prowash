@@ -24,15 +24,6 @@ import { navigateToContact } from "@/lib/navigation";
 
 const RoofCleaning = () => {
   useEffect(() => {
-    document.title = "Roof Cleaning in Kenmore, Bothell, and Kirkland | Seattle ProWash";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content", 
-        "Professional roof moss removal & cleaning in Seattle, Bothell, Kirkland. No pressure, safe methods. 12-month moss-free guarantee. Licensed & insured. Same-day quotes available."
-      );
-    }
 
     // Inject Service Schema
     const serviceSchema = generateServiceSchema({
