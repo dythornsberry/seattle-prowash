@@ -32,7 +32,7 @@ const ServiceAreasSection = ({
         <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
           {areas.map((area) => (
             <Link 
-              key={area.path} 
+              key={`${area.name}-${area.path}`} 
               to={area.path}
               className="group"
             >

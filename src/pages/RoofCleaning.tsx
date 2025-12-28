@@ -417,18 +417,18 @@ const RoofCleaning = () => {
           title="Roof Cleaning Service Areas"
           description="Professional roof cleaning and moss treatment across the Greater Seattle area"
           areas={[
-            { name: "Seattle", path: "/locations/seattle" },
-            { name: "Bellevue", path: "/locations/bellevue" },
-            { name: "Kirkland", path: "/locations/kirkland" },
-            { name: "Redmond", path: "/locations/redmond" },
-            { name: "Bothell", path: "/locations/bothell" },
-            { name: "Kenmore", path: "/locations/kenmore" },
-            { name: "Woodinville", path: "/locations/woodinville" },
-            { name: "Sammamish", path: "/locations/sammamish" },
-            { name: "Lynnwood", path: "/locations/lynnwood" },
-            { name: "Shoreline", path: "/locations/shoreline" },
-            { name: "Edmonds", path: "/locations/edmonds" },
-            { name: "Mill Creek", path: "/locations/mill-creek" }
+            { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning" },
+            { name: "Bothell", path: "/bothell-roof-gutter-cleaning" },
+            { name: "Lynnwood", path: "/lynnwood-roof-gutter-cleaning" },
+            { name: "Kirkland", path: "/kirkland-roof-gutter-cleaning" },
+            { name: "Shoreline", path: "/shoreline-roof-gutter-cleaning" },
+            { name: "Seattle", path: "/seattle-roof-gutter-cleaning" },
+            { name: "Woodinville", path: "/woodinville-roof-gutter-cleaning" },
+            { name: "Bellevue", path: "/service-areas" },
+            { name: "Redmond", path: "/service-areas" },
+            { name: "Sammamish", path: "/service-areas" },
+            { name: "Edmonds", path: "/service-areas" },
+            { name: "Mill Creek", path: "/service-areas" }
           ]}
         />
 
