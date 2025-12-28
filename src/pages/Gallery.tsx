@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import GalleryFilters from "@/components/GalleryFilters";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Expand, X } from "lucide-react";
@@ -269,7 +268,7 @@ const Gallery = () => {
 
   const getFilteredImages = () => {
     if (activeCategory === "All") {
-      const roofImages = galleryImages["Roof Cleaning & Moss Removal"] || [];
+      const roofImages = galleryImages["Roof Cleaning"] || [];
       const gutterImages = galleryImages["Gutter Cleaning"] || [];
       const teamImages = galleryImages["Team at Work"] || [];
       
@@ -289,7 +288,7 @@ const Gallery = () => {
       
       return interspersedImages;
     }
-    return galleryImages[activeCategory] || [];
+    return galleryImages[activeCategory as keyof typeof galleryImages] || [];
   };
 
   return (
