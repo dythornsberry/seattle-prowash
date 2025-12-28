@@ -17,7 +17,7 @@ const Lynnwood = () => {
 
     const localBusinessSchema = generateLocalBusinessSchema({
       name: "Seattle ProWash - Lynnwood",
-      description: "Professional roof cleaning, moss removal, gutter cleaning, and pressure washing services in Lynnwood, WA",
+      description: "Professional roof cleaning, moss removal, and gutter cleaning services in Lynnwood, WA",
       url: "https://seattleprowash.com/lynnwood",
       telephone: COMPANY_INFO.telephone,
       address: {
@@ -49,9 +49,9 @@ const Lynnwood = () => {
       service: "Roof Cleaning"
     },
     {
-      quote: "Our driveway and patio hadn't been cleaned in years. The transformation was incredible! Highly recommend their services to all Lynnwood homeowners.",
+      quote: "The gutter cleaning was thorough and they even cleaned up after themselves. Very impressed with the attention to detail!",
       author: "Robert T.",
-      service: "Pressure Washing"
+      service: "Gutter Cleaning"
     },
     {
       quote: "Fast, efficient, and excellent results. They removed years of moss buildup from our roof. Great service in the Lynnwood area!",
@@ -63,7 +63,7 @@ const Lynnwood = () => {
   const localFAQs = [
     {
       question: "Do you service all areas of Lynnwood?",
-      answer: "Yes! We provide comprehensive roof cleaning, gutter cleaning, and pressure washing services throughout all of Lynnwood, including neighborhoods near Alderwood Mall, Martha Lake, and surrounding areas."
+      answer: "Yes! We provide comprehensive roof cleaning and gutter cleaning services throughout all of Lynnwood, including neighborhoods near Alderwood Mall, Martha Lake, and surrounding areas."
     },
     {
       question: "How often should Lynnwood homes get roof cleaning?",
@@ -78,8 +78,8 @@ const Lynnwood = () => {
   return (
     <>
       <SEOHead 
-        title="Roof Cleaning & Pressure Washing Lynnwood WA"
-        description="Professional roof cleaning, moss removal & pressure washing in Lynnwood. Expert exterior cleaning services with 5-star reviews. Free quotes. Call (206) 508-4090"
+        title="Roof & Gutter Cleaning Lynnwood WA"
+        description="Professional roof cleaning, moss removal & gutter cleaning in Lynnwood. Expert exterior cleaning services with 5-star reviews. Free quotes. Call (206) 752-6690"
       />
 
       <div className="min-h-screen flex flex-col">
@@ -92,10 +92,10 @@ const Lynnwood = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl">
                 <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                  Professional Roof Cleaning & Pressure Washing in Lynnwood, WA
+                  Professional Roof & Gutter Cleaning in Lynnwood, WA
                 </h1>
                 <p className="text-xl mb-8 text-gray-100">
-                  Expert exterior cleaning services for Lynnwood homes. From roof moss removal to pressure washing, we keep your property looking its best.
+                  Expert roof cleaning and gutter cleaning services for Lynnwood homes. We keep your property protected and looking its best.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -108,10 +108,10 @@ const Lynnwood = () => {
                   <Button 
                     size="lg" 
                     variant="prowash-outline"
-                    onClick={() => window.location.href = 'tel:+12065084090'}
+                    onClick={() => window.location.href = 'tel:+12067526690'}
                   >
                     <Phone className="mr-2 h-5 w-5" />
-                    (206) 508-4090
+                    (206) 752-6690
                   </Button>
                 </div>
               </div>
@@ -124,12 +124,12 @@ const Lynnwood = () => {
               <h2 className="text-3xl font-bold text-brand-navy mb-8 text-center">
                 Our Lynnwood Services
               </h2>
-              <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <Card>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3 text-brand-navy">Roof Cleaning</h3>
+                    <h3 className="text-xl font-semibold mb-3 text-brand-navy">Roof Cleaning & Moss Treatment</h3>
                     <p className="text-muted-foreground">
-                      Professional soft washing to safely remove moss, algae, and debris from your Lynnwood roof without damage.
+                      Professional soft washing to safely remove moss, algae, and debris from your Lynnwood roof without damage. Includes 12-month moss-free guarantee.
                     </p>
                   </CardContent>
                 </Card>
@@ -138,14 +138,6 @@ const Lynnwood = () => {
                     <h3 className="text-xl font-semibold mb-3 text-brand-navy">Gutter Cleaning</h3>
                     <p className="text-muted-foreground">
                       Complete gutter cleaning and maintenance to prevent water damage and ensure proper drainage year-round.
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3 text-brand-navy">Pressure Washing</h3>
-                    <p className="text-muted-foreground">
-                      Expert pressure washing for driveways, patios, siding, and all exterior surfaces around your Lynnwood property.
                     </p>
                   </CardContent>
                 </Card>
@@ -192,14 +184,14 @@ const Lynnwood = () => {
                 >
                   Get Free Quote
                 </Button>
-                <Button 
-                  size="lg" 
-                  variant="prowash-outline"
-                  onClick={() => window.location.href = 'tel:+12065084090'}
-                >
-                  <Phone className="mr-2 h-5 w-5" />
-                  Call Now
-                </Button>
+                  <Button 
+                    size="lg" 
+                    variant="prowash-outline"
+                    onClick={() => window.location.href = 'tel:+12067526690'}
+                  >
+                    <Phone className="mr-2 h-5 w-5" />
+                    (206) 752-6690
+                  </Button>
               </div>
             </div>
           </section>

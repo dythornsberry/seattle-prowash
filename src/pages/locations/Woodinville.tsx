@@ -177,53 +177,21 @@ const Woodinville = () => {
                   </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
                   <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">Roof Moss Treatment</h3>
+                    <h3 className="text-xl font-bold mb-4">Roof Cleaning & Moss Treatment</h3>
                     <p className="text-white/80 mb-4">
-                      Specialized moss treatment that kills existing growth and prevents regrowth for 12 months.
+                      Specialized moss treatment that kills existing growth and prevents regrowth for 12 months. Gentle roof cleaning that removes stains and algae safely.
                     </p>
                     <div className="text-bright-orange font-semibold">12-Month Guarantee</div>
                   </div>
 
                   <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">Gutter Cleaning</h3>
+                    <h3 className="text-xl font-bold mb-4">Gutter Cleaning & Brightening</h3>
                     <p className="text-white/80 mb-4">
-                      Complete gutter cleaning and inspection to protect your home from water damage.
+                      Complete gutter cleaning, inspection, and brightening to protect your home from water damage and restore like-new appearance.
                     </p>
                     <div className="text-bright-orange font-semibold">Debris Removal & Inspection</div>
-                  </div>
-
-                  <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">Roof Cleaning</h3>
-                    <p className="text-white/80 mb-4">
-                      Gentle roof cleaning that removes stains and algae without pressure washing damage.
-                    </p>
-                    <div className="text-bright-orange font-semibold">Shingle-Safe Method</div>
-                  </div>
-
-                  <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">Gutter Brightening</h3>
-                    <p className="text-white/80 mb-4">
-                      Restore your gutters' appearance by removing oxidation stains.
-                    </p>
-                    <div className="text-bright-orange font-semibold">Like-New Appearance</div>
-                  </div>
-
-                  <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">House Washing</h3>
-                    <p className="text-white/80 mb-4">
-                      Gentle exterior cleaning that removes algae, mildew, and dirt.
-                    </p>
-                    <div className="text-bright-orange font-semibold">Safe & Effective</div>
-                  </div>
-
-                  <div className="text-center">
-                    <h3 className="text-xl font-bold mb-4">Pressure Washing</h3>
-                    <p className="text-white/80 mb-4">
-                      Professional pressure washing for driveways, patios, and walkways.
-                    </p>
-                    <div className="text-bright-orange font-semibold">Concrete & Surfaces</div>
                   </div>
                 </div>
               </div>
