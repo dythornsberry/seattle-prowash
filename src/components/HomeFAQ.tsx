@@ -10,19 +10,6 @@ import { useEffect } from "react";
 import { generateFAQSchema, injectSchema } from "@/utils/schema";
 
 const HomeFAQ = () => {
-  // Inject FAQ Schema for SEO
-  useEffect(() => {
-    const faqData = topFAQs.map(faq => ({
-      question: faq.question,
-      answer: faq.answer
-    }));
-
-    const schema = generateFAQSchema({ faqs: faqData });
-    const cleanup = injectSchema(schema);
-
-    return cleanup;
-  }, []);
-
   const topFAQs = [
     {
       question: "What does roof or gutter cleaning cost?",
@@ -61,6 +48,19 @@ const HomeFAQ = () => {
       cta: false
     }
   ];
+
+  // Inject FAQ Schema for SEO
+  useEffect(() => {
+    const faqData = topFAQs.map(faq => ({
+      question: faq.question,
+      answer: faq.answer
+    }));
+
+    const schema = generateFAQSchema({ faqs: faqData });
+    const cleanup = injectSchema(schema);
+
+    return cleanup;
+  }, []);
 
   return (
     <section className="py-16 md:py-20 bg-background">

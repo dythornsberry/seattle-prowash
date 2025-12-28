@@ -21,15 +21,6 @@ import { navigateToContact } from "@/lib/navigation";
 
 const GutterCleaning = () => {
   useEffect(() => {
-    document.title = "Gutter Cleaning and Downspout Flushing | Seattle ProWash";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content", 
-        "Expert gutter cleaning & downspout flushing in Seattle, Bothell, Kirkland. Hand-cleaned, roof debris removal, photos included. Licensed & insured. Same-day estimates."
-      );
-    }
 
     // Inject Service Schema
     const serviceSchema = generateServiceSchema({
@@ -104,34 +95,6 @@ const GutterCleaning = () => {
     };
   }, []);
 
-  const whatYouGet = [
-    "Hand-scoop all leaves and debris to restore proper water flow",
-    "Flush downspouts to ensure drainage works perfectly",
-    "Remove all debris from your property, no mess left behind",
-    "Clean visible drips from fascia to improve your home's appearance",
-    "Receive completion photos showing the work was done right"
-  ];
-
-  const addOns = [
-    "Minor gutter reseals where accessible",
-    "Gutter brightening for black streaks",
-    "Roof blow-off if requested"
-  ];
-
-  const faqs = [
-    {
-      question: "Do you work from the roof or ladders?",
-      answer: "We choose the safest method for the home and conditions."
-    },
-    {
-      question: "Can you unclog underground drains?",
-      answer: "If a line is blocked underground we'll advise options."
-    },
-    {
-      question: "Do you clean up after?",
-      answer: "Yes. We leave the site tidy."
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-background">
