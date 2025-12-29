@@ -174,8 +174,9 @@ const Footer = () => {
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-brand-orange flex-shrink-0 mt-1" />
                   <div>
-                    <p className="text-sm">Kenmore, WA</p>
-                    <p className="text-xs text-white/60">Licensed & Insured</p>
+                    <p className="text-sm font-medium">6516 NE 192nd Pl</p>
+                    <p className="text-sm">Kenmore, WA 98028</p>
+                    <p className="text-xs text-white/60 mt-1">Licensed & Insured</p>
                   </div>
                 </div>
               </div>
