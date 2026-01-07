@@ -274,7 +274,7 @@ const Reviews = () => {
                 <Button
                   variant="cta-orange"
                   size="lg"
-                  onClick={() => window.open('https://g.page/r/CZ1YhG3KQ4_8EAE/review', '_blank')}
+                  onClick={() => window.open('https://g.page/r/CZ1YhG3KQ4_8EAE/review', '_blank', 'noopener,noreferrer')}
                 >
                   <ExternalLink className="w-5 h-5 mr-2" />
                   Read All 194+ Reviews on Google
