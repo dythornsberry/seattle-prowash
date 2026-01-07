@@ -42,7 +42,7 @@ const GutterCleaningSafetyTips = () => {
                     </div>
                     <div className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
-                      January 5, 2024
+                      December 5, 2025
                     </div>
                   </div>
                 </div>

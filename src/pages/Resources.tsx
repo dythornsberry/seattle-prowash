@@ -22,7 +22,7 @@ const Resources = () => {
       excerpt: "Discover how regular maintenance protects your Pacific Northwest home from water damage, extends roof life, and saves thousands in repairs. Learn why Seattle ProWash recommends annual cleaning for optimal protection.",
       category: "Maintenance",
       readTime: "5 min read",
-      date: "2024-01-15"
+      date: "2025-12-15"
     },
     {
       id: "prevent-moss-algae-growth",
@@ -30,7 +30,7 @@ const Resources = () => {
       excerpt: "Pacific Northwest homes face unique challenges with moss and algae. Learn proven prevention strategies, treatment options, and why professional moss removal is essential for long-term roof health.",
       category: "Prevention",
       readTime: "7 min read", 
-      date: "2024-01-10"
+      date: "2025-12-10"
     },
     {
       id: "gutter-cleaning-safety-tips",
@@ -38,7 +38,7 @@ const Resources = () => {
       excerpt: "Gutter cleaning can be dangerous without proper precautions. Our safety experts share essential tips for DIY maintenance and explain when it's time to call the professionals for your safety.",
       category: "Safety",
       readTime: "4 min read",
-      date: "2024-01-05"
+      date: "2025-12-05"
     }
   ];
 
