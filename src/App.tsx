@@ -16,6 +16,10 @@ import MossTreatment from "./pages/MossTreatment";
 import Reviews from "./pages/Reviews";
 import ServiceAreas from "./pages/ServiceAreas";
 import Services from "./pages/Services";
+import Resources from "./pages/Resources";
+import RoofGutterCleaningImportance from "./pages/resources/RoofGutterCleaningImportance";
+import PreventMossAlgaeGrowth from "./pages/resources/PreventMossAlgaeGrowth";
+import GutterCleaningSafetyTips from "./pages/resources/GutterCleaningSafetyTips";
 
 // City location pages - primary cities (Kenmore is home base)
 import KenmoreLocation from "./pages/locations/Kenmore";
@@ -61,6 +65,12 @@ const App = () => (
           <Route path="/faq" element={<FAQ />} />
           <Route path="/about" element={<About />} />
           <Route path="/gallery" element={<Gallery />} />
+          
+          {/* Resources pages */}
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/resources/roof-gutter-cleaning-importance" element={<RoofGutterCleaningImportance />} />
+          <Route path="/resources/prevent-moss-algae-growth" element={<PreventMossAlgaeGrowth />} />
+          <Route path="/resources/gutter-cleaning-safety-tips" element={<GutterCleaningSafetyTips />} />
           
           {/* 308 Permanent redirects for deprecated/old routes */}
           <Route path="/services/roof-cleaning" element={<Navigate to="/roof-cleaning" replace />} />
