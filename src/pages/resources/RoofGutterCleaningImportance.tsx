@@ -42,7 +42,7 @@ const RoofGutterCleaningImportance = () => {
                     </div>
                     <div className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
-                      January 15, 2024
+                      December 15, 2025
                     </div>
                   </div>
                 </div>

@@ -23,7 +23,8 @@ const Hero = () => {
           width={1920}
           height={1080}
           loading="eager"
-          fetchPriority="high"
+          // @ts-expect-error React doesn't recognize fetchpriority but it's valid HTML
+          fetchpriority="high"
           decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>

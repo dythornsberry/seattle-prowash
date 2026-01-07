@@ -9,7 +9,7 @@ import { CheckCircle, Award, Users, Calendar } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
 import dylanOwnerPhoto from "@/assets/dylan-owner-patio-pressure-washing.jpg";
 import dylanRoofWork from "@/assets/dylan-roof-work.jpg";
-import technicianHousWashing from "@/assets/technician-house-washing.jpg";
+import technicianHouseWashing from "@/assets/technician-house-washing.jpg";
 import technicianTruckPortrait from "@/assets/technician-truck-portrait.jpg";
 
 const About = () => {
@@ -287,7 +287,7 @@ const About = () => {
                 <div className="fade-up">
                   <div className="relative rounded-2xl overflow-hidden shadow-xl">
                     <img
-                      src={technicianHousWashing}
+                      src={technicianHouseWashing}
                       alt="Professional technician performing roof cleaning"
                       className="w-full h-80 object-cover"
                     />
