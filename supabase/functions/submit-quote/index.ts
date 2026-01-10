@@ -110,16 +110,16 @@ Deno.serve(async (req: Request) => {
 
     if (contentType.includes("application/json")) {
       payload = await req.json();
-    } else if (contentType.includes("application/x-www-form-urlencoded")) {
+    } else if (contentType.includes("application/x-www-form-urlencoded") || contentType.includes("multipart/form-data")) {
       const formData = await req.formData();
       payload = Object.fromEntries(formData.entries());
     } else {
-      // Try to parse as FormData for no-cors form submissions
+      // For other content types, try to parse as text/JSON
+      const text = await req.text();
       try {
-        const formData = await req.formData();
-        payload = Object.fromEntries(formData.entries());
+        payload = JSON.parse(text);
       } catch {
-        payload = { raw: await req.text() };
+        payload = { raw: text };
       }
     }
 
