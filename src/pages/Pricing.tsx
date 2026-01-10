@@ -113,11 +113,11 @@ const Pricing = () => {
                     </div>
                     <div className="flex items-center gap-2 text-sm">
                       <CheckCircle className="w-4 h-4 text-green-600" />
-                      <span>Safe, low-pressure cleaning</span>
+                      <span>Moss treatment included to prevent regrowth</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm">
                       <CheckCircle className="w-4 h-4 text-green-600" />
-                      <span>Preventive treatment included</span>
+                      <span>Safe, low-pressure cleaning</span>
                     </div>
                   </div>
 
