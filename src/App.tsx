@@ -13,6 +13,7 @@ import NotFound from "./pages/NotFound";
 import RoofCleaning from "./pages/RoofCleaning";
 import GutterCleaning from "./pages/GutterCleaning";
 import MossTreatment from "./pages/MossTreatment";
+import Pricing from "./pages/Pricing";
 import Reviews from "./pages/Reviews";
 import ServiceAreas from "./pages/ServiceAreas";
 import Services from "./pages/Services";
@@ -46,6 +47,7 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/roof-cleaning" element={<RoofCleaning />} />
           <Route path="/gutter-cleaning" element={<GutterCleaning />} />
+          <Route path="/pricing" element={<Pricing />} />
           
           {/* Service areas hub */}
           <Route path="/service-areas" element={<ServiceAreas />} />

@@ -39,6 +39,7 @@ const Header = () => {
   
   const navigation: NavigationItem[] = [
     { name: "Home", href: "/", onClick: goHome },
+    { name: "Pricing", href: "/pricing" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/#contact", onClick: goToContact }
   ];
