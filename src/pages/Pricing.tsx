@@ -6,7 +6,7 @@ import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
-import { Phone, CheckCircle, Droplet, Home, Ruler, Mountain, TreePine, Calendar } from "lucide-react";
+import { Phone, CheckCircle, Droplet, Home, Ruler, Mountain, TreePine } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
 
 const Pricing = () => {
@@ -80,7 +80,7 @@ const Pricing = () => {
                     Roof Cleaning
                   </CardTitle>
                   <CardDescription className="text-base">
-                    Professional moss removal with 12-month guarantee
+                    Complete service: moss removal, treatment & gutter cleaning
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
@@ -109,11 +109,15 @@ const Pricing = () => {
                   <div className="space-y-2 pt-4 border-t">
                     <div className="flex items-center gap-2 text-sm">
                       <CheckCircle className="w-4 h-4 text-green-600" />
-                      <span>12-month moss-free guarantee</span>
+                      <span>Gutter cleaning included</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm">
                       <CheckCircle className="w-4 h-4 text-green-600" />
-                      <span>Moss treatment included to prevent regrowth</span>
+                      <span>Moss treatment to prevent regrowth</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm">
+                      <CheckCircle className="w-4 h-4 text-green-600" />
+                      <span>12-month moss-free guarantee</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm">
                       <CheckCircle className="w-4 h-4 text-green-600" />
@@ -187,31 +191,6 @@ const Pricing = () => {
           </div>
         </section>
 
-        {/* Bundle Savings */}
-        <section className="py-16 md:py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <Badge className="bg-green-100 text-green-700 border-green-200 mb-4">
-                <Calendar className="w-4 h-4 mr-1" />
-                Bundle & Save
-              </Badge>
-              <h2 className="text-2xl md:text-4xl font-bold text-brand-blue mb-6">
-                Combine Services for Better Value
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Most homeowners choose to clean their roof and gutters together. When you bundle services, you save on overall costs and we can address your entire drainage system in one visit.
-              </p>
-              <div className="bg-brand-navy/5 rounded-2xl p-8 mb-8">
-                <p className="text-xl font-semibold text-brand-blue mb-2">Typical Bundle Range</p>
-                <p className="text-4xl font-bold text-brand-orange mb-2">$700 – $1,500</p>
-                <p className="text-muted-foreground">Roof cleaning + gutter cleaning together</p>
-              </div>
-              <Button variant="cta-orange" size="xl" onClick={navigateToContact}>
-                Get My Free Quote →
-              </Button>
-            </div>
-          </div>
-        </section>
 
         {/* Why Free Quotes */}
         <section className="py-16 md:py-20 bg-brand-navy text-white">
