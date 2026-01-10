@@ -6,7 +6,7 @@ import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
-import { Phone, CheckCircle, Droplet, Home, Ruler, Mountain, TreePine } from "lucide-react";
+import { Phone, CheckCircle, Droplet, Home, Ruler, Mountain, TreePine, Star } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
 
 const Pricing = () => {
@@ -71,7 +71,13 @@ const Pricing = () => {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {/* Roof Cleaning Card */}
-              <Card className="border-2 hover:border-brand-orange/50 transition-all duration-300 hover:shadow-xl">
+              <Card className="border-2 border-brand-orange/50 hover:border-brand-orange transition-all duration-300 hover:shadow-xl relative overflow-hidden">
+                <div className="absolute top-4 right-4">
+                  <Badge className="bg-green-600 text-white border-green-600 font-semibold">
+                    <Star className="w-3 h-3 mr-1 fill-current" />
+                    Best Value
+                  </Badge>
+                </div>
                 <CardHeader className="text-center pb-4">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-orange/10 rounded-full mb-4 mx-auto">
                     <Droplet className="w-8 h-8 text-brand-orange" />
@@ -107,9 +113,9 @@ const Pricing = () => {
                   </div>
 
                   <div className="space-y-2 pt-4 border-t">
-                    <div className="flex items-center gap-2 text-sm">
+                    <div className="flex items-center gap-2 text-sm font-semibold text-green-700">
                       <CheckCircle className="w-4 h-4 text-green-600" />
-                      <span>Gutter cleaning included</span>
+                      <span>✓ Gutter cleaning included</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm">
                       <CheckCircle className="w-4 h-4 text-green-600" />
