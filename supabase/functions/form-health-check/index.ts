@@ -33,12 +33,13 @@ async function testFormSubmission(): Promise<HealthCheckResult> {
   }
 
   const testPayload = {
-    name: "HEALTH_CHECK_TEST",
-    address: "Health Check - Please Ignore",
-    phone: "(000) 000-0000",
-    services: "Health Check Test",
+    name: "Dylan Thornsberry [WEEKLY TEST]",
+    email: "dythornsberry@gmail.com",
+    address: "6516 NE 192nd Place, Kenmore, WA 98028",
+    phone: "(206) 752-6690",
+    services: "Weekly Form Test - Please Ignore",
     timestamp: new Date().toISOString(),
-    source: "Automated Health Check",
+    source: "Weekly Health Check",
     business_name: "Seattle ProWash",
   };
 
