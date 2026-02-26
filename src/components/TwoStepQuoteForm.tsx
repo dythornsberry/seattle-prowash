@@ -13,7 +13,7 @@ import { supabase } from "@/integrations/supabase/client";
 const formSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
   email: z.string().trim().email("Valid email is required").max(255),
-  address: z.string().trim().min(1, "Address is required").max(300),
+  address: z.string().trim().min(10, "Please enter your full street address").max(300),
   phone: z.string().trim().max(20).refine((val) => {
     const digits = val.replace(/\D/g, '');
     if (digits.length !== 10) return false;
