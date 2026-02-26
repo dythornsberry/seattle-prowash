@@ -14,7 +14,17 @@ const formSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
   email: z.string().trim().email("Valid email is required").max(255),
   address: z.string().trim().min(1, "Address is required").max(300),
-  phone: z.string().trim().min(10, "Valid phone number is required").max(20),
+  phone: z.string().trim().max(20).refine((val) => {
+    const digits = val.replace(/\D/g, '');
+    if (digits.length !== 10) return false;
+    // Reject all-same-digit numbers (e.g. 1111111111)
+    if (/^(\d)\1{9}$/.test(digits)) return false;
+    // Reject 555 exchange (classic fake numbers)
+    if (digits.slice(3, 6) === '555') return false;
+    // Reject numbers starting with 0 or 1 (invalid US area codes)
+    if (digits[0] === '0' || digits[0] === '1') return false;
+    return true;
+  }, { message: "Please enter a valid 10-digit phone number" }),
   services: z.array(z.string()).min(1, "Please select at least one service"),
   company: z.string().max(0, "Invalid submission"), // honeypot
 });
