@@ -1,9 +1,16 @@
 // submit-quote edge function: proxies quote submissions to Zapier + sends email notification
+// Also saves every lead to the database as a backup
 // Uses secrets: ZAPIER_WEBHOOK_URL, RESEND_API_KEY
 
 import { Resend } from "npm:resend@2.0.0";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+
+const supabaseAdmin = createClient(
+  Deno.env.get("SUPABASE_URL")!,
+  Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+);
 
 const corsHeaders: Record<string, string> = {
   "Access-Control-Allow-Origin": "*",
@@ -142,6 +149,32 @@ Deno.serve(async (req: Request) => {
     // Skip health check test submissions for email notifications
     const isHealthCheck = body.name === "HEALTH_CHECK_TEST";
 
+    // Save lead to database FIRST (backup before Zapier)
+    let leadId: string | null = null;
+    try {
+      const { data: leadData, error: leadError } = await supabaseAdmin
+        .from("leads")
+        .insert({
+          name: body.name,
+          email: body.email || null,
+          phone: body.phone || null,
+          address: body.address || null,
+          services: body.details || null,
+          source: body.source,
+        })
+        .select("id")
+        .single();
+
+      if (leadError) {
+        console.error("Failed to save lead to database:", leadError);
+      } else {
+        leadId = leadData.id;
+        console.log("Lead saved to database:", leadId);
+      }
+    } catch (dbError) {
+      console.error("Database error saving lead:", dbError);
+    }
+
     // Run Zapier and Email in parallel for speed
     const [zapierResult, emailResult] = await Promise.all([
       forwardToZapier(body),
@@ -151,10 +184,26 @@ Deno.serve(async (req: Request) => {
     console.log("Zapier result:", zapierResult);
     console.log("Email result:", emailResult);
 
+    // Update lead record with delivery status
+    if (leadId) {
+      try {
+        await supabaseAdmin
+          .from("leads")
+          .update({
+            zapier_sent: zapierResult.ok === true,
+            email_sent: emailResult.sent === true,
+          })
+          .eq("id", leadId);
+      } catch (updateErr) {
+        console.error("Failed to update lead status:", updateErr);
+      }
+    }
+
     return new Response(JSON.stringify({ 
       ok: true, 
       status: zapierResult.status,
-      emailSent: emailResult.sent 
+      emailSent: emailResult.sent,
+      leadSaved: !!leadId,
     }), {
       status: 200,
       headers: { "Content-Type": "application/json", ...corsHeaders },
