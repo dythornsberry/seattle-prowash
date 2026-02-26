@@ -1,4 +1,5 @@
-import { useState } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useState, useRef, useEffect, useCallback } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -46,7 +47,46 @@ const TwoStepQuoteForm = () => {
     },
   });
 
-  // Phone formatting
+  // Google Places Autocomplete
+  const addressInputRef = useRef<HTMLInputElement | null>(null);
+  const autocompleteRef = useRef<any>(null);
+
+  const initAutocomplete = useCallback(() => {
+    if (!addressInputRef.current || autocompleteRef.current) return;
+    const g = (window as any).google;
+    if (!g?.maps?.places) return;
+
+    const autocomplete = new g.maps.places.Autocomplete(addressInputRef.current, {
+      types: ['address'],
+      componentRestrictions: { country: 'us' },
+      fields: ['formatted_address'],
+    });
+
+    autocomplete.addListener('place_changed', () => {
+      const place = autocomplete.getPlace();
+      if (place?.formatted_address) {
+        form.setValue('address', place.formatted_address, { shouldValidate: true });
+      }
+    });
+
+    autocompleteRef.current = autocomplete;
+  }, [form]);
+
+  useEffect(() => {
+    const g = (window as any).google;
+    if (g?.maps?.places) {
+      initAutocomplete();
+    } else {
+      const checkInterval = setInterval(() => {
+        if ((window as any).google?.maps?.places) {
+          initAutocomplete();
+          clearInterval(checkInterval);
+        }
+      }, 500);
+      return () => clearInterval(checkInterval);
+    }
+  }, [initAutocomplete]);
+
   const formatPhoneNumber = (value: string) => {
     const cleaned = value.replace(/\D/g, '');
     if (cleaned.length <= 3) return cleaned;
@@ -212,10 +252,14 @@ const TwoStepQuoteForm = () => {
                             <FormLabel className="text-brand-navy font-semibold">Address *</FormLabel>
                             <FormControl>
                               <Input
-                                placeholder="Your address"
+                                placeholder="Start typing your address..."
                                 className="border-brand-navy/30 focus:border-brand-orange min-h-[56px] text-lg md:text-sm md:min-h-[48px] rounded-xl"
-                                autoComplete="street-address"
+                                autoComplete="off"
                                 {...field}
+                                ref={(el) => {
+                                  field.ref(el);
+                                  addressInputRef.current = el;
+                                }}
                               />
                             </FormControl>
                             <FormMessage />
