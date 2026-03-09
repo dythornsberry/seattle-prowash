@@ -90,9 +90,12 @@ const ServicesPreview = () => {
           </p>
         </div>
 
-        {/* Part A: Featured Image Grid */}
-        <div className="grid md:grid-cols-2 gap-4 lg:gap-6 mb-16 max-w-6xl mx-auto">
-          {featuredServices.map((service, index) => (
+        {/* Part A: Featured Image Grid - 3 on top, 2 on bottom */}
+        <div className="grid md:grid-cols-3 gap-4 lg:gap-6 mb-16 max-w-6xl mx-auto">
+          {featuredServices.map((service, index) => {
+            // First 3 cards in top row, last 2 cards span 1.5 columns each (achieved by grid placement)
+            const isBottomRow = index >= 3;
+            return (
             <Link 
               key={index} 
               to={service.link}
