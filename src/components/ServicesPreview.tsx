@@ -19,7 +19,7 @@ const featuredServices = [
   },
   {
     title: "Gutter Cleaning",
-    tagline: "Complete hand cleaning, downspout flush & roof blow-off",
+    tagline: "Full clean, downspout flush & roof blow-off for clear drainage",
     link: "/gutter-cleaning",
     image: gutterImage,
   },
