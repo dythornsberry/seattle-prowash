@@ -139,6 +139,7 @@ Deno.serve(async (req: Request) => {
       email: String(payload.email || ""),
       address: String(payload.address || ""),
       details: String(payload.details || ""),
+      services_requested: String(payload.services || ""),
       timestamp: new Date().toISOString(),
       source: String(payload.source || "Website Quote Form"),
       business_name: String(payload.business_name || "Seattle ProWash"),
