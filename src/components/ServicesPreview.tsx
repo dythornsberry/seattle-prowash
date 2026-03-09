@@ -71,11 +71,12 @@ const ServicesPreview = () => {
                   isLarge ? 'col-span-1 aspect-[4/3] lg:col-span-1' : 'aspect-[4/3]'
                 } ${index === 0 ? 'lg:col-span-2 lg:aspect-[2/1]' : ''}`}
               >
+                <div className="absolute inset-0 bg-brand-navy" />
                 <img
                   src={service.image}
                   alt={`${service.title} service in Seattle`}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 relative z-[1]"
+                  loading={index === 0 ? "eager" : "lazy"}
                   width={600}
                   height={400}
                 />
