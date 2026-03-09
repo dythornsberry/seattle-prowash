@@ -106,6 +106,22 @@ const Footer = () => {
                     Moss Treatment
                   </Link>
                 </li>
+                <li>
+                  <Link 
+                     to="/pressure-washing" 
+                    className="text-white/80 hover:text-brand-orange transition-colors duration-250 text-sm"
+                  >
+                    Pressure Washing
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                     to="/window-cleaning" 
+                    className="text-white/80 hover:text-brand-orange transition-colors duration-250 text-sm"
+                  >
+                    Window Cleaning
+                  </Link>
+                </li>
               </ul>
             </div>
 
@@ -206,7 +222,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-center md:text-left">
               <p className="text-sm text-white/60 mb-1">
-                Licensed & Insured • Based in Kenmore, WA • Serving Greater Seattle
+                Licensed & Insured • Based in Kenmore, WA • Satisfaction Guaranteed
               </p>
               <p className="text-sm text-white/60">
                 © {currentYear} Seattle ProWash. All rights reserved.

@@ -69,6 +69,7 @@ async function sendEmailNotification(body: Record<string, string>) {
             <p style="margin: 8px 0;"><strong>Phone:</strong> <a href="tel:${body.phone.replace(/\D/g, '')}">${body.phone}</a></p>
             <p style="margin: 8px 0;"><strong>Address:</strong> ${body.address}</p>
             ${body.email ? `<p style="margin: 8px 0;"><strong>Email:</strong> <a href="mailto:${body.email}">${body.email}</a></p>` : ''}
+            ${body.services_requested ? `<p style="margin: 8px 0;"><strong>Services:</strong> ${body.services_requested}</p>` : ''}
             ${body.details ? `<p style="margin: 8px 0;"><strong>Details:</strong> ${body.details}</p>` : ''}
           </div>
           
@@ -139,6 +140,7 @@ Deno.serve(async (req: Request) => {
       email: String(payload.email || ""),
       address: String(payload.address || ""),
       details: String(payload.details || ""),
+      services_requested: String(payload.services || ""),
       timestamp: new Date().toISOString(),
       source: String(payload.source || "Website Quote Form"),
       business_name: String(payload.business_name || "Seattle ProWash"),
@@ -159,7 +161,7 @@ Deno.serve(async (req: Request) => {
           email: body.email || null,
           phone: body.phone || null,
           address: body.address || null,
-          services: body.details || null,
+          services: body.services_requested || null,
           source: body.source,
         })
         .select("id")

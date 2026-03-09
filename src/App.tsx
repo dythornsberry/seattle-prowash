@@ -13,6 +13,8 @@ import NotFound from "./pages/NotFound";
 import RoofCleaning from "./pages/RoofCleaning";
 import GutterCleaning from "./pages/GutterCleaning";
 import MossTreatment from "./pages/MossTreatment";
+import PressureWashing from "./pages/PressureWashing";
+import WindowCleaning from "./pages/WindowCleaning";
 import Pricing from "./pages/Pricing";
 import Reviews from "./pages/Reviews";
 import ServiceAreas from "./pages/ServiceAreas";
@@ -48,6 +50,8 @@ const App = () => (
           <Route path="/roof-cleaning" element={<RoofCleaning />} />
           <Route path="/gutter-cleaning" element={<GutterCleaning />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/pressure-washing" element={<PressureWashing />} />
+          <Route path="/window-cleaning" element={<WindowCleaning />} />
           
           {/* Service areas hub */}
           <Route path="/service-areas" element={<ServiceAreas />} />
@@ -77,13 +81,12 @@ const App = () => (
           {/* 308 Permanent redirects for deprecated/old routes */}
           <Route path="/services/roof-cleaning" element={<Navigate to="/roof-cleaning" replace />} />
           <Route path="/services/gutter-cleaning" element={<Navigate to="/gutter-cleaning" replace />} />
-          <Route path="/services/pressure-washing" element={<Navigate to="/roof-cleaning" replace />} />
-          <Route path="/services/house-washing" element={<Navigate to="/roof-cleaning" replace />} />
+          <Route path="/services/pressure-washing" element={<Navigate to="/pressure-washing" replace />} />
+          <Route path="/services/house-washing" element={<Navigate to="/pressure-washing" replace />} />
           <Route path="/services/window-cleaning" element={<Navigate to="/roof-cleaning" replace />} />
-          <Route path="/pressure-washing" element={<Navigate to="/roof-cleaning" replace />} />
-          <Route path="/house-washing" element={<Navigate to="/roof-cleaning" replace />} />
+          <Route path="/house-washing" element={<Navigate to="/pressure-washing" replace />} />
           <Route path="/soft-wash" element={<Navigate to="/roof-cleaning" replace />} />
-          <Route path="/window-cleaning" element={<Navigate to="/roof-cleaning" replace />} />
+          <Route path="/services/window-cleaning" element={<Navigate to="/window-cleaning" replace />} />
           <Route path="/moss-treatment" element={<MossTreatment />} />
           <Route path="/roof-moss" element={<Navigate to="/roof-cleaning" replace />} />
           <Route path="/roof-moss-removal" element={<Navigate to="/roof-cleaning" replace />} />

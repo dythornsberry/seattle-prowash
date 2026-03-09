@@ -343,8 +343,80 @@ const TwoStepQuoteForm = () => {
                                       <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
                                         Gutter cleaning (includes roof blow-off)
                                       </FormLabel>
-                                      <span className="text-xs text-muted-foreground">Starting at $300</span>
+                              <span className="text-xs text-muted-foreground">Starting at $300</span>
                                     </div>
+                                  </FormItem>
+                                )}
+                              />
+                              <FormField
+                                control={form.control}
+                                name="services"
+                                render={({ field }) => (
+                                  <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
+                                    <FormControl>
+                                      <Checkbox
+                                        checked={field.value?.includes("Pressure washing")}
+                                        onCheckedChange={(checked) => {
+                                          const value = "Pressure washing";
+                                          return checked
+                                            ? field.onChange([...field.value, value])
+                                            : field.onChange(field.value?.filter((v) => v !== value));
+                                        }}
+                                      />
+                                    </FormControl>
+                                    <div className="flex flex-col space-y-1">
+                                      <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
+                                        Pressure washing
+                                      </FormLabel>
+                                      <span className="text-xs text-muted-foreground">Driveways, patios, siding</span>
+                                    </div>
+                                  </FormItem>
+                                )}
+                              />
+                              <FormField
+                                control={form.control}
+                                name="services"
+                                render={({ field }) => (
+                                  <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
+                                    <FormControl>
+                                      <Checkbox
+                                        checked={field.value?.includes("Window cleaning")}
+                                        onCheckedChange={(checked) => {
+                                          const value = "Window cleaning";
+                                          return checked
+                                            ? field.onChange([...field.value, value])
+                                            : field.onChange(field.value?.filter((v) => v !== value));
+                                        }}
+                                      />
+                                    </FormControl>
+                                    <div className="flex flex-col space-y-1">
+                                      <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
+                                        Window cleaning
+                                      </FormLabel>
+                                      <span className="text-xs text-muted-foreground">Exterior</span>
+                                    </div>
+                                  </FormItem>
+                                )}
+                              />
+                              <FormField
+                                control={form.control}
+                                name="services"
+                                render={({ field }) => (
+                                  <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
+                                    <FormControl>
+                                      <Checkbox
+                                        checked={field.value?.includes("Dryer vent cleaning")}
+                                        onCheckedChange={(checked) => {
+                                          const value = "Dryer vent cleaning";
+                                          return checked
+                                            ? field.onChange([...field.value, value])
+                                            : field.onChange(field.value?.filter((v) => v !== value));
+                                        }}
+                                      />
+                                    </FormControl>
+                                    <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
+                                      Dryer vent cleaning
+                                    </FormLabel>
                                   </FormItem>
                                 )}
                               />
