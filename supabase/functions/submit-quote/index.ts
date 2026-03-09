@@ -69,6 +69,7 @@ async function sendEmailNotification(body: Record<string, string>) {
             <p style="margin: 8px 0;"><strong>Phone:</strong> <a href="tel:${body.phone.replace(/\D/g, '')}">${body.phone}</a></p>
             <p style="margin: 8px 0;"><strong>Address:</strong> ${body.address}</p>
             ${body.email ? `<p style="margin: 8px 0;"><strong>Email:</strong> <a href="mailto:${body.email}">${body.email}</a></p>` : ''}
+            ${body.services_requested ? `<p style="margin: 8px 0;"><strong>Services:</strong> ${body.services_requested}</p>` : ''}
             ${body.details ? `<p style="margin: 8px 0;"><strong>Details:</strong> ${body.details}</p>` : ''}
           </div>
           
