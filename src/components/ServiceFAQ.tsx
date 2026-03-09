@@ -9,7 +9,7 @@ interface FAQ {
 
 interface ServiceFAQProps {
   faqs: FAQ[];
-  schemaContext: "roof" | "gutter";
+  schemaContext: string;
 }
 
 const ServiceFAQ = ({ faqs, schemaContext }: ServiceFAQProps) => {
