@@ -1,51 +1,48 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Droplet, Sparkles, Waves, Wind, Flame } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
 import { Link } from "react-router-dom";
 
-import roofImage from "@/assets/roof-softwash-before-after.jpg";
-import gutterImage from "@/assets/gutter-cleaning-before-after.jpg";
-import pressureWashImage from "@/assets/driveway-pressure-washing.jpg";
-import windowImage from "@/assets/technician-house-washing.jpg";
-import dryerVentImage from "@/assets/prowash-truck-driveway.jpg";
-
 const services = [
   {
+    icon: Droplet,
     title: "Roof Cleaning",
-    subtitle: "Moss Removal & Treatment",
-    image: roofImage,
+    description: "Safe moss removal and treatment for asphalt, metal, and composite roofs. 12-month moss-free guarantee.",
     link: "/roof-cleaning",
     badge: "Our Specialty",
-    featured: true,
+    price: "Starting at $500",
   },
   {
+    icon: Sparkles,
     title: "Gutter Cleaning",
-    subtitle: "Hand Clean + Downspout Flush",
-    image: gutterImage,
+    description: "Complete hand cleaning with downspout flush and roof blow-off. Photo proof on completion.",
     link: "/gutter-cleaning",
+    price: "Starting at $300",
   },
   {
+    icon: Waves,
     title: "Pressure Washing",
-    subtitle: "Driveways, Patios & Siding",
-    image: pressureWashImage,
+    description: "Driveways, patios, walkways, and siding. Surface cleaning that restores your home's curb appeal.",
     link: "/pressure-washing",
   },
   {
+    icon: Wind,
     title: "Window Cleaning",
-    subtitle: "Exterior Window Washing",
-    image: windowImage,
+    description: "Exterior window washing for homes up to 3 stories. Streak-free, crystal-clear results.",
     link: "/window-cleaning",
   },
   {
+    icon: Flame,
     title: "Dryer Vent Cleaning",
-    subtitle: "Safety & Efficiency",
-    image: dryerVentImage,
+    description: "Reduce fire risk and improve dryer efficiency with professional vent cleaning.",
   },
 ];
 
 const ServicesPreview = () => {
   return (
-    <section className="section-spacing bg-off-white">
+    <section className="section-spacing">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 fade-up">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-blue mb-4">
@@ -56,65 +53,62 @@ const ServicesPreview = () => {
           </p>
         </div>
 
-        {/* Service Cards Grid - 2 featured top, 3 bottom */}
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
           {services.map((service, index) => {
-            const isLarge = index < 2;
-            const CardWrapper = service.link ? Link : 'div';
-            const wrapperProps = service.link ? { to: service.link } : {};
-
+            const IconComponent = service.icon;
             return (
-              <CardWrapper
-                key={index}
-                {...wrapperProps as any}
-                className={`group relative overflow-hidden rounded-xl cursor-pointer fade-up ${
-                  isLarge ? 'col-span-1 aspect-[4/3] lg:col-span-1' : 'aspect-[4/3]'
-                } ${index === 0 ? 'lg:col-span-2 lg:aspect-[2/1]' : ''}`}
+              <Card 
+                key={index} 
+                className={`group hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border hover:border-brand-orange/40 fade-up relative ${
+                  index === 0 ? 'sm:col-span-2 lg:col-span-1 ring-2 ring-brand-orange/20' : ''
+                }`}
               >
-                <div className="absolute inset-0 bg-brand-navy" />
-                <img
-                  src={service.image}
-                  alt={`${service.title} service in Seattle`}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 relative z-[1]"
-                  loading={index === 0 ? "eager" : "lazy"}
-                  width={600}
-                  height={400}
-                />
-                {/* Dark gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-
-                {/* Badge */}
                 {service.badge && (
-                  <Badge className="absolute top-3 left-3 bg-brand-orange text-white border-0 text-xs z-10">
+                  <Badge className="absolute top-3 right-3 bg-brand-orange text-white border-0 text-xs">
                     {service.badge}
                   </Badge>
                 )}
-
-                {/* Text overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
-                  <h3 className="text-white font-bold text-xl md:text-2xl leading-tight drop-shadow-lg">
-                    {service.title}
-                  </h3>
-                  <p className="text-white/80 text-sm md:text-base mt-1 drop-shadow-md">
-                    {service.subtitle}
-                  </p>
-                </div>
-
-                {/* Hover arrow indicator */}
-                {service.link && (
-                  <div className="absolute top-3 right-3 w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="text-white text-sm">→</span>
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-brand-orange/10 rounded-lg flex items-center justify-center group-hover:bg-brand-orange/20 transition-colors">
+                      <IconComponent className="w-6 h-6 text-brand-orange" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-bold text-lg text-brand-blue mb-1">
+                        {service.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        {service.description}
+                      </p>
+                      {service.price && (
+                        <p className="text-sm font-semibold text-brand-blue mb-3">{service.price}</p>
+                      )}
+                      <div className="flex items-center gap-3">
+                        <Button
+                          variant="cta-orange"
+                          size="sm"
+                          onClick={(e) => { e.preventDefault(); navigateToContact(); }}
+                        >
+                          Get Quote
+                        </Button>
+                        {service.link && (
+                          <Link 
+                            to={service.link} 
+                            className="text-sm text-brand-orange hover:underline font-medium"
+                          >
+                            Learn more →
+                          </Link>
+                        )}
+                      </div>
+                    </div>
                   </div>
-                )}
-              </CardWrapper>
+                </CardContent>
+              </Card>
             );
           })}
         </div>
 
         <div className="text-center mt-10 fade-up">
-          <p className="text-sm text-muted-foreground mb-4">
-            Pricing varies based on size, access, and condition. Get your exact price with a free quote.
-          </p>
           <Button
             variant="cta-orange"
             size="xl"
