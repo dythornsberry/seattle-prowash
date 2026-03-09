@@ -161,7 +161,7 @@ Deno.serve(async (req: Request) => {
           email: body.email || null,
           phone: body.phone || null,
           address: body.address || null,
-          services: body.details || null,
+          services: body.services_requested || null,
           source: body.source,
         })
         .select("id")

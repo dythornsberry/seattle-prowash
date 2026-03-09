@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Droplet, Car } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
+import { Link } from "react-router-dom";
 
 const ServicesPreview = () => {
   const services = [
@@ -10,7 +11,8 @@ const ServicesPreview = () => {
       icon: Droplet,
       title: "Roof cleaning",
       description: "Safe moss removal and treatment with a 12-month moss-free guarantee.",
-      link: "/roof-cleaning"
+      link: "/roof-cleaning",
+      badge: "Our Specialty"
     },
     {
       icon: Car,
@@ -33,7 +35,12 @@ const ServicesPreview = () => {
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <Card key={index} className="group hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 hover:border-brand-orange/50 fade-up">
+              <Card key={index} className="group hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 hover:border-brand-orange/50 fade-up relative">
+                {service.badge && (
+                  <Badge className="absolute top-3 right-3 bg-brand-orange text-white border-0 text-xs">
+                    {service.badge}
+                  </Badge>
+                )}
                 <CardHeader className="text-center">
                   <div className="inline-flex items-center justify-center w-20 h-20 bg-brand-orange/10 rounded-full mb-4 mx-auto group-hover:bg-brand-orange/20 transition-colors">
                     <IconComponent className="w-10 h-10 text-brand-orange" />
@@ -60,7 +67,13 @@ const ServicesPreview = () => {
           })}
         </div>
 
-        <div className="text-center mt-12 fade-up">
+        <p className="text-center text-muted-foreground mt-8 fade-up">
+          We also offer{" "}
+          <Link to="/pressure-washing" className="text-brand-orange hover:underline">pressure washing</Link>,{" "}
+          <Link to="/window-cleaning" className="text-brand-orange hover:underline">window cleaning</Link>, and dryer vent cleaning.
+        </p>
+
+        <div className="text-center mt-8 fade-up">
           <p className="text-sm text-muted-foreground mb-4">
             Pricing varies based on roof size, pitch, and access. Get your exact price with a free quote.
           </p>
