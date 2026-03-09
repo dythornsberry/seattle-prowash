@@ -106,6 +106,22 @@ const Footer = () => {
                     Moss Treatment
                   </Link>
                 </li>
+                <li>
+                  <Link 
+                     to="/pressure-washing" 
+                    className="text-white/80 hover:text-brand-orange transition-colors duration-250 text-sm"
+                  >
+                    Pressure Washing
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                     to="/window-cleaning" 
+                    className="text-white/80 hover:text-brand-orange transition-colors duration-250 text-sm"
+                  >
+                    Window Cleaning
+                  </Link>
+                </li>
               </ul>
             </div>
 
