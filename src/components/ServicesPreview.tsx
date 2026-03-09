@@ -7,6 +7,7 @@ import roofImage from "@/assets/roof-softwash-before-after.jpg";
 import gutterImage from "@/assets/gutter-cleaning-before-after.jpg";
 import drivewayImage from "@/assets/driveway-pressure-washing.jpg";
 import houseImage from "@/assets/technician-house-washing.jpg";
+import windowImage from "@/assets/technician-holding-ladder.jpg";
 
 const featuredServices = [
   {
@@ -31,8 +32,14 @@ const featuredServices = [
   {
     title: "House Washing",
     tagline: "Gentle soft-washing for siding, stucco, and brick",
-    link: "/pressure-washing", // Linking to pressure washing for now as it covers exterior
+    link: "/pressure-washing",
     image: houseImage,
+  },
+  {
+    title: "Window Cleaning",
+    tagline: "Streak-free exterior window cleaning up to 3 stories",
+    link: "/window-cleaning",
+    image: windowImage,
   },
 ];
 
