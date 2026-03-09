@@ -81,8 +81,8 @@ const App = () => (
           {/* 308 Permanent redirects for deprecated/old routes */}
           <Route path="/services/roof-cleaning" element={<Navigate to="/roof-cleaning" replace />} />
           <Route path="/services/gutter-cleaning" element={<Navigate to="/gutter-cleaning" replace />} />
-          <Route path="/services/pressure-washing" element={<Navigate to="/roof-cleaning" replace />} />
-          <Route path="/services/house-washing" element={<Navigate to="/roof-cleaning" replace />} />
+          <Route path="/services/pressure-washing" element={<Navigate to="/pressure-washing" replace />} />
+          <Route path="/services/house-washing" element={<Navigate to="/pressure-washing" replace />} />
           <Route path="/services/window-cleaning" element={<Navigate to="/roof-cleaning" replace />} />
           <Route path="/pressure-washing" element={<Navigate to="/roof-cleaning" replace />} />
           <Route path="/house-washing" element={<Navigate to="/roof-cleaning" replace />} />
