@@ -7,7 +7,7 @@ import roofImage from "@/assets/roof-softwash-before-after.jpg";
 import gutterImage from "@/assets/gutter-cleaning-before-after.jpg";
 import drivewayImage from "@/assets/driveway-pressure-washing.jpg";
 import houseImage from "@/assets/technician-house-washing.jpg";
-import windowImage from "@/assets/technician-holding-ladder.jpg";
+import windowImage from "@/assets/window-cleaning-action.jpg";
 
 const featuredServices = [
   {
