@@ -7,6 +7,7 @@ import roofImage from "@/assets/roof-softwash-before-after.jpg";
 import gutterImage from "@/assets/gutter-cleaning-before-after.jpg";
 import drivewayImage from "@/assets/driveway-pressure-washing.jpg";
 import houseImage from "@/assets/technician-house-washing.jpg";
+import windowImage from "@/assets/technician-holding-ladder.jpg";
 
 const featuredServices = [
   {
@@ -31,8 +32,14 @@ const featuredServices = [
   {
     title: "House Washing",
     tagline: "Gentle soft-washing for siding, stucco, and brick",
-    link: "/pressure-washing", // Linking to pressure washing for now as it covers exterior
+    link: "/pressure-washing",
     image: houseImage,
+  },
+  {
+    title: "Window Cleaning",
+    tagline: "Streak-free exterior window cleaning up to 3 stories",
+    link: "/window-cleaning",
+    image: windowImage,
   },
 ];
 
@@ -83,45 +90,42 @@ const ServicesPreview = () => {
           </p>
         </div>
 
-        {/* Part A: Featured Image Grid */}
-        <div className="grid md:grid-cols-2 gap-4 lg:gap-6 mb-16 max-w-6xl mx-auto">
-          {featuredServices.map((service, index) => (
-            <Link 
-              key={index} 
-              to={service.link}
-              className="group relative h-64 sm:h-72 lg:h-80 rounded-2xl overflow-hidden block shadow-md hover:shadow-xl transition-all duration-300"
-            >
-              {/* Background Image */}
-              <img 
-                src={service.image} 
-                alt={service.title} 
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent transition-opacity duration-300 group-hover:from-brand-navy" />
-              
-              {/* Badge */}
-              {service.badge && (
-                <Badge className="absolute top-4 left-4 bg-brand-orange text-white border-0 px-3 py-1 text-sm shadow-md z-10">
-                  {service.badge}
-                </Badge>
-              )}
-              
-              {/* Content (Bottom) */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 drop-shadow-sm">
-                  {service.title}
-                </h3>
-                <p className="text-white/90 text-sm sm:text-base mb-4 drop-shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 hidden sm:block">
-                  {service.tagline}
-                </p>
-                <div className="flex items-center text-brand-orange font-semibold text-sm sm:text-base group-hover:text-white transition-colors duration-300">
-                  Learn More <ArrowRight className="ml-2 w-4 h-4" />
+        {/* Part A: Featured Image Grid - 3 top, 2 bottom centered */}
+        <div className="grid md:grid-cols-6 gap-4 lg:gap-6 mb-16 max-w-6xl mx-auto">
+          {featuredServices.map((service, index) => {
+            // First 3 cards: span 2 cols each (fills 6). Last 2: span 3 cols each (fills 6, centered)
+            const colSpan = index < 3 ? "md:col-span-2" : "md:col-span-3";
+            return (
+              <Link 
+                key={index} 
+                to={service.link}
+                className={`group relative h-64 sm:h-72 lg:h-80 rounded-2xl overflow-hidden block shadow-md hover:shadow-xl transition-all duration-300 ${colSpan}`}
+              >
+                <img 
+                  src={service.image} 
+                  alt={service.title} 
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent transition-opacity duration-300 group-hover:from-brand-navy" />
+                {service.badge && (
+                  <Badge className="absolute top-4 left-4 bg-brand-orange text-white border-0 px-3 py-1 text-sm shadow-md z-10">
+                    {service.badge}
+                  </Badge>
+                )}
+                <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 drop-shadow-sm">
+                    {service.title}
+                  </h3>
+                  <p className="text-white/90 text-sm sm:text-base mb-4 drop-shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 hidden sm:block">
+                    {service.tagline}
+                  </p>
+                  <div className="flex items-center text-brand-orange font-semibold text-sm sm:text-base group-hover:text-white transition-colors duration-300">
+                    Learn More <ArrowRight className="ml-2 w-4 h-4" />
+                  </div>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            );
+          })}
         </div>
 
         {/* Part B: Detailed Service Blocks */}
