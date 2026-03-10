@@ -12,11 +12,22 @@ const supabaseAdmin = createClient(
   Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
 );
 
-const corsHeaders: Record<string, string> = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-  "Access-Control-Allow-Methods": "POST, OPTIONS",
-};
+// Allow requests from the live site and Lovable preview
+const ALLOWED_ORIGINS = [
+  "https://www.seattleprowash.com",
+  "https://seattleprowash.com",
+  "https://seattle-prowash.lovable.app",
+];
+
+function getCorsHeaders(req: Request): Record<string, string> {
+  const origin = req.headers.get("origin") || "";
+  const allowedOrigin = ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0];
+  return {
+    "Access-Control-Allow-Origin": allowedOrigin,
+    "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
+  };
+}
 
 const NOTIFICATION_EMAIL = "dythornsberry@gmail.com";
 
@@ -95,11 +106,13 @@ async function sendEmailNotification(body: Record<string, string>) {
     return { sent: true, response: emailResponse };
   } catch (error) {
     console.error("Failed to send email notification:", error);
-    return { sent: false, error: error.message };
+    return { sent: false, error: "Email delivery failed" };
   }
 }
 
 Deno.serve(async (req: Request) => {
+  const corsHeaders = getCorsHeaders(req);
+
   // Handle CORS preflight
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -212,7 +225,7 @@ Deno.serve(async (req: Request) => {
     });
   } catch (error) {
     console.error("submit-quote error", error);
-    return new Response(JSON.stringify({ ok: false, error: String(error) }), {
+    return new Response(JSON.stringify({ ok: false, error: "An unexpected error occurred. Please try again or call 206-752-6690." }), {
       status: 500,
       headers: { "Content-Type": "application/json", ...corsHeaders },
     });

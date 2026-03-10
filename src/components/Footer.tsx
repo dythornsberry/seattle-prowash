@@ -100,27 +100,35 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                     to="/moss-treatment" 
+                  <Link
+                     to="/moss-treatment"
                     className="text-white/80 hover:text-brand-orange transition-colors duration-250 text-sm"
                   >
-                    Moss Treatment
+                    Moss Removal & Treatment
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                     to="/pressure-washing" 
+                  <Link
+                     to="/pressure-washing"
                     className="text-white/80 hover:text-brand-orange transition-colors duration-250 text-sm"
                   >
                     Pressure Washing
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                     to="/window-cleaning" 
+                  <Link
+                     to="/window-cleaning"
                     className="text-white/80 hover:text-brand-orange transition-colors duration-250 text-sm"
                   >
                     Window Cleaning
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                     to="/commercial"
+                    className="text-white/80 hover:text-brand-orange transition-colors duration-250 text-sm"
+                  >
+                    Commercial Services
                   </Link>
                 </li>
               </ul>

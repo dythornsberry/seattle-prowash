@@ -17,8 +17,8 @@ const MossTreatment = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Professional Roof Moss Treatment"
-        description="Expert roof moss treatment in Seattle, Bothell, Kirkland. 12-month moss-free guarantee. Safe removal & prevention. Licensed & insured. Same-day quotes available."
+        title="Professional Moss Removal & Treatment"
+        description="Expert moss removal and treatment in Seattle, Bothell, Kirkland. 12-month moss-free guarantee. Safe removal & prevention. Licensed & insured. Same-day quotes available."
         url="https://www.seattleprowash.com/moss-treatment"
       />
       <Header />
