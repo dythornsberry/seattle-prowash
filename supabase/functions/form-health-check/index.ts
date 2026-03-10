@@ -28,7 +28,7 @@ async function testFormSubmission(): Promise<HealthCheckResult> {
   if (!supabaseUrl || !supabaseAnonKey) {
     return {
       success: false,
-      message: "Missing SUPABASE_URL or SUPABASE_ANON_KEY environment variables",
+      message: "Health check configuration error",
       timestamp: new Date().toISOString(),
     };
   }
@@ -67,7 +67,7 @@ async function testFormSubmission(): Promise<HealthCheckResult> {
     } else {
       return {
         success: false,
-        message: `Form submission failed: ${data.error || response.statusText}`,
+        message: "Form submission returned an error",
         timestamp: new Date().toISOString(),
         responseTime,
       };
@@ -75,7 +75,7 @@ async function testFormSubmission(): Promise<HealthCheckResult> {
   } catch (error) {
     return {
       success: false,
-      message: `Network error: ${error.message}`,
+      message: "Network error during health check",
       timestamp: new Date().toISOString(),
       responseTime: Date.now() - startTime,
     };
@@ -129,6 +129,18 @@ Deno.serve(async (req: Request) => {
 
   console.log("Starting form health check...");
 
+  // Require a shared secret so random callers can't trigger health checks
+  const expectedSecret = Deno.env.get("HEALTH_CHECK_SECRET");
+  if (expectedSecret) {
+    const authHeader = req.headers.get("x-health-secret") || "";
+    if (authHeader !== expectedSecret) {
+      return new Response(JSON.stringify({ error: "Unauthorized" }), {
+        status: 401,
+        headers: { "Content-Type": "application/json", ...corsHeaders },
+      });
+    }
+  }
+
   try {
     // Hardcoded alert email — never accept from request body to prevent abuse
     const alertEmail = "dythornsberry@gmail.com";
@@ -148,9 +160,12 @@ Deno.serve(async (req: Request) => {
 
     return new Response(
       JSON.stringify({
-        healthCheck: result,
+        healthCheck: {
+          success: result.success,
+          timestamp: result.timestamp,
+          responseTime: result.responseTime,
+        },
         alertSent: emailResult?.sent || false,
-        alertEmail: !result.success ? alertEmail : null,
       }),
       {
         status: result.success ? 200 : 500,
