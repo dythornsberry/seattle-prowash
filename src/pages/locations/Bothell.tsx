@@ -89,7 +89,7 @@ const Bothell = () => {
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <span className="bg-white/10 px-4 py-2 rounded-full">12-Month Moss-Free Guarantee</span>
                   <span className="bg-white/10 px-4 py-2 rounded-full">Same-Day Estimates</span>
-                  <span className="bg-white/10 px-4 py-2 rounded-full">194+ 5-Star Reviews</span>
+                  <span className="bg-white/10 px-4 py-2 rounded-full">200+ 5-Star Reviews</span>
                 </div>
               </div>
             </div>
@@ -340,7 +340,7 @@ const Bothell = () => {
                   Protect Your Bothell Home Today
                 </h2>
                 <p className="text-xl text-white/90 mb-8">
-                  Join 194+ satisfied customers. Get your free estimate today and see why Bothell homeowners trust Seattle ProWash.
+                  Join 200+ satisfied customers. Get your free estimate today and see why Bothell homeowners trust Seattle ProWash.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -366,7 +366,7 @@ const Bothell = () => {
                   <span>✓ Same-day estimates</span>
                   <span>✓ Licensed & Insured</span>
                   <span>✓ 12-month moss-free guarantee</span>
-                  <span>✓ 194+ 5-star reviews</span>
+                  <span>✓ 200+ 5-star reviews</span>
                 </div>
               </div>
             </div>

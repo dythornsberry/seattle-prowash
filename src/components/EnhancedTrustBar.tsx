@@ -13,9 +13,9 @@ const EnhancedTrustBar = () => {
   const metrics = [
     {
       icon: Star,
-      value: "4.9",
+      value: "5.0",
       label: "Star Rating",
-      subtext: "194+ Reviews",
+      subtext: "200+ Reviews",
       color: "text-brand-orange",
       bgColor: "bg-brand-orange/10"
     },
@@ -37,8 +37,8 @@ const EnhancedTrustBar = () => {
     },
     {
       icon: Award,
-      value: "15+",
-      label: "Years Experience",
+      value: "500+",
+      label: "Roofs Cleaned",
       subtext: "Licensed & Insured",
       color: "text-purple-600",
       bgColor: "bg-purple-600/10"
@@ -64,7 +64,7 @@ const EnhancedTrustBar = () => {
                 </div>
                 <div className="text-2xl md:text-3xl font-bold text-white mb-1">
                   {metric.value}
-                  {metric.value === "4.9" && <span className="text-brand-orange">★</span>}
+                  {metric.value === "5.0" && <span className="text-brand-orange">★</span>}
                   {metric.value === "12" && <span className="text-lg">mo</span>}
                 </div>
                 <div className="text-sm md:text-base font-semibold text-white/90">

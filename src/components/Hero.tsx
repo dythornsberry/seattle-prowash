@@ -2,6 +2,33 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-roof-cleaning.jpg";
 import { navigateToContact } from "@/lib/navigation";
 
+const getSeasonalMessage = (): string => {
+  const month = new Date().getMonth(); // 0-indexed
+  switch (month) {
+    case 0: // Jan
+    case 1: // Feb
+      return "Winter moisture is feeding moss right now — get ahead of it before spring.";
+    case 2: // Mar
+    case 3: // Apr
+      return "Spring rain + warming temps = rapid moss growth. Act now before damage spreads.";
+    case 4: // May
+      return "Moss season is peaking — protect your roof before summer.";
+    case 5: // Jun
+    case 6: // Jul
+    case 7: // Aug
+      return "Summer is the best time to clean your roof. Book now while the weather holds.";
+    case 8: // Sep
+      return "Fall is here — clean your gutters before the leaves pile up.";
+    case 9: // Oct
+    case 10: // Nov
+      return "Clogged gutters + fall rain = water damage. Get your gutters cleaned now.";
+    case 11: // Dec
+      return "Year-end special — start the new year with a clean, moss-free roof.";
+    default:
+      return "Fast quotes. Fair prices. Expert moss removal.";
+  }
+};
+
 const Hero = () => {
   const handleGetQuote = () => {
     navigateToContact();
@@ -10,6 +37,8 @@ const Hero = () => {
   const handleCall = () => {
     window.location.href = 'tel:12067526690';
   };
+
+  const seasonalMessage = getSeasonalMessage();
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
@@ -23,7 +52,6 @@ const Hero = () => {
           width={1920}
           height={1080}
           loading="eager"
-          // @ts-expect-error React doesn't recognize fetchpriority but it's valid HTML
           fetchpriority="high"
           decoding="async"
         />
@@ -35,12 +63,15 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Main Headline */}
           <h1 className="text-white font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight animate-fade-in mb-6 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
-            Expert Roof & Gutter Cleaning for Seattle Homes
+            Kenmore's Roof & Gutter Cleaning Experts
           </h1>
 
           {/* Trust Line */}
+          <p className="text-lg md:text-xl text-white/90 font-medium max-w-3xl mx-auto animate-fade-in mb-4 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
+            Serving Bothell, Kirkland, Woodinville & Greater Seattle
+          </p>
           <p className="text-xl md:text-2xl text-white font-medium max-w-3xl mx-auto animate-fade-in mb-8 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-            <a href="/reviews" className="hover:text-brand-orange transition-colors">4.9★ from 194+ neighbors</a> • 12-Month Moss-Free Guarantee • Same-Day Estimates
+            <a href="/reviews" className="hover:text-brand-orange transition-colors">5.0★ from 200+ neighbors</a> • 12-Month Moss-Free Guarantee • Same-Day Estimates
           </p>
 
           {/* CTAs */}
@@ -63,7 +94,7 @@ const Hero = () => {
             </Button>
           </div>
           <p className="text-white text-sm md:text-base font-normal max-w-2xl mt-4 animate-fade-in drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
-            Winter is peak moss season. Fast quotes. Fair prices. Expert moss removal.
+            {seasonalMessage}
           </p>
         </div>
       </div>

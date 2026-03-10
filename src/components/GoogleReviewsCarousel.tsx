@@ -15,14 +15,7 @@ const GoogleReviewsCarousel = () => {
   return (
     <section className="section-spacing bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12 fade-up">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            What Our Customers Say
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            See what our satisfied customers have to say about our gutter and roof maintenance services
-          </p>
-        </div>
+        {/* Heading comes from the Featurable widget itself */}
         
         <div className="fade-up max-w-6xl mx-auto">
           <div id="featurable-db846b26-606c-49f2-82ca-c73eb47770bf" data-featurable-async></div>

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import { navigateToContact } from "@/lib/navigation";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -58,7 +59,7 @@ const Footer = () => {
                   </div>
                   <span className="font-bold">5.0</span>
                 </div>
-                <p className="text-sm text-white/80">194+ Google Reviews</p>
+                <p className="text-sm text-white/80">200+ Google Reviews</p>
                 <Button 
                   variant="prowash-secondary" 
                   size="sm" 
@@ -130,9 +131,15 @@ const Footer = () => {
               <h3 className="text-lg font-bold mb-6 text-white">Service Areas</h3>
               <div className="space-y-2">
                 {serviceAreas.map((area, index) => {
-                  const cityPages = ["Kenmore", "Bothell", "Lynnwood", "Kirkland", "Shoreline", "Woodinville", "Seattle"];
-                  const isLinkable = cityPages.includes(area);
-                  const linkPath = isLinkable ? `/${area.toLowerCase()}-roof-gutter-cleaning` : null;
+                  const citySlugMap: Record<string, string> = {
+                    "Kenmore": "kenmore", "Bothell": "bothell", "Lynnwood": "lynnwood",
+                    "Kirkland": "kirkland", "Shoreline": "shoreline", "Woodinville": "woodinville",
+                    "Seattle": "seattle", "Bellevue": "bellevue", "Redmond": "redmond",
+                    "Mill Creek": "mill-creek",
+                  };
+                  const slug = citySlugMap[area];
+                  const isLinkable = !!slug;
+                  const linkPath = isLinkable ? `/${slug}-roof-gutter-cleaning` : null;
                   
                   return isLinkable && linkPath ? (
                     <Link 
@@ -201,13 +208,7 @@ const Footer = () => {
                 variant="cta-orange" 
                 size="lg" 
                 className="w-full"
-                onClick={() => {
-                  if (window.location.pathname === '/') {
-                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                  } else {
-                    window.location.href = '/#contact';
-                  }
-                }}
+                onClick={navigateToContact}
               >
                 Get My Free Quote →
               </Button>

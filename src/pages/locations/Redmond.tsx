@@ -76,7 +76,7 @@ const Redmond = () => {
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <span className="bg-white/10 px-4 py-2 rounded-full">12-Month Moss-Free Guarantee</span>
                   <span className="bg-white/10 px-4 py-2 rounded-full">Same-Day Estimates</span>
-                  <span className="bg-white/10 px-4 py-2 rounded-full">194+ 5-Star Reviews</span>
+                  <span className="bg-white/10 px-4 py-2 rounded-full">200+ 5-Star Reviews</span>
                 </div>
               </div>
             </div>
@@ -115,7 +115,7 @@ const Redmond = () => {
                       </div>
                       <h3 className="text-xl font-bold mb-4 text-dark-teal">5-Star Service</h3>
                       <p className="text-gray-600">
-                        Over 194 satisfied customers across Redmond and surrounding areas trust our professional service.
+                        Over 200 satisfied customers across Redmond and surrounding areas trust our professional service.
                       </p>
                     </CardContent>
                   </Card>
@@ -250,7 +250,7 @@ const Redmond = () => {
                   Ready to Protect Your Redmond Home?
                 </h2>
                 <p className="text-xl text-white/90 mb-8">
-                  Join 194+ satisfied customers. Get your free estimate today and see why Redmond homeowners trust Seattle ProWash.
+                  Join 200+ satisfied customers. Get your free estimate today and see why Redmond homeowners trust Seattle ProWash.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">

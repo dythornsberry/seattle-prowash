@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { navigateToContact as goToContact, navigateToReviews as goToReviews, navigateToHome as goHome } from "@/lib/navigation";
+import { navigateToContact as goToContact, navigateToHome as goHome } from "@/lib/navigation";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
 import { useScrollShadow } from "./ScrollHeader";
@@ -20,8 +20,8 @@ const Header = () => {
   
   const handleCallClick = () => {
     // Track phone call click
-    if (typeof (window as any).gtag !== 'undefined') {
-      (window as any).gtag('event', 'phone_call_click', {
+    if (window.gtag) {
+      window.gtag('event', 'phone_call_click', {
         location: 'header',
         phone_number: '2067526690'
       });
@@ -29,15 +29,7 @@ const Header = () => {
     window.location.href = `tel:1${phoneNumber.replace(/[^0-9]/g, '')}`;
   };
   
-  interface NavigationItem {
-    name: string;
-    href: string;
-    onClick?: () => void;
-  }
-  
-
-  
-  const navigation: NavigationItem[] = [
+  const navigation: { name: string; href: string; onClick?: () => void }[] = [
     { name: "Home", href: "/", onClick: goHome },
     { name: "Pricing", href: "/pricing" },
     { name: "About", href: "/about" },
@@ -113,9 +105,9 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-3">
             <button
               onClick={handleCallClick}
-              className="flex items-center gap-2 text-white hover:text-brand-orange font-bold text-lg transition-colors duration-250 active:scale-95"
+              className="flex items-center gap-2 bg-brand-orange/15 hover:bg-brand-orange/25 text-brand-orange font-bold text-xl px-4 py-2 rounded-lg transition-all duration-250 active:scale-95 border border-brand-orange/30"
             >
-              <Phone className="w-5 h-5" />
+              <Phone className="w-5 h-5 animate-pulse" />
               {phoneNumber}
             </button>
           </div>
@@ -136,6 +128,8 @@ const Header = () => {
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-white hover:text-brand-orange"
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMenuOpen}
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </Button>
@@ -152,7 +146,7 @@ const Header = () => {
                     key={item.name}
                     onClick={() => {
                       setIsMenuOpen(false);
-                      item.onClick();
+                      item.onClick?.();
                     }}
                     className="block w-full text-left px-4 py-2 text-white hover:bg-brand-orange/20 hover:text-brand-orange font-medium transition-colors duration-250 cursor-pointer"
                   >

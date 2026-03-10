@@ -16,7 +16,7 @@ export const SEOHead = ({
   type = "website"
 }: SEOHeadProps) => {
   const fullTitle = `${title} | Seattle ProWash`;
-  const currentUrl = url || window.location.href;
+  const currentUrl = url || `https://www.seattleprowash.com${window.location.pathname}`;
   const imageUrl = image.startsWith('http') ? image : `https://www.seattleprowash.com${image}`;
 
   return (

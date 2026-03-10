@@ -28,13 +28,13 @@ const RoofCleaning = () => {
     // Inject Service Schema
     const serviceSchema = generateServiceSchema({
       name: "Roof Cleaning and Moss Removal",
-      description: "Professional roof cleaning service using safe soft-wash methods to remove moss, algae, and lichen. Includes 12-month moss-free guarantee.",
+      description: "Professional roof cleaning service to remove moss, algae, and lichen. Includes gutter cleaning and 12-month moss-free guarantee.",
       provider: COMPANY_INFO.name,
       areaServed: COMPANY_INFO.serviceAreas,
       serviceType: "Roof Cleaning",
       url: `${COMPANY_INFO.url}/roof-cleaning`,
       offers: {
-        priceRange: "$300-$1200",
+        priceRange: "$499-$1200",
         priceCurrency: "USD"
       }
     });
@@ -122,7 +122,7 @@ const RoofCleaning = () => {
                   
                   {/* Mini Trust Line */}
                   <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
-                    4.9★ from 194+ neighbors • Licensed & Insured • Same-Day Estimates
+                    5.0★ from 200+ neighbors • Licensed & Insured • Same-Day Estimates
                   </p>
 
                   {/* 1-2-3 Process */}
@@ -151,7 +151,7 @@ const RoofCleaning = () => {
                   
                   {/* Trust Indicators */}
                   <p className="text-white/80 text-sm">
-                    ✓ 12-Month Guarantee  ✓ Same-Day Quotes  ✓ 194+ Reviews
+                    ✓ 12-Month Guarantee  ✓ Same-Day Quotes  ✓ 200+ Reviews
                   </p>
                 </div>
                 <div className="fade-up">
@@ -224,42 +224,25 @@ const RoofCleaning = () => {
                   Our Services
                 </h2>
                 <p className="text-lg text-muted-foreground">
-                  Three clear options to keep your roof and gutters in top shape
+                  Two simple options to keep your roof and gutters in top shape
                 </p>
               </div>
-              <div className="grid md:grid-cols-3 gap-6">
-                <Card className="fade-up">
-                  <CardHeader>
-                    <CardTitle className="text-brand-navy">Gutter Cleaning Only</CardTitle>
-                    <CardDescription>Perfect for clear roofs</CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-muted-foreground">
-                      Remove leaves and debris from gutters and downspouts. Ideal for homes where the roof itself is already clear.
-                    </p>
-                    <Button 
-                      variant="outline" 
-                      className="w-full"
-                      onClick={navigateToContact}
-                    >
-                      Get a Fast Quote
-                    </Button>
-                  </CardContent>
-                </Card>
+              <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
                 <Card className="fade-up border-brand-orange border-2 relative">
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                     <Badge className="bg-brand-orange">Most Popular</Badge>
                   </div>
                   <CardHeader className="pt-6">
-                    <CardTitle className="text-brand-navy">Roof & Gutter Cleaning</CardTitle>
-                    <CardDescription>Complete exterior protection</CardDescription>
+                    <CardTitle className="text-brand-navy">Roof Cleaning</CardTitle>
+                    <CardDescription>Complete moss treatment & gutter cleaning</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
+                    <p className="text-3xl font-bold text-brand-navy">$499 – $1,200 <span className="text-sm font-normal text-muted-foreground">for most homes</span></p>
                     <p className="text-muted-foreground">
-                      Combines gutter cleaning with roof blow-off and soft debris removal (leaves, needles). Our most common package keeps your entire system in top shape.
+                      Our premium all-in-one service: moss treatment, moss removal, and gutter cleaning — all included. Backed by our 12-month moss-free guarantee.
                     </p>
-                    <Button 
-                      variant="prowash-primary" 
+                    <Button
+                      variant="prowash-primary"
                       className="w-full"
                       onClick={navigateToContact}
                     >
@@ -269,15 +252,16 @@ const RoofCleaning = () => {
                 </Card>
                 <Card className="fade-up">
                   <CardHeader>
-                    <CardTitle className="text-brand-navy">Roof & Gutter + Moss Treatment</CardTitle>
-                    <CardDescription>Complete restoration</CardDescription>
+                    <CardTitle className="text-brand-navy">Gutter Cleaning</CardTitle>
+                    <CardDescription>Full clean with complimentary roof blow-off</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
+                    <p className="text-3xl font-bold text-brand-navy">Starting at $250</p>
                     <p className="text-muted-foreground">
-                      Hand-removal of heavy moss, soft-wash treatment, and preventative application. Includes gutter cleaning. Custom pricing based on moss coverage.
+                      Complete gutter cleaning with hand-scooping, downspout flushing, and a complimentary roof blow-off to clear debris. No moss? This is all you need.
                     </p>
-                    <Button 
-                      variant="outline" 
+                    <Button
+                      variant="outline"
                       className="w-full"
                       onClick={navigateToContact}
                     >
@@ -311,7 +295,7 @@ const RoofCleaning = () => {
                     2
                   </div>
                   <h3 className="font-semibold text-brand-navy mb-2">Treat</h3>
-                  <p className="text-muted-foreground">Gentle soft-wash removes moss and debris without damaging shingles.</p>
+                  <p className="text-muted-foreground">Our roof cleaning treatment removes moss and debris without damaging shingles.</p>
                 </div>
                 <div className="fade-up">
                   <div className="bg-brand-orange text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-4">

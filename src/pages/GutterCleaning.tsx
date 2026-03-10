@@ -31,7 +31,7 @@ const GutterCleaning = () => {
       serviceType: "Gutter Cleaning",
       url: `${COMPANY_INFO.url}/gutter-cleaning`,
       offers: {
-        priceRange: "$150-$600",
+        priceRange: "$250-$600",
         priceCurrency: "USD"
       }
     });
@@ -119,7 +119,7 @@ const GutterCleaning = () => {
                   
                   {/* Mini Trust Line */}
                   <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
-                    4.9★ from 194+ neighbors • Licensed & Insured • Same-Day Estimates
+                    5.0★ from 200+ neighbors • Licensed & Insured • Same-Day Estimates
                   </p>
 
                   {/* 1-2-3 Process */}
@@ -148,7 +148,7 @@ const GutterCleaning = () => {
                   
                   {/* Trust Indicators */}
                   <p className="text-white/80 text-sm">
-                    ✓ 12-Month Guarantee  ✓ Same-Day Quotes  ✓ 194+ Reviews
+                    ✓ 12-Month Guarantee  ✓ Same-Day Quotes  ✓ 200+ Reviews
                   </p>
                 </div>
                 <div className="fade-up">

@@ -5,8 +5,8 @@ import { navigateToContact } from "@/lib/navigation";
 const MobileBottomBar = () => {
   const handleCall = () => {
     // Track phone call click
-    if (typeof (window as any).gtag !== 'undefined') {
-      (window as any).gtag('event', 'phone_call_click', {
+    if (window.gtag) {
+      window.gtag('event', 'phone_call_click', {
         location: 'mobile_bottom_bar',
         phone_number: '2067526690'
       });
@@ -16,8 +16,8 @@ const MobileBottomBar = () => {
 
   const handleQuote = () => {
     // Track quote button click
-    if (typeof (window as any).gtag !== 'undefined') {
-      (window as any).gtag('event', 'get_quote_click', {
+    if (window.gtag) {
+      window.gtag('event', 'get_quote_click', {
         location: 'mobile_bottom_bar'
       });
     }

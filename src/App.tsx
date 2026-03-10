@@ -33,6 +33,14 @@ import BothellLocation from "./pages/locations/Bothell";
 import LynnwoodLocation from "./pages/locations/Lynnwood";
 import WoodinvilleLocation from "./pages/locations/Woodinville";
 
+// Additional city location pages
+import BellevueLocation from "./pages/locations/Bellevue";
+import EdmondsLocation from "./pages/locations/Edmonds";
+import MillCreekLocation from "./pages/locations/MillCreek";
+import MountlakeTerraceLocation from "./pages/locations/MountlakeTerrace";
+import RedmondLocation from "./pages/locations/Redmond";
+import SammamishLocation from "./pages/locations/Sammamish";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -64,7 +72,13 @@ const App = () => (
           <Route path="/shoreline-roof-gutter-cleaning" element={<ShorelineLocation />} />
           <Route path="/seattle-roof-gutter-cleaning" element={<SeattleLocation />} />
           <Route path="/woodinville-roof-gutter-cleaning" element={<WoodinvilleLocation />} />
-          
+          <Route path="/bellevue-roof-gutter-cleaning" element={<BellevueLocation />} />
+          <Route path="/edmonds-roof-gutter-cleaning" element={<EdmondsLocation />} />
+          <Route path="/mill-creek-roof-gutter-cleaning" element={<MillCreekLocation />} />
+          <Route path="/mountlake-terrace-roof-gutter-cleaning" element={<MountlakeTerraceLocation />} />
+          <Route path="/redmond-roof-gutter-cleaning" element={<RedmondLocation />} />
+          <Route path="/sammamish-roof-gutter-cleaning" element={<SammamishLocation />} />
+
           {/* Supporting pages */}
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/contact" element={<Navigate to="/#contact" replace />} />
@@ -106,12 +120,12 @@ const App = () => (
           <Route path="/locations/lynnwood" element={<Navigate to="/lynnwood-roof-gutter-cleaning" replace />} />
           <Route path="/woodinville" element={<Navigate to="/woodinville-roof-gutter-cleaning" replace />} />
           <Route path="/locations/woodinville" element={<Navigate to="/woodinville-roof-gutter-cleaning" replace />} />
-          <Route path="/bellevue" element={<Navigate to="/service-areas" replace />} />
-          <Route path="/redmond" element={<Navigate to="/service-areas" replace />} />
-          <Route path="/sammamish" element={<Navigate to="/service-areas" replace />} />
-          <Route path="/edmonds" element={<Navigate to="/service-areas" replace />} />
-          <Route path="/mountlake-terrace" element={<Navigate to="/service-areas" replace />} />
-          <Route path="/mill-creek" element={<Navigate to="/service-areas" replace />} />
+          <Route path="/bellevue" element={<Navigate to="/bellevue-roof-gutter-cleaning" replace />} />
+          <Route path="/redmond" element={<Navigate to="/redmond-roof-gutter-cleaning" replace />} />
+          <Route path="/sammamish" element={<Navigate to="/sammamish-roof-gutter-cleaning" replace />} />
+          <Route path="/edmonds" element={<Navigate to="/edmonds-roof-gutter-cleaning" replace />} />
+          <Route path="/mountlake-terrace" element={<Navigate to="/mountlake-terrace-roof-gutter-cleaning" replace />} />
+          <Route path="/mill-creek" element={<Navigate to="/mill-creek-roof-gutter-cleaning" replace />} />
           
           {/* 404 catch-all */}
           <Route path="*" element={<NotFound />} />
