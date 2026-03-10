@@ -6,10 +6,11 @@ import { Resend } from "npm:resend@2.0.0";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
+// Restrict CORS to own domain only — this is an internal monitoring function
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Origin": "https://www.seattleprowash.com",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-  "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
 };
 
 interface HealthCheckResult {
@@ -116,7 +117,7 @@ async function sendAlertEmail(result: HealthCheckResult, alertEmail: string) {
     return { sent: true, response: emailResponse };
   } catch (error) {
     console.error("Failed to send alert email:", error);
-    return { sent: false, error: error.message };
+    return { sent: false, error: "Alert email delivery failed" };
   }
 }
 
@@ -159,7 +160,7 @@ Deno.serve(async (req: Request) => {
   } catch (error) {
     console.error("Health check error:", error);
     return new Response(
-      JSON.stringify({ error: error.message }),
+      JSON.stringify({ error: "Health check encountered an unexpected error" }),
       {
         status: 500,
         headers: { "Content-Type": "application/json", ...corsHeaders },

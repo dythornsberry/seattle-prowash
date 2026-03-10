@@ -15,6 +15,7 @@ import GutterCleaning from "./pages/GutterCleaning";
 import MossTreatment from "./pages/MossTreatment";
 import PressureWashing from "./pages/PressureWashing";
 import WindowCleaning from "./pages/WindowCleaning";
+import Commercial from "./pages/Commercial";
 import Pricing from "./pages/Pricing";
 import Reviews from "./pages/Reviews";
 import ServiceAreas from "./pages/ServiceAreas";
@@ -60,7 +61,8 @@ const App = () => (
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/pressure-washing" element={<PressureWashing />} />
           <Route path="/window-cleaning" element={<WindowCleaning />} />
-          
+          <Route path="/commercial" element={<Commercial />} />
+
           {/* Service areas hub */}
           <Route path="/service-areas" element={<ServiceAreas />} />
           
