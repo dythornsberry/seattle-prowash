@@ -43,7 +43,7 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="About Dylan & Seattle ProWash"
-        description="Meet Dylan Thornsberry, owner of Seattle ProWash. Kenmore-based roof and gutter cleaning specialists serving Seattle Metro since 2022. 194+ 5-star reviews."
+        description="Meet Dylan Thornsberry, owner of Seattle ProWash. Kenmore-based roof and gutter cleaning specialists serving Seattle Metro since 2022. 200+ 5-star reviews."
         url="https://www.seattleprowash.com/about"
       />
       <Header />
@@ -111,7 +111,7 @@ const About = () => {
                       <div className="text-sm text-muted-foreground">Properties Restored</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-brand-orange mb-2">194+</div>
+                      <div className="text-3xl font-bold text-brand-orange mb-2">200+</div>
                       <div className="text-sm text-muted-foreground">5-Star Google Reviews</div>
                     </div>
                     <div className="text-center">

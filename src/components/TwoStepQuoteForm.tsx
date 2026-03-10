@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -33,6 +32,7 @@ const formSchema = z.object({
 const TwoStepQuoteForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const EDGE_FUNCTION_NAME = "submit-quote";
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -49,14 +49,13 @@ const TwoStepQuoteForm = () => {
 
   // Google Places Autocomplete
   const addressInputRef = useRef<HTMLInputElement | null>(null);
-  const autocompleteRef = useRef<any>(null);
+  const autocompleteRef = useRef<google.maps.places.Autocomplete | null>(null);
 
   const initAutocomplete = useCallback(() => {
     if (!addressInputRef.current || autocompleteRef.current) return;
-    const g = (window as any).google;
-    if (!g?.maps?.places) return;
+    if (typeof google === 'undefined' || !google?.maps?.places) return;
 
-    const autocomplete = new g.maps.places.Autocomplete(addressInputRef.current, {
+    const autocomplete = new google.maps.places.Autocomplete(addressInputRef.current, {
       types: ['address'],
       componentRestrictions: { country: 'us' },
       fields: ['formatted_address'],
@@ -73,12 +72,11 @@ const TwoStepQuoteForm = () => {
   }, [form]);
 
   useEffect(() => {
-    const g = (window as any).google;
-    if (g?.maps?.places) {
+    if (typeof google !== 'undefined' && google?.maps?.places) {
       initAutocomplete();
     } else {
       const checkInterval = setInterval(() => {
-        if ((window as any).google?.maps?.places) {
+        if (typeof google !== 'undefined' && google?.maps?.places) {
           initAutocomplete();
           clearInterval(checkInterval);
         }
@@ -131,8 +129,8 @@ const TwoStepQuoteForm = () => {
     
     try {
       // Track analytics
-      if (typeof (window as any).gtag !== 'undefined') {
-        (window as any).gtag('event', 'quote_form_submit', {
+      if (window.gtag) {
+        window.gtag('event', 'quote_form_submit', {
           service_selected: values.services.join(", "),
           page_location: window.location.pathname
         });
@@ -140,11 +138,7 @@ const TwoStepQuoteForm = () => {
 
       await sendToWebhook(values);
 
-      toast({
-        title: "✓ Request received!",
-        description: "We'll get back to you within 1 hour.",
-      });
-      
+      setIsSubmitted(true);
       form.reset();
       
     } catch (error) {
@@ -160,13 +154,13 @@ const TwoStepQuoteForm = () => {
   };
 
   const handleCallClick = () => {
-    if (typeof (window as any).gtag !== 'undefined') {
-      (window as any).gtag('event', 'click_to_call');
+    if (window.gtag) {
+      window.gtag('event', 'click_to_call');
     }
   };
 
   return (
-    <section id="contact" className="section-spacing bg-off-white/50 scroll-mt-20">{/* Added scroll-mt for anchor */}
+    <section id="contact" className="section-spacing bg-off-white/50 scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8 fade-up">
@@ -179,10 +173,28 @@ const TwoStepQuoteForm = () => {
           </div>
 
           <div className="max-w-2xl mx-auto fade-up">
+            {isSubmitted ? (
+              <Card className="border-2 border-green-500/30 shadow-xl rounded-xl">
+                <CardContent className="py-12 text-center space-y-4">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-2">
+                    <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-brand-navy">Got it! We're on it.</h3>
+                  <p className="text-muted-foreground text-lg max-w-md mx-auto">
+                    We're looking up your roof now. Expect a text or email with your quote within <strong>1 hour</strong>.
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    Questions? Call <a href="tel:12067526690" className="text-brand-orange font-semibold hover:underline">206-752-6690</a> anytime.
+                  </p>
+                </CardContent>
+              </Card>
+            ) : (
               <Card className="border-2 border-brand-navy/20 shadow-xl rounded-xl">
                 <CardHeader className="pb-4">
                   <CardDescription className="text-base text-muted-foreground">
-                    We typically respond within 1 hour during business hours
+                    ⚡ Most quotes sent within 1 hour · No obligation
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -302,7 +314,7 @@ const TwoStepQuoteForm = () => {
                                 control={form.control}
                                 name="services"
                                 render={({ field }) => (
-                                  <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
+                                  <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border-2 border-brand-orange/40 bg-brand-orange/5 p-4 relative">
                                     <FormControl>
                                       <Checkbox
                                         checked={field.value?.includes("Roof cleaning (moss removal & treatment)")}
@@ -316,9 +328,9 @@ const TwoStepQuoteForm = () => {
                                     </FormControl>
                                     <div className="flex flex-col space-y-1">
                                       <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
-                                        Roof cleaning (moss removal & treatment)
+                                        Roof Cleaning (our premium all-in-one)
                                       </FormLabel>
-                                      <span className="text-xs text-muted-foreground">Starting at $500</span>
+                                      <span className="text-xs text-muted-foreground">Most popular • Moss removal, roof treatment & gutter cleaning included • $499+</span>
                                     </div>
                                   </FormItem>
                                 )}
@@ -343,7 +355,7 @@ const TwoStepQuoteForm = () => {
                                       <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
                                         Gutter cleaning (includes roof blow-off)
                                       </FormLabel>
-                              <span className="text-xs text-muted-foreground">Starting at $300</span>
+                              <span className="text-xs text-muted-foreground">Starting at $250</span>
                                     </div>
                                   </FormItem>
                                 )}
@@ -405,9 +417,9 @@ const TwoStepQuoteForm = () => {
                                   <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
                                     <FormControl>
                                       <Checkbox
-                                        checked={field.value?.includes("Dryer vent cleaning")}
+                                        checked={field.value?.includes("Other")}
                                         onCheckedChange={(checked) => {
-                                          const value = "Dryer vent cleaning";
+                                          const value = "Other";
                                           return checked
                                             ? field.onChange([...field.value, value])
                                             : field.onChange(field.value?.filter((v) => v !== value));
@@ -415,7 +427,7 @@ const TwoStepQuoteForm = () => {
                                       />
                                     </FormControl>
                                     <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
-                                      Dryer vent cleaning
+                                      Other / Not sure
                                     </FormLabel>
                                   </FormItem>
                                 )}
@@ -435,13 +447,17 @@ const TwoStepQuoteForm = () => {
                         {isSubmitting ? "Sending..." : "Get My Free Quote →"}
                       </Button>
 
+                      <p className="text-center text-muted-foreground text-xs">
+                        🔒 Your info stays private — we never share or spam.
+                      </p>
                       <p className="text-center text-muted-foreground text-sm">
-                        194+ ⭐⭐⭐⭐⭐ Reviews  •  12-Month Guarantee  •  Licensed & Insured
+                        Trusted by 200+ homeowners in Kenmore, Bothell & Kirkland  •  Licensed & Insured
                       </p>
                     </form>
                   </Form>
                 </CardContent>
               </Card>
+            )}
           </div>
         </div>
       </div>

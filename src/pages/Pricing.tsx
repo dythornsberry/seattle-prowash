@@ -92,7 +92,7 @@ const Pricing = () => {
                 <CardContent className="space-y-6">
                   <div className="text-center py-4 bg-brand-orange/5 rounded-lg">
                     <p className="text-sm text-muted-foreground mb-1">Typical range</p>
-                    <p className="text-3xl font-bold text-brand-blue">$500 – $2,000</p>
+                    <p className="text-3xl font-bold text-brand-blue">$499 – $2,000</p>
                     <p className="text-sm text-muted-foreground mt-1">Based on roof size & conditions</p>
                   </div>
                   
@@ -153,7 +153,7 @@ const Pricing = () => {
                 <CardContent className="space-y-6">
                   <div className="text-center py-4 bg-brand-orange/5 rounded-lg">
                     <p className="text-sm text-muted-foreground mb-1">Typical range</p>
-                    <p className="text-3xl font-bold text-brand-blue">$300 – $600</p>
+                    <p className="text-3xl font-bold text-brand-blue">$250 – $600</p>
                     <p className="text-sm text-muted-foreground mt-1">Based on home size & accessibility</p>
                   </div>
                   

@@ -13,7 +13,7 @@ const HomeFAQ = () => {
   const topFAQs = [
     {
       question: "What does roof or gutter cleaning cost?",
-      answer: "Most homes in our area range from $300–$1,200 depending on roof size, pitch, and access. Typical starting prices: Gutter cleaning $300+, Roof cleaning $500+. We send same-day estimates.",
+      answer: "Most homes in our area range from $250–$1,200 depending on roof size, pitch, and access. Typical starting prices: Gutter cleaning $250+, Moss treatment with gutter cleaning $499+. We send same-day estimates.",
       icon: CheckCircle,
       cta: true
     },
@@ -71,7 +71,7 @@ const HomeFAQ = () => {
               Frequently Asked Questions
             </h2>
             <p className="text-base text-muted-foreground">
-              Everything you need to know
+              Straight answers from a local team — no sales pitch
             </p>
           </div>
 

@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href="https://www.seattleprowash.com/" />
-    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="512x512" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
     
     <!-- Critical Font Preload (Poppins for headings) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
     
     <title>Expert Roof & Gutter Cleaning in Seattle | Seattle ProWash</title>
-    <meta name="description" content="Expert roof cleaning & moss removal in Seattle, Bothell, Kirkland, Kenmore. Licensed & insured. 12-month moss-free guarantee. 194+ 5-star reviews. Same-day quotes. Call 206-752-6690." />
+    <meta name="description" content="Expert roof cleaning & moss removal in Seattle, Bothell, Kirkland, Kenmore. Licensed & insured. 12-month moss-free guarantee. 200+ 5-star reviews. Same-day quotes. Call 206-752-6690." />
     <meta name="author" content="Seattle ProWash" />
     <meta name="keywords" content="roof cleaning, moss removal, gutter cleaning, roof maintenance, Seattle, Kenmore WA, Bothell, Kirkland, Woodinville, Redmond, Sammamish, Bellevue" />
     
@@ -31,7 +33,7 @@
     <link rel="dns-prefetch" href="https://maps.googleapis.com" />
     
     <!-- Google Maps Places API for address autocomplete -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGwqAN4cRu6rBXnvC4fKQc79xD5nHxnq0&libraries=places&loading=async" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=%VITE_GOOGLE_MAPS_API_KEY%&libraries=places&loading=async" async defer></script>
 
     <meta property="og:title" content="Roof & Gutter Cleaning in Seattle | Seattle ProWash" />
     <meta property="og:description" content="Professional roof cleaning with moss removal treatment and gutter cleaning with roof blow-off. 12-month moss-free guarantee. Serving Kenmore, Bothell, Kirkland, and Shoreline. Same-day estimates." />
@@ -114,8 +116,8 @@
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "194"
+        "ratingValue": "5.0",
+        "reviewCount": "201"
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -189,7 +191,7 @@
             ],
             "offers": {
               "@type": "Offer",
-              "priceRange": "$300+",
+              "priceRange": "$250+",
               "priceCurrency": "USD",
               "availability": "https://schema.org/InStock"
             },
@@ -212,13 +214,15 @@
         if (window.gtag) return;
         var script = document.createElement('script');
         script.async = true;
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
+        var gaId = '%VITE_GA4_MEASUREMENT_ID%';
+        if (!gaId || gaId.indexOf('VITE_') === 0) return;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
         document.head.appendChild(script);
-        
+
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
+        gtag('config', gaId);
         window.gtag = gtag;
       });
     </script>

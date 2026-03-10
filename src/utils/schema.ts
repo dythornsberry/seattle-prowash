@@ -251,7 +251,7 @@ export const COMPANY_INFO = {
     "Sammamish"     // Secondary
   ],
   rating: {
-    ratingValue: 4.9,
-    reviewCount: 194
+    ratingValue: 5.0,
+    reviewCount: 201
   }
 };

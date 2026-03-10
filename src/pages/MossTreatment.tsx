@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import MobileBottomBar from "@/components/MobileBottomBar";
+import mossTreatmentHero from "@/assets/roof-softwash-in-progress.jpg";
 
 const MossTreatment = () => {
   useEffect(() => {
@@ -24,13 +25,17 @@ const MossTreatment = () => {
         
         <main className="pt-16 md:pt-20">
           {/* Hero Section */}
-          <section className="bg-primary-teal text-white py-20">
-            <div className="container mx-auto px-4">
+          <section className="relative text-white py-20 overflow-hidden">
+            <div className="absolute inset-0 z-0">
+              <img src={mossTreatmentHero} alt="Professional moss treatment in progress on Seattle roof" className="w-full h-full object-cover" loading="eager" />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/65 to-black/75"></div>
+            </div>
+            <div className="container mx-auto px-4 relative z-10">
               <div className="max-w-4xl mx-auto text-center">
                 <Badge variant="secondary" className="mb-4">
                   Moss Treatment Specialists
                 </Badge>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
                   Professional Roof Moss Treatment in Kenmore, Bothell & Kirkland
                 </h1>
                 <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
@@ -218,7 +223,7 @@ const MossTreatment = () => {
                   </Button>
                 </div>
                 <p className="text-sm text-gray-500 mt-4">
-                  Same-day estimates • Licensed & Insured • 194+ 5-star reviews
+                  Same-day estimates • Licensed & Insured • 200+ 5-star reviews
                 </p>
               </div>
             </div>

@@ -3,35 +3,44 @@
  */
 
 /**
+ * Calculate dynamic offset for sticky headers
+ */
+const getStickyOffset = (): number => {
+  const topBar = document.getElementById('sticky-top-bar');
+  const header = document.getElementById('site-header');
+  const extra = 12; // buffer so content clears the header shadow
+
+  if (header) {
+    return header.getBoundingClientRect().bottom + extra;
+  } else if (topBar) {
+    return topBar.getBoundingClientRect().bottom + extra;
+  }
+  return 92; // default reasonable offset
+};
+
+/**
+ * Scroll to a section by ID with offset for sticky headers
+ */
+export const scrollToSection = (sectionId: string, options?: { preferForm?: boolean; behavior?: ScrollBehavior }) => {
+  const element = document.getElementById(sectionId);
+  if (!element) return false;
+
+  const formElement = options?.preferForm ? element.querySelector('form') as HTMLElement | null : null;
+  const target = formElement ?? element;
+
+  const offset = getStickyOffset();
+  const y = target.getBoundingClientRect().top + window.scrollY - offset;
+  window.scrollTo({ top: y, behavior: options?.behavior ?? 'smooth' });
+  return true;
+};
+
+/**
  * Navigate to the contact section on the home page
- * This works from any page and ensures proper scrolling
  */
 export const navigateToContact = () => {
-  // If we're already on the home page, just scroll to contact with offset for sticky bars
   if (window.location.pathname === '/') {
-    const contactElement = document.getElementById('contact');
-    if (contactElement) {
-      const formElement = contactElement.querySelector('form') as HTMLElement | null;
-      const target = (formElement ?? (contactElement as HTMLElement));
-
-      // Compute dynamic offset using element bottoms + small padding
-      const topBar = document.getElementById('sticky-top-bar') as HTMLElement | null;
-      const header = document.getElementById('site-header') as HTMLElement | null;
-      let offset = 0;
-      const extra = 12; // small buffer so content clears the header shadow
-      if (header) {
-        offset = header.getBoundingClientRect().bottom + extra;
-      } else if (topBar) {
-        offset = topBar.getBoundingClientRect().bottom + extra;
-      } else {
-        offset = 92; // default reasonable offset
-      }
-      const y = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-      return;
-    }
+    if (scrollToSection('contact', { preferForm: true })) return;
   }
-  // Navigate to home page with hash (Index will handle offset scrolling)
   window.location.href = '/#contact';
 };
 
@@ -40,19 +49,9 @@ export const navigateToContact = () => {
  */
 export const navigateToReviews = () => {
   if (window.location.pathname === '/') {
-    const reviewsElement = document.getElementById('reviews');
-    if (reviewsElement) {
-      // Account for sticky top bar height
-      const offsetTop = reviewsElement.offsetTop - 60;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: 'smooth'
-      });
-    }
-  } else {
-    // Navigate to home page with hash
-    window.location.href = '/#reviews';
+    if (scrollToSection('reviews')) return;
   }
+  window.location.href = '/#reviews';
 };
 
 /**

@@ -14,8 +14,8 @@ export const initScrollTracking = () => {
     // Track 50%
     if (scrollPercentage >= 50 && !tracked50) {
       tracked50 = true;
-      if (typeof (window as any).gtag !== 'undefined') {
-        (window as any).gtag('event', 'scroll_depth', {
+      if (window.gtag) {
+        window.gtag('event', 'scroll_depth', {
           depth_percentage: 50
         });
       }
@@ -24,8 +24,8 @@ export const initScrollTracking = () => {
     // Track 75%
     if (scrollPercentage >= 75 && !tracked75) {
       tracked75 = true;
-      if (typeof (window as any).gtag !== 'undefined') {
-        (window as any).gtag('event', 'scroll_depth', {
+      if (window.gtag) {
+        window.gtag('event', 'scroll_depth', {
           depth_percentage: 75
         });
       }
@@ -34,8 +34,8 @@ export const initScrollTracking = () => {
     // Track 100%
     if (scrollPercentage >= 99 && !tracked100) {
       tracked100 = true;
-      if (typeof (window as any).gtag !== 'undefined') {
-        (window as any).gtag('event', 'scroll_depth', {
+      if (window.gtag) {
+        window.gtag('event', 'scroll_depth', {
           depth_percentage: 100
         });
       }

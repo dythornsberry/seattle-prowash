@@ -26,7 +26,7 @@ const UnifiedContactBar = () => {
         {isExpanded ? (
           <div className="bg-white border border-border rounded-2xl shadow-2xl p-4 space-y-2 animate-fade-in">
             <div className="flex items-center justify-between mb-3">
-              <span className="text-sm font-semibold text-foreground">Contact Us</span>
+              <span className="text-sm font-semibold text-foreground">Get a Free Quote</span>
               <button
                 onClick={() => setIsExpanded(false)}
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -65,10 +65,10 @@ const UnifiedContactBar = () => {
         ) : (
           <Button
             variant="cta-orange"
-            onClick={() => setIsExpanded(true)}
+            onClick={handleQuote}
             className="shadow-2xl rounded-full px-6 py-6 text-base font-semibold"
           >
-            Contact Us
+            Get a Free Quote
           </Button>
         )}
       </div>
@@ -78,7 +78,7 @@ const UnifiedContactBar = () => {
         {isExpanded ? (
           <div className="p-4 space-y-2 animate-fade-in">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-semibold text-foreground">Contact Us</span>
+              <span className="text-sm font-semibold text-foreground">Get a Free Quote</span>
               <button
                 onClick={() => setIsExpanded(false)}
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -121,7 +121,7 @@ const UnifiedContactBar = () => {
               onClick={() => setIsExpanded(true)}
               className="w-full font-semibold"
             >
-              Contact Us
+              Get a Free Quote
             </Button>
           </div>
         )}

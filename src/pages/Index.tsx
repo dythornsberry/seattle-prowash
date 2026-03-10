@@ -1,11 +1,11 @@
-import { useEffect, useCallback } from "react";
+import { useEffect } from "react";
 import { initScrollTracking } from "@/utils/scrollTracking";
+import { scrollToSection } from "@/lib/navigation";
 import { generateLocalBusinessSchema, generateBreadcrumbSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
 import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import EnhancedTrustBar from "@/components/EnhancedTrustBar";
-import AsSeenOn from "@/components/AsSeenOn";
 import ServicesPreview from "@/components/ServicesPreview";
 import CostOfWaiting from "@/components/CostOfWaiting";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
@@ -50,45 +50,22 @@ const Index = () => {
     };
   }, []);
 
-  // Optimized hash navigation - merged duplicate logic
-  const handleHashNavigation = useCallback(() => {
-    const hash = window.location.hash;
-    if (!hash) {
-      window.scrollTo(0, 0);
-      return;
-    }
-
-    const targetId = hash.substring(1);
-    const element = document.getElementById(targetId);
-    if (!element) return;
-
-    // Prefer form element for contact sections
-    const formElement = element.querySelector('form') as HTMLElement | null;
-    const target = (formElement && targetId === 'contact') ? formElement : element;
-
-    // Calculate offset from sticky headers
-    const topBar = document.getElementById('sticky-top-bar');
-    const header = document.getElementById('site-header');
-    let offset = 120; // Default fallback
-
-    if (header?.offsetHeight) {
-      offset = (topBar?.offsetHeight || 0) + header.offsetHeight + 20;
-    } else if (topBar?.offsetHeight) {
-      offset = topBar.offsetHeight + 20;
-    }
-
-    const y = target.getBoundingClientRect().top + window.scrollY - offset;
-    
-    // Use instant scroll instead of smooth for better performance
-    window.scrollTo({ top: y });
-  }, []);
-
-  // Handle initial hash navigation
+  // Handle initial hash navigation using shared scroll utility
   useEffect(() => {
-    // Delay to ensure DOM is ready
-    const timer = setTimeout(handleHashNavigation, 100);
+    const timer = setTimeout(() => {
+      const hash = window.location.hash;
+      if (!hash) {
+        window.scrollTo(0, 0);
+        return;
+      }
+      const targetId = hash.substring(1);
+      scrollToSection(targetId, {
+        preferForm: targetId === 'contact',
+        behavior: 'auto',
+      });
+    }, 100);
     return () => clearTimeout(timer);
-  }, [handleHashNavigation]);
+  }, []);
 
   // Optimized Intersection Observer for fade-up animations
   useEffect(() => {
@@ -130,15 +107,14 @@ const Index = () => {
         <main>
           <Hero />
           <EnhancedTrustBar />
-          <AsSeenOn />
-          <CostOfWaiting />
           <ServicesPreview />
+          <div className="bg-off-white">
+            <TwoStepQuoteForm />
+          </div>
+          <CostOfWaiting />
           <GoogleReviewsCarousel />
           <div className="bg-navy">
             <BeforeAfterSlider />
-          </div>
-          <div className="bg-off-white">
-            <TwoStepQuoteForm />
           </div>
           <HomeFAQ />
           <ServiceAreasSection 
@@ -152,12 +128,12 @@ const Index = () => {
               { name: "Shoreline", path: "/shoreline-roof-gutter-cleaning", description: "Shoreline roof and gutter experts" },
               { name: "Woodinville", path: "/woodinville-roof-gutter-cleaning", description: "Wine country roof care specialists" },
               { name: "Seattle", path: "/seattle-roof-gutter-cleaning", description: "Seattle's roof and gutter cleaning experts" },
-              { name: "Bellevue", path: "/service-areas", description: "Expert roof and gutter cleaning on the Eastside" },
-              { name: "Redmond", path: "/service-areas", description: "Roof and gutter cleaning for Redmond homes" },
-              { name: "Sammamish", path: "/service-areas", description: "Premium roof cleaning for luxury homes" },
-              { name: "Edmonds", path: "/service-areas", description: "Coastal property roof specialists" },
-              { name: "Mill Creek", path: "/service-areas", description: "Mill Creek roof cleaning specialists" },
-              { name: "Mountlake Terrace", path: "/service-areas", description: "Roof and gutter cleaning services" },
+              { name: "Bellevue", path: "/bellevue-roof-gutter-cleaning", description: "Expert roof and gutter cleaning on the Eastside" },
+              { name: "Redmond", path: "/redmond-roof-gutter-cleaning", description: "Roof and gutter cleaning for Redmond homes" },
+              { name: "Sammamish", path: "/sammamish-roof-gutter-cleaning", description: "Premium roof cleaning for luxury homes" },
+              { name: "Edmonds", path: "/edmonds-roof-gutter-cleaning", description: "Coastal property roof specialists" },
+              { name: "Mill Creek", path: "/mill-creek-roof-gutter-cleaning", description: "Mill Creek roof cleaning specialists" },
+              { name: "Mountlake Terrace", path: "/mountlake-terrace-roof-gutter-cleaning", description: "Roof and gutter cleaning services" },
             ]}
           />
           <ServiceAreaMap />

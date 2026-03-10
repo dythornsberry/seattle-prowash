@@ -15,7 +15,7 @@ const ExitIntentPopup = () => {
       return;
     }
 
-    let timeoutId: NodeJS.Timeout;
+    let timeoutId: ReturnType<typeof setTimeout>;
 
     const handleMouseLeave = (e: MouseEvent) => {
       // Only trigger if mouse leaves from top of viewport and hasn't been shown yet
@@ -51,8 +51,8 @@ const ExitIntentPopup = () => {
 
   const handleGetQuote = () => {
     // Track exit intent conversion
-    if (typeof (window as any).gtag !== 'undefined') {
-      (window as any).gtag('event', 'exit_intent_conversion', {
+    if (window.gtag) {
+      window.gtag('event', 'exit_intent_conversion', {
         location: 'exit_popup'
       });
     }
@@ -91,20 +91,20 @@ const ExitIntentPopup = () => {
 
             {/* Heading */}
             <h3 className="text-2xl md:text-3xl font-bold text-brand-navy mb-3">
-              Wait! Don't Let Moss Damage Your Roof
+              Before You Go — Quick Question
             </h3>
 
             {/* Subheading */}
             <p className="text-gray-700 text-lg mb-6">
-              <strong>Winter moisture accelerates moss growth.</strong> Every week you wait, the damage spreads. Get a free inspection before it's too late.
+              <strong>Moss doesn't stop growing while you decide.</strong> Every week you wait, the damage gets more expensive to fix. Get a free quote — most homeowners hear back within 1 hour.
             </p>
 
             {/* Trust Signals */}
             <div className="grid grid-cols-3 gap-4 mb-6 py-4 border-y border-gray-200">
               <div className="text-center">
                 <Star className="w-6 h-6 text-brand-orange mx-auto mb-1 fill-brand-orange" />
-                <div className="text-sm font-semibold text-gray-900">4.9★ Rating</div>
-                <div className="text-xs text-gray-600">194+ Reviews</div>
+                <div className="text-sm font-semibold text-gray-900">5.0★ Rating</div>
+                <div className="text-xs text-gray-600">200+ Reviews</div>
               </div>
               <div className="text-center">
                 <Shield className="w-6 h-6 text-brand-orange mx-auto mb-1" />

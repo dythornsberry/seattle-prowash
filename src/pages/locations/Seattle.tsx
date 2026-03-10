@@ -61,7 +61,7 @@ const Seattle = () => {
           "name": "What's a typical price range in Seattle?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most Seattle homes range from $300-$600 for standard single-story roof cleaning and $400-$800 for two-story homes. Gutter cleaning typically runs $150-$400 depending on home size and gutter length. Final pricing depends on roof pitch, access, and specific conditions—we provide exact quotes after a quick photo review."
+            "text": "Most Seattle homes range from $300-$600 for standard single-story roof cleaning and $400-$800 for two-story homes. Gutter cleaning typically runs $250-$400 depending on home size and gutter length. Final pricing depends on roof pitch, access, and specific conditions—we provide exact quotes after a quick photo review."
           }
         },
         {
@@ -181,9 +181,10 @@ const Seattle = () => {
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {localJobs.map((job, index) => (
                   <Card key={index} className="overflow-hidden">
-                    <img 
-                      src={job.image} 
+                    <img
+                      src={job.image}
                       alt={`${job.neighborhood}, Seattle - ${job.description}`}
+                      loading="lazy"
                       className="w-full h-48 object-cover"
                     />
                     <CardContent className="p-4">
@@ -307,10 +308,10 @@ const Seattle = () => {
                 <Card>
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold text-brand-navy mb-4">Gutter Cleaning</h3>
-                    <p className="text-3xl font-bold text-brand-orange mb-2">$150 – $400</p>
+                    <p className="text-3xl font-bold text-brand-orange mb-2">$250 – $400</p>
                     <p className="text-sm text-muted-foreground mb-4">Most Seattle homes</p>
                     <ul className="text-sm space-y-2 text-muted-foreground">
-                      <li>• 1-story: $150-$250</li>
+                      <li>• 1-story: $250-$350</li>
                       <li>• 2-story: $250-$400</li>
                       <li>• Includes downspout flush & haul-away</li>
                     </ul>
@@ -376,7 +377,7 @@ const Seattle = () => {
                 <Card>
                   <CardContent className="p-6">
                     <h3 className="font-bold text-brand-navy mb-2">What's a typical price range in Seattle?</h3>
-                    <p className="text-muted-foreground">Most Seattle homes range from $300-$600 for standard single-story roof cleaning and $400-$800 for two-story homes. Gutter cleaning typically runs $150-$400 depending on home size and gutter length.</p>
+                    <p className="text-muted-foreground">Most Seattle homes range from $300-$600 for standard single-story roof cleaning and $400-$800 for two-story homes. Gutter cleaning typically runs $250-$400 depending on home size and gutter length.</p>
                   </CardContent>
                 </Card>
                 <Card>

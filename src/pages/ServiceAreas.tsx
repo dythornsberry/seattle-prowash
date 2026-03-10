@@ -60,7 +60,7 @@ const ServiceAreas = () => {
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <span className="bg-white/10 px-4 py-2 rounded-full">12-Month Moss-Free Guarantee</span>
                   <span className="bg-white/10 px-4 py-2 rounded-full">Same-Day Estimates</span>
-                  <span className="bg-white/10 px-4 py-2 rounded-full">194+ 5-Star Reviews</span>
+                  <span className="bg-white/10 px-4 py-2 rounded-full">200+ 5-Star Reviews</span>
                 </div>
               </div>
             </div>
@@ -248,7 +248,7 @@ const ServiceAreas = () => {
                     <div className="w-16 h-16 bg-primary-teal rounded-full flex items-center justify-center mx-auto mb-4">
                       <CheckCircle className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-dark-teal mb-3">194+ Five-Star Reviews</h3>
+                    <h3 className="text-xl font-bold text-dark-teal mb-3">200+ Five-Star Reviews</h3>
                     <p className="text-gray-600">
                       Join hundreds of satisfied customers across the Seattle metro area who trust our service.
                     </p>

@@ -5,8 +5,8 @@ import { navigateToContact } from "@/lib/navigation";
 const StickyTopBar = () => {
   const handleCallClick = () => {
     // Track phone call click
-    if (typeof (window as any).gtag !== 'undefined') {
-      (window as any).gtag('event', 'phone_call_click', {
+    if (window.gtag) {
+      window.gtag('event', 'phone_call_click', {
         location: 'sticky_top_bar',
         phone_number: '2067526690'
       });
@@ -19,7 +19,7 @@ const StickyTopBar = () => {
       <div className="container mx-auto px-4 h-full">
         <div className="flex items-center justify-between gap-2 h-full">
           <div className="text-white font-medium text-xs md:text-base">
-            🏠 <span className="hidden sm:inline">Roof Cleaning & Moss Removal Specialists</span><span className="sm:hidden">Roof & Moss Pros</span>
+            🏠 <span className="hidden sm:inline">Kenmore's Roof & Gutter Cleaning Experts</span><span className="sm:hidden">Roof & Gutter Pros</span>
           </div>
           <div className="flex items-center gap-2">
             <button

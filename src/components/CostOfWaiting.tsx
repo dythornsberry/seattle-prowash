@@ -51,7 +51,7 @@ const CostOfWaiting = () => {
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-text-charcoal"><strong>$10,000-$30,000</strong> roof replacement vs. $300-$800 cleaning</span>
+                    <span className="text-text-charcoal"><strong>$10,000-$30,000</strong> roof replacement vs. $499-$1,200 cleaning (most homes)</span>
                   </li>
                 </ul>
               </CardContent>
@@ -80,15 +80,15 @@ const CostOfWaiting = () => {
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-bright-green mt-0.5 flex-shrink-0" />
-                    <span className="text-text-charcoal">Extend roof life with proper treatment</span>
+                    <span className="text-text-charcoal">Extend your roof's lifespan <strong>10–15 years</strong> with proper moss treatment</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-bright-green mt-0.5 flex-shrink-0" />
-                    <span className="text-text-charcoal">Boost curb appeal immediately</span>
+                    <span className="text-text-charcoal">Boost curb appeal — most homeowners notice the difference from the street</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-bright-green mt-0.5 flex-shrink-0" />
-                    <span className="text-text-charcoal">Professional service you can trust</span>
+                    <span className="text-text-charcoal">12-month moss-free guarantee — if it grows back, we re-treat free</span>
                   </li>
                 </ul>
                 <GuaranteeBadge className="text-sm" />
