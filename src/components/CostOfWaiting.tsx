@@ -1,6 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, AlertTriangle } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import GuaranteeBadge from "@/components/GuaranteeBadge";
 
 const CostOfWaiting = () => {
