@@ -129,17 +129,8 @@ Deno.serve(async (req: Request) => {
   console.log("Starting form health check...");
 
   try {
-    // Get alert email from request body or use default
-    let alertEmail = "dythornsberry@gmail.com";
-    
-    try {
-      const body = await req.json();
-      if (body.alertEmail) {
-        alertEmail = body.alertEmail;
-      }
-    } catch {
-      // No body provided, use default
-    }
+    // Hardcoded alert email — never accept from request body to prevent abuse
+    const alertEmail = "dythornsberry@gmail.com";
 
     // Run the health check
     const result = await testFormSubmission();
