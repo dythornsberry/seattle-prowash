@@ -31,6 +31,16 @@ function getCorsHeaders(req: Request): Record<string, string> {
 
 const NOTIFICATION_EMAIL = "dythornsberry@gmail.com";
 
+// Sanitize user input before injecting into HTML email to prevent injection
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 async function forwardToZapier(payload: Record<string, unknown>) {
   const url = Deno.env.get("ZAPIER_WEBHOOK_URL");
   if (!url) {
@@ -68,30 +78,30 @@ async function sendEmailNotification(body: Record<string, string>) {
     const emailResponse = await resend.emails.send({
       from: "Seattle ProWash <onboarding@resend.dev>",
       to: [NOTIFICATION_EMAIL],
-      subject: `🏠 New Quote Request from ${body.name}`,
+      subject: `🏠 New Quote Request from ${escapeHtml(body.name)}`,
       html: `
         <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <h1 style="color: #1a365d; margin-bottom: 20px;">📋 New Quote Request</h1>
-          
+
           <div style="background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
             <h2 style="color: #2d3748; margin: 0 0 15px 0; font-size: 18px;">Customer Details</h2>
-            
-            <p style="margin: 8px 0;"><strong>Name:</strong> ${body.name}</p>
-            <p style="margin: 8px 0;"><strong>Phone:</strong> <a href="tel:${body.phone.replace(/\D/g, '')}">${body.phone}</a></p>
-            <p style="margin: 8px 0;"><strong>Address:</strong> ${body.address}</p>
-            ${body.email ? `<p style="margin: 8px 0;"><strong>Email:</strong> <a href="mailto:${body.email}">${body.email}</a></p>` : ''}
-            ${body.services_requested ? `<p style="margin: 8px 0;"><strong>Services:</strong> ${body.services_requested}</p>` : ''}
-            ${body.details ? `<p style="margin: 8px 0;"><strong>Details:</strong> ${body.details}</p>` : ''}
+
+            <p style="margin: 8px 0;"><strong>Name:</strong> ${escapeHtml(body.name)}</p>
+            <p style="margin: 8px 0;"><strong>Phone:</strong> <a href="tel:${body.phone.replace(/\D/g, '')}">${escapeHtml(body.phone)}</a></p>
+            <p style="margin: 8px 0;"><strong>Address:</strong> ${escapeHtml(body.address)}</p>
+            ${body.email ? `<p style="margin: 8px 0;"><strong>Email:</strong> <a href="mailto:${escapeHtml(body.email)}">${escapeHtml(body.email)}</a></p>` : ''}
+            ${body.services_requested ? `<p style="margin: 8px 0;"><strong>Services:</strong> ${escapeHtml(body.services_requested)}</p>` : ''}
+            ${body.details ? `<p style="margin: 8px 0;"><strong>Details:</strong> ${escapeHtml(body.details)}</p>` : ''}
           </div>
-          
+
           <div style="background: #fffbeb; border: 1px solid #fbbf24; border-radius: 8px; padding: 15px; margin-bottom: 20px;">
             <p style="margin: 0; color: #92400e;">
               <strong>⏰ Quick tip:</strong> Respond within 1 hour for best conversion!
             </p>
           </div>
-          
-          <p style="margin: 8px 0; color: #718096;"><strong>Submitted:</strong> ${body.timestamp}</p>
-          <p style="margin: 8px 0; color: #718096;"><strong>Source:</strong> ${body.source}</p>
+
+          <p style="margin: 8px 0; color: #718096;"><strong>Submitted:</strong> ${escapeHtml(body.timestamp)}</p>
+          <p style="margin: 8px 0; color: #718096;"><strong>Source:</strong> ${escapeHtml(body.source)}</p>
           
           <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 20px 0;" />
           
