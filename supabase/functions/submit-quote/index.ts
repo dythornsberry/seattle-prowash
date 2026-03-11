@@ -88,7 +88,7 @@ async function sendEmailNotification(body: Record<string, string>) {
 
             <p style="margin: 8px 0;"><strong>Name:</strong> ${escapeHtml(body.name)}</p>
             <p style="margin: 8px 0;"><strong>Phone:</strong> <a href="tel:${body.phone.replace(/\D/g, '')}">${escapeHtml(body.phone)}</a></p>
-            <p style="margin: 8px 0;"><strong>Address:</strong> ${escapeHtml(body.address)}</p>
+            <p style="margin: 8px 0;"><strong>Address:</strong> ${escapeHtml(body.address)} ${body.address_verified ? '✅' : '<span style="color: #e53e3e;">⚠️ not verified</span>'}</p>
             ${body.email ? `<p style="margin: 8px 0;"><strong>Email:</strong> <a href="mailto:${escapeHtml(body.email)}">${escapeHtml(body.email)}</a></p>` : ''}
             ${body.services_requested ? `<p style="margin: 8px 0;"><strong>Services:</strong> ${escapeHtml(body.services_requested)}</p>` : ''}
             ${body.details ? `<p style="margin: 8px 0;"><strong>Details:</strong> ${escapeHtml(body.details)}</p>` : ''}
@@ -200,6 +200,7 @@ Deno.serve(async (req: Request) => {
       address: String(payload.address || ""),
       details: String(payload.details || ""),
       services_requested: String(payload.services || ""),
+      address_verified: Boolean(payload.address_verified),
       timestamp: new Date().toISOString(),
       source: String(payload.source || "Website Quote Form"),
       business_name: String(payload.business_name || "Seattle ProWash"),

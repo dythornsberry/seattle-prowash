@@ -51,6 +51,7 @@ const TwoStepQuoteForm = () => {
   // Google Places Autocomplete
   const addressInputRef = useRef<HTMLInputElement | null>(null);
   const autocompleteRef = useRef<google.maps.places.Autocomplete | null>(null);
+  const addressFromPlacesRef = useRef(false); // Track if address was selected from autocomplete
 
   const initAutocomplete = useCallback(() => {
     if (!addressInputRef.current || autocompleteRef.current) return;
@@ -66,6 +67,7 @@ const TwoStepQuoteForm = () => {
       const place = autocomplete.getPlace();
       if (place?.formatted_address) {
         form.setValue('address', place.formatted_address, { shouldValidate: true });
+        addressFromPlacesRef.current = true;
       }
     });
 
@@ -132,6 +134,7 @@ const TwoStepQuoteForm = () => {
     address: values.address,
     phone: values.phone,
     services: values.services.join(", "),
+    address_verified: addressFromPlacesRef.current,
     timestamp: new Date().toISOString(),
     source: "Website Quote Form",
     business_name: "Seattle ProWash",
@@ -175,6 +178,7 @@ const TwoStepQuoteForm = () => {
       setIsSubmitted(true);
       setStep(1);
       form.reset();
+      addressFromPlacesRef.current = false;
 
     } catch (error) {
       console.error("Quote submit error:", error);
@@ -372,6 +376,11 @@ const TwoStepQuoteForm = () => {
                                     ref={(el) => {
                                       field.ref(el);
                                       addressInputRef.current = el;
+                                    }}
+                                    onChange={(e) => {
+                                      field.onChange(e);
+                                      // If user manually edits after selecting from Places, clear verified flag
+                                      addressFromPlacesRef.current = false;
                                     }}
                                   />
                                 </FormControl>
