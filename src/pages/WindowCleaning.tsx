@@ -68,7 +68,7 @@ const WindowCleaning = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Exterior Window Cleaning | Seattle ProWash"
+        title="Exterior Window Cleaning"
         description="Professional exterior window cleaning in Seattle, Kenmore, Bothell, and surrounding areas. Streak-free results, safe techniques. Free quotes, licensed and insured."
         url="https://www.seattleprowash.com/window-cleaning"
       />

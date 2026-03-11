@@ -4,7 +4,6 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import ExitIntentPopup from "@/components/ExitIntentPopup";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
@@ -49,7 +48,6 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <ExitIntentPopup />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
@@ -99,10 +97,9 @@ const App = () => (
           <Route path="/services/gutter-cleaning" element={<Navigate to="/gutter-cleaning" replace />} />
           <Route path="/services/pressure-washing" element={<Navigate to="/pressure-washing" replace />} />
           <Route path="/services/house-washing" element={<Navigate to="/pressure-washing" replace />} />
-          <Route path="/services/window-cleaning" element={<Navigate to="/roof-cleaning" replace />} />
+          <Route path="/services/window-cleaning" element={<Navigate to="/window-cleaning" replace />} />
           <Route path="/house-washing" element={<Navigate to="/pressure-washing" replace />} />
           <Route path="/soft-wash" element={<Navigate to="/roof-cleaning" replace />} />
-          <Route path="/services/window-cleaning" element={<Navigate to="/window-cleaning" replace />} />
           <Route path="/moss-treatment" element={<MossTreatment />} />
           <Route path="/roof-moss" element={<Navigate to="/roof-cleaning" replace />} />
           <Route path="/roof-moss-removal" element={<Navigate to="/roof-cleaning" replace />} />

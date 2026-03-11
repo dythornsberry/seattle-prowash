@@ -97,7 +97,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Seattle Roof & Gutter Cleaning Experts | Seattle ProWash"
+        title="Seattle Roof & Gutter Cleaning Experts"
         description="Based in Kenmore, serving Bothell, Lynnwood, Kirkland, Shoreline & greater Seattle. Expert roof cleaning and gutter cleaning with 12-month moss-free guarantee. Licensed, insured, 100% satisfaction guaranteed."
         url="https://www.seattleprowash.com"
       />

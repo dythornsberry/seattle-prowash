@@ -53,9 +53,9 @@ const Header = () => {
           {/* Brand Text */}
           <div className="flex items-center">
             <Link to="/">
-              <h1 className="text-xl md:text-2xl font-bold text-white hover:text-brand-orange transition-colors duration-250 cursor-pointer">
+              <span className="text-xl md:text-2xl font-bold text-white hover:text-brand-orange transition-colors duration-250 cursor-pointer">
                 Seattle <span className="text-brand-orange">ProWash</span>
-              </h1>
+              </span>
             </Link>
           </div>
 

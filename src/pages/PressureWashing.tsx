@@ -72,7 +72,7 @@ const PressureWashing = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Pressure Washing Services | Seattle ProWash"
+        title="Pressure Washing Services"
         description="Professional pressure washing for driveways, patios, decks, and siding in Seattle, Kenmore, Bothell, and surrounding areas. Free quotes, licensed and insured."
         url="https://www.seattleprowash.com/pressure-washing"
       />

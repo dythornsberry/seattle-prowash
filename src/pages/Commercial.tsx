@@ -67,7 +67,7 @@ const Commercial = () => {
   return (
     <>
       <SEOHead
-        title="Commercial Cleaning Services | Seattle ProWash"
+        title="Commercial Cleaning Services"
         description="Commercial power washing, roof cleaning, gutter cleaning, and window cleaning for businesses in the Seattle area. Licensed & insured. Free estimates."
         url="https://www.seattleprowash.com/commercial"
       />

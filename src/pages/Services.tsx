@@ -112,7 +112,7 @@ const Services = () => {
   return (
     <>
       <SEOHead
-        title="All Services | Seattle ProWash"
+        title="All Services"
         description="Roof cleaning, gutter cleaning, moss treatment, pressure washing, window cleaning, and commercial services in Seattle, Kenmore, Bothell, Kirkland & beyond."
         url="https://www.seattleprowash.com/services"
       />

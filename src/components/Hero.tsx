@@ -44,8 +44,7 @@ const Hero = () => {
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       {/* Hero Background with Navy Overlay */}
       <div className="absolute inset-0 z-0">
-        <link rel="preload" as="image" href={heroImage} />
-        <img 
+        <img
           src={heroImage}
           alt="Professional roof cleaning service in Seattle - moss removal and roof treatment"
           className="w-full h-full object-cover object-center"

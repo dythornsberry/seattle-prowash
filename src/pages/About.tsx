@@ -42,7 +42,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="About Dylan & Seattle ProWash"
+        title="About Dylan & the Team"
         description="Meet Dylan Thornsberry, owner of Seattle ProWash. Kenmore-based roof and gutter cleaning specialists serving Seattle Metro since 2022. 200+ 5-star reviews."
         url="https://www.seattleprowash.com/about"
       />
