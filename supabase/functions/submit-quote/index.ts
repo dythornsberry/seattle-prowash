@@ -156,10 +156,12 @@ Deno.serve(async (req: Request) => {
 
     console.log("Received quote submission:", payload.name, payload.phone);
 
-    // --- Rate limiting: max 3 submissions per phone number per 15 minutes ---
+    // --- Rate limiting: max 3 submissions per 15 minutes ---
+    // Check by phone if provided, otherwise check by IP to prevent bypass
     const submittedPhone = String(payload.phone || "").replace(/\D/g, "");
+    const fifteenMinAgo = new Date(Date.now() - 15 * 60 * 1000).toISOString();
+
     if (submittedPhone.length >= 7) {
-      const fifteenMinAgo = new Date(Date.now() - 15 * 60 * 1000).toISOString();
       const { count, error: rlError } = await supabaseAdmin
         .from("leads")
         .select("id", { count: "exact", head: true })
@@ -168,6 +170,21 @@ Deno.serve(async (req: Request) => {
 
       if (!rlError && (count ?? 0) >= 3) {
         console.warn("Rate limit exceeded for phone:", submittedPhone.slice(-4));
+        return new Response(JSON.stringify({ ok: false, error: "Too many requests. Please try again later or call 206-752-6690." }), {
+          status: 429,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        });
+      }
+    } else {
+      // No valid phone — rate limit by total anonymous submissions instead
+      const { count, error: rlError } = await supabaseAdmin
+        .from("leads")
+        .select("id", { count: "exact", head: true })
+        .gte("created_at", fifteenMinAgo)
+        .or("phone.is.null,phone.eq.");
+
+      if (!rlError && (count ?? 0) >= 5) {
+        console.warn("Rate limit exceeded for anonymous submissions");
         return new Response(JSON.stringify({ ok: false, error: "Too many requests. Please try again later or call 206-752-6690." }), {
           status: 429,
           headers: { "Content-Type": "application/json", ...corsHeaders },
