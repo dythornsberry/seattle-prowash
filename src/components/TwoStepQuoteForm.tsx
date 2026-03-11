@@ -33,6 +33,7 @@ const TwoStepQuoteForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [step, setStep] = useState(1);
   const EDGE_FUNCTION_NAME = "submit-quote";
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -109,6 +110,15 @@ const TwoStepQuoteForm = () => {
     return () => clearInterval(checkInterval);
   }, [initAutocomplete]);
 
+  // Re-init autocomplete when step 2 renders (address input mounts)
+  useEffect(() => {
+    if (step === 2 && !autocompleteRef.current) {
+      // Small delay to let the DOM render the address input
+      const timer = setTimeout(() => initAutocomplete(), 100);
+      return () => clearTimeout(timer);
+    }
+  }, [step, initAutocomplete]);
+
   const formatPhoneNumber = (value: string) => {
     const cleaned = value.replace(/\D/g, '');
     if (cleaned.length <= 3) return cleaned;
@@ -150,7 +160,7 @@ const TwoStepQuoteForm = () => {
     }
 
     setIsSubmitting(true);
-    
+
     try {
       // Track analytics
       if (window.gtag) {
@@ -163,8 +173,9 @@ const TwoStepQuoteForm = () => {
       await sendToWebhook(values);
 
       setIsSubmitted(true);
+      setStep(1);
       form.reset();
-      
+
     } catch (error) {
       console.error("Quote submit error:", error);
       toast({
@@ -174,6 +185,20 @@ const TwoStepQuoteForm = () => {
       });
     } finally {
       setIsSubmitting(false);
+    }
+  };
+
+  const handleNextStep = async () => {
+    // Validate only step 1 fields before advancing
+    const valid = await form.trigger(['name', 'phone']);
+    if (valid) {
+      setStep(2);
+      // Track step progression
+      if (window.gtag) {
+        window.gtag('event', 'quote_form_step2', {
+          page_location: window.location.pathname
+        });
+      }
     }
   };
 
@@ -218,13 +243,20 @@ const TwoStepQuoteForm = () => {
               <Card className="border-2 border-brand-navy/20 shadow-xl rounded-xl">
                 <CardHeader className="pb-4">
                   <CardDescription className="text-base text-muted-foreground">
-                    ⚡ Most quotes sent within 1 hour · No obligation
+                    {step === 1
+                      ? "Step 1 of 2 — Let's start with your info"
+                      : "Step 2 of 2 — Almost done!"}
                   </CardDescription>
+                  {/* Progress bar */}
+                  <div className="flex gap-2 mt-3">
+                    <div className="h-1.5 flex-1 rounded-full bg-brand-orange" />
+                    <div className={`h-1.5 flex-1 rounded-full transition-colors duration-300 ${step === 2 ? 'bg-brand-orange' : 'bg-brand-navy/15'}`} />
+                  </div>
                 </CardHeader>
                 <CardContent>
                   <Form {...form}>
                     <form className="space-y-6" autoComplete="on" onSubmit={form.handleSubmit(onSubmit)}>
-                      {/* Honeypot field - hidden */}
+                      {/* Honeypot field - hidden on all steps */}
                       <FormField
                         control={form.control}
                         name="company"
@@ -241,242 +273,275 @@ const TwoStepQuoteForm = () => {
                         )}
                       />
 
-                      <FormField
-                        control={form.control}
-                        name="name"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-brand-navy font-semibold">Name *</FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder="Your name"
-                                className="border-brand-navy/30 focus:border-brand-orange min-h-[56px] text-lg md:text-sm md:min-h-[48px] rounded-xl"
-                                autoComplete="name"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
+                      {/* ─── STEP 1: Name + Phone ─── */}
+                      {step === 1 && (
+                        <>
+                          <FormField
+                            control={form.control}
+                            name="name"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel className="text-brand-navy font-semibold">Name *</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    placeholder="Your name"
+                                    className="border-brand-navy/30 focus:border-brand-orange min-h-[56px] text-lg md:text-sm md:min-h-[48px] rounded-xl"
+                                    autoComplete="name"
+                                    {...field}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
 
-                      <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-brand-navy font-semibold">Email *</FormLabel>
-                            <FormControl>
-                              <Input
-                                type="email"
-                                placeholder="your@email.com"
-                                className="border-brand-navy/30 focus:border-brand-orange min-h-[56px] text-lg md:text-sm md:min-h-[48px] rounded-xl"
-                                autoComplete="email"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
+                          <FormField
+                            control={form.control}
+                            name="phone"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel className="text-brand-navy font-semibold">Phone *</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    type="tel"
+                                    placeholder="(206) XXX-XXXX"
+                                    className="border-brand-navy/30 focus:border-brand-orange min-h-[56px] text-lg md:text-sm md:min-h-[48px] rounded-xl"
+                                    autoComplete="tel"
+                                    {...field}
+                                    onChange={(e) => {
+                                      const formatted = formatPhoneNumber(e.target.value);
+                                      field.onChange(formatted);
+                                    }}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
 
-                      <FormField
-                        control={form.control}
-                        name="address"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-brand-navy font-semibold">Address *</FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder="Start typing your address..."
-                                className="border-brand-navy/30 focus:border-brand-orange min-h-[56px] text-lg md:text-sm md:min-h-[48px] rounded-xl"
-                                autoComplete="off"
-                                {...field}
-                                ref={(el) => {
-                                  field.ref(el);
-                                  addressInputRef.current = el;
-                                }}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      
-                      <FormField
-                        control={form.control}
-                        name="phone"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-brand-navy font-semibold">Phone *</FormLabel>
-                            <FormControl>
-                              <Input
-                                type="tel"
-                                placeholder="(206) XXX-XXXX"
-                                className="border-brand-navy/30 focus:border-brand-orange min-h-[56px] text-lg md:text-sm md:min-h-[48px] rounded-xl"
-                                autoComplete="tel"
-                                {...field}
-                                onChange={(e) => {
-                                  const formatted = formatPhoneNumber(e.target.value);
-                                  field.onChange(formatted);
-                                }}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
+                          <Button
+                            type="button"
+                            variant="cta-orange"
+                            className="w-full min-h-[56px] text-lg font-bold rounded-xl"
+                            onClick={handleNextStep}
+                          >
+                            Next — Choose Services →
+                          </Button>
 
-                      <FormField
-                        control={form.control}
-                        name="services"
-                        render={() => (
-                          <FormItem>
-                            <FormLabel className="text-brand-navy font-semibold">Services Needed *</FormLabel>
-                            <div className="space-y-3">
-                                <FormField
-                                control={form.control}
-                                name="services"
-                                render={({ field }) => (
-                                  <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border-2 border-brand-orange/40 bg-brand-orange/5 p-4 relative">
-                                    <FormControl>
-                                      <Checkbox
-                                        checked={field.value?.includes("Roof cleaning (moss removal & treatment)")}
-                                        onCheckedChange={(checked) => {
-                                          const value = "Roof cleaning (moss removal & treatment)";
-                                          return checked
-                                            ? field.onChange([...field.value, value])
-                                            : field.onChange(field.value?.filter((v) => v !== value));
-                                        }}
-                                      />
-                                    </FormControl>
-                                    <div className="flex flex-col space-y-1">
-                                      <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
-                                        Roof Cleaning (our premium all-in-one)
-                                      </FormLabel>
-                                      <span className="text-xs text-muted-foreground">Most popular • Moss removal, roof treatment & gutter cleaning included • $499+</span>
-                                    </div>
-                                  </FormItem>
-                                )}
-                              />
-                              <FormField
-                                control={form.control}
-                                name="services"
-                                render={({ field }) => (
-                                  <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
-                                    <FormControl>
-                                      <Checkbox
-                                        checked={field.value?.includes("Gutter cleaning (includes roof blow-off)")}
-                                        onCheckedChange={(checked) => {
-                                          const value = "Gutter cleaning (includes roof blow-off)";
-                                          return checked
-                                            ? field.onChange([...field.value, value])
-                                            : field.onChange(field.value?.filter((v) => v !== value));
-                                        }}
-                                      />
-                                    </FormControl>
-                                    <div className="flex flex-col space-y-1">
-                                      <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
-                                        Gutter cleaning (includes roof blow-off)
-                                      </FormLabel>
-                              <span className="text-xs text-muted-foreground">Starting at $250</span>
-                                    </div>
-                                  </FormItem>
-                                )}
-                              />
-                              <FormField
-                                control={form.control}
-                                name="services"
-                                render={({ field }) => (
-                                  <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
-                                    <FormControl>
-                                      <Checkbox
-                                        checked={field.value?.includes("Pressure washing")}
-                                        onCheckedChange={(checked) => {
-                                          const value = "Pressure washing";
-                                          return checked
-                                            ? field.onChange([...field.value, value])
-                                            : field.onChange(field.value?.filter((v) => v !== value));
-                                        }}
-                                      />
-                                    </FormControl>
-                                    <div className="flex flex-col space-y-1">
-                                      <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
-                                        Pressure washing
-                                      </FormLabel>
-                                      <span className="text-xs text-muted-foreground">Driveways, patios, siding</span>
-                                    </div>
-                                  </FormItem>
-                                )}
-                              />
-                              <FormField
-                                control={form.control}
-                                name="services"
-                                render={({ field }) => (
-                                  <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
-                                    <FormControl>
-                                      <Checkbox
-                                        checked={field.value?.includes("Window cleaning")}
-                                        onCheckedChange={(checked) => {
-                                          const value = "Window cleaning";
-                                          return checked
-                                            ? field.onChange([...field.value, value])
-                                            : field.onChange(field.value?.filter((v) => v !== value));
-                                        }}
-                                      />
-                                    </FormControl>
-                                    <div className="flex flex-col space-y-1">
-                                      <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
-                                        Window cleaning
-                                      </FormLabel>
-                                      <span className="text-xs text-muted-foreground">Exterior</span>
-                                    </div>
-                                  </FormItem>
-                                )}
-                              />
-                              <FormField
-                                control={form.control}
-                                name="services"
-                                render={({ field }) => (
-                                  <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
-                                    <FormControl>
-                                      <Checkbox
-                                        checked={field.value?.includes("Other")}
-                                        onCheckedChange={(checked) => {
-                                          const value = "Other";
-                                          return checked
-                                            ? field.onChange([...field.value, value])
-                                            : field.onChange(field.value?.filter((v) => v !== value));
-                                        }}
-                                      />
-                                    </FormControl>
-                                    <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
-                                      Other / Not sure
-                                    </FormLabel>
-                                  </FormItem>
-                                )}
-                              />
-                            </div>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
+                          <p className="text-center text-muted-foreground text-xs">
+                            🔒 Your info stays private — we never share or spam.
+                          </p>
+                        </>
+                      )}
 
-                      <Button
-                        type="submit"
-                        variant="cta-orange"
-                        className="w-full min-h-[56px] text-lg font-bold rounded-xl"
-                        disabled={isSubmitting}
-                      >
-                        {isSubmitting ? "Sending..." : "Get My Free Quote →"}
-                      </Button>
+                      {/* ─── STEP 2: Email + Address + Services + Submit ─── */}
+                      {step === 2 && (
+                        <>
+                          <FormField
+                            control={form.control}
+                            name="email"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel className="text-brand-navy font-semibold">Email *</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    type="email"
+                                    placeholder="your@email.com"
+                                    className="border-brand-navy/30 focus:border-brand-orange min-h-[56px] text-lg md:text-sm md:min-h-[48px] rounded-xl"
+                                    autoComplete="email"
+                                    {...field}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
 
-                      <p className="text-center text-muted-foreground text-xs">
-                        🔒 Your info stays private — we never share or spam.
-                      </p>
-                      <p className="text-center text-muted-foreground text-sm">
-                        Trusted by 200+ homeowners in Kenmore, Bothell & Kirkland  •  Licensed & Insured
-                      </p>
+                          <FormField
+                            control={form.control}
+                            name="address"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel className="text-brand-navy font-semibold">Address *</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    placeholder="Start typing your address..."
+                                    className="border-brand-navy/30 focus:border-brand-orange min-h-[56px] text-lg md:text-sm md:min-h-[48px] rounded-xl"
+                                    autoComplete="off"
+                                    {...field}
+                                    ref={(el) => {
+                                      field.ref(el);
+                                      addressInputRef.current = el;
+                                    }}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+
+                          <FormField
+                            control={form.control}
+                            name="services"
+                            render={() => (
+                              <FormItem>
+                                <FormLabel className="text-brand-navy font-semibold">Services Needed *</FormLabel>
+                                <div className="space-y-3">
+                                    <FormField
+                                    control={form.control}
+                                    name="services"
+                                    render={({ field }) => (
+                                      <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border-2 border-brand-orange/40 bg-brand-orange/5 p-4 relative">
+                                        <FormControl>
+                                          <Checkbox
+                                            checked={field.value?.includes("Roof cleaning (moss removal & treatment)")}
+                                            onCheckedChange={(checked) => {
+                                              const value = "Roof cleaning (moss removal & treatment)";
+                                              return checked
+                                                ? field.onChange([...field.value, value])
+                                                : field.onChange(field.value?.filter((v) => v !== value));
+                                            }}
+                                          />
+                                        </FormControl>
+                                        <div className="flex flex-col space-y-1">
+                                          <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
+                                            Roof Cleaning (our premium all-in-one)
+                                          </FormLabel>
+                                          <span className="text-xs text-muted-foreground">Most popular • Moss removal, roof treatment & gutter cleaning included • $499+</span>
+                                        </div>
+                                      </FormItem>
+                                    )}
+                                  />
+                                  <FormField
+                                    control={form.control}
+                                    name="services"
+                                    render={({ field }) => (
+                                      <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
+                                        <FormControl>
+                                          <Checkbox
+                                            checked={field.value?.includes("Gutter cleaning (includes roof blow-off)")}
+                                            onCheckedChange={(checked) => {
+                                              const value = "Gutter cleaning (includes roof blow-off)";
+                                              return checked
+                                                ? field.onChange([...field.value, value])
+                                                : field.onChange(field.value?.filter((v) => v !== value));
+                                            }}
+                                          />
+                                        </FormControl>
+                                        <div className="flex flex-col space-y-1">
+                                          <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
+                                            Gutter cleaning (includes roof blow-off)
+                                          </FormLabel>
+                                          <span className="text-xs text-muted-foreground">Starting at $250</span>
+                                        </div>
+                                      </FormItem>
+                                    )}
+                                  />
+                                  <FormField
+                                    control={form.control}
+                                    name="services"
+                                    render={({ field }) => (
+                                      <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
+                                        <FormControl>
+                                          <Checkbox
+                                            checked={field.value?.includes("Pressure washing")}
+                                            onCheckedChange={(checked) => {
+                                              const value = "Pressure washing";
+                                              return checked
+                                                ? field.onChange([...field.value, value])
+                                                : field.onChange(field.value?.filter((v) => v !== value));
+                                            }}
+                                          />
+                                        </FormControl>
+                                        <div className="flex flex-col space-y-1">
+                                          <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
+                                            Pressure washing
+                                          </FormLabel>
+                                          <span className="text-xs text-muted-foreground">Driveways, patios, siding</span>
+                                        </div>
+                                      </FormItem>
+                                    )}
+                                  />
+                                  <FormField
+                                    control={form.control}
+                                    name="services"
+                                    render={({ field }) => (
+                                      <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
+                                        <FormControl>
+                                          <Checkbox
+                                            checked={field.value?.includes("Window cleaning")}
+                                            onCheckedChange={(checked) => {
+                                              const value = "Window cleaning";
+                                              return checked
+                                                ? field.onChange([...field.value, value])
+                                                : field.onChange(field.value?.filter((v) => v !== value));
+                                            }}
+                                          />
+                                        </FormControl>
+                                        <div className="flex flex-col space-y-1">
+                                          <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
+                                            Window cleaning
+                                          </FormLabel>
+                                          <span className="text-xs text-muted-foreground">Exterior</span>
+                                        </div>
+                                      </FormItem>
+                                    )}
+                                  />
+                                  <FormField
+                                    control={form.control}
+                                    name="services"
+                                    render={({ field }) => (
+                                      <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
+                                        <FormControl>
+                                          <Checkbox
+                                            checked={field.value?.includes("Other")}
+                                            onCheckedChange={(checked) => {
+                                              const value = "Other";
+                                              return checked
+                                                ? field.onChange([...field.value, value])
+                                                : field.onChange(field.value?.filter((v) => v !== value));
+                                            }}
+                                          />
+                                        </FormControl>
+                                        <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
+                                          Other / Not sure
+                                        </FormLabel>
+                                      </FormItem>
+                                    )}
+                                  />
+                                </div>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+
+                          <div className="flex gap-3">
+                            <Button
+                              type="button"
+                              variant="outline"
+                              className="min-h-[56px] text-base font-semibold rounded-xl px-6"
+                              onClick={() => setStep(1)}
+                            >
+                              ← Back
+                            </Button>
+                            <Button
+                              type="submit"
+                              variant="cta-orange"
+                              className="flex-1 min-h-[56px] text-lg font-bold rounded-xl"
+                              disabled={isSubmitting}
+                            >
+                              {isSubmitting ? "Sending..." : "Get My Free Quote →"}
+                            </Button>
+                          </div>
+
+                          <p className="text-center text-muted-foreground text-xs">
+                            🔒 Your info stays private — we never share or spam.
+                          </p>
+                          <p className="text-center text-muted-foreground text-sm">
+                            Trusted by 200+ homeowners in Kenmore, Bothell & Kirkland  •  Licensed & Insured
+                          </p>
+                        </>
+                      )}
                     </form>
                   </Form>
                 </CardContent>

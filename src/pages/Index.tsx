@@ -108,11 +108,11 @@ const Index = () => {
           <Hero />
           <EnhancedTrustBar />
           <ServicesPreview />
+          <GoogleReviewsCarousel />
           <div className="bg-off-white">
             <TwoStepQuoteForm />
           </div>
           <CostOfWaiting />
-          <GoogleReviewsCarousel />
           <div className="bg-navy">
             <BeforeAfterSlider />
           </div>
