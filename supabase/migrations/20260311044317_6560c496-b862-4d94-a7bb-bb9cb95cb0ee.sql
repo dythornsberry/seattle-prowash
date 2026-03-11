@@ -1,0 +1,1 @@
+DROP POLICY "Allow public insert on leads" ON public.leads;
