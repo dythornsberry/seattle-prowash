@@ -299,11 +299,12 @@ const GutterCleaning = () => {
             { name: "Shoreline", path: "/shoreline-roof-gutter-cleaning" },
             { name: "Seattle", path: "/seattle-roof-gutter-cleaning" },
             { name: "Woodinville", path: "/woodinville-roof-gutter-cleaning" },
-            { name: "Bellevue", path: "/service-areas" },
-            { name: "Redmond", path: "/service-areas" },
-            { name: "Sammamish", path: "/service-areas" },
-            { name: "Edmonds", path: "/service-areas" },
-            { name: "Mill Creek", path: "/service-areas" }
+            { name: "Bellevue", path: "/bellevue-roof-gutter-cleaning" },
+            { name: "Redmond", path: "/redmond-roof-gutter-cleaning" },
+            { name: "Sammamish", path: "/sammamish-roof-gutter-cleaning" },
+            { name: "Edmonds", path: "/edmonds-roof-gutter-cleaning" },
+            { name: "Mill Creek", path: "/mill-creek-roof-gutter-cleaning" },
+            { name: "Mountlake Terrace", path: "/mountlake-terrace-roof-gutter-cleaning" }
           ]}
         />
 

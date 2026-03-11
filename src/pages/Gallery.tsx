@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Expand, X } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
+import MobileBottomBar from "@/components/MobileBottomBar";
 
 // Import only actual pressure washing business photos that exist
 import dylanOwnerPatioPressureWashing from "@/assets/dylan-owner-patio-pressure-washing.jpg";
@@ -437,6 +438,7 @@ const Gallery = () => {
         </section>
       </main>
       <Footer />
+      <MobileBottomBar />
 
       {/* Image Modal */}
       {selectedImage && (

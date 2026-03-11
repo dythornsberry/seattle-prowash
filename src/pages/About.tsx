@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Award, Users, Calendar } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
+import MobileBottomBar from "@/components/MobileBottomBar";
 import dylanOwnerPhoto from "@/assets/dylan-owner-patio-pressure-washing.jpg";
 import dylanRoofWork from "@/assets/dylan-roof-work.jpg";
 import technicianHouseWashing from "@/assets/technician-house-washing.jpg";
@@ -354,6 +355,7 @@ const About = () => {
         </section>
       </main>
       <Footer />
+      <MobileBottomBar />
     </div>
   );
 };

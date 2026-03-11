@@ -7,8 +7,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   const serviceAreas = [
-    "Kenmore", "Bothell", "Lynnwood", "Kirkland", "Shoreline", 
-    "Woodinville", "Seattle", "Bellevue", "Redmond", "Mill Creek"
+    "Kenmore", "Bothell", "Lynnwood", "Kirkland", "Shoreline",
+    "Woodinville", "Seattle", "Bellevue", "Redmond", "Mill Creek",
+    "Edmonds", "Sammamish", "Mountlake Terrace"
   ];
 
   return (
@@ -143,7 +144,8 @@ const Footer = () => {
                     "Kenmore": "kenmore", "Bothell": "bothell", "Lynnwood": "lynnwood",
                     "Kirkland": "kirkland", "Shoreline": "shoreline", "Woodinville": "woodinville",
                     "Seattle": "seattle", "Bellevue": "bellevue", "Redmond": "redmond",
-                    "Mill Creek": "mill-creek",
+                    "Mill Creek": "mill-creek", "Edmonds": "edmonds", "Sammamish": "sammamish",
+                    "Mountlake Terrace": "mountlake-terrace",
                   };
                   const slug = citySlugMap[area];
                   const isLinkable = !!slug;
