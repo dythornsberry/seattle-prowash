@@ -119,7 +119,7 @@ const Header = () => {
               variant="prowash-phone" 
               size="sm"
               onClick={handleCallClick}
-              className="border-white text-white hover:bg-white hover:text-brand-navy"
+              className="border-brand-orange/30 text-black hover:bg-white hover:text-brand-navy"
             >
               <Phone className="w-4 h-4" />
               Call

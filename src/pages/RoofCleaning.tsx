@@ -105,7 +105,7 @@ const RoofCleaning = () => {
         title="Professional Roof Cleaning Services"
         description="Expert roof cleaning and moss removal in Seattle. Eco-friendly soft washing extends roof life and prevents damage. Licensed, insured, and guaranteed. Free quotes available."
         url="https://www.seattleprowash.com/roof-cleaning"
-        image="/lovable-uploads/cd85dd92-8acb-405d-a73c-44650e962bd8.png"
+        image={roofCleaningImage}
       />
       <Header />
       <EnhancedTrustBar />

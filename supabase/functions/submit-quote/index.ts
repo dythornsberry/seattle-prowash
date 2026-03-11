@@ -73,7 +73,30 @@ async function forwardToZapier(payload: Record<string, unknown>) {
   throw lastErr ?? new Error("Unknown error forwarding to Zapier");
 }
 
-async function sendEmailNotification(body: Record<string, string>) {
+interface QuotePayload {
+  name: string;
+  phone: string;
+  email: string;
+  address: string;
+  details: string;
+  services_requested: string;
+  address_verified: boolean;
+  timestamp: string;
+  source: string;
+  business_name: string;
+  user_agent?: string;
+  referer?: string;
+}
+
+const toPayloadRecord = (value: unknown): Record<string, unknown> => {
+  if (value && typeof value === "object" && !Array.isArray(value)) {
+    return value as Record<string, unknown>;
+  }
+
+  return {};
+};
+
+async function sendEmailNotification(body: QuotePayload) {
   try {
     const emailResponse = await resend.emails.send({
       from: "Seattle ProWash <onboarding@resend.dev>",
@@ -137,10 +160,10 @@ Deno.serve(async (req: Request) => {
 
   try {
     const contentType = req.headers.get("content-type") || "";
-    let payload: any;
+    let payload: Record<string, unknown>;
 
     if (contentType.includes("application/json")) {
-      payload = await req.json();
+      payload = toPayloadRecord(await req.json());
     } else if (contentType.includes("application/x-www-form-urlencoded") || contentType.includes("multipart/form-data")) {
       const formData = await req.formData();
       payload = Object.fromEntries(formData.entries());
@@ -148,7 +171,7 @@ Deno.serve(async (req: Request) => {
       // For other content types, try to parse as text/JSON
       const text = await req.text();
       try {
-        payload = JSON.parse(text);
+        payload = toPayloadRecord(JSON.parse(text));
       } catch {
         payload = { raw: text };
       }
@@ -193,7 +216,7 @@ Deno.serve(async (req: Request) => {
     }
 
     // Basic normalization and enrichment
-    const body = {
+    const body: QuotePayload = {
       name: String(payload.name || ""),
       phone: String(payload.phone || ""),
       email: String(payload.email || ""),

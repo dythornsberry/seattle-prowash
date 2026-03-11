@@ -4,13 +4,19 @@
  * Throttle function using requestAnimationFrame (60fps max)
  * Better than setTimeout for visual updates
  */
-export const throttleRAF = <T extends (...args: any[]) => void>(callback: T) => {
-  let rafId: number | null = null;
-  let lastArgs: any[] | null = null;
+type CancellableCallback<TArgs extends unknown[]> = ((...args: TArgs) => void) & {
+  cancel: () => void;
+};
 
-  const throttled = (...args: any[]) => {
+export const throttleRAF = <TArgs extends unknown[]>(
+  callback: (...args: TArgs) => void
+) => {
+  let rafId: number | null = null;
+  let lastArgs: TArgs | null = null;
+
+  const throttled = ((...args: TArgs) => {
     lastArgs = args;
-    
+
     if (rafId === null) {
       rafId = requestAnimationFrame(() => {
         if (lastArgs) {
@@ -20,7 +26,7 @@ export const throttleRAF = <T extends (...args: any[]) => void>(callback: T) => 
         lastArgs = null;
       });
     }
-  };
+  }) as CancellableCallback<TArgs>;
 
   throttled.cancel = () => {
     if (rafId !== null) {
@@ -30,19 +36,19 @@ export const throttleRAF = <T extends (...args: any[]) => void>(callback: T) => 
     }
   };
 
-  return throttled as T & { cancel: () => void };
+  return throttled;
 };
 
 /**
  * Debounce function for delayed execution
  */
-export const debounce = <T extends (...args: any[]) => void>(
-  callback: T,
+export const debounce = <TArgs extends unknown[]>(
+  callback: (...args: TArgs) => void,
   delay: number
 ) => {
   let timeoutId: ReturnType<typeof setTimeout> | null = null;
 
-  const debounced = (...args: any[]) => {
+  const debounced = ((...args: TArgs) => {
     if (timeoutId) {
       clearTimeout(timeoutId);
     }
@@ -50,7 +56,7 @@ export const debounce = <T extends (...args: any[]) => void>(
       callback(...args);
       timeoutId = null;
     }, delay);
-  };
+  }) as CancellableCallback<TArgs>;
 
   debounced.cancel = () => {
     if (timeoutId) {
@@ -59,7 +65,7 @@ export const debounce = <T extends (...args: any[]) => void>(
     }
   };
 
-  return debounced as T & { cancel: () => void };
+  return debounced;
 };
 
 /**
@@ -70,13 +76,13 @@ export const rafAnimate = (
   duration: number
 ) => {
   let rafId: number;
-  let startTime: number;
+  let startTime: number | null = null;
   let isCancelled = false;
 
   const animate = (currentTime: number) => {
     if (isCancelled) return;
 
-    if (!startTime) startTime = currentTime;
+    if (startTime === null) startTime = currentTime;
     const elapsed = currentTime - startTime;
     const progress = Math.min(elapsed / duration, 1);
 

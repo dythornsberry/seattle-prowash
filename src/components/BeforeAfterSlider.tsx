@@ -53,8 +53,8 @@ const BeforeAfterSlider = () => {
       title: "Asphalt Roof Moss Treatment - Seattle",
       location: "Seattle, WA",
       service: "Roof Moss Removal + Treatment",
-      beforeImage: "/lovable-uploads/7cdfb095-76e6-4419-b395-a8272819a23b.png",
-      afterImage: "/lovable-uploads/cd85dd92-8acb-405d-a73c-44650e962bd8.png",
+      beforeImage: "/lovable-uploads/7cdfb095-76e6-4419-b395-a8272819a23b.webp",
+      afterImage: "/lovable-uploads/cd85dd92-8acb-405d-a73c-44650e962bd8.webp",
       beforeAlt: "Seattle asphalt roof heavily covered in moss and debris before professional treatment",
       afterAlt: "Seattle asphalt roof after professional moss removal and protection treatment - fully restored",
       completionDate: "January 2025"

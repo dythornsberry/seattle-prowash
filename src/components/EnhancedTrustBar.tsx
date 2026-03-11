@@ -1,81 +1,49 @@
-import { Star, Shield, Clock, Award } from "lucide-react";
-import { useEffect, useState } from "react";
+import { BadgeCheck, Clock3, ShieldCheck, Star } from "lucide-react";
+
+const proofPoints = [
+  {
+    icon: Star,
+    value: "200+",
+    label: "5-star reviews",
+  },
+  {
+    icon: Clock3,
+    value: "Same-day",
+    label: "estimates",
+  },
+  {
+    icon: ShieldCheck,
+    value: "Licensed",
+    label: "& insured",
+  },
+  {
+    icon: BadgeCheck,
+    value: "12-month",
+    label: "moss-free guarantee",
+  },
+];
 
 const EnhancedTrustBar = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    // Trigger animation after mount
-    const timer = setTimeout(() => setIsVisible(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
-
-  const metrics = [
-    {
-      icon: Star,
-      value: "5.0",
-      label: "Star Rating",
-      subtext: "200+ Reviews",
-      color: "text-brand-orange",
-      bgColor: "bg-brand-orange/10"
-    },
-    {
-      icon: Shield,
-      value: "12",
-      label: "Month Guarantee",
-      subtext: "Moss-Free",
-      color: "text-green-600",
-      bgColor: "bg-green-600/10"
-    },
-    {
-      icon: Clock,
-      value: "Same",
-      label: "Day Estimates",
-      subtext: "Fast Response",
-      color: "text-blue-600",
-      bgColor: "bg-blue-600/10"
-    },
-    {
-      icon: Award,
-      value: "500+",
-      label: "Roofs Cleaned",
-      subtext: "Licensed & Insured",
-      color: "text-purple-600",
-      bgColor: "bg-purple-600/10"
-    }
-  ];
-
   return (
-    <section className="py-8 md:py-12 bg-gradient-to-r from-brand-navy to-slate-800 border-y-2 border-brand-orange/20">
+    <section className="relative z-20 -mt-8 bg-transparent pb-4 md:-mt-10 md:pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-          {metrics.map((metric, index) => {
-            const IconComponent = metric.icon;
-            return (
-              <div
-                key={index}
-                className={`text-center transition-all duration-500 transform ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                }`}
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                <div className={`inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 ${metric.bgColor} rounded-full mb-3`}>
-                  <IconComponent className={`w-7 h-7 md:w-8 md:h-8 ${metric.color}`} />
-                </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-1">
-                  {metric.value}
-                  {metric.value === "5.0" && <span className="text-brand-orange">★</span>}
-                  {metric.value === "12" && <span className="text-lg">mo</span>}
-                </div>
-                <div className="text-sm md:text-base font-semibold text-white/90">
-                  {metric.label}
-                </div>
-                <div className="text-xs md:text-sm text-white/70 mt-1">
-                  {metric.subtext}
-                </div>
+        <div className="mx-auto grid max-w-5xl grid-cols-2 gap-3 lg:grid-cols-4">
+          {proofPoints.map(({ icon: Icon, value, label }) => (
+            <div
+              key={`${value}-${label}`}
+              className="rounded-2xl border border-brand-navy/10 bg-white/95 p-4 text-center shadow-[0_18px_45px_rgba(15,23,42,0.10)] backdrop-blur-sm"
+            >
+              <div className="mx-auto mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-brand-orange/12 text-brand-orange">
+                <Icon className="h-5 w-5" />
               </div>
-            );
-          })}
+              <p className="text-lg font-bold leading-tight text-brand-navy md:text-xl">
+                {value}
+              </p>
+              <p className="mt-1 text-sm font-medium leading-snug text-muted-foreground">
+                {label}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -52,6 +52,7 @@ const TwoStepQuoteForm = () => {
   const addressInputRef = useRef<HTMLInputElement | null>(null);
   const autocompleteRef = useRef<google.maps.places.Autocomplete | null>(null);
   const addressFromPlacesRef = useRef(false); // Track if address was selected from autocomplete
+  const mapsScriptPromiseRef = useRef<Promise<void> | null>(null);
 
   const initAutocomplete = useCallback(() => {
     if (!addressInputRef.current || autocompleteRef.current) return;
@@ -74,52 +75,59 @@ const TwoStepQuoteForm = () => {
     autocompleteRef.current = autocomplete;
   }, [form]);
 
-  // Lazy-load Google Maps script only when this form mounts
-  useEffect(() => {
+  const ensureGooglePlacesLoaded = useCallback(async () => {
     const MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
     if (!MAPS_API_KEY) return;
 
-    // If already loaded (e.g. navigated back to this page), just init
     if (typeof google !== 'undefined' && google?.maps?.places) {
       initAutocomplete();
       return;
     }
 
-    // Don't inject a second script if one is already loading
-    if (document.querySelector('script[src*="maps.googleapis.com"]')) {
-      const checkInterval = setInterval(() => {
-        if (typeof google !== 'undefined' && google?.maps?.places) {
-          initAutocomplete();
-          clearInterval(checkInterval);
+    if (!mapsScriptPromiseRef.current) {
+      mapsScriptPromiseRef.current = new Promise((resolve, reject) => {
+        const existingScript = document.querySelector<HTMLScriptElement>(
+          'script[data-google-places="true"]'
+        );
+
+        if (existingScript) {
+          if (existingScript.dataset.loaded === "true") {
+            resolve();
+            return;
+          }
+
+          existingScript.addEventListener("load", () => resolve(), { once: true });
+          existingScript.addEventListener("error", () => reject(new Error("Failed to load Google Places")), { once: true });
+          return;
         }
-      }, 500);
-      return () => clearInterval(checkInterval);
+
+        const script = document.createElement("script");
+        script.dataset.googlePlaces = "true";
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${MAPS_API_KEY}&libraries=places&loading=async`;
+        script.async = true;
+        script.defer = true;
+        script.onload = () => {
+          script.dataset.loaded = "true";
+          resolve();
+        };
+        script.onerror = () => reject(new Error("Failed to load Google Places"));
+        document.head.appendChild(script);
+      });
     }
 
-    // Dynamically inject the Google Maps script
-    const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${MAPS_API_KEY}&libraries=places&loading=async`;
-    script.async = true;
-    script.defer = true;
-    document.head.appendChild(script);
-
-    const checkInterval = setInterval(() => {
-      if (typeof google !== 'undefined' && google?.maps?.places) {
-        initAutocomplete();
-        clearInterval(checkInterval);
-      }
-    }, 500);
-    return () => clearInterval(checkInterval);
+    try {
+      await mapsScriptPromiseRef.current;
+      initAutocomplete();
+    } catch (error) {
+      console.error("Google Places failed to load:", error);
+    }
   }, [initAutocomplete]);
 
-  // Re-init autocomplete when step 2 renders (address input mounts)
   useEffect(() => {
     if (step === 2 && !autocompleteRef.current) {
-      // Small delay to let the DOM render the address input
-      const timer = setTimeout(() => initAutocomplete(), 100);
-      return () => clearTimeout(timer);
+      void ensureGooglePlacesLoaded();
     }
-  }, [step, initAutocomplete]);
+  }, [ensureGooglePlacesLoaded, step]);
 
   const formatPhoneNumber = (value: string) => {
     const cleaned = value.replace(/\D/g, '');
@@ -372,6 +380,9 @@ const TwoStepQuoteForm = () => {
                                     placeholder="Start typing your address..."
                                     className="border-brand-navy/30 focus:border-brand-orange min-h-[56px] text-lg md:text-sm md:min-h-[48px] rounded-xl"
                                     autoComplete="off"
+                                    onFocus={() => {
+                                      void ensureGooglePlacesLoaded();
+                                    }}
                                     {...field}
                                     ref={(el) => {
                                       field.ref(el);

@@ -9,46 +9,46 @@ import { Shield, Clock, CheckCircle, ArrowRight } from "lucide-react";
 import { useEffect } from "react";
 import { generateFAQSchema, injectSchema } from "@/utils/schema";
 
-const HomeFAQ = () => {
-  const topFAQs = [
-    {
-      question: "What does roof or gutter cleaning cost?",
-      answer: "Most homes in our area range from $250–$1,200 depending on roof size, pitch, and access. Typical starting prices: Gutter cleaning $250+, Moss treatment with gutter cleaning $499+. We send same-day estimates.",
-      icon: CheckCircle,
-      cta: true
-    },
-    {
-      question: "How soon can you schedule my service?",
-      answer: "Most quotes same day; we usually schedule within 3–7 days (weather dependent). Urgent roof/gutter issues get priority.",
-      icon: Clock,
-      cta: true
-    },
-    {
-      question: "Are you licensed and insured?",
-      answer: "Yes. Seattle ProWash is fully licensed, bonded and insured, so your property is protected. We follow all safety protocols and carry comprehensive liability coverage.",
-      icon: Shield,
-      cta: false
-    },
-    {
-      question: "Do you remove moss? Do you offer treatments?",
-      answer: "Absolutely. We safely remove moss using gentle methods and apply our professional moss treatment with a 12-month moss-free guarantee (with basic maintenance).",
-      icon: CheckCircle,
-      cta: true
-    },
-    {
-      question: "How do I get a quote?",
-      answer: "60-second form: name, address, phone, service needed. We look up your roof and text a firm price.",
-      icon: CheckCircle,
-      cta: true
-    },
-    {
-      question: "What types of roofs do you service?",
-      answer: "We service asphalt, metal, and many composite roof types. We use no pressure on shingles to protect your roof while removing moss and debris.",
-      icon: CheckCircle,
-      cta: false
-    }
-  ];
+const topFAQs = [
+  {
+    question: "What does roof or gutter cleaning cost?",
+    answer: "Most homes in our area range from $250–$1,200 depending on roof size, pitch, and access. Typical starting prices: Gutter cleaning $250+, Moss treatment with gutter cleaning $499+. We send same-day estimates.",
+    icon: CheckCircle,
+    cta: true
+  },
+  {
+    question: "How soon can you schedule my service?",
+    answer: "Most quotes same day; we usually schedule within 3–7 days (weather dependent). Urgent roof/gutter issues get priority.",
+    icon: Clock,
+    cta: true
+  },
+  {
+    question: "Are you licensed and insured?",
+    answer: "Yes. Seattle ProWash is fully licensed, bonded and insured, so your property is protected. We follow all safety protocols and carry comprehensive liability coverage.",
+    icon: Shield,
+    cta: false
+  },
+  {
+    question: "Do you remove moss? Do you offer treatments?",
+    answer: "Absolutely. We safely remove moss using gentle methods and apply our professional moss treatment with a 12-month moss-free guarantee (with basic maintenance).",
+    icon: CheckCircle,
+    cta: true
+  },
+  {
+    question: "How do I get a quote?",
+    answer: "60-second form: name, address, phone, service needed. We look up your roof and text a firm price.",
+    icon: CheckCircle,
+    cta: true
+  },
+  {
+    question: "What types of roofs do you service?",
+    answer: "We service asphalt, metal, and many composite roof types. We use no pressure on shingles to protect your roof while removing moss and debris.",
+    icon: CheckCircle,
+    cta: false
+  }
+];
 
+const HomeFAQ = () => {
   // Inject FAQ Schema for SEO
   useEffect(() => {
     const faqData = topFAQs.map(faq => ({

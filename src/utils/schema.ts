@@ -26,8 +26,10 @@ interface LocalBusinessSchemaProps {
   image?: string;
 }
 
+type JsonLd = Record<string, unknown>;
+
 export const generateLocalBusinessSchema = (props: LocalBusinessSchemaProps) => {
-  const schema: any = {
+  const schema: JsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": props.url,
@@ -35,7 +37,7 @@ export const generateLocalBusinessSchema = (props: LocalBusinessSchemaProps) => 
     description: props.description,
     url: props.url,
     telephone: props.telephone,
-    image: props.image || `${props.url}/lovable-uploads/prowash-truck-street.jpg`,
+    image: props.image || new URL("/og-seattle-prowash.jpg", props.url).toString(),
     address: {
       "@type": "PostalAddress",
       streetAddress: props.address.streetAddress,
@@ -102,7 +104,7 @@ interface ServiceSchemaProps {
 }
 
 export const generateServiceSchema = (props: ServiceSchemaProps) => {
-  const schema: any = {
+  const schema: JsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
     name: props.name,
@@ -210,7 +212,7 @@ export const generateBreadcrumbSchema = (items: BreadcrumbItem[]) => {
 };
 
 // Helper function to inject schema into document head
-export const injectSchema = (schema: any) => {
+export const injectSchema = (schema: unknown) => {
   const script = document.createElement('script');
   script.type = 'application/ld+json';
   script.text = JSON.stringify(schema);

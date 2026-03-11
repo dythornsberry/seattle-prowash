@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
 	darkMode: ["class"],
@@ -95,8 +96,8 @@ export default {
 				}
 			},
 			fontFamily: {
-				sans: ['Inter', 'system-ui', 'sans-serif'],
-				heading: ['Poppins', 'system-ui', 'sans-serif'],
+				sans: ['Avenir Next', 'Segoe UI Variable Text', 'Segoe UI', 'Helvetica Neue', 'sans-serif'],
+				heading: ['Avenir Next Condensed', 'Franklin Gothic Medium', 'Arial Narrow', 'sans-serif'],
 			},
 			spacing: {
 				'18': '4.5rem', /* 72px */
@@ -143,5 +144,5 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [tailwindcssAnimate],
 } satisfies Config;
