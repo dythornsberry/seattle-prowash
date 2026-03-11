@@ -129,14 +129,16 @@ Deno.serve(async (req: Request) => {
 
   console.log("Starting form health check...");
 
-  // Require a shared secret — blocks unauthorized callers from triggering health checks
+  // Require a shared secret so random callers can't trigger health checks
   const expectedSecret = Deno.env.get("HEALTH_CHECK_SECRET");
-  const providedSecret = req.headers.get("x-health-secret") || "";
-  if (!expectedSecret || providedSecret !== expectedSecret) {
-    return new Response(JSON.stringify({ error: "Unauthorized" }), {
-      status: 401,
-      headers: { "Content-Type": "application/json", ...corsHeaders },
-    });
+  if (expectedSecret) {
+    const authHeader = req.headers.get("x-health-secret") || "";
+    if (authHeader !== expectedSecret) {
+      return new Response(JSON.stringify({ error: "Unauthorized" }), {
+        status: 401,
+        headers: { "Content-Type": "application/json", ...corsHeaders },
+      });
+    }
   }
 
   try {

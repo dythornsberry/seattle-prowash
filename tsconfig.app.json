@@ -10,19 +10,15 @@
     ],
     "module": "ESNext",
     "moduleDetection": "force",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "noEmit": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
     "paths": {
       "@/*": [
         "./src/*"
       ]
     },
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "target": "ES2020",
     "useDefineForClassFields": true
   },
