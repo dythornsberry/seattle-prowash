@@ -71,10 +71,19 @@ const TwoStepQuoteForm = () => {
     autocompleteRef.current = autocomplete;
   }, [form]);
 
+  // Lazy-load Google Maps script only when this form mounts
   useEffect(() => {
+    const MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+    if (!MAPS_API_KEY) return;
+
+    // If already loaded (e.g. navigated back to this page), just init
     if (typeof google !== 'undefined' && google?.maps?.places) {
       initAutocomplete();
-    } else {
+      return;
+    }
+
+    // Don't inject a second script if one is already loading
+    if (document.querySelector('script[src*="maps.googleapis.com"]')) {
       const checkInterval = setInterval(() => {
         if (typeof google !== 'undefined' && google?.maps?.places) {
           initAutocomplete();
@@ -83,6 +92,21 @@ const TwoStepQuoteForm = () => {
       }, 500);
       return () => clearInterval(checkInterval);
     }
+
+    // Dynamically inject the Google Maps script
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${MAPS_API_KEY}&libraries=places&loading=async`;
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+
+    const checkInterval = setInterval(() => {
+      if (typeof google !== 'undefined' && google?.maps?.places) {
+        initAutocomplete();
+        clearInterval(checkInterval);
+      }
+    }, 500);
+    return () => clearInterval(checkInterval);
   }, [initAutocomplete]);
 
   const formatPhoneNumber = (value: string) => {
