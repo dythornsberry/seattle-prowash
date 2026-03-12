@@ -10,7 +10,7 @@ import ServiceAreasSection from "@/components/ServiceAreasSection";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
-import technicianPhoto from "@/assets/technician-house-washing.jpg";
+import windowCleaningPhoto from "@/assets/window-cleaning-action.jpg";
 
 const WindowCleaning = () => {
   useEffect(() => {
