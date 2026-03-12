@@ -5,7 +5,6 @@ const EnhancedTrustBar = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Trigger animation after mount
     const timer = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timer);
   }, []);
@@ -55,7 +54,7 @@ const EnhancedTrustBar = () => {
               <div
                 key={index}
                 className={`text-center transition-all duration-500 transform ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >

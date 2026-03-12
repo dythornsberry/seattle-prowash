@@ -7,95 +7,91 @@ import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/ca
 import { CheckCircle, Phone, Shield, Clock, Leaf } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
 
-const FAQ = () => {
-  // FAQ data array
-  const faqs = [
-    {
-      icon: Shield,
-      question: "Is our roof moss protection treatment safe for my roof?",
-      answer: "✅ Yes. Our manufacturer-recommended moss protection treatment kills moss and algae at the root without using damaging high pressure.\n\n✅ Protects your shingles and keeps your warranty valid.",
-      category: "Safety & Trust"
-    },
-    {
-      icon: CheckCircle,
-      question: "What if moss comes back?",
-      answer: "We offer a 12-month moss-free guarantee.\n\nIf any new moss growth appears within 12 months of service, we'll return and re-treat the affected areas free of charge.",
-      category: "Safety & Trust"
-    },
-    {
-      icon: CheckCircle,
-      question: "What types of stains do you remove?",
-      answer: "✅ Organic growth: moss, mold, mildew, algae, lichen\n\n❌ Not guaranteed: scuff marks, dust, oxidation, oil stains, gum, paint, rust\n\nSeattle ProWash specializes in organic growth removal only.",
-      category: "Safety & Trust"
-    },
-    {
-      icon: Shield,
-      question: "Will your cleaning damage my roof?",
-      answer: "No. We use gentle, manufacturer-approved soft wash methods:\n\n• Low-pressure application (never high-pressure blasting)\n\n• Eco-friendly moss treatment that kills growth at the root\n\n• Safe for all shingle types and won't void your warranty",
-      category: "Safety & Trust"
-    },
-    {
-      icon: CheckCircle,
-      question: "What types of roofs do you clean?",
-      answer: "• Metal\n\n• Asphalt/composite\n\n• Flat roofs (EPDM, TPO, PVC)\n\n❌ We don't clean cedar shake or tile roofs; we recommend contacting a roofing professional for these specialized roof types.",
-      category: "Services"
-    },
-    {
-      icon: CheckCircle,
-      question: "Do you offer other services besides roof and gutter cleaning?",
-      answer: "We specialize exclusively in roof cleaning and gutter cleaning. This focus allows us to be the best at what we do.\n\nFor other services like window cleaning or house washing, we recommend contacting a dedicated specialist.",
-      category: "Services"
-    },
-    {
-      icon: Leaf,
-      question: "Do you use eco-friendly solutions?",
-      answer: "✅ Yes. We use biodegradable, manufacturer-approved cleaning solutions.\n\n✅ Safe for plants, pets, and the environment when used properly.",
-      category: "Environment"
-    },
-    {
-      icon: Clock,
-      question: "How often should I clean my roof or gutters?",
-      answer: "• Roof cleaning - once per year\n\n• Gutter cleaning - twice per year (Spring + Fall)",
-      category: "Maintenance"
-    },
-    {
-      icon: Clock,
-      question: "What's the best time of year to get my roof or gutters cleaned?",
-      answer: "The best time was last year! Regular maintenance will improve your roof's longevity.\n\n• If you see visible moss on your roof\n\n• If you notice clogged or overflowing gutters\n\n• If there's debris buildup from trees\n\nWe recommend cleaning ASAP before it gets worse. Don't wait—moss and gutter issues only compound over time and become more expensive to address.",
-      category: "Maintenance"
-    }
-  ];
+const faqs = [
+  {
+    icon: Shield,
+    question: "Is our roof moss protection treatment safe for my roof?",
+    answer: "✅ Yes. Our manufacturer-recommended moss protection treatment kills moss and algae at the root without using damaging high pressure.\n\n✅ Protects your shingles and keeps your warranty valid.",
+    category: "Safety & Trust"
+  },
+  {
+    icon: CheckCircle,
+    question: "What if moss comes back?",
+    answer: "We offer a 12-month moss-free guarantee.\n\nIf any new moss growth appears within 12 months of service, we'll return and re-treat the affected areas free of charge.",
+    category: "Safety & Trust"
+  },
+  {
+    icon: CheckCircle,
+    question: "What types of stains do you remove?",
+    answer: "✅ Organic growth: moss, mold, mildew, algae, lichen\n\n❌ Not guaranteed: scuff marks, dust, oxidation, oil stains, gum, paint, rust\n\nSeattle ProWash specializes in organic growth removal only.",
+    category: "Safety & Trust"
+  },
+  {
+    icon: Shield,
+    question: "Will your cleaning damage my roof?",
+    answer: "No. We use gentle, manufacturer-approved soft wash methods:\n\n• Low-pressure application (never high-pressure blasting)\n\n• Eco-friendly moss treatment that kills growth at the root\n\n• Safe for all shingle types and won't void your warranty",
+    category: "Safety & Trust"
+  },
+  {
+    icon: CheckCircle,
+    question: "What types of roofs do you clean?",
+    answer: "• Metal\n\n• Asphalt/composite\n\n• Flat roofs (EPDM, TPO, PVC)\n\n❌ We don't clean cedar shake or tile roofs; we recommend contacting a roofing professional for these specialized roof types.",
+    category: "Services"
+  },
+  {
+    icon: CheckCircle,
+    question: "Do you offer other services besides roof and gutter cleaning?",
+    answer: "Yes. Roof cleaning and gutter cleaning are still our core services, and we also handle pressure washing, exterior window cleaning, and select commercial exterior cleaning throughout the Seattle area.",
+    category: "Services"
+  },
+  {
+    icon: Leaf,
+    question: "Do you use eco-friendly solutions?",
+    answer: "✅ Yes. We use biodegradable, manufacturer-approved cleaning solutions.\n\n✅ Safe for plants, pets, and the environment when used properly.",
+    category: "Environment"
+  },
+  {
+    icon: Clock,
+    question: "How often should I clean my roof or gutters?",
+    answer: "• Roof cleaning - once per year\n\n• Gutter cleaning - twice per year (Spring + Fall)",
+    category: "Maintenance"
+  },
+  {
+    icon: Clock,
+    question: "What's the best time of year to get my roof or gutters cleaned?",
+    answer: "The best time was last year! Regular maintenance will improve your roof's longevity.\n\n• If you see visible moss on your roof\n\n• If you notice clogged or overflowing gutters\n\n• If there's debris buildup from trees\n\nWe recommend cleaning ASAP before it gets worse. Don't wait—moss and gutter issues only compound over time and become more expensive to address.",
+    category: "Maintenance"
+  }
+];
 
+const additionalFaqs = [
+  {
+    icon: Clock,
+    question: "How long does a typical service take?",
+    answer: "• Roof cleaning - 4-6 hours\n\n• Gutter cleaning - 1-2 hours\n\nMost jobs are completed same day.",
+    category: "Process"
+  },
+  {
+    icon: Clock,
+    question: "How do estimates and scheduling work?",
+    answer: "• Free estimates provided\n\n• Roof cleaning - requires on-site assessment or photos\n\n• Gutter cleaning - often quoted remotely by phone\n\n• Services usually scheduled within 1-2 weeks",
+    category: "Process"
+  },
+  {
+    icon: CheckCircle,
+    question: "What areas do you serve?",
+    answer: "Seattle, Kenmore, and the greater Seattle area, including Bothell, Kirkland, Shoreline, Woodinville, Redmond, Bellevue, Mukilteo, Mill Creek, and Lynnwood.",
+    category: "Service Area"
+  }
+];
+
+const allFaqs = [...faqs, ...additionalFaqs];
+
+const FAQ = () => {
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-
-  // Additional FAQ items (defined after initial faqs)
-  const additionalFaqs = [
-    {
-      icon: Clock,
-      question: "How long does a typical service take?",
-      answer: "• Roof cleaning - 4-6 hours\n\n• Gutter cleaning - 1-2 hours\n\nMost jobs are completed same day.",
-      category: "Process"
-    },
-    {
-      icon: Clock,
-      question: "How do estimates and scheduling work?",
-      answer: "• Free estimates provided\n\n• Roof cleaning - requires on-site assessment or photos\n\n• Gutter cleaning - often quoted remotely by phone\n\n• Services usually scheduled within 1-2 weeks",
-      category: "Process"
-    },
-    {
-      icon: CheckCircle,
-      question: "What areas do you serve?",
-      answer: "Seattle, Kenmore, and the greater Seattle area, including Bothell, Kirkland, Shoreline, Woodinville, Redmond, Bellevue, Mukilteo, Mill Creek, and Lynnwood.",
-      category: "Service Area"
-    }
-  ];
-
-  // Combine all FAQs
-  const allFaqs = [...faqs, ...additionalFaqs];
 
   // Intersection Observer for fade-up animations
   useEffect(() => {
@@ -149,7 +145,7 @@ const FAQ = () => {
         existingScript.remove();
       }
     };
-  }, [allFaqs]);
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">

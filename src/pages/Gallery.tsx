@@ -69,7 +69,7 @@ const Gallery = () => {
         service: "Roof Cleaning"
       },
       { 
-        src: "/lovable-uploads/e74889d8-949e-43d7-8979-5150f13e7df4.png", 
+        src: "/lovable-uploads/e74889d8-949e-43d7-8979-5150f13e7df4.webp", 
         alt: "Metal roof moss removal and cleaning transformation", 
         title: "Roof cleaning with moss removal — Seattle Area", 
         location: "Seattle Area", 
@@ -77,7 +77,7 @@ const Gallery = () => {
         service: "Roof Cleaning"
       },
       { 
-        src: "/lovable-uploads/39ad7527-e74d-4532-a64b-0365b83aee6b.png", 
+        src: "/lovable-uploads/39ad7527-e74d-4532-a64b-0365b83aee6b.webp", 
         alt: "Metal roof and skylight cleaning before and after", 
         title: "Roof cleaning with skylight — Seattle Area", 
         location: "Seattle Area", 
@@ -85,7 +85,7 @@ const Gallery = () => {
         service: "Roof Cleaning"
       },
       { 
-        src: "/lovable-uploads/380b267e-dbb4-4a71-8ac9-2bba6d28b15c.png", 
+        src: "/lovable-uploads/380b267e-dbb4-4a71-8ac9-2bba6d28b15c.webp", 
         alt: "Metal roof cleaning before and after with visible cleaning process", 
         title: "Roof cleaning — Seattle Area, Nov 2024", 
         location: "Seattle Area", 
@@ -93,7 +93,7 @@ const Gallery = () => {
         service: "Roof Cleaning"
       },
       { 
-        src: "/lovable-uploads/7cdfb095-76e6-4419-b395-a8272819a23b.png", 
+        src: "/lovable-uploads/7cdfb095-76e6-4419-b395-a8272819a23b.webp", 
         alt: "Asphalt roof heavily covered in moss before professional cleaning", 
         title: "Roof cleaning (before) — Seattle", 
         location: "Seattle, WA", 
@@ -101,7 +101,7 @@ const Gallery = () => {
         service: "Roof Cleaning"
       },
       { 
-        src: "/lovable-uploads/cd85dd92-8acb-405d-a73c-44650e962bd8.png", 
+        src: "/lovable-uploads/cd85dd92-8acb-405d-a73c-44650e962bd8.webp", 
         alt: "Clean asphalt roof after professional moss removal", 
         title: "Roof cleaning (after) — Seattle", 
         location: "Seattle, WA", 
@@ -109,7 +109,7 @@ const Gallery = () => {
         service: "Roof Cleaning"
       },
       { 
-        src: "/lovable-uploads/64d9c018-2edd-4f52-a9c8-26f38eacb1ab.png", 
+        src: "/lovable-uploads/64d9c018-2edd-4f52-a9c8-26f38eacb1ab.webp", 
         alt: "Asphalt roof debris removal before and after", 
         title: "Roof cleaning — Seattle Area, Oct 2024", 
         location: "Seattle Area", 
@@ -117,7 +117,7 @@ const Gallery = () => {
         service: "Roof Cleaning"
       },
       { 
-        src: "/lovable-uploads/d860338a-0f08-4e00-9f5a-6de054035c8f.png", 
+        src: "/lovable-uploads/d860338a-0f08-4e00-9f5a-6de054035c8f.webp", 
         alt: "Asphalt roof moss treatment before and after", 
         title: "Roof cleaning with moss treatment — Seattle Area", 
         location: "Seattle Area", 
@@ -125,7 +125,7 @@ const Gallery = () => {
         service: "Roof Cleaning"
       },
       { 
-        src: "/lovable-uploads/61baa673-a9e7-4e3c-a983-cc33629610c0.png", 
+        src: "/lovable-uploads/61baa673-a9e7-4e3c-a983-cc33629610c0.webp", 
         alt: "Professional team performing roof moss treatment", 
         title: "Roof moss treatment in progress — Seattle Area", 
         location: "Seattle Area", 
@@ -133,7 +133,7 @@ const Gallery = () => {
         service: "Roof Cleaning"
       },
       { 
-        src: "/lovable-uploads/0b5d9cfa-52bb-4f34-b0ff-3ddd5f38c3b4.png", 
+        src: "/lovable-uploads/0b5d9cfa-52bb-4f34-b0ff-3ddd5f38c3b4.webp", 
         alt: "Asphalt roof moss removal before and after", 
         title: "Roof cleaning — Seattle Area, Sep 2024", 
         location: "Seattle Area", 
@@ -141,7 +141,7 @@ const Gallery = () => {
         service: "Roof Cleaning"
       },
       { 
-        src: "/lovable-uploads/06729db5-d286-4da3-88bf-5096689d3383.png", 
+        src: "/lovable-uploads/06729db5-d286-4da3-88bf-5096689d3383.webp", 
         alt: "Roof moss treatment in progress on asphalt shingles", 
         title: "Roof moss treatment in progress — Seattle Area", 
         location: "Seattle Area", 
@@ -149,7 +149,7 @@ const Gallery = () => {
         service: "Roof Cleaning"
       },
       { 
-        src: "/lovable-uploads/84877120-87fc-4d9f-8151-f6013e38b055.png", 
+        src: "/lovable-uploads/84877120-87fc-4d9f-8151-f6013e38b055.webp", 
         alt: "Asphalt roof moss removal before and after in Seattle", 
         title: "Roof cleaning — Seattle, Aug 2024", 
         location: "Seattle, WA", 
@@ -167,7 +167,7 @@ const Gallery = () => {
         service: "Gutter Cleaning"
       },
       { 
-        src: "/lovable-uploads/26d7c8d9-d5dc-42b1-ac63-62630e258539.png", 
+        src: "/lovable-uploads/26d7c8d9-d5dc-42b1-ac63-62630e258539.webp", 
         alt: "Gutter cleaning before and after showing debris removal", 
         title: "Gutter cleaning — Seattle Area, Dec 2024", 
         location: "Seattle Area", 
@@ -175,7 +175,7 @@ const Gallery = () => {
         service: "Gutter Cleaning"
       },
       { 
-        src: "/lovable-uploads/b2ed7767-a921-4d56-8dfb-1c942c3daaa7.png", 
+        src: "/lovable-uploads/b2ed7767-a921-4d56-8dfb-1c942c3daaa7.webp", 
         alt: "Gutter cleaning before and after showing complete system restoration", 
         title: "Gutter cleaning with roof blow-off — Seattle Area", 
         location: "Seattle Area", 
@@ -183,7 +183,7 @@ const Gallery = () => {
         service: "Gutter Cleaning"
       },
       { 
-        src: "/lovable-uploads/e5ca4024-1728-4972-8b36-99d8c320f4e4.png", 
+        src: "/lovable-uploads/e5ca4024-1728-4972-8b36-99d8c320f4e4.webp", 
         alt: "Gutter brightening before and after showing dramatic restoration", 
         title: "Gutter cleaning — Seattle Area, Nov 2024", 
         location: "Seattle Area", 
@@ -191,7 +191,7 @@ const Gallery = () => {
         service: "Gutter Cleaning"
       },
       { 
-        src: "/lovable-uploads/ae56c077-963d-480b-a403-d5f4e4f81a2a.png", 
+        src: "/lovable-uploads/ae56c077-963d-480b-a403-d5f4e4f81a2a.webp", 
         alt: "Gutter cleaning before and after with roof debris removal", 
         title: "Gutter cleaning with roof blow-off — Seattle Area", 
         location: "Seattle Area", 

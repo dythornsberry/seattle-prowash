@@ -92,8 +92,6 @@ const Index = () => {
 
     return () => observer.disconnect();
   }, []);
-
-
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 

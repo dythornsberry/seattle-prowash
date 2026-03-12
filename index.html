@@ -6,11 +6,17 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon.png" type="image/png" sizes="512x512" />
     <link rel="apple-touch-icon" href="/favicon.png" />
-    
-    <!-- Critical Font Preload (Poppins for headings) -->
+
+    <!-- Brand fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2" as="font" type="font/woff2" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
     
@@ -35,12 +41,12 @@
     <meta property="og:description" content="Professional roof cleaning with moss removal treatment and gutter cleaning with roof blow-off. 12-month moss-free guarantee. Serving Kenmore, Bothell, Kirkland, and Shoreline. Same-day estimates." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.seattleprowash.com/" />
-    <meta property="og:image" content="https://www.seattleprowash.com/lovable-uploads/prowash-truck-street.jpg" />
+    <meta property="og:image" content="https://www.seattleprowash.com/og-seattle-prowash.jpg" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Roof & Gutter Cleaning in Seattle | Seattle ProWash" />
     <meta name="twitter:description" content="Professional roof cleaning with moss removal treatment and gutter cleaning with roof blow-off. 12-month moss-free guarantee. Same-day estimates." />
-    <meta name="twitter:image" content="https://www.seattleprowash.com/lovable-uploads/prowash-truck-street.jpg" />
+    <meta name="twitter:image" content="https://www.seattleprowash.com/og-seattle-prowash.jpg" />
   </head>
 
   <body>
@@ -208,22 +214,45 @@
     <script>
       window.addEventListener('load', function() {
         if (window.gtag) return;
-        var script = document.createElement('script');
-        script.async = true;
+        if (window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost') return;
         var gaId = '%VITE_GA4_MEASUREMENT_ID%';
         if (!gaId || gaId.indexOf('VITE_') === 0) return;
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
-        document.head.appendChild(script);
 
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', gaId);
-        window.gtag = gtag;
+        function loadAnalytics() {
+          if (window.gtag) return;
+          var script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', gaId);
+          window.gtag = gtag;
+        }
+
+        var interactionEvents = ['pointerdown', 'touchstart', 'keydown', 'scroll'];
+        function loadOnInteraction() {
+          interactionEvents.forEach(function(eventName) {
+            window.removeEventListener(eventName, loadOnInteraction);
+          });
+          loadAnalytics();
+        }
+
+        interactionEvents.forEach(function(eventName) {
+          window.addEventListener(eventName, loadOnInteraction, { once: true, passive: true });
+        });
+
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(loadAnalytics, { timeout: 5000 });
+        } else {
+          setTimeout(loadAnalytics, 4000);
+        }
       });
     </script>
-    
-    <!-- Trustindex - Load on user interaction for performance -->
+
+    <!-- Trustindex - Match current live behavior -->
     <script>
       var trustindexLoaded = false;
       function loadTrustindex() {
@@ -234,8 +263,7 @@
         script.src = 'https://cdn.trustindex.io/loader.js?1419e0a5167285708366323f27c';
         document.head.appendChild(script);
       }
-      
-      // Load on scroll or after 3 seconds
+
       window.addEventListener('scroll', loadTrustindex, { once: true });
       setTimeout(loadTrustindex, 3000);
     </script>

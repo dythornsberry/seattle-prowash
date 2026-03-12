@@ -1,32 +1,76 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Star } from "lucide-react";
 
 const GoogleReviewsCarousel = () => {
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const widgetRef = useRef<HTMLDivElement | null>(null);
   const [widgetLoaded, setWidgetLoaded] = useState(false);
 
   useEffect(() => {
-    // Load Featurable script if not already loaded
-    if (!document.querySelector('script[src*="featurable.com"]')) {
-      const script = document.createElement('script');
-      script.src = 'https://featurable.com/assets/bundle.js';
-      script.defer = true;
-      script.charset = 'UTF-8';
-      document.body.appendChild(script);
-    }
+    const section = sectionRef.current;
+    if (!section) return;
 
-    // Check if widget rendered after a delay
-    const timer = setTimeout(() => {
-      const widget = document.getElementById('featurable-db846b26-606c-49f2-82ca-c73eb47770bf');
-      if (widget && widget.children.length > 0) {
+    const loadWidget = () => {
+      if (!document.querySelector('script[src*="featurable.com"]')) {
+        const script = document.createElement("script");
+        script.src = "https://featurable.com/assets/bundle.js";
+        script.defer = true;
+        script.charset = "UTF-8";
+        document.body.appendChild(script);
+      }
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          loadWidget();
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "300px 0px" }
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const widget = widgetRef.current;
+    if (!widget) return;
+
+    const markReviewerImagesDecorative = () => {
+      widget.querySelectorAll("img").forEach((image) => {
+        if (!image.getAttribute("alt")) {
+          image.setAttribute("alt", "");
+          image.setAttribute("role", "presentation");
+          image.setAttribute("aria-hidden", "true");
+        }
+      });
+    };
+
+    const checkWidgetLoaded = () => {
+      if (widget.children.length > 0) {
         setWidgetLoaded(true);
       }
-    }, 4000);
+    };
 
-    return () => clearTimeout(timer);
+    markReviewerImagesDecorative();
+    checkWidgetLoaded();
+
+    const observer = new MutationObserver(() => {
+      markReviewerImagesDecorative();
+      checkWidgetLoaded();
+    });
+
+    observer.observe(widget, { childList: true, subtree: true });
+
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
   return (
-    <section className="section-spacing bg-background">
+    <section ref={sectionRef} className="section-spacing bg-background">
       <div className="container mx-auto px-4">
         {/* Fallback heading — hidden once the widget renders its own */}
         {!widgetLoaded && (
@@ -44,7 +88,12 @@ const GoogleReviewsCarousel = () => {
         )}
 
         <div className="fade-up max-w-6xl mx-auto">
-          <div id="featurable-db846b26-606c-49f2-82ca-c73eb47770bf" data-featurable-async></div>
+          <div
+            ref={widgetRef}
+            id="featurable-db846b26-606c-49f2-82ca-c73eb47770bf"
+            data-featurable-async
+            className="min-h-[340px]"
+          ></div>
         </div>
       </div>
     </section>

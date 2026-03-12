@@ -9,6 +9,10 @@ import EnhancedTrustBar from "@/components/EnhancedTrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Phone, MapPin } from "lucide-react";
+import newRoofBefore1 from "@/assets/new-roof-before-1.jpg";
+import metalRoofCleaningBeforeAfter from "@/assets/metal-roof-cleaning-before-after.jpg";
+import roofMossRemovalDetailedBeforeAfter from "@/assets/roof-moss-removal-detailed-before-after.jpg";
+import gutterCleaningBeforeAfter from "@/assets/gutter-cleaning-before-after.jpg";
 
 const Seattle = () => {
   useEffect(() => {
@@ -88,22 +92,22 @@ const Seattle = () => {
     {
       neighborhood: "Queen Anne",
       description: "2-story composite roof, moss removal + gutter flush",
-      image: "/lovable-uploads/new-roof-before-1.jpg"
+      image: newRoofBefore1
     },
     {
       neighborhood: "Ballard",
       description: "1-story metal roof cleaning, downspout clearing",
-      image: "/lovable-uploads/metal-roof-cleaning-before-after.jpg"
+      image: metalRoofCleaningBeforeAfter
     },
     {
       neighborhood: "Green Lake",
       description: "2-story asphalt, heavy moss + full gutter service",
-      image: "/lovable-uploads/roof-moss-removal-detailed-before-after.jpg"
+      image: roofMossRemovalDetailedBeforeAfter
     },
     {
       neighborhood: "Capitol Hill",
       description: "Multi-level composite, gutter guards cleaned",
-      image: "/lovable-uploads/gutter-cleaning-before-after.jpg"
+      image: gutterCleaningBeforeAfter
     }
   ];
 

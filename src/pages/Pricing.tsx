@@ -6,7 +6,7 @@ import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
-import { Phone, CheckCircle, Droplet, Home, Ruler, Mountain, TreePine, Star } from "lucide-react";
+import { Phone, CheckCircle, Droplet, Home, Ruler, Mountain, TreePine, Star, Sparkles, Wind } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
 
 const Pricing = () => {
@@ -28,11 +28,38 @@ const Pricing = () => {
     { icon: Home, factor: "Accessibility", description: "Landscaping and access points" },
   ];
 
+  const additionalServices = [
+    {
+      icon: Sparkles,
+      title: "Pressure / Power Washing",
+      description: "Driveways, patios, walkways, retaining walls, decks, and other hard surfaces.",
+      detail: "Quoted same day based on square footage, surface type, and how much staining or organic growth needs to be removed.",
+    },
+    {
+      icon: Home,
+      title: "House Washing",
+      description: "Soft washing for siding, trim, soffits, and other exterior surfaces.",
+      detail: "Quoted same day based on home size, siding material, access, and the amount of algae or dirt buildup.",
+    },
+    {
+      icon: Ruler,
+      title: "Driveway & Concrete Cleaning",
+      description: "Concrete driveways, sidewalks, patios, stairs, and entry areas.",
+      detail: "Quoted same day based on total area, stain severity, and whether treatment is needed for moss, algae, or oil spots.",
+    },
+    {
+      icon: Wind,
+      title: "Exterior Window Cleaning",
+      description: "Exterior-only window cleaning for homes and small commercial properties.",
+      detail: "Quoted same day based on pane count, number of stories, and access around landscaping or rooflines.",
+    },
+  ];
+
   return (
     <>
       <SEOHead
-        title="Pricing | Roof & Gutter Cleaning"
-        description="Transparent pricing for roof cleaning and gutter cleaning services in the Seattle area. Get a free personalized quote for your home."
+        title="Pricing | Roof, Gutter & Pressure Washing"
+        description="Transparent pricing for roof cleaning, gutter cleaning, pressure washing, power washing, house washing, driveway cleaning, and exterior window cleaning in the Seattle area."
       />
       
       <Header />
@@ -48,7 +75,7 @@ const Pricing = () => {
               Honest Pricing for Quality Work
             </h1>
             <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-8">
-              Every home is unique. We provide free, personalized quotes based on your specific needs—no hidden fees, no surprises.
+              Roof cleaning and gutter cleaning have the clearest typical ranges. Pressure washing, power washing, house washing, driveway cleaning, and window cleaning are quoted same day based on your property.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="cta-orange" size="xl" onClick={navigateToContact}>
@@ -197,6 +224,58 @@ const Pricing = () => {
           </div>
         </section>
 
+        {/* Additional Services */}
+        <section className="py-16 md:py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-12">
+                <Badge className="bg-brand-orange/10 text-brand-orange border-brand-orange/20 mb-4">
+                  Other Exterior Cleaning Services
+                </Badge>
+                <h2 className="text-3xl md:text-4xl font-bold text-brand-blue mb-4">
+                  We Also Quote Pressure Washing, House Washing & Window Cleaning
+                </h2>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                  We don&apos;t just clean roofs and gutters. We also provide same-day estimates for pressure washing, power washing, house washing, driveway and concrete cleaning, and exterior window cleaning.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                {additionalServices.map((service) => {
+                  const IconComponent = service.icon;
+                  return (
+                    <Card key={service.title} className="border hover:border-brand-orange/40 transition-all duration-300 hover:shadow-lg">
+                      <CardHeader className="pb-3">
+                        <div className="flex items-center gap-4">
+                          <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-orange/10 rounded-full">
+                            <IconComponent className="w-6 h-6 text-brand-orange" />
+                          </div>
+                          <div>
+                            <CardTitle className="text-xl text-brand-blue">{service.title}</CardTitle>
+                            <CardDescription className="text-sm font-medium text-brand-orange">
+                              Free same-day estimate
+                            </CardDescription>
+                          </div>
+                        </div>
+                      </CardHeader>
+                      <CardContent className="space-y-3">
+                        <p className="text-sm text-foreground">{service.description}</p>
+                        <p className="text-sm text-muted-foreground">{service.detail}</p>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
+              </div>
+
+              <div className="mt-8 rounded-2xl border border-brand-orange/20 bg-brand-orange/5 p-6 text-center">
+                <p className="text-sm md:text-base text-brand-blue font-medium">
+                  Ask about multi-service pricing when bundling roof cleaning, gutter cleaning, driveway cleaning, window cleaning, or house washing in the same visit.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
 
         {/* Why Free Quotes */}
         <section className="py-16 md:py-20 bg-brand-navy text-white">
@@ -211,7 +290,7 @@ const Pricing = () => {
               <div className="grid sm:grid-cols-3 gap-6 mb-10">
                 <div className="bg-white/10 rounded-xl p-6">
                   <p className="text-3xl font-bold text-brand-orange mb-2">Same Day</p>
-                  <p className="text-sm text-white/70">Most quotes delivered within hours</p>
+                  <p className="text-sm text-white/70">Same-day estimates available</p>
                 </div>
                 <div className="bg-white/10 rounded-xl p-6">
                   <p className="text-3xl font-bold text-brand-orange mb-2">No Obligation</p>

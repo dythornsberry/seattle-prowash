@@ -11,7 +11,7 @@ interface SEOHeadProps {
 export const SEOHead = ({ 
   title, 
   description, 
-  image = "/lovable-uploads/cd85dd92-8acb-405d-a73c-44650e962bd8.png",
+  image = "/og-seattle-prowash.jpg",
   url,
   type = "website"
 }: SEOHeadProps) => {

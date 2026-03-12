@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-roof-cleaning.jpg";
+import heroImageWebp from "@/assets/hero-roof-cleaning.webp";
+
 import { navigateToContact } from "@/lib/navigation";
 
 const getSeasonalMessage = (): string => {
@@ -44,16 +46,19 @@ const Hero = () => {
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       {/* Hero Background with Navy Overlay */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Professional roof cleaning service in Seattle - moss removal and roof treatment"
-          className="w-full h-full object-cover object-center"
-          width={1920}
-          height={1080}
-          loading="eager"
-          fetchpriority="high"
-          decoding="async"
-        />
+        <picture>
+          <source srcSet={heroImageWebp} type="image/webp" />
+          <img
+            src={heroImage}
+            alt="Professional roof cleaning service in Seattle - moss removal and roof treatment"
+            className="w-full h-full object-cover object-center"
+            width={1920}
+            height={1080}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
       </div>
 
@@ -62,12 +67,12 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Main Headline */}
           <h1 className="text-white font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight animate-fade-in mb-6 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
-            Kenmore's Roof & Gutter Cleaning Experts
+            Kenmore&apos;s Roof & Gutter Cleaning Experts
           </h1>
 
           {/* Trust Line */}
           <p className="text-lg md:text-xl text-white/90 font-medium max-w-3xl mx-auto animate-fade-in mb-4 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-            Serving Bothell, Kirkland, Woodinville & Greater Seattle
+            Serving Bothell, Kirkland, Woodinville &amp; Greater Seattle
           </p>
           <p className="text-xl md:text-2xl text-white font-medium max-w-3xl mx-auto animate-fade-in mb-8 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
             <a href="/reviews" className="hover:text-brand-orange transition-colors">5.0★ from 200+ neighbors</a> • 12-Month Moss-Free Guarantee • Same-Day Estimates

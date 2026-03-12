@@ -4,9 +4,13 @@ import { ArrowRight } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
 import { Link } from "react-router-dom";
 import roofImage from "@/assets/roof-cleaning-before-after-new.jpg";
+import roofImageMobile from "@/assets/roof-cleaning-before-after-new-mobile.webp";
 import gutterImage from "@/assets/gutter-cleaning-before-after.jpg";
+import gutterImageMobile from "@/assets/gutter-cleaning-before-after-mobile.webp";
 import houseImage from "@/assets/technician-house-washing.jpg";
+import houseImageMobile from "@/assets/technician-house-washing-mobile.webp";
 import windowImage from "@/assets/window-cleaning-action.jpg";
+import windowImageMobile from "@/assets/window-cleaning-action-mobile.webp";
 
 const ServicesPreview = () => {
   return (
@@ -28,12 +32,16 @@ const ServicesPreview = () => {
             to="/roof-cleaning"
             className="group relative h-72 sm:h-80 lg:h-96 rounded-2xl overflow-hidden block shadow-md hover:shadow-xl transition-all duration-300"
           >
-            <img
-              src={roofImage}
-              alt="Roof cleaning before and after — moss removal results"
-              loading="lazy"
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-            />
+            <picture className="absolute inset-0">
+              <source media="(max-width: 767px)" srcSet={roofImageMobile} type="image/webp" />
+              <img
+                src={roofImage}
+                alt="Roof cleaning before and after — moss removal results"
+                loading="lazy"
+                decoding="async"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </picture>
             <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent transition-opacity duration-300 group-hover:from-brand-navy" />
             <Badge className="absolute top-4 left-4 bg-brand-orange text-white border-0 px-3 py-1.5 text-sm shadow-md z-10">
               Most Popular
@@ -60,12 +68,16 @@ const ServicesPreview = () => {
               to="/gutter-cleaning"
               className="group relative h-56 sm:h-64 lg:h-72 rounded-2xl overflow-hidden block shadow-md hover:shadow-xl transition-all duration-300"
             >
-              <img
-                src={gutterImage}
-                alt="Gutter cleaning before and after"
-                loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
+              <picture className="absolute inset-0">
+                <source media="(max-width: 767px)" srcSet={gutterImageMobile} type="image/webp" />
+                <img
+                  src={gutterImage}
+                  alt="Gutter cleaning before and after"
+                  loading="lazy"
+                  decoding="async"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </picture>
               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent transition-opacity duration-300 group-hover:from-brand-navy" />
               <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-1 drop-shadow-sm">
@@ -84,12 +96,16 @@ const ServicesPreview = () => {
               to="/pressure-washing"
               className="group relative h-56 sm:h-64 lg:h-72 rounded-2xl overflow-hidden block shadow-md hover:shadow-xl transition-all duration-300"
             >
-              <img
-                src={houseImage}
-                alt="Pressure washing house siding"
-                loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
+              <picture className="absolute inset-0">
+                <source media="(max-width: 767px)" srcSet={houseImageMobile} type="image/webp" />
+                <img
+                  src={houseImage}
+                  alt="Pressure washing house siding"
+                  loading="lazy"
+                  decoding="async"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </picture>
               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent transition-opacity duration-300 group-hover:from-brand-navy" />
               <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-1 drop-shadow-sm">
@@ -108,12 +124,16 @@ const ServicesPreview = () => {
               to="/window-cleaning"
               className="group relative h-56 sm:h-64 lg:h-72 rounded-2xl overflow-hidden block shadow-md hover:shadow-xl transition-all duration-300"
             >
-              <img
-                src={windowImage}
-                alt="Exterior window cleaning"
-                loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
+              <picture className="absolute inset-0">
+                <source media="(max-width: 767px)" srcSet={windowImageMobile} type="image/webp" />
+                <img
+                  src={windowImage}
+                  alt="Exterior window cleaning"
+                  loading="lazy"
+                  decoding="async"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </picture>
               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent transition-opacity duration-300 group-hover:from-brand-navy" />
               <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-1 drop-shadow-sm">
