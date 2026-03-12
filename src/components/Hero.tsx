@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-roof-cleaning.jpg";
 import heroImageWebp from "@/assets/hero-roof-cleaning.webp";
-import heroImageMobileWebp from "@/assets/hero-roof-cleaning-mobile.webp";
+
 import { navigateToContact } from "@/lib/navigation";
 
 const getSeasonalMessage = (): string => {
