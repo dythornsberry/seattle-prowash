@@ -159,19 +159,21 @@
     @apply py-8 md:py-16 lg:py-20;
   }
   
-  /* ProWash animations - GPU accelerated */
+  /* ProWash animations - GPU accelerated with CSS safety net */
   .fade-up {
     opacity: 0;
     transform: translateY(20px) translateZ(0);
     transition: opacity 300ms ease-out, transform 300ms ease-out;
     will-change: opacity, transform;
     backface-visibility: hidden;
+    animation: fadeUpSafety 0.5s ease 1.5s forwards;
   }
-  
+
   .fade-up.in-view {
     opacity: 1;
     transform: translateY(0) translateZ(0);
     will-change: auto;
+    animation: none;
   }
 
   /* Progressive blur-up image loading */
@@ -243,5 +245,15 @@
   #tidio-chat-widget {
     display: none !important;
     visibility: hidden !important;
+  }
+}
+
+/* Safety-net keyframes (outside @layer so they resolve correctly):
+   ensures .fade-up content becomes visible even if
+   IntersectionObserver fails to add .in-view */
+@keyframes fadeUpSafety {
+  to {
+    opacity: 1;
+    transform: translateY(0) translateZ(0);
   }
 }
