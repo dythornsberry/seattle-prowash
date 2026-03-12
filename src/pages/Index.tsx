@@ -15,7 +15,7 @@ import HomeFAQ from "@/components/HomeFAQ";
 import ServiceAreaMap from "@/components/ServiceAreaMap";
 import ServiceAreasSection from "@/components/ServiceAreasSection";
 import Footer from "@/components/Footer";
-import UnifiedContactBar from "@/components/UnifiedContactBar";
+import MobileBottomBar from "@/components/MobileBottomBar";
 import ExitIntentPopup from "@/components/ExitIntentPopup";
 
 const Index = () => {
@@ -139,7 +139,7 @@ const Index = () => {
           <ServiceAreaMap />
         </main>
       <Footer />
-      <UnifiedContactBar />
+      <MobileBottomBar />
       <ExitIntentPopup />
       </div>
     </div>

@@ -227,8 +227,8 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-white/20 py-6">
+      {/* Bottom Bar — pb-20 clears MobileBottomBar on mobile */}
+      <div className="border-t border-white/20 py-6 pb-24 md:pb-6">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-center md:text-left">

@@ -71,7 +71,7 @@ const ServicesPreview = () => {
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-1 drop-shadow-sm">
                   Gutter Cleaning
                 </h3>
-                <p className="text-white/80 text-sm mb-3 drop-shadow-sm hidden sm:block">
+                <p className="text-white/80 text-sm mb-3 drop-shadow-sm">
                   Full clean + free roof blow-off. Starting at $250.
                 </p>
                 <div className="flex items-center text-brand-orange font-semibold text-sm group-hover:text-white transition-colors duration-300">
@@ -95,7 +95,7 @@ const ServicesPreview = () => {
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-1 drop-shadow-sm">
                   Pressure Washing
                 </h3>
-                <p className="text-white/80 text-sm mb-3 drop-shadow-sm hidden sm:block">
+                <p className="text-white/80 text-sm mb-3 drop-shadow-sm">
                   Driveways, siding, patios & walkways
                 </p>
                 <div className="flex items-center text-brand-orange font-semibold text-sm group-hover:text-white transition-colors duration-300">
@@ -119,7 +119,7 @@ const ServicesPreview = () => {
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-1 drop-shadow-sm">
                   Window Cleaning
                 </h3>
-                <p className="text-white/80 text-sm mb-3 drop-shadow-sm hidden sm:block">
+                <p className="text-white/80 text-sm mb-3 drop-shadow-sm">
                   Streak-free exterior cleaning up to 3 stories
                 </p>
                 <div className="flex items-center text-brand-orange font-semibold text-sm group-hover:text-white transition-colors duration-300">

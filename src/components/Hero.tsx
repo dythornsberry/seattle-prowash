@@ -73,17 +73,22 @@ const Hero = () => {
             <a href="/reviews" className="hover:text-brand-orange transition-colors">5.0★ from 200+ neighbors</a> • 12-Month Moss-Free Guarantee • Same-Day Estimates
           </p>
 
+          {/* Seasonal urgency — before CTAs to motivate the click */}
+          <p className="text-white text-sm md:text-base font-normal max-w-2xl animate-fade-in drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
+            {seasonalMessage}
+          </p>
+
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in">
-            <Button 
-              size="xl" 
+            <Button
+              size="xl"
               variant="cta-orange"
               className="text-lg px-10 py-7 text-xl font-semibold shadow-xl"
               onClick={handleGetQuote}
             >
               Get My Free Quote →
             </Button>
-            <Button 
+            <Button
               size="xl"
               variant="outline"
               className="text-lg px-10 py-7 text-xl font-semibold border-2 border-white bg-transparent text-white hover:bg-white hover:text-brand-navy shadow-xl"
@@ -92,9 +97,6 @@ const Hero = () => {
               Call 206-752-6690
             </Button>
           </div>
-          <p className="text-white text-sm md:text-base font-normal max-w-2xl mt-4 animate-fade-in drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
-            {seasonalMessage}
-          </p>
         </div>
       </div>
 
