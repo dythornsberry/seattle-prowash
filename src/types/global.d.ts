@@ -35,9 +35,3 @@ declare namespace google {
   }
 }
 
-// React doesn't include fetchpriority in its types yet
-declare module 'react' {
-  interface ImgHTMLAttributes<T> {
-    fetchpriority?: 'high' | 'low' | 'auto';
-  }
-}
