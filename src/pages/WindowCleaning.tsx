@@ -10,7 +10,7 @@ import ServiceAreasSection from "@/components/ServiceAreasSection";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
-import technicianPhoto from "@/assets/technician-house-washing.jpg";
+import windowCleaningPhoto from "@/assets/window-cleaning-action.jpg";
 
 const WindowCleaning = () => {
   useEffect(() => {
@@ -103,8 +103,8 @@ const WindowCleaning = () => {
               </div>
               <div className="fade-up">
                 <img
-                  src={technicianPhoto}
-                  alt="Seattle ProWash technician cleaning exterior of a home"
+                  src={windowCleaningPhoto}
+                  alt="Seattle ProWash technician cleaning exterior windows with water-fed pole"
                   className="rounded-2xl shadow-2xl w-full"
                   width={1200}
                   height={800}

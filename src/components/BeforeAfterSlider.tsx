@@ -8,15 +8,11 @@ import newRoofBefore1WebP from "@/assets/new-roof-before-1.webp";
 import newRoofAfter1WebP from "@/assets/new-roof-after-1.webp";
 import newMetalRoofBefore2WebP from "@/assets/new-metal-roof-before-2.webp";
 import newMetalRoofAfter2WebP from "@/assets/new-metal-roof-after-2.webp";
-import newPatioBefore3WebP from "@/assets/new-patio-before-3.webp";
-import newPatioAfter3WebP from "@/assets/new-patio-after-3.webp";
 // JPG fallbacks
 import newRoofBefore1 from "@/assets/new-roof-before-1.jpg";
 import newRoofAfter1 from "@/assets/new-roof-after-1.jpg";
 import newMetalRoofBefore2 from "@/assets/new-metal-roof-before-2.jpg";
 import newMetalRoofAfter2 from "@/assets/new-metal-roof-after-2.jpg";
-import newPatioBefore3 from "@/assets/new-patio-before-3.jpg";
-import newPatioAfter3 from "@/assets/new-patio-after-3.jpg";
 
 const BeforeAfterSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

@@ -2,10 +2,6 @@
 // Tests the submit-quote function and sends email alert if it fails
 // Designed to be called on a schedule (e.g., every 2 days via cron)
 
-import { Resend } from "npm:resend@2.0.0";
-
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
-
 // Restrict CORS to own domain only — this is an internal monitoring function
 const corsHeaders = {
   "Access-Control-Allow-Origin": "https://www.seattleprowash.com",
@@ -83,38 +79,52 @@ async function testFormSubmission(): Promise<HealthCheckResult> {
 }
 
 async function sendAlertEmail(result: HealthCheckResult, alertEmail: string) {
+  const resendApiKey = Deno.env.get("RESEND_API_KEY");
+  if (!resendApiKey) {
+    console.error("RESEND_API_KEY not configured - cannot send alert email");
+    return { sent: false, error: "RESEND_API_KEY not configured" };
+  }
+
   try {
-    const emailResponse = await resend.emails.send({
-      from: "Seattle ProWash Alert <onboarding@resend.dev>",
-      to: [alertEmail],
-      subject: "⚠️ URGENT: Seattle ProWash Form is BROKEN",
-      html: `
-        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <h1 style="color: #dc2626; margin-bottom: 20px;">🚨 Form Health Check FAILED</h1>
-          
-          <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
-            <p style="margin: 0 0 10px 0;"><strong>Error:</strong> ${result.message}</p>
-            <p style="margin: 0 0 10px 0;"><strong>Time:</strong> ${result.timestamp}</p>
-            ${result.responseTime ? `<p style="margin: 0;"><strong>Response Time:</strong> ${result.responseTime}ms</p>` : ''}
+    const emailResponse = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${resendApiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: "Seattle ProWash Alert <onboarding@resend.dev>",
+        to: [alertEmail],
+        subject: "⚠️ URGENT: Seattle ProWash Form is BROKEN",
+        html: `
+          <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+            <h1 style="color: #dc2626; margin-bottom: 20px;">🚨 Form Health Check FAILED</h1>
+            
+            <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+              <p style="margin: 0 0 10px 0;"><strong>Error:</strong> ${result.message}</p>
+              <p style="margin: 0 0 10px 0;"><strong>Time:</strong> ${result.timestamp}</p>
+              ${result.responseTime ? `<p style="margin: 0;"><strong>Response Time:</strong> ${result.responseTime}ms</p>` : ''}
+            </div>
+            
+            <h2 style="color: #1e40af; margin-bottom: 15px;">What to do:</h2>
+            <ol style="line-height: 1.8;">
+              <li>Check if the Zapier webhook URL is still valid</li>
+              <li>Verify the edge function is deployed correctly</li>
+              <li>Test the form manually on the website</li>
+              <li>Check the Supabase edge function logs for errors</li>
+            </ol>
+            
+            <p style="color: #6b7280; font-size: 14px; margin-top: 30px;">
+              This is an automated health check from Seattle ProWash website monitoring.
+            </p>
           </div>
-          
-          <h2 style="color: #1e40af; margin-bottom: 15px;">What to do:</h2>
-          <ol style="line-height: 1.8;">
-            <li>Check if the Zapier webhook URL is still valid</li>
-            <li>Verify the edge function is deployed correctly</li>
-            <li>Test the form manually on the website</li>
-            <li>Check the Supabase edge function logs for errors</li>
-          </ol>
-          
-          <p style="color: #6b7280; font-size: 14px; margin-top: 30px;">
-            This is an automated health check from Seattle ProWash website monitoring.
-          </p>
-        </div>
-      `,
+        `,
+      }),
     });
 
-    console.log("Alert email sent:", emailResponse);
-    return { sent: true, response: emailResponse };
+    const responseData = await emailResponse.json();
+    console.log("Alert email sent:", responseData);
+    return { sent: true, response: responseData };
   } catch (error) {
     console.error("Failed to send alert email:", error);
     return { sent: false, error: "Alert email delivery failed" };
