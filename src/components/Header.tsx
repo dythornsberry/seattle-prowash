@@ -108,9 +108,17 @@ const Header = () => {
               onClick={handleCallClick}
               className="flex items-center gap-2 bg-brand-orange/15 hover:bg-brand-orange/25 text-brand-orange font-bold text-xl px-4 py-2 rounded-lg transition-all duration-250 active:scale-95 border border-brand-orange/30"
             >
-              <Phone className="w-5 h-5 animate-pulse" />
+              <Phone className="w-5 h-5" />
               {phoneNumber}
             </button>
+            <Button
+              variant="cta-orange"
+              size="sm"
+              onClick={goToContact}
+              className="font-semibold"
+            >
+              Get Quote
+            </Button>
           </div>
 
           {/* Mobile Controls */}

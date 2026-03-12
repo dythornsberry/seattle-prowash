@@ -23,24 +23,24 @@ const EnhancedTrustBar = () => {
       value: "12",
       label: "Month Guarantee",
       subtext: "Moss-Free",
-      color: "text-green-600",
-      bgColor: "bg-green-600/10"
+      color: "text-brand-orange",
+      bgColor: "bg-brand-orange/10"
     },
     {
       icon: Clock,
       value: "Same",
       label: "Day Estimates",
       subtext: "Fast Response",
-      color: "text-blue-600",
-      bgColor: "bg-blue-600/10"
+      color: "text-white",
+      bgColor: "bg-white/10"
     },
     {
       icon: Award,
       value: "500+",
       label: "Roofs Cleaned",
       subtext: "Licensed & Insured",
-      color: "text-purple-600",
-      bgColor: "bg-purple-600/10"
+      color: "text-white",
+      bgColor: "bg-white/10"
     }
   ];
 

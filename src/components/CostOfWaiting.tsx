@@ -7,10 +7,10 @@ const CostOfWaiting = () => {
     <section className="section-spacing bg-light-gray">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto fade-up">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-teal text-center mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-brand-navy text-center mb-4">
             The Cost of Waiting vs. The Peace of Mind We Deliver
           </h2>
-          <p className="text-center text-lg text-text-charcoal max-w-3xl mx-auto mb-12">
+          <p className="text-center text-lg text-foreground max-w-3xl mx-auto mb-12">
             Moss actively destroys your roof. Here's what happens when you delay.
           </p>
           
@@ -38,29 +38,29 @@ const CostOfWaiting = () => {
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-text-charcoal"><strong>Moss lifts shingles</strong> creating entry points for water damage</span>
+                    <span className="text-foreground"><strong>Moss lifts shingles</strong> creating entry points for water damage</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-text-charcoal"><strong>Trapped moisture</strong> accelerates wood rot & structural decay</span>
+                    <span className="text-foreground"><strong>Trapped moisture</strong> accelerates wood rot & structural decay</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-text-charcoal"><strong>Voided warranties</strong> when maintenance is neglected</span>
+                    <span className="text-foreground"><strong>Voided warranties</strong> when maintenance is neglected</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-text-charcoal"><strong>$10,000-$30,000</strong> roof replacement vs. $499-$1,200 cleaning (most homes)</span>
+                    <span className="text-foreground"><strong>$10,000-$30,000</strong> roof replacement vs. $499-$1,200 cleaning (most homes)</span>
                   </li>
                 </ul>
               </CardContent>
             </Card>
 
             {/* The Success */}
-            <Card className="border-2 border-bright-green bg-green-50/50">
+            <Card className="border-2 border-green-600 bg-green-50/50">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-4">
-                  <CheckCircle className="w-6 h-6 text-bright-green" />
+                  <CheckCircle className="w-6 h-6 text-green-600" />
                   <h3 className="text-xl font-bold text-green-800">Peace of Mind We Deliver</h3>
                 </div>
                 
@@ -78,16 +78,16 @@ const CostOfWaiting = () => {
                 
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-bright-green mt-0.5 flex-shrink-0" />
-                    <span className="text-text-charcoal">Extend your roof's lifespan <strong>10–15 years</strong> with proper moss treatment</span>
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-foreground">Extend your roof's lifespan <strong>10–15 years</strong> with proper moss treatment</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-bright-green mt-0.5 flex-shrink-0" />
-                    <span className="text-text-charcoal">Boost curb appeal — most homeowners notice the difference from the street</span>
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-foreground">Boost curb appeal — most homeowners notice the difference from the street</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-bright-green mt-0.5 flex-shrink-0" />
-                    <span className="text-text-charcoal">12-month moss-free guarantee — if it grows back, we re-treat free</span>
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-foreground">12-month moss-free guarantee — if it grows back, we re-treat free</span>
                   </li>
                 </ul>
                 <GuaranteeBadge className="text-sm" />
