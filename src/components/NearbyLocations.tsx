@@ -8,7 +8,7 @@ interface NearbyLocationsProps {
   }>;
 }
 
-const NearbyLocations = ({ currentCity, cities }: NearbyLocationsProps) => {
+const NearbyLocations = ({ cities }: NearbyLocationsProps) => {
   return (
     <section className="py-12 bg-muted/30">
       <div className="container mx-auto px-4">
