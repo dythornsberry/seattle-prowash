@@ -32,18 +32,18 @@ const ServicesPreview = () => {
             to="/roof-cleaning"
             className="group relative h-72 sm:h-80 lg:h-96 rounded-2xl overflow-hidden block shadow-md hover:shadow-xl transition-all duration-300"
           >
-            <picture>
+            <picture className="absolute inset-0">
               <source media="(max-width: 767px)" srcSet={roofImageMobile} type="image/webp" />
               <img
                 src={roofImage}
                 alt="Roof cleaning before and after — moss removal results"
                 loading="lazy"
-                sizes="(max-width: 767px) 100vw, 1200px"
+                decoding="async"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </picture>
             <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent transition-opacity duration-300 group-hover:from-brand-navy" />
-            <Badge className="absolute top-4 left-4 bg-brand-orange text-black border-0 px-3 py-1.5 text-sm shadow-md z-10">
+            <Badge className="absolute top-4 left-4 bg-brand-orange text-white border-0 px-3 py-1.5 text-sm shadow-md z-10">
               Most Popular
             </Badge>
             <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 lg:p-10">
@@ -68,13 +68,13 @@ const ServicesPreview = () => {
               to="/gutter-cleaning"
               className="group relative h-56 sm:h-64 lg:h-72 rounded-2xl overflow-hidden block shadow-md hover:shadow-xl transition-all duration-300"
             >
-              <picture>
+              <picture className="absolute inset-0">
                 <source media="(max-width: 767px)" srcSet={gutterImageMobile} type="image/webp" />
                 <img
                   src={gutterImage}
                   alt="Gutter cleaning before and after"
                   loading="lazy"
-                  sizes="(max-width: 767px) 100vw, 33vw"
+                  decoding="async"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </picture>
@@ -96,13 +96,13 @@ const ServicesPreview = () => {
               to="/pressure-washing"
               className="group relative h-56 sm:h-64 lg:h-72 rounded-2xl overflow-hidden block shadow-md hover:shadow-xl transition-all duration-300"
             >
-              <picture>
+              <picture className="absolute inset-0">
                 <source media="(max-width: 767px)" srcSet={houseImageMobile} type="image/webp" />
                 <img
                   src={houseImage}
                   alt="Pressure washing house siding"
                   loading="lazy"
-                  sizes="(max-width: 767px) 100vw, 33vw"
+                  decoding="async"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </picture>
@@ -124,13 +124,13 @@ const ServicesPreview = () => {
               to="/window-cleaning"
               className="group relative h-56 sm:h-64 lg:h-72 rounded-2xl overflow-hidden block shadow-md hover:shadow-xl transition-all duration-300"
             >
-              <picture>
+              <picture className="absolute inset-0">
                 <source media="(max-width: 767px)" srcSet={windowImageMobile} type="image/webp" />
                 <img
                   src={windowImage}
                   alt="Exterior window cleaning"
                   loading="lazy"
-                  sizes="(max-width: 767px) 100vw, 33vw"
+                  decoding="async"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </picture>

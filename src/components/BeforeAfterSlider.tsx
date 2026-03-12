@@ -134,6 +134,7 @@ const BeforeAfterSlider = () => {
               size="icon"
               className="absolute left-4 top-1/2 -translate-y-1/2 bg-brand-white/90 border-brand-yellow hover:bg-brand-yellow hover:text-brand-navy shadow-lg"
               onClick={prevSlide}
+              aria-label="Show previous project"
             >
               <ChevronLeft className="w-5 h-5" />
             </Button>
@@ -143,6 +144,7 @@ const BeforeAfterSlider = () => {
               size="icon"
               className="absolute right-4 top-1/2 -translate-y-1/2 bg-brand-white/90 border-brand-yellow hover:bg-brand-yellow hover:text-brand-navy shadow-lg"
               onClick={nextSlide}
+              aria-label="Show next project"
             >
               <ChevronRight className="w-5 h-5" />
             </Button>
@@ -153,11 +155,18 @@ const BeforeAfterSlider = () => {
             {beforeAfterProjects.map((_, index) => (
               <button
                 key={index}
-                className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                  index === currentSlide ? 'bg-brand-yellow' : 'bg-brand-yellow/30'
-                }`}
+                type="button"
+                aria-label={`Show project ${index + 1}`}
+                aria-pressed={index === currentSlide}
+                className="flex h-6 w-6 items-center justify-center rounded-full"
                 onClick={() => setCurrentSlide(index)}
-              />
+              >
+                <span
+                  className={`block h-3 w-3 rounded-full transition-colors duration-300 ${
+                    index === currentSlide ? "bg-brand-yellow" : "bg-brand-yellow/30"
+                  }`}
+                />
+              </button>
             ))}
           </div>
         </div>

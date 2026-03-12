@@ -196,7 +196,7 @@ const Redmond = () => {
                 <div className="grid md:grid-cols-3 gap-6 mb-12">
                   <TestimonialCard 
                     quote="Excellent service, he came in with a couple days of the rains, and during. Dylan kept us up to date before our scheduled time. He gave excellent service and the roof is still looking great months later."
-                    author="Lori XXX"
+                    author="Lori"
                     service="Roof Cleaning"
                   />
                   <TestimonialCard 

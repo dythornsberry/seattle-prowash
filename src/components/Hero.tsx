@@ -41,10 +41,9 @@ const Hero = () => {
   };
 
   const seasonalMessage = getSeasonalMessage();
-  const services = ["Roof cleaning", "Gutter cleaning", "Pressure washing", "Window cleaning"];
 
   return (
-    <section className="relative flex min-h-[82vh] items-center justify-center overflow-hidden md:min-h-[90vh]">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       {/* Hero Background with Navy Overlay */}
       <div className="absolute inset-0 z-0">
         <picture>
@@ -59,44 +58,33 @@ const Hero = () => {
             loading="eager"
             fetchpriority="high"
             decoding="async"
-            sizes="100vw"
           />
         </picture>
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
       </div>
 
       {/* Hero Content */}
-      <div className="container relative z-10 mx-auto px-4 py-16 md:py-20">
+      <div className="container mx-auto px-4 relative z-10 py-20">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Main Headline */}
           <h1 className="text-white font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight animate-fade-in mb-6 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
-            Roof Cleaning, Gutter Cleaning & Pressure Washing for Greater Seattle Homes
+            Kenmore&apos;s Roof & Gutter Cleaning Experts
           </h1>
 
           {/* Trust Line */}
           <p className="text-lg md:text-xl text-white/90 font-medium max-w-3xl mx-auto animate-fade-in mb-4 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-            Kenmore-based local crew serving Seattle, Bothell, Kirkland, Woodinville, Shoreline and nearby cities
+            Serving Bothell, Kirkland, Woodinville &amp; Greater Seattle
           </p>
           <p className="text-xl md:text-2xl text-white font-medium max-w-3xl mx-auto animate-fade-in mb-8 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
             <a href="/reviews" className="hover:text-brand-orange transition-colors">5.0★ from 200+ neighbors</a> • 12-Month Moss-Free Guarantee • Same-Day Estimates
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-2 animate-fade-in mb-8">
-            {services.map((service) => (
-              <span
-                key={service}
-                className="rounded-full border border-white/25 bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm"
-              >
-                {service}
-              </span>
-            ))}
-          </div>
 
           {/* CTAs */}
-          <div className="mx-auto flex w-full max-w-2xl flex-col items-center justify-center gap-3 animate-fade-in sm:flex-row sm:gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in">
             <Button 
               size="xl" 
               variant="cta-orange"
-              className="w-full max-w-md px-8 py-7 text-lg font-semibold shadow-xl sm:w-auto sm:min-w-[280px] sm:text-xl"
+              className="text-lg px-10 py-7 text-xl font-semibold shadow-xl"
               onClick={handleGetQuote}
             >
               Get My Free Quote →
@@ -104,15 +92,12 @@ const Hero = () => {
             <Button 
               size="xl"
               variant="outline"
-              className="w-full max-w-md border-2 border-white bg-transparent px-8 py-7 text-lg font-semibold text-white shadow-xl hover:bg-white hover:text-brand-navy sm:w-auto sm:min-w-[280px] sm:text-xl"
+              className="text-lg px-10 py-7 text-xl font-semibold border-2 border-white bg-transparent text-white hover:bg-white hover:text-brand-navy shadow-xl"
               onClick={handleCall}
             >
-              Call or Text 206-752-6690
+              Call 206-752-6690
             </Button>
           </div>
-          <p className="mt-4 text-sm font-medium text-white/85 animate-fade-in drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)] md:text-base">
-            Request a quote in about 60 seconds. Most homes get a same-day estimate.
-          </p>
           <p className="text-white text-sm md:text-base font-normal max-w-2xl mt-4 animate-fade-in drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
             {seasonalMessage}
           </p>

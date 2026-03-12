@@ -96,8 +96,8 @@ export default {
 				}
 			},
 			fontFamily: {
-				sans: ['Avenir Next', 'Segoe UI Variable Text', 'Segoe UI', 'Helvetica Neue', 'sans-serif'],
-				heading: ['Avenir Next Condensed', 'Franklin Gothic Medium', 'Arial Narrow', 'sans-serif'],
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+				heading: ['Poppins', 'system-ui', 'sans-serif'],
 			},
 			spacing: {
 				'18': '4.5rem', /* 72px */
