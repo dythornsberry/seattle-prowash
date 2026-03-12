@@ -28,21 +28,19 @@ const BeforeAfterSlider = () => {
       beforeImageWebP: newRoofBefore1WebP,
       afterImageWebP: newRoofAfter1WebP,
       beforeAlt: "Seattle metal roof before moss removal treatment showing heavy moss growth and discoloration",
-      afterAlt: "Seattle metal roof after professional moss removal and treatment - clean and restored",
-      completionDate: "December 2024"
+      afterAlt: "Seattle metal roof after professional moss removal and treatment - clean and restored"
     },
     {
       id: 2,
       title: "Metal Roof & Skylight Cleaning - Bellevue",
-      location: "Bellevue, WA", 
+      location: "Bellevue, WA",
       service: "Metal Roof Cleaning + Skylight Clean",
       beforeImage: newMetalRoofBefore2,
       afterImage: newMetalRoofAfter2,
       beforeImageWebP: newMetalRoofBefore2WebP,
       afterImageWebP: newMetalRoofAfter2WebP,
       beforeAlt: "Bellevue metal roof with debris and weathering before professional cleaning",
-      afterAlt: "Bellevue metal roof and skylights after specialized cleaning - restored to original condition",
-      completionDate: "December 2024"
+      afterAlt: "Bellevue metal roof and skylights after specialized cleaning - restored to original condition"
     },
     {
       id: 5,
@@ -52,8 +50,7 @@ const BeforeAfterSlider = () => {
       beforeImage: "/lovable-uploads/7cdfb095-76e6-4419-b395-a8272819a23b.webp",
       afterImage: "/lovable-uploads/cd85dd92-8acb-405d-a73c-44650e962bd8.webp",
       beforeAlt: "Seattle asphalt roof heavily covered in moss and debris before professional treatment",
-      afterAlt: "Seattle asphalt roof after professional moss removal and protection treatment - fully restored",
-      completionDate: "January 2025"
+      afterAlt: "Seattle asphalt roof after professional moss removal and protection treatment - fully restored"
     }
   ];
 
@@ -111,13 +108,6 @@ const BeforeAfterSlider = () => {
                         beforeAlt={project.beforeAlt}
                         afterAlt={project.afterAlt}
                       />
-                      
-                      {/* Completion Date */}
-                      <div className="text-center mt-4">
-                        <span className="inline-block bg-brand-yellow text-brand-navy px-3 py-1 rounded-full text-sm font-bold">
-                          {project.completionDate}
-                        </span>
-                      </div>
                     </div>
                   </div>
                 ))}

@@ -47,7 +47,7 @@ const Gallery = () => {
       { 
         src: asphaltRoofBefore, 
         alt: "Roof cleaning and moss removal before and after in Seattle", 
-        title: "Roof cleaning — Seattle, Jan 2025", 
+        title: "Roof cleaning — Seattle", 
         location: "Seattle", 
         description: "Complete roof moss removal and protection treatment showing dramatic transformation from heavy moss coverage to clean roof",
         service: "Roof Cleaning"
@@ -55,7 +55,7 @@ const Gallery = () => {
       { 
         src: metalRoofBefore, 
         alt: "Metal roof cleaning transformation in Bellevue", 
-        title: "Roof cleaning — Bellevue, Dec 2024", 
+        title: "Roof cleaning — Bellevue", 
         location: "Bellevue", 
         description: "Professional metal roof cleaning removed oxidation and staining to restore original shine",
         service: "Roof Cleaning"
@@ -87,7 +87,7 @@ const Gallery = () => {
       { 
         src: "/lovable-uploads/380b267e-dbb4-4a71-8ac9-2bba6d28b15c.webp", 
         alt: "Metal roof cleaning before and after with visible cleaning process", 
-        title: "Roof cleaning — Seattle Area, Nov 2024", 
+        title: "Roof cleaning — Seattle Area", 
         location: "Seattle Area", 
         description: "Intensive metal roof cleaning showing the process and dramatic results",
         service: "Roof Cleaning"
@@ -111,7 +111,7 @@ const Gallery = () => {
       { 
         src: "/lovable-uploads/64d9c018-2edd-4f52-a9c8-26f38eacb1ab.webp", 
         alt: "Asphalt roof debris removal before and after", 
-        title: "Roof cleaning — Seattle Area, Oct 2024", 
+        title: "Roof cleaning — Seattle Area", 
         location: "Seattle Area", 
         description: "Professional asphalt roof cleaning with complete debris and moss removal",
         service: "Roof Cleaning"
@@ -135,7 +135,7 @@ const Gallery = () => {
       { 
         src: "/lovable-uploads/0b5d9cfa-52bb-4f34-b0ff-3ddd5f38c3b4.webp", 
         alt: "Asphalt roof moss removal before and after", 
-        title: "Roof cleaning — Seattle Area, Sep 2024", 
+        title: "Roof cleaning — Seattle Area", 
         location: "Seattle Area", 
         description: "Professional moss removal on asphalt shingle roof with gentle treatment",
         service: "Roof Cleaning"
@@ -151,7 +151,7 @@ const Gallery = () => {
       { 
         src: "/lovable-uploads/84877120-87fc-4d9f-8151-f6013e38b055.webp", 
         alt: "Asphalt roof moss removal before and after in Seattle", 
-        title: "Roof cleaning — Seattle, Aug 2024", 
+        title: "Roof cleaning — Seattle", 
         location: "Seattle, WA", 
         description: "Professional asphalt roof cleaning transformation with moss removal",
         service: "Roof Cleaning"
@@ -161,7 +161,7 @@ const Gallery = () => {
       { 
         src: gutterBefore, 
         alt: "Gutter cleaning and brightening service in Bothell", 
-        title: "Gutter cleaning — Bothell, Jan 2025", 
+        title: "Gutter cleaning — Bothell", 
         location: "Bothell", 
         description: "Complete gutter cleaning with brightening service, restoring exterior to like-new appearance",
         service: "Gutter Cleaning"
@@ -169,7 +169,7 @@ const Gallery = () => {
       { 
         src: "/lovable-uploads/26d7c8d9-d5dc-42b1-ac63-62630e258539.webp", 
         alt: "Gutter cleaning before and after showing debris removal", 
-        title: "Gutter cleaning — Seattle Area, Dec 2024", 
+        title: "Gutter cleaning — Seattle Area", 
         location: "Seattle Area", 
         description: "Professional gutter cleaning removing debris, leaves, and buildup for proper water flow",
         service: "Gutter Cleaning"
@@ -185,7 +185,7 @@ const Gallery = () => {
       { 
         src: "/lovable-uploads/e5ca4024-1728-4972-8b36-99d8c320f4e4.webp", 
         alt: "Gutter brightening before and after showing dramatic restoration", 
-        title: "Gutter cleaning — Seattle Area, Nov 2024", 
+        title: "Gutter cleaning — Seattle Area", 
         location: "Seattle Area", 
         description: "Professional gutter brightening service restoring gutters to original color and brightness",
         service: "Gutter Cleaning"
