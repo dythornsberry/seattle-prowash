@@ -94,7 +94,7 @@ const About = () => {
                     </p>
                     
                     <p className="italic text-brand-navy font-medium">
-                      "Regular maintenance is the simplest, best investment you can make in your property. It raises the value of your home, boosts curb appeal, and prevents expensive early roof replacements. That is why we exist."
+                      "Regular maintenance is the best investment you can make in your property. It prevents expensive early roof replacements and adds real curb appeal. That is why we exist."
                     </p>
                   </div>
                   
