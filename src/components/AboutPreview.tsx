@@ -51,14 +51,14 @@ const AboutPreview = () => {
                 Meet Your Local <span className="text-brand-orange">Exterior Care Experts</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I started Seattle ProWash with a simple belief: regular exterior maintenance is the single best investment you can make in your property. I saw too many homes suffering considerable damage from neglected, clogged gutters and moss-covered roofs.
+                I started Seattle ProWash with a simple belief: regular exterior maintenance is the single biggest investment you can make in your property. I saw too many homes suffering damage from neglected, clogged gutters and moss-covered roofs.
               </p>
             </div>
 
             <div className="bg-off-white p-6 rounded-2xl border border-brand-navy/10 shadow-sm relative overflow-hidden">
                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-orange/5 rounded-bl-full -z-10"></div>
               <p className="font-medium text-brand-navy italic text-lg relative z-10">
-                "Simple maintenance adds incredible value and curb appeal. More importantly, it keeps you from facing costly repairs and premature roof replacements down the road."
+                "Regular maintenance is the simplest, best investment you can make in your property. It raises the value of your home, boosts curb appeal, and prevents expensive early roof replacements."
               </p>
             </div>
 

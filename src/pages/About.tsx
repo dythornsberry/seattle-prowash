@@ -82,7 +82,7 @@ const About = () => {
                     </p>
                     
                     <p>
-                      After seeing too many homes suffering considerable damage from neglected, clogged gutters and moss-covered roofs, he knew homeowners needed a reliable partner to protect their biggest asset. 
+                      After seeing too many homes suffering damage from neglected, clogged gutters and moss-covered roofs, he knew homeowners needed a reliable partner to protect their biggest asset. 
                     </p>
                     
                     <p className="italic text-brand-navy font-medium">
@@ -90,11 +90,11 @@ const About = () => {
                     </p>
                     
                     <p>
-                      Beyond just preventing damage, simple maintenance dramatically boosts curb appeal and raises the value of a home. 
+                      Beyond just preventing damage, regular maintenance dramatically boosts curb appeal and raises the value of a home. 
                     </p>
                     
                     <p className="italic text-brand-navy font-medium">
-                      "Consistently maintaining your exterior adds incredible value and keeps you from facing costly repairs or needing premature roof and gutter replacements. That is truly why we exist."
+                      "Regular maintenance is the simplest, best investment you can make in your property. It raises the value of your home, boosts curb appeal, and prevents expensive early roof replacements. That is why we exist."
                     </p>
                   </div>
                   
