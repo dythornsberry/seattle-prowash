@@ -9,6 +9,7 @@ import EnhancedTrustBar from "@/components/EnhancedTrustBar";
 import ServicesPreview from "@/components/ServicesPreview";
 import CostOfWaiting from "@/components/CostOfWaiting";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
+import AboutPreview from "@/components/AboutPreview";
 import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 import GoogleReviewsCarousel from "@/components/GoogleReviewsCarousel";
 import HomeFAQ from "@/components/HomeFAQ";
@@ -106,6 +107,7 @@ const Index = () => {
           <Hero />
           <EnhancedTrustBar />
           <ServicesPreview />
+          <AboutPreview />
           <GoogleReviewsCarousel />
           <div className="bg-off-white">
             <TwoStepQuoteForm />
