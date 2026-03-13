@@ -58,7 +58,7 @@ const AboutPreview = () => {
             <div className="bg-off-white p-6 rounded-2xl border border-brand-navy/10 shadow-sm relative overflow-hidden">
                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-orange/5 rounded-bl-full -z-10"></div>
               <p className="font-medium text-brand-navy italic text-lg relative z-10">
-                "Simple maintenance doesn’t just add incredible value and curb appeal—it keeps you from facing costly repairs and premature roof replacements down the road."
+                "Simple maintenance adds incredible value and curb appeal. More importantly, it keeps you from facing costly repairs and premature roof replacements down the road."
               </p>
             </div>
 

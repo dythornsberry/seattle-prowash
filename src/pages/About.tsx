@@ -94,7 +94,7 @@ const About = () => {
                     </p>
                     
                     <p className="italic text-brand-navy font-medium">
-                      "Consistently maintaining your exterior doesn't just add value—it keeps you from facing costly repairs or needing premature roof and gutter replacements. That is truly why we exist."
+                      "Consistently maintaining your exterior adds incredible value and keeps you from facing costly repairs or needing premature roof and gutter replacements. That is truly why we exist."
                     </p>
                   </div>
                   
