@@ -43,7 +43,7 @@ const Services = () => {
       image: mossImg,
       href: "/moss-treatment",
       price: "Included with roof cleaning",
-      description: "Professional moss removal and zinc-based treatment to prevent regrowth. We treat the root cause — not just the surface.",
+      description: "Professional moss removal and zinc-based treatment to prevent regrowth. We treat the root cause, not just the surface.",
       includes: [
         "Complete moss removal",
         "Zinc-based preventative treatment",
@@ -129,7 +129,7 @@ const Services = () => {
               Our Services
             </h1>
             <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-8">
-              From rooftop to driveway — we keep your home and business looking its best. Kenmore-based, serving all of greater Seattle.
+              From rooftop to driveway, we keep your home and business looking its best. Kenmore-based, serving all of greater Seattle.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="cta-orange" size="xl" onClick={navigateToContact}>
@@ -207,7 +207,7 @@ const Services = () => {
               Not Sure What You Need?
             </h2>
             <p className="text-lg text-white/80 max-w-xl mx-auto mb-8">
-              Tell us about your property and we'll recommend the right services. Free quotes — no obligation.
+              Tell us about your property and we'll recommend the right services. Free quotes, no obligation.
             </p>
             <Button variant="cta-orange" size="xl" onClick={navigateToContact}>
               Get My Free Quote →

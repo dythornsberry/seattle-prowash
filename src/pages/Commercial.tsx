@@ -120,7 +120,7 @@ const Commercial = () => {
                 Our Commercial Services
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                From storefronts to warehouses — we handle properties of all sizes with professional-grade equipment.
+                From storefronts to warehouses, we handle properties of all sizes with professional-grade equipment.
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">

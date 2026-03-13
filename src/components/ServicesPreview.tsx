@@ -22,12 +22,12 @@ const ServicesPreview = () => {
             Our Services
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Roof cleaning, gutter cleaning, pressure washing & window cleaning — protecting homes across greater Seattle
+            Roof cleaning, gutter cleaning, pressure washing & window cleaning for homes across greater Seattle
           </p>
         </div>
 
         <div className="max-w-6xl mx-auto space-y-4 lg:space-y-6">
-          {/* Roof Cleaning — Hero Card (dominant) */}
+          {/* Roof Cleaning - Hero Card */}
           <Link
             to="/roof-cleaning"
             className="group relative h-72 sm:h-80 lg:h-96 rounded-2xl overflow-hidden block shadow-md hover:shadow-xl transition-all duration-300"
@@ -36,7 +36,7 @@ const ServicesPreview = () => {
               <source media="(max-width: 767px)" srcSet={roofImageMobile} type="image/webp" />
               <img
                 src={roofImage}
-                alt="Roof cleaning before and after — moss removal results"
+                alt="Roof cleaning before and after, moss removal results"
                 loading="lazy"
                 decoding="async"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -51,7 +51,7 @@ const ServicesPreview = () => {
                 Roof Cleaning
               </h3>
               <p className="text-white/90 text-base sm:text-lg mb-2 drop-shadow-sm max-w-xl">
-                Moss treatment, moss removal & gutter cleaning — all included. Starting at $499.
+                Moss treatment, moss removal & gutter cleaning included. Starting at $499.
               </p>
               <p className="text-brand-orange font-bold text-sm sm:text-base mb-4">
                 12-Month Moss-Free Guarantee
@@ -62,7 +62,7 @@ const ServicesPreview = () => {
             </div>
           </Link>
 
-          {/* Secondary Services — 3 equal cards */}
+          {/* Secondary Services */}
           <div className="grid md:grid-cols-3 gap-4 lg:gap-6">
             <Link
               to="/gutter-cleaning"

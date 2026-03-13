@@ -83,11 +83,11 @@ const CostOfWaiting = () => {
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span className="text-foreground">Boost curb appeal — most homeowners notice the difference from the street</span>
+                    <span className="text-foreground">Boost curb appeal. Most homeowners notice the difference from the street.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span className="text-foreground">12-month moss-free guarantee — if it grows back, we re-treat free</span>
+                    <span className="text-foreground">12-month moss-free guarantee. If it grows back, we re-treat free.</span>
                   </li>
                 </ul>
                 <GuaranteeBadge className="text-sm" />

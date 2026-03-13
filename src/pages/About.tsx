@@ -74,31 +74,23 @@ const About = () => {
                   </h2>
                   <div className="space-y-6 text-lg text-muted-foreground">
                     <p>
-                      Seattle ProWash is owned and operated by Dylan Thornsberry, a Kenmore-based local who built this company to serve Seattle-area homeowners with honest, effective roof and gutter cleaning services.
+                      Seattle ProWash is owned and operated by Dylan Thornsberry out of Kenmore, WA. He started the company in 2022 after working for other roof cleaning outfits and deciding he could do it better.
                     </p>
-                    
+
                     <p>
-                      After years of working for other roof cleaning companies, Dylan knew there was a better way to serve local homeowners.
+                      The short version: too many homeowners were getting burned by companies that cut corners or disappeared after the first job. Dylan wanted to build something different.
                     </p>
-                    
-                    <p>
-                      So in 2022, he launched Seattle ProWash with a mission to deliver reliable, top-quality roof and gutter cleaning using real professional gear and a no-corners-cut mindset.
-                    </p>
-                    
+
                     <p className="italic text-brand-navy font-medium">
-                      "I've worked on every kind of roof and gutter system you can imagine. I know what works best for each property. I started Seattle ProWash to bring honest, reliable cleaning to the people in my community."
+                      "I've worked on every type of roof and gutter system out there. I started Seattle ProWash to give my neighbors the kind of service I'd want on my own house."
                     </p>
-                    
+
                     <p>
-                      Dylan's passion lies in property protection. He genuinely believes that professional roof and gutter maintenance is the single greatest investment any homeowner can make.
+                      Keeping up with roof and gutter maintenance is the cheapest way to avoid a $15,000+ roof replacement down the road. That's what drives the work.
                     </p>
-                    
-                    <p>
-                      As a Pacific Northwest local, Dylan takes immense pride in helping his neighbors protect and beautify their homes against our unique climate.
-                    </p>
-                    
+
                     <p className="italic text-brand-navy font-medium">
-                      "When you see a moss-covered roof or clogged gutter transformed back to like-new condition, you understand the incredible value we provide."
+                      "A moss-covered roof looks bad, but the real cost is underneath. We catch it before it becomes a big problem."
                     </p>
                   </div>
                   
@@ -153,10 +145,10 @@ const About = () => {
                 </div>
                 <div className="text-center md:text-left flex-1">
                   <h3 className="text-2xl md:text-3xl font-bold text-brand-navy mb-4">
-                    Let Us Show You the Difference
+                    Get a Free Quote
                   </h3>
                   <p className="text-lg text-muted-foreground mb-6">
-                    "I started this company to provide the honest, high-quality service our community deserves. Contact us today for your free, no-pressure quote, and let us earn your trust."
+                    "Send us a few photos of your roof and we'll get you a quote the same day. No pressure, no hassle."
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button 
@@ -196,32 +188,32 @@ const About = () => {
               <Card className="fade-up bg-brand-white border-brand-orange/20 hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">
                   <Award className="w-12 h-12 text-brand-orange mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-brand-navy mb-3">True Local Mastery</h3>
-                  <p className="text-muted-foreground">We're experts in protecting Pacific Northwest homes from our specific climate.</p>
+                  <h3 className="text-xl font-semibold text-brand-navy mb-3">Built for PNW Weather</h3>
+                  <p className="text-muted-foreground">We know what moss, rain, and evergreen needles do to roofs up here. We deal with it every day.</p>
                 </CardContent>
               </Card>
 
               <Card className="fade-up bg-brand-white border-brand-orange/20 hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">
                   <CheckCircle className="w-12 h-12 text-brand-orange mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-brand-navy mb-3">A Flawless Finish, Guaranteed</h3>
-                  <p className="text-muted-foreground">Our gentle soft-wash method cleans completely without risking damage to your roof or gutters.</p>
+                  <h3 className="text-xl font-semibold text-brand-navy mb-3">Soft-Wash, No Damage</h3>
+                  <p className="text-muted-foreground">We use low-pressure soft-wash methods that clean without harming your shingles or gutters.</p>
                 </CardContent>
               </Card>
 
               <Card className="fade-up bg-brand-white border-brand-orange/20 hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">
                   <Users className="w-12 h-12 text-brand-orange mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-brand-navy mb-3">Unwavering Respect for Your Home</h3>
-                  <p className="text-muted-foreground">We take pride in our professionalism, from clear communication to a spotless cleanup.</p>
+                  <h3 className="text-xl font-semibold text-brand-navy mb-3">We Clean Up After Ourselves</h3>
+                  <p className="text-muted-foreground">When we leave, your property looks better than when we showed up. No mess, no surprises.</p>
                 </CardContent>
               </Card>
 
               <Card className="fade-up bg-brand-white border-brand-orange/20 hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">
                   <Calendar className="w-12 h-12 text-brand-orange mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-brand-navy mb-3">Results That Speak for Themselves</h3>
-                  <p className="text-muted-foreground">With 500+ properties restored, we deliver transformations that boost your home's value and curb appeal.</p>
+                  <h3 className="text-xl font-semibold text-brand-navy mb-3">500+ Roofs Cleaned</h3>
+                  <p className="text-muted-foreground">We've done this enough to know what works. Check the before-and-after photos if you want proof.</p>
                 </CardContent>
               </Card>
             </div>
@@ -266,7 +258,7 @@ const About = () => {
                   Our Team at Work
                 </h2>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  See our professional team in action, delivering exceptional results across the Pacific Northwest
+                  A few shots from recent jobs around the Seattle area
                 </p>
               </div>
 

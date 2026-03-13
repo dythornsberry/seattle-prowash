@@ -24,7 +24,7 @@ const topFAQs = [
   },
   {
     question: "Are you licensed and insured?",
-    answer: "Yes. Seattle ProWash is fully licensed, bonded and insured, so your property is protected. We follow all safety protocols and carry comprehensive liability coverage.",
+    answer: "Yes. Seattle ProWash is fully licensed, bonded, and insured. We carry full liability coverage.",
     icon: Shield,
     cta: false
   },
@@ -71,7 +71,7 @@ const HomeFAQ = () => {
               Frequently Asked Questions
             </h2>
             <p className="text-base text-muted-foreground">
-              Straight answers from a local team — no sales pitch
+              Straight answers from a local team. No sales pitch.
             </p>
           </div>
 

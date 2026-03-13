@@ -239,7 +239,7 @@ const RoofCleaning = () => {
                   <CardContent className="space-y-4">
                     <p className="text-3xl font-bold text-brand-navy">$499 – $1,200 <span className="text-sm font-normal text-muted-foreground">for most homes</span></p>
                     <p className="text-muted-foreground">
-                      Our premium all-in-one service: moss treatment, moss removal, and gutter cleaning — all included. Backed by our 12-month moss-free guarantee.
+                      Moss treatment, moss removal, and gutter cleaning all included. Backed by our 12-month moss-free guarantee.
                     </p>
                     <Button
                       variant="prowash-primary"
@@ -342,7 +342,7 @@ const RoofCleaning = () => {
                   <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-brand-navy mb-1">Honest Advice & Maintenance</h3>
-                    <p className="text-sm text-muted-foreground">We recommend only what your roof truly needs</p>
+                    <p className="text-sm text-muted-foreground">We recommend only what your roof actually needs</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 fade-up">
