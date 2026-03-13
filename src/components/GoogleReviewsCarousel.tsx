@@ -72,7 +72,7 @@ const GoogleReviewsCarousel = () => {
   return (
     <section ref={sectionRef} className="section-spacing bg-background">
       <div className="container mx-auto px-4">
-        {/* Fallback heading — hidden once the widget renders its own */}
+        {/* Fallback heading, hidden once the widget renders its own */}
         {!widgetLoaded && (
           <div className="text-center mb-8 fade-up">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy mb-3">

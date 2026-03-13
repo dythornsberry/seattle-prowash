@@ -142,7 +142,7 @@ const Redmond = () => {
               <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-12">
                   <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                    Comprehensive Cleaning Services for Redmond Homes
+                    Complete Cleaning Services for Redmond Homes
                   </h2>
                   <p className="text-xl text-white/90 max-w-3xl mx-auto">
                     From moss treatment to gutter cleaning, we provide complete exterior care for your Redmond property.

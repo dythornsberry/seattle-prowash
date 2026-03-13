@@ -100,7 +100,7 @@ const RoofGutterCleaningImportance = () => {
                   </p>
                   <ul>
                     <li>Safety expertise and proper equipment</li>
-                    <li>Comprehensive moss treatment that prevents regrowth</li>
+                    <li>Thorough moss treatment that prevents regrowth</li>
                     <li>Damage assessment and early problem detection</li>
                     <li>Insurance and liability protection</li>
                   </ul>
@@ -121,7 +121,7 @@ const RoofGutterCleaningImportance = () => {
                     </Link>
                     <Link to="/gutter-cleaning" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
                       <h4 className="font-semibold text-brand-navy mb-2">Gutter Cleaning</h4>
-                      <p className="text-sm text-muted-foreground">Comprehensive gutter cleaning and protection</p>
+                      <p className="text-sm text-muted-foreground">Complete gutter cleaning and protection</p>
                     </Link>
                   </div>
                   <div className="text-center mt-4">

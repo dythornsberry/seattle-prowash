@@ -9,23 +9,23 @@ const getSeasonalMessage = (): string => {
   switch (month) {
     case 0: // Jan
     case 1: // Feb
-      return "Winter moisture is feeding moss right now — get ahead of it before spring.";
+      return "Winter moisture is feeding moss right now. Get ahead of it before spring.";
     case 2: // Mar
     case 3: // Apr
       return "Spring rain + warming temps = rapid moss growth. Act now before damage spreads.";
     case 4: // May
-      return "Moss season is peaking — protect your roof before summer.";
+      return "Moss season is peaking. Protect your roof before summer.";
     case 5: // Jun
     case 6: // Jul
     case 7: // Aug
       return "Summer is the best time to clean your roof. Book now while the weather holds.";
     case 8: // Sep
-      return "Fall is here — clean your gutters before the leaves pile up.";
+      return "Fall is here. Get your gutters cleaned before the leaves pile up.";
     case 9: // Oct
     case 10: // Nov
       return "Clogged gutters + fall rain = water damage. Get your gutters cleaned now.";
     case 11: // Dec
-      return "Year-end special — start the new year with a clean, moss-free roof.";
+      return "End the year right. Book a roof cleaning before the new year.";
     default:
       return "Fast quotes. Fair prices. Expert moss removal.";
   }
@@ -78,7 +78,7 @@ const Hero = () => {
             <a href="/reviews" className="hover:text-brand-orange transition-colors">5.0★ from 200+ neighbors</a> • 12-Month Moss-Free Guarantee • Same-Day Estimates
           </p>
 
-          {/* Seasonal urgency — before CTAs to motivate the click */}
+          {/* Seasonal urgency */}
           <p className="text-white text-sm md:text-base font-normal max-w-2xl animate-fade-in drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
             {seasonalMessage}
           </p>

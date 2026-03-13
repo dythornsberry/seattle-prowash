@@ -138,7 +138,7 @@ const MillCreek = () => {
                   <CardContent className="p-6">
                     <h3 className="text-xl font-semibold mb-3 text-brand-navy">Gutter Cleaning</h3>
                     <p className="text-muted-foreground">
-                      Comprehensive gutter cleaning and maintenance to protect your Mill Creek home from water damage and foundation issues.
+                      Complete gutter cleaning and maintenance to protect your Mill Creek home from water damage and foundation issues.
                     </p>
                   </CardContent>
                 </Card>

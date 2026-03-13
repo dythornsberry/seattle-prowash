@@ -5,7 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-// Index is eagerly loaded (landing page — must render instantly)
+// Index is eagerly loaded (landing page, must render instantly)
 import Index from "./pages/Index";
 
 // Everything else is lazy-loaded for code splitting
@@ -45,7 +45,7 @@ const SammamishLocation = lazy(() => import("./pages/locations/Sammamish"));
 
 const queryClient = new QueryClient();
 
-// Minimal loading fallback — just a blank screen to avoid flicker
+// Minimal loading fallback
 const PageFallback = () => (
   <div className="min-h-screen bg-background" />
 );

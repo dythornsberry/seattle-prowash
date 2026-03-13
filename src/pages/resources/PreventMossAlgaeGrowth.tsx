@@ -132,7 +132,7 @@ const PreventMossAlgaeGrowth = () => {
                   <ul>
                     <li>Safe removal without damaging roofing materials</li>
                     <li>Long-lasting prevention (12-month guarantee)</li>
-                    <li>Comprehensive assessment of roof condition</li>
+                    <li>Full assessment of roof condition</li>
                     <li>Proper safety equipment and techniques</li>
                   </ul>
 

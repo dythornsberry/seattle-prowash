@@ -104,7 +104,7 @@ const Bothell = () => {
                     Bothell's Premier Exterior Cleaning Specialists
                   </h2>
                   <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                    Serving Bothell families and businesses with reliable, professional roof and gutter cleaning services tailored to our Pacific Northwest climate.
+                    Serving Bothell families and businesses with reliable, professional roof and gutter cleaning services built for our Pacific Northwest climate.
                   </p>
                 </div>
 
@@ -158,7 +158,7 @@ const Bothell = () => {
                     Complete Exterior Care for Bothell Properties
                   </h2>
                   <p className="text-xl text-white/90 max-w-3xl mx-auto">
-                    Protecting Bothell homes with comprehensive cleaning and maintenance services designed for our local climate.
+                    Protecting Bothell homes with complete cleaning and maintenance services designed for our local climate.
                   </p>
                 </div>
 
@@ -216,7 +216,7 @@ const Bothell = () => {
                 <div className="bg-primary-teal/10 rounded-lg p-8 mb-8 text-center">
                   <MapPin className="w-12 h-12 text-primary-teal mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-dark-teal mb-2">Bothell Coverage Area</h3>
-                  <p className="text-gray-600 mb-4">Comprehensive exterior cleaning services for all Bothell neighborhoods</p>
+                  <p className="text-gray-600 mb-4">Full exterior cleaning services for all Bothell neighborhoods</p>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -263,7 +263,7 @@ const Bothell = () => {
                   <div>
                     <h3 className="text-xl font-bold mb-4">✓ Quality Guarantee</h3>
                     <p className="text-white/90 mb-6">
-                      Our work is backed by comprehensive guarantees, including our exclusive 12-month moss-free promise.
+                      Our work is backed by strong guarantees, including our exclusive 12-month moss-free promise.
                     </p>
                     
                     <h3 className="text-xl font-bold mb-4">✓ Professional Standards</h3>

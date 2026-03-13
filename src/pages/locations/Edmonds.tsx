@@ -46,7 +46,7 @@ const Edmonds = () => {
 
   const testimonials = [
     {
-      quote: "Our Edmonds home looks incredible after Seattle ProWash cleaned our roof and gutters. The team was courteous, efficient, and did a meticulous job.",
+      quote: "Our Edmonds home looks great after Seattle ProWash cleaned our roof and gutters. The team was courteous, efficient, and did a thorough job.",
       author: "Catherine B.",
       service: "Roof & Gutter Cleaning"
     },

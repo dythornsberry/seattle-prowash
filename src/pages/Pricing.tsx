@@ -285,7 +285,7 @@ const Pricing = () => {
                 Why We Offer Free Quotes
               </h2>
               <p className="text-lg text-white/80 mb-8">
-                Every home in the Pacific Northwest is different. Tree coverage, roof style, pitch, and access all affect the job. Rather than guess, we provide a personalized quote based on your specific situation—always free, always accurate.
+                Every home in the Pacific Northwest is different. Tree coverage, roof style, pitch, and access all affect the job. Rather than guess, we provide a personalized quote based on your specific situation. Always free, always accurate.
               </p>
               <div className="grid sm:grid-cols-3 gap-6 mb-10">
                 <div className="bg-white/10 rounded-xl p-6">
