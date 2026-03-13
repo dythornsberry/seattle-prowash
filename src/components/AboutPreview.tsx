@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ShieldCheck, Star, Award } from "lucide-react";
 import { Link } from "react-router-dom";
+import dylanOwnerPhoto from "@/assets/dylan-owner-patio-pressure-washing.jpg";
 
 const AboutPreview = () => {
   return (
@@ -18,7 +19,7 @@ const AboutPreview = () => {
               {/* Fallback image (replace with actual owner photo) */}
               <div className="absolute inset-0 bg-gradient-to-tr from-brand-navy/80 to-transparent z-10"></div>
               <img 
-                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069&auto=format&fit=crop" 
+                src={dylanOwnerPhoto} 
                 alt="Dylan Thornsberry - Seattle ProWash Owner" 
                 className="w-full h-full object-cover"
                 loading="lazy"
