@@ -65,7 +65,7 @@ const MountlakeTerrace = () => {
   const localFAQs = [
     {
       question: "Do you provide services throughout Mountlake Terrace?",
-      answer: "Yes! We provide comprehensive roof cleaning and gutter cleaning services throughout all of Mountlake Terrace and surrounding neighborhoods."
+      answer: "Yes! We provide complete roof cleaning and gutter cleaning services throughout all of Mountlake Terrace and surrounding neighborhoods."
     },
     {
       question: "How often should I clean my roof in Mountlake Terrace?",

@@ -239,7 +239,7 @@ const RoofCleaning = () => {
                   <CardContent className="space-y-4">
                     <p className="text-3xl font-bold text-brand-navy">$499 – $1,200 <span className="text-sm font-normal text-muted-foreground">for most homes</span></p>
                     <p className="text-muted-foreground">
-                      Our premium all-in-one service: moss treatment, moss removal, and gutter cleaning — all included. Backed by our 12-month moss-free guarantee.
+                      Our premium all-in-one service: moss treatment, moss removal, and gutter cleaning - all included. Backed by our 12-month moss-free guarantee.
                     </p>
                     <Button
                       variant="prowash-primary"

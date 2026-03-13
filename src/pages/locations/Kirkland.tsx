@@ -155,10 +155,10 @@ const Kirkland = () => {
               <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-12">
                   <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                    Comprehensive Exterior Services for Kirkland Homes
+                    Complete Exterior Services for Kirkland Homes
                   </h2>
                   <p className="text-xl text-white/90 max-w-3xl mx-auto">
-                    Tailored cleaning solutions that protect and enhance Kirkland's distinctive homes and landscapes.
+                    Cleaning solutions that protect and enhance Kirkland's distinctive homes and landscapes.
                   </p>
                 </div>
 
@@ -174,7 +174,7 @@ const Kirkland = () => {
                   <div className="text-center">
                     <h3 className="text-xl font-bold mb-4">Premium Gutter Care</h3>
                     <p className="text-white/80 mb-4">
-                      Comprehensive gutter cleaning and maintenance to protect your valuable Kirkland property investment.
+                      Complete gutter cleaning and maintenance to protect your valuable Kirkland property investment.
                     </p>
                     <div className="text-bright-orange font-semibold">Complete Protection</div>
                   </div>

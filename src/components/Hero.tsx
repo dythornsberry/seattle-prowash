@@ -9,23 +9,23 @@ const getSeasonalMessage = (): string => {
   switch (month) {
     case 0: // Jan
     case 1: // Feb
-      return "Winter moisture is feeding moss right now — get ahead of it before spring.";
+      return "Winter moisture is feeding moss right now - get ahead of it before spring.";
     case 2: // Mar
     case 3: // Apr
       return "Spring rain + warming temps = rapid moss growth. Act now before damage spreads.";
     case 4: // May
-      return "Moss season is peaking — protect your roof before summer.";
+      return "Moss season is peaking - protect your roof before summer.";
     case 5: // Jun
     case 6: // Jul
     case 7: // Aug
       return "Summer is the best time to clean your roof. Book now while the weather holds.";
     case 8: // Sep
-      return "Fall is here — clean your gutters before the leaves pile up.";
+      return "Fall is here - clean your gutters before the leaves pile up.";
     case 9: // Oct
     case 10: // Nov
       return "Clogged gutters + fall rain = water damage. Get your gutters cleaned now.";
     case 11: // Dec
-      return "Year-end special — start the new year with a clean, moss-free roof.";
+      return "Year-end special - start the new year with a clean, moss-free roof.";
     default:
       return "Fast quotes. Fair prices. Expert moss removal.";
   }

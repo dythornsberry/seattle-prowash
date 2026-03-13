@@ -183,7 +183,7 @@ const GutterCleaningSafetyTips = () => {
                     <li>Advanced safety protocols and equipment</li>
                     <li>Proper ladder and roof safety techniques</li>
                     <li>Identifying and addressing structural issues</li>
-                    <li>Comprehensive cleaning and inspection</li>
+                    <li>Complete cleaning and inspection</li>
                     <li>Insurance and liability protection</li>
                   </ul>
 
@@ -203,7 +203,7 @@ const GutterCleaningSafetyTips = () => {
                     </Link>
                     <Link to="/roof-cleaning" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
                       <h4 className="font-semibold text-brand-navy mb-2">Roof Cleaning</h4>
-                      <p className="text-sm text-muted-foreground">Comprehensive roof and gutter maintenance</p>
+                      <p className="text-sm text-muted-foreground">Complete roof and gutter maintenance</p>
                     </Link>
                   </div>
                   <div className="text-center mt-4">

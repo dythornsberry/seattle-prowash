@@ -91,12 +91,12 @@ const ExitIntentPopup = () => {
 
             {/* Heading */}
             <h3 className="text-2xl md:text-3xl font-bold text-brand-navy mb-3">
-              Before You Go — Quick Question
+              Before You Go - Quick Question
             </h3>
 
             {/* Subheading */}
             <p className="text-gray-700 text-lg mb-6">
-              <strong>Moss doesn't stop growing while you decide.</strong> Every week you wait, the damage gets more expensive to fix. Get a free quote — most homeowners hear back within 1 hour.
+              <strong>Moss doesn't stop growing while you decide.</strong> Every week you wait, the damage gets more expensive to fix. Get a free quote - most homeowners hear back within 1 hour.
             </p>
 
             {/* Trust Signals */}

@@ -41,7 +41,7 @@ const Seattle = () => {
           "name": "How often should gutters be cleaned in Seattle?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Seattle's wet climate with heavy leaf fall and needle drop from surrounding evergreens, we recommend cleaning gutters twice per year—typically in late spring after pollen season and again in late fall after leaves drop. This prevents clogging that can lead to foundation damage and roof leaks during our rainy winters."
+            "text": "In Seattle's wet climate with heavy leaf fall and needle drop from surrounding evergreens, we recommend cleaning gutters twice per year-typically in late spring after pollen season and again in late fall after leaves drop. This prevents clogging that can lead to foundation damage and roof leaks during our rainy winters."
           }
         },
         {
@@ -65,7 +65,7 @@ const Seattle = () => {
           "name": "What's a typical price range in Seattle?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most Seattle homes range from $300-$600 for standard single-story roof cleaning and $400-$800 for two-story homes. Gutter cleaning typically runs $250-$400 depending on home size and gutter length. Final pricing depends on roof pitch, access, and specific conditions—we provide exact quotes after a quick photo review."
+            "text": "Most Seattle homes range from $300-$600 for standard single-story roof cleaning and $400-$800 for two-story homes. Gutter cleaning typically runs $250-$400 depending on home size and gutter length. Final pricing depends on roof pitch, access, and specific conditions-we provide exact quotes after a quick photo review."
           }
         },
         {
@@ -132,7 +132,7 @@ const Seattle = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Roof & Gutter Cleaning — Seattle"
+        title="Roof & Gutter Cleaning - Seattle"
         description="Kenmore-based roof and gutter cleaning specialists serving Seattle. Warranty-safe moss removal for Queen Anne, Ballard, Green Lake, Capitol Hill and all Seattle neighborhoods."
         url="https://www.seattleprowash.com/seattle-roof-gutter-cleaning"
       />
@@ -152,7 +152,7 @@ const Seattle = () => {
                 Roof & Gutter Cleaning in Seattle
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto">
-                Kenmore-based specialists protecting Seattle homes from moss damage and drainage problems. From Queen Anne to Ballard, Green Lake to Capitol Hill—we serve all Seattle neighborhoods with warranty-safe roof cleaning and complete gutter maintenance.
+                Kenmore-based specialists protecting Seattle homes from moss damage and drainage problems. From Queen Anne to Ballard, Green Lake to Capitol Hill-we serve all Seattle neighborhoods with warranty-safe roof cleaning and complete gutter maintenance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
@@ -263,7 +263,7 @@ const Seattle = () => {
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
                   <div>
-                    <strong className="text-brand-navy">Hand Removal:</strong> We scoop all debris—leaves, needles, granules—by hand
+                    <strong className="text-brand-navy">Hand Removal:</strong> We scoop all debris-leaves, needles, granules-by hand
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
@@ -363,7 +363,7 @@ const Seattle = () => {
                 <Card>
                   <CardContent className="p-6">
                     <h3 className="font-bold text-brand-navy mb-2">How often should gutters be cleaned in Seattle?</h3>
-                    <p className="text-muted-foreground">In Seattle's wet climate with heavy leaf fall and needle drop from surrounding evergreens, we recommend cleaning gutters twice per year—typically in late spring after pollen season and again in late fall after leaves drop.</p>
+                    <p className="text-muted-foreground">In Seattle's wet climate with heavy leaf fall and needle drop from surrounding evergreens, we recommend cleaning gutters twice per year-typically in late spring after pollen season and again in late fall after leaves drop.</p>
                   </CardContent>
                 </Card>
                 <Card>

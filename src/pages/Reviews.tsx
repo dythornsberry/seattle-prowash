@@ -60,7 +60,7 @@ const Reviews = () => {
       name: "Kimani G.",
       rating: 5,
       service: "Roof & Gutter Cleaning",
-      quote: "My experience with them was seamless from booking to appointment. Dylan's team kept me updated throughout the process with before and after photos.",
+      quote: "My experience with them was easy from booking to appointment. Dylan's team kept me updated throughout the process with before and after photos.",
       verified: true
     },
     {

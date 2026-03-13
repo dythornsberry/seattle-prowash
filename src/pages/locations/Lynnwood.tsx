@@ -63,7 +63,7 @@ const Lynnwood = () => {
   const localFAQs = [
     {
       question: "Do you service all areas of Lynnwood?",
-      answer: "Yes! We provide comprehensive roof cleaning and gutter cleaning services throughout all of Lynnwood, including neighborhoods near Alderwood Mall, Martha Lake, and surrounding areas."
+      answer: "Yes! We provide complete roof cleaning and gutter cleaning services throughout all of Lynnwood, including neighborhoods near Alderwood Mall, Martha Lake, and surrounding areas."
     },
     {
       question: "How often should Lynnwood homes get roof cleaning?",

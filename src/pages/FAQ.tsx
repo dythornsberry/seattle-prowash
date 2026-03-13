@@ -59,7 +59,7 @@ const faqs = [
   {
     icon: Clock,
     question: "What's the best time of year to get my roof or gutters cleaned?",
-    answer: "The best time was last year! Regular maintenance will improve your roof's longevity.\n\n• If you see visible moss on your roof\n\n• If you notice clogged or overflowing gutters\n\n• If there's debris buildup from trees\n\nWe recommend cleaning ASAP before it gets worse. Don't wait—moss and gutter issues only compound over time and become more expensive to address.",
+    answer: "The best time was last year! Regular maintenance will improve your roof's longevity.\n\n• If you see visible moss on your roof\n\n• If you notice clogged or overflowing gutters\n\n• If there's debris buildup from trees\n\nWe recommend cleaning ASAP before it gets worse. Don't wait-moss and gutter issues only compound over time and become more expensive to address.",
     category: "Maintenance"
   }
 ];

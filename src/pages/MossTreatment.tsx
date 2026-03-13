@@ -39,7 +39,7 @@ const MossTreatment = () => {
                   Professional Roof Moss Treatment in Kenmore, Bothell & Kirkland
                 </h1>
                 <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
-                  Protect your roof investment with our comprehensive moss removal and prevention service
+                  Protect your roof investment with our complete moss removal and prevention service
                 </p>
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <span className="bg-white/10 px-4 py-2 rounded-full">12-Month Moss-Free Guarantee</span>
@@ -113,7 +113,7 @@ const MossTreatment = () => {
                     Our Professional Moss Treatment Process
                   </h2>
                   <p className="text-xl text-white/90 max-w-3xl mx-auto">
-                    We use a comprehensive approach that not only removes existing moss but prevents regrowth for up to 12 months.
+                    We use a complete approach that not only removes existing moss but prevents regrowth for up to 12 months.
                   </p>
                 </div>
 

@@ -256,8 +256,8 @@ const TwoStepQuoteForm = () => {
                 <CardHeader className="pb-4">
                   <CardDescription className="text-base text-muted-foreground">
                     {step === 1
-                      ? "Step 1 of 2 — Let's start with your info"
-                      : "Step 2 of 2 — Almost done!"}
+                      ? "Step 1 of 2 - Let's start with your info"
+                      : "Step 2 of 2 - Almost done!"}
                   </CardDescription>
                   {/* Progress bar */}
                   <div className="flex gap-2 mt-3">
@@ -337,11 +337,11 @@ const TwoStepQuoteForm = () => {
                             className="w-full min-h-[56px] text-lg font-bold rounded-xl"
                             onClick={handleNextStep}
                           >
-                            Next — Choose Services →
+                            Next - Choose Services →
                           </Button>
 
                           <p className="text-center text-muted-foreground text-xs">
-                            🔒 Your info stays private — we never share or spam.
+                            🔒 Your info stays private - we never share or spam.
                           </p>
                         </>
                       )}
@@ -555,7 +555,7 @@ const TwoStepQuoteForm = () => {
                           </div>
 
                           <p className="text-center text-muted-foreground text-xs">
-                            🔒 Your info stays private — we never share or spam.
+                            🔒 Your info stays private - we never share or spam.
                           </p>
                           <p className="text-center text-muted-foreground text-sm">
                             Trusted by 200+ homeowners in Kenmore, Bothell & Kirkland  •  Licensed & Insured
