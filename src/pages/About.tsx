@@ -74,15 +74,15 @@ const About = () => {
                   </h2>
                   <div className="space-y-6 text-lg text-muted-foreground">
                     <p>
-                      Seattle ProWash is owned and operated by Dylan Thornsberry, a Kenmore-based local who built this company to serve Seattle-area homeowners with honest, effective roof and gutter cleaning services.
+                      Seattle ProWash is owned and operated by Dylan Thornsberry, a Kenmore-based local who built this company to serve Seattle-area homeowners with honest, effective exterior cleaning.
                     </p>
                     
                     <p>
-                      After years of working for other roof cleaning companies, Dylan knew there was a better way to serve local homeowners.
+                      Dylan started this company with a simple belief: regular property maintenance is the single biggest investment you can make in your home.
                     </p>
                     
                     <p>
-                      So in 2022, he launched Seattle ProWash with a mission to deliver reliable, top-quality roof and gutter cleaning using real professional gear and a no-corners-cut mindset.
+                      After seeing too many homes suffering considerable damage from neglected, clogged gutters and moss-covered roofs, he knew homeowners needed a reliable partner to protect their biggest asset. 
                     </p>
                     
                     <p className="italic text-brand-navy font-medium">
@@ -90,15 +90,11 @@ const About = () => {
                     </p>
                     
                     <p>
-                      Dylan's passion lies in property protection. He genuinely believes that professional roof and gutter maintenance is the single greatest investment any homeowner can make.
-                    </p>
-                    
-                    <p>
-                      As a Pacific Northwest local, Dylan takes immense pride in helping his neighbors protect and beautify their homes against our unique climate.
+                      Beyond just preventing damage, simple maintenance dramatically boosts curb appeal and raises the value of a home. 
                     </p>
                     
                     <p className="italic text-brand-navy font-medium">
-                      "When you see a moss-covered roof or clogged gutter transformed back to like-new condition, you understand the incredible value we provide."
+                      "Consistently maintaining your exterior doesn't just add value—it keeps you from facing costly repairs or needing premature roof and gutter replacements. That is truly why we exist."
                     </p>
                   </div>
                   
