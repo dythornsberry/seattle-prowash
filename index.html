@@ -210,47 +210,7 @@
     }
     </script>
     
-    <!-- GA4 - Deferred for performance -->
-    <script>
-      window.addEventListener('load', function() {
-        if (window.gtag) return;
-        if (window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost') return;
-        var gaId = '%VITE_GA4_MEASUREMENT_ID%';
-        if (!gaId || gaId.indexOf('VITE_') === 0) return;
-
-        function loadAnalytics() {
-          if (window.gtag) return;
-          var script = document.createElement('script');
-          script.async = true;
-          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
-          document.head.appendChild(script);
-
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', gaId);
-          window.gtag = gtag;
-        }
-
-        var interactionEvents = ['pointerdown', 'touchstart', 'keydown', 'scroll'];
-        function loadOnInteraction() {
-          interactionEvents.forEach(function(eventName) {
-            window.removeEventListener(eventName, loadOnInteraction);
-          });
-          loadAnalytics();
-        }
-
-        interactionEvents.forEach(function(eventName) {
-          window.addEventListener(eventName, loadOnInteraction, { once: true, passive: true });
-        });
-
-        if ('requestIdleCallback' in window) {
-          requestIdleCallback(loadAnalytics, { timeout: 5000 });
-        } else {
-          setTimeout(loadAnalytics, 4000);
-        }
-      });
-    </script>
+    <!-- GA4 loaded via src/utils/ga4.ts (Vite env vars only work in JS) -->
 
     <!-- Trustindex - Match current live behavior -->
     <script>
