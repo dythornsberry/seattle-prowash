@@ -214,6 +214,30 @@ const TwoStepQuoteForm = () => {
     }
   };
 
+  const handleFormKeyDown = (event: React.KeyboardEvent<HTMLFormElement>) => {
+    if (event.key !== "Enter" || event.shiftKey || event.nativeEvent.isComposing) {
+      return;
+    }
+
+    const target = event.target as HTMLElement;
+    const isTextarea = target.tagName === "TEXTAREA";
+    const inputType = target instanceof HTMLInputElement ? target.type : "";
+    const isNonTextControl = ["checkbox", "radio", "button", "submit"].includes(inputType);
+
+    if (isTextarea || isNonTextControl) {
+      return;
+    }
+
+    event.preventDefault();
+
+    if (step === 1) {
+      void handleNextStep();
+      return;
+    }
+
+    void form.handleSubmit(onSubmit)();
+  };
+
   const handleCallClick = () => {
     if (window.gtag) {
       window.gtag('event', 'click_to_call');
@@ -267,7 +291,12 @@ const TwoStepQuoteForm = () => {
                 </CardHeader>
                 <CardContent>
                   <Form {...form}>
-                    <form className="space-y-6" autoComplete="on" onSubmit={form.handleSubmit(onSubmit)}>
+                    <form
+                      className="space-y-6"
+                      autoComplete="on"
+                      onSubmit={form.handleSubmit(onSubmit)}
+                      onKeyDown={handleFormKeyDown}
+                    >
                       {/* Honeypot field - hidden on all steps */}
                       <FormField
                         control={form.control}
