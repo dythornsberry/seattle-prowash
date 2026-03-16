@@ -20,7 +20,7 @@ const Edmonds = () => {
     const localBusinessSchema = generateLocalBusinessSchema({
       name: "Seattle ProWash - Edmonds",
       description: "Professional roof cleaning, moss removal, and gutter cleaning services in Edmonds, WA",
-      url: "https://seattleprowash.com/edmonds",
+      url: "https://www.seattleprowash.com/edmonds-roof-gutter-cleaning",
       telephone: COMPANY_INFO.telephone,
       address: {
         streetAddress: "",
@@ -82,6 +82,7 @@ const Edmonds = () => {
       <SEOHead 
         title="Roof Cleaning & Gutter Cleaning Edmonds WA"
         description="Professional roof cleaning, moss removal & gutter cleaning in Edmonds. Expert exterior cleaning services with 5-star reviews. Free quotes. Call (206) 752-6690"
+        url="https://www.seattleprowash.com/edmonds-roof-gutter-cleaning"
       />
 
       <div className="min-h-screen flex flex-col">

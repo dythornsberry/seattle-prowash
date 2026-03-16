@@ -20,7 +20,7 @@ const MillCreek = () => {
     const localBusinessSchema = generateLocalBusinessSchema({
       name: "Seattle ProWash - Mill Creek",
       description: "Professional roof cleaning, moss removal, and gutter cleaning services in Mill Creek, WA",
-      url: "https://seattleprowash.com/mill-creek",
+      url: "https://www.seattleprowash.com/mill-creek-roof-gutter-cleaning",
       telephone: COMPANY_INFO.telephone,
       address: {
         streetAddress: "",
@@ -82,6 +82,7 @@ const MillCreek = () => {
       <SEOHead 
         title="Roof Cleaning & Gutter Cleaning Mill Creek WA"
         description="Professional roof cleaning, moss removal & gutter cleaning in Mill Creek. Expert exterior cleaning services with 5-star reviews. Free quotes. Call (206) 752-6690"
+        url="https://www.seattleprowash.com/mill-creek-roof-gutter-cleaning"
       />
 
       <div className="min-h-screen flex flex-col">

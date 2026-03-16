@@ -1,137 +1,191 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
   <url>
     <loc>https://www.seattleprowash.com/</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- Main Service Pages -->
+
   <url>
     <loc>https://www.seattleprowash.com/services</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.seattleprowash.com/roof-cleaning</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.seattleprowash.com/gutter-cleaning</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.seattleprowash.com/pricing</loc>
-    <lastmod>2026-01-10</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  
-  <!-- Location Pages -->
+  <url>
+    <loc>https://www.seattleprowash.com/pressure-washing</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.seattleprowash.com/window-cleaning</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.seattleprowash.com/commercial</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.seattleprowash.com/moss-treatment</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.seattleprowash.com/service-areas</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://www.seattleprowash.com/kenmore-roof-gutter-cleaning</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.seattleprowash.com/bothell-roof-gutter-cleaning</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.seattleprowash.com/lynnwood-roof-gutter-cleaning</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.seattleprowash.com/kirkland-roof-gutter-cleaning</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.seattleprowash.com/shoreline-roof-gutter-cleaning</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.seattleprowash.com/seattle-roof-gutter-cleaning</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.seattleprowash.com/woodinville-roof-gutter-cleaning</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.seattleprowash.com/service-areas</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.seattleprowash.com/bellevue-roof-gutter-cleaning</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
-  
-  <!-- Information Pages -->
+  <url>
+    <loc>https://www.seattleprowash.com/edmonds-roof-gutter-cleaning</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.seattleprowash.com/mill-creek-roof-gutter-cleaning</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.seattleprowash.com/mountlake-terrace-roof-gutter-cleaning</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.seattleprowash.com/redmond-roof-gutter-cleaning</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.seattleprowash.com/sammamish-roof-gutter-cleaning</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://www.seattleprowash.com/about</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.seattleprowash.com/faq</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.seattleprowash.com/gallery</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.seattleprowash.com/reviews</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  
-  <!-- Resource Pages -->
   <url>
     <loc>https://www.seattleprowash.com/resources</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.seattleprowash.com/resources/roof-gutter-cleaning-importance</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.seattleprowash.com/resources/prevent-moss-algae-growth</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.seattleprowash.com/resources/gutter-cleaning-safety-tips</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

@@ -21,6 +21,7 @@ const Sammamish = () => {
       ...COMPANY_INFO,
       name: `${COMPANY_INFO.name} - Sammamish`,
       description: "Professional roof cleaning, gutter cleaning, and exterior washing services in Sammamish, WA. Serving all Sammamish neighborhoods. 12-month moss-free guarantee.",
+      url: "https://www.seattleprowash.com/sammamish-roof-gutter-cleaning",
       address: {
         ...COMPANY_INFO.address,
         addressLocality: "Sammamish"
@@ -37,7 +38,7 @@ const Sammamish = () => {
     const breadcrumbSchema = generateBreadcrumbSchema([
       { name: "Home", url: "https://www.seattleprowash.com" },
       { name: "Service Areas", url: "https://www.seattleprowash.com/service-areas" },
-      { name: "Sammamish", url: "https://www.seattleprowash.com/service-areas/sammamish" }
+      { name: "Sammamish", url: "https://www.seattleprowash.com/sammamish-roof-gutter-cleaning" }
     ]);
     const cleanupBreadcrumb = injectSchema(breadcrumbSchema);
 
@@ -54,7 +55,7 @@ const Sammamish = () => {
       <SEOHead 
         title="Roof & Gutter Cleaning in Sammamish, WA"
         description="Expert roof cleaning, gutter cleaning, and moss removal in Sammamish, WA. Professional service for all Sammamish neighborhoods. 12-month guarantee. Licensed & insured."
-        url="https://www.seattleprowash.com/service-areas/sammamish"
+        url="https://www.seattleprowash.com/sammamish-roof-gutter-cleaning"
       />
       <Header />
         

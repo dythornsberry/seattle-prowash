@@ -22,6 +22,7 @@ const Kirkland = () => {
       ...COMPANY_INFO,
       name: `${COMPANY_INFO.name} - Kirkland`,
       description: "Professional roof cleaning and gutter cleaning services in Kirkland, WA. Serving all Kirkland neighborhoods including Juanita, Totem Lake, and Houghton. 12-month moss-free guarantee.",
+      url: "https://www.seattleprowash.com/kirkland-roof-gutter-cleaning",
       address: {
         ...COMPANY_INFO.address,
         addressLocality: "Kirkland"
@@ -38,7 +39,7 @@ const Kirkland = () => {
     const breadcrumbSchema = generateBreadcrumbSchema([
       { name: "Home", url: "https://www.seattleprowash.com" },
       { name: "Service Areas", url: "https://www.seattleprowash.com/service-areas" },
-      { name: "Kirkland", url: "https://www.seattleprowash.com/service-areas/kirkland" }
+      { name: "Kirkland", url: "https://www.seattleprowash.com/kirkland-roof-gutter-cleaning" }
     ]);
     const cleanupBreadcrumb = injectSchema(breadcrumbSchema);
 
@@ -66,7 +67,7 @@ const Kirkland = () => {
       <SEOHead 
         title="Roof & Gutter Cleaning in Kirkland, WA"
         description="Expert roof cleaning, gutter cleaning, and moss removal in Kirkland, WA. Serving Juanita, Totem Lake, Houghton, and all Kirkland neighborhoods. 12-month guarantee."
-        url="https://www.seattleprowash.com/service-areas/kirkland"
+        url="https://www.seattleprowash.com/kirkland-roof-gutter-cleaning"
       />
       <Header />
       <EnhancedTrustBar />

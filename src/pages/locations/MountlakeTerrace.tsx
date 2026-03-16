@@ -20,7 +20,7 @@ const MountlakeTerrace = () => {
     const localBusinessSchema = generateLocalBusinessSchema({
       name: "Seattle ProWash - Mountlake Terrace",
       description: "Professional roof cleaning, moss removal, and gutter cleaning services in Mountlake Terrace, WA",
-      url: "https://seattleprowash.com/mountlake-terrace",
+      url: "https://www.seattleprowash.com/mountlake-terrace-roof-gutter-cleaning",
       telephone: COMPANY_INFO.telephone,
       address: {
         streetAddress: "",
@@ -82,6 +82,7 @@ const MountlakeTerrace = () => {
       <SEOHead 
         title="Roof Cleaning & Gutter Cleaning Mountlake Terrace WA"
         description="Professional roof cleaning, moss removal & gutter cleaning in Mountlake Terrace. Expert exterior cleaning services with 5-star reviews. Free quotes. Call (206) 752-6690"
+        url="https://www.seattleprowash.com/mountlake-terrace-roof-gutter-cleaning"
       />
 
       <div className="min-h-screen flex flex-col">

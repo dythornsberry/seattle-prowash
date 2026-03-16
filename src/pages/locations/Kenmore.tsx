@@ -21,6 +21,7 @@ const Kenmore = () => {
       ...COMPANY_INFO,
       name: `${COMPANY_INFO.name} - Kenmore`,
       description: "Professional roof cleaning and gutter cleaning services in Kenmore, WA. Serving Kenmore Highlands, Moorlands, and all local neighborhoods. 12-month moss-free guarantee.",
+      url: "https://www.seattleprowash.com/kenmore-roof-gutter-cleaning",
       address: {
         ...COMPANY_INFO.address,
         addressLocality: "Kenmore"

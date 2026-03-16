@@ -21,6 +21,7 @@ const Bellevue = () => {
       ...COMPANY_INFO,
       name: `${COMPANY_INFO.name} - Bellevue`,
       description: "Professional roof cleaning and gutter cleaning services in Bellevue, WA. Serving all Bellevue neighborhoods with expert moss removal and 12-month guarantee.",
+      url: "https://www.seattleprowash.com/bellevue-roof-gutter-cleaning",
       address: {
         ...COMPANY_INFO.address,
         addressLocality: "Bellevue"
@@ -37,7 +38,7 @@ const Bellevue = () => {
     const breadcrumbSchema = generateBreadcrumbSchema([
       { name: "Home", url: "https://www.seattleprowash.com" },
       { name: "Service Areas", url: "https://www.seattleprowash.com/service-areas" },
-      { name: "Bellevue", url: "https://www.seattleprowash.com/service-areas/bellevue" }
+      { name: "Bellevue", url: "https://www.seattleprowash.com/bellevue-roof-gutter-cleaning" }
     ]);
     const cleanupBreadcrumb = injectSchema(breadcrumbSchema);
 
@@ -54,7 +55,7 @@ const Bellevue = () => {
       <SEOHead 
         title="Roof & Gutter Cleaning in Bellevue, WA"
         description="Expert roof cleaning, gutter cleaning, and moss removal in Bellevue, WA. Serving all Bellevue neighborhoods. 12-month moss-free guarantee. Licensed & insured. Same-day quotes."
-        url="https://www.seattleprowash.com/service-areas/bellevue"
+        url="https://www.seattleprowash.com/bellevue-roof-gutter-cleaning"
       />
       <Header />
         

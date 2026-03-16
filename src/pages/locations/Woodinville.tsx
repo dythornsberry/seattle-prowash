@@ -22,6 +22,7 @@ const Woodinville = () => {
       ...COMPANY_INFO,
       name: `${COMPANY_INFO.name} - Woodinville`,
       description: "Professional roof cleaning, gutter cleaning, and exterior washing services in Woodinville, WA. Serving all Woodinville neighborhoods. 12-month moss-free guarantee.",
+      url: "https://www.seattleprowash.com/woodinville-roof-gutter-cleaning",
       address: {
         ...COMPANY_INFO.address,
         addressLocality: "Woodinville"
@@ -38,7 +39,7 @@ const Woodinville = () => {
     const breadcrumbSchema = generateBreadcrumbSchema([
       { name: "Home", url: "https://www.seattleprowash.com" },
       { name: "Service Areas", url: "https://www.seattleprowash.com/service-areas" },
-      { name: "Woodinville", url: "https://www.seattleprowash.com/service-areas/woodinville" }
+      { name: "Woodinville", url: "https://www.seattleprowash.com/woodinville-roof-gutter-cleaning" }
     ]);
     const cleanupBreadcrumb = injectSchema(breadcrumbSchema);
 
@@ -55,7 +56,7 @@ const Woodinville = () => {
       <SEOHead 
         title="Roof & Gutter Cleaning in Woodinville, WA"
         description="Expert roof cleaning, gutter cleaning, and moss removal in Woodinville, WA. Professional service for all Woodinville neighborhoods. 12-month guarantee. Licensed & insured."
-        url="https://www.seattleprowash.com/service-areas/woodinville"
+        url="https://www.seattleprowash.com/woodinville-roof-gutter-cleaning"
       />
       <Header />
       <EnhancedTrustBar />

@@ -21,7 +21,7 @@ const Shoreline = () => {
     const localBusinessSchema = generateLocalBusinessSchema({
       name: "Seattle ProWash - Shoreline",
       description: "Professional roof cleaning, moss removal, and gutter cleaning services in Shoreline, WA",
-      url: "https://seattleprowash.com/shoreline",
+      url: "https://www.seattleprowash.com/shoreline-roof-gutter-cleaning",
       telephone: COMPANY_INFO.telephone,
       address: {
         streetAddress: "",
@@ -83,6 +83,7 @@ const Shoreline = () => {
       <SEOHead 
         title="Roof & Gutter Cleaning Shoreline WA"
         description="Professional roof cleaning, moss removal & gutter cleaning in Shoreline. Expert roof and gutter services with 5-star reviews. Free quotes. Call (206) 752-6690"
+        url="https://www.seattleprowash.com/shoreline-roof-gutter-cleaning"
       />
 
       <div className="min-h-screen flex flex-col">

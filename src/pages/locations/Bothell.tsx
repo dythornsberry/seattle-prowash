@@ -22,6 +22,7 @@ const Bothell = () => {
       ...COMPANY_INFO,
       name: `${COMPANY_INFO.name} - Bothell`,
       description: "Professional roof cleaning and gutter cleaning services in Bothell, WA. Serving all Bothell neighborhoods including Canyon Park and Country Village. 12-month moss-free guarantee.",
+      url: "https://www.seattleprowash.com/bothell-roof-gutter-cleaning",
       address: {
         ...COMPANY_INFO.address,
         addressLocality: "Bothell"
@@ -38,7 +39,7 @@ const Bothell = () => {
     const breadcrumbSchema = generateBreadcrumbSchema([
       { name: "Home", url: "https://www.seattleprowash.com" },
       { name: "Service Areas", url: "https://www.seattleprowash.com/service-areas" },
-      { name: "Bothell", url: "https://www.seattleprowash.com/service-areas/bothell" }
+      { name: "Bothell", url: "https://www.seattleprowash.com/bothell-roof-gutter-cleaning" }
     ]);
     const cleanupBreadcrumb = injectSchema(breadcrumbSchema);
 
@@ -66,7 +67,7 @@ const Bothell = () => {
       <SEOHead 
         title="Roof & Gutter Cleaning in Bothell, WA"
         description="Expert roof cleaning, gutter cleaning, and moss removal in Bothell, WA. Serving all Bothell neighborhoods including Canyon Park and Country Village. 12-month moss-free guarantee. Licensed & insured."
-        url="https://www.seattleprowash.com/service-areas/bothell"
+        url="https://www.seattleprowash.com/bothell-roof-gutter-cleaning"
       />
       <Header />
       <EnhancedTrustBar />

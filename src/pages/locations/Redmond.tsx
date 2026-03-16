@@ -21,6 +21,7 @@ const Redmond = () => {
       ...COMPANY_INFO,
       name: `${COMPANY_INFO.name} - Redmond`,
       description: "Professional roof cleaning, gutter cleaning, and exterior washing services in Redmond, WA. Serving all Redmond neighborhoods. 12-month moss-free guarantee.",
+      url: "https://www.seattleprowash.com/redmond-roof-gutter-cleaning",
       address: {
         ...COMPANY_INFO.address,
         addressLocality: "Redmond"
@@ -37,7 +38,7 @@ const Redmond = () => {
     const breadcrumbSchema = generateBreadcrumbSchema([
       { name: "Home", url: "https://www.seattleprowash.com" },
       { name: "Service Areas", url: "https://www.seattleprowash.com/service-areas" },
-      { name: "Redmond", url: "https://www.seattleprowash.com/service-areas/redmond" }
+      { name: "Redmond", url: "https://www.seattleprowash.com/redmond-roof-gutter-cleaning" }
     ]);
     const cleanupBreadcrumb = injectSchema(breadcrumbSchema);
 
@@ -54,7 +55,7 @@ const Redmond = () => {
       <SEOHead 
         title="Roof & Gutter Cleaning in Redmond, WA"
         description="Expert roof cleaning, gutter cleaning, and moss removal in Redmond, WA. Professional service for all Redmond neighborhoods. 12-month moss-free guarantee. Licensed & insured."
-        url="https://www.seattleprowash.com/service-areas/redmond"
+        url="https://www.seattleprowash.com/redmond-roof-gutter-cleaning"
       />
       <Header />
         

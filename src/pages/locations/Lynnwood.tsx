@@ -18,7 +18,7 @@ const Lynnwood = () => {
     const localBusinessSchema = generateLocalBusinessSchema({
       name: "Seattle ProWash - Lynnwood",
       description: "Professional roof cleaning, moss removal, and gutter cleaning services in Lynnwood, WA",
-      url: "https://seattleprowash.com/lynnwood",
+      url: "https://www.seattleprowash.com/lynnwood-roof-gutter-cleaning",
       telephone: COMPANY_INFO.telephone,
       address: {
         streetAddress: "",
@@ -80,6 +80,7 @@ const Lynnwood = () => {
       <SEOHead 
         title="Roof & Gutter Cleaning Lynnwood WA"
         description="Professional roof cleaning, moss removal & gutter cleaning in Lynnwood. Expert exterior cleaning services with 5-star reviews. Free quotes. Call (206) 752-6690"
+        url="https://www.seattleprowash.com/lynnwood-roof-gutter-cleaning"
       />
 
       <div className="min-h-screen flex flex-col">
