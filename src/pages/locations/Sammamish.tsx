@@ -13,6 +13,7 @@ import NearbyLocations from "@/components/NearbyLocations";
 import RelatedResources from "@/components/RelatedResources";
 import { nearbyCitiesData } from "@/lib/locationNearbyCities";
 import MobileBottomBar from "@/components/MobileBottomBar";
+import { navigateToContact } from "@/lib/navigation";
 
 const Sammamish = () => {
   useEffect(() => {
@@ -263,10 +264,10 @@ const Sammamish = () => {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button 
+                  <Button
                     variant="prowash-secondary"
                     size="xl"
-                    onClick={() => window.location.href = '/#contact'}
+                    onClick={navigateToContact}
                   >
                     GET YOUR FREE QUOTE TODAY
                   </Button>

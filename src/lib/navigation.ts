@@ -2,6 +2,17 @@
  * Navigation helper functions
  */
 
+const navigateWithinApp = (path: string) => {
+  const nextUrl = new URL(path, window.location.origin);
+  const currentPath = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+  const targetPath = `${nextUrl.pathname}${nextUrl.search}${nextUrl.hash}`;
+
+  if (currentPath === targetPath) return;
+
+  window.history.pushState(window.history.state, "", targetPath);
+  window.dispatchEvent(new PopStateEvent("popstate", { state: window.history.state }));
+};
+
 /**
  * Calculate dynamic offset for sticky headers
  */
@@ -41,7 +52,7 @@ export const navigateToContact = () => {
   if (window.location.pathname === '/') {
     if (scrollToSection('contact', { preferForm: true })) return;
   }
-  window.location.href = '/#contact';
+  navigateWithinApp('/#contact');
 };
 
 /**
@@ -61,6 +72,6 @@ export const navigateToHome = () => {
   if (window.location.pathname === '/') {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   } else {
-    window.location.href = '/';
+    navigateWithinApp('/');
   }
 };

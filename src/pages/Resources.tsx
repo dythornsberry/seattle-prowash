@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import MobileBottomBar from "@/components/MobileBottomBar";
+import { navigateToContact } from "@/lib/navigation";
 
 const Resources = () => {
   // Scroll to top on mount
@@ -173,9 +174,7 @@ const Resources = () => {
                     variant="cta-orange"
                     size="xl"
                     className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold"
-                    onClick={() => {
-                      window.location.href = '/#contact';
-                    }}
+                    onClick={navigateToContact}
                   >
                     GET YOUR FREE QUOTE TODAY
                   </Button>

@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import MobileBottomBar from "@/components/MobileBottomBar";
+import { navigateToContact } from "@/lib/navigation";
 
 const GutterCleaningSafetyTips = () => {
   // Scroll to top on mount
@@ -223,9 +224,7 @@ const GutterCleaningSafetyTips = () => {
                     <Button 
                       variant="secondary"
                       size="lg"
-                      onClick={() => {
-                        window.location.href = '/#contact';
-                      }}
+                      onClick={navigateToContact}
                     >
                       Get a Fast Quote
                     </Button>

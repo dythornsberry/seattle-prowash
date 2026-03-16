@@ -13,6 +13,7 @@ import newRoofBefore1 from "@/assets/new-roof-before-1.jpg";
 import metalRoofCleaningBeforeAfter from "@/assets/metal-roof-cleaning-before-after.jpg";
 import roofMossRemovalDetailedBeforeAfter from "@/assets/roof-moss-removal-detailed-before-after.jpg";
 import gutterCleaningBeforeAfter from "@/assets/gutter-cleaning-before-after.jpg";
+import { navigateToContact } from "@/lib/navigation";
 
 const Seattle = () => {
   useEffect(() => {
@@ -158,7 +159,7 @@ const Seattle = () => {
                 <Button 
                   variant="cta-orange" 
                   size="lg"
-                  onClick={() => window.location.href = '/#contact'}
+                  onClick={navigateToContact}
                 >
                   Get Seattle Quote
                 </Button>
@@ -432,7 +433,7 @@ const Seattle = () => {
                 <Button 
                   variant="cta-orange" 
                   size="lg"
-                  onClick={() => window.location.href = '/#contact'}
+                  onClick={navigateToContact}
                 >
                   Get Free Quote
                 </Button>

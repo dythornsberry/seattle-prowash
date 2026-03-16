@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, ExternalLink, ShieldCheck } from "lucide-react";
+import { navigateToContact } from "@/lib/navigation";
 
 const Reviews = () => {
   useEffect(() => {
@@ -165,13 +166,7 @@ const Reviews = () => {
                 <Button
                   variant="cta-orange"
                   size="lg"
-                  onClick={() => {
-                    if (window.location.pathname === '/') {
-                      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                    } else {
-                      window.location.href = '/#contact';
-                    }
-                  }}
+                  onClick={navigateToContact}
                 >
                   Get a Fast Quote
                 </Button>
@@ -298,13 +293,7 @@ const Reviews = () => {
                 <Button
                   variant="cta-orange"
                   size="lg"
-                  onClick={() => {
-                    if (window.location.pathname === '/') {
-                      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                    } else {
-                      window.location.href = '/#contact';
-                    }
-                  }}
+                  onClick={navigateToContact}
                 >
                   Get a Fast Quote
                 </Button>
