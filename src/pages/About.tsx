@@ -120,6 +120,7 @@ const About = () => {
                       src={dylanOwnerPhoto}
                       alt="Dylan, owner of Seattle ProWash, performing professional roof cleaning services"
                       className="rounded-2xl shadow-2xl w-full"
+                      loading="lazy"
                     />
                     <div className="absolute -bottom-6 -right-6 bg-brand-orange text-white px-6 py-3 rounded-xl font-bold shadow-lg">
                       15+ Communities Served
@@ -141,6 +142,7 @@ const About = () => {
                     src={dylanOwnerPhoto}
                     alt="Dylan, owner of Seattle ProWash"
                     className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-lg"
+                    loading="lazy"
                   />
                 </div>
                 <div className="text-center md:text-left flex-1">
@@ -269,6 +271,7 @@ const About = () => {
                       src={dylanRoofWork}
                       alt="Dylan working on roof cleaning project"
                       className="w-full h-80 object-cover"
+                      loading="lazy"
                     />
                     <div className="absolute bottom-4 left-4 bg-brand-navy/90 text-white px-4 py-2 rounded-lg">
                       <div className="font-semibold">Dylan - Leading the Crew</div>
@@ -283,6 +286,7 @@ const About = () => {
                       src={technicianHouseWashing}
                       alt="Professional technician performing roof cleaning"
                       className="w-full h-80 object-cover"
+                      loading="lazy"
                     />
                     <div className="absolute bottom-4 left-4 bg-brand-navy/90 text-white px-4 py-2 rounded-lg">
                       <div className="font-semibold">Team at Work</div>
@@ -298,6 +302,7 @@ const About = () => {
                     src={technicianTruckPortrait}
                     alt="Seattle ProWash team member with professional equipment"
                     className="w-full h-80 object-cover"
+                    loading="lazy"
                   />
                     <div className="absolute bottom-4 left-4 bg-brand-navy/90 text-white px-4 py-2 rounded-lg">
                       <div className="font-semibold">Professional-Grade Equipment</div>

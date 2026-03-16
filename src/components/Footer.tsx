@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { navigateToContact } from "@/lib/navigation";
 
@@ -187,7 +187,7 @@ const Footer = () => {
                      <a href="tel:+12067526690" className="font-semibold hover:text-brand-orange transition-colors">
                       206-752-6690
                     </a>
-                    <p className="text-xs text-white/60">Call anytime</p>
+                    <p className="text-xs text-white/60">Open 24/7</p>
                   </div>
                 </div>
                 
@@ -204,6 +204,14 @@ const Footer = () => {
                   </div>
                 </div>
                 
+                <div className="flex items-center gap-3">
+                  <Clock className="w-5 h-5 text-brand-orange flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold">Open 24/7</p>
+                    <p className="text-xs text-white/60">Available 24 hours, 7 days a week</p>
+                  </div>
+                </div>
+
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-brand-orange flex-shrink-0 mt-1" />
                   <div>

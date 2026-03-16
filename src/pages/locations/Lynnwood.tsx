@@ -9,6 +9,8 @@ import { Phone } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import TestimonialCard from "@/components/TestimonialCard";
 import ServiceFAQ from "@/components/ServiceFAQ";
+import NearbyLocations from "@/components/NearbyLocations";
+import { nearbyCitiesData } from "@/lib/locationNearbyCities";
 import { generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
 
 const Lynnwood = () => {
@@ -166,6 +168,12 @@ const Lynnwood = () => {
 
           {/* Local FAQs */}
           <ServiceFAQ faqs={localFAQs} schemaContext="roof" />
+
+          {/* Nearby Service Areas */}
+          <NearbyLocations
+            currentCity="Lynnwood"
+            cities={nearbyCitiesData.lynnwood}
+          />
 
           {/* CTA Section */}
           <section className="py-16 bg-brand-navy text-white">
