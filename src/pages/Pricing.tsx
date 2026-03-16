@@ -59,7 +59,7 @@ const Pricing = () => {
     <>
       <SEOHead
         title="Pricing | Roof, Gutter & Pressure Washing"
-        description="Transparent pricing for roof cleaning, gutter cleaning, pressure washing, power washing, house washing, driveway cleaning, and exterior window cleaning in the Seattle area."
+        description="Transparent pricing for roof cleaning, gutter cleaning, pressure washing, and window cleaning in Seattle. No hidden fees. Free quotes."
       />
       
       <Header />

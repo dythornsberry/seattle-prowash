@@ -9,6 +9,8 @@ import EnhancedTrustBar from "@/components/EnhancedTrustBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Phone, MapPin } from "lucide-react";
+import NearbyLocations from "@/components/NearbyLocations";
+import { nearbyCitiesData } from "@/lib/locationNearbyCities";
 import newRoofBefore1 from "@/assets/new-roof-before-1.jpg";
 import metalRoofCleaningBeforeAfter from "@/assets/metal-roof-cleaning-before-after.jpg";
 import roofMossRemovalDetailedBeforeAfter from "@/assets/roof-moss-removal-detailed-before-after.jpg";
@@ -418,6 +420,12 @@ const Seattle = () => {
             </div>
           </div>
         </section>
+
+        {/* Nearby Service Areas */}
+        <NearbyLocations
+          currentCity="Seattle"
+          cities={nearbyCitiesData.seattle}
+        />
 
         {/* CTA */}
         <section className="section-spacing bg-gradient-to-b from-brand-navy to-brand-navy/95">

@@ -69,7 +69,7 @@ const WindowCleaning = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Exterior Window Cleaning"
-        description="Professional exterior window cleaning in Seattle, Kenmore, Bothell, and surrounding areas. Streak-free results, safe techniques. Free quotes, licensed and insured."
+        description="Professional exterior window cleaning in Seattle, Kenmore & Bothell. Streak-free results with safe techniques. Free quotes. Licensed & insured."
         url="https://www.seattleprowash.com/window-cleaning"
       />
       <Header />

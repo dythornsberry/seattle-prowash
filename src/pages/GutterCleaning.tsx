@@ -100,7 +100,7 @@ const GutterCleaning = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="Professional Gutter Cleaning Services"
-        description="Expert gutter cleaning and maintenance in Seattle. Prevent water damage, protect your foundation, and extend gutter life. Licensed, insured, and guaranteed. Free quotes available."
+        description="Expert gutter cleaning in Seattle, Kenmore, Bothell & Kirkland. Prevent water damage and protect your foundation. Licensed & insured. Free quotes."
         url="https://www.seattleprowash.com/gutter-cleaning"
         image={gutterCleaningImage}
       />

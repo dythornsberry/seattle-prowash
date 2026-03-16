@@ -147,7 +147,7 @@ const Reviews = () => {
     <>
       <SEOHead 
         title="Customer Reviews"
-        description="Read 200+ authentic 5-star reviews for Seattle ProWash roof and gutter cleaning. Real testimonials from satisfied customers in Kenmore, Bothell, Kirkland, and Seattle."
+        description="Read 200+ authentic 5-star reviews for Seattle ProWash. Real testimonials from customers in Kenmore, Bothell, Kirkland & Seattle."
         url="https://www.seattleprowash.com/reviews"
       />
       <Header />

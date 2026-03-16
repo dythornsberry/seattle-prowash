@@ -38,7 +38,7 @@ const ServiceAreas = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="Service Areas - Roof & Gutter Cleaning Near You"
-        description="Seattle ProWash serves the greater Seattle metro area including Kenmore, Bothell, Kirkland, Lynnwood, Shoreline, and surrounding communities. Professional roof and gutter cleaning within 15 miles of Kenmore."
+        description="Seattle ProWash serves Kenmore, Bothell, Kirkland, Lynnwood, Shoreline & surrounding cities. Professional roof and gutter cleaning within 15 miles."
         url="https://www.seattleprowash.com/service-areas"
       />
       <Header />

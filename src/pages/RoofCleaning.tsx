@@ -103,7 +103,7 @@ const RoofCleaning = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="Professional Roof Cleaning Services"
-        description="Expert roof cleaning and moss removal in Seattle. Eco-friendly soft washing extends roof life and prevents damage. Licensed, insured, and guaranteed. Free quotes available."
+        description="Expert roof cleaning and moss removal in Seattle. Eco-friendly soft wash that extends roof life. 12-month guarantee. Licensed & insured. Free quotes."
         url="https://www.seattleprowash.com/roof-cleaning"
         image={roofCleaningImage}
       />
