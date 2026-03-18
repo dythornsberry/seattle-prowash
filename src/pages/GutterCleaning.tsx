@@ -166,15 +166,106 @@ const GutterCleaning = () => {
           </div>
         </section>
 
+        {/* Gutter Cleaning Explanation Section */}
+        <section className="section-spacing bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="fade-up">
+                  <img
+                    src={gutterCleaningImage}
+                    alt="Professional gutter cleaning before and after in Seattle"
+                    className="rounded-2xl shadow-2xl w-full"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="fade-up">
+                  <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">
+                    What Gutter Cleaning Actually Includes
+                  </h2>
+                  <p className="text-muted-foreground text-lg mb-4">
+                    Gutter cleaning is about clearing the inside of your gutters and downspouts so water can flow freely off your roof. Clogged gutters back up, overflow, and eventually cause water damage to your fascia, foundation, and siding.
+                  </p>
+                  <p className="text-muted-foreground text-lg mb-6">
+                    We hand-scoop all debris from the gutters, flush every downspout, blow off roof debris, and haul everything away. You get before/after photos so you can see the work without climbing a ladder.
+                  </p>
+                  <ul className="space-y-3">
+                    {[
+                      "Hand-scoop all leaves and debris",
+                      "Flush downspouts for clear drainage",
+                      "Blow off roof debris",
+                      "Debris bagged and removed from property",
+                      "Before/after photos provided",
+                      "Licensed & insured",
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-8">
+                    <Button variant="cta-orange" size="lg" onClick={navigateToContact}>
+                      Get My Free Gutter Cleaning Quote →
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Gutter Brightening Section */}
+        <section className="section-spacing bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="fade-up">
+                  <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-2">
+                    Gutter Brightening
+                  </h2>
+                  <p className="text-brand-orange font-semibold mb-4">Optional add-on service</p>
+                  <p className="text-muted-foreground text-lg mb-4">
+                    Standard gutter cleaning takes care of the inside. Gutter brightening is an optional add-on that cleans the outside face of your gutters. Those dark streaks you see running down the exterior are caused by oxidation and roof runoff that bakes onto the aluminum over time. A regular rinse won't touch it.
+                  </p>
+                  <p className="text-muted-foreground text-lg mb-6">
+                    We scrub the exterior face with a specialized cleaning solution to remove the buildup and restore the original color. Most customers add it on when they want the full package and want their gutters looking new again, not just flowing clean.
+                  </p>
+                  <ul className="space-y-3">
+                    {[
+                      "Removes black streaks and oxidation from exterior",
+                      "Hand-scrubbed with specialized cleaning solution",
+                      "Restores original gutter color",
+                      "Available as an add-on to any gutter cleaning",
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-8">
+                    <Button variant="cta-orange" size="lg" onClick={navigateToContact}>
+                      Ask About Adding Gutter Brightening →
+                    </Button>
+                  </div>
+                </div>
+                <div className="fade-up">
+                  <img
+                    src={gutterBA1}
+                    alt="Gutter brightening before and after, black streak removal from exterior gutters in Seattle"
+                    className="rounded-2xl shadow-2xl w-full"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Before/After Showcase */}
         <BeforeAfterShowcase
           images={[
-            {
-              src: gutterBA1,
-              alt: "Gutter brightening before and after - Black streak removal",
-              width: 1200,
-              height: 800
-            },
             {
               src: gutterBA2,
               alt: "Gutter cleaning before and after showing debris removal and clear flow",
@@ -211,58 +302,6 @@ const GutterCleaning = () => {
 
         {/* As Seen On Section */}
         <AsSeenOn />
-
-        {/* What You Get Section */}
-        <section className="section-spacing bg-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12 fade-up">
-                <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-6">
-                  What You Get Every Visit
-                </h2>
-              </div>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="flex items-start gap-3 fade-up">
-                  <CheckCircle className="w-5 h-5 text-brand-orange mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="text-muted-foreground">Hand-scoop all leaves and debris</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3 fade-up">
-                  <CheckCircle className="w-5 h-5 text-brand-orange mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="text-muted-foreground">Flush downspouts for perfect drainage</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3 fade-up">
-                  <CheckCircle className="w-5 h-5 text-brand-orange mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="text-muted-foreground">Remove all debris, no mess left behind</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3 fade-up">
-                  <CheckCircle className="w-5 h-5 text-brand-orange mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="text-muted-foreground">Clean visible drips from fascia</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3 fade-up">
-                  <CheckCircle className="w-5 h-5 text-brand-orange mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="text-muted-foreground">Completion photos provided</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3 fade-up">
-                  <CheckCircle className="w-5 h-5 text-brand-orange mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="text-muted-foreground">Licensed & insured service</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
 
         {/* Testimonials Section */}
         <section className="section-spacing">
