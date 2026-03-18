@@ -28,9 +28,9 @@ const EnhancedTrustBar = () => {
     },
     {
       icon: Clock,
-      value: "Same",
-      label: "Day Estimates",
-      subtext: "Fast Response",
+      value: "100%",
+      label: "Satisfaction",
+      subtext: "Money-Back Guarantee",
       color: "text-white",
       bgColor: "bg-white/10"
     },
@@ -38,7 +38,7 @@ const EnhancedTrustBar = () => {
       icon: Award,
       value: "500+",
       label: "Roofs Cleaned",
-      subtext: "Licensed & Insured",
+      subtext: "$1M Liability Insured",
       color: "text-white",
       bgColor: "bg-white/10"
     }
@@ -76,6 +76,9 @@ const EnhancedTrustBar = () => {
             );
           })}
         </div>
+        <p className="text-center text-white/50 text-xs mt-6 tracking-wide">
+          Eco-friendly, non-toxic products safe for your family, pets, and landscaping
+        </p>
       </div>
     </section>
   );
