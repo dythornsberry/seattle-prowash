@@ -7,7 +7,7 @@ import MobileBottomBar from "@/components/MobileBottomBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Droplet, Home, TreePine, Sparkles, Wind, Building2, Phone } from "lucide-react";
+import { CheckCircle, Droplet, Home, TreePine, Sparkles, Wind, Building2, Phone, Zap } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
 import roofImg from "@/assets/roof-cleaning-before-after-new.jpg";
 import gutterImg from "@/assets/gutter-cleaning-before-after.jpg";
@@ -15,6 +15,7 @@ import pressureImg from "@/assets/driveway-pressure-washing.jpg";
 import windowImg from "@/assets/window-cleaning-action.jpg";
 import mossImg from "@/assets/roof-softwash-in-progress.jpg";
 import commercialImg from "@/assets/commercial-building-washing.jpg";
+import gutterBrighteningImg from "@/assets/gutter-brightening-before-after.jpg";
 
 const Services = () => {
   useEffect(() => {
@@ -77,6 +78,20 @@ const Services = () => {
         "Patios & decks",
         "House siding & fences",
         "Oil & stain removal",
+      ],
+    },
+    {
+      title: "Gutter Brightening",
+      icon: Zap,
+      image: gutterBrighteningImg,
+      href: "/gutter-cleaning",
+      price: "Free estimates",
+      description: "We clean the exterior face of your gutters -- removing oxidation, black streaks, and buildup that pressure washing alone can't touch. Also called exterior gutter cleaning.",
+      includes: [
+        "Removes black streaks & oxidation",
+        "Exterior face of gutters scrubbed",
+        "Restores original gutter color",
+        "Often combined with gutter cleaning",
       ],
     },
     {
