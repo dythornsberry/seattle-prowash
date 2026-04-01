@@ -17,6 +17,7 @@ import { CheckCircle, Phone } from "lucide-react";
 import gutterCleaningImage from "@/assets/gutter-cleaning-before-after.jpg";
 import gutterBA1 from "@/assets/gutter-brightening-before-after.jpg";
 import gutterBA2 from "@/assets/gutter-cleaning-before-after.jpg";
+import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 import { navigateToContact } from "@/lib/navigation";
 
 const GutterCleaning = () => {
@@ -367,6 +368,11 @@ const GutterCleaning = () => {
             }
           ]}
         />
+
+        {/* Quote Form */}
+        <div id="contact" className="bg-off-white">
+          <TwoStepQuoteForm />
+        </div>
 
         {/* CTA Section */}
         <section className="section-spacing bg-brand-navy">

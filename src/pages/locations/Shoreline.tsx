@@ -13,6 +13,7 @@ import NearbyLocations from "@/components/NearbyLocations";
 import RelatedResources from "@/components/RelatedResources";
 import { nearbyCitiesData } from "@/lib/locationNearbyCities";
 import { generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 
 const Shoreline = () => {
   useEffect(() => {
@@ -179,6 +180,11 @@ const Shoreline = () => {
 
           {/* Related Resources */}
           <RelatedResources locationName="Shoreline" />
+
+          {/* Quote Form */}
+          <div id="contact" className="bg-off-white">
+            <TwoStepQuoteForm />
+          </div>
 
           {/* CTA Section */}
           <section className="py-16 bg-brand-navy text-white">

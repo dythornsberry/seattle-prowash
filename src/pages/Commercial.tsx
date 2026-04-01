@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
 import { Phone, CheckCircle, Building2, Droplet, Home, Sparkles } from "lucide-react";
+import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 import { navigateToContact } from "@/lib/navigation";
 import commercialImg from "@/assets/commercial-building-washing.jpg";
 import commercialEntranceAfter from "@/assets/commercial-entrance-after.jpg";
@@ -151,6 +152,11 @@ const Commercial = () => {
             </div>
           </div>
         </section>
+
+        {/* Quote Form */}
+        <div id="contact" className="bg-off-white">
+          <TwoStepQuoteForm />
+        </div>
 
         {/* Why Choose Us */}
         <section className="py-16 md:py-20 bg-brand-navy text-white">

@@ -15,6 +15,7 @@ import newRoofBefore1 from "@/assets/new-roof-before-1.jpg";
 import metalRoofCleaningBeforeAfter from "@/assets/metal-roof-cleaning-before-after.jpg";
 import roofMossRemovalDetailedBeforeAfter from "@/assets/roof-moss-removal-detailed-before-after.jpg";
 import gutterCleaningBeforeAfter from "@/assets/gutter-cleaning-before-after.jpg";
+import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 import { navigateToContact } from "@/lib/navigation";
 
 const Seattle = () => {
@@ -426,6 +427,11 @@ const Seattle = () => {
           currentCity="Seattle"
           cities={nearbyCitiesData.seattle}
         />
+
+        {/* Quote Form */}
+        <div id="contact" className="bg-off-white">
+          <TwoStepQuoteForm />
+        </div>
 
         {/* CTA */}
         <section className="section-spacing bg-gradient-to-b from-brand-navy to-brand-navy/95">

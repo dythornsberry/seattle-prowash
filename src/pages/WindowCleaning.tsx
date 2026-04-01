@@ -9,6 +9,7 @@ import ServiceFAQ from "@/components/ServiceFAQ";
 import ServiceAreasSection from "@/components/ServiceAreasSection";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
+import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 import { navigateToContact } from "@/lib/navigation";
 import windowCleaningPhoto from "@/assets/window-cleaning-action.jpg";
 
@@ -176,6 +177,11 @@ const WindowCleaning = () => {
             { name: "Redmond", path: "/service-areas" },
           ]}
         />
+
+        {/* Quote Form */}
+        <div id="contact" className="bg-off-white">
+          <TwoStepQuoteForm />
+        </div>
 
         {/* CTA */}
         <section className="section-spacing bg-brand-navy">

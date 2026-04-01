@@ -31,8 +31,8 @@ type JsonLd = Record<string, unknown>;
 export const generateLocalBusinessSchema = (props: LocalBusinessSchemaProps) => {
   const schema: JsonLd = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": props.url,
+    "@type": "HomeAndConstructionBusiness",
+    "@id": `${props.url}#business`,
     name: props.name,
     description: props.description,
     url: props.url,
@@ -110,7 +110,8 @@ export const generateServiceSchema = (props: ServiceSchemaProps) => {
     name: props.name,
     description: props.description,
     provider: {
-      "@type": "LocalBusiness",
+      "@type": "HomeAndConstructionBusiness",
+      "@id": "https://www.seattleprowash.com#business",
       name: props.provider,
       url: "https://www.seattleprowash.com"
     },
@@ -237,8 +238,8 @@ export const COMPANY_INFO = {
     addressCountry: "US"
   },
   geo: {
-    latitude: 47.7574,
-    longitude: -122.2465
+    latitude: 47.75740,
+    longitude: -122.24650
   },
   serviceAreas: [
     "Kenmore",      // Home base

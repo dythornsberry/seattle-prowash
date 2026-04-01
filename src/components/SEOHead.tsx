@@ -27,8 +27,8 @@ export const SEOHead = ({
       {/* Geo-targeting meta tags - Based in Kenmore, WA */}
       <meta name="geo.region" content="US-WA" />
       <meta name="geo.placename" content="Kenmore" />
-      <meta name="geo.position" content="47.7574;-122.2465" />
-      <meta name="ICBM" content="47.7574, -122.2465" />
+      <meta name="geo.position" content="47.75740;-122.24650" />
+      <meta name="ICBM" content="47.75740, -122.24650" />
       
       {/* OpenGraph tags */}
       <meta property="og:title" content={fullTitle} />

@@ -20,6 +20,7 @@ import roofCleaningImage from "@/assets/roof-moss-removal-detailed-before-after.
 import roofBA1 from "@/assets/asphalt-roof-moss-cleaning-before-after.jpg";
 import roofBA2 from "@/assets/metal-roof-cleaning-before-after.jpg";
 import roofBA3 from "@/assets/roof-softwash-before-after.jpg";
+import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 import { navigateToContact } from "@/lib/navigation";
 
 const RoofCleaning = () => {
@@ -410,6 +411,11 @@ const RoofCleaning = () => {
 
         {/* Related Resources */}
         <RelatedResources />
+
+        {/* Quote Form */}
+        <div id="contact" className="bg-off-white">
+          <TwoStepQuoteForm />
+        </div>
 
         {/* CTA Section */}
         <section className="section-spacing bg-brand-navy">

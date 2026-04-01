@@ -10,6 +10,7 @@ import ServiceFAQ from "@/components/ServiceFAQ";
 import ServiceAreasSection from "@/components/ServiceAreasSection";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
+import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 import { navigateToContact } from "@/lib/navigation";
 import drivewayCleaning from "@/assets/driveway-pressure-washing.jpg";
 import patioBA from "@/assets/patio-pressure-washing-before-after.jpg";
@@ -189,6 +190,11 @@ const PressureWashing = () => {
             { name: "Redmond", path: "/service-areas" },
           ]}
         />
+
+        {/* Quote Form */}
+        <div id="contact" className="bg-off-white">
+          <TwoStepQuoteForm />
+        </div>
 
         {/* CTA */}
         <section className="section-spacing bg-brand-navy">

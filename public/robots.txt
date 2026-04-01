@@ -1,18 +1,10 @@
-# Major Search Engines
-User-agent: Googlebot
+# Seattle ProWash — robots.txt
+# Allow all crawlers including AI for maximum visibility
+
+User-agent: *
 Allow: /
 
-User-agent: Bingbot
-Allow: /
-
-# Social Media Crawlers
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
-# AI Search Engine Crawlers
+# AI Search & Training Crawlers — explicitly allowed for AI visibility
 User-agent: GPTBot
 Allow: /
 
@@ -22,18 +14,17 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-User-agent: CCBot
+User-agent: ClaudeBot
 Allow: /
 
 User-agent: anthropic-ai
 Allow: /
 
-User-agent: Claude-Web
+User-agent: PerplexityBot
 Allow: /
 
-# All Other Bots
-User-agent: *
+User-agent: CCBot
 Allow: /
 
-# Sitemap Location
+# Sitemap
 Sitemap: https://www.seattleprowash.com/sitemap.xml

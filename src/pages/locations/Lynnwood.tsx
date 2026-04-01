@@ -12,6 +12,7 @@ import ServiceFAQ from "@/components/ServiceFAQ";
 import NearbyLocations from "@/components/NearbyLocations";
 import { nearbyCitiesData } from "@/lib/locationNearbyCities";
 import { generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 
 const Lynnwood = () => {
   useEffect(() => {
@@ -175,6 +176,11 @@ const Lynnwood = () => {
             currentCity="Lynnwood"
             cities={nearbyCitiesData.lynnwood}
           />
+
+          {/* Quote Form */}
+          <div id="contact" className="bg-off-white">
+            <TwoStepQuoteForm />
+          </div>
 
           {/* CTA Section */}
           <section className="py-16 bg-brand-navy text-white">
