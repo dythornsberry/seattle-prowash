@@ -187,7 +187,7 @@ const Footer = () => {
                      <a href="tel:+12067526690" className="font-semibold hover:text-brand-orange transition-colors">
                       206-752-6690
                     </a>
-                    <p className="text-xs text-white/60">Open 24/7</p>
+                    <p className="text-xs text-white/60">Mon-Fri 8am-6pm, Sat 9am-5pm</p>
                   </div>
                 </div>
                 
@@ -207,8 +207,8 @@ const Footer = () => {
                 <div className="flex items-center gap-3">
                   <Clock className="w-5 h-5 text-brand-orange flex-shrink-0" />
                   <div>
-                    <p className="font-semibold">Open 24/7</p>
-                    <p className="text-xs text-white/60">Available 24 hours, 7 days a week</p>
+                    <p className="font-semibold">Business Hours</p>
+                    <p className="text-xs text-white/60">Mon-Fri 8am-6pm, Sat 9am-5pm</p>
                   </div>
                 </div>
 

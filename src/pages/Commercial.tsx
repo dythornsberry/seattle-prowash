@@ -10,12 +10,32 @@ import MobileBottomBar from "@/components/MobileBottomBar";
 import { Phone, CheckCircle, Building2, Droplet, Home, Sparkles } from "lucide-react";
 import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 import { navigateToContact } from "@/lib/navigation";
+import { generateServiceSchema, generateBreadcrumbSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
 import commercialImg from "@/assets/commercial-building-washing.jpg";
 import commercialEntranceAfter from "@/assets/commercial-entrance-after.jpg";
 
 const Commercial = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    const serviceSchema = generateServiceSchema({
+      name: "Commercial Cleaning Services",
+      description: "Commercial power washing, roof cleaning, gutter cleaning, and window cleaning for businesses in the Seattle area. Licensed and insured.",
+      provider: COMPANY_INFO.name,
+      areaServed: COMPANY_INFO.serviceAreas,
+      serviceType: "Commercial Cleaning",
+      url: "https://www.seattleprowash.com/commercial",
+    });
+    const breadcrumbSchema = generateBreadcrumbSchema([
+      { name: "Home", url: "https://www.seattleprowash.com" },
+      { name: "Services", url: "https://www.seattleprowash.com/services" },
+      { name: "Commercial", url: "https://www.seattleprowash.com/commercial" },
+    ]);
+    const cleanupService = injectSchema(serviceSchema);
+    const cleanupBreadcrumb = injectSchema(breadcrumbSchema);
+    return () => { cleanupService(); cleanupBreadcrumb(); };
   }, []);
 
   const commercialServices = [

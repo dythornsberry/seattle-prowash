@@ -8,11 +8,30 @@ import Footer from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import MobileBottomBar from "@/components/MobileBottomBar";
 import { navigateToContact } from "@/lib/navigation";
+import { generateArticleSchema, generateBreadcrumbSchema, injectSchema } from "@/utils/schema";
 
 const RoofGutterCleaningImportance = () => {
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    const articleSchema = generateArticleSchema({
+      headline: "Why Regular Roof and Gutter Cleaning Matters",
+      description: "Learn why regular roof and gutter maintenance is essential for Pacific Northwest homes.",
+      url: "https://www.seattleprowash.com/resources/roof-gutter-cleaning-importance",
+      datePublished: "2025-12-15",
+      dateModified: "2026-03-15",
+    });
+    const breadcrumbSchema = generateBreadcrumbSchema([
+      { name: "Home", url: "https://www.seattleprowash.com" },
+      { name: "Resources", url: "https://www.seattleprowash.com/resources" },
+      { name: "Why Roof & Gutter Cleaning Matters", url: "https://www.seattleprowash.com/resources/roof-gutter-cleaning-importance" },
+    ]);
+    const cleanupArticle = injectSchema(articleSchema);
+    const cleanupBreadcrumb = injectSchema(breadcrumbSchema);
+    return () => { cleanupArticle(); cleanupBreadcrumb(); };
   }, []);
 
   return (

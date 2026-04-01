@@ -8,11 +8,30 @@ import Footer from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import MobileBottomBar from "@/components/MobileBottomBar";
 import { navigateToContact } from "@/lib/navigation";
+import { generateArticleSchema, generateBreadcrumbSchema, injectSchema } from "@/utils/schema";
 
 const GutterCleaningSafetyTips = () => {
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    const articleSchema = generateArticleSchema({
+      headline: "Safety Tips When Cleaning Gutters",
+      description: "Essential safety tips for gutter cleaning. Learn proper equipment, techniques, and when to call professionals.",
+      url: "https://www.seattleprowash.com/resources/gutter-cleaning-safety-tips",
+      datePublished: "2025-12-20",
+      dateModified: "2026-03-15",
+    });
+    const breadcrumbSchema = generateBreadcrumbSchema([
+      { name: "Home", url: "https://www.seattleprowash.com" },
+      { name: "Resources", url: "https://www.seattleprowash.com/resources" },
+      { name: "Gutter Cleaning Safety Tips", url: "https://www.seattleprowash.com/resources/gutter-cleaning-safety-tips" },
+    ]);
+    const cleanupArticle = injectSchema(articleSchema);
+    const cleanupBreadcrumb = injectSchema(breadcrumbSchema);
+    return () => { cleanupArticle(); cleanupBreadcrumb(); };
   }, []);
 
   return (

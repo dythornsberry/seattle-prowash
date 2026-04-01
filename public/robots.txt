@@ -26,5 +26,14 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
 # Sitemap
 Sitemap: https://www.seattleprowash.com/sitemap.xml

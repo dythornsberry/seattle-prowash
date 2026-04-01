@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-roof-cleaning.jpg";
 import heroImageWebp from "@/assets/hero-roof-cleaning.webp";
+import heroImageMobileWebp from "@/assets/hero-roof-cleaning-mobile.webp";
 
 import { navigateToContact } from "@/lib/navigation";
 
@@ -47,6 +48,7 @@ const Hero = () => {
       {/* Hero Background with Navy Overlay */}
       <div className="absolute inset-0 z-0">
         <picture>
+          <source media="(max-width: 767px)" srcSet={heroImageMobileWebp} type="image/webp" />
           <source srcSet={heroImageWebp} type="image/webp" />
           <img
             src={heroImage}

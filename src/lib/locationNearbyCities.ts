@@ -1,120 +1,120 @@
 // Nearby cities data for each location page
 export const nearbyCitiesData: Record<string, Array<{ name: string; path: string }>> = {
   seattle: [
-    { name: "Bellevue", path: "/locations/bellevue" },
-    { name: "Kirkland", path: "/locations/kirkland" },
-    { name: "Redmond", path: "/locations/redmond" },
-    { name: "Bothell", path: "/locations/bothell" },
-    { name: "Kenmore", path: "/locations/kenmore" },
-    { name: "Shoreline", path: "/locations/shoreline" },
-    { name: "Lynnwood", path: "/locations/lynnwood" }
+    { name: "Bellevue", path: "/bellevue-roof-gutter-cleaning" },
+    { name: "Kirkland", path: "/kirkland-roof-gutter-cleaning" },
+    { name: "Redmond", path: "/redmond-roof-gutter-cleaning" },
+    { name: "Bothell", path: "/bothell-roof-gutter-cleaning" },
+    { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning" },
+    { name: "Shoreline", path: "/shoreline-roof-gutter-cleaning" },
+    { name: "Lynnwood", path: "/lynnwood-roof-gutter-cleaning" }
   ],
   bellevue: [
-    { name: "Kirkland", path: "/locations/kirkland" },
-    { name: "Redmond", path: "/locations/redmond" },
-    { name: "Sammamish", path: "/locations/sammamish" },
-    { name: "Seattle", path: "/locations/seattle" },
-    { name: "Bothell", path: "/locations/bothell" },
-    { name: "Woodinville", path: "/locations/woodinville" },
-    { name: "Kenmore", path: "/locations/kenmore" }
+    { name: "Kirkland", path: "/kirkland-roof-gutter-cleaning" },
+    { name: "Redmond", path: "/redmond-roof-gutter-cleaning" },
+    { name: "Sammamish", path: "/sammamish-roof-gutter-cleaning" },
+    { name: "Seattle", path: "/seattle-roof-gutter-cleaning" },
+    { name: "Bothell", path: "/bothell-roof-gutter-cleaning" },
+    { name: "Woodinville", path: "/woodinville-roof-gutter-cleaning" },
+    { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning" }
   ],
   kirkland: [
-    { name: "Bellevue", path: "/locations/bellevue" },
-    { name: "Redmond", path: "/locations/redmond" },
-    { name: "Bothell", path: "/locations/bothell" },
-    { name: "Kenmore", path: "/locations/kenmore" },
-    { name: "Woodinville", path: "/locations/woodinville" },
-    { name: "Seattle", path: "/locations/seattle" },
-    { name: "Shoreline", path: "/locations/shoreline" }
+    { name: "Bellevue", path: "/bellevue-roof-gutter-cleaning" },
+    { name: "Redmond", path: "/redmond-roof-gutter-cleaning" },
+    { name: "Bothell", path: "/bothell-roof-gutter-cleaning" },
+    { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning" },
+    { name: "Woodinville", path: "/woodinville-roof-gutter-cleaning" },
+    { name: "Seattle", path: "/seattle-roof-gutter-cleaning" },
+    { name: "Shoreline", path: "/shoreline-roof-gutter-cleaning" }
   ],
   redmond: [
-    { name: "Bellevue", path: "/locations/bellevue" },
-    { name: "Kirkland", path: "/locations/kirkland" },
-    { name: "Sammamish", path: "/locations/sammamish" },
-    { name: "Bothell", path: "/locations/bothell" },
-    { name: "Woodinville", path: "/locations/woodinville" },
-    { name: "Kenmore", path: "/locations/kenmore" },
-    { name: "Seattle", path: "/locations/seattle" }
+    { name: "Bellevue", path: "/bellevue-roof-gutter-cleaning" },
+    { name: "Kirkland", path: "/kirkland-roof-gutter-cleaning" },
+    { name: "Sammamish", path: "/sammamish-roof-gutter-cleaning" },
+    { name: "Bothell", path: "/bothell-roof-gutter-cleaning" },
+    { name: "Woodinville", path: "/woodinville-roof-gutter-cleaning" },
+    { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning" },
+    { name: "Seattle", path: "/seattle-roof-gutter-cleaning" }
   ],
   bothell: [
-    { name: "Kenmore", path: "/locations/kenmore" },
-    { name: "Woodinville", path: "/locations/woodinville" },
-    { name: "Mill Creek", path: "/locations/mill-creek" },
-    { name: "Kirkland", path: "/locations/kirkland" },
-    { name: "Lynnwood", path: "/locations/lynnwood" },
-    { name: "Shoreline", path: "/locations/shoreline" },
-    { name: "Seattle", path: "/locations/seattle" }
+    { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning" },
+    { name: "Woodinville", path: "/woodinville-roof-gutter-cleaning" },
+    { name: "Mill Creek", path: "/mill-creek-roof-gutter-cleaning" },
+    { name: "Kirkland", path: "/kirkland-roof-gutter-cleaning" },
+    { name: "Lynnwood", path: "/lynnwood-roof-gutter-cleaning" },
+    { name: "Shoreline", path: "/shoreline-roof-gutter-cleaning" },
+    { name: "Seattle", path: "/seattle-roof-gutter-cleaning" }
   ],
   kenmore: [
-    { name: "Bothell", path: "/locations/bothell" },
-    { name: "Kirkland", path: "/locations/kirkland" },
-    { name: "Shoreline", path: "/locations/shoreline" },
-    { name: "Seattle", path: "/locations/seattle" },
-    { name: "Woodinville", path: "/locations/woodinville" },
-    { name: "Lynnwood", path: "/locations/lynnwood" },
-    { name: "Mill Creek", path: "/locations/mill-creek" }
+    { name: "Bothell", path: "/bothell-roof-gutter-cleaning" },
+    { name: "Kirkland", path: "/kirkland-roof-gutter-cleaning" },
+    { name: "Shoreline", path: "/shoreline-roof-gutter-cleaning" },
+    { name: "Seattle", path: "/seattle-roof-gutter-cleaning" },
+    { name: "Woodinville", path: "/woodinville-roof-gutter-cleaning" },
+    { name: "Lynnwood", path: "/lynnwood-roof-gutter-cleaning" },
+    { name: "Mill Creek", path: "/mill-creek-roof-gutter-cleaning" }
   ],
   woodinville: [
-    { name: "Bothell", path: "/locations/bothell" },
-    { name: "Kenmore", path: "/locations/kenmore" },
-    { name: "Redmond", path: "/locations/redmond" },
-    { name: "Kirkland", path: "/locations/kirkland" },
-    { name: "Sammamish", path: "/locations/sammamish" },
-    { name: "Mill Creek", path: "/locations/mill-creek" },
-    { name: "Bellevue", path: "/locations/bellevue" }
+    { name: "Bothell", path: "/bothell-roof-gutter-cleaning" },
+    { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning" },
+    { name: "Redmond", path: "/redmond-roof-gutter-cleaning" },
+    { name: "Kirkland", path: "/kirkland-roof-gutter-cleaning" },
+    { name: "Sammamish", path: "/sammamish-roof-gutter-cleaning" },
+    { name: "Mill Creek", path: "/mill-creek-roof-gutter-cleaning" },
+    { name: "Bellevue", path: "/bellevue-roof-gutter-cleaning" }
   ],
   sammamish: [
-    { name: "Bellevue", path: "/locations/bellevue" },
-    { name: "Redmond", path: "/locations/redmond" },
-    { name: "Kirkland", path: "/locations/kirkland" },
-    { name: "Woodinville", path: "/locations/woodinville" },
-    { name: "Bothell", path: "/locations/bothell" },
-    { name: "Seattle", path: "/locations/seattle" },
-    { name: "Kenmore", path: "/locations/kenmore" }
+    { name: "Bellevue", path: "/bellevue-roof-gutter-cleaning" },
+    { name: "Redmond", path: "/redmond-roof-gutter-cleaning" },
+    { name: "Kirkland", path: "/kirkland-roof-gutter-cleaning" },
+    { name: "Woodinville", path: "/woodinville-roof-gutter-cleaning" },
+    { name: "Bothell", path: "/bothell-roof-gutter-cleaning" },
+    { name: "Seattle", path: "/seattle-roof-gutter-cleaning" },
+    { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning" }
   ],
   lynnwood: [
-    { name: "Shoreline", path: "/locations/shoreline" },
-    { name: "Edmonds", path: "/locations/edmonds" },
-    { name: "Mountlake Terrace", path: "/locations/mountlake-terrace" },
-    { name: "Bothell", path: "/locations/bothell" },
-    { name: "Mill Creek", path: "/locations/mill-creek" },
-    { name: "Seattle", path: "/locations/seattle" },
-    { name: "Kenmore", path: "/locations/kenmore" }
+    { name: "Shoreline", path: "/shoreline-roof-gutter-cleaning" },
+    { name: "Edmonds", path: "/edmonds-roof-gutter-cleaning" },
+    { name: "Mountlake Terrace", path: "/mountlake-terrace-roof-gutter-cleaning" },
+    { name: "Bothell", path: "/bothell-roof-gutter-cleaning" },
+    { name: "Mill Creek", path: "/mill-creek-roof-gutter-cleaning" },
+    { name: "Seattle", path: "/seattle-roof-gutter-cleaning" },
+    { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning" }
   ],
   shoreline: [
-    { name: "Seattle", path: "/locations/seattle" },
-    { name: "Lynnwood", path: "/locations/lynnwood" },
-    { name: "Edmonds", path: "/locations/edmonds" },
-    { name: "Kenmore", path: "/locations/kenmore" },
-    { name: "Bothell", path: "/locations/bothell" },
-    { name: "Kirkland", path: "/locations/kirkland" },
-    { name: "Mountlake Terrace", path: "/locations/mountlake-terrace" }
+    { name: "Seattle", path: "/seattle-roof-gutter-cleaning" },
+    { name: "Lynnwood", path: "/lynnwood-roof-gutter-cleaning" },
+    { name: "Edmonds", path: "/edmonds-roof-gutter-cleaning" },
+    { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning" },
+    { name: "Bothell", path: "/bothell-roof-gutter-cleaning" },
+    { name: "Kirkland", path: "/kirkland-roof-gutter-cleaning" },
+    { name: "Mountlake Terrace", path: "/mountlake-terrace-roof-gutter-cleaning" }
   ],
   edmonds: [
-    { name: "Lynnwood", path: "/locations/lynnwood" },
-    { name: "Shoreline", path: "/locations/shoreline" },
-    { name: "Mountlake Terrace", path: "/locations/mountlake-terrace" },
-    { name: "Seattle", path: "/locations/seattle" },
-    { name: "Bothell", path: "/locations/bothell" },
-    { name: "Kenmore", path: "/locations/kenmore" },
-    { name: "Mill Creek", path: "/locations/mill-creek" }
+    { name: "Lynnwood", path: "/lynnwood-roof-gutter-cleaning" },
+    { name: "Shoreline", path: "/shoreline-roof-gutter-cleaning" },
+    { name: "Mountlake Terrace", path: "/mountlake-terrace-roof-gutter-cleaning" },
+    { name: "Seattle", path: "/seattle-roof-gutter-cleaning" },
+    { name: "Bothell", path: "/bothell-roof-gutter-cleaning" },
+    { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning" },
+    { name: "Mill Creek", path: "/mill-creek-roof-gutter-cleaning" }
   ],
   "mountlake-terrace": [
-    { name: "Lynnwood", path: "/locations/lynnwood" },
-    { name: "Shoreline", path: "/locations/shoreline" },
-    { name: "Edmonds", path: "/locations/edmonds" },
-    { name: "Bothell", path: "/locations/bothell" },
-    { name: "Kenmore", path: "/locations/kenmore" },
-    { name: "Mill Creek", path: "/locations/mill-creek" },
-    { name: "Seattle", path: "/locations/seattle" }
+    { name: "Lynnwood", path: "/lynnwood-roof-gutter-cleaning" },
+    { name: "Shoreline", path: "/shoreline-roof-gutter-cleaning" },
+    { name: "Edmonds", path: "/edmonds-roof-gutter-cleaning" },
+    { name: "Bothell", path: "/bothell-roof-gutter-cleaning" },
+    { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning" },
+    { name: "Mill Creek", path: "/mill-creek-roof-gutter-cleaning" },
+    { name: "Seattle", path: "/seattle-roof-gutter-cleaning" }
   ],
   "mill-creek": [
-    { name: "Bothell", path: "/locations/bothell" },
-    { name: "Lynnwood", path: "/locations/lynnwood" },
-    { name: "Mountlake Terrace", path: "/locations/mountlake-terrace" },
-    { name: "Woodinville", path: "/locations/woodinville" },
-    { name: "Kenmore", path: "/locations/kenmore" },
-    { name: "Edmonds", path: "/locations/edmonds" },
-    { name: "Shoreline", path: "/locations/shoreline" }
+    { name: "Bothell", path: "/bothell-roof-gutter-cleaning" },
+    { name: "Lynnwood", path: "/lynnwood-roof-gutter-cleaning" },
+    { name: "Mountlake Terrace", path: "/mountlake-terrace-roof-gutter-cleaning" },
+    { name: "Woodinville", path: "/woodinville-roof-gutter-cleaning" },
+    { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning" },
+    { name: "Edmonds", path: "/edmonds-roof-gutter-cleaning" },
+    { name: "Shoreline", path: "/shoreline-roof-gutter-cleaning" }
   ]
 };

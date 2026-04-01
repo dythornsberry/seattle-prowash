@@ -212,6 +212,48 @@ export const generateBreadcrumbSchema = (items: BreadcrumbItem[]) => {
   };
 };
 
+// Article Schema
+interface ArticleSchemaProps {
+  headline: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified?: string;
+  image?: string;
+}
+
+export const generateArticleSchema = (props: ArticleSchemaProps) => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: props.headline,
+    description: props.description,
+    url: props.url,
+    datePublished: props.datePublished,
+    dateModified: props.dateModified || props.datePublished,
+    image: props.image || "https://www.seattleprowash.com/og-seattle-prowash.jpg",
+    author: {
+      "@type": "Person",
+      name: "Dylan Thornsberry",
+      jobTitle: "Owner",
+      worksFor: {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://www.seattleprowash.com#business",
+        name: "Seattle ProWash"
+      }
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": "https://www.seattleprowash.com#business",
+      name: "Seattle ProWash",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.seattleprowash.com/favicon.png"
+      }
+    }
+  };
+};
+
 // Helper function to inject schema into document head
 export const injectSchema = (schema: unknown) => {
   const script = document.createElement('script');

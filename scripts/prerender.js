@@ -30,32 +30,32 @@ const routes = [
   },
   {
     path: '/roof-cleaning',
-    title: 'Professional Roof Cleaning Services',
+    title: 'Roof Cleaning & Moss Removal in Seattle, WA',
     description: 'Expert roof cleaning and moss removal in Seattle. Eco-friendly soft wash that extends roof life. 12-month guarantee. Licensed & insured. Free quotes.',
   },
   {
     path: '/gutter-cleaning',
-    title: 'Professional Gutter Cleaning Services',
+    title: 'Gutter Cleaning in Seattle & Kenmore, WA',
     description: 'Expert gutter cleaning in Seattle, Kenmore, Bothell & Kirkland. Prevent water damage and protect your foundation. Licensed & insured. Free quotes.',
   },
   {
     path: '/moss-treatment',
-    title: 'Professional Moss Removal & Treatment',
+    title: 'Moss Removal & Treatment in Seattle, WA',
     description: 'Expert moss removal and treatment in Seattle, Bothell & Kirkland. 12-month moss-free guarantee. Safe removal & prevention. Licensed & insured.',
   },
   {
     path: '/pressure-washing',
-    title: 'Pressure Washing Services',
+    title: 'Pressure Washing in Seattle & Kenmore, WA',
     description: 'Professional pressure washing for driveways, patios, decks, and siding in Seattle, Kenmore, Bothell, and surrounding areas. Free quotes, licensed and insured.',
   },
   {
     path: '/window-cleaning',
-    title: 'Exterior Window Cleaning',
+    title: 'Window Cleaning in Seattle & Kenmore, WA',
     description: 'Professional exterior window cleaning in Seattle, Kenmore & Bothell. Streak-free results with safe techniques. Free quotes. Licensed & insured.',
   },
   {
     path: '/commercial',
-    title: 'Commercial Cleaning Services',
+    title: 'Commercial Cleaning Services in Seattle, WA',
     description: 'Commercial power washing, roof cleaning, gutter cleaning, and window cleaning for businesses in the Seattle area. Licensed & insured. Free estimates.',
   },
   {
@@ -70,7 +70,7 @@ const routes = [
   },
   {
     path: '/faq',
-    title: 'Frequently Asked Questions',
+    title: 'Roof Cleaning FAQ - Seattle & Kenmore',
     description: 'Get answers to common questions about Seattle ProWash roof and gutter cleaning. Learn about our process, moss treatment guarantee, pricing, and service areas.',
   },
   {
@@ -193,8 +193,8 @@ function generateHead(route) {
     <!-- Geographic Meta Tags -->
     <meta name="geo.region" content="US-WA" />
     <meta name="geo.placename" content="Kenmore" />
-    <meta name="geo.position" content="47.7574;-122.2429" />
-    <meta name="ICBM" content="47.7574, -122.2429" />
+    <meta name="geo.position" content="47.75740;-122.24650" />
+    <meta name="ICBM" content="47.75740, -122.24650" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="${fullTitle}" />

@@ -9,11 +9,31 @@ import { SEOHead } from "@/components/SEOHead";
 import MobileBottomBar from "@/components/MobileBottomBar";
 import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 import { navigateToContact } from "@/lib/navigation";
+import { generateServiceSchema, generateBreadcrumbSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
 import mossTreatmentHero from "@/assets/roof-softwash-in-progress.jpg";
 
 const MossTreatment = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    const serviceSchema = generateServiceSchema({
+      name: "Moss Removal & Treatment",
+      description: "Professional moss removal and eco-friendly zinc sulfate treatment for Pacific Northwest roofs. 12-month moss-free guarantee. Safe for all roof types.",
+      provider: COMPANY_INFO.name,
+      areaServed: COMPANY_INFO.serviceAreas,
+      serviceType: "Moss Treatment",
+      url: "https://www.seattleprowash.com/moss-treatment",
+    });
+    const breadcrumbSchema = generateBreadcrumbSchema([
+      { name: "Home", url: "https://www.seattleprowash.com" },
+      { name: "Services", url: "https://www.seattleprowash.com/services" },
+      { name: "Moss Treatment", url: "https://www.seattleprowash.com/moss-treatment" },
+    ]);
+    const cleanupService = injectSchema(serviceSchema);
+    const cleanupBreadcrumb = injectSchema(breadcrumbSchema);
+    return () => { cleanupService(); cleanupBreadcrumb(); };
   }, []);
 
   return (
