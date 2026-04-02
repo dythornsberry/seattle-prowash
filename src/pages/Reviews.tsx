@@ -8,10 +8,20 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, ExternalLink, ShieldCheck } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
+import { generateBreadcrumbSchema, injectSchema } from "@/utils/schema";
 
 const Reviews = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    const breadcrumbSchema = generateBreadcrumbSchema([
+      { name: "Home", url: "https://www.seattleprowash.com" },
+      { name: "Reviews", url: "https://www.seattleprowash.com/reviews" },
+    ]);
+    const cleanup = injectSchema(breadcrumbSchema);
+    return () => cleanup();
   }, []);
 
   const allReviews = [

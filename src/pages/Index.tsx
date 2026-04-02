@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { initScrollTracking } from "@/utils/scrollTracking";
 import { scrollToSection } from "@/lib/navigation";
-import { generateLocalBusinessSchema, generateBreadcrumbSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
 import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -20,35 +19,10 @@ import MobileBottomBar from "@/components/MobileBottomBar";
 import ExitIntentPopup from "@/components/ExitIntentPopup";
 
 const Index = () => {
-  // Scroll tracking and Schema injection
+  // Scroll tracking (LocalBusiness schema is in static index.html — no JS injection needed)
   useEffect(() => {
     const cleanup = initScrollTracking();
-    
-    // Inject LocalBusiness Schema
-    const businessSchema = generateLocalBusinessSchema({
-      name: COMPANY_INFO.name,
-      description: COMPANY_INFO.description,
-      url: COMPANY_INFO.url,
-      telephone: COMPANY_INFO.telephone,
-      address: COMPANY_INFO.address,
-      geo: COMPANY_INFO.geo,
-      areaServed: COMPANY_INFO.serviceAreas,
-      priceRange: "$$",
-      rating: COMPANY_INFO.rating
-    });
-    const cleanupBusinessSchema = injectSchema(businessSchema);
-
-    // Inject Breadcrumb Schema
-    const breadcrumbSchema = generateBreadcrumbSchema([
-      { name: "Home", url: "https://www.seattleprowash.com" }
-    ]);
-    const cleanupBreadcrumbSchema = injectSchema(breadcrumbSchema);
-    
-    return () => {
-      cleanup?.();
-      cleanupBusinessSchema();
-      cleanupBreadcrumbSchema();
-    };
+    return () => { cleanup?.(); };
   }, []);
 
   // Handle initial hash navigation using shared scroll utility

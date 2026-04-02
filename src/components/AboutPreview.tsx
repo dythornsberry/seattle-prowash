@@ -18,8 +18,10 @@ const AboutPreview = () => {
               <div className="absolute inset-0 bg-gradient-to-tr from-brand-navy/80 to-transparent z-10"></div>
               <img
                 src={dylanOwnerPhoto}
-                alt="Dylan Thornsberry, Seattle ProWash Owner"
+                alt="Dylan Thornsberry, Seattle ProWash Owner, performing pressure washing in Kenmore WA"
                 className="w-full h-full object-cover"
+                width={800}
+                height={1000}
                 loading="lazy"
               />
 

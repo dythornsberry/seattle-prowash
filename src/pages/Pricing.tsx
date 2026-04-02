@@ -8,10 +8,20 @@ import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
 import { Phone, CheckCircle, Droplet, Home, Ruler, Mountain, TreePine, Star, Sparkles, Wind } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
+import { generateBreadcrumbSchema, injectSchema } from "@/utils/schema";
 
 const Pricing = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    const breadcrumbSchema = generateBreadcrumbSchema([
+      { name: "Home", url: "https://www.seattleprowash.com" },
+      { name: "Pricing", url: "https://www.seattleprowash.com/pricing" },
+    ]);
+    const cleanup = injectSchema(breadcrumbSchema);
+    return () => cleanup();
   }, []);
 
   const roofFactors = [

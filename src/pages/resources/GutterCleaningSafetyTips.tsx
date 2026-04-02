@@ -66,7 +66,9 @@ const GutterCleaningSafetyTips = () => {
                     </div>
                   </div>
                 </div>
-                
+
+                <p className="text-sm text-white/70 mb-4">By Dylan Thornsberry, Owner of Seattle ProWash</p>
+
                 <h1 className="text-4xl md:text-5xl font-bold mb-6">
                   Safety Tips When Cleaning Gutters
                 </h1>

@@ -9,10 +9,20 @@ import Footer from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import MobileBottomBar from "@/components/MobileBottomBar";
 import { navigateToContact } from "@/lib/navigation";
+import { generateBreadcrumbSchema, injectSchema } from "@/utils/schema";
 
 const ServiceAreas = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    const breadcrumbSchema = generateBreadcrumbSchema([
+      { name: "Home", url: "https://www.seattleprowash.com" },
+      { name: "Service Areas", url: "https://www.seattleprowash.com/service-areas" },
+    ]);
+    const cleanup = injectSchema(breadcrumbSchema);
+    return () => cleanup();
   }, []);
 
   const serviceAreas = [

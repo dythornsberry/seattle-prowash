@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Award, Users, Calendar } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
 import MobileBottomBar from "@/components/MobileBottomBar";
+import { generateBreadcrumbSchema, injectSchema } from "@/utils/schema";
 import dylanOwnerPhoto from "@/assets/dylan-owner-patio-pressure-washing.jpg";
 import dylanRoofWork from "@/assets/dylan-roof-work.jpg";
 import technicianHouseWashing from "@/assets/technician-house-washing.jpg";
@@ -38,6 +39,32 @@ const About = () => {
     return () => {
       fadeElements.forEach((el) => observer.unobserve(el));
     };
+  }, []);
+
+  useEffect(() => {
+    const personSchema = {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Dylan Thornsberry",
+      jobTitle: "Owner",
+      worksFor: {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://www.seattleprowash.com#business",
+        name: "Seattle ProWash"
+      },
+      image: "https://www.seattleprowash.com/og-seattle-prowash.jpg",
+      sameAs: [
+        "https://www.facebook.com/SeattleProWash",
+        "https://www.youtube.com/@seattleprowash"
+      ]
+    };
+    const breadcrumbSchema = generateBreadcrumbSchema([
+      { name: "Home", url: "https://www.seattleprowash.com" },
+      { name: "About", url: "https://www.seattleprowash.com/about" },
+    ]);
+    const cleanupPerson = injectSchema(personSchema);
+    const cleanupBreadcrumb = injectSchema(breadcrumbSchema);
+    return () => { cleanupPerson(); cleanupBreadcrumb(); };
   }, []);
 
   return (
@@ -118,8 +145,10 @@ const About = () => {
                   <div className="relative">
                     <img
                       src={dylanOwnerPhoto}
-                      alt="Dylan, owner of Seattle ProWash, performing professional roof cleaning services"
+                      alt="Dylan Thornsberry, owner of Seattle ProWash, performing professional pressure washing in Kenmore WA"
                       className="rounded-2xl shadow-2xl w-full"
+                      width={1200}
+                      height={800}
                       loading="lazy"
                     />
                     <div className="absolute -bottom-6 -right-6 bg-brand-orange text-white px-6 py-3 rounded-xl font-bold shadow-lg">
@@ -269,8 +298,10 @@ const About = () => {
                   <div className="relative rounded-2xl overflow-hidden shadow-xl">
                     <img
                       src={dylanRoofWork}
-                      alt="Dylan working on roof cleaning project"
+                      alt="Dylan Thornsberry working on a roof cleaning project in the Seattle area"
                       className="w-full h-80 object-cover"
+                      width={1200}
+                      height={800}
                       loading="lazy"
                     />
                     <div className="absolute bottom-4 left-4 bg-brand-navy/90 text-white px-4 py-2 rounded-lg">
@@ -284,8 +315,10 @@ const About = () => {
                   <div className="relative rounded-2xl overflow-hidden shadow-xl">
                     <img
                       src={technicianHouseWashing}
-                      alt="Professional technician performing roof cleaning"
+                      alt="Seattle ProWash technician performing professional house washing in Kenmore"
                       className="w-full h-80 object-cover"
+                      width={1200}
+                      height={800}
                       loading="lazy"
                     />
                     <div className="absolute bottom-4 left-4 bg-brand-navy/90 text-white px-4 py-2 rounded-lg">
@@ -300,8 +333,10 @@ const About = () => {
                 <div className="relative rounded-2xl overflow-hidden shadow-xl">
                   <img
                     src={technicianTruckPortrait}
-                    alt="Seattle ProWash team member with professional equipment"
+                    alt="Seattle ProWash team member with professional roof cleaning equipment in Kenmore WA"
                     className="w-full h-80 object-cover"
+                    width={1200}
+                    height={800}
                     loading="lazy"
                   />
                     <div className="absolute bottom-4 left-4 bg-brand-navy/90 text-white px-4 py-2 rounded-lg">
