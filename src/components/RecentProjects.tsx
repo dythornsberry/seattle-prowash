@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { navigateToContact } from "@/lib/navigation";
-import newMetalRoofBefore from "@/assets/new-metal-roof-before-2.webp";
-import newMetalRoofAfter from "@/assets/new-metal-roof-after-2.webp";
-import roofMossBeforeAfter from "@/assets/roof-moss-mold-mildew-removal-before-after.jpg";
+import recentAsphaltRoofBeforeAfter from "@/assets/recent-asphalt-roof-before-after-2026.webp";
+import recentGreenMetalRoofBeforeAfter from "@/assets/recent-green-metal-roof-before-after-2026.webp";
+import recentSilverMetalRoofBeforeAfter from "@/assets/recent-silver-metal-roof-before-after-2026.webp";
+import recentBlackMetalRoof from "@/assets/recent-black-metal-roof-cleaning-2026.webp";
 import gutterBeforeAfter from "@/assets/gutter-cleaning-before-after.jpg";
-import drivewayBeforeAfter from "@/assets/driveway-moss-cleaning-before-after.jpg";
 import houseWashBeforeAfter from "@/assets/house-wash-siding-before-after.jpg";
+import patioPressureWashingBefore2 from "@/assets/recent-patio-pressure-washing-before-2-2026.webp";
+import patioPressureWashingAfter2 from "@/assets/recent-patio-pressure-washing-after-2-2026.webp";
 
 type RecentProject = {
   title: string;
@@ -16,48 +18,61 @@ type RecentProject = {
   service: string;
   date: string;
   image: string;
+  afterImage?: string;
   alt: string;
+  afterAlt?: string;
   description: string;
   featured?: boolean;
 };
 
 const recentProjects: RecentProject[] = [
   {
-    title: "Metal roof cleaning",
-    location: "Seattle Area",
+    title: "Metal roof cleaning before & after",
+    location: "Lake Washington Area",
     service: "Metal Roof Cleaning",
     date: "Recent project",
-    image: "/lovable-uploads/e74889d8-949e-43d7-8979-5150f13e7df4.webp",
-    alt: "Metal roof cleaning before and after by Seattle ProWash",
-    description: "Heavy moss and staining removed from a metal roof using a roof-safe cleaning process.",
+    image: recentGreenMetalRoofBeforeAfter,
+    alt: "Green metal roof cleaning before and after by Seattle ProWash",
+    description: "Organic debris and roof staining cleaned from a standing seam metal roof with a careful, roof-safe process.",
     featured: true,
   },
   {
-    title: "Standing seam metal roof",
-    location: "Eastside",
+    title: "Silver metal roof wash",
+    location: "Greater Seattle",
     service: "Metal Roof Cleaning",
     date: "Recent project",
-    image: newMetalRoofAfter,
-    alt: "Clean standing seam metal roof after professional cleaning",
-    description: "Metal roof cleaned and brightened with careful attention around seams and roof transitions.",
+    image: recentSilverMetalRoofBeforeAfter,
+    alt: "Silver metal roof cleaning before and after",
+    description: "Metal roof cleaned and brightened with careful attention around seams, skylights, and roof transitions.",
   },
   {
-    title: "Metal roof before cleaning",
-    location: "Greater Seattle",
-    service: "Roof Cleaning",
+    title: "Black metal roof cleaned",
+    location: "Kenmore Area",
+    service: "Metal Roof Cleaning",
     date: "Recent project",
-    image: newMetalRoofBefore,
-    alt: "Metal roof before moss removal and cleaning",
-    description: "Before photo from a metal roof project with moss buildup and organic staining.",
+    image: recentBlackMetalRoof,
+    alt: "Clean black metal roof after Seattle ProWash metal roof cleaning",
+    description: "Finished black metal roof project showing a clean roof surface around skylights and forested rooflines.",
   },
   {
-    title: "Roof moss removal",
+    title: "Asphalt roof moss removal",
     location: "Kenmore",
     service: "Roof Cleaning",
     date: "Recent project",
-    image: roofMossBeforeAfter,
+    image: recentAsphaltRoofBeforeAfter,
     alt: "Roof moss removal before and after in Kenmore",
-    description: "Moss removal and treatment to help protect the roof through wet Seattle weather.",
+    description: "Roof debris and moss removed to help protect the shingles through wet Seattle weather.",
+  },
+  {
+    title: "Rooftop patio pressure washing",
+    location: "Seattle Area",
+    service: "Pressure Washing",
+    date: "Recent project",
+    image: patioPressureWashingBefore2,
+    afterImage: patioPressureWashingAfter2,
+    alt: "Concrete patio before pressure washing",
+    afterAlt: "Concrete patio after pressure washing",
+    description: "Concrete patio cleaned section by section for a brighter, more even finish.",
   },
   {
     title: "Gutter cleaning",
@@ -67,15 +82,6 @@ const recentProjects: RecentProject[] = [
     image: gutterBeforeAfter,
     alt: "Gutter cleaning before and after in Bothell",
     description: "Clogged gutters cleared and cleaned so water can drain away from the home.",
-  },
-  {
-    title: "Driveway cleaning",
-    location: "Kirkland",
-    service: "Pressure Washing",
-    date: "Recent project",
-    image: drivewayBeforeAfter,
-    alt: "Driveway pressure washing before and after in Kirkland",
-    description: "Driveway moss and grime removed for a cleaner, safer entry surface.",
   },
   {
     title: "House soft washing",
@@ -161,13 +167,42 @@ const RecentProjects = () => {
                   className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-brand-navy/10 fade-up"
                 >
                   <div className="relative aspect-[16/10] overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.alt}
-                      loading="lazy"
-                      decoding="async"
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
+                    {project.afterImage ? (
+                      <div className="absolute inset-0 grid grid-cols-2">
+                        <div className="relative overflow-hidden border-r-2 border-white">
+                          <img
+                            src={project.image}
+                            alt={project.alt}
+                            loading="lazy"
+                            decoding="async"
+                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+                          <span className="absolute bottom-2 left-2 rounded bg-black/70 px-2 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                            Before
+                          </span>
+                        </div>
+                        <div className="relative overflow-hidden">
+                          <img
+                            src={project.afterImage}
+                            alt={project.afterAlt || project.alt}
+                            loading="lazy"
+                            decoding="async"
+                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+                          <span className="absolute bottom-2 left-2 rounded bg-brand-orange px-2 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                            After
+                          </span>
+                        </div>
+                      </div>
+                    ) : (
+                      <img
+                        src={project.image}
+                        alt={project.alt}
+                        loading="lazy"
+                        decoding="async"
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    )}
                     <div className="absolute top-3 left-3">
                       <Badge className="bg-white text-brand-navy border-0 shadow-sm">
                         {project.service}

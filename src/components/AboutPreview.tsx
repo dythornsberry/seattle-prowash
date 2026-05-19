@@ -51,7 +51,7 @@ const AboutPreview = () => {
                 Meet the Team Behind <span className="text-brand-orange">Seattle ProWash</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I started Seattle ProWash because I kept seeing homes get wrecked by neglected gutters and moss-covered roofs. Fixing that stuff early saves homeowners thousands.
+                Roof and gutter maintenance helps prevent water damage, moss problems, leaks, and expensive repairs that usually start small.
               </p>
             </div>
 

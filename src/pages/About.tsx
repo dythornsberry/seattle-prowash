@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Award, Users, Calendar } from "lucide-react";
+import { CheckCircle, Award, Users, Calendar, MapPin } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
 import MobileBottomBar from "@/components/MobileBottomBar";
 import { generateBreadcrumbSchema, injectSchema } from "@/utils/schema";
@@ -101,24 +101,28 @@ const About = () => {
                   </h2>
                   <div className="space-y-6 text-lg text-muted-foreground">
                     <p>
-                      Seattle ProWash is owned and operated by Dylan Thornsberry out of Kenmore, WA. He started the company in 2022 after working for other roof cleaning outfits and deciding he could do it better.
+                      Seattle ProWash is owned and operated by Dylan Thornsberry out of Kenmore, WA. Dylan started the company in 2022 after seeing how many roof, gutter, and exterior cleaning jobs were rushed or handled without much care.
                     </p>
 
                     <p>
-                      The short version: too many homeowners were getting burned by companies that cut corners or disappeared after the first job. Dylan wanted to build something different.
-                    </p>
-
-                    <p className="italic text-brand-navy font-medium">
-                      "I've worked on every type of roof and gutter system out there. I started Seattle ProWash to give my neighbors the kind of service I'd want on my own house."
+                      The goal was simple: show up when we say we will, explain the work clearly, protect the property, and leave every home cleaner than we found it.
                     </p>
 
                     <p>
-                      A clean roof and clear gutters are not just about curb appeal. They protect your home from water damage, moss growth, leaks, and repairs that can cost thousands later.
+                      Today, Seattle ProWash helps homeowners in Kenmore, Bothell, Kirkland, North Seattle, and nearby areas stay ahead of moss growth, clogged gutters, dirty siding, and slippery concrete.
                     </p>
 
-                    <p className="italic text-brand-navy font-medium">
-                      "A moss-covered roof looks bad, but the real cost is underneath. We catch it before it becomes a big problem."
+                    <p>
+                      Roof and gutter maintenance helps prevent water damage, moss problems, leaks, and expensive repairs that usually start small.
                     </p>
+                  </div>
+
+                  <div className="mt-6 flex items-start gap-3 rounded-2xl border border-brand-navy/10 bg-off-white p-5">
+                    <MapPin className="mt-1 h-5 w-5 flex-shrink-0 text-brand-orange" />
+                    <div>
+                      <p className="font-semibold text-brand-navy">Based in Kenmore, WA</p>
+                      <p className="text-muted-foreground">6516 NE 192nd Pl, Kenmore, WA 98028</p>
+                    </div>
                   </div>
                   
                   <div className="grid grid-cols-4 gap-4 mt-8">

@@ -32,6 +32,7 @@ const Header = () => {
   const navigation: { name: string; href: string; onClick?: () => void }[] = [
     { name: "Home", href: "/", onClick: goHome },
     { name: "Pricing", href: "/pricing" },
+    { name: "Gallery", href: "/gallery" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/#contact", onClick: goToContact }
   ];

@@ -25,6 +25,14 @@ import metalRoofBefore from "@/assets/metal-roof-cleaning-before-after.jpg";
 import patioBefore from "@/assets/patio-pressure-washing-before-after.jpg";
 import houseBefore from "@/assets/house-wash-exterior-before-after.jpg";
 import drivewayBefore from "@/assets/driveway-moss-cleaning-before-after.jpg";
+import recentAsphaltRoofBeforeAfter from "@/assets/recent-asphalt-roof-before-after-2026.webp";
+import recentGreenMetalRoofBeforeAfter from "@/assets/recent-green-metal-roof-before-after-2026.webp";
+import recentSilverMetalRoofBeforeAfter from "@/assets/recent-silver-metal-roof-before-after-2026.webp";
+import recentBlackMetalRoof from "@/assets/recent-black-metal-roof-cleaning-2026.webp";
+import patioPressureWashingBefore1 from "@/assets/recent-patio-pressure-washing-before-1-2026.webp";
+import patioPressureWashingAfter1 from "@/assets/recent-patio-pressure-washing-after-1-2026.webp";
+import patioPressureWashingBefore2 from "@/assets/recent-patio-pressure-washing-before-2-2026.webp";
+import patioPressureWashingAfter2 from "@/assets/recent-patio-pressure-washing-after-2-2026.webp";
 
 const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -37,13 +45,83 @@ const Gallery = () => {
 
   const categories = [
     "All",
+    "Metal Roofs",
     "Roof Cleaning", 
     "Gutter Cleaning",
+    "Pressure Washing",
+    "House Soft Washing",
+    "Concrete Cleaning",
     "Team at Work"
   ];
 
   const galleryImages = {
+    "Metal Roofs": [
+      { 
+        src: recentGreenMetalRoofBeforeAfter, 
+        alt: "Green metal roof cleaning before and after near Lake Washington", 
+        title: "Metal roof cleaning before and after,Lake Washington Area", 
+        location: "Lake Washington Area", 
+        description: "Standing seam metal roof cleaned of organic debris, staining, and buildup",
+        service: "Metal Roof Cleaning"
+      },
+      { 
+        src: recentSilverMetalRoofBeforeAfter, 
+        alt: "Silver metal roof cleaning before and after", 
+        title: "Silver metal roof cleaning,Greater Seattle", 
+        location: "Greater Seattle", 
+        description: "Metal roof cleaned and brightened with careful detail around seams and skylights",
+        service: "Metal Roof Cleaning"
+      },
+      { 
+        src: recentBlackMetalRoof, 
+        alt: "Clean black metal roof after professional roof cleaning", 
+        title: "Black metal roof cleaning,Kenmore Area", 
+        location: "Kenmore Area", 
+        description: "Finished black metal roof project with a clean surface around skylights and forested rooflines",
+        service: "Metal Roof Cleaning"
+      },
+      { 
+        src: metalRoofBefore, 
+        alt: "Metal roof cleaning transformation in Bellevue", 
+        title: "Metal roof cleaning,Bellevue", 
+        location: "Bellevue", 
+        description: "Professional metal roof cleaning removed staining and organic buildup to restore the roof's appearance",
+        service: "Metal Roof Cleaning"
+      },
+      { 
+        src: "/lovable-uploads/e74889d8-949e-43d7-8979-5150f13e7df4.webp", 
+        alt: "Metal roof moss removal and cleaning transformation", 
+        title: "Metal roof moss removal,Seattle Area", 
+        location: "Seattle Area", 
+        description: "Complete metal roof restoration with moss removal treatment",
+        service: "Metal Roof Cleaning"
+      },
+      { 
+        src: "/lovable-uploads/39ad7527-e74d-4532-a64b-0365b83aee6b.webp", 
+        alt: "Metal roof and skylight cleaning before and after", 
+        title: "Metal roof cleaning with skylight,Seattle Area", 
+        location: "Seattle Area", 
+        description: "Professional metal roof cleaning with skylight cleaning",
+        service: "Metal Roof Cleaning"
+      },
+      { 
+        src: "/lovable-uploads/380b267e-dbb4-4a71-8ac9-2bba6d28b15c.webp", 
+        alt: "Metal roof cleaning before and after with visible cleaning process", 
+        title: "Metal roof cleaning,Seattle Area", 
+        location: "Seattle Area", 
+        description: "Intensive metal roof cleaning showing the process and dramatic results",
+        service: "Metal Roof Cleaning"
+      }
+    ],
     "Roof Cleaning": [
+      { 
+        src: recentAsphaltRoofBeforeAfter, 
+        alt: "Asphalt roof moss removal before and after by Seattle ProWash", 
+        title: "Asphalt roof moss removal,Kenmore Area", 
+        location: "Kenmore Area", 
+        description: "Roof debris and moss removed from asphalt shingles to help prevent buildup and roof damage",
+        service: "Roof Cleaning"
+      },
       { 
         src: asphaltRoofBefore, 
         alt: "Roof cleaning and moss removal before and after in Seattle", 
@@ -199,6 +277,70 @@ const Gallery = () => {
         service: "Gutter Cleaning"
       }
     ],
+    "Pressure Washing": [
+      { 
+        src: patioPressureWashingBefore1,
+        afterSrc: patioPressureWashingAfter1,
+        alt: "Rooftop patio pressure washing before and after in the Seattle area", 
+        title: "Rooftop patio pressure washing,Seattle Area", 
+        location: "Seattle Area", 
+        description: "Rooftop patio pavers cleaned to remove dark buildup, grime, and organic staining",
+        service: "Pressure Washing"
+      },
+      { 
+        src: patioPressureWashingBefore2,
+        afterSrc: patioPressureWashingAfter2,
+        alt: "Concrete patio cleaning before and after in the Seattle area", 
+        title: "Concrete patio pressure washing,Seattle Area", 
+        location: "Seattle Area", 
+        description: "Concrete patio cleaned section by section for a brighter and more even finish",
+        service: "Pressure Washing"
+      },
+      { 
+        src: patioBefore, 
+        alt: "Patio pressure washing before and after in the Seattle area", 
+        title: "Patio pressure washing,Seattle Area", 
+        location: "Seattle Area", 
+        description: "Pressure washing removed organic buildup from patio surfaces and restored a cleaner finish",
+        service: "Pressure Washing"
+      },
+      { 
+        src: dylanOwnerPatioPressureWashing, 
+        alt: "Seattle ProWash pressure washing patio surface", 
+        title: "Pressure washing in progress,Seattle Area", 
+        location: "Seattle Area", 
+        description: "Professional pressure washing for patios, walkways, and other hard surfaces",
+        service: "Pressure Washing"
+      }
+    ],
+    "House Soft Washing": [
+      { 
+        src: houseBefore, 
+        alt: "House soft washing before and after on exterior siding", 
+        title: "House soft washing,Seattle Area", 
+        location: "Seattle Area", 
+        description: "Soft washing for siding and exterior surfaces with a gentler process than high-pressure cleaning",
+        service: "House Soft Washing"
+      },
+      { 
+        src: heroCleaningService, 
+        alt: "Professional exterior house washing service", 
+        title: "Exterior washing service,Seattle Area", 
+        location: "Seattle Area", 
+        description: "Exterior cleaning for siding, trim, soffits, and hard-to-reach areas around the home",
+        service: "House Soft Washing"
+      }
+    ],
+    "Concrete Cleaning": [
+      { 
+        src: drivewayBefore, 
+        alt: "Driveway and concrete cleaning before and after in the Seattle area", 
+        title: "Driveway and concrete cleaning,Seattle Area", 
+        location: "Seattle Area", 
+        description: "Concrete cleaning for driveways, walkways, stairs, and entry areas with moss and staining",
+        service: "Concrete Cleaning"
+      }
+    ],
     "Team at Work": [
       { 
         src: prowashTruck, 
@@ -269,21 +411,33 @@ const Gallery = () => {
 
   const getFilteredImages = () => {
     if (activeCategory === "All") {
+      const metalRoofImages = galleryImages["Metal Roofs"] || [];
       const roofImages = galleryImages["Roof Cleaning"] || [];
       const gutterImages = galleryImages["Gutter Cleaning"] || [];
+      const pressureImages = galleryImages["Pressure Washing"] || [];
+      const houseImages = galleryImages["House Soft Washing"] || [];
+      const concreteImages = galleryImages["Concrete Cleaning"] || [];
       const teamImages = galleryImages["Team at Work"] || [];
       
       const interspersedImages = [];
       const maxLength = Math.max(
+        metalRoofImages.length,
         roofImages.length,
         gutterImages.length,
+        pressureImages.length,
+        houseImages.length,
+        concreteImages.length,
         teamImages.length
       );
       
       // Alternate between service types to create variety
       for (let i = 0; i < maxLength; i++) {
+        if (i < metalRoofImages.length) interspersedImages.push(metalRoofImages[i]);
         if (i < roofImages.length) interspersedImages.push(roofImages[i]);
         if (i < gutterImages.length) interspersedImages.push(gutterImages[i]);
+        if (i < pressureImages.length) interspersedImages.push(pressureImages[i]);
+        if (i < houseImages.length) interspersedImages.push(houseImages[i]);
+        if (i < concreteImages.length) interspersedImages.push(concreteImages[i]);
         if (i < teamImages.length) interspersedImages.push(teamImages[i]);
       }
       
@@ -350,15 +504,42 @@ const Gallery = () => {
                 <div
                   key={index}
                   className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
-                  onClick={() => setSelectedImage(image.src)}
+                  onClick={() => setSelectedImage(image.afterSrc || image.src)}
                 >
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
-                    />
+                    {image.afterSrc ? (
+                      <div className="grid h-full grid-cols-2">
+                        <div className="relative overflow-hidden border-r-2 border-white">
+                          <img
+                            src={image.src}
+                            alt={image.alt}
+                            className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            loading="lazy"
+                          />
+                          <span className="absolute bottom-3 left-3 rounded bg-black/70 px-2 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                            Before
+                          </span>
+                        </div>
+                        <div className="relative overflow-hidden">
+                          <img
+                            src={image.afterSrc}
+                            alt={`${image.alt} after cleaning`}
+                            className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            loading="lazy"
+                          />
+                          <span className="absolute bottom-3 left-3 rounded bg-brand-orange px-2 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                            After
+                          </span>
+                        </div>
+                      </div>
+                    ) : (
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                    )}
                   </div>
                   
                   {/* Always visible label overlay - hidden on hover */}
