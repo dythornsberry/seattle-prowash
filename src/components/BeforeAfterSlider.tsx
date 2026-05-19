@@ -160,7 +160,7 @@ const BeforeAfterSlider = () => {
         {/* CTA */}
         <div className="text-center mt-16 fade-up">
           <div className="space-y-6">
-            <p className="text-muted-foreground mb-4">Ready to see your home transformed?</p>
+            <p className="text-muted-foreground mb-4">Ready to clean up your roof, gutters, or exterior surfaces?</p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button 
                 variant="prowash-primary" 

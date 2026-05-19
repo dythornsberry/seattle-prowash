@@ -84,7 +84,7 @@ const About = () => {
                 Meet Dylan, Owner of Seattle ProWash
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-white/90">
-                Helping Seattle-area homeowners protect their roofs and gutters with safe, effective moss removal and drainage solutions since 2022.
+                Helping Seattle-area homeowners stay ahead of moss, clogged gutters, and water damage since 2022.
               </p>
             </div>
           </div>
@@ -97,7 +97,7 @@ const About = () => {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="fade-up">
                   <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-6">
-                    Dylan's Story: From Employee to Expert
+                    Dylan's Story
                   </h2>
                   <div className="space-y-6 text-lg text-muted-foreground">
                     <p>
@@ -113,7 +113,7 @@ const About = () => {
                     </p>
 
                     <p>
-                      Keeping up with roof and gutter maintenance is the cheapest way to avoid a $15,000+ roof replacement down the road. That's what drives the work.
+                      A clean roof and clear gutters are not just about curb appeal. They protect your home from water damage, moss growth, leaks, and repairs that can cost thousands later.
                     </p>
 
                     <p className="italic text-brand-navy font-medium">
@@ -315,7 +315,7 @@ const About = () => {
                   <div className="relative rounded-2xl overflow-hidden shadow-xl">
                     <img
                       src={technicianHouseWashing}
-                      alt="Seattle ProWash technician performing professional house washing in Kenmore"
+                      alt="Seattle ProWash technician performing professional house soft washing in Kenmore"
                       className="w-full h-80 object-cover"
                       width={1200}
                       height={800}

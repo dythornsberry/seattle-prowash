@@ -72,7 +72,7 @@ const Services = () => {
       image: pressureImg,
       href: "/pressure-washing",
       price: "Free estimates",
-      description: "Driveways, patios, sidewalks, decks, and siding. We restore surfaces to like-new condition with professional-grade equipment.",
+      description: "Driveways, patios, sidewalks, decks, and siding. We remove moss, algae, and surface grime with professional-grade equipment.",
       includes: [
         "Driveways & walkways",
         "Patios & decks",

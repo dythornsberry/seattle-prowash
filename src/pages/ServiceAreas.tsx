@@ -251,7 +251,7 @@ const ServiceAreas = () => {
                     </div>
                     <h3 className="text-xl font-bold text-dark-teal mb-3">12-Month Guarantee</h3>
                     <p className="text-gray-600">
-                      Our moss treatment comes with a full 12-month moss-free guarantee for your peace of mind.
+                      Our moss treatment comes with a full 12-month moss-free guarantee.
                     </p>
                   </div>
 

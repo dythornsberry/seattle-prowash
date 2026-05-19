@@ -48,7 +48,7 @@ const Footer = () => {
                 </h2>
                 <p className="text-sm text-brand-orange font-medium mb-2">Based in Kenmore, WA</p>
                 <p className="text-white/80 leading-relaxed">
-                  Trusted roof cleaning and gutter specialists serving Kenmore, Bothell, Lynnwood, Kirkland, Shoreline and greater Seattle. Protecting Pacific Northwest homes with safe, effective moss removal and drainage solutions.
+                  Roof cleaning and gutter specialists serving Kenmore, Bothell, Lynnwood, Kirkland, Shoreline and greater Seattle. Helping homeowners prevent moss damage, clogged gutters, and expensive water issues.
                 </p>
               </div>
               

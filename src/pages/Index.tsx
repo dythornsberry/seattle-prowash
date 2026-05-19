@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import EnhancedTrustBar from "@/components/EnhancedTrustBar";
 import ServicesPreview from "@/components/ServicesPreview";
+import RecentProjects from "@/components/RecentProjects";
 import CostOfWaiting from "@/components/CostOfWaiting";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import AboutPreview from "@/components/AboutPreview";
@@ -81,6 +82,7 @@ const Index = () => {
           <Hero />
           <EnhancedTrustBar />
           <ServicesPreview />
+          <RecentProjects />
           <AboutPreview />
           <GoogleReviewsCarousel />
           <div className="bg-off-white">

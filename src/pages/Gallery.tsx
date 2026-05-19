@@ -423,7 +423,7 @@ const Gallery = () => {
                 Ready for Your Transformation?
               </h2>
               <p className="text-xl mb-8 text-white/90">
-                Let us restore your property to its best condition with our professional cleaning services.
+                See what a cleaned roof, clear gutters, and washed exterior surfaces can do for your home.
               </p>
               <Button 
                 variant="prowash-primary" 
