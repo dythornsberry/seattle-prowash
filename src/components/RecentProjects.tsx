@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { navigateToContact } from "@/lib/navigation";
-import metalRoofBeforeAfter from "@/assets/metal-roof-cleaning-before-after.jpg";
-import newMetalRoofBefore from "@/assets/new-metal-roof-before-2.jpg";
-import newMetalRoofAfter from "@/assets/new-metal-roof-after-2.jpg";
+import newMetalRoofBefore from "@/assets/new-metal-roof-before-2.webp";
+import newMetalRoofAfter from "@/assets/new-metal-roof-after-2.webp";
 import roofMossBeforeAfter from "@/assets/roof-moss-mold-mildew-removal-before-after.jpg";
 import gutterBeforeAfter from "@/assets/gutter-cleaning-before-after.jpg";
 import drivewayBeforeAfter from "@/assets/driveway-moss-cleaning-before-after.jpg";
@@ -28,7 +27,7 @@ const recentProjects: RecentProject[] = [
     location: "Seattle Area",
     service: "Metal Roof Cleaning",
     date: "Recent project",
-    image: metalRoofBeforeAfter,
+    image: "/lovable-uploads/e74889d8-949e-43d7-8979-5150f13e7df4.webp",
     alt: "Metal roof cleaning before and after by Seattle ProWash",
     description: "Heavy moss and staining removed from a metal roof using a roof-safe cleaning process.",
     featured: true,
