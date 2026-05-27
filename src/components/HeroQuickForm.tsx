@@ -13,8 +13,13 @@ const formatPhoneNumber = (value: string) => {
 const isValidPhone = (value: string) => {
   const digits = value.replace(/\D/g, "");
   if (digits.length !== 10) return false;
+  // Reject all-same-digit numbers (e.g. 1111111111)
   if (/^(\d)\1{9}$/.test(digits)) return false;
+  // Reject 555 exchange (classic Hollywood fake numbers like 555-0100)
   if (digits.slice(3, 6) === "555") return false;
+  // Reject 555 area code (reserved, not a real US area code)
+  if (digits.slice(0, 3) === "555") return false;
+  // Reject area codes starting with 0 or 1 (invalid US area codes)
   if (digits[0] === "0" || digits[0] === "1") return false;
   return true;
 };
