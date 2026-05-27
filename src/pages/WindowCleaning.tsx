@@ -85,7 +85,7 @@ const WindowCleaning = () => {
                   Crystal Clear Windows, Every Time
                 </h1>
                 <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
-                  5.0★ from 200+ neighbors · Licensed & Insured · Same-Day Estimates
+                  5.0★ from 200+ neighbors · Licensed & Insured · Free Quotes
                 </p>
                 <p className="text-white/80 mb-8 leading-relaxed">
                   Seattle rain, pollen, and hard water take a toll on your windows. We handle the exterior cleaning so you can enjoy the view again. Safe, streak-free results on every pane.
@@ -99,7 +99,7 @@ const WindowCleaning = () => {
                   </Button>
                 </div>
                 <p className="text-white/80 text-sm">
-                  ✓ Streak-Free Guarantee  ✓ Same-Day Quotes  ✓ 200+ Reviews
+                  ✓ Streak-Free Guarantee  ✓ Free Quotes  ✓ 200+ Reviews
                 </p>
               </div>
               <div className="fade-up">
@@ -191,7 +191,7 @@ const WindowCleaning = () => {
                 Ready for Spotless Windows?
               </h2>
               <p className="text-xl text-white/90 mb-8">
-                Get your free window cleaning quote today. We'll have it back to you the same day.
+                Get your free window cleaning quote today. We will be in touch shortly.
               </p>
               <Button variant="prowash-secondary" size="xl" onClick={navigateToContact}>
                 Get a Fast Quote

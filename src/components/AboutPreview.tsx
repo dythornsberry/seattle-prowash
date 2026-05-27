@@ -11,11 +11,11 @@ const AboutPreview = () => {
 
           {/* Image Side */}
           <div className="w-full lg:w-5/12 relative fade-up">
-            <div className="absolute -inset-4 bg-brand-navy/5 rounded-3xl -z-10 rotate-3 transition-transform duration-500 hover:rotate-6"></div>
-            <div className="absolute -inset-4 border-2 border-brand-orange/20 rounded-3xl -z-10 -rotate-2 transition-transform duration-500 hover:-rotate-1"></div>
+            {/* Subtle orange accent line — modern, no rotation */}
+            <div className="absolute -bottom-3 -right-3 w-24 h-24 bg-brand-orange/15 rounded-2xl -z-10"></div>
 
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-brand-navy/5 aspect-[4/5] md:aspect-square lg:aspect-[4/5]">
-              <div className="absolute inset-0 bg-gradient-to-tr from-brand-navy/80 to-transparent z-10"></div>
+            <div className="relative rounded-2xl overflow-hidden shadow-xl bg-brand-navy/5 aspect-[4/5] md:aspect-square lg:aspect-[4/5]">
+              <div className="absolute inset-0 bg-gradient-to-tr from-brand-navy/70 to-transparent z-10"></div>
               <img
                 src={dylanOwnerPhoto}
                 alt="Dylan Thornsberry, Seattle ProWash Owner, performing pressure washing in Kenmore WA"
@@ -48,17 +48,17 @@ const AboutPreview = () => {
                 <span>Locally Owned & Operated</span>
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy mb-6 font-heading">
-                Meet the Team Behind <span className="text-brand-orange">Seattle ProWash</span>
+                Meet <span className="text-brand-orange">Dylan</span>, Your Local Owner
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Roof and gutter maintenance helps prevent water damage, moss problems, leaks, and expensive repairs that usually start small.
+                I'm Dylan, based right here in Kenmore. I started Seattle ProWash in 2022 because maintaining your home is the single best ROI you can get on home improvement, period. A new roof costs $20,000 or more. Cleaning yours costs a small fraction of that.
               </p>
             </div>
 
             <div className="bg-off-white p-6 rounded-2xl border border-brand-navy/10 shadow-sm relative overflow-hidden">
                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-orange/5 rounded-bl-full -z-10"></div>
               <p className="font-medium text-brand-navy italic text-lg relative z-10">
-                "A clean roof lasts 10-15 years longer. That's the whole reason we do this."
+                "My goal on every job is to do it well enough that you call me back next year."
               </p>
             </div>
 

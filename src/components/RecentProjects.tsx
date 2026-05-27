@@ -8,7 +8,6 @@ import recentGreenMetalRoofBeforeAfter from "@/assets/recent-green-metal-roof-be
 import recentSilverMetalRoofBeforeAfter from "@/assets/recent-silver-metal-roof-before-after-2026.webp";
 import recentBlackMetalRoof from "@/assets/recent-black-metal-roof-cleaning-2026.webp";
 import gutterBeforeAfter from "@/assets/gutter-cleaning-before-after.jpg";
-import houseWashBeforeAfter from "@/assets/house-wash-siding-before-after.jpg";
 import patioPressureWashingBefore2 from "@/assets/recent-patio-pressure-washing-before-2-2026.webp";
 import patioPressureWashingAfter2 from "@/assets/recent-patio-pressure-washing-after-2-2026.webp";
 
@@ -82,15 +81,6 @@ const recentProjects: RecentProject[] = [
     image: gutterBeforeAfter,
     alt: "Gutter cleaning before and after in Bothell",
     description: "Clogged gutters cleared and cleaned so water can drain away from the home.",
-  },
-  {
-    title: "House soft washing",
-    location: "North Seattle",
-    service: "House Soft Washing",
-    date: "Recent project",
-    image: houseWashBeforeAfter,
-    alt: "House soft washing before and after in North Seattle",
-    description: "Low-pressure exterior cleaning for siding with algae and organic buildup.",
   },
 ];
 

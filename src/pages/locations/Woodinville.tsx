@@ -80,7 +80,7 @@ const Woodinville = () => {
                 </p>
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <span className="bg-white/10 px-4 py-2 rounded-full">12-Month Moss-Free Guarantee</span>
-                  <span className="bg-white/10 px-4 py-2 rounded-full">Same-Day Estimates</span>
+                  <span className="bg-white/10 px-4 py-2 rounded-full">Free Quotes</span>
                   <span className="bg-white/10 px-4 py-2 rounded-full">200+ 5-Star Reviews</span>
                 </div>
               </div>
@@ -132,7 +132,7 @@ const Woodinville = () => {
                       </div>
                       <h3 className="text-xl font-bold mb-4 text-dark-teal">Fast Response</h3>
                       <p className="text-gray-600">
-                        Same-day estimates and quick turnaround times for all Woodinville area properties.
+                        Free quotes and quick scheduling for all Woodinville area properties.
                       </p>
                     </CardContent>
                   </Card>
@@ -208,7 +208,7 @@ const Woodinville = () => {
             faqs={[
               {
                 question: "What Woodinville neighborhoods do you serve?",
-                answer: "We serve all Woodinville areas including Hollywood Hill, Cottage Lake, Wellington, and all surrounding neighborhoods. Same-day estimates available throughout Woodinville."
+                answer: "We serve all Woodinville areas including Hollywood Hill, Cottage Lake, Wellington, and all surrounding neighborhoods. Free quotes available throughout Woodinville."
               },
               {
                 question: "Do you service Woodinville's rural properties?",

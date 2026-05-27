@@ -89,7 +89,7 @@ const Kenmore = () => {
                 </p>
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <span className="bg-white/10 px-4 py-2 rounded-full">12-Month Moss-Free Guarantee</span>
-                  <span className="bg-white/10 px-4 py-2 rounded-full">Same-Day Estimates</span>
+                  <span className="bg-white/10 px-4 py-2 rounded-full">Free Quotes</span>
                   <span className="bg-white/10 px-4 py-2 rounded-full">200+ 5-Star Reviews</span>
                 </div>
               </div>
@@ -141,7 +141,7 @@ const Kenmore = () => {
                       </div>
                       <h3 className="text-xl font-bold mb-4 text-dark-teal">Fast Response</h3>
                       <p className="text-gray-600">
-                        Same-day estimates and quick turnaround times for all Kenmore area properties.
+                        Free quotes and quick scheduling for all Kenmore area properties.
                       </p>
                     </CardContent>
                   </Card>
@@ -317,7 +317,7 @@ const Kenmore = () => {
             faqs={[
               {
                 question: "What Kenmore neighborhoods do you serve?",
-                answer: "We serve all Kenmore areas including Kenmore Highlands, Moorlands, Inglewood, Kenmore Village, North Rose Hill, and South Kenmore. Same-day estimates available throughout Kenmore."
+                answer: "We serve all Kenmore areas including Kenmore Highlands, Moorlands, Inglewood, Kenmore Village, North Rose Hill, and South Kenmore. Free quotes available throughout Kenmore."
               },
               {
                 question: "Why is Lake Washington's proximity important for Kenmore homes?",
@@ -374,7 +374,7 @@ const Kenmore = () => {
                 </div>
                 
                 <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
-                  <span>✓ Same-day estimates</span>
+                  <span>✓ Free quotes</span>
                   <span>✓ Licensed & Insured</span>
                   <span>✓ 12-month moss-free guarantee</span>
                   <span>✓ 200+ 5-star reviews</span>

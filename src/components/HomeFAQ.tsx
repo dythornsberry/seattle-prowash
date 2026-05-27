@@ -12,13 +12,13 @@ import { generateFAQSchema, injectSchema } from "@/utils/schema";
 const topFAQs = [
   {
     question: "What does roof or gutter cleaning cost?",
-    answer: "Most homes in our area range from $250–$1,200 depending on roof size, pitch, and access. Typical starting prices: Gutter cleaning $250+, Moss treatment with gutter cleaning $499+. We send same-day estimates.",
+    answer: "Most homes in our area range from $250–$1,200 depending on roof size, pitch, and access. Typical starting prices: Gutter cleaning $250+, Moss treatment with gutter cleaning $499+. We send free quotes within a day or two.",
     icon: CheckCircle,
     cta: true
   },
   {
     question: "How soon can you schedule my service?",
-    answer: "Most quotes same day; we usually schedule within 3–7 days (weather dependent). Urgent roof/gutter issues get priority.",
+    answer: "Most quotes within a day or two; we usually schedule within 3–7 days (weather dependent). Urgent roof/gutter issues get priority.",
     icon: Clock,
     cta: true
   },

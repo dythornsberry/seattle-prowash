@@ -99,21 +99,17 @@ const About = () => {
                   <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-6">
                     Dylan's Story
                   </h2>
-                  <div className="space-y-6 text-lg text-muted-foreground">
+                  <div className="space-y-5 text-lg text-muted-foreground">
                     <p>
-                      Seattle ProWash is owned and operated by Dylan Thornsberry out of Kenmore, WA. Dylan started the company in 2022 after seeing how many roof, gutter, and exterior cleaning jobs were rushed or handled without much care.
+                      I'm Dylan Thornsberry, based right here in Kenmore, WA. I founded Seattle ProWash in 2022 because maintaining your home is the single best ROI you can get on home improvement, period.
                     </p>
 
                     <p>
-                      The goal was simple: show up when we say we will, explain the work clearly, protect the property, and leave every home cleaner than we found it.
+                      A new roof costs $20,000 or more. Cleaning yours costs a small fraction of that and adds years to its life. Most homeowners don't connect those two numbers.
                     </p>
 
                     <p>
-                      Today, Seattle ProWash helps homeowners in Kenmore, Bothell, Kirkland, North Seattle, and nearby areas stay ahead of moss growth, clogged gutters, dirty siding, and slippery concrete.
-                    </p>
-
-                    <p>
-                      Roof and gutter maintenance helps prevent water damage, moss problems, leaks, and expensive repairs that usually start small.
+                      I started this business to help people around Kenmore, Bothell, Kirkland and Seattle stay ahead of damage before it starts. Every job comes down to one thing: do it well enough that you call me back next year.
                     </p>
                   </div>
 
@@ -183,7 +179,7 @@ const About = () => {
                     Get a Free Quote
                   </h3>
                   <p className="text-lg text-muted-foreground mb-6">
-                    "Send us a few photos of your roof and we'll get you a quote the same day. No pressure, no hassle."
+                    "Send us a few photos of your roof and we will get you a free quote shortly. No pressure, no hassle."
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button 

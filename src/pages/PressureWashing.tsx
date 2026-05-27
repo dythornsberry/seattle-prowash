@@ -89,7 +89,7 @@ const PressureWashing = () => {
                   Pressure Washing That Makes It Look New
                 </h1>
                 <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
-                  5.0★ from 200+ neighbors · Licensed & Insured · Same-Day Estimates
+                  5.0★ from 200+ neighbors · Licensed & Insured · Free Quotes
                 </p>
                 <p className="text-white/80 mb-8 leading-relaxed">
                   Driveways, patios, walkways, decks, siding - if it's covered in moss, grime, or algae, we'll make it look like the day it was installed. We use the right pressure and cleaning solution for every surface so nothing gets damaged.
@@ -103,7 +103,7 @@ const PressureWashing = () => {
                   </Button>
                 </div>
                 <p className="text-white/80 text-sm">
-                  ✓ Safe for All Surfaces  ✓ Same-Day Quotes  ✓ 200+ Reviews
+                  ✓ Safe for All Surfaces  ✓ Free Quotes  ✓ 200+ Reviews
                 </p>
               </div>
               <div className="fade-up">
@@ -204,7 +204,7 @@ const PressureWashing = () => {
                 Ready to See the Difference?
               </h2>
               <p className="text-xl text-white/90 mb-8">
-                Get your free pressure washing quote today. Most estimates come back same day.
+                Get your free pressure washing quote today. We will be in touch shortly.
               </p>
               <Button variant="prowash-secondary" size="xl" onClick={navigateToContact}>
                 Get a Fast Quote

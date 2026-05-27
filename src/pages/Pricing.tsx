@@ -44,28 +44,28 @@ const Pricing = () => {
       title: "Pressure / Power Washing",
       startingPrice: "Starting at $200",
       description: "Driveways, patios, walkways, retaining walls, decks, and other hard surfaces.",
-      detail: "Quoted same day based on square footage, surface type, and how much staining or organic growth needs to be removed.",
+      detail: "Quoted based on square footage, surface type, and how much staining or organic growth needs to be removed.",
     },
     {
       icon: Home,
       title: "House Soft Washing",
       startingPrice: "Starting at $500",
       description: "Low-pressure cleaning for siding, trim, soffits, and other exterior surfaces.",
-      detail: "Quoted same day based on home size, siding material, access, and the amount of algae or dirt buildup.",
+      detail: "Quoted based on home size, siding material, access, and the amount of algae or dirt buildup.",
     },
     {
       icon: Ruler,
       title: "Driveway & Concrete Cleaning",
       startingPrice: "Starting at $200",
       description: "Concrete driveways, sidewalks, patios, stairs, and entry areas.",
-      detail: "Quoted same day based on total area, stain severity, and whether treatment is needed for moss, algae, or oil spots.",
+      detail: "Quoted based on total area, stain severity, and whether treatment is needed for moss, algae, or oil spots.",
     },
     {
       icon: Wind,
       title: "Exterior Window Cleaning",
       startingPrice: "Starting at $200",
       description: "Exterior-only window cleaning for homes and small commercial properties.",
-      detail: "Quoted same day based on pane count, number of stories, and access around landscaping or rooflines.",
+      detail: "Quoted based on pane count, number of stories, and access around landscaping or rooflines.",
     },
   ];
 
@@ -89,7 +89,7 @@ const Pricing = () => {
               Clear Pricing for Exterior Cleaning
             </h1>
             <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-8">
-              Roof cleaning and gutter cleaning have the clearest typical ranges. Pressure washing, power washing, house soft washing, driveway cleaning, and window cleaning are quoted same day based on your property.
+              Roof cleaning and gutter cleaning have the clearest typical ranges. Pressure washing, power washing, house soft washing, driveway cleaning, and window cleaning are quoted based on your property.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="cta-orange" size="xl" onClick={navigateToContact}>
@@ -250,7 +250,7 @@ const Pricing = () => {
                   We Also Quote Pressure Washing, House Soft Washing & Window Cleaning
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                  We don&apos;t just clean roofs and gutters. We also provide same-day estimates for pressure washing, power washing, house soft washing, driveway and concrete cleaning, and exterior window cleaning.
+                  We don&apos;t just clean roofs and gutters. We also provide free quotes for pressure washing, power washing, house soft washing, driveway and concrete cleaning, and exterior window cleaning.
                 </p>
               </div>
 
@@ -267,7 +267,7 @@ const Pricing = () => {
                           <div>
                             <CardTitle className="text-xl text-brand-blue">{service.title}</CardTitle>
                             <CardDescription className="text-sm font-medium text-brand-orange">
-                              {service.startingPrice} • Free same-day estimate
+                              {service.startingPrice} • Free quote
                             </CardDescription>
                           </div>
                         </div>
@@ -303,8 +303,8 @@ const Pricing = () => {
               </p>
               <div className="grid sm:grid-cols-3 gap-6 mb-10">
                 <div className="bg-white/10 rounded-xl p-6">
-                  <p className="text-3xl font-bold text-brand-orange mb-2">Same Day</p>
-                  <p className="text-sm text-white/70">Same-day estimates available</p>
+                  <p className="text-3xl font-bold text-brand-orange mb-2">$0</p>
+                  <p className="text-sm text-white/70">Free quote, no surprise charges</p>
                 </div>
                 <div className="bg-white/10 rounded-xl p-6">
                   <p className="text-3xl font-bold text-brand-orange mb-2">No Obligation</p>

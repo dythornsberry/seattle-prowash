@@ -1,14 +1,6 @@
 import { Star, Shield, Clock, Award } from "lucide-react";
-import { useEffect, useState } from "react";
 
 const EnhancedTrustBar = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
-
   const metrics = [
     {
       icon: Star,
@@ -51,13 +43,7 @@ const EnhancedTrustBar = () => {
           {metrics.map((metric, index) => {
             const IconComponent = metric.icon;
             return (
-              <div
-                key={index}
-                className={`text-center transition-all duration-500 transform ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-                }`}
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
+              <div key={index} className="text-center">
                 <div className={`inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 ${metric.bgColor} rounded-full mb-3`}>
                   <IconComponent className={`w-7 h-7 md:w-8 md:h-8 ${metric.color}`} />
                 </div>

@@ -83,14 +83,14 @@ const Index = () => {
           <EnhancedTrustBar />
           <ServicesPreview />
           <RecentProjects />
+          <CostOfWaiting />
+          <div className="bg-navy">
+            <BeforeAfterSlider />
+          </div>
           <AboutPreview />
           <GoogleReviewsCarousel />
           <div className="bg-off-white">
             <TwoStepQuoteForm />
-          </div>
-          <CostOfWaiting />
-          <div className="bg-navy">
-            <BeforeAfterSlider />
           </div>
           <HomeFAQ />
           <ServiceAreasSection 

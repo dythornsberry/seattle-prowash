@@ -66,7 +66,7 @@ const MossTreatment = () => {
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <span className="bg-white/10 px-4 py-2 rounded-full">12-Month Moss-Free Guarantee</span>
                   <span className="bg-white/10 px-4 py-2 rounded-full">Licensed & Insured</span>
-                  <span className="bg-white/10 px-4 py-2 rounded-full">Same-Day Estimates</span>
+                  <span className="bg-white/10 px-4 py-2 rounded-full">Free Quotes</span>
                 </div>
               </div>
             </div>
@@ -248,7 +248,7 @@ const MossTreatment = () => {
                   </Button>
                 </div>
                 <p className="text-sm text-gray-500 mt-4">
-                  Same-day estimates • Licensed & Insured • 200+ 5-star reviews
+                  Free quotes • Licensed & Insured • 200+ 5-star reviews
                 </p>
               </div>
             </div>

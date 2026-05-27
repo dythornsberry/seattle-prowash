@@ -441,7 +441,7 @@ const Seattle = () => {
                 Ready to Protect Your Seattle Home?
               </h2>
               <p className="text-xl text-white/90 mb-8">
-                Get your free quote today. Same-day estimates available.
+                Get your free quote today. Free quotes available.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 

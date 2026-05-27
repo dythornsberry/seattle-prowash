@@ -123,7 +123,7 @@ const RoofCleaning = () => {
                   
                   {/* Mini Trust Line */}
                   <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
-                    5.0★ from 200+ neighbors • Licensed & Insured • Same-Day Estimates
+                    5.0★ from 200+ neighbors • Licensed & Insured • Free Quotes
                   </p>
 
                   {/* 1-2-3 Process */}
@@ -152,7 +152,7 @@ const RoofCleaning = () => {
                   
                   {/* Trust Indicators */}
                   <p className="text-white/80 text-sm">
-                    ✓ 12-Month Guarantee  ✓ Same-Day Quotes  ✓ 200+ Reviews
+                    ✓ 12-Month Guarantee  ✓ Free Quotes  ✓ 200+ Reviews
                   </p>
                 </div>
                 <div className="fade-up">
