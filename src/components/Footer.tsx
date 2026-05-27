@@ -198,8 +198,7 @@ const Footer = () => {
                       seattleprowash@gmail.com
                     </a>
                     <div className="text-xs text-white/60">
-                      <p>We respond promptly during business hours</p>
-                      <p>We respond within a day or two</p>
+                      <p>We respond as quickly as possible</p>
                     </div>
                   </div>
                 </div>
@@ -208,7 +207,7 @@ const Footer = () => {
                   <Clock className="w-5 h-5 text-brand-orange flex-shrink-0" />
                   <div>
                     <p className="font-semibold">Business Hours</p>
-                    <p className="text-xs text-white/60">Mon-Fri 8am-6pm, Sat 9am-5pm</p>
+                    <p className="text-xs text-white/60">Available 24/7</p>
                   </div>
                 </div>
 
