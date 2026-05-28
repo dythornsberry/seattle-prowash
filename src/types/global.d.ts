@@ -10,6 +10,7 @@ declare function gtag(command: 'event', eventName: string, params?: GtagEventPar
 interface Window {
   gtag?: typeof gtag;
   dataLayer?: unknown[];
+  initializeFeaturableWidget?: (element: HTMLElement) => HTMLElement;
 }
 
 // Google Maps Places API (minimal types for autocomplete)
@@ -34,4 +35,3 @@ declare namespace google {
     }
   }
 }
-

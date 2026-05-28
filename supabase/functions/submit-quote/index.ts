@@ -119,7 +119,7 @@ async function sendEmailNotification(body: QuotePayload) {
 
           <div style="background: #fffbeb; border: 1px solid #fbbf24; border-radius: 8px; padding: 15px; margin-bottom: 20px;">
             <p style="margin: 0; color: #92400e;">
-              <strong>⏰ Quick tip:</strong> Respond within 1 hour for best conversion!
+              <strong>⏰ Quick tip:</strong> Follow up while the request is still fresh.
             </p>
           </div>
 

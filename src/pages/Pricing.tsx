@@ -8,6 +8,9 @@ import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
 import { Phone, CheckCircle, Droplet, Home, Ruler, Mountain, TreePine, Star, Sparkles, Wind } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
+import asphaltRoofImg from "@/assets/recent-asphalt-roof-before-after-2026.webp";
+import metalRoofImg from "@/assets/recent-green-metal-roof-before-after-2026.webp";
+import gutterImg from "@/assets/gutter-cleaning-before-after.jpg";
 import { generateBreadcrumbSchema, injectSchema } from "@/utils/schema";
 
 const Pricing = () => {
@@ -28,7 +31,7 @@ const Pricing = () => {
     { icon: Ruler, factor: "Roof size", description: "Square footage directly affects time and materials" },
     { icon: Mountain, factor: "Roof pitch", description: "Steeper roofs require additional safety equipment" },
     { icon: TreePine, factor: "Moss severity", description: "Heavy moss buildup needs more treatment" },
-    { icon: Home, factor: "Roof type", description: "Composition, cedar, metal, or tile" },
+    { icon: Home, factor: "Access & layout", description: "Multi-story or hard-to-reach roofs add time" },
   ];
 
   const gutterFactors = [
@@ -107,34 +110,48 @@ const Pricing = () => {
           </div>
         </section>
 
-        {/* Pricing Cards */}
+        {/* Pricing Cards - Roof Cleaning by Type */}
         <section className="py-16 md:py-20 bg-muted/30">
           <div className="container mx-auto px-4">
+            <div className="text-center mb-10 max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-blue mb-3">
+                Roof Cleaning Pricing
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Roof cleaning is priced by roof material. Pick the card that matches yours.
+              </p>
+            </div>
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              {/* Roof Cleaning Card */}
+              {/* Asphalt / Composite Roof Card */}
               <Card className="border-2 border-brand-orange/50 hover:border-brand-orange transition-all duration-300 hover:shadow-xl relative overflow-hidden">
-                <div className="absolute top-4 right-4">
-                  <Badge className="bg-green-600 text-white border-green-600 font-semibold">
-                    <Star className="w-3 h-3 mr-1 fill-current" />
-                    Best Value
-                  </Badge>
+                {/* Hero Image */}
+                <div className="relative aspect-[16/9] overflow-hidden">
+                  <img
+                    src={asphaltRoofImg}
+                    alt="Asphalt roof before and after moss cleaning"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute top-3 right-3">
+                    <Badge className="bg-green-600 text-white border-green-600 font-semibold shadow-md">
+                      <Star className="w-3 h-3 mr-1 fill-current" />
+                      Best Value
+                    </Badge>
+                  </div>
                 </div>
                 <CardHeader className="text-center pb-4">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-orange/10 rounded-full mb-4 mx-auto">
-                    <Droplet className="w-8 h-8 text-brand-orange" />
-                  </div>
                   <CardTitle className="text-2xl font-bold text-brand-blue">
-                    Roof Cleaning
+                    Asphalt / Composite Roof
                   </CardTitle>
                   <CardDescription className="text-base">
-                    Complete service: moss removal, treatment & gutter cleaning
+                    The standard. Moss removal, treatment & gutter cleaning included.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="text-center py-4 bg-brand-orange/5 rounded-lg">
                     <p className="text-sm text-muted-foreground mb-1">Typical range</p>
                     <p className="text-3xl font-bold text-brand-blue">$499 – $1,200</p>
-                    <p className="text-sm text-muted-foreground mt-1">For most homes · Based on roof size & conditions</p>
+                    <p className="text-sm text-muted-foreground mt-1">For most asphalt roofs · Based on size & conditions</p>
                   </div>
                   
                   <div className="space-y-3">
@@ -178,12 +195,115 @@ const Pricing = () => {
                 </CardContent>
               </Card>
 
-              {/* Gutter Cleaning Card */}
-              <Card className="border-2 hover:border-brand-orange/50 transition-all duration-300 hover:shadow-xl">
-                <CardHeader className="text-center pb-4">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-orange/10 rounded-full mb-4 mx-auto">
-                    <Home className="w-8 h-8 text-brand-orange" />
+              {/* Specialty Roof Cleaning Card (Metal / Tile / Cedar) */}
+              <Card className="border-2 border-brand-navy/30 hover:border-brand-navy transition-all duration-300 hover:shadow-xl relative overflow-hidden">
+                {/* Hero Image */}
+                <div className="relative aspect-[16/9] overflow-hidden">
+                  <img
+                    src={metalRoofImg}
+                    alt="Metal roof before and after cleaning"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute top-3 right-3">
+                    <Badge className="bg-brand-navy text-white border-brand-navy font-semibold shadow-md">
+                      <Sparkles className="w-3 h-3 mr-1" />
+                      Specialty
+                    </Badge>
                   </div>
+                </div>
+                <CardHeader className="text-center pb-4">
+                  <CardTitle className="text-2xl font-bold text-brand-blue">
+                    Specialty Roof Cleaning
+                  </CardTitle>
+                  <CardDescription className="text-base">
+                    Metal · Tile · Cedar Shake
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="text-center py-4 bg-brand-navy/5 rounded-lg">
+                    <p className="text-sm text-muted-foreground mb-1">Starting at</p>
+                    <p className="text-3xl font-bold text-brand-blue">$800+</p>
+                    <p className="text-sm text-muted-foreground mt-1">Often $1,500+ · Custom quote based on your roof</p>
+                  </div>
+
+                  <div className="space-y-3">
+                    <p className="font-semibold text-brand-blue text-sm">Why specialty?</p>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-brand-navy flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-medium text-sm">More time-consuming</p>
+                        <p className="text-xs text-muted-foreground">Each roof type needs a different process</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-brand-navy flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-medium text-sm">More custom</p>
+                        <p className="text-xs text-muted-foreground">Treatment, rinse, and timing varies</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-brand-navy flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-medium text-sm">More difficult</p>
+                        <p className="text-xs text-muted-foreground">Slippery surfaces, careful handling required</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2 pt-4 border-t">
+                    <div className="flex items-center gap-2 text-sm">
+                      <CheckCircle className="w-4 h-4 text-green-600" />
+                      <span>Metal roof cleaning</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm">
+                      <CheckCircle className="w-4 h-4 text-green-600" />
+                      <span>Tile roof cleaning (multi-day treatment)</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm">
+                      <CheckCircle className="w-4 h-4 text-green-600" />
+                      <span>Cedar shake cleaning</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm">
+                      <CheckCircle className="w-4 h-4 text-green-600" />
+                      <span>Licensed & insured</span>
+                    </div>
+                  </div>
+
+                  <Button variant="cta-orange" className="w-full" onClick={navigateToContact}>
+                    Get My Free Quote →
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Cards - Gutter Cleaning */}
+        <section className="py-16 md:py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-10 max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-blue mb-3">
+                Gutter Cleaning Pricing
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Full gutter clean plus roof blow-off, downspouts flushed and tested.
+              </p>
+            </div>
+            <div className="max-w-2xl mx-auto">
+              {/* Gutter Cleaning Card */}
+              <Card className="border-2 hover:border-brand-orange/50 transition-all duration-300 hover:shadow-xl relative overflow-hidden">
+                {/* Hero Image */}
+                <div className="relative aspect-[16/9] overflow-hidden">
+                  <img
+                    src={gutterImg}
+                    alt="Gutter cleaning before and after"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <CardHeader className="text-center pb-4">
                   <CardTitle className="text-2xl font-bold text-brand-blue">
                     Gutter Cleaning
                   </CardTitle>

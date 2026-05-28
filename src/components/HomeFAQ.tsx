@@ -12,7 +12,7 @@ import { generateFAQSchema, injectSchema } from "@/utils/schema";
 const topFAQs = [
   {
     question: "What does roof or gutter cleaning cost?",
-    answer: "Most homes in our area range from $250–$1,200 depending on roof size, pitch, and access. Typical starting prices: Gutter cleaning $250+, Moss treatment with gutter cleaning $499+. We send free quotes within a day or two.",
+    answer: "Most asphalt roofs in our area range from $250–$1,200 depending on size, pitch, and access. Metal, tile, and cedar shake roofs are priced separately and start at $800+. Typical starting prices: Gutter cleaning $250+, Asphalt roof cleaning $499+. We send free quotes within a day or two.",
     icon: CheckCircle,
     cta: true
   },

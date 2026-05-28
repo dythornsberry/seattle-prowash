@@ -1,23 +1,63 @@
 import { useEffect, useRef, useState } from "react";
 import { Star } from "lucide-react";
 
+const FEATURABLE_SCRIPT_SRC = "https://featurable.com/assets/bundle.js";
+const FEATURABLE_WIDGET_ID = "featurable-db846b26-606c-49f2-82ca-c73eb47770bf";
+
 const GoogleReviewsCarousel = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
   const widgetRef = useRef<HTMLDivElement | null>(null);
+  const initializedRef = useRef(false);
   const [widgetLoaded, setWidgetLoaded] = useState(false);
+  const [widgetFailed, setWidgetFailed] = useState(false);
 
   useEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
 
     const loadWidget = () => {
-      if (!document.querySelector('script[src*="featurable.com"]')) {
+      const initializeWidget = () => {
+        const widget = widgetRef.current;
+        if (!widget || initializedRef.current) return;
+
+        if (window.initializeFeaturableWidget) {
+          try {
+            window.initializeFeaturableWidget(widget);
+            initializedRef.current = true;
+          } catch (error) {
+            console.error("Featurable reviews failed to initialize:", error);
+            setWidgetFailed(true);
+          }
+        }
+      };
+
+      if (window.initializeFeaturableWidget) {
+        initializeWidget();
+        return;
+      }
+
+      const existingScript = document.querySelector<HTMLScriptElement>(
+        `script[src="${FEATURABLE_SCRIPT_SRC}"]`
+      );
+
+      if (existingScript) {
+        existingScript.addEventListener("load", initializeWidget, { once: true });
+        existingScript.addEventListener("error", () => setWidgetFailed(true), { once: true });
+      } else {
         const script = document.createElement("script");
-        script.src = "https://featurable.com/assets/bundle.js";
+        script.src = FEATURABLE_SCRIPT_SRC;
         script.defer = true;
         script.charset = "UTF-8";
+        script.addEventListener("load", initializeWidget, { once: true });
+        script.addEventListener("error", () => setWidgetFailed(true), { once: true });
         document.body.appendChild(script);
       }
+
+      window.setTimeout(() => {
+        if (!widgetRef.current?.children.length) {
+          setWidgetFailed(true);
+        }
+      }, 7000);
     };
 
     const observer = new IntersectionObserver(
@@ -88,12 +128,29 @@ const GoogleReviewsCarousel = () => {
         )}
 
         <div className="fade-up max-w-6xl mx-auto">
-          <div
-            ref={widgetRef}
-            id="featurable-db846b26-606c-49f2-82ca-c73eb47770bf"
-            data-featurable-async
-            className="min-h-[340px]"
-          ></div>
+          {widgetFailed && !widgetLoaded ? (
+            <div className="min-h-[220px] flex flex-col items-center justify-center rounded-lg border border-brand-navy/10 bg-white p-8 text-center shadow-sm">
+              <p className="text-lg font-semibold text-brand-navy mb-2">
+                Our Google reviews are temporarily unavailable here.
+              </p>
+              <p className="text-muted-foreground mb-5">
+                Seattle ProWash is rated 5.0 stars by 200+ local customers.
+              </p>
+              <a
+                href="/reviews"
+                className="inline-flex items-center justify-center rounded-md bg-brand-orange px-5 py-3 font-semibold text-white transition-colors hover:bg-brand-orange/90"
+              >
+                Read customer reviews
+              </a>
+            </div>
+          ) : (
+            <div
+              ref={widgetRef}
+              id={FEATURABLE_WIDGET_ID}
+              data-featurable-async
+              className="min-h-[340px]"
+            ></div>
+          )}
         </div>
       </div>
     </section>

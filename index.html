@@ -34,7 +34,8 @@
     <!-- Performance optimizations -->
     <link rel="preload" href="/src/assets/hero-roof-cleaning.jpg" as="image" type="image/jpeg" fetchpriority="high" />
     <link rel="dns-prefetch" href="https://hooks.zapier.com" />
-    <link rel="dns-prefetch" href="https://cdn.trustindex.io" />
+    <link rel="dns-prefetch" href="https://featurable.com" />
+    <link rel="dns-prefetch" href="https://api.featurable.com" />
     <link rel="dns-prefetch" href="https://maps.googleapis.com" />
     
     <meta property="og:title" content="Roof & Gutter Cleaning in Seattle | Seattle ProWash" />
@@ -307,21 +308,5 @@
     
     <!-- GA4 loaded via src/utils/ga4.ts (Vite env vars only work in JS) -->
 
-    <!-- Trustindex - Match current live behavior -->
-    <script>
-      var trustindexLoaded = false;
-      function loadTrustindex() {
-        if (trustindexLoaded) return;
-        trustindexLoaded = true;
-        var script = document.createElement('script');
-        script.defer = true;
-        script.src = 'https://cdn.trustindex.io/loader.js?1419e0a5167285708366323f27c';
-        document.head.appendChild(script);
-      }
-
-      window.addEventListener('scroll', loadTrustindex, { once: true });
-      setTimeout(loadTrustindex, 3000);
-    </script>
-    
   </body>
 </html>
