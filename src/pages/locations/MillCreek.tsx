@@ -74,7 +74,7 @@ const MillCreek = () => {
     },
     {
       question: "How quickly can you schedule service?",
-      answer: "We typically provide quotes within 24 hours and can schedule service in Mill Creek within 5-7 days, weather permitting. Emergency services may be available for urgent situations."
+      answer: "We service Mill Creek year-round. Submit a quote request and we'll be in touch shortly. Scheduling depends on weather and current demand. We'll work with you to find a time that fits."
     }
   ];
 

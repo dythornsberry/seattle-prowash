@@ -74,7 +74,7 @@ const Lynnwood = () => {
     },
     {
       question: "What's your response time in Lynnwood?",
-      answer: "We typically provide quotes within 24 hours and can schedule service within a week, depending on weather conditions and current demand in the Lynnwood area."
+      answer: "We service Lynnwood year-round. Submit a quote request and we'll be in touch shortly. Scheduling depends on weather and current demand. We'll work with you to find a time that fits."
     }
   ];
 

@@ -74,7 +74,7 @@ const Edmonds = () => {
     },
     {
       question: "What's your availability in the Edmonds area?",
-      answer: "We service Edmonds year-round and can typically schedule your cleaning within 5-7 days. We provide quotes within 24 hours and work around your schedule."
+      answer: "We service Edmonds year-round. Submit a quote request and we'll be in touch shortly. Scheduling depends on weather and current demand. We'll work with you to find a time that fits."
     }
   ];
 
