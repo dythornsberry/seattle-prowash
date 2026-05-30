@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ShieldCheck, Star, Award } from "lucide-react";
 import { Link } from "react-router-dom";
-import dylanOwnerPhoto from "@/assets/dylan-owner-patio-pressure-washing.jpg";
+import dylanOwnerPhoto from "@/assets/dylan-owner-truck.jpg";
 
 const AboutPreview = () => {
   return (
@@ -18,10 +18,10 @@ const AboutPreview = () => {
               <div className="absolute inset-0 bg-gradient-to-tr from-brand-navy/70 to-transparent z-10"></div>
               <img
                 src={dylanOwnerPhoto}
-                alt="Dylan Thornsberry, Seattle ProWash Owner, performing pressure washing in Kenmore WA"
+                alt="Dylan Thornsberry, owner of Seattle ProWash, standing in front of the company truck in Kenmore WA"
                 className="w-full h-full object-cover"
-                width={800}
-                height={1000}
+                width={1600}
+                height={1200}
                 loading="lazy"
               />
 
