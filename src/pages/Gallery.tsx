@@ -33,6 +33,11 @@ import patioPressureWashingBefore1 from "@/assets/recent-patio-pressure-washing-
 import patioPressureWashingAfter1 from "@/assets/recent-patio-pressure-washing-after-1-2026.webp";
 import patioPressureWashingBefore2 from "@/assets/recent-patio-pressure-washing-before-2-2026.webp";
 import patioPressureWashingAfter2 from "@/assets/recent-patio-pressure-washing-after-2-2026.webp";
+import dylanLeafBlower from "@/assets/dylan-leaf-blower.jpg";
+import dylanPressureWashingAction from "@/assets/dylan-pressure-washing-action.jpg";
+import dylanOnLadder from "@/assets/dylan-on-ladder.jpg";
+import dylanRooftopSelfie from "@/assets/dylan-rooftop-selfie.jpg";
+import dylanPumpSprayer from "@/assets/dylan-pump-sprayer.jpg";
 
 const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -342,11 +347,51 @@ const Gallery = () => {
       }
     ],
     "Team at Work": [
-      { 
-        src: prowashTruck, 
-        alt: "Seattle ProWash professional equipment truck", 
-        title: "Professional Equipment", 
-        location: "Seattle Area", 
+      {
+        src: dylanPumpSprayer,
+        alt: "Dylan Thornsberry, Seattle ProWash owner, treating a property with a pump sprayer",
+        title: "Dylan on a job",
+        location: "Greater Seattle",
+        description: "Owner-operator Dylan Thornsberry treating a property with a backpack pump sprayer.",
+        service: "Owner"
+      },
+      {
+        src: dylanLeafBlower,
+        alt: "Dylan blowing roof debris off a residential roof",
+        title: "Roof debris blow-off",
+        location: "Greater Seattle",
+        description: "Clearing organic debris off a roof before treatment. Always included with a roof clean.",
+        service: "Owner"
+      },
+      {
+        src: dylanPressureWashingAction,
+        alt: "Dylan setting up pressure washing equipment on a residential job",
+        title: "Equipment setup on site",
+        location: "Greater Seattle",
+        description: "Pressure washing setup ready to go at a residential property.",
+        service: "Owner"
+      },
+      {
+        src: dylanOnLadder,
+        alt: "Dylan climbing a ladder to access a residential roof",
+        title: "Going up to clean a roof",
+        location: "Greater Seattle",
+        description: "Heading up to inspect and clean a residential roof.",
+        service: "Owner"
+      },
+      {
+        src: dylanRooftopSelfie,
+        alt: "Dylan working on top of a residential roof",
+        title: "On the roof",
+        location: "Greater Seattle",
+        description: "On the roof getting the job done. We harness up and work safely on every roof.",
+        service: "Owner"
+      },
+      {
+        src: prowashTruck,
+        alt: "Seattle ProWash professional equipment truck",
+        title: "Professional Equipment",
+        location: "Seattle Area",
         description: "Seattle ProWash professional equipment and truck",
         service: "Equipment"
       },
