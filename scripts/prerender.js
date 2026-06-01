@@ -21,7 +21,7 @@ const routes = [
   {
     path: '/',
     title: 'Seattle Roof & Gutter Cleaning Experts',
-    description: 'Expert roof cleaning and gutter cleaning in Seattle, Kenmore, Bothell, Kirkland & Shoreline. 12-month moss-free guarantee. Licensed & insured. Free quotes.',
+    description: 'Expert roof cleaning and gutter cleaning in Seattle, Kenmore, Bothell, Kirkland & Shoreline. 12-month moss-free guarantee. Licensed & insured. Free estimates.',
   },
   {
     path: '/services',
@@ -31,12 +31,12 @@ const routes = [
   {
     path: '/roof-cleaning',
     title: 'Roof Cleaning & Moss Removal in Seattle, WA',
-    description: 'Expert roof cleaning and moss removal in Seattle. Eco-friendly soft wash that extends roof life. 12-month guarantee. Licensed & insured. Free quotes.',
+    description: 'Expert roof cleaning and moss removal in Seattle. Eco-friendly soft wash that extends roof life. 12-month guarantee. Licensed & insured. Free estimates.',
   },
   {
     path: '/gutter-cleaning',
     title: 'Gutter Cleaning in Seattle & Kenmore, WA',
-    description: 'Expert gutter cleaning in Seattle, Kenmore, Bothell & Kirkland. Prevent water damage and protect your foundation. Licensed & insured. Free quotes.',
+    description: 'Expert gutter cleaning in Seattle, Kenmore, Bothell & Kirkland. Prevent water damage and protect your foundation. Licensed & insured. Free estimates.',
   },
   {
     path: '/moss-treatment',
@@ -46,12 +46,12 @@ const routes = [
   {
     path: '/pressure-washing',
     title: 'Pressure Washing in Seattle & Kenmore, WA',
-    description: 'Professional pressure washing for driveways, patios, decks, and siding in Seattle, Kenmore, Bothell, and surrounding areas. Free quotes, licensed and insured.',
+    description: 'Professional pressure washing for driveways, patios, decks, and siding in Seattle, Kenmore, Bothell, and surrounding areas. Free estimates, licensed and insured.',
   },
   {
     path: '/window-cleaning',
     title: 'Window Cleaning in Seattle & Kenmore, WA',
-    description: 'Professional exterior window cleaning in Seattle, Kenmore & Bothell. Streak-free results with safe techniques. Free quotes. Licensed & insured.',
+    description: 'Professional exterior window cleaning in Seattle, Kenmore & Bothell. Streak-free results with safe techniques. Free estimates. Licensed & insured.',
   },
   {
     path: '/commercial',
@@ -61,7 +61,7 @@ const routes = [
   {
     path: '/pricing',
     title: 'Pricing | Roof, Gutter & Pressure Washing',
-    description: 'Transparent pricing for roof cleaning, gutter cleaning, pressure washing, and window cleaning in Seattle. No hidden fees. Free quotes.',
+    description: 'Transparent pricing for roof cleaning, gutter cleaning, pressure washing, and window cleaning in Seattle. No hidden fees. Free estimates.',
   },
   {
     path: '/about',
@@ -132,12 +132,12 @@ const routes = [
   {
     path: '/shoreline-roof-gutter-cleaning',
     title: 'Roof & Gutter Cleaning Shoreline WA',
-    description: 'Professional roof cleaning, moss removal & gutter cleaning in Shoreline. Expert roof and gutter services with 5-star reviews. Free quotes. Call (206) 752-6690',
+    description: 'Professional roof cleaning, moss removal & gutter cleaning in Shoreline. Expert roof and gutter services with 5-star reviews. Free estimates. Call (206) 752-6690',
   },
   {
     path: '/lynnwood-roof-gutter-cleaning',
     title: 'Roof & Gutter Cleaning Lynnwood WA',
-    description: 'Professional roof cleaning, moss removal & gutter cleaning in Lynnwood. Expert exterior cleaning services with 5-star reviews. Free quotes. Call (206) 752-6690',
+    description: 'Professional roof cleaning, moss removal & gutter cleaning in Lynnwood. Expert exterior cleaning services with 5-star reviews. Free estimates. Call (206) 752-6690',
   },
   {
     path: '/woodinville-roof-gutter-cleaning',
@@ -147,22 +147,22 @@ const routes = [
   {
     path: '/bellevue-roof-gutter-cleaning',
     title: 'Roof & Gutter Cleaning in Bellevue, WA',
-    description: 'Expert roof cleaning, gutter cleaning, and moss removal in Bellevue, WA. Serving all Bellevue neighborhoods. 12-month moss-free guarantee. Licensed & insured. Same-day quotes.',
+    description: 'Expert roof cleaning, gutter cleaning, and moss removal in Bellevue, WA. Serving all Bellevue neighborhoods. 12-month moss-free guarantee. Licensed & insured. Free estimates.',
   },
   {
     path: '/edmonds-roof-gutter-cleaning',
     title: 'Roof Cleaning & Gutter Cleaning Edmonds WA',
-    description: 'Professional roof cleaning, moss removal & gutter cleaning in Edmonds. Expert exterior cleaning services with 5-star reviews. Free quotes. Call (206) 752-6690',
+    description: 'Professional roof cleaning, moss removal & gutter cleaning in Edmonds. Expert exterior cleaning services with 5-star reviews. Free estimates. Call (206) 752-6690',
   },
   {
     path: '/mill-creek-roof-gutter-cleaning',
     title: 'Roof Cleaning & Gutter Cleaning Mill Creek WA',
-    description: 'Professional roof cleaning, moss removal & gutter cleaning in Mill Creek. Expert exterior cleaning services with 5-star reviews. Free quotes. Call (206) 752-6690',
+    description: 'Professional roof cleaning, moss removal & gutter cleaning in Mill Creek. Expert exterior cleaning services with 5-star reviews. Free estimates. Call (206) 752-6690',
   },
   {
     path: '/mountlake-terrace-roof-gutter-cleaning',
     title: 'Roof Cleaning & Gutter Cleaning Mountlake Terrace WA',
-    description: 'Professional roof cleaning, moss removal & gutter cleaning in Mountlake Terrace. Expert exterior cleaning services with 5-star reviews. Free quotes. Call (206) 752-6690',
+    description: 'Professional roof cleaning, moss removal & gutter cleaning in Mountlake Terrace. Expert exterior cleaning services with 5-star reviews. Free estimates. Call (206) 752-6690',
   },
   {
     path: '/redmond-roof-gutter-cleaning',
