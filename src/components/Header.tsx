@@ -54,14 +54,14 @@ const Header = () => {
           {/* Brand Text */}
           <div className="flex items-center">
             <Link to="/">
-              <span className="text-xl md:text-2xl font-bold text-white hover:text-brand-orange transition-colors duration-250 cursor-pointer">
+              <span className="whitespace-nowrap text-xl md:text-2xl font-bold text-white hover:text-brand-orange transition-colors duration-250 cursor-pointer">
                 Seattle <span className="text-brand-orange">ProWash</span>
               </span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-5 xl:space-x-8">
             {navigation.map((item) => (
               item.onClick ? (
                 <button
@@ -104,10 +104,10 @@ const Header = () => {
           </nav>
 
           {/* Desktop CTAs */}
-          <div className="hidden md:flex items-center space-x-3">
+          <div className="hidden lg:flex items-center space-x-3">
             <button
               onClick={handleCallClick}
-              className="flex items-center gap-2 bg-brand-orange/15 hover:bg-brand-orange/25 text-brand-orange font-bold text-xl px-4 py-2 rounded-lg transition-all duration-250 active:scale-95 border border-brand-orange/30"
+              className="flex items-center gap-2 whitespace-nowrap bg-brand-orange/15 hover:bg-brand-orange/25 text-brand-orange font-bold text-base xl:text-xl px-3 xl:px-4 py-2 rounded-lg transition-all duration-250 active:scale-95 border border-brand-orange/30"
             >
               <Phone className="w-5 h-5" />
               {phoneNumber}
@@ -123,7 +123,7 @@ const Header = () => {
           </div>
 
           {/* Mobile Controls */}
-          <div className="md:hidden flex items-center space-x-2">
+          <div className="lg:hidden flex items-center space-x-2">
             <Button 
               variant="prowash-phone" 
               size="sm"
@@ -148,7 +148,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-brand-orange/20 bg-brand-navy/98">
+          <div className="lg:hidden border-t border-brand-orange/20 bg-brand-navy/98">
             <nav className="py-4 space-y-2">
               {navigation.map((item) => (
                 item.onClick ? (
