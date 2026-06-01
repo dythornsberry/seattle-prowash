@@ -66,7 +66,27 @@ const MossTreatment = () => {
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <span className="bg-white/10 px-4 py-2 rounded-full">12-Month Moss-Free Guarantee</span>
                   <span className="bg-white/10 px-4 py-2 rounded-full">Licensed & Insured</span>
-                  <span className="bg-white/10 px-4 py-2 rounded-full">Free Quotes</span>
+                  <span className="bg-white/10 px-4 py-2 rounded-full">Free Estimates</span>
+                </div>
+                <p className="text-white/80 text-base md:text-lg mt-6 max-w-2xl mx-auto">
+                  Fill out the form and Dylan will call or text to schedule your appointment.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                  <Button
+                    variant="cta-orange"
+                    size="xl"
+                    className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold"
+                    onClick={navigateToContact}
+                  >
+                    Request Moss Inspection & Estimate
+                  </Button>
+                  <Button
+                    variant="prowash-outline"
+                    size="xl"
+                    onClick={() => window.location.href = 'tel:206-752-6690'}
+                  >
+                    Call 206-752-6690
+                  </Button>
                 </div>
               </div>
             </div>
@@ -228,7 +248,7 @@ const MossTreatment = () => {
                   Ready to Protect Your Roof from Moss?
                 </h2>
                 <p className="text-lg text-gray-600 mb-8">
-                  Don't let moss damage your biggest investment. Get your free estimate today and discover why homeowners in Kenmore, Bothell, and Kirkland trust Seattle ProWash for their moss treatment needs.
+                  Don't let moss damage your biggest investment. Request a free moss inspection and estimate so Dylan can recommend the right next step for your roof.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button 
@@ -237,7 +257,7 @@ const MossTreatment = () => {
                     className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold"
                     onClick={navigateToContact}
                   >
-                    GET YOUR FREE QUOTE TODAY
+                    REQUEST MOSS INSPECTION & ESTIMATE
                   </Button>
                   <Button 
                     variant="outline"
@@ -248,7 +268,7 @@ const MossTreatment = () => {
                   </Button>
                 </div>
                 <p className="text-sm text-gray-500 mt-4">
-                  Free quotes • Licensed & Insured • 200+ 5-star reviews
+                  Free estimates • Licensed & Insured • 200+ 5-star reviews
                 </p>
               </div>
             </div>

@@ -74,7 +74,7 @@ const additionalFaqs = [
   {
     icon: Clock,
     question: "How do estimates and scheduling work?",
-    answer: "• Free estimates provided\n\n• Roof cleaning - requires on-site assessment or photos\n\n• Gutter cleaning - often quoted remotely by phone\n\n• Services usually scheduled within 1-2 weeks",
+    answer: "• Start with the short estimate form\n\n• Dylan calls or texts to schedule your estimate\n\n• We look at the property and answer questions\n\n• You get clear pricing and can decide whether to book\n\n• Scheduling depends on weather and current demand",
     category: "Process"
   },
   {
@@ -240,7 +240,7 @@ const FAQ = () => {
                   size="xl"
                   onClick={navigateToContact}
                 >
-                  Get My Free Quote
+                  Request Estimate
                 </Button>
                 <Button 
                   variant="prowash-phone" 

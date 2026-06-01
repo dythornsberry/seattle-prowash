@@ -101,7 +101,7 @@ const GutterCleaning = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="Professional Gutter Cleaning Services"
-        description="Expert gutter cleaning in Seattle, Kenmore, Bothell & Kirkland. Prevent water damage and protect your foundation. Licensed & insured. Free quotes."
+        description="Expert gutter cleaning in Seattle, Kenmore, Bothell & Kirkland. Prevent water damage and protect your foundation. Licensed & insured. Free estimates."
         url="https://www.seattleprowash.com/gutter-cleaning"
         image={gutterCleaningImage}
       />
@@ -112,7 +112,7 @@ const GutterCleaning = () => {
         <section className="section-spacing bg-gradient-to-b from-brand-navy to-brand-navy/90">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="fade-up">
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
                     Gutter Cleaning: Clog-Free and Flowing
@@ -120,12 +120,12 @@ const GutterCleaning = () => {
                   
                   {/* Mini Trust Line */}
                   <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
-                    5.0★ from 200+ neighbors • Licensed & Insured • Free Quotes
+                    5.0★ from 200+ neighbors • Licensed & Insured • Free Estimates
                   </p>
 
                   {/* 1-2-3 Process */}
                   <ul className="flex flex-wrap gap-2 md:gap-4 text-white/90 mb-8 text-sm md:text-base">
-                    <li><strong className="text-brand-orange">1)</strong> Request a Quote</li>
+                    <li><strong className="text-brand-orange">1)</strong> Request an Estimate</li>
                     <li><strong className="text-brand-orange">2)</strong> Schedule</li>
                     <li><strong className="text-brand-orange">3)</strong> Relax while we work, before/after photos provided</li>
                   </ul>
@@ -136,7 +136,7 @@ const GutterCleaning = () => {
                       size="xl"
                       onClick={navigateToContact}
                     >
-                      Get My Free Quote →
+                      Request Estimate →
                     </Button>
                     <Button 
                       variant="prowash-outline"
@@ -149,7 +149,7 @@ const GutterCleaning = () => {
                   
                   {/* Trust Indicators */}
                   <p className="text-white/80 text-sm">
-                    ✓ 12-Month Guarantee  ✓ Free Quotes  ✓ 200+ Reviews
+                    ✓ 12-Month Guarantee  ✓ Free Estimates  ✓ 200+ Reviews
                   </p>
                 </div>
                 <div className="fade-up">
@@ -171,7 +171,7 @@ const GutterCleaning = () => {
         <section className="section-spacing bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="fade-up">
                   <img
                     src={gutterCleaningImage}
@@ -207,7 +207,7 @@ const GutterCleaning = () => {
                   </ul>
                   <div className="mt-8">
                     <Button variant="cta-orange" size="lg" onClick={navigateToContact}>
-                      Get My Free Gutter Cleaning Quote →
+                      Request Gutter Cleaning Estimate →
                     </Button>
                   </div>
                 </div>
@@ -220,7 +220,7 @@ const GutterCleaning = () => {
         <section className="section-spacing bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="fade-up">
                   <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-2">
                     Gutter Brightening
@@ -382,7 +382,7 @@ const GutterCleaning = () => {
                 Ready for Clean Gutters?
               </h2>
               <p className="text-xl text-white/90 mb-8">
-                Get your free quote today. Professional gutter cleaning with clear results.
+                Request a free estimate today. Professional gutter cleaning with clear results.
               </p>
               <div className="flex justify-center gap-4 mb-6">
                 <Button 
@@ -390,7 +390,7 @@ const GutterCleaning = () => {
                   size="xl"
                   onClick={navigateToContact}
                 >
-                  Get a Fast Quote
+                  Request Estimate
                 </Button>
               </div>
             </div>

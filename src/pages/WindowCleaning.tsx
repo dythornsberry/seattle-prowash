@@ -70,7 +70,7 @@ const WindowCleaning = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Exterior Window Cleaning"
-        description="Professional exterior window cleaning in Seattle, Kenmore & Bothell. Streak-free results with safe techniques. Free quotes. Licensed & insured."
+        description="Professional exterior window cleaning in Seattle, Kenmore & Bothell. Streak-free results with safe techniques. Free estimates. Licensed & insured."
         url="https://www.seattleprowash.com/window-cleaning"
       />
       <Header />
@@ -79,27 +79,27 @@ const WindowCleaning = () => {
         {/* Hero */}
         <section className="section-spacing bg-gradient-to-b from-brand-navy to-brand-navy/90">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="fade-up">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
                   Crystal Clear Windows, Every Time
                 </h1>
                 <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
-                  5.0★ from 200+ neighbors · Licensed & Insured · Free Quotes
+                  5.0★ from 200+ neighbors · Licensed & Insured · Free Estimates
                 </p>
                 <p className="text-white/80 mb-8 leading-relaxed">
                   Seattle rain, pollen, and hard water take a toll on your windows. We handle the exterior cleaning so you can enjoy the view again. Safe, streak-free results on every pane.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-6">
                   <Button variant="cta-orange" size="xl" onClick={navigateToContact}>
-                    Get My Free Quote →
+                    Request Estimate →
                   </Button>
                   <Button variant="prowash-outline" size="xl" onClick={() => window.location.href = "tel:2067526690"}>
                     Call 206-752-6690
                   </Button>
                 </div>
                 <p className="text-white/80 text-sm">
-                  ✓ Streak-Free Guarantee  ✓ Free Quotes  ✓ 200+ Reviews
+                  ✓ Streak-Free Guarantee  ✓ Free Estimates  ✓ 200+ Reviews
                 </p>
               </div>
               <div className="fade-up">
@@ -191,10 +191,10 @@ const WindowCleaning = () => {
                 Ready for Spotless Windows?
               </h2>
               <p className="text-xl text-white/90 mb-8">
-                Get your free window cleaning quote today. We will be in touch shortly.
+                Request a free window cleaning estimate. Dylan will call or text to learn about the windows, access, and scope.
               </p>
               <Button variant="prowash-secondary" size="xl" onClick={navigateToContact}>
-                Get a Fast Quote
+                Request Estimate
               </Button>
             </div>
           </div>

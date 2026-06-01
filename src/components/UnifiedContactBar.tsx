@@ -26,7 +26,7 @@ const UnifiedContactBar = () => {
         {isExpanded ? (
           <div className="bg-white border border-border rounded-2xl shadow-2xl p-4 space-y-2 animate-fade-in">
             <div className="flex items-center justify-between mb-3">
-              <span className="text-sm font-semibold text-foreground">Get a Free Quote</span>
+              <span className="text-sm font-semibold text-foreground">Request an Estimate</span>
               <button
                 onClick={() => setIsExpanded(false)}
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -59,7 +59,7 @@ const UnifiedContactBar = () => {
               className="w-full justify-start gap-2"
             >
               <FileText className="w-4 h-4" />
-              Get a Fast Quote
+              Request Estimate
             </Button>
           </div>
         ) : (
@@ -68,7 +68,7 @@ const UnifiedContactBar = () => {
             onClick={handleQuote}
             className="shadow-2xl rounded-full px-6 py-6 text-base font-semibold"
           >
-            Get a Free Quote
+            Request Estimate
           </Button>
         )}
       </div>
@@ -78,7 +78,7 @@ const UnifiedContactBar = () => {
         {isExpanded ? (
           <div className="p-4 space-y-2 animate-fade-in">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-semibold text-foreground">Get a Free Quote</span>
+              <span className="text-sm font-semibold text-foreground">Request an Estimate</span>
               <button
                 onClick={() => setIsExpanded(false)}
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -111,7 +111,7 @@ const UnifiedContactBar = () => {
               className="w-full justify-start gap-2"
             >
               <FileText className="w-4 h-4" />
-              Get a Fast Quote
+              Request Estimate
             </Button>
           </div>
         ) : (
@@ -121,7 +121,7 @@ const UnifiedContactBar = () => {
               onClick={() => setIsExpanded(true)}
               className="w-full font-semibold"
             >
-              Get a Free Quote
+              Request Estimate
             </Button>
           </div>
         )}

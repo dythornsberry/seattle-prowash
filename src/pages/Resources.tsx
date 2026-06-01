@@ -176,7 +176,7 @@ const Resources = () => {
                     className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold"
                     onClick={navigateToContact}
                   >
-                    GET YOUR FREE QUOTE TODAY
+                    REQUEST ESTIMATE
                   </Button>
                   <Button 
                     variant="outline"

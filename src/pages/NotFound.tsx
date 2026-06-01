@@ -41,7 +41,7 @@ const NotFound = () => {
               size="xl"
               onClick={navigateToContact}
             >
-              Get My Free Quote →
+              Request Estimate →
             </Button>
             <Button
               variant="prowash-outline"

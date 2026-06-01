@@ -12,13 +12,13 @@ import { generateFAQSchema, injectSchema } from "@/utils/schema";
 const topFAQs = [
   {
     question: "What does roof or gutter cleaning cost?",
-    answer: "Most asphalt roofs in our area range from $250–$1,200 depending on size, pitch, and access. Metal, tile, and cedar shake roofs are priced separately and start at $800+. Typical starting prices: Gutter cleaning $250+, Asphalt roof cleaning $499+. We send free quotes within a day or two.",
+    answer: "Most asphalt roofs in our area range from $250-$1,200 depending on size, pitch, moss level, and access. Metal, tile, and cedar shake roofs are priced separately and often start at $800+. Typical starting prices: gutter cleaning $250+, asphalt roof cleaning $499+. Dylan will call or text after you submit the form so we can understand the job before giving a final estimate.",
     icon: CheckCircle,
     cta: true
   },
   {
     question: "How soon can you schedule my service?",
-    answer: "Most quotes within a day or two; we usually schedule within 3–7 days (weather dependent). Urgent roof/gutter issues get priority.",
+    answer: "After you request an estimate, Dylan will call or text to schedule it. We'll look at the property, answer questions, and give clear pricing. Scheduling depends on weather and current demand.",
     icon: Clock,
     cta: true
   },
@@ -35,8 +35,8 @@ const topFAQs = [
     cta: true
   },
   {
-    question: "How do I get a quote?",
-    answer: "60-second form: name, address, phone, service needed. We look up your roof and text a firm price.",
+    question: "How do I get an estimate?",
+    answer: "Start with the short form. Dylan will call or text to schedule your estimate. After the estimate, you'll get clear pricing and can decide whether to book.",
     icon: CheckCircle,
     cta: true
   },
@@ -105,7 +105,7 @@ const HomeFAQ = () => {
                           }
                         }}
                       >
-                        Get My Free Quote <ArrowRight className="ml-1 w-4 h-4" />
+                        Request Estimate <ArrowRight className="ml-1 w-4 h-4" />
                       </a>
                     )}
                   </AccordionContent>

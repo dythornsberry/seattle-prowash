@@ -65,8 +65,11 @@ const HeroQuickForm = () => {
       onSubmit={handleSubmit}
       className="w-full max-w-xl mx-auto bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-4 md:p-5 animate-fade-in"
     >
-      <p className="text-brand-navy text-sm md:text-base font-semibold text-center mb-3">
-        Get your free quote
+      <p className="text-brand-navy text-base md:text-lg font-semibold text-center">
+        Request a free estimate
+      </p>
+      <p className="text-xs md:text-sm text-brand-navy/70 text-center mt-1 mb-3 leading-relaxed">
+        Dylan will call or text to schedule your estimate.
       </p>
       <div className="flex flex-col sm:flex-row gap-2">
         <input
@@ -95,7 +98,7 @@ const HeroQuickForm = () => {
           variant="cta-orange"
           className="sm:w-auto whitespace-nowrap font-semibold text-base px-5 py-3"
         >
-          Next <ArrowRight className="w-4 h-4 ml-1" />
+          Start <ArrowRight className="w-4 h-4 ml-1" />
         </Button>
       </div>
       {error && (
@@ -104,7 +107,7 @@ const HeroQuickForm = () => {
         </p>
       )}
       <p className="text-xs text-brand-navy/60 text-center mt-2">
-        No spam. We'll be in touch shortly.
+        No spam. No pressure.
       </p>
     </form>
   );

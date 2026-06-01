@@ -36,6 +36,7 @@ const TwoStepQuoteForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [step, setStep] = useState(1);
+  const [addressValue, setAddressValue] = useState("");
   const EDGE_FUNCTION_NAME = "submit-quote";
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -54,9 +55,26 @@ const TwoStepQuoteForm = () => {
   const addressInputRef = useRef<HTMLInputElement | null>(null);
   const autocompleteRef = useRef<google.maps.places.Autocomplete | null>(null);
   const addressFromPlacesRef = useRef(false); // Track if address was selected from autocomplete
+  const selectedPlacesAddressRef = useRef("");
+  const placesUnavailableRef = useRef(false);
   const mapsScriptPromiseRef = useRef<Promise<void> | null>(null);
+  const submittingRef = useRef(false);
+
+  const restoreManualAddressInput = useCallback(() => {
+    placesUnavailableRef.current = true;
+    autocompleteRef.current = null;
+
+    const input = addressInputRef.current;
+    if (!input) return;
+
+    input.disabled = false;
+    input.readOnly = false;
+    input.placeholder = "Start typing your address...";
+    input.value = form.getValues("address") || addressValue;
+  }, [addressValue, form]);
 
   const initAutocomplete = useCallback(() => {
+    if (placesUnavailableRef.current) return;
     if (!addressInputRef.current || autocompleteRef.current) return;
     if (typeof google === 'undefined' || !google?.maps?.places) return;
 
@@ -68,16 +86,33 @@ const TwoStepQuoteForm = () => {
 
     autocomplete.addListener('place_changed', () => {
       const place = autocomplete.getPlace();
-      if (place?.formatted_address) {
-        form.setValue('address', place.formatted_address, { shouldValidate: true });
-        addressFromPlacesRef.current = true;
+      const selectedAddress = place?.formatted_address || addressInputRef.current?.value || "";
+
+      if (selectedAddress) {
+        setAddressValue(selectedAddress);
+        form.setValue('address', selectedAddress, {
+          shouldDirty: true,
+          shouldTouch: true,
+          shouldValidate: true,
+        });
+        addressFromPlacesRef.current = Boolean(place?.formatted_address);
+        selectedPlacesAddressRef.current = place?.formatted_address || "";
       }
     });
 
     autocompleteRef.current = autocomplete;
-  }, [form]);
+
+    window.setTimeout(() => {
+      const input = addressInputRef.current;
+      if (input?.disabled || input?.placeholder === "Oops! Something went wrong.") {
+        restoreManualAddressInput();
+      }
+    }, 500);
+  }, [form, restoreManualAddressInput]);
 
   const ensureGooglePlacesLoaded = useCallback(async () => {
+    if (placesUnavailableRef.current) return;
+
     const MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
     if (!MAPS_API_KEY) return;
 
@@ -88,6 +123,13 @@ const TwoStepQuoteForm = () => {
 
     if (!mapsScriptPromiseRef.current) {
       mapsScriptPromiseRef.current = new Promise((resolve, reject) => {
+        const mapsWindow = window as typeof window & { gm_authFailure?: () => void };
+        const previousAuthFailure = mapsWindow.gm_authFailure;
+        mapsWindow.gm_authFailure = () => {
+          previousAuthFailure?.();
+          restoreManualAddressInput();
+        };
+
         const existingScript = document.querySelector<HTMLScriptElement>(
           'script[data-google-places="true"]'
         );
@@ -112,7 +154,10 @@ const TwoStepQuoteForm = () => {
           script.dataset.loaded = "true";
           resolve();
         };
-        script.onerror = () => reject(new Error("Failed to load Google Places"));
+        script.onerror = () => {
+          restoreManualAddressInput();
+          reject(new Error("Failed to load Google Places"));
+        };
         document.head.appendChild(script);
       });
     }
@@ -122,8 +167,9 @@ const TwoStepQuoteForm = () => {
       initAutocomplete();
     } catch (error) {
       console.error("Google Places failed to load:", error);
+      restoreManualAddressInput();
     }
-  }, [initAutocomplete]);
+  }, [initAutocomplete, restoreManualAddressInput]);
 
   useEffect(() => {
     if (step === 2 && !autocompleteRef.current) {
@@ -166,7 +212,7 @@ const TwoStepQuoteForm = () => {
     address: values.address,
     phone: values.phone,
     services: values.services.join(", "),
-    address_verified: addressFromPlacesRef.current,
+    address_verified: addressFromPlacesRef.current && values.address === selectedPlacesAddressRef.current,
     timestamp: new Date().toISOString(),
     source: "Website Quote Form",
     business_name: "Seattle ProWash",
@@ -194,6 +240,8 @@ const TwoStepQuoteForm = () => {
       return;
     }
 
+    if (submittingRef.current) return;
+    submittingRef.current = true;
     setIsSubmitting(true);
 
     try {
@@ -210,7 +258,9 @@ const TwoStepQuoteForm = () => {
       setIsSubmitted(true);
       setStep(1);
       form.reset();
+      setAddressValue("");
       addressFromPlacesRef.current = false;
+      selectedPlacesAddressRef.current = "";
       sessionStorage.removeItem("prowash_lead_step1");
 
     } catch (error) {
@@ -221,6 +271,7 @@ const TwoStepQuoteForm = () => {
         variant: "destructive",
       });
     } finally {
+      submittingRef.current = false;
       setIsSubmitting(false);
     }
   };
@@ -269,20 +320,49 @@ const TwoStepQuoteForm = () => {
     }
   };
 
+  const nextSteps = [
+    "Submit the form",
+    "Dylan calls or texts you back",
+    "Schedule your appointment, usually within a day or two",
+  ];
+
   return (
     <section id="contact" className="section-spacing bg-off-white/50 scroll-mt-20">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-8 fade-up">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy mb-4 font-heading">
-              Request Your Free Quote
+              Request a Free Estimate
             </h2>
+            <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mb-3">
+              Tell us what you need. Dylan will call or text to schedule your estimate.
+            </p>
             <p className="text-sm text-muted-foreground">
               Prefer to call? <a href="tel:12067526690" className="hover:text-brand-orange transition-colors" onClick={handleCallClick}>206-752-6690</a> (call or text anytime)
             </p>
           </div>
 
-          <div className="max-w-2xl mx-auto fade-up">
+          <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-6 lg:gap-8 items-start fade-up">
+            <div className="min-w-0 bg-white border border-brand-navy/10 rounded-lg shadow-sm p-5 md:p-6">
+              <h3 className="text-xl md:text-2xl font-bold text-brand-navy mb-4 font-heading">
+                What happens next?
+              </h3>
+              <ol className="space-y-3">
+                {nextSteps.map((stepText, index) => (
+                  <li key={stepText} className="flex gap-3 text-sm md:text-base text-brand-navy/80 leading-relaxed">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-orange text-white text-sm font-bold">
+                      {index + 1}
+                    </span>
+                    <span>{stepText}</span>
+                  </li>
+                ))}
+              </ol>
+              <p className="mt-5 border-t border-brand-navy/10 pt-4 text-sm text-brand-navy/70 leading-relaxed">
+                After the estimate, you get clear pricing and can decide whether to book. No pressure.
+              </p>
+            </div>
+
+            <div className="min-w-0">
             {isSubmitted ? (
               <Card className="border-2 border-green-500/30 shadow-xl rounded-xl">
                 <CardContent className="py-12 text-center space-y-4">
@@ -293,7 +373,7 @@ const TwoStepQuoteForm = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-brand-navy">Got it! We're on it.</h3>
                   <p className="text-muted-foreground text-lg max-w-md mx-auto">
-                    Dylan will reach out shortly to learn more about your property and put together your quote.
+                    Dylan will call or text to schedule your service appointment.
                   </p>
                   <p className="text-sm text-muted-foreground">
                     Questions? Call <a href="tel:12067526690" className="text-brand-orange font-semibold hover:underline">206-752-6690</a> anytime.
@@ -306,7 +386,7 @@ const TwoStepQuoteForm = () => {
                   <CardDescription className="text-base text-muted-foreground">
                     {step === 1
                       ? "Step 1 of 2: Your info"
-                      : "Step 2 of 2: Almost done!"}
+                      : "Step 2 of 2: Project details"}
                   </CardDescription>
                   {/* Progress bar */}
                   <div className="flex gap-2 mt-3">
@@ -391,11 +471,11 @@ const TwoStepQuoteForm = () => {
                             className="w-full min-h-[56px] text-lg font-bold rounded-xl"
                             onClick={handleNextStep}
                           >
-                            Next: Choose Services →
+                            Next: Project Details →
                           </Button>
 
                           <p className="text-center text-muted-foreground text-xs">
-                            🔒 Your info stays private. We never share or spam.
+                            Your info stays private. We never share or spam.
                           </p>
                         </>
                       )}
@@ -434,18 +514,27 @@ const TwoStepQuoteForm = () => {
                                     placeholder="Start typing your address..."
                                     className="border-brand-navy/30 focus:border-brand-orange min-h-[56px] text-lg md:text-sm md:min-h-[48px] rounded-xl"
                                     autoComplete="off"
+                                    disabled={false}
+                                    name={field.name}
+                                    value={addressValue}
+                                    onBlur={field.onBlur}
                                     onFocus={() => {
                                       void ensureGooglePlacesLoaded();
                                     }}
-                                    {...field}
                                     ref={(el) => {
                                       field.ref(el);
                                       addressInputRef.current = el;
                                     }}
                                     onChange={(e) => {
-                                      field.onChange(e);
-                                      // If user manually edits after selecting from Places, clear verified flag
+                                      const value = e.currentTarget.value;
+                                      setAddressValue(value);
+                                      form.setValue("address", value, {
+                                        shouldDirty: true,
+                                        shouldTouch: true,
+                                        shouldValidate: true,
+                                      });
                                       addressFromPlacesRef.current = false;
+                                      selectedPlacesAddressRef.current = "";
                                     }}
                                   />
                                 </FormControl>
@@ -459,7 +548,7 @@ const TwoStepQuoteForm = () => {
                             name="services"
                             render={() => (
                               <FormItem>
-                                <FormLabel className="text-brand-navy font-semibold">Services Needed *</FormLabel>
+                                <FormLabel className="text-brand-navy font-semibold">What do you need help with? *</FormLabel>
                                 <div className="space-y-3">
                                   <FormField
                                     control={form.control}
@@ -618,31 +707,6 @@ const TwoStepQuoteForm = () => {
                                       <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
                                         <FormControl>
                                           <Checkbox
-                                            checked={field.value?.includes("Dryer vent cleaning")}
-                                            onCheckedChange={(checked) => {
-                                              const value = "Dryer vent cleaning";
-                                              return checked
-                                                ? field.onChange([...field.value, value])
-                                                : field.onChange(field.value?.filter((v) => v !== value));
-                                            }}
-                                          />
-                                        </FormControl>
-                                        <div className="flex flex-col space-y-1">
-                                          <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
-                                            Dryer vent cleaning
-                                          </FormLabel>
-                                          <span className="text-xs text-muted-foreground">Removes lint buildup, prevents fires & improves dryer efficiency</span>
-                                        </div>
-                                      </FormItem>
-                                    )}
-                                  />
-                                  <FormField
-                                    control={form.control}
-                                    name="services"
-                                    render={({ field }) => (
-                                      <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
-                                        <FormControl>
-                                          <Checkbox
                                             checked={field.value?.includes("Other")}
                                             onCheckedChange={(checked) => {
                                               const value = "Other";
@@ -679,12 +743,12 @@ const TwoStepQuoteForm = () => {
                               className="flex-1 min-h-[56px] text-lg font-bold rounded-xl"
                               disabled={isSubmitting}
                             >
-                              {isSubmitting ? "Sending..." : "Get My Free Quote →"}
+                              {isSubmitting ? "Sending..." : "Request Estimate →"}
                             </Button>
                           </div>
 
                           <p className="text-center text-muted-foreground text-xs">
-                            🔒 Your info stays private. We never share or spam.
+                            Your info stays private. We never share or spam.
                           </p>
                           <p className="text-center text-muted-foreground text-sm">
                             Trusted by 200+ homeowners in Kenmore, Bothell & Kirkland  •  Licensed & Insured
@@ -696,6 +760,7 @@ const TwoStepQuoteForm = () => {
                 </CardContent>
               </Card>
             )}
+            </div>
           </div>
         </div>
       </div>

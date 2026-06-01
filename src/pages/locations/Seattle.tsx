@@ -69,7 +69,7 @@ const Seattle = () => {
           "name": "What's a typical price range in Seattle?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most Seattle homes range from $300-$600 for standard single-story roof cleaning and $400-$800 for two-story homes. Gutter cleaning typically runs $250-$400 depending on home size and gutter length. Final pricing depends on roof pitch, access, and specific conditions. We provide exact quotes after a quick photo review."
+            "text": "Most Seattle homes range from $300-$600 for standard single-story roof cleaning and $400-$800 for two-story homes. Gutter cleaning typically runs $250-$400 depending on home size and gutter length. Final pricing depends on roof pitch, access, and specific conditions. Dylan will call or text to schedule your estimate visit before final pricing."
           }
         },
         {
@@ -164,7 +164,7 @@ const Seattle = () => {
                   size="lg"
                   onClick={navigateToContact}
                 >
-                  Get Seattle Quote
+                  Request Seattle Estimate
                 </Button>
                 <Button 
                   variant="prowash-secondary" 
@@ -327,7 +327,7 @@ const Seattle = () => {
                 </Card>
               </div>
               <p className="text-center text-sm text-muted-foreground mt-6">
-                Exact quote provided after quick photo review. No surprise charges.
+                Clear estimate provided after your estimate visit. No surprise charges.
               </p>
             </div>
           </div>
@@ -415,7 +415,7 @@ const Seattle = () => {
                   <Button variant="outline">All Service Areas</Button>
                 </Link>
                 <Link to="/#contact">
-                  <Button variant="prowash-secondary">Get Quote</Button>
+                  <Button variant="prowash-secondary">Request Estimate</Button>
                 </Link>
               </div>
             </div>
@@ -441,7 +441,7 @@ const Seattle = () => {
                 Ready to Protect Your Seattle Home?
               </h2>
               <p className="text-xl text-white/90 mb-8">
-                Get your free quote today. Free quotes available.
+                Request a free estimate. Dylan will call or text to schedule your estimate visit before pricing.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
@@ -449,7 +449,7 @@ const Seattle = () => {
                   size="lg"
                   onClick={navigateToContact}
                 >
-                  Get Free Quote
+                  Request Estimate
                 </Button>
                 <Button 
                   variant="prowash-secondary" 

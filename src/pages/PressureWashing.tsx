@@ -74,7 +74,7 @@ const PressureWashing = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Pressure Washing Services"
-        description="Professional pressure washing for driveways, patios, decks, and siding in Seattle, Kenmore, Bothell, and surrounding areas. Free quotes, licensed and insured."
+        description="Professional pressure washing for driveways, patios, decks, and siding in Seattle, Kenmore, Bothell, and surrounding areas. Free estimates, licensed and insured."
         url="https://www.seattleprowash.com/pressure-washing"
       />
       <Header />
@@ -83,27 +83,27 @@ const PressureWashing = () => {
         {/* Hero */}
         <section className="section-spacing bg-gradient-to-b from-brand-navy to-brand-navy/90">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="fade-up">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
                   Pressure Washing That Makes It Look New
                 </h1>
                 <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
-                  5.0★ from 200+ neighbors · Licensed & Insured · Free Quotes
+                  5.0★ from 200+ neighbors · Licensed & Insured · Free Estimates
                 </p>
                 <p className="text-white/80 mb-8 leading-relaxed">
                   Driveways, patios, walkways, decks, siding - if it's covered in moss, grime, or algae, we'll make it look like the day it was installed. We use the right pressure and cleaning solution for every surface so nothing gets damaged.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-6">
                   <Button variant="cta-orange" size="xl" onClick={navigateToContact}>
-                    Get My Free Quote →
+                    Request Estimate →
                   </Button>
                   <Button variant="prowash-outline" size="xl" onClick={() => window.location.href = "tel:2067526690"}>
                     Call 206-752-6690
                   </Button>
                 </div>
                 <p className="text-white/80 text-sm">
-                  ✓ Safe for All Surfaces  ✓ Free Quotes  ✓ 200+ Reviews
+                  ✓ Safe for All Surfaces  ✓ Free Estimates  ✓ 200+ Reviews
                 </p>
               </div>
               <div className="fade-up">
@@ -204,10 +204,10 @@ const PressureWashing = () => {
                 Ready to See the Difference?
               </h2>
               <p className="text-xl text-white/90 mb-8">
-                Get your free pressure washing quote today. We will be in touch shortly.
+                Request a free pressure washing estimate. Dylan will call or text to learn about the surfaces and recommend the right approach.
               </p>
               <Button variant="prowash-secondary" size="xl" onClick={navigateToContact}>
-                Get a Fast Quote
+                Request Estimate
               </Button>
             </div>
           </div>

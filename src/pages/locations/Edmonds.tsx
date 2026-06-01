@@ -74,7 +74,7 @@ const Edmonds = () => {
     },
     {
       question: "What's your availability in the Edmonds area?",
-      answer: "We service Edmonds year-round. Submit a quote request and we'll be in touch shortly. Scheduling depends on weather and current demand. We'll work with you to find a time that fits."
+      answer: "We service Edmonds year-round. Submit an estimate request and Dylan will call or text to learn about the job. Scheduling depends on weather and current demand. We'll work with you to find a time that fits."
     }
   ];
 
@@ -82,7 +82,7 @@ const Edmonds = () => {
     <>
       <SEOHead 
         title="Roof Cleaning & Gutter Cleaning Edmonds WA"
-        description="Professional roof cleaning, moss removal & gutter cleaning in Edmonds. Expert exterior cleaning services with 5-star reviews. Free quotes. Call (206) 752-6690"
+        description="Professional roof cleaning, moss removal & gutter cleaning in Edmonds. Expert exterior cleaning services with 5-star reviews. Free estimates. Call (206) 752-6690"
         url="https://www.seattleprowash.com/edmonds-roof-gutter-cleaning"
       />
 
@@ -104,9 +104,9 @@ const Edmonds = () => {
                   <Button 
                     size="lg" 
                     variant="prowash-secondary"
-                    onClick={() => window.location.href = '/#quote'}
+                    onClick={() => window.location.href = '/#contact'}
                   >
-                    Get Free Quote
+                    Request Estimate
                   </Button>
                   <Button 
                     size="lg" 
@@ -199,15 +199,15 @@ const Edmonds = () => {
                 Ready to Transform Your Edmonds Property?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Get a free, no-obligation quote for professional exterior cleaning services in Edmonds.
+                Get a free, no-pressure estimate for professional exterior cleaning services in Edmonds.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   size="lg" 
                   variant="prowash-secondary"
-                  onClick={() => window.location.href = '/#quote'}
+                  onClick={() => window.location.href = '/#contact'}
                 >
-                  Get Free Quote
+                  Request Estimate
                 </Button>
                 <Button 
                   size="lg" 

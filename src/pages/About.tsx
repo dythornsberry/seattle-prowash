@@ -94,7 +94,7 @@ const About = () => {
         <section className="section-spacing">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="fade-up">
                   <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-6">
                     Dylan's Story
@@ -176,10 +176,10 @@ const About = () => {
                 </div>
                 <div className="text-center md:text-left flex-1">
                   <h3 className="text-2xl md:text-3xl font-bold text-brand-navy mb-4">
-                    Get a Free Quote
+                    Get a Free Estimate
                   </h3>
                   <p className="text-lg text-muted-foreground mb-6">
-                    "Send us a few photos of your roof and we will get you a free quote shortly. No pressure, no hassle."
+                    "Tell us what is going on with your roof and Dylan will call or text to schedule your estimate visit before final pricing."
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button 
@@ -187,7 +187,7 @@ const About = () => {
                       size="xl"
                       onClick={navigateToContact}
                     >
-                      Get My Free Quote →
+                      Request Estimate →
                     </Button>
                     <Button 
                       variant="outline"
@@ -257,7 +257,7 @@ const About = () => {
             <div className="max-w-4xl mx-auto text-center fade-up">
               <div className="bg-brand-white rounded-2xl p-8 shadow-lg border border-brand-orange/20">
                 <p className="text-lg text-muted-foreground mb-6">
-                  Ready for a moss-free roof? Call <a href="tel:+12067526690" className="text-brand-orange hover:underline">206-752-6690</a> or get your free quote today.
+                  Ready for a moss-free roof? Call <a href="tel:+12067526690" className="text-brand-orange hover:underline">206-752-6690</a> or get your free estimate today.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                   <Button 
@@ -265,7 +265,7 @@ const About = () => {
                     size="xl"
                     onClick={navigateToContact}
                   >
-                    Get a Fast Quote
+                    Request Estimate
                   </Button>
                    <Button 
                      variant="prowash-phone" 
@@ -379,7 +379,7 @@ const About = () => {
                   onClick={navigateToContact}
                   className="bg-moss-green hover:bg-moss-green-light"
                 >
-                  Get Your Free Quote Today
+                  Request a Free Estimate
                 </Button>
               </div>
             </div>

@@ -78,7 +78,7 @@ const Sammamish = () => {
                 </p>
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <span className="bg-white/10 px-4 py-2 rounded-full">12-Month Moss-Free Guarantee</span>
-                  <span className="bg-white/10 px-4 py-2 rounded-full">Free Quotes</span>
+                  <span className="bg-white/10 px-4 py-2 rounded-full">Free Estimates</span>
                   <span className="bg-white/10 px-4 py-2 rounded-full">200+ 5-Star Reviews</span>
                 </div>
               </div>
@@ -130,7 +130,7 @@ const Sammamish = () => {
                       </div>
                       <h3 className="text-xl font-bold mb-4 text-dark-teal">Fast Response</h3>
                       <p className="text-gray-600">
-                        Free quotes and quick scheduling for all Sammamish area properties.
+                        Free estimates and quick scheduling for all Sammamish area properties.
                       </p>
                     </CardContent>
                   </Card>
@@ -230,7 +230,7 @@ const Sammamish = () => {
             faqs={[
               {
                 question: "What Sammamish neighborhoods do you serve?",
-                answer: "We serve all Sammamish areas including Klahanie, Sahalee, Pine Lake, Beaver Lake, and all surrounding neighborhoods. Free quotes available throughout Sammamish."
+                answer: "We serve all Sammamish areas including Klahanie, Sahalee, Pine Lake, Beaver Lake, and all surrounding neighborhoods. Free estimates available throughout Sammamish."
               },
               {
                 question: "Do you have experience with Sammamish's larger properties?",
@@ -275,7 +275,7 @@ const Sammamish = () => {
                     size="xl"
                     onClick={navigateToContact}
                   >
-                    GET YOUR FREE QUOTE TODAY
+                    REQUEST ESTIMATE
                   </Button>
                   <Button 
                     variant="prowash-outline"

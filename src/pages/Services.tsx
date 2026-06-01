@@ -148,7 +148,7 @@ const Services = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="cta-orange" size="xl" onClick={navigateToContact}>
-                Get My Free Quote →
+                Request Estimate →
               </Button>
               <Button
                 variant="prowash-secondary"
@@ -222,10 +222,10 @@ const Services = () => {
               Not Sure What You Need?
             </h2>
             <p className="text-lg text-white/80 max-w-xl mx-auto mb-8">
-              Tell us about your property and we'll recommend the right services. Free quotes, no obligation.
+              Tell us about your property and we'll recommend the right services. Free estimates, no obligation.
             </p>
             <Button variant="cta-orange" size="xl" onClick={navigateToContact}>
-              Get My Free Quote →
+              Request Estimate →
             </Button>
           </div>
         </section>

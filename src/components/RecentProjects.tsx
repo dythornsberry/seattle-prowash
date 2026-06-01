@@ -104,7 +104,7 @@ const RecentProjects = () => {
               </p>
             </div>
             <Button variant="cta-orange" size="lg" onClick={navigateToContact}>
-              Get a Quote <ArrowRight className="w-4 h-4" />
+              Request Estimate <ArrowRight className="w-4 h-4" />
             </Button>
           </div>
 

@@ -56,7 +56,7 @@ const Bellevue = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="Roof & Gutter Cleaning in Bellevue, WA"
-        description="Expert roof cleaning, gutter cleaning, and moss removal in Bellevue, WA. Serving all Bellevue neighborhoods. 12-month moss-free guarantee. Licensed & insured. Free quotes."
+        description="Expert roof cleaning, gutter cleaning, and moss removal in Bellevue, WA. Serving all Bellevue neighborhoods. 12-month moss-free guarantee. Licensed & insured. Free estimates."
         url="https://www.seattleprowash.com/bellevue-roof-gutter-cleaning"
       />
       <Header />
@@ -78,7 +78,7 @@ const Bellevue = () => {
                 </p>
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <span className="bg-white/10 px-4 py-2 rounded-full">12-Month Moss-Free Guarantee</span>
-                  <span className="bg-white/10 px-4 py-2 rounded-full">Free Quotes</span>
+                  <span className="bg-white/10 px-4 py-2 rounded-full">Free Estimates</span>
                   <span className="bg-white/10 px-4 py-2 rounded-full">200+ 5-Star Reviews</span>
                 </div>
               </div>
@@ -130,7 +130,7 @@ const Bellevue = () => {
                       </div>
                       <h3 className="text-xl font-bold mb-4 text-dark-teal">Fast Response</h3>
                       <p className="text-gray-600">
-                        Free quotes and quick scheduling for all Bellevue area properties.
+                        Free estimates and quick scheduling for all Bellevue area properties.
                       </p>
                     </CardContent>
                   </Card>
@@ -226,7 +226,7 @@ const Bellevue = () => {
               },
               {
                 question: "What Bellevue neighborhoods do you serve?",
-                answer: "We serve all Bellevue areas including Downtown Bellevue, Crossroads, Wilburton, Somerset, Factoria, Bridle Trails, and surrounding neighborhoods. Free quotes available throughout Bellevue."
+                answer: "We serve all Bellevue areas including Downtown Bellevue, Crossroads, Wilburton, Somerset, Factoria, Bridle Trails, and surrounding neighborhoods. Free estimates available throughout Bellevue."
               },
               {
                 question: "How often should Bellevue homes get roof cleaning?",
@@ -267,7 +267,7 @@ const Bellevue = () => {
                     size="xl"
                     onClick={navigateToContact}
                   >
-                    GET YOUR FREE QUOTE TODAY
+                    REQUEST YOUR FREE ESTIMATE
                   </Button>
                   <Button 
                     variant="prowash-outline"

@@ -104,7 +104,7 @@ const RoofCleaning = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="Professional Roof Cleaning Services"
-        description="Expert roof cleaning and moss removal in Seattle. Eco-friendly soft wash that extends roof life. 12-month guarantee. Licensed & insured. Free quotes."
+        description="Expert roof cleaning and moss removal in Seattle. Eco-friendly soft wash that extends roof life. 12-month guarantee. Licensed & insured. Free estimates."
         url="https://www.seattleprowash.com/roof-cleaning"
         image={roofCleaningImage}
       />
@@ -115,7 +115,7 @@ const RoofCleaning = () => {
         <section className="section-spacing bg-gradient-to-b from-brand-navy to-brand-navy/90">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="fade-up">
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
                     Roof Cleaning: Soft on Shingles, Tough on Grime
@@ -123,23 +123,23 @@ const RoofCleaning = () => {
                   
                   {/* Mini Trust Line */}
                   <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
-                    5.0★ from 200+ neighbors • Licensed & Insured • Free Quotes
+                    5.0★ from 200+ neighbors • Licensed & Insured • Free Estimates
                   </p>
 
                   {/* 1-2-3 Process */}
                   <ul className="flex flex-wrap gap-2 md:gap-4 text-white/90 mb-8 text-sm md:text-base">
-                    <li><strong className="text-brand-orange">1)</strong> Request a Quote</li>
-                    <li><strong className="text-brand-orange">2)</strong> Schedule</li>
-                    <li><strong className="text-brand-orange">3)</strong> Relax while we work, before/after photos provided</li>
+                    <li><strong className="text-brand-orange">1)</strong> Request an inspection & estimate</li>
+                    <li><strong className="text-brand-orange">2)</strong> Dylan calls or texts</li>
+                    <li><strong className="text-brand-orange">3)</strong> Schedule your appointment</li>
                   </ul>
 
                   <div className="flex flex-col sm:flex-row gap-4 mb-6">
-                    <Button 
-                      variant="cta-orange" 
+                    <Button
+                      variant="cta-orange"
                       size="xl"
                       onClick={navigateToContact}
                     >
-                      Get My Free Quote →
+                      Request Roof Inspection & Estimate →
                     </Button>
                     <Button 
                       variant="prowash-outline"
@@ -152,7 +152,7 @@ const RoofCleaning = () => {
                   
                   {/* Trust Indicators */}
                   <p className="text-white/80 text-sm">
-                    ✓ 12-Month Guarantee  ✓ Free Quotes  ✓ 200+ Reviews
+                    ✓ 12-Month Guarantee  ✓ Free Estimates  ✓ 200+ Reviews
                   </p>
                 </div>
                 <div className="fade-up">
@@ -247,7 +247,7 @@ const RoofCleaning = () => {
                       className="w-full"
                       onClick={navigateToContact}
                     >
-                      Get a Fast Quote
+                      Request Estimate
                     </Button>
                   </CardContent>
                 </Card>
@@ -266,7 +266,7 @@ const RoofCleaning = () => {
                       className="w-full"
                       onClick={navigateToContact}
                     >
-                      Get a Fast Quote
+                      Request Estimate
                     </Button>
                   </CardContent>
                 </Card>
@@ -425,15 +425,15 @@ const RoofCleaning = () => {
                 Ready for Expert Roof Cleaning?
               </h2>
               <p className="text-xl text-white/90 mb-8">
-                Get your free quote today. Safe, effective moss removal with professional results.
+                Fill out the form and Dylan will call or text to schedule your appointment.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4 mb-4">
-                <Button 
-                  variant="prowash-secondary" 
+                <Button
+                  variant="prowash-secondary"
                   size="xl"
                   onClick={navigateToContact}
                 >
-                  Get a Fast Quote
+                  Request Roof Inspection & Estimate
                 </Button>
                 <Button 
                   variant="prowash-outline"

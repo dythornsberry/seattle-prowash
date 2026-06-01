@@ -14,7 +14,7 @@ const CostOfWaiting = () => {
             Moss actively destroys your roof. Here's what happens when you delay.
           </p>
           
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* The Failure */}
             <Card className="border-2 border-red-200 bg-red-50/50">
               <CardContent className="p-6">
