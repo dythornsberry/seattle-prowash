@@ -73,8 +73,8 @@ const additionalFaqs = [
   },
   {
     icon: Clock,
-    question: "How do estimates and scheduling work?",
-    answer: "• Start with the short estimate form\n\n• Dylan calls or texts to schedule your estimate\n\n• We look at the property and answer questions\n\n• You get clear pricing and can decide whether to book\n\n• Scheduling depends on weather and current demand",
+    question: "How do quotes and scheduling work?",
+    answer: "• Start with the short quote form\n\n• Dylan calls or texts to confirm details\n\n• You get clear pricing and next steps\n\n• If you want to move forward, we help you schedule\n\n• Scheduling depends on weather and current demand",
     category: "Process"
   },
   {
@@ -232,7 +232,7 @@ const FAQ = () => {
                 Ready to Get Started?
               </h2>
               <p className="text-xl mb-8 text-white/90">
-                Don't see your question? Call us today for a free consultation and personalized answers.
+                Don't see your question? Call or text today and we'll help you get a fast quote.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Button 
@@ -240,7 +240,7 @@ const FAQ = () => {
                   size="xl"
                   onClick={navigateToContact}
                 >
-                  Request Estimate
+                  Get Fast Quote
                 </Button>
                 <Button 
                   variant="prowash-phone" 

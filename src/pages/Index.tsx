@@ -72,7 +72,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="Seattle Roof & Gutter Cleaning Experts"
-        description="Expert roof cleaning and gutter cleaning in Seattle, Kenmore, Bothell, Kirkland & Shoreline. 12-month moss-free guarantee. Licensed & insured. Free estimates."
+        description="Expert roof cleaning and gutter cleaning in Seattle, Kenmore, Bothell, Kirkland & Shoreline. 12-month moss-free guarantee. Licensed & insured. Fast quotes."
         url="https://www.seattleprowash.com"
       />
       <div id="content-with-offset">

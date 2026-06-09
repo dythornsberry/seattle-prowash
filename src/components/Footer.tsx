@@ -22,7 +22,7 @@ const Footer = () => {
               <h3 className="text-lg md:text-xl font-bold">
                 Ready for a moss-free roof?
               </h3>
-              <p className="text-sm opacity-80">Free estimates • Fully licensed & insured • 12-month moss-free guarantee</p>
+              <p className="text-sm opacity-80">Fast quotes • Fully licensed & insured • 12-month moss-free guarantee</p>
             </div>
             <Button 
               variant="prowash-cta" 
@@ -172,7 +172,7 @@ const Footer = () => {
                 <Link to="/service-areas" className="hover:text-white underline">View all service areas</Link> • Serving ~15 miles from Kenmore
               </p>
               <p className="text-sm text-brand-orange mt-4 font-semibold">
-                Call 206-752-6690 for your free estimate
+                Call 206-752-6690 for your fast quote
               </p>
             </div>
 
@@ -227,7 +227,7 @@ const Footer = () => {
                 className="w-full"
                 onClick={navigateToContact}
               >
-                Request Estimate →
+                Get Fast Quote →
               </Button>
             </div>
           </div>

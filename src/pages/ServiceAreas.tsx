@@ -70,7 +70,7 @@ const ServiceAreas = () => {
                 </p>
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <span className="bg-white/10 px-4 py-2 rounded-full">12-Month Moss-Free Guarantee</span>
-                  <span className="bg-white/10 px-4 py-2 rounded-full">Free Estimates</span>
+                  <span className="bg-white/10 px-4 py-2 rounded-full">Fast Quotes</span>
                   <span className="bg-white/10 px-4 py-2 rounded-full">200+ 5-Star Reviews</span>
                 </div>
               </div>
@@ -93,7 +93,7 @@ const ServiceAreas = () => {
                       size="lg"
                       onClick={navigateToContact}
                     >
-                      Request Estimate
+                      Get Fast Quote
                     </Button>
                     <Button 
                       variant="outline"
@@ -277,7 +277,7 @@ const ServiceAreas = () => {
                   Ready to Protect Your Home?
                 </h2>
                 <p className="text-lg text-gray-600 mb-8">
-                  Get your free estimate today and discover why homeowners across the Seattle metro area trust Seattle ProWash.
+                  Get a fast quote today and discover why homeowners across the Seattle metro area trust Seattle ProWash.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -287,7 +287,7 @@ const ServiceAreas = () => {
                     className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold"
                     onClick={navigateToContact}
                   >
-                    REQUEST ESTIMATE
+                    GET FAST QUOTE
                   </Button>
                   <Button 
                     variant="outline"

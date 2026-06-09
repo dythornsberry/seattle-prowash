@@ -167,7 +167,7 @@ const Resources = () => {
                   Need Professional Help?
                 </h2>
                 <p className="text-lg text-gray-600 mb-8">
-                  While these resources are helpful, nothing beats professional care. Get your free estimate today for expert roof and gutter cleaning services.
+                  While these resources are helpful, nothing beats professional care. Get a fast quote today for expert roof and gutter cleaning services.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button 
@@ -176,7 +176,7 @@ const Resources = () => {
                     className="bg-bright-orange hover:bg-bright-orange/90 text-white font-bold"
                     onClick={navigateToContact}
                   >
-                    REQUEST ESTIMATE
+                    GET FAST QUOTE
                   </Button>
                   <Button 
                     variant="outline"

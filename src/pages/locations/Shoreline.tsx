@@ -83,7 +83,7 @@ const Shoreline = () => {
     <>
       <SEOHead 
         title="Roof & Gutter Cleaning Shoreline WA"
-        description="Professional roof cleaning, moss removal & gutter cleaning in Shoreline. Expert roof and gutter services with 5-star reviews. Free estimates. Call (206) 752-6690"
+        description="Professional roof cleaning, moss removal & gutter cleaning in Shoreline. Expert roof and gutter services with 5-star reviews. Fast quotes. Call (206) 752-6690"
         url="https://www.seattleprowash.com/shoreline-roof-gutter-cleaning"
       />
 
@@ -108,7 +108,7 @@ const Shoreline = () => {
                     variant="prowash-secondary"
                     onClick={() => window.location.href = '/#contact'}
                   >
-                    Request Estimate
+                    Get Fast Quote
                   </Button>
                   <Button 
                     size="lg" 
@@ -193,7 +193,7 @@ const Shoreline = () => {
                 Ready to Protect Your Shoreline Property?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Get a free, no-pressure estimate for professional roof and gutter cleaning services in Shoreline.
+                Get a fast, no-pressure quote for professional roof and gutter cleaning services in Shoreline.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
@@ -201,7 +201,7 @@ const Shoreline = () => {
                   variant="prowash-secondary"
                   onClick={() => window.location.href = '/#contact'}
                 >
-                  Request Estimate
+                  Get Fast Quote
                 </Button>
                 <Button 
                   size="lg" 

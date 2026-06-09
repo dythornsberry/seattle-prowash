@@ -101,7 +101,7 @@ const GutterCleaning = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="Professional Gutter Cleaning Services"
-        description="Expert gutter cleaning in Seattle, Kenmore, Bothell & Kirkland. Prevent water damage and protect your foundation. Licensed & insured. Free estimates."
+        description="Expert gutter cleaning in Seattle, Kenmore, Bothell & Kirkland. Prevent water damage and protect your foundation. Licensed & insured. Fast quotes."
         url="https://www.seattleprowash.com/gutter-cleaning"
         image={gutterCleaningImage}
       />
@@ -120,12 +120,12 @@ const GutterCleaning = () => {
                   
                   {/* Mini Trust Line */}
                   <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
-                    5.0★ from 200+ neighbors • Licensed & Insured • Free Estimates
+                    5.0★ from 200+ neighbors • Licensed & Insured • Fast Quotes
                   </p>
 
                   {/* 1-2-3 Process */}
                   <ul className="flex flex-wrap gap-2 md:gap-4 text-white/90 mb-8 text-sm md:text-base">
-                    <li><strong className="text-brand-orange">1)</strong> Request an Estimate</li>
+                    <li><strong className="text-brand-orange">1)</strong> Get a Fast Quote</li>
                     <li><strong className="text-brand-orange">2)</strong> Schedule</li>
                     <li><strong className="text-brand-orange">3)</strong> Relax while we work, before/after photos provided</li>
                   </ul>
@@ -136,7 +136,7 @@ const GutterCleaning = () => {
                       size="xl"
                       onClick={navigateToContact}
                     >
-                      Request Estimate →
+                      Get Fast Quote →
                     </Button>
                     <Button 
                       variant="prowash-outline"
@@ -149,7 +149,7 @@ const GutterCleaning = () => {
                   
                   {/* Trust Indicators */}
                   <p className="text-white/80 text-sm">
-                    ✓ 12-Month Guarantee  ✓ Free Estimates  ✓ 200+ Reviews
+                    ✓ 12-Month Guarantee  ✓ Fast Quotes  ✓ 200+ Reviews
                   </p>
                 </div>
                 <div className="fade-up">
@@ -207,7 +207,7 @@ const GutterCleaning = () => {
                   </ul>
                   <div className="mt-8">
                     <Button variant="cta-orange" size="lg" onClick={navigateToContact}>
-                      Request Gutter Cleaning Estimate →
+                      Get Gutter Cleaning Quote →
                     </Button>
                   </div>
                 </div>
@@ -382,7 +382,7 @@ const GutterCleaning = () => {
                 Ready for Clean Gutters?
               </h2>
               <p className="text-xl text-white/90 mb-8">
-                Request a free estimate today. Professional gutter cleaning with clear results.
+                Get a fast quote today. Professional gutter cleaning with clear results.
               </p>
               <div className="flex justify-center gap-4 mb-6">
                 <Button 
@@ -390,7 +390,7 @@ const GutterCleaning = () => {
                   size="xl"
                   onClick={navigateToContact}
                 >
-                  Request Estimate
+                  Get Fast Quote
                 </Button>
               </div>
             </div>

@@ -91,7 +91,7 @@ const Bothell = () => {
                 </p>
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <span className="bg-white/10 px-4 py-2 rounded-full">12-Month Moss-Free Guarantee</span>
-                  <span className="bg-white/10 px-4 py-2 rounded-full">Free Estimates</span>
+                  <span className="bg-white/10 px-4 py-2 rounded-full">Fast Quotes</span>
                   <span className="bg-white/10 px-4 py-2 rounded-full">200+ 5-Star Reviews</span>
                 </div>
               </div>
@@ -312,7 +312,7 @@ const Bothell = () => {
             faqs={[
               {
                 question: "What Bothell neighborhoods do you serve?",
-                answer: "We serve all Bothell areas including Downtown Bothell, Canyon Park, Country Village, Fitzgerald, North Creek, Queensboro, and Thrasher's Corner. Free estimates available throughout Bothell."
+                answer: "We serve all Bothell areas including Downtown Bothell, Canyon Park, Country Village, Fitzgerald, North Creek, Queensboro, and Thrasher's Corner. Fast quotes available throughout Bothell."
               },
               {
                 question: "Why is moss so common on Bothell roofs?",
@@ -320,7 +320,7 @@ const Bothell = () => {
               },
               {
                 question: "How quickly can you service my Bothell home?",
-                answer: "After you request an estimate, Dylan will call or text to schedule it. We'll look at the property, answer questions, and give clear pricing."
+                answer: "After you submit the quote form, Dylan will call or text to confirm details and walk you through pricing. If you want to move forward, we'll help you get on the schedule."
               }
             ]} 
             schemaContext="roof" 
@@ -348,7 +348,7 @@ const Bothell = () => {
                   Protect Your Bothell Home Today
                 </h2>
                 <p className="text-xl text-white/90 mb-8">
-                  Join 200+ satisfied customers. Get your free estimate today and see why Bothell homeowners trust Seattle ProWash.
+                  Join 200+ satisfied customers. Get a fast quote today and see why Bothell homeowners trust Seattle ProWash.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -357,7 +357,7 @@ const Bothell = () => {
                     size="xl"
                     onClick={navigateToContact}
                   >
-                    REQUEST YOUR FREE ESTIMATE
+                    GET YOUR FAST QUOTE
                   </Button>
                   <Button 
                     variant="prowash-outline"
@@ -369,7 +369,7 @@ const Bothell = () => {
                 </div>
                 
                 <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
-                  <span>✓ Free estimates</span>
+                  <span>✓ Fast quotes</span>
                   <span>✓ Licensed & Insured</span>
                   <span>✓ 12-month moss-free guarantee</span>
                   <span>✓ 200+ 5-star reviews</span>

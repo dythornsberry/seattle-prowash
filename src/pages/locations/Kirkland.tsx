@@ -91,7 +91,7 @@ const Kirkland = () => {
                 </p>
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <span className="bg-white/10 px-4 py-2 rounded-full">12-Month Moss-Free Guarantee</span>
-                  <span className="bg-white/10 px-4 py-2 rounded-full">Free Estimates</span>
+                  <span className="bg-white/10 px-4 py-2 rounded-full">Fast Quotes</span>
                   <span className="bg-white/10 px-4 py-2 rounded-full">200+ 5-Star Reviews</span>
                 </div>
               </div>
@@ -312,7 +312,7 @@ const Kirkland = () => {
             faqs={[
               {
                 question: "What Kirkland neighborhoods do you serve?",
-                answer: "We serve all Kirkland areas including Downtown Kirkland, Juanita, Totem Lake, Houghton, Finn Hill, Kingsgate, and Rose Hill. Free estimates available throughout Kirkland."
+                answer: "We serve all Kirkland areas including Downtown Kirkland, Juanita, Totem Lake, Houghton, Finn Hill, Kingsgate, and Rose Hill. Fast quotes available throughout Kirkland."
               },
               {
                 question: "How does Kirkland's waterfront location affect roof maintenance?",
@@ -348,7 +348,7 @@ const Kirkland = () => {
                   Enhance Your Kirkland Property Today
                 </h2>
                 <p className="text-xl text-white/90 mb-8">
-                  Join 200+ satisfied customers. Experience the Seattle ProWash difference with your free estimate.
+                  Join 200+ satisfied customers. Experience the Seattle ProWash difference with your fast quote.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -357,7 +357,7 @@ const Kirkland = () => {
                     size="xl"
                     onClick={navigateToContact}
                   >
-                    REQUEST ESTIMATE
+                    GET FAST QUOTE
                   </Button>
                   <Button 
                     variant="prowash-outline"
@@ -369,7 +369,7 @@ const Kirkland = () => {
                 </div>
                 
                 <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
-                  <span>✓ Free estimates</span>
+                  <span>✓ Fast quotes</span>
                   <span>✓ Licensed & Insured</span>
                   <span>✓ 12-month moss-free guarantee</span>
                   <span>✓ 200+ 5-star reviews</span>

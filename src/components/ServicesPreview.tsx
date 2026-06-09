@@ -157,7 +157,7 @@ const ServicesPreview = () => {
             size="xl"
             onClick={navigateToContact}
           >
-            Request Estimate →
+            Get Fast Quote →
           </Button>
         </div>
       </div>

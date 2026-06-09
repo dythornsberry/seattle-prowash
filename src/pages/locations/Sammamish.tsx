@@ -78,7 +78,7 @@ const Sammamish = () => {
                 </p>
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <span className="bg-white/10 px-4 py-2 rounded-full">12-Month Moss-Free Guarantee</span>
-                  <span className="bg-white/10 px-4 py-2 rounded-full">Free Estimates</span>
+                  <span className="bg-white/10 px-4 py-2 rounded-full">Fast Quotes</span>
                   <span className="bg-white/10 px-4 py-2 rounded-full">200+ 5-Star Reviews</span>
                 </div>
               </div>
@@ -130,7 +130,7 @@ const Sammamish = () => {
                       </div>
                       <h3 className="text-xl font-bold mb-4 text-dark-teal">Fast Response</h3>
                       <p className="text-gray-600">
-                        Free estimates and quick scheduling for all Sammamish area properties.
+                        Fast quotes and quick scheduling for all Sammamish area properties.
                       </p>
                     </CardContent>
                   </Card>
@@ -230,7 +230,7 @@ const Sammamish = () => {
             faqs={[
               {
                 question: "What Sammamish neighborhoods do you serve?",
-                answer: "We serve all Sammamish areas including Klahanie, Sahalee, Pine Lake, Beaver Lake, and all surrounding neighborhoods. Free estimates available throughout Sammamish."
+                answer: "We serve all Sammamish areas including Klahanie, Sahalee, Pine Lake, Beaver Lake, and all surrounding neighborhoods. Fast quotes available throughout Sammamish."
               },
               {
                 question: "Do you have experience with Sammamish's larger properties?",
@@ -266,7 +266,7 @@ const Sammamish = () => {
                   Ready to Protect Your Sammamish Home?
                 </h2>
                 <p className="text-xl text-white/90 mb-8">
-                  Join 200+ satisfied customers. Get your free estimate today and see why Sammamish homeowners trust Seattle ProWash.
+                  Join 200+ satisfied customers. Get a fast quote today and see why Sammamish homeowners trust Seattle ProWash.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -275,7 +275,7 @@ const Sammamish = () => {
                     size="xl"
                     onClick={navigateToContact}
                   >
-                    REQUEST ESTIMATE
+                    GET FAST QUOTE
                   </Button>
                   <Button 
                     variant="prowash-outline"

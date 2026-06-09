@@ -96,7 +96,7 @@ const ExitIntentPopup = () => {
 
             {/* Subheading */}
             <p className="text-gray-700 text-lg mb-6">
-              <strong>Moss doesn't stop growing while you decide.</strong> Every week you wait, the damage gets more expensive to fix. Get a free estimate and we'll be in touch shortly.
+              <strong>Moss doesn't stop growing while you decide.</strong> Every week you wait, the damage gets more expensive to fix. Get a fast quote and we'll be in touch shortly.
             </p>
 
             {/* Trust Signals */}
@@ -114,7 +114,7 @@ const ExitIntentPopup = () => {
               <div className="text-center">
                 <Clock className="w-6 h-6 text-brand-orange mx-auto mb-1" />
                 <div className="text-sm font-semibold text-gray-900">Free</div>
-                <div className="text-xs text-gray-600">Estimates</div>
+                <div className="text-xs text-gray-600">Quotes</div>
               </div>
             </div>
 
@@ -126,7 +126,7 @@ const ExitIntentPopup = () => {
                 className="w-full text-lg font-bold shadow-lg"
                 onClick={handleGetQuote}
               >
-                Request Estimate →
+                Get Fast Quote →
               </Button>
               <p className="text-sm text-gray-600">
                 Or call <a href="tel:12067526690" className="text-brand-orange hover:underline font-semibold">206-752-6690</a> now

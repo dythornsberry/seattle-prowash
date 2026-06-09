@@ -35,7 +35,7 @@ const StickyTopBar = () => {
               className="shadow-md hidden sm:inline-flex"
               onClick={navigateToContact}
             >
-              Request Estimate
+              Get Fast Quote
             </Button>
           </div>
         </div>

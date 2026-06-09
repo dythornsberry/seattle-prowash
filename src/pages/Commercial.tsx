@@ -89,7 +89,7 @@ const Commercial = () => {
     <>
       <SEOHead
         title="Commercial Cleaning Services"
-        description="Commercial power washing, roof cleaning, gutter cleaning, and window cleaning for businesses in the Seattle area. Licensed & insured. Free estimates."
+        description="Commercial power washing, roof cleaning, gutter cleaning, and window cleaning for businesses in the Seattle area. Licensed & insured. Fast quotes."
         url="https://www.seattleprowash.com/commercial"
       />
 
@@ -119,7 +119,7 @@ const Commercial = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="cta-orange" size="xl" onClick={navigateToContact}>
-                Get a Free Estimate →
+                Get a Fast Quote →
               </Button>
               <Button
                 variant="prowash-secondary"
@@ -201,7 +201,7 @@ const Commercial = () => {
               </div>
               <div className="text-center">
                 <Button variant="cta-orange" size="xl" onClick={navigateToContact}>
-                  Request a Commercial Estimate →
+                  Get a Commercial Quote →
                 </Button>
               </div>
             </div>

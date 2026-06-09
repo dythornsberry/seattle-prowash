@@ -322,8 +322,8 @@ const TwoStepQuoteForm = () => {
 
   const nextSteps = [
     "Submit the form",
-    "Dylan calls or texts you back",
-    "Schedule your appointment, usually within a day or two",
+    "Dylan calls or texts to confirm details",
+    "You get clear pricing and can choose whether to schedule",
   ];
 
   return (
@@ -332,10 +332,10 @@ const TwoStepQuoteForm = () => {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-8 fade-up">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy mb-4 font-heading">
-              Request a Free Estimate
+              Get a Fast Quote
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mb-3">
-              Tell us what you need. Dylan will call or text to schedule your estimate.
+              Tell us what you need. Dylan will call or text to confirm details and walk you through the next step.
             </p>
             <p className="text-sm text-muted-foreground">
               Prefer to call? <a href="tel:12067526690" className="hover:text-brand-orange transition-colors" onClick={handleCallClick}>206-752-6690</a> (call or text anytime)
@@ -358,7 +358,7 @@ const TwoStepQuoteForm = () => {
                 ))}
               </ol>
               <p className="mt-5 border-t border-brand-navy/10 pt-4 text-sm text-brand-navy/70 leading-relaxed">
-                After the estimate, you get clear pricing and can decide whether to book. No pressure.
+                No pressure, just clear pricing and a simple next step before you book.
               </p>
             </div>
 
@@ -373,7 +373,7 @@ const TwoStepQuoteForm = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-brand-navy">Got it! We're on it.</h3>
                   <p className="text-muted-foreground text-lg max-w-md mx-auto">
-                    Dylan will call or text to schedule your service appointment.
+                    Dylan will call or text to confirm details and walk you through the next step.
                   </p>
                   <p className="text-sm text-muted-foreground">
                     Questions? Call <a href="tel:12067526690" className="text-brand-orange font-semibold hover:underline">206-752-6690</a> anytime.
@@ -743,7 +743,7 @@ const TwoStepQuoteForm = () => {
                               className="flex-1 min-h-[56px] text-lg font-bold rounded-xl"
                               disabled={isSubmitting}
                             >
-                              {isSubmitting ? "Sending..." : "Request Estimate →"}
+                              {isSubmitting ? "Sending..." : "Get Fast Quote →"}
                             </Button>
                           </div>
 

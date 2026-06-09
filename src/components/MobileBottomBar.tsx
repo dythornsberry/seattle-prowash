@@ -46,7 +46,7 @@ const MobileBottomBar = () => {
           className="w-full min-w-0 shadow-md min-h-[56px] px-2 text-sm font-semibold"
           onClick={handleQuote}
         >
-          Request Estimate
+          Get Fast Quote
         </Button>
       </div>
     </div>

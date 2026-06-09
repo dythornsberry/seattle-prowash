@@ -12,6 +12,6 @@ export const TRUST_METRICS = {
   reviewCount: "200+",
   guarantee: "12-Month",
   guaranteeFull: "12-Month Moss-Free Guarantee",
-  estimates: "Free",
+  quotes: "Free",
   roofsCompleted: "500+",
 } as const;

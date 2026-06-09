@@ -167,7 +167,7 @@ const BeforeAfterSlider = () => {
                 size="xl"
                 onClick={navigateToContact}
               >
-                Request Estimate
+                Get Fast Quote
               </Button>
               <Button 
                 variant="prowash-secondary" 

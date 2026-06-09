@@ -82,7 +82,7 @@ const MountlakeTerrace = () => {
     <>
       <SEOHead 
         title="Roof Cleaning & Gutter Cleaning Mountlake Terrace WA"
-        description="Professional roof cleaning, moss removal & gutter cleaning in Mountlake Terrace. Expert exterior cleaning services with 5-star reviews. Free estimates. Call (206) 752-6690"
+        description="Professional roof cleaning, moss removal & gutter cleaning in Mountlake Terrace. Expert exterior cleaning services with 5-star reviews. Fast quotes. Call (206) 752-6690"
         url="https://www.seattleprowash.com/mountlake-terrace-roof-gutter-cleaning"
       />
 
@@ -106,7 +106,7 @@ const MountlakeTerrace = () => {
                     variant="prowash-secondary"
                     onClick={() => window.location.href = '/#contact'}
                   >
-                    Request Estimate
+                    Get Fast Quote
                   </Button>
                   <Button 
                     size="lg" 
@@ -199,7 +199,7 @@ const MountlakeTerrace = () => {
                 Ready to Transform Your Mountlake Terrace Property?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Get a free, no-pressure estimate for professional exterior cleaning services in Mountlake Terrace.
+                Get a fast, no-pressure quote for professional exterior cleaning services in Mountlake Terrace.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
@@ -207,7 +207,7 @@ const MountlakeTerrace = () => {
                   variant="prowash-secondary"
                   onClick={() => window.location.href = '/#contact'}
                 >
-                  Request Estimate
+                  Get Fast Quote
                 </Button>
                 <Button 
                   size="lg" 

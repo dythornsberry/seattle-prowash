@@ -178,7 +178,7 @@ const Reviews = () => {
                   size="lg"
                   onClick={navigateToContact}
                 >
-                  Request Estimate
+                  Get Fast Quote
                 </Button>
               </div>
             </div>
@@ -305,7 +305,7 @@ const Reviews = () => {
                   size="lg"
                   onClick={navigateToContact}
                 >
-                  Request Estimate
+                  Get Fast Quote
                 </Button>
               </div>
             </div>

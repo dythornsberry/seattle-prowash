@@ -71,7 +71,7 @@ const Services = () => {
       icon: Sparkles,
       image: pressureImg,
       href: "/pressure-washing",
-      price: "Free estimates",
+      price: "Fast quotes",
       description: "Driveways, patios, sidewalks, decks, and siding. We remove moss, algae, and surface grime with professional-grade equipment.",
       includes: [
         "Driveways & walkways",
@@ -85,7 +85,7 @@ const Services = () => {
       icon: Zap,
       image: gutterBrighteningImg,
       href: "/gutter-cleaning",
-      price: "Free estimates",
+      price: "Fast quotes",
       description: "We clean the exterior face of your gutters -- removing oxidation, black streaks, and buildup that pressure washing alone can't touch. Also called exterior gutter cleaning.",
       includes: [
         "Removes black streaks & oxidation",
@@ -99,7 +99,7 @@ const Services = () => {
       icon: Wind,
       image: windowImg,
       href: "/window-cleaning",
-      price: "Free estimates",
+      price: "Fast quotes",
       description: "Exterior window cleaning for residential homes using water-fed pole systems. Streak-free results without ladders against your windows.",
       includes: [
         "Exterior window cleaning",
@@ -113,7 +113,7 @@ const Services = () => {
       icon: Building2,
       image: commercialImg,
       href: "/commercial",
-      price: "Free estimates",
+      price: "Fast quotes",
       description: "Power washing, roof cleaning, gutter cleaning, and window cleaning for businesses. Licensed and insured for commercial properties.",
       includes: [
         "Commercial power washing",
@@ -148,7 +148,7 @@ const Services = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="cta-orange" size="xl" onClick={navigateToContact}>
-                Request Estimate →
+                Get Fast Quote →
               </Button>
               <Button
                 variant="prowash-secondary"
@@ -222,10 +222,10 @@ const Services = () => {
               Not Sure What You Need?
             </h2>
             <p className="text-lg text-white/80 max-w-xl mx-auto mb-8">
-              Tell us about your property and we'll recommend the right services. Free estimates, no obligation.
+              Tell us about your property and we'll recommend the right services. Fast quotes, no obligation.
             </p>
             <Button variant="cta-orange" size="xl" onClick={navigateToContact}>
-              Request Estimate →
+              Get Fast Quote →
             </Button>
           </div>
         </section>

@@ -657,7 +657,7 @@ const Gallery = () => {
                 onClick={navigateToContact}
                 className="bg-moss-green hover:bg-moss-green-light"
               >
-                Request a Free Estimate
+                Get a Fast Quote
               </Button>
             </div>
           </div>

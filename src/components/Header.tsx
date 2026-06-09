@@ -118,7 +118,7 @@ const Header = () => {
               onClick={goToContact}
               className="font-semibold"
             >
-              Request Estimate
+              Get Fast Quote
             </Button>
           </div>
 
@@ -201,7 +201,7 @@ const Header = () => {
                     goToContact();
                   }}
                 >
-                  Request Estimate →
+                  Get Fast Quote →
                 </Button>
               </div>
             </nav>

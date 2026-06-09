@@ -66,10 +66,10 @@ const HeroQuickForm = () => {
       className="w-full max-w-xl mx-auto bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-4 md:p-5 animate-fade-in"
     >
       <p className="text-brand-navy text-base md:text-lg font-semibold text-center">
-        Request a free estimate
+        Get a fast quote
       </p>
       <p className="text-xs md:text-sm text-brand-navy/70 text-center mt-1 mb-3 leading-relaxed">
-        Dylan will call or text to schedule your estimate.
+        Dylan will call or text to confirm details and walk you through the next step.
       </p>
       <div className="flex flex-col sm:flex-row gap-2">
         <input

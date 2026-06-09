@@ -12,13 +12,13 @@ import { generateFAQSchema, injectSchema } from "@/utils/schema";
 const topFAQs = [
   {
     question: "What does roof or gutter cleaning cost?",
-    answer: "Most asphalt roofs in our area range from $250-$1,200 depending on size, pitch, moss level, and access. Metal, tile, and cedar shake roofs are priced separately and often start at $800+. Typical starting prices: gutter cleaning $250+, asphalt roof cleaning $499+. Dylan will call or text after you submit the form so we can understand the job before giving a final estimate.",
+    answer: "Most asphalt roofs in our area range from $250-$1,200 depending on size, pitch, moss level, and access. Metal, tile, and cedar shake roofs are priced separately and often start at $800+. Typical starting prices: gutter cleaning $250+, asphalt roof cleaning $499+. Dylan will call or text after you submit the form so we can understand the job before giving a final quote.",
     icon: CheckCircle,
     cta: true
   },
   {
     question: "How soon can you schedule my service?",
-    answer: "After you request an estimate, Dylan will call or text to schedule it. We'll look at the property, answer questions, and give clear pricing. Scheduling depends on weather and current demand.",
+    answer: "After you submit the form, Dylan will call or text to confirm details and walk you through the best next step. You'll get clear pricing before you book. Scheduling depends on weather and current demand.",
     icon: Clock,
     cta: true
   },
@@ -35,8 +35,8 @@ const topFAQs = [
     cta: true
   },
   {
-    question: "How do I get an estimate?",
-    answer: "Start with the short form. Dylan will call or text to schedule your estimate. After the estimate, you'll get clear pricing and can decide whether to book.",
+    question: "How do I get a quote?",
+    answer: "Start with the short form. Dylan will call or text to confirm details, then walk you through pricing and next steps so you can decide whether to book.",
     icon: CheckCircle,
     cta: true
   },
@@ -105,7 +105,7 @@ const HomeFAQ = () => {
                           }
                         }}
                       >
-                        Request Estimate <ArrowRight className="ml-1 w-4 h-4" />
+                        Get Fast Quote <ArrowRight className="ml-1 w-4 h-4" />
                       </a>
                     )}
                   </AccordionContent>

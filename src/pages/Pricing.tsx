@@ -47,28 +47,28 @@ const Pricing = () => {
       title: "Pressure / Power Washing",
       startingPrice: "Starting at $200",
       description: "Driveways, patios, walkways, retaining walls, decks, and other hard surfaces.",
-      detail: "Estimated based on square footage, surface type, and how much staining or organic growth needs to be removed.",
+      detail: "Quoted based on square footage, surface type, and how much staining or organic growth needs to be removed.",
     },
     {
       icon: Home,
       title: "House Soft Washing",
       startingPrice: "Starting at $500",
       description: "Low-pressure cleaning for siding, trim, soffits, and other exterior surfaces.",
-      detail: "Estimated based on home size, siding material, access, and the amount of algae or dirt buildup.",
+      detail: "Quoted based on home size, siding material, access, and the amount of algae or dirt buildup.",
     },
     {
       icon: Ruler,
       title: "Driveway & Concrete Cleaning",
       startingPrice: "Starting at $200",
       description: "Concrete driveways, sidewalks, patios, stairs, and entry areas.",
-      detail: "Estimated based on total area, stain severity, and whether treatment is needed for moss, algae, or oil spots.",
+      detail: "Quoted based on total area, stain severity, and whether treatment is needed for moss, algae, or oil spots.",
     },
     {
       icon: Wind,
       title: "Exterior Window Cleaning",
       startingPrice: "Starting at $200",
       description: "Exterior-only window cleaning for homes and small commercial properties.",
-      detail: "Estimated based on pane count, number of stories, and access around landscaping or rooflines.",
+      detail: "Quoted based on pane count, number of stories, and access around landscaping or rooflines.",
     },
   ];
 
@@ -76,7 +76,7 @@ const Pricing = () => {
     <>
       <SEOHead
         title="Pricing | Roof, Gutter & Pressure Washing"
-        description="Transparent pricing for roof cleaning, gutter cleaning, pressure washing, and window cleaning in Seattle. No hidden fees. Free estimates."
+        description="Transparent pricing for roof cleaning, gutter cleaning, pressure washing, and window cleaning in Seattle. No hidden fees. Fast quotes."
       />
       
       <Header />
@@ -92,11 +92,11 @@ const Pricing = () => {
               Clear Pricing for Exterior Cleaning
             </h1>
             <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-8">
-              Roof cleaning and gutter cleaning have the clearest typical ranges. Pressure washing, power washing, house soft washing, driveway cleaning, and window cleaning are estimated based on your property.
+              Roof cleaning and gutter cleaning have the clearest typical ranges. Pressure washing, power washing, house soft washing, driveway cleaning, and window cleaning are quoted based on your property.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="cta-orange" size="xl" onClick={navigateToContact}>
-                Request Estimate →
+                Get Fast Quote →
               </Button>
               <Button 
                 variant="prowash-secondary" 
@@ -190,7 +190,7 @@ const Pricing = () => {
                   </div>
 
                   <Button variant="cta-orange" className="w-full" onClick={navigateToContact}>
-                    Request Estimate →
+                    Get Fast Quote →
                   </Button>
                 </CardContent>
               </Card>
@@ -224,7 +224,7 @@ const Pricing = () => {
                   <div className="text-center py-4 bg-brand-navy/5 rounded-lg">
                     <p className="text-sm text-muted-foreground mb-1">Starting at</p>
                     <p className="text-3xl font-bold text-brand-blue">$800+</p>
-                    <p className="text-sm text-muted-foreground mt-1">Often $1,500+ · Custom estimate based on your roof</p>
+                    <p className="text-sm text-muted-foreground mt-1">Often $1,500+ · Custom quote based on your roof</p>
                   </div>
 
                   <div className="space-y-3">
@@ -272,7 +272,7 @@ const Pricing = () => {
                   </div>
 
                   <Button variant="cta-orange" className="w-full" onClick={navigateToContact}>
-                    Request Estimate →
+                    Get Fast Quote →
                   </Button>
                 </CardContent>
               </Card>
@@ -350,7 +350,7 @@ const Pricing = () => {
                   </div>
 
                   <Button variant="cta-orange" className="w-full" onClick={navigateToContact}>
-                    Request Estimate →
+                    Get Fast Quote →
                   </Button>
                 </CardContent>
               </Card>
@@ -367,10 +367,10 @@ const Pricing = () => {
                   Other Exterior Cleaning Services
                 </Badge>
                 <h2 className="text-3xl md:text-4xl font-bold text-brand-blue mb-4">
-                  We Also Estimate Pressure Washing, House Soft Washing & Window Cleaning
+                  We Also Quote Pressure Washing, House Soft Washing & Window Cleaning
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                  We don&apos;t just clean roofs and gutters. We also provide free estimates for pressure washing, power washing, house soft washing, driveway and concrete cleaning, and exterior window cleaning.
+                  We don&apos;t just clean roofs and gutters. We also provide fast quotes for pressure washing, power washing, house soft washing, driveway and concrete cleaning, and exterior window cleaning.
                 </p>
               </div>
 
@@ -387,7 +387,7 @@ const Pricing = () => {
                           <div>
                             <CardTitle className="text-xl text-brand-blue">{service.title}</CardTitle>
                             <CardDescription className="text-sm font-medium text-brand-orange">
-                              {service.startingPrice} • Free estimate
+                              {service.startingPrice} • Fast quote
                             </CardDescription>
                           </div>
                         </div>
@@ -411,20 +411,20 @@ const Pricing = () => {
         </section>
 
 
-        {/* Why Free Estimates */}
+        {/* Why Fast Quotes */}
         <section className="py-16 md:py-20 bg-brand-navy text-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-2xl md:text-4xl font-bold mb-6">
-                Why We Offer Free Estimates
+                Why We Offer Fast Quotes
               </h2>
               <p className="text-lg text-white/80 mb-8">
-                Every home in the Pacific Northwest is different. Tree coverage, roof style, pitch, and access all affect the job. Rather than guess, Dylan will call or text to schedule your estimate visit before final pricing.
+                Every home in the Pacific Northwest is different. Tree coverage, roof style, pitch, and access all affect the job. Rather than guess, Dylan will call or text to confirm details and walk you through pricing.
               </p>
               <div className="grid sm:grid-cols-3 gap-6 mb-10">
                 <div className="bg-white/10 rounded-xl p-6">
                   <p className="text-3xl font-bold text-brand-orange mb-2">$0</p>
-                  <p className="text-sm text-white/70">Free estimate, no surprise charges</p>
+                  <p className="text-sm text-white/70">Fast quote, no surprise charges</p>
                 </div>
                 <div className="bg-white/10 rounded-xl p-6">
                   <p className="text-3xl font-bold text-brand-orange mb-2">No Obligation</p>
@@ -437,7 +437,7 @@ const Pricing = () => {
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="cta-orange" size="xl" onClick={navigateToContact}>
-                  Request Estimate →
+                  Get Fast Quote →
                 </Button>
                 <Button 
                   variant="prowash-secondary" 

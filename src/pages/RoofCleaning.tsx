@@ -104,7 +104,7 @@ const RoofCleaning = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="Professional Roof Cleaning Services"
-        description="Expert roof cleaning and moss removal in Seattle. Eco-friendly soft wash that extends roof life. 12-month guarantee. Licensed & insured. Free estimates."
+        description="Expert roof cleaning and moss removal in Seattle. Eco-friendly soft wash that extends roof life. 12-month guarantee. Licensed & insured. Fast quotes."
         url="https://www.seattleprowash.com/roof-cleaning"
         image={roofCleaningImage}
       />
@@ -123,14 +123,14 @@ const RoofCleaning = () => {
                   
                   {/* Mini Trust Line */}
                   <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
-                    5.0★ from 200+ neighbors • Licensed & Insured • Free Estimates
+                    5.0★ from 200+ neighbors • Licensed & Insured • Fast Quotes
                   </p>
 
                   {/* 1-2-3 Process */}
                   <ul className="flex flex-wrap gap-2 md:gap-4 text-white/90 mb-8 text-sm md:text-base">
-                    <li><strong className="text-brand-orange">1)</strong> Request an inspection & estimate</li>
-                    <li><strong className="text-brand-orange">2)</strong> Dylan calls or texts</li>
-                    <li><strong className="text-brand-orange">3)</strong> Schedule your appointment</li>
+                    <li><strong className="text-brand-orange">1)</strong> Send the quote form</li>
+                    <li><strong className="text-brand-orange">2)</strong> Dylan confirms details</li>
+                    <li><strong className="text-brand-orange">3)</strong> Get clear pricing</li>
                   </ul>
 
                   <div className="flex flex-col sm:flex-row gap-4 mb-6">
@@ -139,7 +139,7 @@ const RoofCleaning = () => {
                       size="xl"
                       onClick={navigateToContact}
                     >
-                      Request Roof Inspection & Estimate →
+                      Get Roof Cleaning Quote →
                     </Button>
                     <Button 
                       variant="prowash-outline"
@@ -152,7 +152,7 @@ const RoofCleaning = () => {
                   
                   {/* Trust Indicators */}
                   <p className="text-white/80 text-sm">
-                    ✓ 12-Month Guarantee  ✓ Free Estimates  ✓ 200+ Reviews
+                    ✓ 12-Month Guarantee  ✓ Fast Quotes  ✓ 200+ Reviews
                   </p>
                 </div>
                 <div className="fade-up">
@@ -247,7 +247,7 @@ const RoofCleaning = () => {
                       className="w-full"
                       onClick={navigateToContact}
                     >
-                      Request Estimate
+                      Get Fast Quote
                     </Button>
                   </CardContent>
                 </Card>
@@ -266,7 +266,7 @@ const RoofCleaning = () => {
                       className="w-full"
                       onClick={navigateToContact}
                     >
-                      Request Estimate
+                      Get Fast Quote
                     </Button>
                   </CardContent>
                 </Card>
@@ -425,7 +425,7 @@ const RoofCleaning = () => {
                 Ready for Expert Roof Cleaning?
               </h2>
               <p className="text-xl text-white/90 mb-8">
-                Fill out the form and Dylan will call or text to schedule your appointment.
+                Fill out the form and Dylan will call or text to confirm details and walk you through the next step.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4 mb-4">
                 <Button
@@ -433,7 +433,7 @@ const RoofCleaning = () => {
                   size="xl"
                   onClick={navigateToContact}
                 >
-                  Request Roof Inspection & Estimate
+                  Get Roof Cleaning Quote
                 </Button>
                 <Button 
                   variant="prowash-outline"

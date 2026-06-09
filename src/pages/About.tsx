@@ -176,10 +176,10 @@ const About = () => {
                 </div>
                 <div className="text-center md:text-left flex-1">
                   <h3 className="text-2xl md:text-3xl font-bold text-brand-navy mb-4">
-                    Get a Free Estimate
+                    Get a Fast Quote
                   </h3>
                   <p className="text-lg text-muted-foreground mb-6">
-                    "Tell us what is going on with your roof and Dylan will call or text to schedule your estimate visit before final pricing."
+                    "Tell us what is going on with your roof and Dylan will call or text to confirm details and walk you through the next step."
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button 
@@ -187,7 +187,7 @@ const About = () => {
                       size="xl"
                       onClick={navigateToContact}
                     >
-                      Request Estimate →
+                      Get Fast Quote →
                     </Button>
                     <Button 
                       variant="outline"
@@ -257,7 +257,7 @@ const About = () => {
             <div className="max-w-4xl mx-auto text-center fade-up">
               <div className="bg-brand-white rounded-2xl p-8 shadow-lg border border-brand-orange/20">
                 <p className="text-lg text-muted-foreground mb-6">
-                  Ready for a moss-free roof? Call <a href="tel:+12067526690" className="text-brand-orange hover:underline">206-752-6690</a> or get your free estimate today.
+                  Ready for a moss-free roof? Call <a href="tel:+12067526690" className="text-brand-orange hover:underline">206-752-6690</a> or get a fast quote today.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                   <Button 
@@ -265,7 +265,7 @@ const About = () => {
                     size="xl"
                     onClick={navigateToContact}
                   >
-                    Request Estimate
+                    Get Fast Quote
                   </Button>
                    <Button 
                      variant="prowash-phone" 
@@ -379,7 +379,7 @@ const About = () => {
                   onClick={navigateToContact}
                   className="bg-moss-green hover:bg-moss-green-light"
                 >
-                  Request a Free Estimate
+                  Get a Fast Quote
                 </Button>
               </div>
             </div>
