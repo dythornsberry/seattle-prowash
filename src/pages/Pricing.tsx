@@ -419,7 +419,7 @@ const Pricing = () => {
                 Why We Offer Fast Quotes
               </h2>
               <p className="text-lg text-white/80 mb-8">
-                Every home in the Pacific Northwest is different. Tree coverage, roof style, pitch, and access all affect the job. Rather than guess, Dylan will call or text to confirm details and walk you through pricing.
+                Every home in the Pacific Northwest is different. Tree coverage, roof style, pitch, and access all affect the job. Rather than guess, Dylan will call or text to confirm details and help you get clear pricing.
               </p>
               <div className="grid sm:grid-cols-3 gap-6 mb-10">
                 <div className="bg-white/10 rounded-xl p-6">

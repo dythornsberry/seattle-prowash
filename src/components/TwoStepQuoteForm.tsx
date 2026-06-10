@@ -335,10 +335,10 @@ const TwoStepQuoteForm = () => {
               Get a Fast Quote
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mb-3">
-              Tell us what you need. Dylan will call or text to confirm details and walk you through the next step.
+              Tell us what you need. Dylan will call or text to confirm details and help you get a quote.
             </p>
             <p className="text-sm text-muted-foreground">
-              Prefer to call or text? <a href="tel:12067526690" className="hover:text-brand-orange transition-colors" onClick={handleCallClick}>206-752-6690</a> (texting is totally fine)
+              Prefer to call or text? <a href="tel:12067526690" className="hover:text-brand-orange transition-colors" onClick={handleCallClick}>206-752-6690</a>
             </p>
           </div>
 
@@ -358,7 +358,7 @@ const TwoStepQuoteForm = () => {
                 ))}
               </ol>
               <p className="mt-5 border-t border-brand-navy/10 pt-4 text-sm text-brand-navy/70 leading-relaxed">
-                No pressure, just clear pricing and a simple next step before you book.
+                No pressure, just clear pricing before you book.
               </p>
             </div>
 
@@ -373,7 +373,7 @@ const TwoStepQuoteForm = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-brand-navy">Got it! We're on it.</h3>
                   <p className="text-muted-foreground text-lg max-w-md mx-auto">
-                    Dylan will call or text to confirm details and walk you through the next step.
+                    Dylan will call or text to confirm details and help you get a quote.
                   </p>
                   <p className="text-sm text-muted-foreground">
                     Questions? Call or text <a href="tel:12067526690" className="text-brand-orange font-semibold hover:underline">206-752-6690</a> anytime.

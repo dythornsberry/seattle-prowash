@@ -179,7 +179,7 @@ const About = () => {
                     Get a Fast Quote
                   </h3>
                   <p className="text-lg text-muted-foreground mb-6">
-                    "Tell us what is going on with your roof and Dylan will call or text to confirm details and walk you through the next step."
+                    "Tell us what is going on with your roof and Dylan will call or text to confirm details and help you get a quote."
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button 

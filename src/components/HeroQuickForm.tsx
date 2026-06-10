@@ -69,7 +69,7 @@ const HeroQuickForm = () => {
         Get a fast quote
       </p>
       <p className="text-xs md:text-sm text-brand-navy/70 text-center mt-1 mb-3 leading-relaxed">
-        Dylan will call or text to confirm details and walk you through the next step.
+        Dylan will call or text to confirm details and help you get a quote.
       </p>
       <div className="flex flex-col sm:flex-row gap-2">
         <input

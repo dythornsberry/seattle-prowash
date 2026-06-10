@@ -425,7 +425,7 @@ const RoofCleaning = () => {
                 Ready for Expert Roof Cleaning?
               </h2>
               <p className="text-xl text-white/90 mb-8">
-                Fill out the form and Dylan will call or text to confirm details and walk you through the next step.
+                Fill out the form and Dylan will call or text to confirm details and help you get a quote.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4 mb-4">
                 <Button

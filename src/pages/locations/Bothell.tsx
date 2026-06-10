@@ -320,7 +320,7 @@ const Bothell = () => {
               },
               {
                 question: "How quickly can you service my Bothell home?",
-                answer: "After you submit the quote form, Dylan will call or text to confirm details and walk you through pricing. If you want to move forward, we'll help you get on the schedule."
+                answer: "After you submit the quote form, Dylan will call or text to confirm details and help you get clear pricing. If you want to move forward, we'll help you get on the schedule."
               }
             ]} 
             schemaContext="roof" 

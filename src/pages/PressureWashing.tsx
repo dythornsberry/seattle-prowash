@@ -204,7 +204,7 @@ const PressureWashing = () => {
                 Ready to See the Difference?
               </h2>
               <p className="text-xl text-white/90 mb-8">
-                Get a fast pressure washing quote. Dylan will call or text to confirm the surfaces and walk you through pricing.
+                Get a fast pressure washing quote. Dylan will call or text to confirm the surfaces and help you get clear pricing.
               </p>
               <Button variant="prowash-secondary" size="xl" onClick={navigateToContact}>
                 Get Fast Quote

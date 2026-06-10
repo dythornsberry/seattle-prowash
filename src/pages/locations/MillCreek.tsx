@@ -74,7 +74,7 @@ const MillCreek = () => {
     },
     {
       question: "How quickly can you schedule service?",
-      answer: "We service Mill Creek year-round. Submit the quote form and Dylan will call or text to confirm details and walk you through pricing. If you want to move forward, we'll work with you to find a service time that fits."
+      answer: "We service Mill Creek year-round. Submit the quote form and Dylan will call or text to confirm details and help you get clear pricing. If you want to move forward, we'll work with you to find a service time that fits."
     }
   ];
 

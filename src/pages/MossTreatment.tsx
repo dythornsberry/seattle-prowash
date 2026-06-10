@@ -69,7 +69,7 @@ const MossTreatment = () => {
                   <span className="bg-white/10 px-4 py-2 rounded-full">Fast Quotes</span>
                 </div>
                 <p className="text-white/80 text-base md:text-lg mt-6 max-w-2xl mx-auto">
-                  Fill out the form and Dylan will call or text to confirm details and walk you through the next step.
+                  Fill out the form and Dylan will call or text to confirm details and help you get a quote.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
                   <Button
@@ -248,7 +248,7 @@ const MossTreatment = () => {
                   Ready to Protect Your Roof from Moss?
                 </h2>
                 <p className="text-lg text-gray-600 mb-8">
-                  Don't let moss damage your biggest investment. Get a fast moss cleaning quote so Dylan can recommend the right next step for your roof.
+                  Don't let moss damage your biggest investment. Get a fast moss cleaning quote so Dylan can help you price the right service for your roof.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button 

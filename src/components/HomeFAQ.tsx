@@ -18,7 +18,7 @@ const topFAQs = [
   },
   {
     question: "How soon can you schedule my service?",
-    answer: "After you submit the form, Dylan will call or text to confirm details and walk you through the best next step. You'll get clear pricing before you book. Scheduling depends on weather and current demand.",
+    answer: "After you submit the form, Dylan will call or text to confirm details and help you get a quote. You'll get clear pricing before you book. Scheduling depends on weather and current demand.",
     icon: Clock,
     cta: true
   },
@@ -36,7 +36,7 @@ const topFAQs = [
   },
   {
     question: "How do I get a quote?",
-    answer: "Start with the short form. Dylan will call or text to confirm details, then walk you through pricing and next steps so you can decide whether to book.",
+    answer: "Start with the short form. Dylan will call or text to confirm details, then help you get clear pricing so you can decide whether to book.",
     icon: CheckCircle,
     cta: true
   },

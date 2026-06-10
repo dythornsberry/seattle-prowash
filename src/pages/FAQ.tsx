@@ -74,7 +74,7 @@ const additionalFaqs = [
   {
     icon: Clock,
     question: "How do quotes and scheduling work?",
-    answer: "• Start with the short quote form\n\n• Dylan calls or texts to confirm details\n\n• You get clear pricing and next steps\n\n• If you want to move forward, we help you schedule\n\n• Scheduling depends on weather and current demand",
+    answer: "• Start with the short quote form\n\n• Dylan calls or texts to confirm details\n\n• You get clear pricing before you book\n\n• If you want to move forward, we help you schedule\n\n• Scheduling depends on weather and current demand",
     category: "Process"
   },
   {
