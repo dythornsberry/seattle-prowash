@@ -248,7 +248,7 @@ const FAQ = () => {
                   onClick={() => window.location.href = 'tel:206-752-6690'}
                 >
                   <Phone className="w-5 h-5 mr-2" />
-                  Call 206-752-6690
+                  Call or Text 206-752-6690
                 </Button>
               </div>
             </div>

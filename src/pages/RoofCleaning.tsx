@@ -146,7 +146,7 @@ const RoofCleaning = () => {
                       size="xl"
                       onClick={() => window.location.href = 'tel:2067526690'}
                     >
-                      Call 206-752-6690
+                      Call or Text 206-752-6690
                     </Button>
                   </div>
                   
@@ -441,7 +441,7 @@ const RoofCleaning = () => {
                   onClick={() => window.location.href = 'tel:206-752-6690'}
                 >
                   <Phone className="w-4 h-4 mr-2" />
-                  Call 206-752-6690
+                  Call or Text 206-752-6690
                 </Button>
               </div>
               <p className="text-white/70 text-sm mt-4">

@@ -30,7 +30,7 @@ const Footer = () => {
               onClick={() => window.location.href = 'tel:206-752-6690'}
             >
               <Phone className="w-4 h-4 mr-2" />
-              Call 206-752-6690
+              Call or Text 206-752-6690
             </Button>
           </div>
         </div>
@@ -172,7 +172,7 @@ const Footer = () => {
                 <Link to="/service-areas" className="hover:text-white underline">View all service areas</Link> • Serving ~15 miles from Kenmore
               </p>
               <p className="text-sm text-brand-orange mt-4 font-semibold">
-                Call 206-752-6690 for your fast quote
+                Call or text 206-752-6690 for your fast quote
               </p>
             </div>
 

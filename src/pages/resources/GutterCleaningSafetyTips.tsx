@@ -255,7 +255,7 @@ const GutterCleaningSafetyTips = () => {
                       className="border-white text-white hover:bg-white hover:text-dark-teal"
                       onClick={() => window.location.href = 'tel:206-752-6690'}
                     >
-                      Call 206-752-6690
+                      Call or Text 206-752-6690
                     </Button>
                   </div>
                 </div>

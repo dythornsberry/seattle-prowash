@@ -237,7 +237,7 @@ const Kenmore = () => {
                     onClick={() => window.location.href = 'tel:+12067526690'}
                   >
                     <Phone className="w-4 h-4 mr-2" />
-                    Call 206-752-6690
+                    Call or Text 206-752-6690
                   </Button>
                   <p className="text-gray-600 mt-4">
                     Looking for another location? <a href="/services" className="text-primary-teal hover:underline font-semibold">See all areas we serve</a>
@@ -369,7 +369,7 @@ const Kenmore = () => {
                     size="xl"
                     onClick={() => window.location.href = 'tel:206-752-6690'}
                   >
-                    Call 206-752-6690
+                    Call or Text 206-752-6690
                   </Button>
                 </div>
                 

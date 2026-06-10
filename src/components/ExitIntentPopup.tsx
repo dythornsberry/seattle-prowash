@@ -129,7 +129,7 @@ const ExitIntentPopup = () => {
                 Get Fast Quote →
               </Button>
               <p className="text-sm text-gray-600">
-                Or call <a href="tel:12067526690" className="text-brand-orange hover:underline font-semibold">206-752-6690</a> now
+                Or call or text <a href="tel:12067526690" className="text-brand-orange hover:underline font-semibold">206-752-6690</a> now
               </p>
             </div>
           </div>

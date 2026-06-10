@@ -364,7 +364,7 @@ const Kirkland = () => {
                     size="xl"
                     onClick={() => window.location.href = 'tel:206-752-6690'}
                   >
-                    Call 206-752-6690
+                    Call or Text 206-752-6690
                   </Button>
                 </div>
                 

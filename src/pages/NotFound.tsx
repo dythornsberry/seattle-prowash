@@ -49,7 +49,7 @@ const NotFound = () => {
               onClick={() => window.location.href = 'tel:2067526690'}
             >
               <Phone className="w-4 h-4 mr-2" />
-              Call 206-752-6690
+              Call or Text 206-752-6690
             </Button>
           </div>
 

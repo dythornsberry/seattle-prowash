@@ -42,9 +42,9 @@ const Hero = () => {
           {/* Inline mini-form */}
           <HeroQuickForm />
 
-          {/* Call alternative */}
+          {/* Call/text alternative */}
           <p className="text-white/90 text-sm md:text-base font-medium animate-fade-in drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
-            Prefer to call?{" "}
+            Prefer to call or text?{" "}
             <button
               onClick={handleCall}
               className="text-white font-bold underline underline-offset-4 hover:text-brand-orange transition-colors"

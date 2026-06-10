@@ -338,7 +338,7 @@ const TwoStepQuoteForm = () => {
               Tell us what you need. Dylan will call or text to confirm details and walk you through the next step.
             </p>
             <p className="text-sm text-muted-foreground">
-              Prefer to call? <a href="tel:12067526690" className="hover:text-brand-orange transition-colors" onClick={handleCallClick}>206-752-6690</a> (call or text anytime)
+              Prefer to call or text? <a href="tel:12067526690" className="hover:text-brand-orange transition-colors" onClick={handleCallClick}>206-752-6690</a> (texting is totally fine)
             </p>
           </div>
 
@@ -376,7 +376,7 @@ const TwoStepQuoteForm = () => {
                     Dylan will call or text to confirm details and walk you through the next step.
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    Questions? Call <a href="tel:12067526690" className="text-brand-orange font-semibold hover:underline">206-752-6690</a> anytime.
+                    Questions? Call or text <a href="tel:12067526690" className="text-brand-orange font-semibold hover:underline">206-752-6690</a> anytime.
                   </p>
                 </CardContent>
               </Card>

@@ -41,7 +41,7 @@ const UnifiedContactBar = () => {
               className="w-full justify-start gap-2 border-border hover:bg-accent"
             >
               <Phone className="w-4 h-4" />
-              Call 206-752-6690
+              Call or Text 206-752-6690
             </Button>
             <Button
               variant="outline"
@@ -93,7 +93,7 @@ const UnifiedContactBar = () => {
               className="w-full justify-start gap-2 border-border hover:bg-accent"
             >
               <Phone className="w-4 h-4" />
-              Call 206-752-6690
+              Call or Text 206-752-6690
             </Button>
             <Button
               variant="outline"
