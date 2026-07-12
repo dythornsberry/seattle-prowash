@@ -21,7 +21,7 @@ const routes = [
   {
     path: '/',
     title: 'Seattle Roof & Gutter Cleaning Experts',
-    description: 'Expert roof cleaning and gutter cleaning in Seattle, Kenmore, Bothell, Kirkland & Shoreline. 12-month moss-free guarantee. Licensed & insured. Free estimates.',
+    description: 'Roof cleaning, moss removal & gutter cleaning in Seattle, Kenmore, Lake Forest Park, Bothell, Kirkland & Shoreline. 12-month moss-free guarantee. Licensed & insured. Fast quotes.',
   },
   {
     path: '/services',
@@ -31,7 +31,7 @@ const routes = [
   {
     path: '/roof-cleaning',
     title: 'Roof Cleaning & Moss Removal in Seattle, WA',
-    description: 'Expert roof cleaning and moss removal in Seattle. Eco-friendly soft wash that extends roof life. 12-month guarantee. Licensed & insured. Free estimates.',
+    description: 'Roof cleaning and moss removal for asphalt, composite & metal roofs in Seattle, Kenmore, Bothell & Kirkland. 12-month moss-free guarantee. Licensed & insured. Fast quotes.',
   },
   {
     path: '/gutter-cleaning',
@@ -66,7 +66,7 @@ const routes = [
   {
     path: '/about',
     title: 'About Dylan & the Team',
-    description: 'Meet Dylan Thornsberry, owner of Seattle ProWash. Kenmore-based roof and gutter cleaning specialists serving Seattle Metro since 2022. 200+ 5-star reviews.',
+    description: 'Meet Dylan Thornsberry, owner of Seattle ProWash. Kenmore-based roof and gutter cleaning specialists serving Seattle Metro since 2022. 224 5-star reviews.',
   },
   {
     path: '/faq',
@@ -81,7 +81,7 @@ const routes = [
   {
     path: '/reviews',
     title: 'Customer Reviews',
-    description: 'Read 200+ authentic 5-star reviews for Seattle ProWash. Real testimonials from customers in Kenmore, Bothell, Kirkland & Seattle.',
+    description: 'Read 224 authentic 5-star reviews for Seattle ProWash. Real testimonials from customers in Kenmore, Bothell, Kirkland & Seattle.',
   },
   {
     path: '/service-areas',
@@ -99,6 +99,21 @@ const routes = [
     description: 'Learn why regular roof and gutter maintenance is essential for Pacific Northwest homes. Prevent water damage, extend roof life, and save on energy costs.',
   },
   {
+    path: '/resources/roof-cleaning-cost-seattle',
+    title: 'What Roof Cleaning Costs in Seattle (2026 Guide)',
+    description: 'Real 2026 roof cleaning prices from a Seattle-area contractor. Most asphalt roofs run $499–$1,200 with gutter cleaning included. Metal starts at $800.',
+  },
+  {
+    path: '/resources/best-time-roof-gutter-cleaning-seattle',
+    title: 'Best Time of Year for Roof & Gutter Cleaning in Seattle',
+    description: 'When to schedule roof cleaning, moss treatment, and gutter cleaning in Seattle — season-by-season advice from a Kenmore-based contractor who works year-round.',
+  },
+  {
+    path: '/resources/moss-treatment-vs-roof-cleaning',
+    title: 'Moss Treatment vs. Full Roof Cleaning: Which Do You Need?',
+    description: 'Moss treatment kills the moss; full roof cleaning removes it too. A Seattle-area contractor explains when each makes sense and what they cost.',
+  },
+  {
     path: '/resources/prevent-moss-algae-growth',
     title: 'How to Prevent Moss and Algae Growth on Your Roof',
     description: 'Discover proven strategies to prevent moss and algae growth on Pacific Northwest roofs. Professional tips for protecting your home\'s value and extending roof life.',
@@ -113,6 +128,11 @@ const routes = [
     path: '/kenmore-roof-gutter-cleaning',
     title: 'Roof & Gutter Cleaning in Kenmore, WA',
     description: 'Expert roof cleaning, gutter cleaning, and moss removal in Kenmore, WA. Serving Kenmore Highlands, Moorlands, and all local neighborhoods. 12-month guarantee. Licensed & insured.',
+  },
+  {
+    path: '/lake-forest-park-roof-gutter-cleaning',
+    title: 'Roof & Gutter Cleaning in Lake Forest Park, WA',
+    description: 'Expert roof cleaning, moss removal, and gutter cleaning in Lake Forest Park, WA. Serving Sheridan Beach, Horizon View & all neighborhoods. 12-month guarantee. Licensed & insured.',
   },
   {
     path: '/bothell-roof-gutter-cleaning',

@@ -13,6 +13,7 @@ import dylanOwnerPhoto from "@/assets/dylan-owner-patio-pressure-washing.jpg";
 import dylanRoofWork from "@/assets/dylan-roof-work.jpg";
 import technicianHouseWashing from "@/assets/technician-house-washing.jpg";
 import technicianTruckPortrait from "@/assets/technician-truck-portrait.jpg";
+import dylanQfcBoomLift from "@/assets/dylan-qfc-sign-boom-lift.jpg";
 
 const About = () => {
   // Scroll to top and set up fade-up animations
@@ -71,7 +72,7 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="About Dylan & the Team"
-        description="Meet Dylan Thornsberry, owner of Seattle ProWash. Kenmore-based roof and gutter cleaning specialists serving Seattle Metro since 2022. 200+ 5-star reviews."
+        description="Meet Dylan Thornsberry, owner of Seattle ProWash. Kenmore-based roof and gutter cleaning specialists serving Seattle Metro since 2022. 224 5-star reviews."
         url="https://www.seattleprowash.com/about"
       />
       <Header />
@@ -118,6 +119,7 @@ const About = () => {
                     <div>
                       <p className="font-semibold text-brand-navy">Based in Kenmore, WA</p>
                       <p className="text-muted-foreground">6516 NE 192nd Pl, Kenmore, WA 98028</p>
+                      <p className="text-sm text-muted-foreground mt-1">WA Contractor Lic. #SEATTPL783M6 · Bonded · $1M Insured</p>
                     </div>
                   </div>
                   
@@ -131,7 +133,7 @@ const About = () => {
                       <div className="text-sm text-muted-foreground">Properties Restored</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-brand-orange mb-2">200+</div>
+                      <div className="text-3xl font-bold text-brand-orange mb-2">224</div>
                       <div className="text-sm text-muted-foreground">5-Star Google Reviews</div>
                     </div>
                     <div className="text-center">
@@ -179,7 +181,7 @@ const About = () => {
                     Get a Fast Quote
                   </h3>
                   <p className="text-lg text-muted-foreground mb-6">
-                    "Tell us what is going on with your roof and Dylan will call or text to confirm details and help you get a quote."
+                    "Tell me what's going on with your roof and I'll call or text to confirm the details and get you a quote — usually the same day."
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button 
@@ -305,8 +307,8 @@ const About = () => {
                       loading="lazy"
                     />
                     <div className="absolute bottom-4 left-4 bg-brand-navy/90 text-white px-4 py-2 rounded-lg">
-                      <div className="font-semibold">Dylan - Leading the Crew</div>
-                      <div className="text-sm">Roof Moss Protection Specialist</div>
+                      <div className="font-semibold">Dylan on the Roof</div>
+                      <div className="text-sm">Moss removal & treatment</div>
                     </div>
                   </div>
                 </div>
@@ -322,8 +324,8 @@ const About = () => {
                       loading="lazy"
                     />
                     <div className="absolute bottom-4 left-4 bg-brand-navy/90 text-white px-4 py-2 rounded-lg">
-                      <div className="font-semibold">Team at Work</div>
-                      <div className="text-sm">Roof & Gutter Cleaning Experts</div>
+                      <div className="font-semibold">House Soft-Wash in Progress</div>
+                      <div className="text-sm">Low pressure, no damage</div>
                     </div>
                   </div>
                 </div>
@@ -332,16 +334,16 @@ const About = () => {
               <div className="grid md:grid-cols-1 max-w-2xl mx-auto fade-up">
                 <div className="relative rounded-2xl overflow-hidden shadow-xl">
                   <img
-                    src={technicianTruckPortrait}
-                    alt="Seattle ProWash team member with professional roof cleaning equipment in Kenmore WA"
-                    className="w-full h-80 object-cover"
-                    width={1200}
-                    height={800}
+                    src={dylanQfcBoomLift}
+                    alt="Dylan Thornsberry 65 feet up on a boom lift cleaning the landmark QFC ball sign on Holman Road, Seattle"
+                    className="w-full h-80 object-cover object-top"
+                    width={1050}
+                    height={1400}
                     loading="lazy"
                   />
                     <div className="absolute bottom-4 left-4 bg-brand-navy/90 text-white px-4 py-2 rounded-lg">
-                      <div className="font-semibold">Professional-Grade Equipment</div>
-                      <div className="text-sm">Ready for Any Challenge</div>
+                      <div className="font-semibold">65 Feet Up Over Holman Road</div>
+                      <div className="text-sm">Cleaning Seattle's landmark QFC sign</div>
                     </div>
                 </div>
               </div>
@@ -362,9 +364,9 @@ const About = () => {
               
               <div className="flex flex-wrap justify-center gap-3 mb-12">
                 {[
-                  "Kenmore", "Bothell", "Kirkland", "Redmond", "Bellevue", 
-                  "Seattle", "Lynnwood", "Edmonds", "Mukilteo", "Mill Creek",
-                  "Woodinville", "Sammamish", "Issaquah", "Renton"
+                  "Kenmore", "Lake Forest Park", "Bothell", "Kirkland", "Shoreline",
+                  "Woodinville", "Seattle", "Redmond", "Bellevue",
+                  "Lynnwood", "Edmonds", "Mill Creek", "Sammamish", "Mountlake Terrace"
                 ].map((city) => (
                   <Badge key={city} variant="secondary" className="bg-brand-orange text-white font-semibold py-2 px-4">
                     {city}

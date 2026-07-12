@@ -9,7 +9,7 @@ export const PHONE = {
 
 export const TRUST_METRICS = {
   rating: "5.0",
-  reviewCount: "200+",
+  reviewCount: "224",
   guarantee: "12-Month",
   guaranteeFull: "12-Month Moss-Free Guarantee",
   quotes: "Free",

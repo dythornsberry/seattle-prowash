@@ -337,6 +337,9 @@ const TwoStepQuoteForm = () => {
             <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mb-3">
               Tell us what you need. Dylan will call or text to confirm details and help you get a quote.
             </p>
+            <p className="text-sm text-muted-foreground max-w-2xl mx-auto mb-3">
+              So there are no surprises: gutter cleaning starts at $250 and roof cleaning at $499. Most quotes come back the same day.
+            </p>
             <p className="text-sm text-muted-foreground">
               Prefer to call or text? <a href="tel:12067526690" className="hover:text-brand-orange transition-colors" onClick={handleCallClick}>206-752-6690</a>
             </p>
@@ -751,7 +754,7 @@ const TwoStepQuoteForm = () => {
                             Your info stays private. We never share or spam.
                           </p>
                           <p className="text-center text-muted-foreground text-sm">
-                            Trusted by 200+ homeowners in Kenmore, Bothell & Kirkland  •  Licensed & Insured
+                            Trusted by 224 homeowners in Kenmore, Bothell & Kirkland  •  Licensed & Insured
                           </p>
                         </>
                       )}

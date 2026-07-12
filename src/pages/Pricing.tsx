@@ -91,8 +91,11 @@ const Pricing = () => {
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Clear Pricing for Exterior Cleaning
             </h1>
-            <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-8">
+            <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-4">
               Roof cleaning and gutter cleaning have the clearest typical ranges. Pressure washing, power washing, house soft washing, driveway cleaning, and window cleaning are quoted based on your property.
+            </p>
+            <p className="text-base text-white/90 max-w-2xl mx-auto mb-8 font-medium">
+              Straight answer up front: gutter cleaning starts at $250 and roof cleaning at $499. If that fits your budget, we'll take great care of you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="cta-orange" size="xl" onClick={navigateToContact}>

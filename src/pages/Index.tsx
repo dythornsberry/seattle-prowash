@@ -72,7 +72,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="Seattle Roof & Gutter Cleaning Experts"
-        description="Expert roof cleaning and gutter cleaning in Seattle, Kenmore, Bothell, Kirkland & Shoreline. 12-month moss-free guarantee. Licensed & insured. Fast quotes."
+        description="Roof cleaning, moss removal & gutter cleaning in Seattle, Kenmore, Lake Forest Park, Bothell, Kirkland & Shoreline. 12-month moss-free guarantee. Licensed & insured. Fast quotes."
         url="https://www.seattleprowash.com"
       />
       <div id="content-with-offset">
@@ -98,6 +98,7 @@ const Index = () => {
             description="Professional roof cleaning and gutter cleaning services from our home base in Kenmore to communities throughout the north end and greater Seattle"
             areas={[
               { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning", description: "Our home base – Lake Washington roof & gutter experts" },
+              { name: "Lake Forest Park", path: "/lake-forest-park-roof-gutter-cleaning", description: "Moss removal for the north end's most tree-covered city" },
               { name: "Bothell", path: "/bothell-roof-gutter-cleaning", description: "Northshore area roof and gutter specialists" },
               { name: "Lynnwood", path: "/lynnwood-roof-gutter-cleaning", description: "North Seattle metro roof and gutter cleaning" },
               { name: "Kirkland", path: "/kirkland-roof-gutter-cleaning", description: "Waterfront property roof specialists" },

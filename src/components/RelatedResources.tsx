@@ -14,19 +14,19 @@ interface RelatedResourcesProps {
 
 const defaultResources: Resource[] = [
   {
-    title: "Prevent Moss & Algae Growth",
-    description: "Learn how to keep your home's exterior moss-free year-round.",
-    path: "/resources/prevent-moss-algae-growth"
+    title: "What Roof Cleaning Costs in Seattle",
+    description: "Real 2026 prices and what actually drives them.",
+    path: "/resources/roof-cleaning-cost-seattle"
   },
   {
-    title: "Gutter Cleaning Safety Tips",
-    description: "Essential safety guidelines for maintaining your gutters.",
-    path: "/resources/gutter-cleaning-safety-tips"
+    title: "Moss Treatment vs. Full Roof Cleaning",
+    description: "Which service your roof actually needs, explained honestly.",
+    path: "/resources/moss-treatment-vs-roof-cleaning"
   },
   {
-    title: "Roof & Gutter Maintenance",
-    description: "Why regular cleaning is crucial for your home.",
-    path: "/resources/roof-gutter-cleaning-importance"
+    title: "Best Time of Year to Clean",
+    description: "Season-by-season timing advice for roofs and gutters.",
+    path: "/resources/best-time-roof-gutter-cleaning-seattle"
   }
 ];
 

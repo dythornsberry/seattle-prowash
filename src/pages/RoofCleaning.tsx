@@ -20,6 +20,9 @@ import roofCleaningImage from "@/assets/roof-moss-removal-detailed-before-after.
 import roofBA1 from "@/assets/asphalt-roof-moss-cleaning-before-after.jpg";
 import roofBA2 from "@/assets/metal-roof-cleaning-before-after.jpg";
 import roofBA3 from "@/assets/roof-softwash-before-after.jpg";
+import metalRoofSectionImg from "@/assets/recent-silver-metal-roof-before-after-2026.webp";
+import roofNeedlesBefore from "@/assets/roof-needles-before.jpg";
+import roofNeedlesAfter from "@/assets/roof-needles-after.jpg";
 import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 import { navigateToContact } from "@/lib/navigation";
 
@@ -55,6 +58,10 @@ const RoofCleaning = () => {
         {
           question: "Do I need to be home during the roof cleaning?",
           answer: "You don't need to be home. We work on the exterior only and will send you before/after photos when the job is complete. Just make sure we have clear access to your roof."
+        },
+        {
+          question: "Do you clean metal roofs?",
+          answer: "Yes — we clean a lot of metal roofs, including standing seam and corrugated panels. Metal needs a gentler, finish-safe process than asphalt, and it comes with the same moss treatment and 12-month guarantee. Metal roof cleaning starts at $800."
         }
       ]
     });
@@ -102,9 +109,9 @@ const RoofCleaning = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead 
-        title="Professional Roof Cleaning Services"
-        description="Expert roof cleaning and moss removal in Seattle. Eco-friendly soft wash that extends roof life. 12-month guarantee. Licensed & insured. Fast quotes."
+      <SEOHead
+        title="Roof Cleaning & Moss Removal in Seattle, WA"
+        description="Roof cleaning and moss removal for asphalt, composite & metal roofs in Seattle, Kenmore, Bothell & Kirkland. 12-month moss-free guarantee. Licensed & insured. Fast quotes."
         url="https://www.seattleprowash.com/roof-cleaning"
         image={roofCleaningImage}
       />
@@ -123,7 +130,7 @@ const RoofCleaning = () => {
                   
                   {/* Mini Trust Line */}
                   <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
-                    5.0★ from 200+ neighbors • Licensed & Insured • Fast Quotes
+                    5.0★ from 224 neighbors • Licensed & Insured • Fast Quotes
                   </p>
 
                   {/* 1-2-3 Process */}
@@ -152,7 +159,7 @@ const RoofCleaning = () => {
                   
                   {/* Trust Indicators */}
                   <p className="text-white/80 text-sm">
-                    ✓ 12-Month Guarantee  ✓ Fast Quotes  ✓ 200+ Reviews
+                    ✓ 12-Month Guarantee  ✓ 224 Five-Star Reviews  ✓ Starts at $499, gutter cleaning included
                   </p>
                 </div>
                 <div className="fade-up">
@@ -190,6 +197,18 @@ const RoofCleaning = () => {
               alt: "Roof soft-wash cleaning results showing moss and algae removal",
               width: 1200,
               height: 800
+            },
+            {
+              src: roofNeedlesBefore,
+              alt: "Before: asphalt roof valley buried in fir needles on a Seattle-area home",
+              width: 1100,
+              height: 1467
+            },
+            {
+              src: roofNeedlesAfter,
+              alt: "After: same asphalt roof fully cleared of needles and debris",
+              width: 1100,
+              height: 1467
             }
           ]}
         />
@@ -212,6 +231,10 @@ const RoofCleaning = () => {
             {
               question: "Do I need to be home during the roof cleaning?",
               answer: "You don't need to be home. We work on the exterior only and will send you before/after photos when the job is complete. Just make sure we have clear access to your roof."
+            },
+            {
+              question: "Do you clean metal roofs?",
+              answer: "Yes — we clean a lot of metal roofs, including standing seam and corrugated panels. Metal needs a gentler, finish-safe process than asphalt, and it comes with the same moss treatment and 12-month guarantee. Metal roof cleaning starts at $800."
             }
           ]}
         />
@@ -275,6 +298,59 @@ const RoofCleaning = () => {
           </div>
         </section>
 
+
+        {/* Metal Roof Cleaning Section */}
+        <section className="section-spacing bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                <div className="fade-up">
+                  <img
+                    src={metalRoofSectionImg}
+                    alt="Metal roof cleaning before and after in the Seattle area"
+                    className="rounded-2xl shadow-xl w-full"
+                    width={1200}
+                    height={800}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div className="fade-up">
+                  <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">
+                    Metal Roof Cleaning
+                  </h2>
+                  <p className="text-muted-foreground mb-4">
+                    Asphalt and composite roofs are our bread and butter, but we clean a lot of metal roofs too — they're everywhere in the Seattle area, and moss and algae love the seams and shaded panels just as much as shingles.
+                  </p>
+                  <p className="text-muted-foreground mb-4">
+                    Metal takes a different approach. The surface is slick and easy to scratch or dent if you treat it like asphalt, so we use a gentler process: kill the moss at the root, brush and rinse the panels without aggressive pressure, and let the treatment finish the job. The result is a roof that looks close to new without damaging the finish.
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-start gap-2 text-sm">
+                      <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                      <span>Standing seam, corrugated & metal shake roofs</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-sm">
+                      <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                      <span>Finish-safe process — no harsh pressure on painted panels</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-sm">
+                      <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                      <span>Moss treatment included, same 12-month guarantee</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-sm">
+                      <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
+                      <span>Starting at $800 — quoted from your roof's size & condition</span>
+                    </li>
+                  </ul>
+                  <Button variant="cta-orange" size="lg" onClick={navigateToContact}>
+                    Get a Metal Roof Quote →
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* How It Works Section */}
         <section className="section-spacing">
@@ -356,8 +432,8 @@ const RoofCleaning = () => {
                 <div className="flex items-start gap-3 fade-up">
                   <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-brand-navy mb-1">Same-Week Availability</h3>
-                    <p className="text-sm text-muted-foreground">Fast scheduling when you need service quickly</p>
+                    <h3 className="font-semibold text-brand-navy mb-1">Quick, Honest Scheduling</h3>
+                    <p className="text-sm text-muted-foreground">Same-day quotes, most jobs scheduled within 1–2 weeks</p>
                   </div>
                 </div>
               </div>
@@ -394,6 +470,7 @@ const RoofCleaning = () => {
           description="Professional roof cleaning and moss treatment across the Greater Seattle area"
           areas={[
             { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning" },
+            { name: "Lake Forest Park", path: "/lake-forest-park-roof-gutter-cleaning" },
             { name: "Bothell", path: "/bothell-roof-gutter-cleaning" },
             { name: "Lynnwood", path: "/lynnwood-roof-gutter-cleaning" },
             { name: "Kirkland", path: "/kirkland-roof-gutter-cleaning" },

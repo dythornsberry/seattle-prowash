@@ -157,7 +157,7 @@ const Reviews = () => {
     <>
       <SEOHead 
         title="Customer Reviews"
-        description="Read 200+ authentic 5-star reviews for Seattle ProWash. Real testimonials from customers in Kenmore, Bothell, Kirkland & Seattle."
+        description="Read 224 authentic 5-star reviews for Seattle ProWash. Real testimonials from customers in Kenmore, Bothell, Kirkland & Seattle."
         url="https://www.seattleprowash.com/reviews"
       />
       <Header />
@@ -170,7 +170,7 @@ const Reviews = () => {
                 What Seattle Neighbors Say
               </h1>
               <p className="text-3xl md:text-4xl text-white mb-8">
-                <strong className="text-brand-orange">5.0★</strong> from <strong>200+ reviews</strong>
+                <strong className="text-brand-orange">5.0★</strong> from <strong>224 reviews</strong>
               </p>
               <div className="flex justify-center gap-4">
                 <Button
@@ -282,7 +282,7 @@ const Reviews = () => {
                   onClick={() => window.open('https://g.page/r/CZ1YhG3KQ4_8EAE/review', '_blank', 'noopener,noreferrer')}
                 >
                   <ExternalLink className="w-5 h-5 mr-2" />
-                  Read All 200+ Reviews on Google
+                  Read All 224 Reviews on Google
                 </Button>
               </div>
             </div>
@@ -297,7 +297,7 @@ const Reviews = () => {
                 Join Our Satisfied Customers
               </h2>
               <p className="text-xl text-white/90 mb-8">
-                Experience the same professional service that earned us 200+ five-star reviews
+                Experience the same professional service that earned us 224 five-star reviews
               </p>
               <div className="flex justify-center gap-4">
                 <Button

@@ -85,7 +85,7 @@ const WindowCleaning = () => {
                   Crystal Clear Windows, Every Time
                 </h1>
                 <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
-                  5.0★ from 200+ neighbors · Licensed & Insured · Fast Quotes
+                  5.0★ from 224 neighbors · Licensed & Insured · Fast Quotes
                 </p>
                 <p className="text-white/80 mb-8 leading-relaxed">
                   Seattle rain, pollen, and hard water take a toll on your windows. We handle the exterior cleaning so you can enjoy the view again. Safe, streak-free results on every pane.
@@ -99,7 +99,7 @@ const WindowCleaning = () => {
                   </Button>
                 </div>
                 <p className="text-white/80 text-sm">
-                  ✓ Streak-Free Guarantee  ✓ Fast Quotes  ✓ 200+ Reviews
+                  ✓ Streak-Free Guarantee  ✓ Fast Quotes  ✓ 224 Reviews
                 </p>
               </div>
               <div className="fade-up">
@@ -167,6 +167,7 @@ const WindowCleaning = () => {
           description="Professional exterior window cleaning throughout the Greater Seattle area"
           areas={[
             { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning" },
+            { name: "Lake Forest Park", path: "/lake-forest-park-roof-gutter-cleaning" },
             { name: "Bothell", path: "/bothell-roof-gutter-cleaning" },
             { name: "Lynnwood", path: "/lynnwood-roof-gutter-cleaning" },
             { name: "Kirkland", path: "/kirkland-roof-gutter-cleaning" },

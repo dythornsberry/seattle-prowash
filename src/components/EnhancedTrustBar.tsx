@@ -6,7 +6,7 @@ const EnhancedTrustBar = () => {
       icon: Star,
       value: "5.0",
       label: "Star Rating",
-      subtext: "200+ Reviews",
+      subtext: "224 Reviews",
       color: "text-brand-orange",
       bgColor: "bg-brand-orange/10"
     },

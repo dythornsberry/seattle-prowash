@@ -31,12 +31,12 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center space-y-5 md:space-y-6">
           {/* Main Headline */}
           <h1 className="text-white font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight animate-fade-in drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
-            Seattle&apos;s Roof, Gutter & Exterior Cleaning Experts
+            Moss Is Slowly Eating Your Roof. We Stop It.
           </h1>
 
           {/* Subhead */}
           <p className="text-lg md:text-xl text-white/90 font-medium max-w-3xl mx-auto animate-fade-in drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-            Roof cleaning, moss removal, gutter cleaning, house washing, pressure washing, and exterior window cleaning throughout Greater Seattle.
+            Professional roof & gutter cleaning for north Seattle homes. Every roof cleaning includes gutter cleaning and a 12-month moss-free guarantee.
           </p>
 
           {/* Inline mini-form */}

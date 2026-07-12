@@ -63,14 +63,14 @@ const Bellevue = () => {
         
         <main className="pt-16 md:pt-20">
           {/* Hero Section */}
-          <section className="bg-primary-teal text-white py-20">
+          <section className="bg-gradient-to-br from-brand-navy via-brand-navy to-brand-orange/20 text-white py-20">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
                 <div className="flex items-center justify-center gap-2 mb-4">
                   <MapPin className="w-6 h-6" />
                   <Badge variant="secondary">Bellevue, WA</Badge>
                 </div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
                   Roof & Gutter Cleaning in Bellevue, WA
                 </h1>
                 <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
@@ -79,7 +79,7 @@ const Bellevue = () => {
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <span className="bg-white/10 px-4 py-2 rounded-full">12-Month Moss-Free Guarantee</span>
                   <span className="bg-white/10 px-4 py-2 rounded-full">Fast Quotes</span>
-                  <span className="bg-white/10 px-4 py-2 rounded-full">200+ 5-Star Reviews</span>
+                  <span className="bg-white/10 px-4 py-2 rounded-full">224 5-Star Reviews</span>
                 </div>
               </div>
             </div>
@@ -118,7 +118,7 @@ const Bellevue = () => {
                       </div>
                       <h3 className="text-xl font-bold mb-4 text-dark-teal">5-Star Service</h3>
                       <p className="text-gray-600">
-                        Over 200 satisfied customers across Bellevue and surrounding areas trust our professional service.
+                        224 five-star reviews and counting — homeowners across Bellevue and surrounding areas trust our professional service.
                       </p>
                     </CardContent>
                   </Card>
@@ -258,7 +258,7 @@ const Bellevue = () => {
                   Ready to Protect Your Bellevue Home?
                 </h2>
                 <p className="text-xl text-white/90 mb-8">
-                  Join 200+ satisfied customers. Get a fast quote today and see why Bellevue homeowners trust Seattle ProWash.
+                  Join 224 satisfied customers. Get a fast quote today and see why Bellevue homeowners trust Seattle ProWash.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -36,8 +36,8 @@ const Edmonds = () => {
       },
       areaServed: ["Edmonds"],
       rating: {
-        ratingValue: 4.9,
-        reviewCount: 201
+        ratingValue: 5.0,
+        reviewCount: 224
       }
     });
 
@@ -94,7 +94,7 @@ const Edmonds = () => {
           <section className="bg-gradient-to-br from-brand-navy via-brand-navy to-brand-orange/20 text-white py-20">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl">
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                   Professional Roof & Gutter Cleaning in Edmonds, WA
                 </h1>
                 <p className="text-xl mb-8 text-gray-100">

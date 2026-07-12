@@ -1,6 +1,7 @@
 // Nearby cities data for each location page
 export const nearbyCitiesData: Record<string, Array<{ name: string; path: string }>> = {
   seattle: [
+    { name: "Lake Forest Park", path: "/lake-forest-park-roof-gutter-cleaning" },
     { name: "Bellevue", path: "/bellevue-roof-gutter-cleaning" },
     { name: "Kirkland", path: "/kirkland-roof-gutter-cleaning" },
     { name: "Redmond", path: "/redmond-roof-gutter-cleaning" },
@@ -46,6 +47,7 @@ export const nearbyCitiesData: Record<string, Array<{ name: string; path: string
     { name: "Seattle", path: "/seattle-roof-gutter-cleaning" }
   ],
   kenmore: [
+    { name: "Lake Forest Park", path: "/lake-forest-park-roof-gutter-cleaning" },
     { name: "Bothell", path: "/bothell-roof-gutter-cleaning" },
     { name: "Kirkland", path: "/kirkland-roof-gutter-cleaning" },
     { name: "Shoreline", path: "/shoreline-roof-gutter-cleaning" },
@@ -82,6 +84,7 @@ export const nearbyCitiesData: Record<string, Array<{ name: string; path: string
     { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning" }
   ],
   shoreline: [
+    { name: "Lake Forest Park", path: "/lake-forest-park-roof-gutter-cleaning" },
     { name: "Seattle", path: "/seattle-roof-gutter-cleaning" },
     { name: "Lynnwood", path: "/lynnwood-roof-gutter-cleaning" },
     { name: "Edmonds", path: "/edmonds-roof-gutter-cleaning" },
@@ -116,5 +119,14 @@ export const nearbyCitiesData: Record<string, Array<{ name: string; path: string
     { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning" },
     { name: "Edmonds", path: "/edmonds-roof-gutter-cleaning" },
     { name: "Shoreline", path: "/shoreline-roof-gutter-cleaning" }
+  ],
+  "lake-forest-park": [
+    { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning" },
+    { name: "Shoreline", path: "/shoreline-roof-gutter-cleaning" },
+    { name: "Seattle", path: "/seattle-roof-gutter-cleaning" },
+    { name: "Bothell", path: "/bothell-roof-gutter-cleaning" },
+    { name: "Kirkland", path: "/kirkland-roof-gutter-cleaning" },
+    { name: "Mountlake Terrace", path: "/mountlake-terrace-roof-gutter-cleaning" },
+    { name: "Woodinville", path: "/woodinville-roof-gutter-cleaning" }
   ]
 };

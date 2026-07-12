@@ -39,7 +39,7 @@ const MossTreatment = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Professional Moss Removal & Treatment"
+        title="Moss Removal & Treatment in Seattle, WA"
         description="Expert moss removal and treatment in Seattle, Bothell & Kirkland. 12-month moss-free guarantee. Safe removal & prevention. Licensed & insured."
         url="https://www.seattleprowash.com/moss-treatment"
       />
@@ -268,7 +268,7 @@ const MossTreatment = () => {
                   </Button>
                 </div>
                 <p className="text-sm text-gray-500 mt-4">
-                  Fast quotes • Licensed & Insured • 200+ 5-star reviews
+                  Fast quotes • Licensed & Insured • 224 5-star reviews
                 </p>
               </div>
             </div>

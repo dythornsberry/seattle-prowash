@@ -27,9 +27,13 @@ const Resources = lazy(() => import("./pages/Resources"));
 const RoofGutterCleaningImportance = lazy(() => import("./pages/resources/RoofGutterCleaningImportance"));
 const PreventMossAlgaeGrowth = lazy(() => import("./pages/resources/PreventMossAlgaeGrowth"));
 const GutterCleaningSafetyTips = lazy(() => import("./pages/resources/GutterCleaningSafetyTips"));
+const RoofCleaningCostSeattle = lazy(() => import("./pages/resources/RoofCleaningCostSeattle"));
+const BestTimeRoofGutterCleaning = lazy(() => import("./pages/resources/BestTimeRoofGutterCleaning"));
+const MossTreatmentVsRoofCleaning = lazy(() => import("./pages/resources/MossTreatmentVsRoofCleaning"));
 
 // City location pages
 const KenmoreLocation = lazy(() => import("./pages/locations/Kenmore"));
+const LakeForestParkLocation = lazy(() => import("./pages/locations/LakeForestPark"));
 const SeattleLocation = lazy(() => import("./pages/locations/Seattle"));
 const ShorelineLocation = lazy(() => import("./pages/locations/Shoreline"));
 const KirklandLocation = lazy(() => import("./pages/locations/Kirkland"));
@@ -74,6 +78,7 @@ const App = () => (
 
             {/* Primary city location pages with SEO-friendly URLs - Kenmore is home base */}
             <Route path="/kenmore-roof-gutter-cleaning" element={<KenmoreLocation />} />
+            <Route path="/lake-forest-park-roof-gutter-cleaning" element={<LakeForestParkLocation />} />
             <Route path="/bothell-roof-gutter-cleaning" element={<BothellLocation />} />
             <Route path="/lynnwood-roof-gutter-cleaning" element={<LynnwoodLocation />} />
             <Route path="/kirkland-roof-gutter-cleaning" element={<KirklandLocation />} />
@@ -99,6 +104,9 @@ const App = () => (
             <Route path="/resources/roof-gutter-cleaning-importance" element={<RoofGutterCleaningImportance />} />
             <Route path="/resources/prevent-moss-algae-growth" element={<PreventMossAlgaeGrowth />} />
             <Route path="/resources/gutter-cleaning-safety-tips" element={<GutterCleaningSafetyTips />} />
+            <Route path="/resources/roof-cleaning-cost-seattle" element={<RoofCleaningCostSeattle />} />
+            <Route path="/resources/best-time-roof-gutter-cleaning-seattle" element={<BestTimeRoofGutterCleaning />} />
+            <Route path="/resources/moss-treatment-vs-roof-cleaning" element={<MossTreatmentVsRoofCleaning />} />
 
             {/* 308 Permanent redirects for deprecated/old routes */}
             <Route path="/services/roof-cleaning" element={<Navigate to="/roof-cleaning" replace />} />
@@ -114,6 +122,7 @@ const App = () => (
 
             {/* Old location page redirects */}
             <Route path="/kenmore" element={<Navigate to="/kenmore-roof-gutter-cleaning" replace />} />
+            <Route path="/lake-forest-park" element={<Navigate to="/lake-forest-park-roof-gutter-cleaning" replace />} />
             <Route path="/locations/kenmore" element={<Navigate to="/kenmore-roof-gutter-cleaning" replace />} />
             <Route path="/bothell" element={<Navigate to="/bothell-roof-gutter-cleaning" replace />} />
             <Route path="/locations/bothell" element={<Navigate to="/bothell-roof-gutter-cleaning" replace />} />

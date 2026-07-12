@@ -89,7 +89,7 @@ const PressureWashing = () => {
                   Pressure Washing That Makes It Look New
                 </h1>
                 <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
-                  5.0★ from 200+ neighbors · Licensed & Insured · Fast Quotes
+                  5.0★ from 224 neighbors · Licensed & Insured · Fast Quotes
                 </p>
                 <p className="text-white/80 mb-8 leading-relaxed">
                   Driveways, patios, walkways, decks, siding - if it's covered in moss, grime, or algae, we'll make it look like the day it was installed. We use the right pressure and cleaning solution for every surface so nothing gets damaged.
@@ -103,7 +103,7 @@ const PressureWashing = () => {
                   </Button>
                 </div>
                 <p className="text-white/80 text-sm">
-                  ✓ Safe for All Surfaces  ✓ Fast Quotes  ✓ 200+ Reviews
+                  ✓ Safe for All Surfaces  ✓ Fast Quotes  ✓ 224 Reviews
                 </p>
               </div>
               <div className="fade-up">
@@ -180,6 +180,7 @@ const PressureWashing = () => {
           description="Professional pressure washing throughout the Greater Seattle area"
           areas={[
             { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning" },
+            { name: "Lake Forest Park", path: "/lake-forest-park-roof-gutter-cleaning" },
             { name: "Bothell", path: "/bothell-roof-gutter-cleaning" },
             { name: "Lynnwood", path: "/lynnwood-roof-gutter-cleaning" },
             { name: "Kirkland", path: "/kirkland-roof-gutter-cleaning" },

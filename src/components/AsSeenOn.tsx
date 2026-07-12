@@ -4,8 +4,8 @@ const AsSeenOn = () => {
   const features = [
     {
       icon: Award,
-      title: "Award-Winning Service",
-      description: "200+ Five-Star Reviews"
+      title: "5.0-Star Rated",
+      description: "224 Google Reviews"
     },
     {
       icon: Building2,
@@ -14,8 +14,8 @@ const AsSeenOn = () => {
     },
     {
       icon: Home,
-      title: "Seattle's Top Choice",
-      description: "Family-Owned & Operated"
+      title: "Family-Owned & Operated",
+      description: "Based in Kenmore, WA"
     },
     {
       icon: Shield,

@@ -68,7 +68,7 @@ const AboutPreview = () => {
                   <Star size={24} className="fill-brand-orange stroke-brand-orange" />
                 </div>
                 <div>
-                  <p className="font-bold text-xl text-brand-navy">200+</p>
+                  <p className="font-bold text-xl text-brand-navy">224</p>
                   <p className="text-sm text-muted-foreground font-medium">5-Star Reviews</p>
                 </div>
               </div>

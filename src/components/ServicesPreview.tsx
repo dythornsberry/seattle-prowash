@@ -19,10 +19,10 @@ const ServicesPreview = () => {
         {/* Header */}
         <div className="text-center mb-10 fade-up">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-blue mb-4">
-            Our Services
+            Roof & Gutter Cleaning Is What We Do
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Roof cleaning, gutter cleaning, pressure washing & window cleaning for homes across greater Seattle
+            Moss removal, roof cleaning & gutter cleaning for homes across north Seattle and the Eastside — with house washing and window cleaning available as add-ons while we're on site
           </p>
         </div>
 
@@ -112,7 +112,7 @@ const ServicesPreview = () => {
                   Pressure Washing
                 </h3>
                 <p className="text-white/80 text-sm mb-3 drop-shadow-sm">
-                  Driveways, siding, patios & walkways
+                  Popular add-on: driveways, siding, patios & walkways
                 </p>
                 <div className="flex items-center text-brand-orange font-semibold text-sm group-hover:text-white transition-colors duration-300">
                   Learn More <ArrowRight className="ml-2 w-4 h-4" />
@@ -140,7 +140,7 @@ const ServicesPreview = () => {
                   Window Cleaning
                 </h3>
                 <p className="text-white/80 text-sm mb-3 drop-shadow-sm">
-                  Streak-free exterior cleaning up to 3 stories
+                  Easy add-on: streak-free exteriors up to 3 stories
                 </p>
                 <div className="flex items-center text-brand-orange font-semibold text-sm group-hover:text-white transition-colors duration-300">
                   Learn More <ArrowRight className="ml-2 w-4 h-4" />

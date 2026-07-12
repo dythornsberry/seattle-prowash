@@ -18,6 +18,30 @@ const Resources = () => {
 
   const articles = [
     {
+      id: "roof-cleaning-cost-seattle",
+      title: "What Roof Cleaning Costs in Seattle (2026 Guide)",
+      excerpt: "Real prices from a local contractor: most asphalt roofs run $499–$1,200 with gutter cleaning included, metal starts at $800. See exactly what drives your price and what should be included.",
+      category: "Pricing",
+      readTime: "6 min read",
+      date: "2026-07-11"
+    },
+    {
+      id: "moss-treatment-vs-roof-cleaning",
+      title: "Moss Treatment vs. Full Roof Cleaning: Which Do You Need?",
+      excerpt: "Two different services at two different prices — and plenty of homeowners pay for the wrong one. When treatment alone is enough, when you need the full cleaning, and what each costs.",
+      category: "Moss Removal",
+      readTime: "5 min read",
+      date: "2026-07-11"
+    },
+    {
+      id: "best-time-roof-gutter-cleaning-seattle",
+      title: "The Best Time of Year for Roof & Gutter Cleaning in Seattle",
+      excerpt: "We work year-round, but timing still matters. Season-by-season advice on when to schedule roof cleaning, moss treatment, and gutter cleaning — plus when the fall rush hits.",
+      category: "Timing",
+      readTime: "5 min read",
+      date: "2026-07-11"
+    },
+    {
       id: "roof-gutter-cleaning-importance",
       title: "Why Regular Roof and Gutter Cleaning Matters",
       excerpt: "Discover how regular maintenance protects your Pacific Northwest home from water damage, extends roof life, and saves thousands in repairs. Learn why Seattle ProWash recommends annual cleaning for optimal protection.",
@@ -54,13 +78,13 @@ const Resources = () => {
         
         <main className="pt-16 md:pt-20">
           {/* Hero Section */}
-          <section className="bg-primary-teal text-white py-20">
+          <section className="bg-gradient-to-br from-brand-navy via-brand-navy to-brand-orange/20 text-white py-20">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
                 <Badge variant="secondary" className="mb-4">
                   Resources & Tips
                 </Badge>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
                   Expert Roof & Gutter Care Resources
                 </h1>
                 <p className="text-xl md:text-2xl text-white/90 leading-relaxed">

@@ -99,9 +99,9 @@ const GutterCleaning = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead 
-        title="Professional Gutter Cleaning Services"
-        description="Expert gutter cleaning in Seattle, Kenmore, Bothell & Kirkland. Prevent water damage and protect your foundation. Licensed & insured. Fast quotes."
+      <SEOHead
+        title="Gutter Cleaning in Seattle & Kenmore, WA"
+        description="Expert gutter cleaning in Seattle, Kenmore, Bothell & Kirkland — starting at $250 with free roof blow-off. Prevent water damage. Licensed & insured. Fast quotes."
         url="https://www.seattleprowash.com/gutter-cleaning"
         image={gutterCleaningImage}
       />
@@ -120,7 +120,7 @@ const GutterCleaning = () => {
                   
                   {/* Mini Trust Line */}
                   <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
-                    5.0★ from 200+ neighbors • Licensed & Insured • Fast Quotes
+                    5.0★ from 224 neighbors • Licensed & Insured • Fast Quotes
                   </p>
 
                   {/* 1-2-3 Process */}
@@ -149,7 +149,7 @@ const GutterCleaning = () => {
                   
                   {/* Trust Indicators */}
                   <p className="text-white/80 text-sm">
-                    ✓ 12-Month Guarantee  ✓ Fast Quotes  ✓ 200+ Reviews
+                    ✓ 224 Five-Star Reviews  ✓ Free Roof Blow-Off Included  ✓ Starts at $250
                   </p>
                 </div>
                 <div className="fade-up">
@@ -333,6 +333,7 @@ const GutterCleaning = () => {
           description="Professional gutter cleaning services throughout the Greater Seattle area"
           areas={[
             { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning" },
+            { name: "Lake Forest Park", path: "/lake-forest-park-roof-gutter-cleaning" },
             { name: "Bothell", path: "/bothell-roof-gutter-cleaning" },
             { name: "Lynnwood", path: "/lynnwood-roof-gutter-cleaning" },
             { name: "Kirkland", path: "/kirkland-roof-gutter-cleaning" },

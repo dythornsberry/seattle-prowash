@@ -7,7 +7,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   const serviceAreas = [
-    "Kenmore", "Bothell", "Lynnwood", "Kirkland", "Shoreline",
+    "Kenmore", "Lake Forest Park", "Bothell", "Lynnwood", "Kirkland", "Shoreline",
     "Woodinville", "Seattle", "Bellevue", "Redmond", "Mill Creek",
     "Edmonds", "Sammamish", "Mountlake Terrace"
   ];
@@ -60,7 +60,7 @@ const Footer = () => {
                   </div>
                   <span className="font-bold">5.0</span>
                 </div>
-                <p className="text-sm text-white/80">200+ Google Reviews</p>
+                <p className="text-sm text-white/80">224 Google Reviews</p>
                 <Button 
                   variant="prowash-secondary" 
                   size="sm" 
@@ -141,7 +141,7 @@ const Footer = () => {
               <div className="space-y-2">
                 {serviceAreas.map((area, index) => {
                   const citySlugMap: Record<string, string> = {
-                    "Kenmore": "kenmore", "Bothell": "bothell", "Lynnwood": "lynnwood",
+                    "Kenmore": "kenmore", "Lake Forest Park": "lake-forest-park", "Bothell": "bothell", "Lynnwood": "lynnwood",
                     "Kirkland": "kirkland", "Shoreline": "shoreline", "Woodinville": "woodinville",
                     "Seattle": "seattle", "Bellevue": "bellevue", "Redmond": "redmond",
                     "Mill Creek": "mill-creek", "Edmonds": "edmonds", "Sammamish": "sammamish",
@@ -207,7 +207,7 @@ const Footer = () => {
                   <Clock className="w-5 h-5 text-brand-orange flex-shrink-0" />
                   <div>
                     <p className="font-semibold">Business Hours</p>
-                    <p className="text-xs text-white/60">Available 24/7</p>
+                    <p className="text-xs text-white/60">Call or text anytime — quick replies</p>
                   </div>
                 </div>
 
@@ -216,7 +216,8 @@ const Footer = () => {
                   <div>
                     <p className="text-sm font-medium">6516 NE 192nd Pl</p>
                     <p className="text-sm">Kenmore, WA 98028</p>
-                    <p className="text-xs text-white/60 mt-1">Licensed & Insured</p>
+                    <p className="text-xs text-white/60 mt-1">WA Contractor Lic. #SEATTPL783M6</p>
+                    <p className="text-xs text-white/60">Bonded & Insured · $1M Liability</p>
                   </div>
                 </div>
               </div>
@@ -240,7 +241,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-center md:text-left">
               <p className="text-sm text-white/60 mb-1">
-                Licensed & Insured • Based in Kenmore, WA • Satisfaction Guaranteed
+                Seattle ProWash LLC • WA Contractor Lic. #SEATTPL783M6 • Bonded & Insured
               </p>
               <p className="text-sm text-white/60">
                 © {currentYear} Seattle ProWash. All rights reserved.

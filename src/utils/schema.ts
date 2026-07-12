@@ -279,6 +279,7 @@ export const COMPANY_INFO = {
   },
   serviceAreas: [
     "Kenmore",      // Home base
+    "Lake Forest Park", // Next door to home base
     "Bothell",      // High job volume
     "Lynnwood",     // High job volume
     "Kirkland",     // High job volume
@@ -291,6 +292,6 @@ export const COMPANY_INFO = {
   ],
   rating: {
     ratingValue: 5.0,
-    reviewCount: 201
+    reviewCount: 224
   }
 };

@@ -122,7 +122,7 @@ const GoogleReviewsCarousel = () => {
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-5 h-5 fill-brand-orange" />
               ))}
-              <span className="text-brand-navy font-semibold ml-1">5.0 from 200+ Google Reviews</span>
+              <span className="text-brand-navy font-semibold ml-1">5.0 from 224 Google Reviews</span>
             </div>
           </div>
         )}
@@ -134,7 +134,7 @@ const GoogleReviewsCarousel = () => {
                 Our Google reviews are temporarily unavailable here.
               </p>
               <p className="text-muted-foreground mb-5">
-                Seattle ProWash is rated 5.0 stars by 200+ local customers.
+                Seattle ProWash is rated 5.0 stars by 224 local customers.
               </p>
               <a
                 href="/reviews"
