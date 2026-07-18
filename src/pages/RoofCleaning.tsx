@@ -20,9 +20,10 @@ import roofCleaningImage from "@/assets/roof-moss-removal-detailed-before-after.
 import roofBA1 from "@/assets/asphalt-roof-moss-cleaning-before-after.jpg";
 import roofBA2 from "@/assets/metal-roof-cleaning-before-after.jpg";
 import roofBA3 from "@/assets/roof-softwash-before-after.jpg";
-import metalRoofSectionImg from "@/assets/recent-silver-metal-roof-before-after-2026.webp";
-import roofNeedlesBefore from "@/assets/roof-needles-before.jpg";
-import roofNeedlesAfter from "@/assets/roof-needles-after.jpg";
+import lakefrontMetalBefore from "@/assets/metal-roof-before-3-2026.jpg";
+import lakefrontMetalAfter from "@/assets/metal-roof-after-3-2026.jpg";
+import roofNeedlesBA from "@/assets/roof-needles-ba-2026.jpg";
+import mossSeamsBA from "@/assets/asphalt-moss-seams-ba-2026.jpg";
 import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 import { navigateToContact } from "@/lib/navigation";
 
@@ -62,6 +63,10 @@ const RoofCleaning = () => {
         {
           question: "Do you clean metal roofs?",
           answer: "Yes — we clean a lot of metal roofs, including standing seam and corrugated panels. Metal needs a gentler, finish-safe process than asphalt, and it comes with the same moss treatment and 12-month guarantee. Metal roof cleaning starts at $800."
+        },
+        {
+          question: "Can moss on my roof affect my homeowners insurance?",
+          answer: "It can, and it catches a lot of homeowners off guard. Insurance carriers increasingly review aerial and street-view imagery, and visible moss can trigger a fix-it notice or even a non-renewal. If you've received a letter from your insurer about your roof's condition, a professional cleaning and moss treatment is usually what resolves it — and we can provide before/after photos to document the work."
         }
       ]
     });
@@ -181,6 +186,12 @@ const RoofCleaning = () => {
         <BeforeAfterShowcase
           images={[
             {
+              src: mossSeamsBA,
+              alt: "Before and after: moss in every shingle seam removed and treated on a Seattle-area asphalt roof",
+              width: 1600,
+              height: 900
+            },
+            {
               src: roofBA1,
               alt: "Asphalt roof before and after soft-wash cleaning",
               width: 1200,
@@ -199,16 +210,10 @@ const RoofCleaning = () => {
               height: 800
             },
             {
-              src: roofNeedlesBefore,
-              alt: "Before: asphalt roof valley buried in fir needles on a Seattle-area home",
-              width: 1100,
-              height: 1467
-            },
-            {
-              src: roofNeedlesAfter,
-              alt: "After: same asphalt roof fully cleared of needles and debris",
-              width: 1100,
-              height: 1467
+              src: roofNeedlesBA,
+              alt: "Before and after: fir needles cleared from an asphalt roof valley on a Seattle-area home",
+              width: 1600,
+              height: 900
             }
           ]}
         />
@@ -235,6 +240,10 @@ const RoofCleaning = () => {
             {
               question: "Do you clean metal roofs?",
               answer: "Yes — we clean a lot of metal roofs, including standing seam and corrugated panels. Metal needs a gentler, finish-safe process than asphalt, and it comes with the same moss treatment and 12-month guarantee. Metal roof cleaning starts at $800."
+            },
+            {
+              question: "Can moss on my roof affect my homeowners insurance?",
+              answer: "It can, and it catches a lot of homeowners off guard. Insurance carriers increasingly review aerial and street-view imagery, and visible moss can trigger a fix-it notice or even a non-renewal. If you've received a letter from your insurer about your roof's condition, a professional cleaning and moss treatment is usually what resolves it — and we can provide before/after photos to document the work."
             }
           ]}
         />
@@ -305,15 +314,35 @@ const RoofCleaning = () => {
             <div className="max-w-5xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                 <div className="fade-up">
-                  <img
-                    src={metalRoofSectionImg}
-                    alt="Metal roof cleaning before and after in the Seattle area"
-                    className="rounded-2xl shadow-xl w-full"
-                    width={1200}
-                    height={800}
-                    loading="lazy"
-                    decoding="async"
-                  />
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="relative">
+                      <img
+                        src={lakefrontMetalBefore}
+                        alt="Lakefront metal roof buried in needles and debris before cleaning"
+                        className="rounded-2xl shadow-xl w-full h-full object-cover"
+                        width={975}
+                        height={1300}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <span className="absolute top-3 left-3 bg-brand-navy/90 text-white text-xs font-bold px-3 py-1 rounded-full">BEFORE</span>
+                    </div>
+                    <div className="relative">
+                      <img
+                        src={lakefrontMetalAfter}
+                        alt="Same lakefront metal roof gleaming green after professional cleaning"
+                        className="rounded-2xl shadow-xl w-full h-full object-cover"
+                        width={975}
+                        height={1300}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <span className="absolute top-3 left-3 bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded-full">AFTER</span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground text-center mt-3 italic">
+                    Lake Washington waterfront — same roof, one visit.
+                  </p>
                 </div>
                 <div className="fade-up">
                   <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">

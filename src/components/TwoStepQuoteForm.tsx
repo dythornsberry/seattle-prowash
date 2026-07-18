@@ -5,6 +5,7 @@ import * as z from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Card, CardContent, CardDescription, CardHeader } from "@/components/ui/card";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
@@ -28,6 +29,7 @@ const formSchema = z.object({
     return true;
   }, { message: "Please enter a valid 10-digit phone number" }),
   services: z.array(z.string()).min(1, "Please select at least one service"),
+  timeline: z.string().min(1, "Please pick a timeframe"),
   company: z.string().max(0, "Invalid submission"), // honeypot
 });
 
@@ -47,6 +49,7 @@ const TwoStepQuoteForm = () => {
       address: "",
       phone: "",
       services: [],
+      timeline: "",
       company: "",
     },
   });
@@ -211,7 +214,8 @@ const TwoStepQuoteForm = () => {
     email: values.email,
     address: values.address,
     phone: values.phone,
-    services: values.services.join(", "),
+    services: `${values.services.join(", ")} | Timeline: ${values.timeline}`,
+    timeline: values.timeline,
     address_verified: addressFromPlacesRef.current && values.address === selectedPlacesAddressRef.current,
     timestamp: new Date().toISOString(),
     source: "Website Quote Form",
@@ -557,9 +561,13 @@ const TwoStepQuoteForm = () => {
                                     control={form.control}
                                     name="services"
                                     render={({ field }) => (
-                                      <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border-2 border-brand-orange/40 bg-brand-orange/5 p-4 relative">
+                                      <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-xl border-2 border-brand-orange bg-gradient-to-r from-brand-orange/15 to-brand-orange/5 p-5 pt-6 relative shadow-md">
+                                        <span className="absolute -top-3 left-4 bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                                          ★ MOST POPULAR — ALL-IN-ONE
+                                        </span>
                                         <FormControl>
                                           <Checkbox
+                                            className="mt-0.5 h-5 w-5"
                                             checked={field.value?.includes("Roof cleaning (moss removal & treatment)")}
                                             onCheckedChange={(checked) => {
                                               const value = "Roof cleaning (moss removal & treatment)";
@@ -569,11 +577,12 @@ const TwoStepQuoteForm = () => {
                                             }}
                                           />
                                         </FormControl>
-                                        <div className="flex flex-col space-y-1">
-                                          <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
-                                            Roof Cleaning (most popular all-in-one)
+                                        <div className="flex flex-col space-y-1.5">
+                                          <FormLabel className="text-base font-bold text-brand-navy cursor-pointer leading-none">
+                                            Roof Cleaning
                                           </FormLabel>
-                                          <span className="text-xs text-muted-foreground">Most popular • Moss removal, roof treatment & gutter cleaning included • $499+</span>
+                                          <span className="text-sm text-brand-navy/80">Moss removal + treatment + gutter cleaning, all in one visit</span>
+                                          <span className="text-xs font-semibold text-brand-orange">From $499 · 12-month moss-free guarantee</span>
                                         </div>
                                       </FormItem>
                                     )}
@@ -599,6 +608,31 @@ const TwoStepQuoteForm = () => {
                                             Gutter cleaning (includes roof blow-off)
                                           </FormLabel>
                                           <span className="text-xs text-muted-foreground">Starting at $250</span>
+                                        </div>
+                                      </FormItem>
+                                    )}
+                                  />
+                                  <FormField
+                                    control={form.control}
+                                    name="services"
+                                    render={({ field }) => (
+                                      <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4">
+                                        <FormControl>
+                                          <Checkbox
+                                            checked={field.value?.includes("Gutter brightening (exterior)")}
+                                            onCheckedChange={(checked) => {
+                                              const value = "Gutter brightening (exterior)";
+                                              return checked
+                                                ? field.onChange([...field.value, value])
+                                                : field.onChange(field.value?.filter((v) => v !== value));
+                                            }}
+                                          />
+                                        </FormControl>
+                                        <div className="flex flex-col space-y-1">
+                                          <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
+                                            Gutter brightening (exterior)
+                                          </FormLabel>
+                                          <span className="text-xs text-muted-foreground">Removes the dark streaks from your gutters' outside face</span>
                                         </div>
                                       </FormItem>
                                     )}
@@ -726,6 +760,38 @@ const TwoStepQuoteForm = () => {
                                     )}
                                   />
                                 </div>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+
+                          <FormField
+                            control={form.control}
+                            name="timeline"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel className="text-brand-navy font-semibold">How soon are you looking to get this done? *</FormLabel>
+                                <FormControl>
+                                  <RadioGroup
+                                    value={field.value}
+                                    onValueChange={field.onChange}
+                                    className="space-y-2"
+                                  >
+                                    {["ASAP (this week)", "In the next few weeks", "Flexible / no rush"].map((option) => (
+                                      <FormItem
+                                        key={option}
+                                        className="flex flex-row items-center space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4 has-[button[data-state=checked]]:border-brand-orange has-[button[data-state=checked]]:bg-brand-orange/5"
+                                      >
+                                        <FormControl>
+                                          <RadioGroupItem value={option} />
+                                        </FormControl>
+                                        <FormLabel className="text-sm font-semibold text-brand-navy cursor-pointer leading-none">
+                                          {option}
+                                        </FormLabel>
+                                      </FormItem>
+                                    ))}
+                                  </RadioGroup>
+                                </FormControl>
                                 <FormMessage />
                               </FormItem>
                             )}

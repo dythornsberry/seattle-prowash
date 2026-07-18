@@ -38,6 +38,28 @@ import dylanPressureWashingAction from "@/assets/dylan-pressure-washing-action.j
 import dylanOnLadder from "@/assets/dylan-on-ladder.jpg";
 import dylanRooftopSelfie from "@/assets/dylan-rooftop-selfie.jpg";
 import dylanPumpSprayer from "@/assets/dylan-pump-sprayer.jpg";
+import asphaltMossSeamsBA from "@/assets/asphalt-moss-seams-ba-2026.jpg";
+import greenMetalRoofBA from "@/assets/green-metal-roof-ba-2026.jpg";
+import grayMetalRoofBA from "@/assets/gray-metal-roof-ba-2026.jpg";
+import lakefrontMetalBA from "@/assets/lakefront-metal-ba-2026.jpg";
+import needleMetalRoofBA from "@/assets/needle-metal-roof-ba-2026.jpg";
+import asphaltRidgeBA from "@/assets/asphalt-ridge-ba-2026.jpg";
+import westSeattlePatioBA from "@/assets/west-seattle-patio-ba-2026.jpg";
+import rooftopPatioBA from "@/assets/rooftop-patio-ba-2026.jpg";
+import staircaseBA from "@/assets/staircase-ba-2026.jpg";
+import patioPressureWashComposite from "@/assets/patio-pressure-wash-before-after-2026.jpg";
+import asphaltComposite1 from "@/assets/asphalt-roof-before-after-1-2026.jpg";
+import asphaltComposite3 from "@/assets/asphalt-roof-before-after-3-2026.jpg";
+import asphaltComposite4 from "@/assets/asphalt-roof-before-after-4-2026.jpg";
+import asphaltComposite5 from "@/assets/asphalt-roof-before-after-5-2026.jpg";
+import asphaltComposite6 from "@/assets/asphalt-roof-before-after-6-2026.jpg";
+import asphaltComposite7 from "@/assets/asphalt-roof-before-after-7-2026.jpg";
+import gutterBrightening2026 from "@/assets/gutter-brightening-before-after-2026.jpg";
+import deckCleaning2026 from "@/assets/deck-cleaning-before-after-2026.jpg";
+import houseWash2026 from "@/assets/house-wash-before-after-2026.jpg";
+import solarPanelCleaning2026 from "@/assets/solar-panel-cleaning-before-after-2026.jpg";
+import truckJobsite2026 from "@/assets/prowash-truck-jobsite-2026.jpg";
+import dylanRinsing2026 from "@/assets/dylan-rinsing-landscaping-2026.jpg";
 
 const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -61,8 +83,40 @@ const Gallery = () => {
 
   const galleryImages = {
     "Metal Roofs": [
-      { 
-        src: recentGreenMetalRoofBeforeAfter, 
+      {
+        src: lakefrontMetalBA,
+        alt: "Lakefront metal roof before and after cleaning - debris-buried to gleaming green",
+        title: "Lakefront metal roof cleaning, Summer 2026",
+        location: "Lake Washington",
+        description: "Years of needles packed between every rib, then the same waterfront roof back to gleaming green",
+        service: "Metal Roof Cleaning"
+      },
+      {
+        src: needleMetalRoofBA,
+        alt: "Green metal roof covered in fir needles before and after cleaning",
+        title: "Green metal roof cleaning, Summer 2026",
+        location: "Greater Seattle",
+        description: "Needles blanketing every panel, then the same roof spotless - deep green restored",
+        service: "Metal Roof Cleaning"
+      },
+      {
+        src: grayMetalRoofBA,
+        alt: "Faded gray standing seam metal roof before and after professional cleaning",
+        title: "Gray metal roof cleaning, Summer 2026",
+        location: "Greater Seattle",
+        description: "Dust and buildup washed off - deep, even color restored across the panels",
+        service: "Metal Roof Cleaning"
+      },
+      {
+        src: greenMetalRoofBA,
+        alt: "Green standing seam metal roof before and after finish-safe cleaning",
+        title: "Standing seam metal roof cleaning, Summer 2026",
+        location: "Greater Seattle",
+        description: "Moss and debris cleared from every seam with our finish-safe process",
+        service: "Metal Roof Cleaning"
+      },
+      {
+        src: recentGreenMetalRoofBeforeAfter,
         alt: "Green metal roof cleaning before and after near Lake Washington", 
         title: "Metal roof cleaning before and after,Lake Washington Area", 
         location: "Lake Washington Area", 
@@ -119,8 +173,72 @@ const Gallery = () => {
       }
     ],
     "Roof Cleaning": [
-      { 
-        src: recentAsphaltRoofBeforeAfter, 
+      {
+        src: asphaltMossSeamsBA,
+        alt: "Asphalt roof with moss in every shingle seam before and after removal and treatment",
+        title: "Asphalt roof moss removal, Summer 2026",
+        location: "Greater Seattle",
+        description: "Moss lines in every shingle seam - the classic PNW pattern - then the same roof clean and treated",
+        service: "Roof Cleaning"
+      },
+      {
+        src: asphaltComposite1,
+        alt: "Asphalt roof cleaning before and after with moss and needles removed",
+        title: "Asphalt roof cleaning before & after, Summer 2026",
+        location: "Greater Seattle",
+        description: "Needles and moss cleared, then treated — one visit from buried to protected",
+        service: "Roof Cleaning"
+      },
+      {
+        src: asphaltRidgeBA,
+        alt: "Moss-hazed asphalt ridge before and after moss treatment",
+        title: "Asphalt ridge moss treatment, Summer 2026",
+        location: "Greater Seattle",
+        description: "Moss haze across the ridge line, then freshly treated - the treatment does the rest over the following weeks",
+        service: "Roof Cleaning"
+      },
+      {
+        src: asphaltComposite3,
+        alt: "Steep driveway-side roof cleaning before and after",
+        title: "Roof cleaning before & after, Summer 2026",
+        location: "Greater Seattle",
+        description: "Full clean and treatment, documented from the same angle before and after",
+        service: "Roof Cleaning"
+      },
+      {
+        src: asphaltComposite4,
+        alt: "Debris-covered dark asphalt roof before and after cleaning and treatment",
+        title: "Roof cleaning & treatment before & after, Summer 2026",
+        location: "Greater Seattle",
+        description: "Debris cleared and preventative treatment applied across the whole roof face",
+        service: "Roof Cleaning"
+      },
+      {
+        src: asphaltComposite5,
+        alt: "Paver-style asphalt roof before and after cleaning and moss treatment",
+        title: "Roof cleaning before & after, Summer 2026",
+        location: "Greater Seattle",
+        description: "Debris removed and treatment applied edge to edge in a single visit",
+        service: "Roof Cleaning"
+      },
+      {
+        src: asphaltComposite6,
+        alt: "Long mossy roof ridge before and after cleaning and treatment",
+        title: "Roof ridge cleaning before & after, Summer 2026",
+        location: "Greater Seattle",
+        description: "Heavy moss along the full ridge line cleared and treated",
+        service: "Roof Cleaning"
+      },
+      {
+        src: asphaltComposite7,
+        alt: "Overgrown debris-covered roof restored - four stage before and after",
+        title: "Full roof restoration project, Summer 2026",
+        location: "Greater Seattle",
+        description: "Overgrown and debris-covered to cleaned and treated — the full restoration documented",
+        service: "Roof Cleaning"
+      },
+      {
+        src: recentAsphaltRoofBeforeAfter,
         alt: "Asphalt roof moss removal before and after by Seattle ProWash", 
         title: "Asphalt roof moss removal,Kenmore Area", 
         location: "Kenmore Area", 
@@ -241,8 +359,16 @@ const Gallery = () => {
       }
     ],
     "Gutter Cleaning": [
-      { 
-        src: gutterBefore, 
+      {
+        src: gutterBrightening2026,
+        alt: "Gutter brightening before and after - dark streaks removed from exterior gutters",
+        title: "Gutter brightening before & after, Summer 2026",
+        location: "Greater Seattle",
+        description: "Oxidation and dark streaks scrubbed off the gutter faces — back to bright white without repainting",
+        service: "Gutter Brightening"
+      },
+      {
+        src: gutterBefore,
         alt: "Gutter cleaning and brightening service in Bothell", 
         title: "Gutter cleaning,Bothell", 
         location: "Bothell", 
@@ -283,7 +409,47 @@ const Gallery = () => {
       }
     ],
     "Pressure Washing": [
-      { 
+      {
+        src: patioPressureWashComposite,
+        alt: "Tile patio pressure washing before and after by Seattle ProWash",
+        title: "Tile patio pressure washing, Summer 2026",
+        location: "Greater Seattle",
+        description: "Grimy tile patio restored to its original color in a single visit",
+        service: "Pressure Washing"
+      },
+      {
+        src: staircaseBA,
+        alt: "Stamped concrete staircase and path before and after pressure washing",
+        title: "Staircase & walkway cleaning, Summer 2026",
+        location: "Greater Seattle",
+        description: "Dusty stamped-concrete stairs and pathway washed back to their original color",
+        service: "Pressure Washing"
+      },
+      {
+        src: rooftopPatioBA,
+        alt: "Rooftop deck tiles stained with rust and debris before and after pressure washing",
+        title: "Rooftop deck cleaning, Summer 2026",
+        location: "Greater Seattle",
+        description: "Rust staining and grime lifted off this rooftop entertaining space — furniture-ready again",
+        service: "Pressure Washing"
+      },
+      {
+        src: westSeattlePatioBA,
+        alt: "West Seattle courtyard patio pavers before and after pressure washing",
+        title: "Courtyard patio pressure washing, West Seattle",
+        location: "West Seattle",
+        description: "Dark, grimy courtyard pavers brought back to a bright, even finish",
+        service: "Pressure Washing"
+      },
+      {
+        src: deckCleaning2026,
+        alt: "Wood deck cleaning before and after - gray weathered boards restored to rich color",
+        title: "Deck cleaning before & after, Summer 2026",
+        location: "Greater Seattle",
+        description: "Weathered deck boards cleaned back to their rich original color",
+        service: "Deck Cleaning"
+      },
+      {
         src: patioPressureWashingBefore1,
         afterSrc: patioPressureWashingAfter1,
         alt: "Rooftop patio pressure washing before and after in the Seattle area", 
@@ -319,8 +485,24 @@ const Gallery = () => {
       }
     ],
     "House Soft Washing": [
-      { 
-        src: houseBefore, 
+      {
+        src: houseWash2026,
+        alt: "Algae-streaked modern siding before and after house soft washing",
+        title: "House soft wash before & after, Summer 2026",
+        location: "Greater Seattle",
+        description: "Green algae streaking washed off multi-story siding with our low-pressure process",
+        service: "House Soft Washing"
+      },
+      {
+        src: solarPanelCleaning2026,
+        alt: "Dusty solar panels before and after professional cleaning",
+        title: "Solar panel cleaning before & after, Summer 2026",
+        location: "Greater Seattle",
+        description: "Film and grime cleaned off the array — clean panels simply produce more power",
+        service: "Solar Panel Cleaning"
+      },
+      {
+        src: houseBefore,
         alt: "House soft washing before and after on exterior siding", 
         title: "House soft washing,Seattle Area", 
         location: "Seattle Area", 
@@ -347,6 +529,22 @@ const Gallery = () => {
       }
     ],
     "Team at Work": [
+      {
+        src: dylanRinsing2026,
+        alt: "Dylan of Seattle ProWash rinsing landscaping after a cleaning job",
+        title: "Rinsing down the landscaping",
+        location: "Greater Seattle",
+        description: "Every job ends with a full rinse-down — plants and beds protected, property cleaner than we found it",
+        service: "Owner"
+      },
+      {
+        src: truckJobsite2026,
+        alt: "Seattle ProWash lettered service truck with ladder at a residential job site",
+        title: "The Seattle ProWash truck",
+        location: "Greater Seattle",
+        description: "The truck you'll see in your driveway — lettered, loaded, and ready",
+        service: "Team"
+      },
       {
         src: dylanPumpSprayer,
         alt: "Dylan Thornsberry, Seattle ProWash owner, treating a property with a pump sprayer",

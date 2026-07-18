@@ -126,7 +126,10 @@ const Pricing = () => {
             </div>
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {/* Asphalt / Composite Roof Card */}
-              <Card className="border-2 border-brand-orange/50 hover:border-brand-orange transition-all duration-300 hover:shadow-xl relative overflow-hidden">
+              <Card className="border-2 border-brand-orange ring-4 ring-brand-orange/30 lg:scale-[1.02] transition-all duration-300 shadow-xl hover:shadow-2xl relative overflow-hidden">
+                <div className="bg-brand-orange text-white text-center text-sm font-bold py-2 tracking-wide">
+                  ★ MOST POPULAR — THE ALL-IN-ONE
+                </div>
                 {/* Hero Image */}
                 <div className="relative aspect-[16/9] overflow-hidden">
                   <img
@@ -138,7 +141,7 @@ const Pricing = () => {
                   <div className="absolute top-3 right-3">
                     <Badge className="bg-green-600 text-white border-green-600 font-semibold shadow-md">
                       <Star className="w-3 h-3 mr-1 fill-current" />
-                      Best Value
+                      Best Value — Gutters Included
                     </Badge>
                   </div>
                 </div>

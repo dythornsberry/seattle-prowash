@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Phone } from "lucide-react";
 import gutterCleaningImage from "@/assets/gutter-cleaning-before-after.jpg";
-import gutterBA1 from "@/assets/gutter-brightening-before-after.jpg";
+import gutterBrightening2026 from "@/assets/gutter-brightening-before-after-2026.jpg";
 import gutterBA2 from "@/assets/gutter-cleaning-before-after.jpg";
 import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 import { navigateToContact } from "@/lib/navigation";
@@ -253,7 +253,7 @@ const GutterCleaning = () => {
                 </div>
                 <div className="fade-up">
                   <img
-                    src={gutterBA1}
+                    src={gutterBrightening2026}
                     alt="Gutter brightening before and after, black streak removal from exterior gutters in Seattle"
                     className="rounded-2xl shadow-2xl w-full"
                     loading="lazy"

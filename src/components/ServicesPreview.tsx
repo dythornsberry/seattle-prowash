@@ -43,18 +43,20 @@ const ServicesPreview = () => {
               />
             </picture>
             <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent transition-opacity duration-300 group-hover:from-brand-navy" />
-            <Badge className="absolute top-4 left-4 bg-brand-orange text-white border-0 px-3 py-1.5 text-sm shadow-md z-10">
-              Most Popular
+            <Badge className="absolute top-4 left-4 bg-brand-orange text-white border-0 px-4 py-2 text-base font-bold shadow-lg z-10">
+              ★ Most Popular — The All-In-One
             </Badge>
             <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 lg:p-10">
-              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-2 drop-shadow-sm">
+              <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-3 drop-shadow-sm">
                 Roof Cleaning
               </h3>
-              <p className="text-white/90 text-base sm:text-lg mb-2 drop-shadow-sm max-w-xl">
-                Moss treatment, moss removal & gutter cleaning included. Starting at $499.
+              <p className="text-white text-lg sm:text-xl mb-3 drop-shadow-sm max-w-xl font-medium">
+                Moss removal, treatment & gutter cleaning — everything handled in one visit.
               </p>
-              <p className="text-brand-orange font-bold text-sm sm:text-base mb-4">
-                12-Month Moss-Free Guarantee
+              <p className="mb-4">
+                <span className="inline-block bg-white/95 text-brand-navy font-bold text-sm sm:text-base px-4 py-2 rounded-full shadow">
+                  From $499 · Gutter cleaning included · 12-month guarantee
+                </span>
               </p>
               <div className="flex items-center text-white font-semibold text-sm sm:text-base group-hover:text-brand-orange transition-colors duration-300">
                 Learn More <ArrowRight className="ml-2 w-4 h-4" />
