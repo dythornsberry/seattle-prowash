@@ -4,12 +4,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { navigateToContact } from "@/lib/navigation";
 import recentAsphaltRoofBeforeAfter from "@/assets/recent-asphalt-roof-before-after-2026.webp";
-import recentGreenMetalRoofBeforeAfter from "@/assets/recent-green-metal-roof-before-after-2026.webp";
-import recentSilverMetalRoofBeforeAfter from "@/assets/recent-silver-metal-roof-before-after-2026.webp";
-import recentBlackMetalRoof from "@/assets/recent-black-metal-roof-cleaning-2026.webp";
+import asphaltMossSeamsBA from "@/assets/asphalt-moss-seams-ba-2026.jpg";
+import lakefrontMetalBA from "@/assets/lakefront-metal-ba-2026.jpg";
+import rooftopPatioBA from "@/assets/rooftop-patio-ba-2026.jpg";
+import westSeattlePatioBA from "@/assets/west-seattle-patio-ba-2026.jpg";
 import gutterBeforeAfter from "@/assets/gutter-cleaning-before-after.jpg";
-import patioPressureWashingBefore2 from "@/assets/recent-patio-pressure-washing-before-2-2026.webp";
-import patioPressureWashingAfter2 from "@/assets/recent-patio-pressure-washing-after-2-2026.webp";
 
 type RecentProject = {
   title: string;
@@ -26,32 +25,32 @@ type RecentProject = {
 
 const recentProjects: RecentProject[] = [
   {
-    title: "Metal roof cleaning before & after",
-    location: "Lake Washington Area",
-    service: "Metal Roof Cleaning",
-    date: "Recent project",
-    image: recentGreenMetalRoofBeforeAfter,
-    alt: "Green metal roof cleaning before and after by Seattle ProWash",
-    description: "Organic debris and roof staining cleaned from a standing seam metal roof with a careful, roof-safe process.",
+    title: "Asphalt roof moss removal before & after",
+    location: "Greater Seattle",
+    service: "Roof Cleaning",
+    date: "Summer 2026",
+    image: asphaltMossSeamsBA,
+    alt: "Asphalt roof with moss in every shingle seam, before and after removal and treatment",
+    description: "Moss growing in every shingle seam - the classic Seattle pattern - removed and treated in one visit, gutters included.",
     featured: true,
   },
   {
-    title: "Silver metal roof wash",
-    location: "Greater Seattle",
+    title: "Lakefront metal roof transformation",
+    location: "Lake Washington",
     service: "Metal Roof Cleaning",
-    date: "Recent project",
-    image: recentSilverMetalRoofBeforeAfter,
-    alt: "Silver metal roof cleaning before and after",
-    description: "Metal roof cleaned and brightened with careful attention around seams, skylights, and roof transitions.",
+    date: "Summer 2026",
+    image: lakefrontMetalBA,
+    alt: "Lakefront metal roof buried in needles, before and after cleaning",
+    description: "Years of needles packed between every rib, then the same waterfront roof back to gleaming green.",
   },
   {
-    title: "Black metal roof cleaned",
-    location: "Kenmore Area",
-    service: "Metal Roof Cleaning",
-    date: "Recent project",
-    image: recentBlackMetalRoof,
-    alt: "Clean black metal roof after Seattle ProWash metal roof cleaning",
-    description: "Finished black metal roof project showing a clean roof surface around skylights and forested rooflines.",
+    title: "Rooftop deck pressure washing",
+    location: "Seattle",
+    service: "Pressure Washing",
+    date: "Summer 2026",
+    image: rooftopPatioBA,
+    alt: "Rooftop deck tiles stained with rust, before and after pressure washing",
+    description: "Rust staining and grime lifted off this rooftop entertaining space - furniture-ready again.",
   },
   {
     title: "Asphalt roof moss removal",
@@ -63,15 +62,13 @@ const recentProjects: RecentProject[] = [
     description: "Roof debris and moss removed to help protect the shingles through wet Seattle weather.",
   },
   {
-    title: "Rooftop patio pressure washing",
-    location: "Seattle Area",
+    title: "Courtyard patio deep clean",
+    location: "West Seattle",
     service: "Pressure Washing",
-    date: "Recent project",
-    image: patioPressureWashingBefore2,
-    afterImage: patioPressureWashingAfter2,
-    alt: "Concrete patio before pressure washing",
-    afterAlt: "Concrete patio after pressure washing",
-    description: "Concrete patio cleaned section by section for a brighter, more even finish.",
+    date: "Summer 2026",
+    image: westSeattlePatioBA,
+    alt: "West Seattle courtyard pavers before and after pressure washing",
+    description: "Dark, grimy courtyard pavers brought back to a bright, even finish.",
   },
   {
     title: "Gutter cleaning",
