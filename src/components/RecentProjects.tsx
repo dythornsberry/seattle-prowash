@@ -7,6 +7,7 @@ import recentAsphaltRoofBeforeAfter from "@/assets/recent-asphalt-roof-before-af
 import asphaltMossSeamsBA from "@/assets/asphalt-moss-seams-ba-2026.jpg";
 import lakefrontMetalBA from "@/assets/lakefront-metal-before-after-2026.jpg";
 import rooftopPatioBA from "@/assets/rooftop-patio-ba-2026.jpg";
+import asphaltComposite4 from "@/assets/asphalt-roof-before-after-4-2026.jpg";
 import gutterBeforeAfter from "@/assets/gutter-cleaning-before-after.jpg";
 
 type RecentProject = {
