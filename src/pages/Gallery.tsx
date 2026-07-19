@@ -41,7 +41,7 @@ import dylanPumpSprayer from "@/assets/dylan-pump-sprayer.jpg";
 import asphaltMossSeamsBA from "@/assets/asphalt-moss-seams-ba-2026.jpg";
 import greenMetalRoofBA from "@/assets/green-metal-roof-ba-2026.jpg";
 import grayMetalRoofBA from "@/assets/gray-metal-roof-ba-2026.jpg";
-import lakefrontMetalBA from "@/assets/lakefront-metal-ba-2026.jpg";
+import lakefrontMetalBA from "@/assets/lakefront-metal-before-after-2026.jpg";
 import needleMetalRoofBA from "@/assets/needle-metal-roof-ba-2026.jpg";
 import asphaltRidgeBA from "@/assets/asphalt-ridge-ba-2026.jpg";
 import westSeattlePatioBA from "@/assets/west-seattle-patio-ba-2026.jpg";

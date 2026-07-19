@@ -5,9 +5,8 @@ import { Button } from "@/components/ui/button";
 import { navigateToContact } from "@/lib/navigation";
 import recentAsphaltRoofBeforeAfter from "@/assets/recent-asphalt-roof-before-after-2026.webp";
 import asphaltMossSeamsBA from "@/assets/asphalt-moss-seams-ba-2026.jpg";
-import lakefrontMetalBA from "@/assets/lakefront-metal-ba-2026.jpg";
+import lakefrontMetalBA from "@/assets/lakefront-metal-before-after-2026.jpg";
 import rooftopPatioBA from "@/assets/rooftop-patio-ba-2026.jpg";
-import westSeattlePatioBA from "@/assets/west-seattle-patio-ba-2026.jpg";
 import gutterBeforeAfter from "@/assets/gutter-cleaning-before-after.jpg";
 
 type RecentProject = {
@@ -44,15 +43,6 @@ const recentProjects: RecentProject[] = [
     description: "Years of needles packed between every rib, then the same waterfront roof back to gleaming green.",
   },
   {
-    title: "Rooftop deck pressure washing",
-    location: "Seattle",
-    service: "Pressure Washing",
-    date: "Summer 2026",
-    image: rooftopPatioBA,
-    alt: "Rooftop deck tiles stained with rust, before and after pressure washing",
-    description: "Rust staining and grime lifted off this rooftop entertaining space - furniture-ready again.",
-  },
-  {
     title: "Asphalt roof moss removal",
     location: "Kenmore",
     service: "Roof Cleaning",
@@ -62,13 +52,13 @@ const recentProjects: RecentProject[] = [
     description: "Roof debris and moss removed to help protect the shingles through wet Seattle weather.",
   },
   {
-    title: "Courtyard patio deep clean",
-    location: "West Seattle",
-    service: "Pressure Washing",
+    title: "Roof cleaning & treatment before & after",
+    location: "Greater Seattle",
+    service: "Roof Cleaning",
     date: "Summer 2026",
-    image: westSeattlePatioBA,
-    alt: "West Seattle courtyard pavers before and after pressure washing",
-    description: "Dark, grimy courtyard pavers brought back to a bright, even finish.",
+    image: asphaltComposite4,
+    alt: "Debris-covered asphalt roof before and after cleaning and treatment",
+    description: "Debris cleared and preventative treatment applied across the whole roof face.",
   },
   {
     title: "Gutter cleaning",
@@ -78,6 +68,15 @@ const recentProjects: RecentProject[] = [
     image: gutterBeforeAfter,
     alt: "Gutter cleaning before and after in Bothell",
     description: "Clogged gutters cleared and cleaned so water can drain away from the home.",
+  },
+  {
+    title: "Rooftop deck pressure washing",
+    location: "Seattle",
+    service: "Pressure Washing",
+    date: "Summer 2026",
+    image: rooftopPatioBA,
+    alt: "Rooftop deck tiles stained with rust, before and after pressure washing",
+    description: "Rust staining and grime lifted off this rooftop entertaining space - furniture-ready again.",
   },
 ];
 
