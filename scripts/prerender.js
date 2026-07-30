@@ -302,15 +302,29 @@ async function launchChromium() {
     return await chromium.launch();
   } catch {
     console.log('Chromium not found — downloading via `npx playwright@1.62.0 install chromium --only-shell`...');
-    execSync('npx -y playwright@1.62.0 install chromium --only-shell', { stdio: 'inherit' });
+    execSync('npx -y playwright@1.62.0 install chromium --only-shell', { stdio: 'inherit', timeout: 240000 });
     return await chromium.launch();
   }
 }
 
 async function snapshotRoutes() {
-  const server = await startStaticServer();
-  const port = server.address().port;
-  const browser = await launchChromium();
+  let server;
+  let browser;
+  try {
+    server = await startStaticServer();
+    const port = server.address().port;
+    browser = await launchChromium();
+    await snapshotWithBrowser(browser, port);
+  } finally {
+    // Always release these — a leaked HTTP server keeps the node process
+    // alive forever, which hangs CI builds (Cloudflare Pages kills them at
+    // the time limit and the deploy never happens).
+    if (browser) await browser.close().catch(() => {});
+    if (server) server.close();
+  }
+}
+
+async function snapshotWithBrowser(browser, port) {
   const context = await browser.newContext({ viewport: { width: 1280, height: 2000 } });
 
   // Block all external requests: faster snapshots, and third-party widgets
@@ -369,9 +383,6 @@ async function snapshotRoutes() {
       failed.push(`${route.path} (${err.message.split('\n')[0]})`);
     }
   }
-
-  await browser.close();
-  server.close();
 
   console.log(`✓ Snapshotted rendered DOM for ${ok}/${routes.length} routes`);
   if (failed.length) {
@@ -478,3 +489,7 @@ try {
 } catch (err) {
   console.warn(`⚠ DOM snapshot phase skipped (${err.message.split('\n')[0]}) — pages ship with meta tags only, same as before this feature.`);
 }
+
+// Belt and braces: never let a lingering handle (server socket, browser
+// subprocess) keep the build hanging in CI.
+process.exit(0);
