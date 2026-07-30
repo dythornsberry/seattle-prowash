@@ -116,7 +116,7 @@ const RoofCleaning = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Roof Cleaning & Moss Removal in Seattle, WA"
-        description="Roof cleaning and moss removal for asphalt, composite & metal roofs in Seattle, Kenmore, Bothell & Kirkland. 12-month moss-free guarantee. Licensed & insured. Fast quotes."
+        description="Roof cleaning and moss removal for every roof type — asphalt, composite, metal, tile & cedar shake — in Seattle, Kenmore, Bothell & Kirkland. 12-month moss-free guarantee. Licensed & insured."
         url="https://www.seattleprowash.com/roof-cleaning"
         image={roofCleaningImage}
       />

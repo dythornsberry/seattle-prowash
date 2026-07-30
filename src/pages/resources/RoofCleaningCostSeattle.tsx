@@ -106,7 +106,7 @@ const RoofCleaningCostSeattle = () => {
 
                   <h3>Tile & Cedar Shake: Custom Quote</h3>
                   <p>
-                    We rarely take these jobs — they need multi-day treatment processes and very careful handling. If you have tile or cedar, expect quotes starting well above $1,500 from anyone doing it properly.
+                    Yes, we clean tile and cedar shake roofs too. They need multi-day treatment processes and very careful handling, so they're priced by custom quote — expect quotes starting well above $1,500 from anyone doing it properly.
                   </p>
 
                   <h2>What Actually Drives Your Price</h2>
