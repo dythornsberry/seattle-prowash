@@ -294,12 +294,15 @@ function startStaticServer() {
 }
 
 async function launchChromium() {
-  const { chromium } = await import('playwright');
+  // playwright-core ships no browsers (keeps `npm install` fast on CI, e.g.
+  // Cloudflare Pages). Download just headless Chromium on demand, pinned to
+  // the same version so the browser revision matches the driver.
+  const { chromium } = await import('playwright-core');
   try {
     return await chromium.launch();
   } catch {
-    console.log('Chromium not found — downloading via `npx playwright install chromium`...');
-    execSync('npx playwright install chromium', { stdio: 'inherit' });
+    console.log('Chromium not found — downloading via `npx playwright@1.62.0 install chromium --only-shell`...');
+    execSync('npx -y playwright@1.62.0 install chromium --only-shell', { stdio: 'inherit' });
     return await chromium.launch();
   }
 }
