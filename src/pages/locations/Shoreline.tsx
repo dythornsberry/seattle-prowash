@@ -48,19 +48,19 @@ const Shoreline = () => {
 
   const testimonials = [
     {
-      quote: "Excellent work on our Shoreline home! The team was professional, thorough, and the results exceeded our expectations. Our roof looks fantastic.",
-      author: "Michael S.",
-      service: "Roof Cleaning"
+      quote: "Excellent service, he came in with a couple days of the rains, and during. Dylan kept us up to date before our scheduled time.",
+      author: "Lori",
+      service: "Roof & Gutter Cleaning"
     },
     {
-      quote: "They did a great job on our gutters. Quick, efficient, and no mess left behind. Highly recommend Seattle ProWash!",
-      author: "Susan K.",
-      service: "Gutter Cleaning"
+      quote: "I had 5 different quotes for gutter & roof cleaning, and Dylan was by far the best.",
+      author: "Melanie C.",
+      service: "Gutter & Roof Cleaning"
     },
     {
-      quote: "Professional moss removal service that actually works. Our roof has stayed clean for over a year now. Great value for Shoreline homeowners.",
-      author: "David R.",
-      service: "Moss Treatment"
+      quote: "They gave us a good quote. Delivered great service and the best part was they left the yard clean! This is our third time!",
+      author: "Nancy",
+      service: "Roof & Gutter Cleaning"
     }
   ];
 
@@ -154,7 +154,7 @@ const Shoreline = () => {
           <section className="py-16 bg-white">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl font-bold text-brand-navy mb-12 text-center">
-                What Shoreline Customers Say
+                What Our Customers Say
               </h2>
               <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {testimonials.map((testimonial, index) => (

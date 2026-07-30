@@ -47,19 +47,19 @@ const Edmonds = () => {
 
   const testimonials = [
     {
-      quote: "Our Edmonds home looks great after Seattle ProWash cleaned our roof and gutters. The team was courteous, efficient, and did a thorough job.",
-      author: "Catherine B.",
+      quote: "Great job on my roof and gutters, friendly crew. Customer is always right attitude, price fair. Recommend them!",
+      author: "Miguel A.",
       service: "Roof & Gutter Cleaning"
     },
     {
-      quote: "Living near the waterfront means constant moss and algae. They completely transformed our roof and it's stayed clean. Highly recommend to Edmonds neighbors!",
-      author: "James W.",
-      service: "Moss Removal"
+      quote: "If you miss good old fashion quality service, you will find it here. These guys are the best - on time, quality workmanship, and at a fair price.",
+      author: "Mary D.",
+      service: "Roof & Gutter Cleaning"
     },
     {
-      quote: "Professional service from start to finish. Our gutters were completely clogged and now they work perfectly. Best gutter cleaning company in Edmonds!",
-      author: "Lisa M.",
-      service: "Gutter Cleaning"
+      quote: "Dylan did an amazing job cleaning our gutters, roof and clearing branches!",
+      author: "Arielle S.",
+      service: "Gutters & Roof"
     }
   ];
 
@@ -160,7 +160,7 @@ const Edmonds = () => {
           <section className="py-16 bg-white">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl font-bold text-brand-navy mb-12 text-center">
-                What Edmonds Customers Say
+                What Our Customers Say
               </h2>
               <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {testimonials.map((testimonial, index) => (

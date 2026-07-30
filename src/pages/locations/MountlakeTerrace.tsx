@@ -47,19 +47,19 @@ const MountlakeTerrace = () => {
 
   const testimonials = [
     {
-      quote: "Seattle ProWash did an outstanding job on our Mountlake Terrace home. The roof cleaning was thorough and the crew was very professional.",
-      author: "Thomas H.",
-      service: "Roof Cleaning"
+      quote: "These dudes are the way to go, very hard working and I was very satisfied with their work, thanks Dylan and the crew!",
+      author: "Owen A.",
+      service: "Roof & Gutter Cleaning"
     },
     {
-      quote: "Our gutters were completely clogged with debris. They cleaned everything out perfectly and our drainage is working great now. Excellent service!",
-      author: "Nancy D.",
-      service: "Gutter Cleaning"
+      quote: "Seattle Pro Wash is a great company to work with! They do a great job for gutter cleaning and roof cleaning!",
+      author: "Dafna S.",
+      service: "Roof & Gutter Cleaning"
     },
     {
-      quote: "The roof cleaning transformed our home's appearance. It looks brand new! Very impressed with their work in Mountlake Terrace.",
-      author: "Kevin P.",
-      service: "Roof Cleaning"
+      quote: "I called them to clean my grandparent's roof and gutters and mine - both jobs were great and team was timely, affordable and professional.",
+      author: "Monisha H.",
+      service: "Roof & Gutters"
     }
   ];
 
@@ -160,7 +160,7 @@ const MountlakeTerrace = () => {
           <section className="py-16 bg-white">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl font-bold text-brand-navy mb-12 text-center">
-                What Mountlake Terrace Customers Say
+                What Our Customers Say
               </h2>
               <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {testimonials.map((testimonial, index) => (

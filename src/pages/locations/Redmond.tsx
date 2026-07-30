@@ -25,8 +25,11 @@ const Redmond = () => {
       description: "Professional roof cleaning, gutter cleaning, and exterior washing services in Redmond, WA. Serving all Redmond neighborhoods. 12-month moss-free guarantee.",
       url: "https://www.seattleprowash.com/redmond-roof-gutter-cleaning",
       address: {
-        ...COMPANY_INFO.address,
-        addressLocality: "Redmond"
+        streetAddress: "",
+        addressLocality: "Redmond",
+        addressRegion: "WA",
+        postalCode: "98052",
+        addressCountry: "US"
       },
       geo: {
         latitude: 47.6740,

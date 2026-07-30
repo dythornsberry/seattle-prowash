@@ -25,8 +25,11 @@ const Bellevue = () => {
       description: "Professional roof cleaning and gutter cleaning services in Bellevue, WA. Serving all Bellevue neighborhoods with expert moss removal and 12-month guarantee.",
       url: "https://www.seattleprowash.com/bellevue-roof-gutter-cleaning",
       address: {
-        ...COMPANY_INFO.address,
-        addressLocality: "Bellevue"
+        streetAddress: "",
+        addressLocality: "Bellevue",
+        addressRegion: "WA",
+        postalCode: "98004",
+        addressCountry: "US"
       },
       geo: {
         latitude: 47.6101,

@@ -26,8 +26,11 @@ const Woodinville = () => {
       description: "Professional roof cleaning, gutter cleaning, and exterior washing services in Woodinville, WA. Serving all Woodinville neighborhoods. 12-month moss-free guarantee.",
       url: "https://www.seattleprowash.com/woodinville-roof-gutter-cleaning",
       address: {
-        ...COMPANY_INFO.address,
-        addressLocality: "Woodinville"
+        streetAddress: "",
+        addressLocality: "Woodinville",
+        addressRegion: "WA",
+        postalCode: "98072",
+        addressCountry: "US"
       },
       geo: {
         latitude: 47.7540,

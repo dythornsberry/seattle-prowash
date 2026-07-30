@@ -26,8 +26,11 @@ const Kirkland = () => {
       description: "Professional roof cleaning and gutter cleaning services in Kirkland, WA. Serving all Kirkland neighborhoods including Juanita, Totem Lake, and Houghton. 12-month moss-free guarantee.",
       url: "https://www.seattleprowash.com/kirkland-roof-gutter-cleaning",
       address: {
-        ...COMPANY_INFO.address,
-        addressLocality: "Kirkland"
+        streetAddress: "",
+        addressLocality: "Kirkland",
+        addressRegion: "WA",
+        postalCode: "98033",
+        addressCountry: "US"
       },
       geo: {
         latitude: 47.6815,

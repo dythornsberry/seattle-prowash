@@ -92,22 +92,22 @@
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "47.75740",
-        "longitude": "-122.24650"
+        "latitude": 47.75740,
+        "longitude": -122.24650
       },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-          "opens": "00:00",
-          "closes": "23:59"
-        }
-      ],
       "priceRange": "$$",
       "areaServed": [
         {
           "@type": "City",
           "name": "Kenmore",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Washington"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Lake Forest Park",
           "containedInPlace": {
             "@type": "State",
             "name": "Washington"
@@ -226,8 +226,8 @@
             "name": "Roof cleaning",
             "description": "Professional roof cleaning with moss removal and eco-friendly treatment. 12-month moss-free guarantee.",
             "provider": {
-              "@type": "LocalBusiness",
-              "name": "Seattle ProWash"
+              "@type": "HomeAndConstructionBusiness",
+              "@id": "https://www.seattleprowash.com/#business"
             },
             "areaServed": [
               {
@@ -266,8 +266,8 @@
             "name": "Gutter cleaning",
             "description": "Complete hand cleaning of gutters with downspout flush and roof debris blow-off",
             "provider": {
-              "@type": "LocalBusiness",
-              "name": "Seattle ProWash"
+              "@type": "HomeAndConstructionBusiness",
+              "@id": "https://www.seattleprowash.com/#business"
             },
             "areaServed": [
               {

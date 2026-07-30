@@ -47,19 +47,19 @@ const Lynnwood = () => {
 
   const testimonials = [
     {
-      quote: "Seattle ProWash did an amazing job on our Lynnwood home. The roof looks brand new and they were very professional throughout the entire process.",
-      author: "Jennifer M.",
+      quote: "These guys did an amazing job cleaning up my roof. They did a great job not damaging anything and i would definitely hire them again down the line.",
+      author: "Daniel S.",
       service: "Roof Cleaning"
     },
     {
-      quote: "The gutter cleaning was thorough and they even cleaned up after themselves. Very impressed with the attention to detail!",
-      author: "Robert T.",
-      service: "Gutter Cleaning"
+      quote: "My experience with them was smooth from booking to appointment. Dylan's team kept me updated throughout the process with before and after photos.",
+      author: "Kimani G.",
+      service: "Roof & Gutter Cleaning"
     },
     {
-      quote: "Fast, efficient, and excellent results. They removed years of moss buildup from our roof. Great service in the Lynnwood area!",
-      author: "Patricia L.",
-      service: "Moss Treatment"
+      quote: "Another superb job by Seattle Prowash! Thank you, Dylan, for your consistently excellent service!",
+      author: "Shirley L.",
+      service: "Gutter Cleaning"
     }
   ];
 
@@ -153,7 +153,7 @@ const Lynnwood = () => {
           <section className="py-16 bg-white">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl font-bold text-brand-navy mb-12 text-center">
-                What Lynnwood Customers Say
+                What Our Customers Say
               </h2>
               <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {testimonials.map((testimonial, index) => (

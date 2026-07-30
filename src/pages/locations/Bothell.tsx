@@ -26,8 +26,11 @@ const Bothell = () => {
       description: "Professional roof cleaning and gutter cleaning services in Bothell, WA. Serving all Bothell neighborhoods including Canyon Park and Country Village. 12-month moss-free guarantee.",
       url: "https://www.seattleprowash.com/bothell-roof-gutter-cleaning",
       address: {
-        ...COMPANY_INFO.address,
-        addressLocality: "Bothell"
+        streetAddress: "",
+        addressLocality: "Bothell",
+        addressRegion: "WA",
+        postalCode: "98011",
+        addressCountry: "US"
       },
       geo: {
         latitude: 47.7623,

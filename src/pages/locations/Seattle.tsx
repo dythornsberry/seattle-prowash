@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { SEOHead } from "@/components/SEOHead";
-import { injectSchema } from "@/utils/schema";
+import { generateBreadcrumbSchema, generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
@@ -21,6 +21,33 @@ import { navigateToContact } from "@/lib/navigation";
 const Seattle = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // Inject LocalBusiness Schema for Seattle (parity with other location pages)
+    const businessSchema = generateLocalBusinessSchema({
+      ...COMPANY_INFO,
+      name: `${COMPANY_INFO.name} - Seattle`,
+      description: "Professional roof cleaning and gutter cleaning across Seattle neighborhoods. Warranty-safe moss removal from Queen Anne to Ballard, Green Lake to Capitol Hill. 12-month moss-free guarantee.",
+      url: "https://www.seattleprowash.com/seattle-roof-gutter-cleaning",
+      address: {
+        streetAddress: "",
+        addressLocality: "Seattle",
+        addressRegion: "WA",
+        postalCode: "98115",
+        addressCountry: "US"
+      },
+      geo: {
+        latitude: 47.6062,
+        longitude: -122.3321
+      },
+      areaServed: ["Seattle", "Queen Anne", "Ballard", "Green Lake", "Capitol Hill", "Fremont", "Wallingford", "Greenwood"]
+    });
+
+    // Inject Breadcrumb Schema
+    const breadcrumbSchema = generateBreadcrumbSchema([
+      { name: "Home", url: "https://www.seattleprowash.com" },
+      { name: "Service Areas", url: "https://www.seattleprowash.com/service-areas" },
+      { name: "Seattle", url: "https://www.seattleprowash.com/seattle-roof-gutter-cleaning" }
+    ]);
 
     // Inject Service Schema for Seattle
     const serviceSchema = {
@@ -69,7 +96,7 @@ const Seattle = () => {
           "name": "What's a typical price range in Seattle?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most Seattle homes range from $300-$600 for standard single-story roof cleaning and $400-$800 for two-story homes. Gutter cleaning typically runs $250-$400 depending on home size and gutter length. Final pricing depends on roof pitch, access, and specific conditions. Dylan will call or text to confirm details and help you get clear pricing."
+            "text": "Most asphalt and composite roofs in Seattle run $499-$1,200 for a full cleaning with moss treatment, and that includes gutter cleaning. Standalone gutter cleaning typically runs $250-$600 depending on home size and gutter length. Final pricing depends on roof pitch, access, and specific conditions. Dylan will call or text to confirm details and help you get clear pricing."
           }
         },
         {
@@ -83,10 +110,14 @@ const Seattle = () => {
       ]
     };
 
+    const cleanupBusiness = injectSchema(businessSchema);
+    const cleanupBreadcrumb = injectSchema(breadcrumbSchema);
     const cleanupService = injectSchema(serviceSchema);
     const cleanupFAQ = injectSchema(faqSchema);
 
     return () => {
+      cleanupBusiness();
+      cleanupBreadcrumb();
       cleanupService();
       cleanupFAQ();
     };

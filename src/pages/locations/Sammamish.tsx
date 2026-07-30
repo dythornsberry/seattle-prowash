@@ -25,8 +25,11 @@ const Sammamish = () => {
       description: "Professional roof cleaning, gutter cleaning, and exterior washing services in Sammamish, WA. Serving all Sammamish neighborhoods. 12-month moss-free guarantee.",
       url: "https://www.seattleprowash.com/sammamish-roof-gutter-cleaning",
       address: {
-        ...COMPANY_INFO.address,
-        addressLocality: "Sammamish"
+        streetAddress: "",
+        addressLocality: "Sammamish",
+        addressRegion: "WA",
+        postalCode: "98074",
+        addressCountry: "US"
       },
       geo: {
         latitude: 47.6163,

@@ -47,19 +47,19 @@ const MillCreek = () => {
 
   const testimonials = [
     {
-      quote: "Outstanding roof cleaning service! Our Mill Creek home's roof looks brand new. The team was professional, punctual, and did an excellent job.",
-      author: "Brian C.",
+      quote: "My experience with Seattle pro wash has always been very good. They follow up on my calls, they use modern scheduling software that sends text confirmation/reminders which I like.",
+      author: "Jon R.",
+      service: "Roof & Gutter Cleaning"
+    },
+    {
+      quote: "Took the time to do a thorough job. Did a great job cleaning up. Cost was much lower than all other quotes.",
+      author: "Beth M.",
+      service: "Metal Roof & Gutters"
+    },
+    {
+      quote: "Great company and easy to work with. I don't dare to step on my roof, so I am happy to pay someone else to do it.",
+      author: "Matt T.",
       service: "Roof Cleaning"
-    },
-    {
-      quote: "We've used Seattle ProWash for both gutter cleaning and pressure washing. Both times they exceeded our expectations. Highly recommend to Mill Creek residents!",
-      author: "Amanda F.",
-      service: "Multiple Services"
-    },
-    {
-      quote: "The moss removal was incredibly thorough. Our roof has stayed clean and moss-free for over a year. Great value and excellent customer service.",
-      author: "Christopher L.",
-      service: "Moss Treatment"
     }
   ];
 
@@ -160,7 +160,7 @@ const MillCreek = () => {
           <section className="py-16 bg-white">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl font-bold text-brand-navy mb-12 text-center">
-                What Mill Creek Customers Say
+                What Our Customers Say
               </h2>
               <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {testimonials.map((testimonial, index) => (

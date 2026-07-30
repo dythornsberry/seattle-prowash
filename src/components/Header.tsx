@@ -33,6 +33,7 @@ const Header = () => {
     { name: "Home", href: "/", onClick: goHome },
     { name: "Pricing", href: "/pricing" },
     { name: "Gallery", href: "/gallery" },
+    { name: "Service Areas", href: "/service-areas" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/#contact", onClick: goToContact }
   ];
