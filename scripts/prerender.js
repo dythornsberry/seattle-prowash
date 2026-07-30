@@ -1,15 +1,25 @@
 /**
  * Post-build prerender script for SEO.
  *
- * Creates route-specific HTML files with correct static meta tags so that
- * search engines get proper titles, descriptions, canonical URLs, and
- * Open Graph tags without needing to execute JavaScript.
+ * Phase 1 (meta): creates route-specific HTML files with correct static meta
+ * tags (titles, descriptions, canonicals, OG tags) via string replacement.
+ *
+ * Phase 2 (snapshot): renders each route in headless Chromium against the
+ * built output and writes the real DOM into each HTML file, so crawlers that
+ * don't execute JavaScript (GPTBot, ClaudeBot, PerplexityBot, Bing, schema
+ * validators) see full page content and page-specific JSON-LD. External
+ * requests are blocked during snapshotting so third-party widgets never
+ * pollute the captured DOM. If Chromium is unavailable (e.g. a restricted CI
+ * image), phase 2 is skipped with a warning and the build still succeeds with
+ * phase-1 output — a deploy can never break because of this step.
  *
  * Run after `vite build`: node scripts/prerender.js
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
-import { dirname, join } from 'path';
+import { createServer } from 'http';
+import { execSync } from 'child_process';
+import { dirname, join, extname, normalize } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -232,6 +242,140 @@ function generateHead(route) {
     <meta name="twitter:image" content="${ogImage}" />`;
 }
 
+// ---------------------------------------------------------------------------
+// Phase 2: snapshot rendered DOM into the phase-1 HTML files
+// ---------------------------------------------------------------------------
+
+const MIME = {
+  '.html': 'text/html',
+  '.js': 'text/javascript',
+  '.mjs': 'text/javascript',
+  '.css': 'text/css',
+  '.json': 'application/json',
+  '.svg': 'image/svg+xml',
+  '.png': 'image/png',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.webp': 'image/webp',
+  '.avif': 'image/avif',
+  '.ico': 'image/x-icon',
+  '.txt': 'text/plain',
+  '.xml': 'application/xml',
+  '.woff2': 'font/woff2',
+};
+
+function startStaticServer() {
+  return new Promise((resolve) => {
+    const server = createServer((req, res) => {
+      const urlPath = decodeURIComponent(req.url.split('?')[0]);
+      const safePath = normalize(urlPath).replace(/^(\.\.[/\\])+/, '');
+      const candidates = [
+        join(DIST, safePath),
+        join(DIST, safePath, 'index.html'),
+        join(DIST, 'index.html'), // SPA fallback
+      ];
+      for (const file of candidates) {
+        if (existsSync(file) && !file.endsWith('/') && extname(file)) {
+          try {
+            const body = readFileSync(file);
+            res.writeHead(200, { 'Content-Type': MIME[extname(file)] || 'application/octet-stream' });
+            res.end(body);
+            return;
+          } catch {
+            // fall through to next candidate
+          }
+        }
+      }
+      res.writeHead(404);
+      res.end();
+    });
+    server.listen(0, '127.0.0.1', () => resolve(server));
+  });
+}
+
+async function launchChromium() {
+  const { chromium } = await import('playwright');
+  try {
+    return await chromium.launch();
+  } catch {
+    console.log('Chromium not found — downloading via `npx playwright install chromium`...');
+    execSync('npx playwright install chromium', { stdio: 'inherit' });
+    return await chromium.launch();
+  }
+}
+
+async function snapshotRoutes() {
+  const server = await startStaticServer();
+  const port = server.address().port;
+  const browser = await launchChromium();
+  const context = await browser.newContext({ viewport: { width: 1280, height: 2000 } });
+
+  // Block all external requests: faster snapshots, and third-party widgets
+  // (reviews carousel, analytics, maps) never end up in the captured DOM,
+  // which keeps hydration on the client clean.
+  await context.route('**/*', (route) => {
+    const url = route.request().url();
+    if (url.startsWith(`http://127.0.0.1:${port}`)) return route.continue();
+    return route.abort();
+  });
+
+  const page = await context.newPage();
+  let ok = 0;
+  const failed = [];
+
+  for (const route of routes) {
+    const outFile = route.path === '/'
+      ? join(DIST, 'index.html')
+      : join(DIST, route.path, 'index.html');
+    try {
+      await page.goto(`http://127.0.0.1:${port}${route.path}`, { waitUntil: 'domcontentloaded', timeout: 20000 });
+      await page.waitForFunction(
+        () => (document.getElementById('root')?.innerHTML.length ?? 0) > 500,
+        { timeout: 15000 }
+      );
+      // Scroll through the page so IntersectionObserver-gated sections
+      // (DeferredSection) render before we snapshot.
+      await page.evaluate(async () => {
+        const step = window.innerHeight;
+        for (let y = 0; y <= document.body.scrollHeight; y += step) {
+          window.scrollTo(0, y);
+          await new Promise((r) => setTimeout(r, 60));
+        }
+        window.scrollTo(0, 0);
+      });
+      await page.waitForTimeout(300);
+
+      const { rootHtml, schemas } = await page.evaluate(() => ({
+        rootHtml: document.getElementById('root').innerHTML,
+        schemas: [...document.head.querySelectorAll('script[type="application/ld+json"][data-injected]')].map(
+          (s) => s.textContent
+        ),
+      }));
+
+      let html = readFileSync(outFile, 'utf-8');
+      html = html.replace('<div id="root"></div>', `<div id="root">${rootHtml}</div>`);
+      if (schemas.length) {
+        const schemaTags = schemas
+          .map((s) => `    <script type="application/ld+json" data-prerendered="1">${s}</script>`)
+          .join('\n');
+        html = html.replace('</head>', `${schemaTags}\n  </head>`);
+      }
+      writeFileSync(outFile, html);
+      ok++;
+    } catch (err) {
+      failed.push(`${route.path} (${err.message.split('\n')[0]})`);
+    }
+  }
+
+  await browser.close();
+  server.close();
+
+  console.log(`✓ Snapshotted rendered DOM for ${ok}/${routes.length} routes`);
+  if (failed.length) {
+    console.warn(`⚠ Snapshot failed for ${failed.length} route(s) — those remain meta-only:\n  ${failed.join('\n  ')}`);
+  }
+}
+
 function prerender() {
   const templatePath = join(DIST, 'index.html');
 
@@ -325,3 +469,9 @@ function prerender() {
 }
 
 prerender();
+
+try {
+  await snapshotRoutes();
+} catch (err) {
+  console.warn(`⚠ DOM snapshot phase skipped (${err.message.split('\n')[0]}) — pages ship with meta tags only, same as before this feature.`);
+}

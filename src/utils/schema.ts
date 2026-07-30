@@ -252,6 +252,9 @@ export const generateArticleSchema = (props: ArticleSchemaProps) => {
 export const injectSchema = (schema: unknown) => {
   const script = document.createElement('script');
   script.type = 'application/ld+json';
+  // data-injected lets the build-time snapshot (scripts/prerender.js) collect
+  // page-specific schema and bake it into the static HTML for non-JS crawlers
+  script.setAttribute('data-injected', '1');
   script.text = JSON.stringify(schema);
   document.head.appendChild(script);
   return () => {
