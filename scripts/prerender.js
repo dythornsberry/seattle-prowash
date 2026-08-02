@@ -271,6 +271,7 @@ function startStaticServer() {
       const safePath = normalize(urlPath).replace(/^(\.\.[/\\])+/, '');
       const candidates = [
         join(DIST, safePath),
+        join(DIST, `${safePath}.html`),
         join(DIST, safePath, 'index.html'),
         join(DIST, 'index.html'), // SPA fallback
       ];
@@ -343,7 +344,7 @@ async function snapshotWithBrowser(browser, port) {
   for (const route of routes) {
     const outFile = route.path === '/'
       ? join(DIST, 'index.html')
-      : join(DIST, route.path, 'index.html');
+      : join(DIST, `${route.path}.html`);
     try {
       await page.goto(`http://127.0.0.1:${port}${route.path}`, { waitUntil: 'domcontentloaded', timeout: 20000 });
       await page.waitForFunction(
@@ -468,13 +469,16 @@ function prerender() {
     // Clean up empty lines from removed tags
     html = html.replace(/\n\s*\n\s*\n/g, '\n\n');
 
-    // Determine output path
+    // Flat files (dist/roof-cleaning.html), NOT directories with index.html:
+    // Cloudflare Pages serves /roof-cleaning from roof-cleaning.html directly,
+    // while a directory triggers a 308 to the trailing-slash URL on every
+    // sitemap/canonical hit.
     if (route.path === '/') {
       writeFileSync(templatePath, html);
     } else {
-      const routeDir = join(DIST, route.path);
-      mkdirSync(routeDir, { recursive: true });
-      writeFileSync(join(routeDir, 'index.html'), html);
+      const outFile = join(DIST, `${route.path}.html`);
+      mkdirSync(dirname(outFile), { recursive: true });
+      writeFileSync(outFile, html);
     }
     count++;
   }

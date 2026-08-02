@@ -1,1 +1,38 @@
+# Host canonicalization: apex -> www (canonicals, sitemap, and schema all use www)
+https://seattleprowash.com/* https://www.seattleprowash.com/:splat 301
+
+# Legacy/alias slugs -> canonical pages (server-side 301s so crawlers and old
+# backlinks pass value; mirrors the <Navigate> routes in src/App.tsx)
+/services/roof-cleaning /roof-cleaning 301
+/services/gutter-cleaning /gutter-cleaning 301
+/services/pressure-washing /pressure-washing 301
+/services/house-washing /pressure-washing 301
+/services/window-cleaning /window-cleaning 301
+/house-washing /pressure-washing 301
+/soft-wash /roof-cleaning 301
+/roof-moss /roof-cleaning 301
+/roof-moss-removal /roof-cleaning 301
+/kenmore /kenmore-roof-gutter-cleaning 301
+/lake-forest-park /lake-forest-park-roof-gutter-cleaning 301
+/locations/kenmore /kenmore-roof-gutter-cleaning 301
+/bothell /bothell-roof-gutter-cleaning 301
+/locations/bothell /bothell-roof-gutter-cleaning 301
+/kirkland /kirkland-roof-gutter-cleaning 301
+/locations/kirkland /kirkland-roof-gutter-cleaning 301
+/seattle /seattle-roof-gutter-cleaning 301
+/locations/seattle /seattle-roof-gutter-cleaning 301
+/shoreline /shoreline-roof-gutter-cleaning 301
+/locations/shoreline /shoreline-roof-gutter-cleaning 301
+/lynnwood /lynnwood-roof-gutter-cleaning 301
+/locations/lynnwood /lynnwood-roof-gutter-cleaning 301
+/woodinville /woodinville-roof-gutter-cleaning 301
+/locations/woodinville /woodinville-roof-gutter-cleaning 301
+/bellevue /bellevue-roof-gutter-cleaning 301
+/redmond /redmond-roof-gutter-cleaning 301
+/sammamish /sammamish-roof-gutter-cleaning 301
+/edmonds /edmonds-roof-gutter-cleaning 301
+/mountlake-terrace /mountlake-terrace-roof-gutter-cleaning 301
+/mill-creek /mill-creek-roof-gutter-cleaning 301
+
+# SPA fallback for anything else (client router renders NotFound)
 /* /index.html 200
