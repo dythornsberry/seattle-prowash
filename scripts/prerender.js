@@ -504,6 +504,28 @@ try {
   console.warn(`⚠ DOM snapshot phase skipped (${err.message.split('\n')[0]}) — pages ship with meta tags only, same as before this feature.`);
 }
 
+// Notify Bing/IndexNow of the fresh URLs — only on real CI deploys (CF_PAGES
+// is set in Cloudflare Pages builds), never for local builds. The key file
+// (public/ff27...txt) is already served by the site.
+if (process.env.CF_PAGES) {
+  try {
+    const INDEXNOW_KEY = 'ff2719745ab4a24d71f1a41be2d03da0';
+    const res = await fetch('https://api.indexnow.org/indexnow', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json; charset=utf-8' },
+      body: JSON.stringify({
+        host: 'www.seattleprowash.com',
+        key: INDEXNOW_KEY,
+        keyLocation: `${BASE_URL}/${INDEXNOW_KEY}.txt`,
+        urlList: routes.map((r) => `${BASE_URL}${r.path === '/' ? '/' : r.path}`),
+      }),
+    });
+    console.log(`✓ IndexNow ping sent (${res.status})`);
+  } catch (err) {
+    console.warn(`⚠ IndexNow ping failed (${err.message}) — not fatal`);
+  }
+}
+
 // Belt and braces: never let a lingering handle (server socket, browser
 // subprocess) keep the build hanging in CI.
 process.exit(0);
