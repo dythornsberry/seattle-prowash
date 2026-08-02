@@ -89,7 +89,7 @@ const GutterCleaningSafetyTips = () => {
                   <div>
                     <h3 className="text-lg font-bold text-red-800 mb-2">The Short Version</h3>
                     <p className="text-red-700">
-                      A fall from a single-story gutter line is 10 feet onto concrete. Nothing your gutters can do to your house is worth what that does to you. One-story home, good ladder, dry day — reasonable DIY job. Anything more than that, hire it out — and not necessarily to us. Just don't get hurt over gutters.
+                      A fall from a single-story gutter line is 10 feet onto concrete. Nothing your gutters can do to your house is worth what that does to you. One-story home, good ladder, dry day? Reasonable DIY job. Anything more than that, hire it out. Doesn't have to be us. Just don't get hurt over gutters.
                     </p>
                   </div>
                 </div>
@@ -108,20 +108,20 @@ const GutterCleaningSafetyTips = () => {
                   </p>
                   <ul>
                     <li><strong>The 4-to-1 rule:</strong> for every 4 feet of height, the ladder base sits 1 foot from the wall. Steeper than that and it tips backward; shallower and the feet kick out.</li>
-                    <li><strong>Firm, level ground only.</strong> Wet grass and bark beds shift under load. We carry plywood pads for soft ground — a scrap of plywood under the feet works at home too.</li>
+                    <li><strong>Firm, level ground only.</strong> Wet grass and bark beds shift under load. We carry plywood pads for soft ground. A scrap of plywood under the feet works at home too.</li>
                     <li><strong>Never lean past your belt buckle.</strong> Climb down and move the ladder. Yes, it's tedious. Reaching that extra two feet is how people go over sideways.</li>
-                    <li><strong>Three points of contact</strong> — two feet and a hand, always. Which means debris goes in a bucket on a hook, not in your hands.</li>
-                    <li><strong>A standoff stabilizer</strong> (~$40 at any hardware store) rests the ladder against the roof instead of crushing the gutter — steadier for you, and it won't bend the aluminum.</li>
+                    <li><strong>Three points of contact</strong> at all times, meaning two feet and a hand. Which means debris goes in a bucket on a hook, not in your hands.</li>
+                    <li><strong>A standoff stabilizer</strong> (~$40 at any hardware store) rests the ladder against the roof instead of crushing the gutter. Steadier for you, and it won't bend the aluminum.</li>
                   </ul>
 
                   <h2>Pick Your Day</h2>
                   <p>
-                    We reschedule jobs for weather, and we do this professionally — that should tell you something. Don't clean gutters in rain, wind, or frost. In a Seattle fall that can mean waiting a few days for a dry window. Wait. Wet aluminum, wet shoes, and wet ladder rungs are a bad combination, and frozen gutters won't clean out properly anyway.
+                    We reschedule jobs for weather, and we do this professionally. That should tell you something. Don't clean gutters in rain, wind, or frost. In a Seattle fall that can mean waiting a few days for a dry window. Wait. Wet aluminum, wet shoes, and wet ladder rungs are a bad combination, and frozen gutters won't clean out properly anyway.
                   </p>
 
                   <h2>Stay Off the Roof</h2>
                   <p>
-                    Cleaning gutters from the roof — leaning over the edge — is how the worst falls happen. We do it with fall-protection gear and anchor points; without that equipment there is no safe version of standing at a roof edge looking down. If your gutter line can't be reached from a ladder, that's the line where DIY should stop.
+                    Cleaning gutters from the roof, leaning over the edge, is how the worst falls happen. We do it with fall-protection gear and anchor points; without that equipment there is no safe version of standing at a roof edge looking down. If your gutter line can't be reached from a ladder, that's the line where DIY should stop.
                   </p>
 
                   <h2>The Stuff Nobody Warns You About</h2>
@@ -134,10 +134,10 @@ const GutterCleaningSafetyTips = () => {
 
                   <h2>Where We'd Draw the DIY Line</h2>
                   <p>
-                    One-story rambler, walkable yard, decent ladder, dry day — clean your own gutters and save the money. We mean that.
+                    One-story rambler, walkable yard, decent ladder, dry day? Clean your own gutters and save the money. We mean that.
                   </p>
                   <p>
-                    Two or more stories, steep terrain around the house, gutters over a sunroom or deck roof, or any spot you can't comfortably reach from a ladder — hire it out. A professional crew has the stabilizers, the fall protection, and the insurance, and does hundreds of these a year. Our gutter cleaning starts at $250, includes the downspout flush and a roof blow-off, and takes about an hour or two. That's cheap compared to any version of falling off a ladder.
+                    Two or more stories, steep terrain around the house, gutters over a sunroom or deck roof, or any spot you can't comfortably reach from a ladder? Hire it out. A professional crew has the stabilizers, the fall protection, and the insurance, and does hundreds of these a year. Our gutter cleaning starts at $250, includes the downspout flush and a roof blow-off, and takes about an hour or two. That's cheap compared to any version of falling off a ladder.
                   </p>
                 </div>
 

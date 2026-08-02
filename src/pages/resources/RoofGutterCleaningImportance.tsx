@@ -87,12 +87,12 @@ const RoofGutterCleaningImportance = () => {
                 <div className="prose prose-lg max-w-none">
                   <h2>The Math That Makes This Worth Reading</h2>
                   <p>
-                    A roof cleaning with moss treatment runs $499–$1,200 for most asphalt roofs around here, and on our schedule that's an every-2-to-4-years expense. A roof replacement runs $10,000–$30,000. Moss and clogged gutters are the two things that quietly move that replacement date up by years — a well-maintained roof commonly lasts 10–15 years longer than a neglected one. Nothing else in home maintenance has a spread like that.
+                    A roof cleaning with moss treatment runs $499-$1,500 for most asphalt roofs around here, and on our schedule that's an every-2-to-4-years expense. A roof replacement runs $10,000-$30,000. Moss and clogged gutters are the two things that quietly move that replacement date up by years. A well-maintained roof commonly lasts 10-15 years longer than a neglected one. Nothing else in home maintenance has a spread like that.
                   </p>
 
                   <h3>What clogged gutters actually do</h3>
                   <p>
-                    A clogged gutter doesn't just overflow — it dumps every storm's water in a sheet right at your foundation line, and it holds standing water against the fascia boards until they rot. By the time you notice a sagging gutter or a damp basement corner, the water has been doing this for months. Twice-a-year cleaning (spring and fall, after the big leaf drop) is the whole fix.
+                    A clogged gutter doesn't just overflow. It dumps every storm's water in a sheet right at your foundation line, and it holds standing water against the fascia boards until they rot. By the time you notice a sagging gutter or a damp basement corner, the water has been doing this for months. Twice-a-year cleaning (spring and fall, after the big leaf drop) is the whole fix.
                   </p>
 
                   <h3>What moss actually does</h3>
@@ -102,7 +102,7 @@ const RoofGutterCleaningImportance = () => {
 
                   <h3>The curb appeal part is real too</h3>
                   <p>
-                    If you're selling, a green-streaked roof reads as "deferred maintenance" to every buyer and inspector who sees it — and it's one of the cheapest big-visual-impact fixes a house can get. Most of our pre-listing customers say the roof looks like it was replaced.
+                    If you're selling, a green-streaked roof reads as "deferred maintenance" to every buyer and inspector who sees it, and it's one of the cheapest big-visual-impact fixes a house can get. Most of our pre-listing customers say the roof looks like it was replaced.
                   </p>
 
                   <h2>Recommended Maintenance Schedule</h2>
@@ -117,7 +117,7 @@ const RoofGutterCleaningImportance = () => {
 
                   <h2>Professional vs. DIY</h2>
                   <p>
-                    Ground-floor gutters on a one-story home are a fair DIY job — we wrote a whole <Link to="/resources/gutter-cleaning-safety-tips">guide on doing it safely</Link>. The roof itself is different: moss treatment needs the right product at the right concentration to kill growth at the root without harming shingles or landscaping, and walking a wet Seattle roof without fall protection is a genuinely bad idea. That's the part worth paying for — along with the 12-month moss-free guarantee that comes with it, and a set of before/after photos so you can see exactly what was done.
+                    Ground-floor gutters on a one-story home are a fair DIY job. We wrote a whole <Link to="/resources/gutter-cleaning-safety-tips">guide on doing it safely</Link>. The roof itself is different: moss treatment needs the right product at the right concentration to kill growth at the root without harming shingles or landscaping, and walking a wet Seattle roof without fall protection is a genuinely bad idea. That's the part worth paying for, along with the 12-month moss-free guarantee that comes with it, and a set of before/after photos so you can see exactly what was done.
                   </p>
                 </div>
 
