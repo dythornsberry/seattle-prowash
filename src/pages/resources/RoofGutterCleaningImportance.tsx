@@ -74,7 +74,7 @@ const RoofGutterCleaningImportance = () => {
                 </h1>
                 
                 <p className="text-xl text-white/90 leading-relaxed">
-                  In the Pacific Northwest, regular roof and gutter maintenance is essential for protecting your home investment.
+                  The math on roof maintenance is lopsided: a few hundred dollars on a schedule, or five figures when the neglect catches up. Here's what actually goes wrong and when.
                 </p>
               </div>
             </div>
@@ -85,24 +85,24 @@ const RoofGutterCleaningImportance = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
                 <div className="prose prose-lg max-w-none">
-                  <h2>The Hidden Costs of Neglect</h2>
+                  <h2>The Math That Makes This Worth Reading</h2>
                   <p>
-                    Many Pacific Northwest homeowners underestimate the importance of regular roof and gutter cleaning. With our region's heavy rainfall, moss growth, and debris accumulation, your home faces unique challenges that require proactive maintenance.
+                    A roof cleaning with moss treatment runs $499–$1,200 for most asphalt roofs around here, and on our schedule that's an every-2-to-4-years expense. A roof replacement runs $10,000–$30,000. Moss and clogged gutters are the two things that quietly move that replacement date up by years — a well-maintained roof commonly lasts 10–15 years longer than a neglected one. Nothing else in home maintenance has a spread like that.
                   </p>
 
-                  <h3>Water Damage Prevention</h3>
+                  <h3>What clogged gutters actually do</h3>
                   <p>
-                    Clogged gutters can cause water to overflow and pool around your home's foundation, leading to costly structural damage. Regular cleaning ensures proper water flow away from your home, protecting your foundation, basement, and landscaping.
+                    A clogged gutter doesn't just overflow — it dumps every storm's water in a sheet right at your foundation line, and it holds standing water against the fascia boards until they rot. By the time you notice a sagging gutter or a damp basement corner, the water has been doing this for months. Twice-a-year cleaning (spring and fall, after the big leaf drop) is the whole fix.
                   </p>
 
-                  <h3>Roof Longevity</h3>
+                  <h3>What moss actually does</h3>
                   <p>
-                    Moss, algae, and debris significantly shorten your roof's lifespan. Moss holds moisture against roofing materials, causing rot and deterioration. Professional cleaning and treatment can extend your roof's life by years.
+                    Moss is a sponge that lives on your roof. It holds water against the shingles for weeks after rain, works under the shingle edges and lifts them, and opens paths for leaks. There's also a newer cost: insurance carriers now review aerial imagery, and a visibly mossy roof can trigger a fix-it notice or even non-renewal. A meaningful share of our calls start with one of those letters.
                   </p>
 
-                  <h3>Energy Efficiency</h3>
+                  <h3>The curb appeal part is real too</h3>
                   <p>
-                    A clean roof reflects sunlight more effectively, helping maintain comfortable indoor temperatures and reducing energy costs. Dark stains from algae and moss can increase heat absorption, making your cooling system work harder.
+                    If you're selling, a green-streaked roof reads as "deferred maintenance" to every buyer and inspector who sees it — and it's one of the cheapest big-visual-impact fixes a house can get. Most of our pre-listing customers say the roof looks like it was replaced.
                   </p>
 
                   <h2>Recommended Maintenance Schedule</h2>
@@ -117,18 +117,7 @@ const RoofGutterCleaningImportance = () => {
 
                   <h2>Professional vs. DIY</h2>
                   <p>
-                    While some homeowners attempt roof and gutter cleaning themselves, professional service offers several advantages:
-                  </p>
-                  <ul>
-                    <li>Safety expertise and proper equipment</li>
-                    <li>Thorough moss treatment that prevents regrowth</li>
-                    <li>Damage assessment and early problem detection</li>
-                    <li>Insurance and liability protection</li>
-                  </ul>
-
-                  <h2>The Seattle ProWash Difference</h2>
-                  <p>
-                    Our team understands the unique challenges of Pacific Northwest weather. We use specialized equipment and eco-friendly treatments to clean and protect your roof while ensuring the safety of your landscaping and family.
+                    Ground-floor gutters on a one-story home are a fair DIY job — we wrote a whole <Link to="/resources/gutter-cleaning-safety-tips">guide on doing it safely</Link>. The roof itself is different: moss treatment needs the right product at the right concentration to kill growth at the root without harming shingles or landscaping, and walking a wet Seattle roof without fall protection is a genuinely bad idea. That's the part worth paying for — along with the 12-month moss-free guarantee that comes with it, and a set of before/after photos so you can see exactly what was done.
                   </p>
                 </div>
 

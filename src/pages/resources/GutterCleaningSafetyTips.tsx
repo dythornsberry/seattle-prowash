@@ -72,9 +72,9 @@ const GutterCleaningSafetyTips = () => {
                 <h1 className="text-4xl md:text-5xl font-bold mb-6">
                   Safety Tips When Cleaning Gutters
                 </h1>
-                
+
                 <p className="text-xl text-white/90 leading-relaxed">
-                  Gutter cleaning can be dangerous without proper precautions. Learn essential safety tips and when to call the professionals.
+                  We're on ladders every working day, so here's the honest version: what makes gutter cleaning dangerous, how to do it safely if you do it yourself, and when it stops being worth the risk.
                 </p>
               </div>
             </div>
@@ -87,9 +87,9 @@ const GutterCleaningSafetyTips = () => {
                 <div className="flex items-start gap-4 p-6 bg-red-100 border border-red-200 rounded-lg">
                   <AlertTriangle className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="text-lg font-bold text-red-800 mb-2">Important Safety Notice</h3>
+                    <h3 className="text-lg font-bold text-red-800 mb-2">The Short Version</h3>
                     <p className="text-red-700">
-                      Gutter cleaning involves working at height and can be extremely dangerous. According to the CDC, falls from ladders cause thousands of injuries annually. Consider professional services for your safety.
+                      A fall from a single-story gutter line is 10 feet onto concrete. Nothing your gutters can do to your house is worth what that does to you. One-story home, good ladder, dry day — reasonable DIY job. Anything more than that, hire it out — and not necessarily to us. Just don't get hurt over gutters.
                     </p>
                   </div>
                 </div>
@@ -102,116 +102,42 @@ const GutterCleaningSafetyTips = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
                 <div className="prose prose-lg max-w-none">
-                  <h2>Essential Safety Equipment</h2>
+                  <h2>The Ladder Is the Whole Game</h2>
                   <p>
-                    If you decide to clean your gutters yourself, proper equipment is non-negotiable:
+                    Almost every gutter-cleaning injury is a ladder injury. Get the ladder part right and you've eliminated most of the risk:
                   </p>
                   <ul>
-                    <li><strong>Sturdy ladder:</strong> Use a 4-to-1 rule (for every 4 feet of height, place the ladder 1 foot away from the wall)</li>
-                    <li><strong>Ladder stabilizer:</strong> Prevents ladder from slipping sideways</li>
-                    <li><strong>Safety harness:</strong> Attach to a secure anchor point</li>
-                    <li><strong>Non-slip shoes:</strong> Proper footwear with good grip</li>
-                    <li><strong>Work gloves:</strong> Protect hands from sharp debris and bacteria</li>
-                    <li><strong>Safety glasses:</strong> Protect eyes from splashing debris</li>
+                    <li><strong>The 4-to-1 rule:</strong> for every 4 feet of height, the ladder base sits 1 foot from the wall. Steeper than that and it tips backward; shallower and the feet kick out.</li>
+                    <li><strong>Firm, level ground only.</strong> Wet grass and bark beds shift under load. We carry plywood pads for soft ground — a scrap of plywood under the feet works at home too.</li>
+                    <li><strong>Never lean past your belt buckle.</strong> Climb down and move the ladder. Yes, it's tedious. Reaching that extra two feet is how people go over sideways.</li>
+                    <li><strong>Three points of contact</strong> — two feet and a hand, always. Which means debris goes in a bucket on a hook, not in your hands.</li>
+                    <li><strong>A standoff stabilizer</strong> (~$40 at any hardware store) rests the ladder against the roof instead of crushing the gutter — steadier for you, and it won't bend the aluminum.</li>
                   </ul>
 
-                  <h2>Before You Start</h2>
-                  
-                  <h3>Weather Conditions</h3>
+                  <h2>Pick Your Day</h2>
                   <p>
-                    Never attempt gutter cleaning in:
+                    We reschedule jobs for weather, and we do this professionally — that should tell you something. Don't clean gutters in rain, wind, or frost. In a Seattle fall that can mean waiting a few days for a dry window. Wait. Wet aluminum, wet shoes, and wet ladder rungs are a bad combination, and frozen gutters won't clean out properly anyway.
                   </p>
-                  <ul>
-                    <li>Wet or icy conditions</li>
-                    <li>High winds</li>
-                    <li>During or immediately after storms</li>
-                    <li>When gutters are frozen</li>
-                  </ul>
 
-                  <h3>Inspect Your Equipment</h3>
+                  <h2>Stay Off the Roof</h2>
                   <p>
-                    Before each use, check that:
+                    Cleaning gutters from the roof — leaning over the edge — is how the worst falls happen. We do it with fall-protection gear and anchor points; without that equipment there is no safe version of standing at a roof edge looking down. If your gutter line can't be reached from a ladder, that's the line where DIY should stop.
                   </p>
+
+                  <h2>The Stuff Nobody Warns You About</h2>
                   <ul>
-                    <li>Ladder locks and hinges work properly</li>
-                    <li>All rungs are secure and undamaged</li>
-                    <li>Ladder feet are in good condition</li>
-                    <li>Safety equipment is properly functioning</li>
+                    <li><strong>Power lines.</strong> Know where your service drop connects to the house before you set up, and keep the ladder well clear. Aluminum ladders and power lines are a fatal combination.</li>
+                    <li><strong>Wasps.</strong> Gutters and eaves are prime nest territory, especially late summer and fall. Getting swarmed 12 feet up is a fall risk more than a sting problem.</li>
+                    <li><strong>Rotted fascia.</strong> If the wood behind the gutter is soft, the gutter can pull loose under any weight or pressure. If a gutter moves when you touch it, stop and inspect before continuing.</li>
+                    <li><strong>The gunk itself.</strong> A season of composted needles and leaf muck is heavier than it looks and full of bacteria. Gloves aren't optional, and a scratch from a rusty fastener is a real thing to avoid.</li>
                   </ul>
 
-                  <h2>Safe Cleaning Techniques</h2>
-                  
-                  <h3>Ladder Positioning</h3>
-                  <ul>
-                    <li>Place ladder on firm, level ground</li>
-                    <li>Have someone spot you when possible</li>
-                    <li>Never lean out to reach, move the ladder instead</li>
-                    <li>Keep your belt buckle between the ladder rails</li>
-                    <li>Maintain three points of contact (two hands and one foot, or two feet and one hand)</li>
-                  </ul>
-
-                  <h3>Working on the Roof</h3>
+                  <h2>Where We'd Draw the DIY Line</h2>
                   <p>
-                    <strong>We strongly advise against homeowners working directly on roofs.</strong> If roof access is necessary:
+                    One-story rambler, walkable yard, decent ladder, dry day — clean your own gutters and save the money. We mean that.
                   </p>
-                  <ul>
-                    <li>Use proper fall protection equipment</li>
-                    <li>Wear non-slip shoes</li>
-                    <li>Work only in dry conditions</li>
-                    <li>Never work alone</li>
-                  </ul>
-
-                  <h2>Specific Hazards to Avoid</h2>
-                  
-                  <h3>Electrical Dangers</h3>
-                  <ul>
-                    <li>Stay away from power lines</li>
-                    <li>Use fiberglass or wooden ladders near electrical equipment</li>
-                    <li>Never use metal tools near power lines</li>
-                  </ul>
-
-                  <h3>Wildlife and Pests</h3>
-                  <ul>
-                    <li>Be aware of wasp nests, especially in fall</li>
-                    <li>Watch for bird nests (protected by law in many areas)</li>
-                    <li>Use caution around areas where animals might nest</li>
-                  </ul>
-
-                  <h3>Hidden Structural Issues</h3>
-                  <ul>
-                    <li>Check gutter stability before putting weight on them</li>
-                    <li>Look for loose fasteners or damaged gutters</li>
-                    <li>Be aware of rotted fascia boards</li>
-                  </ul>
-
-                  <h2>When to Call Professionals</h2>
                   <p>
-                    Consider professional gutter cleaning services if:
-                  </p>
-                  <ul>
-                    <li>Your home is more than one story</li>
-                    <li>Gutters haven't been cleaned in over a year</li>
-                    <li>You notice structural damage to gutters or roof</li>
-                    <li>You're not comfortable working at height</li>
-                    <li>You lack proper safety equipment</li>
-                    <li>Your gutters require repairs</li>
-                  </ul>
-
-                  <h2>The Professional Advantage</h2>
-                  <p>
-                    Seattle ProWash technicians are trained in:
-                  </p>
-                  <ul>
-                    <li>Advanced safety protocols and equipment</li>
-                    <li>Proper ladder and roof safety techniques</li>
-                    <li>Identifying and addressing structural issues</li>
-                    <li>Thorough cleaning and inspection</li>
-                    <li>Insurance and liability protection</li>
-                  </ul>
-
-                  <h3>Insurance Considerations</h3>
-                  <p>
-                    Many homeowner's insurance policies don't cover injuries sustained during DIY maintenance. Professional services carry liability insurance to protect you and your property.
+                    Two or more stories, steep terrain around the house, gutters over a sunroom or deck roof, or any spot you can't comfortably reach from a ladder — hire it out. A professional crew has the stabilizers, the fall protection, and the insurance, and does hundreds of these a year. Our gutter cleaning starts at $250, includes the downspout flush and a roof blow-off, and takes about an hour or two. That's cheap compared to any version of falling off a ladder.
                   </p>
                 </div>
 
