@@ -463,6 +463,16 @@ function prerender() {
       ''
     );
 
+    // The hero image preload in the template is the HOMEPAGE's LCP image;
+    // on every other route it just wastes bandwidth (each page's own hero is
+    // discoverable in its prerendered HTML with fetchpriority).
+    if (route.path !== '/') {
+      html = html.replace(
+        /<link rel="preload" href="[^"]*hero-roof-cleaning[^"]*"[^>]*\/>\n?/,
+        ''
+      );
+    }
+
     // Inject the route-specific head content before </head>
     html = html.replace('</head>', `${headContent}\n  </head>`);
 
