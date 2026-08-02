@@ -12,7 +12,7 @@ import { generateFAQSchema, injectSchema } from "@/utils/schema";
 const topFAQs = [
   {
     question: "What does roof or gutter cleaning cost?",
-    answer: "Most asphalt roofs in our area range from $250-$1,200 depending on size, pitch, moss level, and access. Metal, tile, and cedar shake roofs are priced separately and often start at $800+. Typical starting prices: gutter cleaning $250+, asphalt roof cleaning $499+. Dylan will call or text after you submit the form so we can understand the job before giving a final quote.",
+    answer: "Most asphalt roof cleanings land between $499 and $1,500. A one-story rambler with light moss sits near the bottom; a large two-story with a steep pitch and heavy moss runs closer to $1,500. Metal, tile, and cedar shake roofs are priced separately and often start at $800+. Standalone gutter cleaning starts at $250. Dylan will call or text after you submit the form and you'll have an exact number before anything is scheduled.",
     icon: CheckCircle,
     cta: true
   },

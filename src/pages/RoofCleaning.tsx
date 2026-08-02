@@ -39,7 +39,7 @@ const RoofCleaning = () => {
       serviceType: "Roof Cleaning",
       url: `${COMPANY_INFO.url}/roof-cleaning`,
       offers: {
-        priceRange: "$499-$1200",
+        priceRange: "$499-$1500",
         priceCurrency: "USD"
       }
     });
@@ -272,7 +272,7 @@ const RoofCleaning = () => {
                     <CardDescription>Complete moss treatment & gutter cleaning</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-3xl font-bold text-brand-navy">$499 – $1,200 <span className="text-sm font-normal text-muted-foreground">for most homes</span></p>
+                    <p className="text-3xl font-bold text-brand-navy">$499 – $1,500 <span className="text-sm font-normal text-muted-foreground">for most homes</span></p>
                     <p className="text-muted-foreground">
                       Moss treatment, moss removal, and gutter cleaning all included. Backed by our 12-month moss-free guarantee.
                     </p>

@@ -54,7 +54,7 @@ const CostOfWaiting = () => {
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-foreground"><strong>$10,000-$30,000</strong> roof replacement vs. $499-$1,200 cleaning (most homes)</span>
+                    <span className="text-foreground"><strong>$10,000-$30,000</strong> roof replacement vs. $499-$1,500 cleaning (most homes)</span>
                   </li>
                 </ul>
               </CardContent>

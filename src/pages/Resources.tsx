@@ -20,7 +20,7 @@ const Resources = () => {
     {
       id: "roof-cleaning-cost-seattle",
       title: "What Roof Cleaning Costs in Seattle (2026 Guide)",
-      excerpt: "Real prices from a local contractor: most asphalt roofs run $499–$1,200 with gutter cleaning included, metal starts at $800. See exactly what drives your price and what should be included.",
+      excerpt: "Real prices from a local contractor: most asphalt roofs run $499–$1,500 with gutter cleaning included, metal starts at $800. See exactly what drives your price and what should be included.",
       category: "Pricing",
       readTime: "6 min read",
       date: "2026-07-11"

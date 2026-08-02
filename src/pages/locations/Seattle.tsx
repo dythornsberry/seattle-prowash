@@ -96,7 +96,7 @@ const Seattle = () => {
           "name": "What's a typical price range in Seattle?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most asphalt and composite roofs in Seattle run $499-$1,200 for a full cleaning with moss treatment, and that includes gutter cleaning. Standalone gutter cleaning typically runs $250-$600 depending on home size and gutter length. Final pricing depends on roof pitch, access, and specific conditions. Dylan will call or text to confirm details and help you get clear pricing."
+            "text": "Most asphalt and composite roofs in Seattle run $499-$1,500 for a full cleaning with moss treatment, and that includes gutter cleaning. Standalone gutter cleaning typically runs $250-$600 depending on home size and gutter length. Final pricing depends on roof pitch, access, and specific conditions. Dylan will call or text to confirm details and help you get clear pricing."
           }
         },
         {

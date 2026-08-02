@@ -121,7 +121,7 @@ const MossTreatmentVsRoofCleaning = () => {
 
                   <h2>What They Cost</h2>
                   <p>
-                    In the Seattle area, our full roof cleaning — moss removal, treatment, and gutter cleaning — runs <strong>$499 to $1,200</strong> for most asphalt and composite roofs. A standalone moss treatment costs meaningfully less and is quoted based on your roof's size and pitch. If you're not sure which you need, send a couple of photos with the quote form and we'll tell you straight — plenty of roofs only need the treatment, and we'll say so.
+                    In the Seattle area, our full roof cleaning — moss removal, treatment, and gutter cleaning — runs <strong>$499 to $1,500</strong> for most asphalt and composite roofs. A standalone moss treatment costs meaningfully less and is quoted based on your roof's size and pitch. If you're not sure which you need, send a couple of photos with the quote form and we'll tell you straight — plenty of roofs only need the treatment, and we'll say so.
                   </p>
 
                   <h2>What About DIY Moss Killer?</h2>
