@@ -24,7 +24,7 @@ const faqs = [
   {
     icon: CheckCircle,
     question: "What types of stains do you remove?",
-    answer: "We remove organic growth: moss, mold, mildew, algae, and lichen — that's our specialty.\n\nWe don't guarantee removal of scuff marks, dust, oxidation, oil stains, gum, paint, or rust. Sometimes those come out during a cleaning, but we won't promise it.",
+    answer: "We remove organic growth: moss, mold, mildew, algae, and lichen. That's our specialty.\n\nWe don't guarantee removal of scuff marks, dust, oxidation, oil stains, gum, paint, or rust. Sometimes those come out during a cleaning, but we won't promise it.",
     category: "Safety & Trust"
   },
   {
@@ -36,7 +36,7 @@ const faqs = [
   {
     icon: CheckCircle,
     question: "What types of roofs do you clean?",
-    answer: "All of them:\n\n• Asphalt/composite\n\n• Metal (standing seam, corrugated, metal shake)\n\n• Tile\n\n• Cedar shake\n\n• Flat roofs (EPDM, TPO, PVC)\n\nEvery roof type gets a process matched to the material — tile and cedar take extra care and are priced by custom quote.",
+    answer: "All of them:\n\n• Asphalt/composite\n\n• Metal (standing seam, corrugated, metal shake)\n\n• Tile\n\n• Cedar shake\n\n• Flat roofs (EPDM, TPO, PVC)\n\nEvery roof type gets a process matched to the material. Tile and cedar take extra care and are priced by custom quote.",
     category: "Services"
   },
   {
@@ -54,13 +54,13 @@ const faqs = [
   {
     icon: Clock,
     question: "How often should I clean my roof or gutters?",
-    answer: "Most Seattle-area roofs need a full cleaning every 2-4 years, with an annual moss treatment in between to keep growth from coming back. Gutters should be cleaned twice a year — spring and fall.\n\nHeavy tree cover shortens those intervals; a roof under big firs collects needles and moss much faster than one in open sun.",
+    answer: "Most Seattle-area roofs need a full cleaning every 2-4 years, with an annual moss treatment in between to keep growth from coming back. Gutters should be cleaned twice a year, spring and fall.\n\nHeavy tree cover shortens those intervals; a roof under big firs collects needles and moss much faster than one in open sun.",
     category: "Maintenance"
   },
   {
     icon: Clock,
     question: "What's the best time of year to get my roof or gutters cleaned?",
-    answer: "Any time of year works — we clean roofs year-round, and moss treatment is actually most effective in the cool, wet months when moss is actively growing.\n\nThe real answer: book as soon as you notice visible moss, clogged or overflowing gutters, or debris buildup from trees. These problems compound over time and only get more expensive to fix.",
+    answer: "Any time of year works. We clean roofs year-round, and moss treatment is actually most effective in the cool, wet months when moss is actively growing.\n\nThe real answer: book as soon as you notice visible moss, clogged or overflowing gutters, or debris buildup from trees. These problems compound over time and only get more expensive to fix.",
     category: "Maintenance"
   }
 ];

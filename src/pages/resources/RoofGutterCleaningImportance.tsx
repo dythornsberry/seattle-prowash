@@ -110,7 +110,7 @@ const RoofGutterCleaningImportance = () => {
                     For Pacific Northwest homes, Seattle ProWash recommends:
                   </p>
                   <ul>
-                    <li><strong>Full roof cleaning every 2-4 years</strong> to remove moss, algae, and debris — sooner under heavy tree cover</li>
+                    <li><strong>Full roof cleaning every 2-4 years</strong> to remove moss, algae, and debris (sooner under heavy tree cover)</li>
                     <li><strong>Annual moss treatment</strong> between cleanings to keep growth from coming back</li>
                     <li><strong>Gutter cleaning twice a year</strong> (spring and fall) to prevent clogs</li>
                   </ul>

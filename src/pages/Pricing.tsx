@@ -162,7 +162,7 @@ const Pricing = () => {
                     <p className="text-sm text-muted-foreground mb-1">Typical range</p>
                     <p className="text-3xl font-bold text-brand-blue">$499 – $1,500</p>
                     <p className="text-sm text-muted-foreground mt-1">A one-story rambler with light moss sits near $499 · A large two-story with heavy moss runs closer to $1,500</p>
-                    <p className="text-xs text-muted-foreground mt-2">You get an exact number before we schedule — the range is how we quote, never how we bill.</p>
+                    <p className="text-xs text-muted-foreground mt-2">You get an exact price before anything is scheduled. No hidden fees, no surprises.</p>
                   </div>
                   
                   <div className="space-y-3">
@@ -308,8 +308,8 @@ const Pricing = () => {
                     height={731}
                   />
                   <figcaption className="p-4">
-                    <p className="font-semibold text-brand-navy">Light moss — nearer $499</p>
-                    <p className="text-sm text-muted-foreground">Scattered patches, roof surface still visible. Caught early, this is a quicker job — and an annual treatment keeps it this way.</p>
+                    <p className="font-semibold text-brand-navy">Light moss (closer to $499)</p>
+                    <p className="text-sm text-muted-foreground">Scattered patches with the roof surface still visible. Caught early it's a quicker job, and an annual treatment keeps it that way.</p>
                   </figcaption>
                 </figure>
                 <figure className="rounded-xl overflow-hidden shadow-lg bg-white">
@@ -322,8 +322,8 @@ const Pricing = () => {
                     height={972}
                   />
                   <figcaption className="p-4">
-                    <p className="font-semibold text-brand-navy">Heavy moss — nearer $1,500</p>
-                    <p className="text-sm text-muted-foreground">Years of buildup: moss in every seam and needle beds composting on the roof. Hours of careful hand removal — that's what the top of the range pays for.</p>
+                    <p className="font-semibold text-brand-navy">Heavy moss (closer to $1,500)</p>
+                    <p className="text-sm text-muted-foreground">Years of buildup: moss in every seam and needle beds composting on the roof. It takes hours of careful hand removal, and that's what the top of the range pays for.</p>
                   </figcaption>
                 </figure>
               </div>
