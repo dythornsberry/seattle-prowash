@@ -11,6 +11,10 @@ import { navigateToContact } from "@/lib/navigation";
 import asphaltRoofImg from "@/assets/recent-asphalt-roof-before-after-2026.webp";
 import metalRoofImg from "@/assets/recent-green-metal-roof-before-after-2026.webp";
 import gutterImg from "@/assets/gutter-cleaning-before-after.jpg";
+import lightMossImg from "@/assets/new-roof-before-1.jpg";
+
+// public/ asset — referenced by URL, not bundled
+const heavyMossImg = "/lovable-uploads/7cdfb095-76e6-4419-b395-a8272819a23b.webp";
 import { generateBreadcrumbSchema, injectSchema } from "@/utils/schema";
 
 const Pricing = () => {
@@ -156,8 +160,9 @@ const Pricing = () => {
                 <CardContent className="space-y-6">
                   <div className="text-center py-4 bg-brand-orange/5 rounded-lg">
                     <p className="text-sm text-muted-foreground mb-1">Typical range</p>
-                    <p className="text-3xl font-bold text-brand-blue">$499 – $1,200</p>
-                    <p className="text-sm text-muted-foreground mt-1">For most asphalt roofs · Based on size & conditions</p>
+                    <p className="text-3xl font-bold text-brand-blue">$499 – $1,500</p>
+                    <p className="text-sm text-muted-foreground mt-1">A one-story rambler with light moss sits near $499 · A large two-story with heavy moss runs closer to $1,500</p>
+                    <p className="text-xs text-muted-foreground mt-2">You get an exact price before anything is scheduled. No hidden fees, no surprises.</p>
                   </div>
                   
                   <div className="space-y-3">
@@ -282,6 +287,46 @@ const Pricing = () => {
                   </Button>
                 </CardContent>
               </Card>
+            </div>
+
+            {/* Light vs heavy moss — what the range actually means */}
+            <div className="max-w-5xl mx-auto mt-12">
+              <h3 className="text-2xl font-bold text-brand-blue text-center mb-2">
+                What "light" vs. "heavy" moss actually looks like
+              </h3>
+              <p className="text-muted-foreground text-center mb-8 max-w-2xl mx-auto">
+                Moss level is the biggest reason two similar houses get different quotes. Here's the difference, from real jobs:
+              </p>
+              <div className="grid md:grid-cols-2 gap-6">
+                <figure className="rounded-xl overflow-hidden shadow-lg bg-white">
+                  <img
+                    src={lightMossImg}
+                    alt="Roof with light moss - scattered patches with the roof surface still visible"
+                    className="w-full aspect-[4/3] object-cover"
+                    loading="lazy"
+                    width={975}
+                    height={731}
+                  />
+                  <figcaption className="p-4">
+                    <p className="font-semibold text-brand-navy">Light moss (closer to $499)</p>
+                    <p className="text-sm text-muted-foreground">Scattered patches with the roof surface still visible. Caught early it's a quicker job, and an annual treatment keeps it that way.</p>
+                  </figcaption>
+                </figure>
+                <figure className="rounded-xl overflow-hidden shadow-lg bg-white">
+                  <img
+                    src={heavyMossImg}
+                    alt="Roof with heavy moss - thick moss rows and needle mats covering the shingles"
+                    className="w-full aspect-[4/3] object-cover"
+                    loading="lazy"
+                    width={1296}
+                    height={972}
+                  />
+                  <figcaption className="p-4">
+                    <p className="font-semibold text-brand-navy">Heavy moss (closer to $1,500)</p>
+                    <p className="text-sm text-muted-foreground">Years of buildup: moss in every seam and needle beds composting on the roof. It takes hours of careful hand removal, and that's what the top of the range pays for.</p>
+                  </figcaption>
+                </figure>
+              </div>
             </div>
           </div>
         </section>

@@ -37,7 +37,7 @@ const RoofCleaningCostSeattle = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="What Roof Cleaning Costs in Seattle (2026 Guide)"
-        description="Real 2026 roof cleaning prices from a Seattle-area contractor. Most asphalt roofs run $499–$1,200 with gutter cleaning included. Metal starts at $800. See what drives your price."
+        description="Real 2026 roof cleaning prices from a Seattle-area contractor. Most asphalt roofs run $499–$1,500 with gutter cleaning included. Metal starts at $800. See what drives your price."
         url="https://www.seattleprowash.com/resources/roof-cleaning-cost-seattle"
       />
       <Header />
@@ -86,7 +86,7 @@ const RoofCleaningCostSeattle = () => {
                 <div className="prose prose-lg max-w-none">
                   <h2>The Short Answer</h2>
                   <p>
-                    For most single-family homes in the Seattle area in 2026, professional roof cleaning with moss removal costs <strong>$499 to $1,200</strong> for an asphalt or composite roof — and that should include your gutter cleaning. Metal roofs start around <strong>$800</strong>. A standalone gutter cleaning runs <strong>$250 to $600</strong>.
+                    For most single-family homes in the Seattle area in 2026, professional roof cleaning with moss removal costs <strong>$499 to $1,500</strong> for an asphalt or composite roof — and that should include your gutter cleaning. Metal roofs start around <strong>$800</strong>. A standalone gutter cleaning runs <strong>$250 to $600</strong>.
                   </p>
                   <p>
                     Those are our actual prices, not national averages pulled from a lead-generation site. National cost guides often quote $300 roof cleanings that simply don't exist here — Seattle's steep pitches, two-story homes, and heavy moss make our market different.
@@ -94,7 +94,7 @@ const RoofCleaningCostSeattle = () => {
 
                   <h2>Cost by Roof Type</h2>
 
-                  <h3>Asphalt & Composite Shingle: $499 – $1,200</h3>
+                  <h3>Asphalt & Composite Shingle: $499 – $1,500</h3>
                   <p>
                     This covers the large majority of homes we clean. A one-story rambler with light moss lands near the bottom of the range. A two-story home with a steep pitch and several years of moss buildup lands near the top. The work includes moss removal, a preventative treatment that keeps moss from coming back (we guarantee it for 12 months), and a full gutter cleaning.
                   </p>
