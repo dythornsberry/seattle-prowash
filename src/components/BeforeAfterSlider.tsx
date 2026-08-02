@@ -13,6 +13,8 @@ import newRoofBefore1 from "@/assets/new-roof-before-1.jpg";
 import newRoofAfter1 from "@/assets/new-roof-after-1.jpg";
 import newMetalRoofBefore2 from "@/assets/new-metal-roof-before-2.jpg";
 import newMetalRoofAfter2 from "@/assets/new-metal-roof-after-2.jpg";
+import rooftopDeckBefore from "@/assets/rooftop-deck-soft-wash-before-2026.jpg";
+import rooftopDeckAfter from "@/assets/rooftop-deck-soft-wash-after-2026.jpg";
 
 const BeforeAfterSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -41,6 +43,16 @@ const BeforeAfterSlider = () => {
       afterImageWebP: newMetalRoofAfter2WebP,
       beforeAlt: "Bellevue metal roof with debris and weathering before professional cleaning",
       afterAlt: "Bellevue metal roof and skylights after specialized cleaning - restored to original condition"
+    },
+    {
+      id: 3,
+      title: "Rooftop Deck Soft Wash - Seattle",
+      location: "Seattle, WA",
+      service: "Deck Membrane + Parapet Wall Soft Wash",
+      beforeImage: rooftopDeckBefore,
+      afterImage: rooftopDeckAfter,
+      beforeAlt: "Seattle rooftop deck before soft washing - algae streaks on parapet walls and dirt buildup on the membrane",
+      afterAlt: "Same Seattle rooftop deck after soft washing - clean membrane and spotless white walls"
     },
     {
       id: 5,
