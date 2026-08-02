@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MobileBottomBar from "@/components/MobileBottomBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Phone, Shield, Clock, Leaf } from "lucide-react";
@@ -256,6 +257,7 @@ const FAQ = () => {
         </section>
       </main>
       <Footer />
+      <MobileBottomBar />
     </div>
   );
 };

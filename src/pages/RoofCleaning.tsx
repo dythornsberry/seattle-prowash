@@ -121,7 +121,6 @@ const RoofCleaning = () => {
         image={roofCleaningImage}
       />
       <Header />
-      <EnhancedTrustBar />
       <main className="pt-16 md:pt-20">
         {/* Hero Section */}
         <section className="section-spacing bg-gradient-to-b from-brand-navy to-brand-navy/90">
@@ -247,6 +246,9 @@ const RoofCleaning = () => {
             }
           ]}
         />
+
+        {/* Trust stats after the hero so the headline and CTA own the first screen */}
+        <EnhancedTrustBar />
 
         {/* Our Services - Three Clear Options */}
         <section className="section-spacing bg-muted/30">
