@@ -1,5 +1,5 @@
-# Host canonicalization: apex -> www (canonicals, sitemap, and schema all use www)
-https://seattleprowash.com/* https://www.seattleprowash.com/:splat 301
+# Host canonicalization (apex -> www) lives in functions/_middleware.js —
+# _redirects sources must be relative paths, so host rules don't work here.
 
 # Legacy/alias slugs -> canonical pages (server-side 301s so crawlers and old
 # backlinks pass value; mirrors the <Navigate> routes in src/App.tsx)
