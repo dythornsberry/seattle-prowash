@@ -641,7 +641,7 @@ const TwoStepQuoteForm = () => {
                                     onValueChange={field.onChange}
                                     className="space-y-2"
                                   >
-                                    {["ASAP (this week)", "In the next few weeks", "Flexible / no rush"].map((option) => (
+                                    {["ASAP", "Within 1 week", "Within 2 weeks"].map((option) => (
                                       <FormItem
                                         key={option}
                                         className="flex flex-row items-center space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4 has-[button[data-state=checked]]:border-brand-orange has-[button[data-state=checked]]:bg-brand-orange/5"
