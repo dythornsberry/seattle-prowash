@@ -1,7 +1,4 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { navigateToContact } from "@/lib/navigation";
 import { Link } from "react-router-dom";
 import roofImage from "@/assets/roof-cleaning-before-after-new.jpg";
 import roofImageMobile from "@/assets/roof-cleaning-before-after-new-mobile.webp";
@@ -19,10 +16,10 @@ const ServicesPreview = () => {
         {/* Header */}
         <div className="text-center mb-10 fade-up">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-blue mb-4">
-            Roof & Gutter Cleaning Is What We Do
+            What We Clean
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Moss removal, roof cleaning & gutter cleaning for homes across north Seattle and the Eastside — with house washing and window cleaning available as add-ons while we're on site
+            Roofs, gutters, siding, concrete, and windows.
           </p>
         </div>
 
@@ -43,19 +40,19 @@ const ServicesPreview = () => {
               />
             </picture>
             <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent transition-opacity duration-300 group-hover:from-brand-navy" />
-            <Badge className="absolute top-4 left-4 bg-brand-orange text-white border-0 px-4 py-2 text-base font-bold shadow-lg z-10">
-              ★ Most Popular — The All-In-One
-            </Badge>
+            <span className="absolute top-4 left-4 bg-brand-orange text-white px-3 py-1.5 text-sm font-bold shadow-lg z-10 rounded-md">
+              Most popular
+            </span>
             <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 lg:p-10">
               <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-3 drop-shadow-sm">
                 Roof Cleaning
               </h3>
               <p className="text-white text-lg sm:text-xl mb-3 drop-shadow-sm max-w-xl font-medium">
-                Moss removal, treatment & gutter cleaning — everything handled in one visit.
+                Moss removal, treatment, and gutter cleaning in one visit.
               </p>
               <p className="mb-4">
-                <span className="inline-block bg-white/95 text-brand-navy font-bold text-sm sm:text-base px-4 py-2 rounded-full shadow">
-                  From $499 · Gutter cleaning included · 12-month guarantee
+                <span className="inline-block bg-white/95 text-brand-navy font-bold text-sm sm:text-base px-4 py-2 rounded-md shadow">
+                  From $499 · 12-month guarantee
                 </span>
               </p>
               <div className="flex items-center text-white font-semibold text-sm sm:text-base group-hover:text-brand-orange transition-colors duration-300">
@@ -86,7 +83,7 @@ const ServicesPreview = () => {
                   Gutter Cleaning
                 </h3>
                 <p className="text-white/80 text-sm mb-3 drop-shadow-sm">
-                  Full clean + free roof blow-off. Starting at $250.
+                  Full clean and roof blow-off. From $250.
                 </p>
                 <div className="flex items-center text-brand-orange font-semibold text-sm group-hover:text-white transition-colors duration-300">
                   Learn More <ArrowRight className="ml-2 w-4 h-4" />
@@ -114,7 +111,7 @@ const ServicesPreview = () => {
                   Pressure Washing
                 </h3>
                 <p className="text-white/80 text-sm mb-3 drop-shadow-sm">
-                  Popular add-on: driveways, siding, patios & walkways
+                  Driveways, siding, patios, and walkways.
                 </p>
                 <div className="flex items-center text-brand-orange font-semibold text-sm group-hover:text-white transition-colors duration-300">
                   Learn More <ArrowRight className="ml-2 w-4 h-4" />
@@ -142,7 +139,7 @@ const ServicesPreview = () => {
                   Window Cleaning
                 </h3>
                 <p className="text-white/80 text-sm mb-3 drop-shadow-sm">
-                  Easy add-on: streak-free exteriors up to 3 stories
+                  Streak-free exterior window cleaning.
                 </p>
                 <div className="flex items-center text-brand-orange font-semibold text-sm group-hover:text-white transition-colors duration-300">
                   Learn More <ArrowRight className="ml-2 w-4 h-4" />
@@ -152,16 +149,6 @@ const ServicesPreview = () => {
           </div>
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-12 fade-up">
-          <Button
-            variant="cta-orange"
-            size="xl"
-            onClick={navigateToContact}
-          >
-            Get Fast Quote →
-          </Button>
-        </div>
       </div>
     </section>
   );

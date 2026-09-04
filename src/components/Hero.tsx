@@ -3,10 +3,6 @@ import heroImageWebp from "@/assets/hero-roof-cleaning.webp";
 import HeroQuickForm from "@/components/HeroQuickForm";
 
 const Hero = () => {
-  const handleCall = () => {
-    window.location.href = 'tel:12067526690';
-  };
-
   return (
     <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-28 pb-16 md:pt-32 md:pb-20">
       {/* Hero Background with Navy Overlay */}
@@ -36,22 +32,11 @@ const Hero = () => {
 
           {/* Subhead */}
           <p className="text-lg md:text-xl text-white/90 font-medium max-w-3xl mx-auto animate-fade-in drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-            Professional roof & gutter cleaning for north Seattle homes. Every roof cleaning includes gutter cleaning and a 12-month moss-free guarantee.
+            Roof and gutter cleaning for North Seattle homes, backed by a 12-month moss-free guarantee.
           </p>
 
           {/* Inline mini-form */}
           <HeroQuickForm />
-
-          {/* Call/text alternative */}
-          <p className="text-white/90 text-sm md:text-base font-medium animate-fade-in drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
-            Prefer to call or text?{" "}
-            <button
-              onClick={handleCall}
-              className="text-white font-bold underline underline-offset-4 hover:text-brand-orange transition-colors"
-            >
-              206-752-6690
-            </button>
-          </p>
         </div>
       </div>
 

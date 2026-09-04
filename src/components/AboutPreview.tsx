@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ShieldCheck, Star, Award } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import dylanOwnerPhoto from "@/assets/dylan-owner-truck.jpg";
 
@@ -41,49 +41,17 @@ const AboutPreview = () => {
           </div>
 
           {/* Text Side */}
-          <div className="w-full lg:w-7/12 space-y-6 lg:space-y-8 fade-up" style={{ animationDelay: '200ms' }}>
+          <div className="w-full lg:w-7/12 fade-up" style={{ animationDelay: '200ms' }}>
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-orange/10 text-brand-orange font-semibold text-sm mb-4">
-                <ShieldCheck size={16} />
-                <span>Locally Owned & Operated</span>
-              </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy mb-6 font-heading">
-                Meet <span className="text-brand-orange">Dylan</span>, Your Local Owner
+                Meet <span className="text-brand-orange">Dylan</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm Dylan, based right here in Kenmore. I started Seattle ProWash in 2022 because maintaining your home is the single best ROI you can get on home improvement, period. A new roof costs $20,000 or more. Cleaning yours costs a small fraction of that.
+                I'm the owner of Seattle ProWash, based here in Kenmore. My goal is simple: protect your home and do work you'll feel good recommending.
               </p>
             </div>
 
-            <div className="bg-off-white p-6 rounded-2xl border border-brand-navy/10 shadow-sm relative overflow-hidden">
-               <div className="absolute top-0 right-0 w-32 h-32 bg-brand-orange/5 rounded-bl-full -z-10"></div>
-              <p className="font-medium text-brand-navy italic text-lg relative z-10">
-                "My goal on every job is to do it well enough that you call me back next year."
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 gap-4 pt-2">
-              <div className="flex items-center gap-3">
-                <div className="bg-brand-navy/10 p-2.5 rounded-lg text-brand-navy">
-                  <Star size={24} className="fill-brand-orange stroke-brand-orange" />
-                </div>
-                <div>
-                  <p className="font-bold text-xl text-brand-navy">224</p>
-                  <p className="text-sm text-muted-foreground font-medium">5-Star Reviews</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="bg-brand-navy/10 p-2.5 rounded-lg text-brand-navy">
-                  <Award size={24} className="text-brand-navy" />
-                </div>
-                <div>
-                  <p className="font-bold text-xl text-brand-navy">500+</p>
-                  <p className="text-sm text-muted-foreground font-medium">Roofs Cleaned</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="pt-4 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-wrap gap-4">
               <Button asChild variant="cta-orange" className="text-base px-8 py-6 rounded-xl">
                 <Link to="/about">
                   Our Story

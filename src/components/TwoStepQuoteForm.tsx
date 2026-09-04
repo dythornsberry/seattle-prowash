@@ -318,58 +318,23 @@ const TwoStepQuoteForm = () => {
     void form.handleSubmit(onSubmit)();
   };
 
-  const handleCallClick = () => {
-    if (window.gtag) {
-      window.gtag('event', 'click_to_call');
-    }
-  };
-
-  const nextSteps = [
-    "Submit the form",
-    "Dylan calls or texts to confirm details",
-    "You get clear pricing and can choose whether to schedule",
-  ];
-
   return (
     <section id="contact" className="section-spacing bg-off-white/50 scroll-mt-20">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-2xl mx-auto">
           <div className="text-center mb-8 fade-up">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy mb-4 font-heading">
               Get a Fast Quote
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mb-3">
-              Tell us what you need. Dylan will call or text to confirm details and help you get a quote.
+              Tell us what needs cleaning. Dylan will call or text about your quote.
             </p>
-            <p className="text-sm text-muted-foreground max-w-2xl mx-auto mb-3">
-              So there are no surprises: gutter cleaning starts at $250 and roof cleaning at $499. Most quotes come back the same day.
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Prefer to call or text? <a href="tel:12067526690" className="hover:text-brand-orange transition-colors" onClick={handleCallClick}>206-752-6690</a>
+            <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
+              Roof cleaning from $499. Gutter cleaning from $250.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-6 lg:gap-8 items-start fade-up">
-            <div className="min-w-0 bg-white border border-brand-navy/10 rounded-lg shadow-sm p-5 md:p-6">
-              <h3 className="text-xl md:text-2xl font-bold text-brand-navy mb-4 font-heading">
-                What happens next?
-              </h3>
-              <ol className="space-y-3">
-                {nextSteps.map((stepText, index) => (
-                  <li key={stepText} className="flex gap-3 text-sm md:text-base text-brand-navy/80 leading-relaxed">
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-orange text-white text-sm font-bold">
-                      {index + 1}
-                    </span>
-                    <span>{stepText}</span>
-                  </li>
-                ))}
-              </ol>
-              <p className="mt-5 border-t border-brand-navy/10 pt-4 text-sm text-brand-navy/70 leading-relaxed">
-                No pressure, just clear pricing before you book.
-              </p>
-            </div>
-
-            <div className="min-w-0">
+          <div className="fade-up">
             {isSubmitted ? (
               <Card className="border-2 border-green-500/30 shadow-xl rounded-xl">
                 <CardContent className="py-12 text-center space-y-4">
@@ -684,7 +649,7 @@ const TwoStepQuoteForm = () => {
                             Your info stays private. We never share or spam.
                           </p>
                           <p className="text-center text-muted-foreground text-sm">
-                            Trusted by 224 homeowners in Kenmore, Bothell & Kirkland  •  Licensed & Insured
+                            Trusted by 233 homeowners in Kenmore, Bothell & Kirkland  •  Licensed & Insured
                           </p>
                         </>
                       )}
@@ -693,7 +658,6 @@ const TwoStepQuoteForm = () => {
                 </CardContent>
               </Card>
             )}
-            </div>
           </div>
         </div>
       </div>

@@ -120,7 +120,7 @@ const GutterCleaning = () => {
                   
                   {/* Mini Trust Line */}
                   <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
-                    5.0★ from 224 neighbors • Licensed & Insured • Fast Quotes
+                    5.0★ from 233 neighbors • Licensed & Insured • Fast Quotes
                   </p>
 
                   {/* 1-2-3 Process */}
@@ -149,7 +149,7 @@ const GutterCleaning = () => {
                   
                   {/* Trust Indicators */}
                   <p className="text-white/80 text-sm">
-                    ✓ 224 Five-Star Reviews  ✓ Free Roof Blow-Off Included  ✓ Starts at $250
+                    ✓ 233 Five-Star Reviews  ✓ Free Roof Blow-Off Included  ✓ Starts at $250
                   </p>
                 </div>
                 <div className="fade-up">

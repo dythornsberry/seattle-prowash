@@ -268,7 +268,7 @@ const MossTreatment = () => {
                   </Button>
                 </div>
                 <p className="text-sm text-gray-500 mt-4">
-                  Fast quotes • Licensed & Insured • 224 5-star reviews
+                  Fast quotes • Licensed & Insured • 233 5-star reviews
                 </p>
               </div>
             </div>

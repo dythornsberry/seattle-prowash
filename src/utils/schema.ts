@@ -295,6 +295,6 @@ export const COMPANY_INFO = {
   ],
   rating: {
     ratingValue: 5.0,
-    reviewCount: 224
+    reviewCount: 233
   }
 };

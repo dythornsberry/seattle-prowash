@@ -166,7 +166,7 @@ const RoofCleaningCostSeattle = () => {
                 <div className="mt-12 p-8 bg-brand-navy text-white rounded-lg text-center">
                   <h3 className="text-2xl font-bold mb-4 text-white">Want a Real Number for Your Roof?</h3>
                   <p className="text-lg mb-6">
-                    Send the quote form and Dylan will call or text with clear pricing — usually the same day.
+                    Send the quote form and Dylan will call or text with clear pricing.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button

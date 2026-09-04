@@ -37,7 +37,7 @@ const MountlakeTerrace = () => {
       areaServed: ["Mountlake Terrace"],
       rating: {
         ratingValue: 5.0,
-        reviewCount: 224
+        reviewCount: 233
       }
     });
 

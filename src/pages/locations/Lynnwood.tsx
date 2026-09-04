@@ -37,7 +37,7 @@ const Lynnwood = () => {
       areaServed: ["Lynnwood"],
       rating: {
         ratingValue: 5.0,
-        reviewCount: 224
+        reviewCount: 233
       }
     });
 

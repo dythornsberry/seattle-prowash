@@ -150,7 +150,7 @@ const BestTimeRoofGutterCleaning = () => {
                 <div className="mt-12 p-8 bg-brand-navy text-white rounded-lg text-center">
                   <h3 className="text-2xl font-bold mb-4 text-white">Ready to Get on the Schedule?</h3>
                   <p className="text-lg mb-6">
-                    Quotes are free and usually same-day. Most jobs are scheduled within 1–2 weeks.
+                    Quotes are free. Scheduling depends on weather and current availability.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button

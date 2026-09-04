@@ -134,7 +134,7 @@ const RoofCleaning = () => {
                   
                   {/* Mini Trust Line */}
                   <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
-                    5.0★ from 224 neighbors • Licensed & Insured • Fast Quotes
+                    5.0★ from 233 neighbors • Licensed & Insured • Fast Quotes
                   </p>
 
                   {/* 1-2-3 Process */}
@@ -163,7 +163,7 @@ const RoofCleaning = () => {
                   
                   {/* Trust Indicators */}
                   <p className="text-white/80 text-sm">
-                    ✓ 12-Month Guarantee  ✓ 224 Five-Star Reviews  ✓ Starts at $499, gutter cleaning included
+                    ✓ 12-Month Guarantee  ✓ 233 Five-Star Reviews  ✓ Starts at $499, gutter cleaning included
                   </p>
                 </div>
                 <div className="fade-up">
@@ -464,7 +464,7 @@ const RoofCleaning = () => {
                   <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-brand-navy mb-1">Quick, Honest Scheduling</h3>
-                    <p className="text-sm text-muted-foreground">Same-day quotes, most jobs scheduled within 1–2 weeks</p>
+                    <p className="text-sm text-muted-foreground">Fast quotes, with scheduling based on weather and availability</p>
                   </div>
                 </div>
               </div>

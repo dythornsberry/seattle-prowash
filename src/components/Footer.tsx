@@ -1,259 +1,91 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-import { navigateToContact } from "@/lib/navigation";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
-  const serviceAreas = [
-    "Kenmore", "Lake Forest Park", "Bothell", "Lynnwood", "Kirkland", "Shoreline",
-    "Woodinville", "Seattle", "Bellevue", "Redmond", "Mill Creek",
-    "Edmonds", "Sammamish", "Mountlake Terrace"
-  ];
 
   return (
     <footer className="bg-brand-navy text-white">
-      {/* Mini CTA Bar */}
-      <div className="bg-brand-orange text-white py-4">
+      <div className="bg-brand-orange py-4 text-white">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="text-center md:text-left">
-              <h3 className="text-lg md:text-xl font-bold">
-                Ready for a moss-free roof?
-              </h3>
-              <p className="text-sm opacity-80">Fast quotes • Fully licensed & insured • 12-month moss-free guarantee</p>
-            </div>
-            <Button 
-              variant="prowash-cta" 
+          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+            <h3 className="text-center text-lg font-bold md:text-left md:text-xl">
+              Ready for a cleaner exterior?
+            </h3>
+            <Button
+              variant="prowash-cta"
               size="lg"
-              onClick={() => window.location.href = 'tel:206-752-6690'}
+              onClick={() => { window.location.href = "tel:206-752-6690"; }}
             >
-              <Phone className="w-4 h-4 mr-2" />
+              <Phone className="mr-2 h-4 w-4" />
               Call or Text 206-752-6690
             </Button>
           </div>
         </div>
       </div>
 
-      {/* Main Footer */}
-      <div className="py-16">
+      <div className="py-12">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
-            {/* Company Info */}
-            <div className="space-y-6">
-              <div>
-                <h2 className="text-2xl font-bold mb-2 text-white">
-                  Seattle <span className="text-brand-orange">ProWash</span>
-                </h2>
-                <p className="text-sm text-brand-orange font-medium mb-2">Based in Kenmore, WA</p>
-                <p className="text-white/80 leading-relaxed">
-                  Roof cleaning and gutter specialists serving Kenmore, Bothell, Lynnwood, Kirkland, Shoreline and greater Seattle. Helping homeowners prevent moss damage, clogged gutters, and expensive water issues.
-                </p>
-              </div>
-              
-              {/* Google Reviews Badge */}
-              <div className="bg-brand-white/10 rounded-lg p-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="flex text-brand-orange">
-                    ★★★★★
-                  </div>
-                  <span className="font-bold">5.0</span>
-                </div>
-                <p className="text-sm text-white/80">224 Google Reviews</p>
-                <Button 
-                  variant="prowash-secondary" 
-                  size="sm" 
-                  className="mt-2 text-xs"
-                  onClick={() => window.open('https://g.page/r/CZ1YhG3KQ4_8EAE/review', '_blank')}
-                >
-                  Read Reviews
-                </Button>
-              </div>
-            </div>
-
-            {/* Services */}
+          <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-3">
             <div>
-              <h3 className="text-lg font-bold mb-6 text-white">Our Services</h3>
-               <ul className="space-y-3">
-                <li>
-                  <Link 
-                     to="/services" 
-                    className="text-white/80 hover:text-brand-orange transition-colors duration-250 text-sm"
-                  >
-                    All Services
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                     to="/roof-cleaning" 
-                    className="text-white/80 hover:text-brand-orange transition-colors duration-250 text-sm"
-                  >
-                    Roof Cleaning
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                     to="/gutter-cleaning" 
-                    className="text-white/80 hover:text-brand-orange transition-colors duration-250 text-sm"
-                  >
-                    Gutter Cleaning
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                     to="/moss-treatment"
-                    className="text-white/80 hover:text-brand-orange transition-colors duration-250 text-sm"
-                  >
-                    Moss Removal & Treatment
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                     to="/pressure-washing"
-                    className="text-white/80 hover:text-brand-orange transition-colors duration-250 text-sm"
-                  >
-                    Pressure Washing
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                     to="/window-cleaning"
-                    className="text-white/80 hover:text-brand-orange transition-colors duration-250 text-sm"
-                  >
-                    Window Cleaning
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                     to="/commercial"
-                    className="text-white/80 hover:text-brand-orange transition-colors duration-250 text-sm"
-                  >
-                    Commercial Services
-                  </Link>
-                </li>
-              </ul>
+              <h2 className="mb-2 text-2xl font-bold text-white">
+                Seattle <span className="text-brand-orange">ProWash</span>
+              </h2>
+              <p className="mb-4 text-sm font-medium text-brand-orange">Based in Kenmore, WA</p>
+              <p className="max-w-sm leading-relaxed text-white/75">
+                Roof, gutter, and exterior cleaning across north Seattle and the Eastside.
+              </p>
+              <Link to="/reviews" className="mt-5 inline-block font-semibold text-white hover:text-brand-orange">
+                5.0 stars from 233 Google reviews
+              </Link>
             </div>
 
-            {/* Service Areas */}
             <div>
-              <h3 className="text-lg font-bold mb-6 text-white">Service Areas</h3>
-              <div className="space-y-2">
-                {serviceAreas.map((area, index) => {
-                  const citySlugMap: Record<string, string> = {
-                    "Kenmore": "kenmore", "Lake Forest Park": "lake-forest-park", "Bothell": "bothell", "Lynnwood": "lynnwood",
-                    "Kirkland": "kirkland", "Shoreline": "shoreline", "Woodinville": "woodinville",
-                    "Seattle": "seattle", "Bellevue": "bellevue", "Redmond": "redmond",
-                    "Mill Creek": "mill-creek", "Edmonds": "edmonds", "Sammamish": "sammamish",
-                    "Mountlake Terrace": "mountlake-terrace",
-                  };
-                  const slug = citySlugMap[area];
-                  const isLinkable = !!slug;
-                  const linkPath = isLinkable ? `/${slug}-roof-gutter-cleaning` : null;
-                  
-                  return isLinkable && linkPath ? (
-                    <Link 
-                      key={index} 
-                      to={linkPath}
-                      className="inline-block text-sm text-white/80 hover:text-white transition-colors mr-3 mb-1 underline decoration-white/30 hover:decoration-white"
-                    >
-                      {area}
-                      {index < serviceAreas.length - 1 && ","}
-                    </Link>
-                  ) : (
-                    <span key={index} className="inline-block text-sm text-white/80 mr-3 mb-1">
-                      {area}
-                      {index < serviceAreas.length - 1 && ","}
-                    </span>
-                  );
-                })}
-              </div>
-              <p className="text-xs text-white/60 mt-4">
-                <Link to="/service-areas" className="hover:text-white underline">View all service areas</Link> • Serving ~15 miles from Kenmore
-              </p>
-              <p className="text-sm text-brand-orange mt-4 font-semibold">
-                Call or text 206-752-6690 for your fast quote
-              </p>
+              <h3 className="mb-5 text-lg font-bold text-white">Services</h3>
+              <nav className="grid grid-cols-2 gap-x-5 gap-y-3 text-sm" aria-label="Footer services">
+                <Link to="/roof-cleaning" className="text-white/75 hover:text-brand-orange">Roof Cleaning</Link>
+                <Link to="/gutter-cleaning" className="text-white/75 hover:text-brand-orange">Gutter Cleaning</Link>
+                <Link to="/moss-treatment" className="text-white/75 hover:text-brand-orange">Moss Treatment</Link>
+                <Link to="/pressure-washing" className="text-white/75 hover:text-brand-orange">Pressure Washing</Link>
+                <Link to="/window-cleaning" className="text-white/75 hover:text-brand-orange">Window Cleaning</Link>
+                <Link to="/services" className="text-white/75 hover:text-brand-orange">All Services</Link>
+              </nav>
             </div>
 
-            {/* Contact */}
-            <div className="space-y-6">
-              <h3 className="text-lg font-bold text-white">Contact Us</h3>
-              
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-brand-orange flex-shrink-0" />
-                  <div>
-                     <a href="tel:+12067526690" className="font-semibold hover:text-brand-orange transition-colors">
-                      206-752-6690
-                    </a>
-                    <p className="text-xs text-white/60">Tap to call or text</p>
-                  </div>
+            <div>
+              <h3 className="mb-5 text-lg font-bold text-white">Contact</h3>
+              <div className="space-y-4 text-sm">
+                <a href="tel:+12067526690" className="flex items-center gap-3 font-semibold hover:text-brand-orange">
+                  <Phone className="h-5 w-5 shrink-0 text-brand-orange" />
+                  206-752-6690
+                </a>
+                <a href="mailto:seattleprowash@gmail.com" className="flex items-center gap-3 text-white/80 hover:text-brand-orange">
+                  <Mail className="h-5 w-5 shrink-0 text-brand-orange" />
+                  seattleprowash@gmail.com
+                </a>
+                <div className="flex items-center gap-3 text-white/80">
+                  <Clock className="h-5 w-5 shrink-0 text-brand-orange" />
+                  Call or text anytime
                 </div>
-                
-                <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-brand-orange flex-shrink-0" />
-                  <div>
-                    <a href="mailto:seattleprowash@gmail.com" className="text-sm hover:text-brand-orange transition-colors">
-                      seattleprowash@gmail.com
-                    </a>
-                    <div className="text-xs text-white/60">
-                      <p>We respond as quickly as possible</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Clock className="w-5 h-5 text-brand-orange flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold">Business Hours</p>
-                    <p className="text-xs text-white/60">Call or text anytime — quick replies</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-brand-orange flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="text-sm font-medium">6516 NE 192nd Pl</p>
-                    <p className="text-sm">Kenmore, WA 98028</p>
-                    <p className="text-xs text-white/60 mt-1">WA Contractor Lic. #SEATTPL783M6</p>
-                    <p className="text-xs text-white/60">Bonded & Insured · $1M Liability</p>
-                  </div>
+                <div className="flex items-start gap-3 text-white/80">
+                  <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-brand-orange" />
+                  <span>6516 NE 192nd Pl<br />Kenmore, WA 98028</span>
                 </div>
               </div>
-
-              <Button 
-                variant="cta-orange" 
-                size="lg" 
-                className="w-full"
-                onClick={navigateToContact}
-              >
-                Get Fast Quote →
-              </Button>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Bar (pb-24 clears MobileBottomBar on mobile) */}
-      <div className="border-t border-white/20 py-6 pb-24 md:pb-6">
+      <div className="border-t border-white/15 py-6 pb-24 md:pb-6">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-center md:text-left">
-              <p className="text-sm text-white/60 mb-1">
-                Seattle ProWash LLC • WA Contractor Lic. #SEATTPL783M6 • Bonded & Insured
-              </p>
-              <p className="text-sm text-white/60">
-                © {currentYear} Seattle ProWash. All rights reserved.
-              </p>
-            </div>
-            <div className="flex gap-6 text-sm">
-              <Link to="/pricing" className="text-white/60 hover:text-white transition-colors">
-                Pricing
-              </Link>
-              <Link to="/faq" className="text-white/60 hover:text-white transition-colors">
-                FAQ
-              </Link>
+          <div className="flex flex-col items-center justify-between gap-4 text-center text-sm text-white/60 md:flex-row md:text-left">
+            <p>© {currentYear} Seattle ProWash LLC · WA Contractor Lic. #SEATTPL783M6</p>
+            <div className="flex gap-6">
+              <Link to="/pricing" className="hover:text-white">Pricing</Link>
+              <Link to="/faq" className="hover:text-white">FAQ</Link>
+              <Link to="/service-areas" className="hover:text-white">Service Areas</Link>
             </div>
           </div>
         </div>

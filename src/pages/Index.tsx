@@ -6,14 +6,11 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import EnhancedTrustBar from "@/components/EnhancedTrustBar";
 import ServicesPreview from "@/components/ServicesPreview";
-import RecentProjects from "@/components/RecentProjects";
-import CostOfWaiting from "@/components/CostOfWaiting";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import AboutPreview from "@/components/AboutPreview";
 import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 import GoogleReviewsCarousel from "@/components/GoogleReviewsCarousel";
 import HomeFAQ from "@/components/HomeFAQ";
-import ServiceAreaMap from "@/components/ServiceAreaMap";
 import ServiceAreasSection from "@/components/ServiceAreasSection";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
@@ -82,8 +79,6 @@ const Index = () => {
           <Hero />
           <EnhancedTrustBar />
           <ServicesPreview />
-          <RecentProjects />
-          <CostOfWaiting />
           <div className="bg-navy">
             <BeforeAfterSlider />
           </div>
@@ -94,26 +89,17 @@ const Index = () => {
           </div>
           <HomeFAQ />
           <ServiceAreasSection 
-            title="Based in Kenmore, Serving Greater Seattle"
-            description="Professional roof cleaning and gutter cleaning services from our home base in Kenmore to communities throughout the north end and greater Seattle"
+            title="Serving North Seattle & the Eastside"
+            description="Based in Kenmore and serving nearby communities."
             areas={[
-              { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning", description: "Our home base – Lake Washington roof & gutter experts" },
-              { name: "Lake Forest Park", path: "/lake-forest-park-roof-gutter-cleaning", description: "Moss removal for the north end's most tree-covered city" },
-              { name: "Bothell", path: "/bothell-roof-gutter-cleaning", description: "Northshore area roof and gutter specialists" },
-              { name: "Lynnwood", path: "/lynnwood-roof-gutter-cleaning", description: "North Seattle metro roof and gutter cleaning" },
-              { name: "Kirkland", path: "/kirkland-roof-gutter-cleaning", description: "Waterfront property roof specialists" },
-              { name: "Shoreline", path: "/shoreline-roof-gutter-cleaning", description: "Shoreline roof and gutter experts" },
-              { name: "Woodinville", path: "/woodinville-roof-gutter-cleaning", description: "Wine country roof care specialists" },
-              { name: "Seattle", path: "/seattle-roof-gutter-cleaning", description: "Seattle's roof and gutter cleaning experts" },
-              { name: "Bellevue", path: "/bellevue-roof-gutter-cleaning", description: "Expert roof and gutter cleaning on the Eastside" },
-              { name: "Redmond", path: "/redmond-roof-gutter-cleaning", description: "Roof and gutter cleaning for Redmond homes" },
-              { name: "Sammamish", path: "/sammamish-roof-gutter-cleaning", description: "Premium roof cleaning for luxury homes" },
-              { name: "Edmonds", path: "/edmonds-roof-gutter-cleaning", description: "Coastal property roof specialists" },
-              { name: "Mill Creek", path: "/mill-creek-roof-gutter-cleaning", description: "Mill Creek roof cleaning specialists" },
-              { name: "Mountlake Terrace", path: "/mountlake-terrace-roof-gutter-cleaning", description: "Roof and gutter cleaning services" },
+              { name: "Kenmore", path: "/kenmore-roof-gutter-cleaning" },
+              { name: "Seattle", path: "/seattle-roof-gutter-cleaning" },
+              { name: "Bellevue", path: "/bellevue-roof-gutter-cleaning" },
+              { name: "Bothell", path: "/bothell-roof-gutter-cleaning" },
+              { name: "Kirkland", path: "/kirkland-roof-gutter-cleaning" },
+              { name: "Shoreline", path: "/shoreline-roof-gutter-cleaning" },
             ]}
           />
-          <ServiceAreaMap />
         </main>
       <Footer />
       <MobileBottomBar />

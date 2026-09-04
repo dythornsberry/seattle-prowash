@@ -2,7 +2,6 @@ import { useState, memo } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import InteractiveBeforeAfter from "./InteractiveBeforeAfter";
-import { navigateToContact } from "@/lib/navigation";
 // WebP images with JPG fallbacks
 import newRoofBefore1WebP from "@/assets/new-roof-before-1.webp";
 import newRoofAfter1WebP from "@/assets/new-roof-after-1.webp";
@@ -77,12 +76,12 @@ const BeforeAfterSlider = () => {
   return (
     <section className="section-spacing overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 fade-up">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy mb-6">
-            Real Seattle Roof Cleaning Results
+        <div className="text-center mb-10 fade-up">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            Real Results
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Authentic transformations from neighbors across the Seattle Metro. No stock photos, just real results.
+          <p className="text-lg md:text-xl text-white/75 max-w-3xl mx-auto">
+            Before and after photos from Seattle ProWash jobs.
           </p>
         </div>
 
@@ -170,30 +169,15 @@ const BeforeAfterSlider = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-16 fade-up">
-          <div className="space-y-6">
-            <p className="text-muted-foreground mb-4">Ready to clean up your roof, gutters, or exterior surfaces?</p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button 
-                variant="prowash-primary" 
-                size="xl"
-                onClick={navigateToContact}
-              >
-                Get Fast Quote
-              </Button>
-              <Button 
-                variant="prowash-secondary" 
-                size="xl"
-                onClick={() => window.location.href = '/gallery'}
-              >
-                <ExternalLink className="w-5 h-5 mr-2" />
-                View More Projects
-              </Button>
-            </div>
-            <p className="text-sm text-muted-foreground">
-              All photos are real Seattle ProWash jobs • No stock images
-            </p>
-          </div>
+        <div className="text-center mt-10 fade-up">
+          <Button
+            variant="prowash-secondary"
+            size="xl"
+            onClick={() => window.location.href = '/gallery'}
+          >
+            <ExternalLink className="w-5 h-5 mr-2" />
+            View All Projects
+          </Button>
         </div>
       </div>
 

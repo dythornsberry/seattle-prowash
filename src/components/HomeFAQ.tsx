@@ -5,47 +5,27 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Shield, Clock, CheckCircle, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useEffect } from "react";
 import { generateFAQSchema, injectSchema } from "@/utils/schema";
 
 const topFAQs = [
   {
     question: "What does roof or gutter cleaning cost?",
-    answer: "Most asphalt roof cleanings land between $499 and $1,500. A one-story rambler with light moss sits near the bottom; a large two-story with a steep pitch and heavy moss runs closer to $1,500. Metal, tile, and cedar shake roofs are priced separately and often start at $800+. Standalone gutter cleaning starts at $250. Dylan will call or text after you submit the form and you'll have an exact number before anything is scheduled.",
-    icon: CheckCircle,
-    cta: true
+    answer: "Roof cleaning starts at $499 and gutter cleaning starts at $250. Your exact price depends on size, access, roof type, and buildup.",
   },
   {
     question: "How soon can you schedule my service?",
-    answer: "After you submit the form, Dylan will call or text to confirm details and help you get a quote. You'll get clear pricing before you book. Scheduling depends on weather and current demand.",
-    icon: Clock,
-    cta: true
+    answer: "Scheduling depends on weather and demand. Dylan will confirm current availability when he follows up.",
   },
   {
     question: "Are you licensed and insured?",
     answer: "Yes. Seattle ProWash is fully licensed, bonded, and insured. We carry full liability coverage.",
-    icon: Shield,
-    cta: false
   },
   {
     question: "Do you remove moss? Do you offer treatments?",
-    answer: "Absolutely. We safely remove moss using gentle methods and apply our professional moss treatment with a 12-month moss-free guarantee (with basic maintenance).",
-    icon: CheckCircle,
-    cta: true
+    answer: "Yes. We gently remove moss and apply treatment backed by a 12-month moss-free guarantee.",
   },
-  {
-    question: "How do I get a quote?",
-    answer: "Start with the short form. Dylan will call or text to confirm details, then help you get clear pricing so you can decide whether to book.",
-    icon: CheckCircle,
-    cta: true
-  },
-  {
-    question: "What types of roofs do you service?",
-    answer: "We service asphalt, metal, and many composite roof types. We use no pressure on shingles to protect your roof while removing moss and debris.",
-    icon: CheckCircle,
-    cta: false
-  }
 ];
 
 const HomeFAQ = () => {
@@ -70,14 +50,10 @@ const HomeFAQ = () => {
             <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-3">
               Frequently Asked Questions
             </h2>
-            <p className="text-base text-muted-foreground">
-              Straight answers from a local team. No sales pitch.
-            </p>
           </div>
 
           <Accordion type="single" collapsible className="space-y-3">
             {topFAQs.map((faq, index) => {
-              const IconComponent = faq.icon;
               return (
                 <AccordionItem 
                   key={index} 
@@ -90,24 +66,7 @@ const HomeFAQ = () => {
                     </span>
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pb-5 text-sm leading-relaxed">
-                    <p className="mb-3">{faq.answer}</p>
-                    {faq.cta && (
-                      <a 
-                        href="#contact" 
-                        className="inline-flex items-center text-brand-orange hover:text-brand-orange/80 font-medium text-sm"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          const element = document.getElementById('contact');
-                          if (element) {
-                            const offset = 120;
-                            const y = element.getBoundingClientRect().top + window.scrollY - offset;
-                            window.scrollTo({ top: y, behavior: 'smooth' });
-                          }
-                        }}
-                      >
-                        Get Fast Quote <ArrowRight className="ml-1 w-4 h-4" />
-                      </a>
-                    )}
+                    <p>{faq.answer}</p>
                   </AccordionContent>
                 </AccordionItem>
               );

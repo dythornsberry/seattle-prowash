@@ -90,7 +90,7 @@ const Kenmore = () => {
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <span className="bg-white/10 px-4 py-2 rounded-full">12-Month Moss-Free Guarantee</span>
                   <span className="bg-white/10 px-4 py-2 rounded-full">Fast Quotes</span>
-                  <span className="bg-white/10 px-4 py-2 rounded-full">224 5-Star Reviews</span>
+                  <span className="bg-white/10 px-4 py-2 rounded-full">233 5-Star Reviews</span>
                 </div>
               </div>
             </div>
@@ -129,7 +129,7 @@ const Kenmore = () => {
                       </div>
                       <h3 className="text-xl font-bold mb-4 text-dark-teal">5-Star Service</h3>
                       <p className="text-gray-600">
-                        224 five-star reviews and counting — homeowners across Kenmore and surrounding areas trust our professional service.
+                        233 five-star reviews and counting — homeowners across Kenmore and surrounding areas trust our professional service.
                       </p>
                     </CardContent>
                   </Card>
@@ -276,7 +276,7 @@ const Kenmore = () => {
                     
                     <h3 className="text-xl font-bold mb-4">✓ Customer Satisfaction</h3>
                     <p className="text-white/90">
-                      224 five-star reviews from satisfied customers across Kenmore and the greater Seattle area.
+                      233 five-star reviews from satisfied customers across Kenmore and the greater Seattle area.
                     </p>
                   </div>
                 </div>
@@ -353,7 +353,7 @@ const Kenmore = () => {
                   Ready to Protect Your Kenmore Home?
                 </h2>
                 <p className="text-xl text-white/90 mb-8">
-                  Join 224 satisfied customers. Get a fast quote today and see why Kenmore homeowners trust Seattle ProWash.
+                  Join 233 satisfied customers. Get a fast quote today and see why Kenmore homeowners trust Seattle ProWash.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -377,7 +377,7 @@ const Kenmore = () => {
                   <span>✓ Fast quotes</span>
                   <span>✓ Licensed & Insured</span>
                   <span>✓ 12-month moss-free guarantee</span>
-                  <span>✓ 224 5-star reviews</span>
+                  <span>✓ 233 5-star reviews</span>
                 </div>
               </div>
             </div>

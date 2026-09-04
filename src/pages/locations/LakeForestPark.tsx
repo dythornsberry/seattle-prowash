@@ -38,7 +38,7 @@ const LakeForestPark = () => {
       areaServed: ["Lake Forest Park", "Sheridan Beach", "Horizon View", "Brookside", "Sheridan Heights"],
       rating: {
         ratingValue: 5.0,
-        reviewCount: 224
+        reviewCount: 233
       }
     });
     const cleanupBusiness = injectSchema(businessSchema);
@@ -97,7 +97,7 @@ const LakeForestPark = () => {
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <span className="bg-white/10 px-4 py-2 rounded-full">12-Month Moss-Free Guarantee</span>
                   <span className="bg-white/10 px-4 py-2 rounded-full">Fast Quotes</span>
-                  <span className="bg-white/10 px-4 py-2 rounded-full">224 5-Star Reviews</span>
+                  <span className="bg-white/10 px-4 py-2 rounded-full">233 5-Star Reviews</span>
                 </div>
               </div>
             </div>
@@ -136,7 +136,7 @@ const LakeForestPark = () => {
                       </div>
                       <h3 className="text-xl font-bold mb-4 text-dark-teal">5-Star Service</h3>
                       <p className="text-gray-600">
-                        224 five-star Google reviews from homeowners across Lake Forest Park, Kenmore, Shoreline, and the greater Seattle area.
+                        233 five-star Google reviews from homeowners across Lake Forest Park, Kenmore, Shoreline, and the greater Seattle area.
                       </p>
                     </CardContent>
                   </Card>
@@ -283,7 +283,7 @@ const LakeForestPark = () => {
 
                     <h3 className="text-xl font-bold mb-4">✓ Customer Satisfaction</h3>
                     <p className="text-white/90">
-                      224 five-star reviews from homeowners across Lake Forest Park and the greater Seattle area.
+                      233 five-star reviews from homeowners across Lake Forest Park and the greater Seattle area.
                     </p>
                   </div>
                 </div>
@@ -332,7 +332,7 @@ const LakeForestPark = () => {
               },
               {
                 question: "How quickly can you get to a Lake Forest Park home?",
-                answer: "Fast — our shop is in neighboring Kenmore, and we drive through Lake Forest Park on Bothell Way constantly. Most quotes come back the same day and jobs are typically scheduled within the week."
+                answer: "Our shop is in neighboring Kenmore, and we drive through Lake Forest Park on Bothell Way constantly. We'll confirm pricing and current availability when we follow up."
               }
             ]}
             schemaContext="roof"
@@ -384,7 +384,7 @@ const LakeForestPark = () => {
                   <span>✓ Fast quotes</span>
                   <span>✓ Licensed & Insured</span>
                   <span>✓ 12-month moss-free guarantee</span>
-                  <span>✓ 224 5-star reviews</span>
+                  <span>✓ 233 5-star reviews</span>
                 </div>
               </div>
             </div>

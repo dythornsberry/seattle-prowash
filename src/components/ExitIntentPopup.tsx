@@ -96,7 +96,7 @@ const ExitIntentPopup = () => {
 
             {/* Subheading */}
             <p className="text-gray-700 text-lg mb-6">
-              <strong>Every roof cleaning includes gutter cleaning</strong> — moss removal, treatment, and gutters handled in one visit, backed by a 12-month moss-free guarantee. Quotes are free and usually same-day.
+              <strong>Every roof cleaning includes gutter cleaning</strong> — moss removal, treatment, and gutters handled in one visit, backed by a 12-month moss-free guarantee. Quotes are free.
             </p>
 
             {/* Trust Signals */}
@@ -104,7 +104,7 @@ const ExitIntentPopup = () => {
               <div className="text-center">
                 <Star className="w-6 h-6 text-brand-orange mx-auto mb-1 fill-brand-orange" />
                 <div className="text-sm font-semibold text-gray-900">5.0★ Rating</div>
-                <div className="text-xs text-gray-600">224 Reviews</div>
+                <div className="text-xs text-gray-600">233 Reviews</div>
               </div>
               <div className="text-center">
                 <Shield className="w-6 h-6 text-brand-orange mx-auto mb-1" />
