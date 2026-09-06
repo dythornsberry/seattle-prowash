@@ -11,10 +11,10 @@ import { navigateToContact } from "@/lib/navigation";
 import asphaltRoofImg from "@/assets/recent-asphalt-roof-before-after-2026.webp";
 import metalRoofImg from "@/assets/recent-green-metal-roof-before-after-2026.webp";
 import gutterImg from "@/assets/gutter-cleaning-before-after.jpg";
-import lightMossImg from "@/assets/new-roof-before-1.jpg";
+import heavyMossRoofImg from "@/assets/new-roof-before-1.jpg";
 
 // public/ asset — referenced by URL, not bundled
-const heavyMossImg = "/lovable-uploads/7cdfb095-76e6-4419-b395-a8272819a23b.webp";
+const heavyMossDebrisImg = "/lovable-uploads/7cdfb095-76e6-4419-b395-a8272819a23b.webp";
 import { generateBreadcrumbSchema, injectSchema } from "@/utils/schema";
 
 const Pricing = () => {
@@ -289,41 +289,38 @@ const Pricing = () => {
               </Card>
             </div>
 
-            {/* Light vs heavy moss — what the range actually means */}
-            <div className="max-w-5xl mx-auto mt-12">
+            <div id="heavy-moss-examples" className="max-w-5xl mx-auto mt-12 scroll-mt-28">
               <h3 className="text-2xl font-bold text-brand-blue text-center mb-2">
-                What "light" vs. "heavy" moss actually looks like
+                Heavy moss examples
               </h3>
               <p className="text-muted-foreground text-center mb-8 max-w-2xl mx-auto">
-                Moss level is the biggest reason two similar houses get different quotes. Here's the difference, from real jobs:
+                Jobs like these are closer to $1,500. Your quote depends on roof material, size, pitch, and access.
               </p>
               <div className="grid md:grid-cols-2 gap-6">
-                <figure className="rounded-xl overflow-hidden shadow-lg bg-white">
+                <figure className="rounded-lg overflow-hidden shadow-lg bg-white">
                   <img
-                    src={lightMossImg}
-                    alt="Roof with light moss - scattered patches with the roof surface still visible"
+                    src={heavyMossRoofImg}
+                    alt="Heavy moss buildup along roof tile edges before cleaning"
                     className="w-full aspect-[4/3] object-cover"
                     loading="lazy"
                     width={975}
-                    height={731}
+                    height={1300}
                   />
                   <figcaption className="p-4">
-                    <p className="font-semibold text-brand-navy">Light moss (closer to $499)</p>
-                    <p className="text-sm text-muted-foreground">Scattered patches with the roof surface still visible. Caught early it's a quicker job, and an annual treatment keeps it that way.</p>
+                    <p className="font-semibold text-brand-navy">Heavy moss buildup</p>
                   </figcaption>
                 </figure>
-                <figure className="rounded-xl overflow-hidden shadow-lg bg-white">
+                <figure className="rounded-lg overflow-hidden shadow-lg bg-white">
                   <img
-                    src={heavyMossImg}
+                    src={heavyMossDebrisImg}
                     alt="Roof with heavy moss - thick moss rows and needle mats covering the shingles"
                     className="w-full aspect-[4/3] object-cover"
                     loading="lazy"
-                    width={1296}
-                    height={972}
+                    width={1299}
+                    height={1732}
                   />
                   <figcaption className="p-4">
-                    <p className="font-semibold text-brand-navy">Heavy moss (closer to $1,500)</p>
-                    <p className="text-sm text-muted-foreground">Years of buildup: moss in every seam and needle beds composting on the roof. It takes hours of careful hand removal, and that's what the top of the range pays for.</p>
+                    <p className="font-semibold text-brand-navy">Heavy moss and needle buildup</p>
                   </figcaption>
                 </figure>
               </div>
