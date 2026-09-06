@@ -5,18 +5,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
 import EnhancedTrustBar from "@/components/EnhancedTrustBar";
-import AsSeenOn from "@/components/AsSeenOn";
 import TestimonialCard from "@/components/TestimonialCard";
 import ServiceAreasSection from "@/components/ServiceAreasSection";
 import RelatedResources from "@/components/RelatedResources";
-import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 import ServiceFAQ from "@/components/ServiceFAQ";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Phone } from "lucide-react";
+import { CheckCircle, MessageCircle } from "lucide-react";
 import gutterCleaningImage from "@/assets/gutter-cleaning-before-after.jpg";
 import gutterBrightening2026 from "@/assets/gutter-brightening-before-after-2026.jpg";
-import gutterBA2 from "@/assets/gutter-cleaning-before-after.jpg";
 import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 import { navigateToContact } from "@/lib/navigation";
 
@@ -106,57 +102,46 @@ const GutterCleaning = () => {
         image={gutterCleaningImage}
       />
       <Header />
-      <EnhancedTrustBar />
       <main className="pt-16 md:pt-20">
         {/* Hero Section */}
         <section className="section-spacing bg-gradient-to-b from-brand-navy to-brand-navy/90">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div className="fade-up">
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
-                    Gutter Cleaning: Clog-Free and Flowing
+                    Gutter Cleaning in Seattle
                   </h1>
                   
-                  {/* Mini Trust Line */}
                   <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
-                    5.0★ from 233 neighbors • Licensed & Insured • Fast Quotes
+                    Gutters cleared, downspouts flushed, and roof debris blown off.
                   </p>
+                  <p className="text-white font-semibold mb-6">From $250</p>
 
-                  {/* 1-2-3 Process */}
-                  <ul className="flex flex-wrap gap-2 md:gap-4 text-white/90 mb-8 text-sm md:text-base">
-                    <li><strong className="text-brand-orange">1)</strong> Get a Fast Quote</li>
-                    <li><strong className="text-brand-orange">2)</strong> Schedule</li>
-                    <li><strong className="text-brand-orange">3)</strong> Relax while we work, before/after photos provided</li>
-                  </ul>
-
-                  <div className="flex flex-col sm:flex-row gap-4 mb-6">
+                  <div className="grid grid-cols-2 sm:flex gap-3">
                     <Button 
-                      variant="cta-orange" 
+                      variant="cta-orange"
                       size="xl"
+                      className="min-w-0 px-3 sm:px-6 text-sm sm:text-base"
                       onClick={navigateToContact}
                     >
-                      Get Fast Quote →
+                      Get a Fast Quote
                     </Button>
-                    <Button 
+                    <Button asChild
                       variant="prowash-outline"
                       size="xl"
-                      onClick={() => window.location.href = 'tel:2067526690'}
+                      className="min-w-0 px-3 sm:px-6 text-sm sm:text-base"
                     >
-                      Call or Text 206-752-6690
+                      <a href="sms:+12067526690"><MessageCircle aria-hidden="true" /> Text Us</a>
                     </Button>
                   </div>
                   
-                  {/* Trust Indicators */}
-                  <p className="text-white/80 text-sm">
-                    ✓ 233 Five-Star Reviews  ✓ Free Roof Blow-Off Included  ✓ Starts at $250
-                  </p>
                 </div>
                 <div className="fade-up">
                   <img
                     src={gutterCleaningImage}
                     alt="Professional gutter cleaning before and after - Clear downspouts and debris removal in Kenmore, Bothell, and Kirkland"
-                    className="rounded-2xl shadow-2xl w-full"
+                    className="mx-auto rounded-lg w-full max-h-72 lg:max-h-[420px] object-contain"
                     width={1200}
                     height={800}
                     loading="eager"
@@ -167,29 +152,19 @@ const GutterCleaning = () => {
           </div>
         </section>
 
+        <EnhancedTrustBar />
+
         {/* Gutter Cleaning Explanation Section */}
         <section className="section-spacing bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="fade-up">
-                  <img
-                    src={gutterCleaningImage}
-                    alt="Professional gutter cleaning before and after in Seattle"
-                    className="rounded-2xl shadow-2xl w-full"
-                    loading="lazy"
-                  />
+                  <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">
+                    What's Included
+                  </h2>
                 </div>
                 <div className="fade-up">
-                  <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">
-                    What Gutter Cleaning Actually Includes
-                  </h2>
-                  <p className="text-muted-foreground text-lg mb-4">
-                    Gutter cleaning is about clearing the inside of your gutters and downspouts so water can flow freely off your roof. Clogged gutters back up, overflow, and eventually cause water damage to your fascia, foundation, and siding.
-                  </p>
-                  <p className="text-muted-foreground text-lg mb-6">
-                    We hand-scoop all debris from the gutters, flush every downspout, blow off roof debris, and haul everything away. You get before/after photos so you can see the work without climbing a ladder.
-                  </p>
                   <ul className="space-y-3">
                     {[
                       "Hand-scoop all leaves and debris",
@@ -197,7 +172,6 @@ const GutterCleaning = () => {
                       "Blow off roof debris",
                       "Debris bagged and removed from property",
                       "Before/after photos provided",
-                      "Licensed & insured",
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm">
                         <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
@@ -227,27 +201,11 @@ const GutterCleaning = () => {
                   </h2>
                   <p className="text-brand-orange font-semibold mb-4">Optional add-on service</p>
                   <p className="text-muted-foreground text-lg mb-4">
-                    Standard gutter cleaning takes care of the inside. Gutter brightening is an optional add-on that cleans the outside face of your gutters. Those dark streaks you see running down the exterior are caused by oxidation and roof runoff that bakes onto the aluminum over time. A regular rinse won't touch it.
+                    Want the outside cleaned too? We hand-scrub the exterior to remove dark streaks and buildup. Available with your gutter cleaning.
                   </p>
-                  <p className="text-muted-foreground text-lg mb-6">
-                    We scrub the exterior face with a specialized cleaning solution to remove the buildup and restore the original color. Most customers add it on when they want the full package and want their gutters looking new again, not just flowing clean.
-                  </p>
-                  <ul className="space-y-3">
-                    {[
-                      "Removes black streaks and oxidation from exterior",
-                      "Hand-scrubbed with specialized cleaning solution",
-                      "Restores original gutter color",
-                      "Available as an add-on to any gutter cleaning",
-                    ].map((item, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
                   <div className="mt-8">
                     <Button variant="cta-orange" size="lg" onClick={navigateToContact}>
-                      Ask About Adding Gutter Brightening →
+                      Add Gutter Brightening
                     </Button>
                   </div>
                 </div>
@@ -263,24 +221,6 @@ const GutterCleaning = () => {
             </div>
           </div>
         </section>
-
-        {/* Before/After Showcase */}
-        <BeforeAfterShowcase
-          images={[
-            {
-              src: gutterBA2,
-              alt: "Gutter cleaning before and after showing debris removal and clear flow",
-              width: 1200,
-              height: 800
-            },
-            {
-              src: gutterCleaningImage,
-              alt: "Professional gutter cleaning results with downspout flushing",
-              width: 1200,
-              height: 800
-            }
-          ]}
-        />
 
         {/* FAQ Section */}
         <ServiceFAQ
@@ -300,9 +240,6 @@ const GutterCleaning = () => {
             }
           ]}
         />
-
-        {/* As Seen On Section */}
-        <AsSeenOn />
 
         {/* Testimonials Section */}
         <section className="section-spacing">
@@ -326,6 +263,11 @@ const GutterCleaning = () => {
             </div>
           </div>
         </section>
+
+        {/* Quote Form */}
+        <div className="bg-off-white">
+          <TwoStepQuoteForm />
+        </div>
 
         {/* Service Areas */}
         <ServiceAreasSection
@@ -370,33 +312,6 @@ const GutterCleaning = () => {
           ]}
         />
 
-        {/* Quote Form */}
-        <div id="contact" className="bg-off-white">
-          <TwoStepQuoteForm />
-        </div>
-
-        {/* CTA Section */}
-        <section className="section-spacing bg-brand-navy">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center fade-up">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready for Clean Gutters?
-              </h2>
-              <p className="text-xl text-white/90 mb-8">
-                Get a fast quote today. Professional gutter cleaning with clear results.
-              </p>
-              <div className="flex justify-center gap-4 mb-6">
-                <Button 
-                  variant="prowash-secondary" 
-                  size="xl"
-                  onClick={navigateToContact}
-                >
-                  Get Fast Quote
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
       <MobileBottomBar />

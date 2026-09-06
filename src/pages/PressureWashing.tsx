@@ -73,8 +73,8 @@ const PressureWashing = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Pressure Washing Services"
-        description="Professional pressure washing for driveways, patios, decks, and siding in Seattle, Kenmore, Bothell, and surrounding areas. Fast quotes, licensed and insured."
+        title="Pressure Washing & House Soft Washing"
+        description="Pressure washing for concrete driveways, patios, and decks, plus low-pressure house soft washing in Seattle, Kenmore, and Bothell. Fast quotes. Licensed and insured."
         url="https://www.seattleprowash.com/pressure-washing"
       />
       <Header />
@@ -86,13 +86,13 @@ const PressureWashing = () => {
             <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="fade-up">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
-                  Pressure Washing That Makes It Look New
+                  Pressure &amp; Soft Washing
                 </h1>
                 <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
                   5.0★ from 233 neighbors · Licensed & Insured · Fast Quotes
                 </p>
                 <p className="text-white/80 mb-8 leading-relaxed">
-                  Driveways, patios, walkways, decks, siding - if it's covered in moss, grime, or algae, we'll make it look like the day it was installed. We use the right pressure and cleaning solution for every surface so nothing gets damaged.
+                  Concrete driveways, patios, and decks cleaned with the right method for each surface. Low-pressure soft washing for house siding.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-6">
                   <Button variant="cta-orange" size="xl" onClick={navigateToContact}>
@@ -134,7 +134,7 @@ const PressureWashing = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-12 text-center fade-up">
-                What We Pressure Wash
+                What We Clean
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[

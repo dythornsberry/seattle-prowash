@@ -82,13 +82,13 @@ const WindowCleaning = () => {
             <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="fade-up">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
-                  Crystal Clear Windows, Every Time
+                  Exterior Window Cleaning
                 </h1>
                 <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
                   5.0★ from 233 neighbors · Licensed & Insured · Fast Quotes
                 </p>
                 <p className="text-white/80 mb-8 leading-relaxed">
-                  Seattle rain, pollen, and hard water take a toll on your windows. We handle the exterior cleaning so you can enjoy the view again. Safe, streak-free results on every pane.
+                  Outside glass, frames, and sills cleaned with water-fed poles. Exterior cleaning only.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-6">
                   <Button variant="cta-orange" size="xl" onClick={navigateToContact}>

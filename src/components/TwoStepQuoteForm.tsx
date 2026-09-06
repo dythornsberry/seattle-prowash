@@ -2,6 +2,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -518,77 +519,45 @@ const TwoStepQuoteForm = () => {
                           <FormField
                             control={form.control}
                             name="services"
-                            render={() => (
+                            render={({ field }) => (
                               <FormItem>
-                                <FormLabel className="text-brand-navy font-semibold">What do you need help with? *</FormLabel>
-                                <div className="space-y-3">
-                                  <FormField
-                                    control={form.control}
-                                    name="services"
-                                    render={({ field }) => (
-                                      <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-xl border-2 border-brand-orange bg-gradient-to-r from-brand-orange/15 to-brand-orange/5 p-5 pt-6 relative shadow-md">
-                                        <span className="absolute -top-3 left-4 bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded-full shadow">
-                                          ★ MOST POPULAR — ALL-IN-ONE
-                                        </span>
+                                <fieldset>
+                                  <legend className="text-sm text-brand-navy font-semibold mb-3">What do you need help with? *</legend>
+                                  <div className="grid grid-cols-2 gap-2">
+                                    {[
+                                      { value: "Roof cleaning (moss removal & treatment)", label: "Roof Cleaning", detail: "Moss removal, treatment & gutter cleaning. From $499.", primary: true },
+                                      { value: "Gutter cleaning (includes roof blow-off)", label: "Gutter Cleaning", detail: "Includes roof blow-off. From $250.", primary: true },
+                                      { value: "Gutter brightening (exterior)", label: "Gutter brightening", detail: "", primary: false },
+                                      { value: "Pressure washing", label: "Pressure washing", detail: "", primary: false },
+                                      { value: "House washing (soft wash)", label: "House washing", detail: "", primary: false },
+                                      { value: "Window cleaning", label: "Window cleaning", detail: "", primary: false },
+                                      { value: "Solar panel cleaning", label: "Solar panels", detail: "", primary: false },
+                                      { value: "Other", label: "Other / Not sure", detail: "", primary: false },
+                                    ].map((service) => (
+                                      <FormItem
+                                        key={service.value}
+                                        className={`flex flex-row items-start gap-2.5 space-y-0 rounded-md border px-3 py-3 has-[button[data-state=checked]]:border-brand-orange has-[button[data-state=checked]]:bg-brand-orange/5 ${service.primary ? "col-span-2 sm:col-span-1 border-brand-navy/40 bg-brand-navy/5" : "border-brand-navy/20"}`}
+                                      >
                                         <FormControl>
                                           <Checkbox
-                                            className="mt-0.5 h-5 w-5"
-                                            checked={field.value?.includes("Roof cleaning (moss removal & treatment)")}
+                                            className="mt-0.5 shrink-0"
+                                            aria-label={service.label}
+                                            checked={field.value?.includes(service.value)}
                                             onCheckedChange={(checked) => {
-                                              const value = "Roof cleaning (moss removal & treatment)";
                                               return checked
-                                                ? field.onChange([...field.value, value])
-                                                : field.onChange(field.value?.filter((v) => v !== value));
+                                                ? field.onChange([...field.value, service.value])
+                                                : field.onChange(field.value?.filter((value) => value !== service.value));
                                             }}
                                           />
                                         </FormControl>
-                                        <div className="flex flex-col space-y-1.5">
-                                          <FormLabel className="text-base font-bold text-brand-navy cursor-pointer leading-none">
-                                            Roof Cleaning
-                                          </FormLabel>
-                                          <span className="text-sm text-brand-navy/80">Moss removal + treatment + gutter cleaning, all in one visit</span>
-                                          <span className="text-xs font-semibold text-brand-orange">From $499 · 12-month moss-free guarantee</span>
-                                        </div>
+                                        <FormLabel className="flex flex-1 flex-col gap-1 text-sm font-medium text-brand-navy cursor-pointer leading-snug">
+                                          <span className={service.primary ? "font-bold" : ""}>{service.label}</span>
+                                          {service.detail && <span className="text-xs font-normal text-muted-foreground">{service.detail}</span>}
+                                        </FormLabel>
                                       </FormItem>
-                                    )}
-                                  />
-                                  <FormField
-                                    control={form.control}
-                                    name="services"
-                                    render={({ field }) => (
-                                      <div className="grid grid-cols-2 gap-2">
-                                        {[
-                                          { value: "Gutter cleaning (includes roof blow-off)", label: "Gutter cleaning ($250+)" },
-                                          { value: "Gutter brightening (exterior)", label: "Gutter brightening" },
-                                          { value: "Pressure washing", label: "Pressure washing" },
-                                          { value: "House washing (soft wash)", label: "House washing" },
-                                          { value: "Window cleaning", label: "Window cleaning" },
-                                          { value: "Solar panel cleaning", label: "Solar panels" },
-                                          { value: "Other", label: "Other / Not sure" },
-                                        ].map((service) => (
-                                          <FormItem
-                                            key={service.value}
-                                            className="flex flex-row items-center space-x-2.5 space-y-0 rounded-md border border-brand-navy/20 px-3 py-2.5 has-[button[data-state=checked]]:border-brand-orange has-[button[data-state=checked]]:bg-brand-orange/5"
-                                          >
-                                            <FormControl>
-                                              <Checkbox
-                                                checked={field.value?.includes(service.value)}
-                                                onCheckedChange={(checked) => {
-                                                  return checked
-                                                    ? field.onChange([...field.value, service.value])
-                                                    : field.onChange(field.value?.filter((v) => v !== service.value));
-                                                }}
-                                              />
-                                            </FormControl>
-                                            <FormLabel className="text-sm font-medium text-brand-navy cursor-pointer leading-tight">
-                                              {service.label}
-                                            </FormLabel>
-                                          </FormItem>
-                                        ))}
-                                      </div>
-                                    )}
-                                  />
-                                </div>
+                                    ))}
+                                  </div>
+                                </fieldset>
                                 <FormMessage />
                               </FormItem>
                             )}
@@ -599,14 +568,14 @@ const TwoStepQuoteForm = () => {
                             name="timeline"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel className="text-brand-navy font-semibold">How soon are you looking to get this done? *</FormLabel>
+                                <FormLabel className="text-brand-navy font-semibold">Preferred timing *</FormLabel>
                                 <FormControl>
                                   <RadioGroup
                                     value={field.value}
                                     onValueChange={field.onChange}
                                     className="space-y-2"
                                   >
-                                    {["ASAP", "Within 1 week", "Within 2 weeks"].map((option) => (
+                                    {["ASAP", "Within 1 week", "Within 2 weeks", "Flexible"].map((option) => (
                                       <FormItem
                                         key={option}
                                         className="flex flex-row items-center space-x-3 space-y-0 rounded-md border border-brand-navy/20 p-4 has-[button[data-state=checked]]:border-brand-orange has-[button[data-state=checked]]:bg-brand-orange/5"
@@ -630,18 +599,20 @@ const TwoStepQuoteForm = () => {
                             <Button
                               type="button"
                               variant="outline"
-                              className="min-h-[56px] text-base font-semibold rounded-xl px-6"
+                              className="h-14 w-12 shrink-0 rounded-lg px-0"
+                              aria-label="Back to your info"
+                              title="Back to your info"
                               onClick={() => setStep(1)}
                             >
-                              ← Back
+                              <ArrowLeft aria-hidden="true" />
                             </Button>
                             <Button
                               type="submit"
                               variant="cta-orange"
-                              className="flex-1 min-h-[56px] text-lg font-bold rounded-xl"
+                              className="flex-1 min-w-0 min-h-[56px] px-3 text-base font-bold rounded-lg"
                               disabled={isSubmitting}
                             >
-                              {isSubmitting ? "Sending..." : "Get Fast Quote →"}
+                              {isSubmitting ? "Sending..." : <>Get Fast Quote <ArrowRight aria-hidden="true" /></>}
                             </Button>
                           </div>
 

@@ -39,13 +39,13 @@ const Header = () => {
   ];
 
   const serviceLinks = [
-    { name: "All Services", href: "/services" },
     { name: "Roof Cleaning", href: "/roof-cleaning" },
-    { name: "Moss Removal & Treatment", href: "/moss-treatment" },
     { name: "Gutter Cleaning", href: "/gutter-cleaning" },
+    { name: "Moss Removal & Treatment", href: "/moss-treatment" },
     { name: "Pressure Washing", href: "/pressure-washing" },
     { name: "Window Cleaning", href: "/window-cleaning" },
     { name: "Commercial", href: "/commercial" },
+    { name: "All Services", href: "/services" },
   ];
 
   return (

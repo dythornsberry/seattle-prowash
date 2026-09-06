@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -11,16 +11,26 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <h3 className="text-center text-lg font-bold md:text-left md:text-xl">
-              Ready for a cleaner exterior?
+              Need your roof or gutters cleaned?
             </h3>
-            <Button
-              variant="prowash-cta"
-              size="lg"
-              onClick={() => { window.location.href = "tel:206-752-6690"; }}
-            >
-              <Phone className="mr-2 h-4 w-4" />
-              Call or Text 206-752-6690
-            </Button>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Button
+                variant="prowash-cta"
+                size="lg"
+                onClick={() => { window.location.href = "tel:206-752-6690"; }}
+              >
+                <Phone className="mr-2 h-4 w-4" />
+                Call 206-752-6690
+              </Button>
+              <Button asChild variant="prowash-cta" size="lg">
+                <a href="sms:+12067526690" onClick={() => {
+                  window.gtag?.('event', 'sms_click', { location: 'footer', phone_number: '2067526690' });
+                }}>
+                  <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                  Text Us
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </div>

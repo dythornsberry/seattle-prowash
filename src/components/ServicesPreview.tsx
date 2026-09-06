@@ -4,154 +4,131 @@ import roofImage from "@/assets/roof-cleaning-before-after-new.jpg";
 import roofImageMobile from "@/assets/roof-cleaning-before-after-new-mobile.webp";
 import gutterImage from "@/assets/gutter-cleaning-before-after.jpg";
 import gutterImageMobile from "@/assets/gutter-cleaning-before-after-mobile.webp";
-import houseImage from "@/assets/technician-house-washing.jpg";
-import houseImageMobile from "@/assets/technician-house-washing-mobile.webp";
-import windowImage from "@/assets/window-cleaning-action.jpg";
-import windowImageMobile from "@/assets/window-cleaning-action-mobile.webp";
+import pressureImage from "@/assets/driveway-surface-cleaner.jpg";
+import houseImage from "@/assets/technician-house-washing-mobile.webp";
+import windowImage from "@/assets/window-cleaning-action-mobile.webp";
 
-const ServicesPreview = () => {
-  return (
-    <section className="section-spacing bg-white">
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-10 fade-up">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-blue mb-4">
-            What We Clean
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Roofs, gutters, siding, concrete, and windows.
-          </p>
-        </div>
+const services = [
+  {
+    name: "Roof Cleaning",
+    path: "/roof-cleaning",
+    image: roofImage,
+    mobileImage: roofImageMobile,
+    alt: "Roof before and after moss removal",
+    description: "Moss removal and treatment. Gutter cleaning included.",
+    price: "From $499",
+    detail: "12-month moss-free guarantee",
+  },
+  {
+    name: "Gutter Cleaning",
+    path: "/gutter-cleaning",
+    image: gutterImage,
+    mobileImage: gutterImageMobile,
+    alt: "Gutters before and after debris removal",
+    description: "Gutters cleared, downspouts flushed, and roof debris blown off.",
+    price: "From $250",
+    detail: "Debris cleanup included",
+  },
+];
 
-        <div className="max-w-6xl mx-auto space-y-4 lg:space-y-6">
-          {/* Roof Cleaning - Hero Card */}
+const additionalServices = [
+  {
+    name: "Pressure Washing",
+    path: "/pressure-washing",
+    image: pressureImage,
+    imagePosition: "object-[center_70%]",
+    alt: "Surface cleaner washing a concrete driveway",
+    description: "Concrete driveways, patios, and decks.",
+  },
+  {
+    name: "House Soft Washing",
+    path: "/house-washing",
+    image: houseImage,
+    imagePosition: "object-right",
+    alt: "Seattle ProWash technician washing house siding",
+    description: "Low-pressure cleaning for house siding.",
+  },
+  {
+    name: "Exterior Window Cleaning",
+    path: "/window-cleaning",
+    image: windowImage,
+    imagePosition: "object-center",
+    alt: "Seattle ProWash technician cleaning the outside of a window",
+    description: "Outside glass, frames, and sills.",
+  },
+];
+
+const ServicesPreview = () => (
+  <section className="section-spacing bg-white">
+    <div className="container mx-auto px-4">
+      <h2 className="text-3xl md:text-4xl font-bold text-brand-navy text-center mb-8 fade-up">
+        Roof &amp; Gutter Cleaning
+      </h2>
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
+        {services.map((service) => (
           <Link
-            to="/roof-cleaning"
-            className="group relative h-72 sm:h-80 lg:h-96 rounded-2xl overflow-hidden block shadow-md hover:shadow-xl transition-all duration-300"
+            key={service.path}
+            to={service.path}
+            className="group flex flex-col overflow-hidden rounded-lg border border-brand-navy/15 hover:border-brand-orange hover:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange transition-colors"
           >
-            <picture className="absolute inset-0">
-              <source media="(max-width: 767px)" srcSet={roofImageMobile} type="image/webp" />
+            <picture className="block aspect-[4/3] overflow-hidden bg-muted">
+              <source media="(max-width: 767px)" srcSet={service.mobileImage} type="image/webp" />
               <img
-                src={roofImage}
-                alt="Roof cleaning before and after, moss removal results"
+                src={service.image}
+                alt={service.alt}
                 loading="lazy"
                 decoding="async"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-cover"
               />
             </picture>
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent transition-opacity duration-300 group-hover:from-brand-navy" />
-            <span className="absolute top-4 left-4 bg-brand-orange text-white px-3 py-1.5 text-sm font-bold shadow-lg z-10 rounded-md">
-              Most popular
-            </span>
-            <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 lg:p-10">
-              <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-3 drop-shadow-sm">
-                Roof Cleaning
-              </h3>
-              <p className="text-white text-lg sm:text-xl mb-3 drop-shadow-sm max-w-xl font-medium">
-                Moss removal, treatment, and gutter cleaning in one visit.
-              </p>
-              <p className="mb-4">
-                <span className="inline-block bg-white/95 text-brand-navy font-bold text-sm sm:text-base px-4 py-2 rounded-md shadow">
-                  From $499 · 12-month guarantee
-                </span>
-              </p>
-              <div className="flex items-center text-white font-semibold text-sm sm:text-base group-hover:text-brand-orange transition-colors duration-300">
-                Learn More <ArrowRight className="ml-2 w-4 h-4" />
+            <div className="flex flex-1 flex-col gap-3 p-5 sm:p-6">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <h3 className="text-2xl font-bold text-brand-navy">{service.name}</h3>
+                <span className="font-semibold text-brand-navy whitespace-nowrap">{service.price}</span>
+              </div>
+              <p className="text-muted-foreground">{service.description}</p>
+              <div className="mt-auto flex items-center justify-between gap-3 text-sm font-semibold text-brand-navy">
+                <span>{service.detail}</span>
+                <ArrowRight className="h-5 w-5 shrink-0 text-brand-orange" aria-hidden="true" />
               </div>
             </div>
           </Link>
-
-          {/* Secondary Services */}
-          <div className="grid md:grid-cols-3 gap-4 lg:gap-6">
-            <Link
-              to="/gutter-cleaning"
-              className="group relative h-56 sm:h-64 lg:h-72 rounded-2xl overflow-hidden block shadow-md hover:shadow-xl transition-all duration-300"
-            >
-              <picture className="absolute inset-0">
-                <source media="(max-width: 767px)" srcSet={gutterImageMobile} type="image/webp" />
-                <img
-                  src={gutterImage}
-                  alt="Gutter cleaning before and after"
-                  loading="lazy"
-                  decoding="async"
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </picture>
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent transition-opacity duration-300 group-hover:from-brand-navy" />
-              <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-1 drop-shadow-sm">
-                  Gutter Cleaning
-                </h3>
-                <p className="text-white/80 text-sm mb-3 drop-shadow-sm">
-                  Full clean and roof blow-off. From $250.
-                </p>
-                <div className="flex items-center text-brand-orange font-semibold text-sm group-hover:text-white transition-colors duration-300">
-                  Learn More <ArrowRight className="ml-2 w-4 h-4" />
-                </div>
-              </div>
-            </Link>
-
-            <Link
-              to="/pressure-washing"
-              className="group relative h-56 sm:h-64 lg:h-72 rounded-2xl overflow-hidden block shadow-md hover:shadow-xl transition-all duration-300"
-            >
-              <picture className="absolute inset-0">
-                <source media="(max-width: 767px)" srcSet={houseImageMobile} type="image/webp" />
-                <img
-                  src={houseImage}
-                  alt="Pressure washing house siding"
-                  loading="lazy"
-                  decoding="async"
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </picture>
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent transition-opacity duration-300 group-hover:from-brand-navy" />
-              <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-1 drop-shadow-sm">
-                  Pressure Washing
-                </h3>
-                <p className="text-white/80 text-sm mb-3 drop-shadow-sm">
-                  Driveways, siding, patios, and walkways.
-                </p>
-                <div className="flex items-center text-brand-orange font-semibold text-sm group-hover:text-white transition-colors duration-300">
-                  Learn More <ArrowRight className="ml-2 w-4 h-4" />
-                </div>
-              </div>
-            </Link>
-
-            <Link
-              to="/window-cleaning"
-              className="group relative h-56 sm:h-64 lg:h-72 rounded-2xl overflow-hidden block shadow-md hover:shadow-xl transition-all duration-300"
-            >
-              <picture className="absolute inset-0">
-                <source media="(max-width: 767px)" srcSet={windowImageMobile} type="image/webp" />
-                <img
-                  src={windowImage}
-                  alt="Exterior window cleaning"
-                  loading="lazy"
-                  decoding="async"
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </picture>
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent transition-opacity duration-300 group-hover:from-brand-navy" />
-              <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-1 drop-shadow-sm">
-                  Window Cleaning
-                </h3>
-                <p className="text-white/80 text-sm mb-3 drop-shadow-sm">
-                  Streak-free exterior window cleaning.
-                </p>
-                <div className="flex items-center text-brand-orange font-semibold text-sm group-hover:text-white transition-colors duration-300">
-                  Learn More <ArrowRight className="ml-2 w-4 h-4" />
-                </div>
-              </div>
-            </Link>
-          </div>
-        </div>
-
+        ))}
       </div>
-    </section>
-  );
-};
+      <div className="max-w-6xl mx-auto mt-8 border-t border-brand-navy/10 pt-6">
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+          <h2 className="text-xl font-semibold text-brand-navy">More Exterior Cleaning</h2>
+          <Link to="/services" className="inline-flex items-center gap-1 text-sm font-medium text-brand-navy hover:text-brand-orange">
+            All services <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Link>
+        </div>
+        <nav aria-label="Other cleaning services" className="grid lg:grid-cols-3 gap-3">
+          {additionalServices.map((service) => (
+            <Link
+              key={service.path}
+              to={service.path}
+              className="group flex items-center gap-3 rounded-lg border border-brand-navy/15 p-3 hover:border-brand-orange hover:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange transition-colors"
+            >
+              <img
+                src={service.image}
+                alt={service.alt}
+                loading="lazy"
+                decoding="async"
+                width={80}
+                height={80}
+                className={`h-20 w-20 shrink-0 rounded object-cover ${service.imagePosition}`}
+              />
+              <div className="min-w-0 flex-1">
+                <h3 className="text-base font-semibold leading-snug text-brand-navy">{service.name}</h3>
+                <p className="mt-1 text-sm leading-snug text-muted-foreground">{service.description}</p>
+              </div>
+              <ArrowRight className="h-4 w-4 shrink-0 text-brand-orange" aria-hidden="true" />
+            </Link>
+          ))}
+        </nav>
+      </div>
+    </div>
+  </section>
+);
 
 export default ServicesPreview;

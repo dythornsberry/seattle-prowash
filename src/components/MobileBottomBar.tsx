@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
 
 const MobileBottomBar = () => {
@@ -26,18 +26,26 @@ const MobileBottomBar = () => {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t-2 border-brand-navy shadow-2xl md:hidden pb-safe">
-      <div className="grid grid-cols-2 gap-2 p-3">
+      <div className="grid grid-cols-[minmax(0,1fr)_48px_minmax(0,1fr)] gap-2 p-3">
         <Button
           variant="outline"
           size="lg"
           className="w-full min-w-0 flex items-center justify-center gap-1.5 border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white min-h-[56px] px-2 text-sm font-semibold leading-tight"
           onClick={handleCall}
         >
-          <Phone className="w-4 h-4 shrink-0" />
-          <span className="flex min-w-0 flex-col items-start">
-            <span className="text-[10px] font-normal opacity-80">Call/text</span>
-            <span>206-752-6690</span>
+          <span className="flex min-w-0 flex-col items-center">
+            <span className="text-xs font-normal opacity-80">Call</span>
+            <span className="text-xs">206-752-6690</span>
           </span>
+        </Button>
+
+        <Button asChild variant="outline" className="h-14 w-12 flex-col gap-0.5 px-0" title="Text Seattle ProWash">
+          <a href="sms:+12067526690" aria-label="Text Seattle ProWash at 206-752-6690" onClick={() => {
+            window.gtag?.('event', 'sms_click', { location: 'mobile_bottom_bar', phone_number: '2067526690' });
+          }}>
+            <MessageCircle className="w-4 h-4" aria-hidden="true" />
+            <span className="text-xs">Text</span>
+          </a>
         </Button>
         
         <Button 
@@ -46,7 +54,7 @@ const MobileBottomBar = () => {
           className="w-full min-w-0 shadow-md min-h-[56px] px-2 text-sm font-semibold"
           onClick={handleQuote}
         >
-          Get Fast Quote
+          Get Quote
         </Button>
       </div>
     </div>

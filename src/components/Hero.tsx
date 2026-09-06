@@ -26,13 +26,13 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-5 md:space-y-6">
           {/* Main Headline */}
-          <h1 className="text-white font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight animate-fade-in drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
-            Moss Is Slowly Eating Your Roof. We Stop It.
+          <h1 className="text-white font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight text-balance animate-fade-in drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+            Roof &amp; Gutter Cleaning in Seattle
           </h1>
 
           {/* Subhead */}
           <p className="text-lg md:text-xl text-white/90 font-medium max-w-3xl mx-auto animate-fade-in drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-            Roof and gutter cleaning for North Seattle homes, backed by a 12-month moss-free guarantee.
+            Moss removal, roof treatment, and gutter cleaning across North Seattle and the Eastside.
           </p>
 
           {/* Inline mini-form */}

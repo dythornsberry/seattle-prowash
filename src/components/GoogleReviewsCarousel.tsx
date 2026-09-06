@@ -118,11 +118,13 @@ const GoogleReviewsCarousel = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy mb-3">
               What Our Customers Say
             </h2>
-            <div className="flex items-center justify-center gap-2 text-brand-orange">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-brand-orange" />
-              ))}
-              <span className="text-brand-navy font-semibold ml-1">5.0 from 233 Google Reviews</span>
+            <div className="flex flex-wrap items-center justify-center gap-2 text-brand-orange">
+              <span className="flex gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-brand-orange" />
+                ))}
+              </span>
+              <span className="text-brand-navy font-semibold">5.0 from 233 Google Reviews</span>
             </div>
           </div>
         )}
@@ -148,7 +150,8 @@ const GoogleReviewsCarousel = () => {
               ref={widgetRef}
               id={FEATURABLE_WIDGET_ID}
               data-featurable-async
-              className="min-h-[340px]"
+              // The widget needs 320px; reclaim the page gutters on narrow phones.
+              className="min-h-[340px] -mx-4 min-[352px]:mx-0"
             ></div>
           )}
         </div>

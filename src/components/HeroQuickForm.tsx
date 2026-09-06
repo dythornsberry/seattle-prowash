@@ -68,7 +68,7 @@ const HeroQuickForm = () => {
       <p className="text-brand-navy text-base md:text-lg font-semibold text-center">
         Get a fast quote
       </p>
-      <div className="flex flex-col sm:flex-row gap-2 mt-3">
+      <div className="grid sm:grid-cols-2 gap-2 mt-3">
         <input
           type="text"
           inputMode="text"
@@ -93,9 +93,9 @@ const HeroQuickForm = () => {
         <Button
           type="submit"
           variant="cta-orange"
-          className="sm:w-auto whitespace-nowrap font-semibold text-base px-5 py-3"
+          className="sm:col-span-2 w-full min-h-12 font-semibold text-base px-5 py-3"
         >
-          Start <ArrowRight className="w-4 h-4 ml-1" />
+          Next: Project Details <ArrowRight className="w-4 h-4" aria-hidden="true" />
         </Button>
       </div>
       {error && (

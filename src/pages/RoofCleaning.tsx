@@ -3,10 +3,8 @@ import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema, inj
 import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import StickyTopBar from "@/components/StickyTopBar";
 import MobileBottomBar from "@/components/MobileBottomBar";
 import EnhancedTrustBar from "@/components/EnhancedTrustBar";
-import AsSeenOn from "@/components/AsSeenOn";
 import TestimonialCard from "@/components/TestimonialCard";
 import ServiceAreasSection from "@/components/ServiceAreasSection";
 import RelatedResources from "@/components/RelatedResources";
@@ -15,7 +13,7 @@ import ServiceFAQ from "@/components/ServiceFAQ";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Phone } from "lucide-react";
+import { CheckCircle, MessageCircle } from "lucide-react";
 import roofCleaningImage from "@/assets/roof-moss-removal-detailed-before-after.jpg";
 import roofBA1 from "@/assets/asphalt-roof-moss-cleaning-before-after.jpg";
 import roofBA2 from "@/assets/metal-roof-cleaning-before-after.jpg";
@@ -126,51 +124,41 @@ const RoofCleaning = () => {
         <section className="section-spacing bg-gradient-to-b from-brand-navy to-brand-navy/90">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div className="fade-up">
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
-                    Roof Cleaning: Soft on Shingles, Tough on Grime
+                    Roof Cleaning in Seattle
                   </h1>
                   
-                  {/* Mini Trust Line */}
                   <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
-                    5.0★ from 233 neighbors • Licensed & Insured • Fast Quotes
+                    Moss removal and treatment, with gutter cleaning included.
                   </p>
+                  <p className="text-white font-semibold mb-6">From $499</p>
 
-                  {/* 1-2-3 Process */}
-                  <ul className="flex flex-wrap gap-2 md:gap-4 text-white/90 mb-8 text-sm md:text-base">
-                    <li><strong className="text-brand-orange">1)</strong> Send the quote form</li>
-                    <li><strong className="text-brand-orange">2)</strong> Dylan confirms details</li>
-                    <li><strong className="text-brand-orange">3)</strong> Get clear pricing</li>
-                  </ul>
-
-                  <div className="flex flex-col sm:flex-row gap-4 mb-6">
+                  <div className="grid grid-cols-2 sm:flex gap-3">
                     <Button
                       variant="cta-orange"
                       size="xl"
+                      className="min-w-0 px-3 sm:px-6 text-sm sm:text-base"
                       onClick={navigateToContact}
                     >
-                      Get Roof Cleaning Quote →
+                      Get a Fast Quote
                     </Button>
-                    <Button 
+                    <Button asChild
                       variant="prowash-outline"
                       size="xl"
-                      onClick={() => window.location.href = 'tel:2067526690'}
+                      className="min-w-0 px-3 sm:px-6 text-sm sm:text-base"
                     >
-                      Call or Text 206-752-6690
+                      <a href="sms:+12067526690"><MessageCircle aria-hidden="true" /> Text Us</a>
                     </Button>
                   </div>
                   
-                  {/* Trust Indicators */}
-                  <p className="text-white/80 text-sm">
-                    ✓ 12-Month Guarantee  ✓ 233 Five-Star Reviews  ✓ Starts at $499, gutter cleaning included
-                  </p>
                 </div>
                 <div className="fade-up">
                   <img
                     src={roofCleaningImage}
                     alt="Asphalt roof before and after soft-wash cleaning - Professional moss removal in Kenmore and Kirkland"
-                    className="rounded-2xl shadow-2xl w-full"
+                    className="mx-auto rounded-lg w-full max-h-72 lg:max-h-[420px] object-contain"
                     width={1200}
                     height={800}
                     loading="eager"
@@ -180,6 +168,8 @@ const RoofCleaning = () => {
             </div>
           </div>
         </section>
+
+        <EnhancedTrustBar />
 
         {/* Before/After Showcase */}
         <BeforeAfterShowcase
@@ -217,9 +207,6 @@ const RoofCleaning = () => {
           ]}
         />
 
-        {/* As Seen On Section */}
-        <AsSeenOn />
-
         {/* FAQ Section */}
         <ServiceFAQ
           schemaContext="roof"
@@ -247,19 +234,16 @@ const RoofCleaning = () => {
           ]}
         />
 
-        {/* Trust stats after the hero so the headline and CTA own the first screen */}
-        <EnhancedTrustBar />
-
-        {/* Our Services - Three Clear Options */}
+        {/* Service options */}
         <section className="section-spacing bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-12 fade-up">
                 <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">
-                  Our Services
+                  What's Included
                 </h2>
                 <p className="text-lg text-muted-foreground">
-                  Two simple options to keep your roof and gutters in top shape
+                  Gentle cleaning with before-and-after photos of the work.
                 </p>
               </div>
               <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
@@ -274,7 +258,7 @@ const RoofCleaning = () => {
                   <CardContent className="space-y-4">
                     <p className="text-3xl font-bold text-brand-navy">$499 – $1,500 <span className="text-sm font-normal text-muted-foreground">for most homes</span></p>
                     <p className="text-muted-foreground">
-                      Moss treatment, moss removal, and gutter cleaning all included. Backed by our 12-month moss-free guarantee.
+                      Moss removal and treatment, with gutter cleaning included. No high pressure on shingles.
                     </p>
                     <Button
                       variant="prowash-primary"
@@ -293,7 +277,7 @@ const RoofCleaning = () => {
                   <CardContent className="space-y-4">
                     <p className="text-3xl font-bold text-brand-navy">Starting at $250</p>
                     <p className="text-muted-foreground">
-                      Complete gutter cleaning with hand-scooping, downspout flushing, and a complimentary roof blow-off to clear debris. No moss? This is all you need.
+                      Gutters cleared, downspouts flushed, and roof debris blown off.
                     </p>
                     <Button
                       variant="outline"
@@ -351,121 +335,21 @@ const RoofCleaning = () => {
                     Metal Roof Cleaning
                   </h2>
                   <p className="text-muted-foreground mb-4">
-                    Asphalt and composite roofs are our bread and butter, but we clean a lot of metal roofs too — they're everywhere in the Seattle area, and moss and algae love the seams and shaded panels just as much as shingles.
-                  </p>
-                  <p className="text-muted-foreground mb-4">
-                    Metal takes a different approach. The surface is slick and easy to scratch or dent if you treat it like asphalt, so we use a gentler process: kill the moss at the root, brush and rinse the panels without aggressive pressure, and let the treatment finish the job. The result is a roof that looks close to new without damaging the finish.
+                    We remove moss and debris from standing seam, corrugated, and metal shake roofs using a gentle, finish-safe process.
                   </p>
                   <ul className="space-y-2 mb-6">
-                    <li className="flex items-start gap-2 text-sm">
-                      <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
-                      <span>Standing seam, corrugated & metal shake roofs</span>
-                    </li>
-                    <li className="flex items-start gap-2 text-sm">
-                      <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
-                      <span>Finish-safe process — no harsh pressure on painted panels</span>
-                    </li>
                     <li className="flex items-start gap-2 text-sm">
                       <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
                       <span>Moss treatment included, same 12-month guarantee</span>
                     </li>
                     <li className="flex items-start gap-2 text-sm">
                       <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
-                      <span>Starting at $800 — quoted from your roof's size & condition</span>
+                      <span>From $800, based on roof size and condition</span>
                     </li>
                   </ul>
                   <Button variant="cta-orange" size="lg" onClick={navigateToContact}>
                     Get a Metal Roof Quote →
                   </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* How It Works Section */}
-        <section className="section-spacing">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-12 text-center fade-up">
-                How It Works
-              </h2>
-              <div className="grid md:grid-cols-3 gap-8 text-center">
-                <div className="fade-up">
-                  <div className="bg-brand-orange text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                    1
-                  </div>
-                  <h3 className="font-semibold text-brand-navy mb-2">Inspect</h3>
-                  <p className="text-muted-foreground">We assess your roof and gutters to recommend the right service level.</p>
-                </div>
-                <div className="fade-up">
-                  <div className="bg-brand-orange text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                    2
-                  </div>
-                  <h3 className="font-semibold text-brand-navy mb-2">Treat</h3>
-                  <p className="text-muted-foreground">Our roof cleaning treatment removes moss and debris without damaging shingles.</p>
-                </div>
-                <div className="fade-up">
-                  <div className="bg-brand-orange text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                    3
-                  </div>
-                  <h3 className="font-semibold text-brand-navy mb-2">Protect</h3>
-                  <p className="text-muted-foreground">Preventative treatment keeps moss away for 12 months, guaranteed.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Why Choose Us Section */}
-        <section className="section-spacing bg-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-12 text-center fade-up">
-                Why Choose Seattle ProWash
-              </h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="flex items-start gap-3 fade-up">
-                  <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-brand-navy mb-1">No High Pressure on Roofs</h3>
-                    <p className="text-sm text-muted-foreground">Our soft-wash method is safe for all shingle types</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3 fade-up">
-                  <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-brand-navy mb-1">Trained & Insured Technicians</h3>
-                    <p className="text-sm text-muted-foreground">Licensed professionals with proper safety equipment</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3 fade-up">
-                  <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-brand-navy mb-1">Photos on Every Job</h3>
-                    <p className="text-sm text-muted-foreground">Clear before-and-after documentation of all work</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3 fade-up">
-                  <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-brand-navy mb-1">Honest Advice & Maintenance</h3>
-                    <p className="text-sm text-muted-foreground">We recommend only what your roof actually needs</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3 fade-up">
-                  <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-brand-navy mb-1">12-Month Moss-Free Guarantee</h3>
-                    <p className="text-sm text-muted-foreground">Your roof stays protected for a full year</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3 fade-up">
-                  <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-brand-navy mb-1">Quick, Honest Scheduling</h3>
-                    <p className="text-sm text-muted-foreground">Fast quotes, with scheduling based on weather and availability</p>
-                  </div>
                 </div>
               </div>
             </div>
@@ -495,6 +379,11 @@ const RoofCleaning = () => {
           </div>
         </section>
 
+        {/* Quote Form */}
+        <div className="bg-off-white">
+          <TwoStepQuoteForm />
+        </div>
+
         {/* Service Areas */}
         <ServiceAreasSection
           title="Roof Cleaning Service Areas"
@@ -520,44 +409,6 @@ const RoofCleaning = () => {
         {/* Related Resources */}
         <RelatedResources />
 
-        {/* Quote Form */}
-        <div id="contact" className="bg-off-white">
-          <TwoStepQuoteForm />
-        </div>
-
-        {/* CTA Section */}
-        <section className="section-spacing bg-brand-navy">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center fade-up">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready for Expert Roof Cleaning?
-              </h2>
-              <p className="text-xl text-white/90 mb-8">
-                Fill out the form and Dylan will call or text to confirm details and help you get a quote.
-              </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4 mb-4">
-                <Button
-                  variant="prowash-secondary"
-                  size="xl"
-                  onClick={navigateToContact}
-                >
-                  Get Roof Cleaning Quote
-                </Button>
-                <Button 
-                  variant="prowash-outline"
-                  size="xl"
-                  onClick={() => window.location.href = 'tel:206-752-6690'}
-                >
-                  <Phone className="w-4 h-4 mr-2" />
-                  Call or Text 206-752-6690
-                </Button>
-              </div>
-              <p className="text-white/70 text-sm mt-4">
-                Have questions? <a href="/faq" className="text-brand-orange hover:underline">Visit our FAQ page</a>
-              </p>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
       <MobileBottomBar />
