@@ -15,7 +15,7 @@ try {
     const page = await context.newPage();
     page.on('pageerror', (error) => errors.push(error.message));
     for (const path of ['/', '/pricing', '/roof-cleaning', '/gutter-cleaning', '/services', '/seattle-roof-gutter-cleaning', '/gallery']) {
-      await page.goto(base + path);
+      await page.goto(base + path, { waitUntil: 'domcontentloaded' });
       await page.locator('h1').waitFor();
       await page.evaluate(async () => {
         for (let y = 0; y <= document.body.scrollHeight; y += 750) {
@@ -39,7 +39,7 @@ try {
       checks++;
     }
     for (const path of ['/window-cleaning', '/pressure-washing', '/commercial', '/services/window-cleaning']) {
-      await page.goto(base + path);
+      await page.goto(base + path, { waitUntil: 'domcontentloaded' });
       await page.waitForURL('**/services*');
       await page.locator('h1').waitFor();
       assert.match(await page.locator('body').innerText(), /only as an add-on/i);
@@ -65,7 +65,7 @@ try {
   });
   const page = await context.newPage();
   async function fillDetails() {
-    await page.goto(base);
+    await page.goto(base, { waitUntil: 'domcontentloaded' });
     await page.getByRole('textbox', { name: 'Your name', exact: true }).fill('QA Preview Only');
     await page.getByRole('textbox', { name: 'Phone number', exact: true }).fill('2062346789');
     await page.getByRole('button', { name: 'Next: Project Details', exact: true }).click();
