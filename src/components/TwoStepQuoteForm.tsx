@@ -12,11 +12,13 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
-const primaryServices = ["Roof cleaning (moss removal & treatment)", "Gutter cleaning (includes roof blow-off)"];
 const serviceOptions = [
-  { value: primaryServices[0], label: "Roof & Gutter Cleaning Combo", detail: "Deep roof cleaning, moss removal & treatment, gutters, downspouts & cleanup. Starting at $850.", primary: true },
-  { value: primaryServices[1], label: "Complete Gutter Cleaning", detail: "Roof blow-off, gutters, downspouts & cleanup. No moss removal or treatment. Starting at $350.", primary: true },
-  { value: "Pressure washing", label: "Pressure washing add-on", detail: "Only with roof or gutter cleaning. Quoted separately, subject to availability.", primary: false },
+  { value: "Roof cleaning (moss removal & treatment)", label: "Roof & Gutter Cleaning Combo", detail: "Moss removal & treatment, gutters, downspouts & cleanup. From $850.", primary: true },
+  { value: "Gutter cleaning (includes roof blow-off)", label: "Complete Gutter Cleaning", detail: "Roof blow-off, gutters, downspouts & cleanup. From $350.", primary: true },
+  { value: "House washing (soft wash)", label: "House Soft Washing", detail: "Siding, trim & soffits.", primary: false },
+  { value: "Pressure washing", label: "Pressure Washing", detail: "Concrete driveways, patios & walkways.", primary: false },
+  { value: "Deck cleaning", label: "Deck Cleaning", detail: "Wood & composite decks.", primary: false },
+  { value: "Window cleaning", label: "Exterior Window Cleaning", detail: "Outside glass, frames & sills.", primary: false },
 ];
 
 const formSchema = z.object({
@@ -36,9 +38,8 @@ const formSchema = z.object({
     if (digits[0] === '0' || digits[0] === '1') return false;
     return true;
   }, { message: "Please enter a valid 10-digit phone number" }),
-  services: z.array(z.string())
-    .refine((values) => values.every((value) => serviceOptions.some((service) => service.value === value)), "Please select an available service")
-    .refine((values) => values.some((value) => primaryServices.includes(value)), "Please select roof cleaning or complete gutter cleaning"),
+  services: z.array(z.string()).min(1, "Please select at least one service")
+    .refine((values) => values.every((value) => serviceOptions.some((service) => service.value === value)), "Please select an available service"),
   timeline: z.string().min(1, "Please pick a timeframe"),
   company: z.string().max(0, "Invalid submission"), // honeypot
 });
@@ -536,19 +537,18 @@ const TwoStepQuoteForm = () => {
                                     {serviceOptions.map((service) => (
                                       <FormItem
                                         key={service.value}
-                                        className={`flex flex-row items-start gap-2.5 space-y-0 rounded-md border px-3 py-3 has-[button[data-state=checked]]:border-brand-orange has-[button[data-state=checked]]:bg-brand-orange/5 ${service.primary ? "col-span-2 sm:col-span-1 border-brand-navy/40 bg-brand-navy/5" : "col-span-2 border-brand-navy/20"}`}
+                                        className={`col-span-2 sm:col-span-1 flex flex-row items-start gap-2.5 space-y-0 rounded-md border px-3 py-3 has-[button[data-state=checked]]:border-brand-orange has-[button[data-state=checked]]:bg-brand-orange/5 ${service.primary ? "border-brand-navy/40 bg-brand-navy/5" : "border-brand-navy/20"}`}
                                       >
                                         <FormControl>
                                           <Checkbox
                                             className="mt-0.5 shrink-0"
                                             aria-label={service.label}
-                                            disabled={!service.primary && !field.value.some((value) => primaryServices.includes(value))}
                                             checked={field.value?.includes(service.value)}
                                             onCheckedChange={(checked) => {
                                               const next = checked
                                                 ? [...field.value, service.value]
                                                 : field.value.filter((value) => value !== service.value);
-                                              field.onChange(next.some((value) => primaryServices.includes(value)) ? next : []);
+                                              field.onChange(next);
                                             }}
                                           />
                                         </FormControl>

@@ -42,7 +42,7 @@ const faqs = [
   {
     icon: CheckCircle,
     question: "Do you offer other services besides roof and gutter cleaning?",
-    answer: "We focus on roof cleaning starting at $850 and complete gutter cleaning starting at $350. Pressure washing is available only as an add-on to either service, subject to availability. We do not offer standalone pressure washing or window cleaning.",
+    answer: "Roof and gutter cleaning, house soft washing, concrete pressure washing, deck cleaning, and exterior window cleaning. You can request any service on its own or combine them.",
     category: "Services"
   },
   {

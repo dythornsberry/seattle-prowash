@@ -57,7 +57,6 @@ import asphaltComposite7 from "@/assets/asphalt-roof-before-after-7-2026.jpg";
 import gutterBrightening2026 from "@/assets/gutter-brightening-before-after-2026.jpg";
 import deckCleaning2026 from "@/assets/deck-cleaning-before-after-2026.jpg";
 import houseWash2026 from "@/assets/house-wash-before-after-2026.jpg";
-import solarPanelCleaning2026 from "@/assets/solar-panel-cleaning-before-after-2026.jpg";
 import truckJobsite2026 from "@/assets/prowash-truck-jobsite-2026.jpg";
 import dylanRinsing2026 from "@/assets/dylan-rinsing-landscaping-2026.jpg";
 
@@ -75,6 +74,9 @@ const Gallery = () => {
     "Metal Roofs",
     "Roof Cleaning", 
     "Gutter Cleaning",
+    "House Soft Washing",
+    "Pressure Washing",
+    "Concrete Cleaning",
     "Team at Work"
   ];
 
@@ -491,14 +493,6 @@ const Gallery = () => {
         service: "House Soft Washing"
       },
       {
-        src: solarPanelCleaning2026,
-        alt: "Dusty solar panels before and after professional cleaning",
-        title: "Solar panel cleaning before & after, Summer 2026",
-        location: "Greater Seattle",
-        description: "Film and grime cleaned off the array — clean panels simply produce more power",
-        service: "Solar Panel Cleaning"
-      },
-      {
         src: houseBefore,
         alt: "House soft washing before and after on exterior siding", 
         title: "House soft washing,Seattle Area", 
@@ -672,7 +666,7 @@ const Gallery = () => {
         if (i < teamImages.length) interspersedImages.push(teamImages[i]);
       }
       
-      return interspersedImages;
+      return [...interspersedImages, ...galleryImages["House Soft Washing"], ...galleryImages["Pressure Washing"], ...galleryImages["Concrete Cleaning"]];
     }
     return galleryImages[activeCategory as keyof typeof galleryImages] || [];
   };

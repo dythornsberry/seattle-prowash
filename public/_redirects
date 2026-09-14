@@ -35,7 +35,5 @@
 /mill-creek /mill-creek-roof-gutter-cleaning 301
 
 # SPA fallback for anything else (client router renders NotFound)
-/window-cleaning /services 301
 /commercial /services 301
-/pressure-washing /services#add-ons 301
 /* /index.html 200

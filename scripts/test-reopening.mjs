@@ -14,7 +14,7 @@ try {
     await context.route('**/*', (route) => route.request().url().startsWith(base) ? route.continue() : route.abort());
     const page = await context.newPage();
     page.on('pageerror', (error) => errors.push(error.message));
-    for (const path of ['/', '/pricing', '/roof-cleaning', '/gutter-cleaning', '/services', '/seattle-roof-gutter-cleaning', '/gallery']) {
+    for (const path of ['/', '/pricing', '/roof-cleaning', '/gutter-cleaning', '/services', '/seattle-roof-gutter-cleaning', '/gallery', '/pressure-washing', '/window-cleaning']) {
       await page.goto(base + path, { waitUntil: 'domcontentloaded' });
       await page.locator('h1').waitFor();
       await page.evaluate(async () => {
@@ -31,23 +31,23 @@ try {
         assert.match(body, /deep roof cleaning/i, path);
         assert.match(body, /moss removal/i, path);
       }
-      if (path !== '/gallery') {
+      if (!['/gallery', '/pressure-washing', '/window-cleaning'].includes(path)) {
         assert.match(body, /\$850/, path);
         assert.match(body, /\$350/, path);
       }
       const overflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1);
       assert.equal(overflow, false, `Horizontal overflow: ${path} at ${width}px`);
-      assert.equal(await page.locator('header a[href="/window-cleaning"], header a[href="/pressure-washing"], footer a[href="/window-cleaning"]').count(), 0);
+      assert.equal(await page.locator('header a[href="/window-cleaning"], header a[href="/commercial"]').count(), 0);
+      assert.doesNotMatch(body, /No standalone pressure washing|only as an add-on|do not offer.*window cleaning/i);
       if (['/', '/pricing', '/services', '/gutter-cleaning'].includes(path)) {
         await page.screenshot({ path: `${output}/${path.replaceAll('/', '') || 'home'}-${width}.png`, fullPage: true });
       }
       checks++;
     }
-    for (const path of ['/window-cleaning', '/pressure-washing', '/commercial', '/services/window-cleaning']) {
+    for (const [path, destination] of [['/commercial', '/services'], ['/services/window-cleaning', '/window-cleaning'], ['/services/pressure-washing', '/pressure-washing'], ['/house-washing', '/pressure-washing']]) {
       await page.goto(base + path, { waitUntil: 'domcontentloaded' });
-      await page.waitForURL('**/services*');
+      await page.waitForURL(`**${destination}*`);
       await page.locator('h1').waitFor();
-      assert.match(await page.locator('body').innerText(), /only as an add-on/i);
       checks++;
     }
     assert.deepEqual(errors, [], `Runtime errors at ${width}px`);
@@ -79,21 +79,22 @@ try {
     await page.getByRole('radio', { name: 'Flexible', exact: true }).click();
   }
   await fillDetails();
-  const addon = page.getByRole('checkbox', { name: 'Pressure washing add-on', exact: true });
+  const pressure = page.getByRole('checkbox', { name: 'Pressure Washing', exact: true });
   const roof = page.getByRole('checkbox', { name: 'Roof & Gutter Cleaning Combo', exact: true });
   const gutter = page.getByRole('checkbox', { name: 'Complete Gutter Cleaning', exact: true });
-  assert.equal(await addon.isDisabled(), true);
-  assert.equal(await page.getByRole('checkbox').count(), 3);
+  assert.equal(await pressure.isDisabled(), false);
+  assert.equal(await page.getByRole('checkbox').count(), 6);
   await page.locator('#contact button[type="submit"]').click();
-  await page.getByText('Please select roof cleaning or complete gutter cleaning', { exact: true }).waitFor();
+  await page.getByText('Please select at least one service', { exact: true }).waitFor();
   assert.equal(submissions, 0);
   await roof.check();
-  await addon.check();
+  await pressure.check();
   await roof.uncheck();
-  assert.equal(await addon.isChecked(), false);
-  assert.equal(await addon.isDisabled(), true);
+  assert.equal(await pressure.isChecked(), true);
+  assert.equal(await pressure.isDisabled(), false);
+  await pressure.uncheck();
   await gutter.check();
-  await addon.check();
+  await pressure.check();
   await page.screenshot({ path: `${output}/form-mobile.png`, fullPage: true });
   await page.locator('#contact button[type="submit"]').click();
   await page.getByText("Got it! We're on it.", { exact: true }).waitFor();
@@ -116,6 +117,19 @@ try {
   await page.getByText("Got it! We're on it.", { exact: true }).waitFor();
   assert.equal(payload.services, 'Roof cleaning (moss removal & treatment) | Timeline: Flexible');
   checks += 2;
+  for (const [label, value] of [
+    ['House Soft Washing', 'House washing (soft wash)'],
+    ['Pressure Washing', 'Pressure washing'],
+    ['Deck Cleaning', 'Deck cleaning'],
+    ['Exterior Window Cleaning', 'Window cleaning'],
+  ]) {
+    await fillDetails();
+    await page.getByRole('checkbox', { name: label, exact: true }).check();
+    await page.locator('#contact button[type="submit"]').click();
+    await page.getByText("Got it! We're on it.", { exact: true }).waitFor();
+    assert.equal(payload.services, `${value} | Timeline: Flexible`);
+    checks++;
+  }
   await context.close();
   console.log(`PASS: ${checks} route, layout, redirect, and intercepted-form checks. Screenshots: ${output}`);
 } finally {

@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
 import { Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import { navigateToContact } from "@/lib/navigation";
 import asphaltRoofImg from "@/assets/recent-asphalt-roof-before-after-2026.webp";
 import gutterImg from "@/assets/gutter-cleaning-before-after.jpg";
@@ -115,9 +116,12 @@ const Pricing = () => {
                 <Button variant="cta-orange" onClick={navigateToContact}>Get a Quote</Button>
               </div>
             </div>
-            <p className="text-sm text-muted-foreground mt-8">
-              Pressure washing is available only as a roof or gutter cleaning add-on, subject to availability.
-            </p>
+            <div className="mt-10 border-t pt-6">
+              <h3 className="text-xl font-bold text-brand-blue mb-2">House, Concrete &amp; Deck Cleaning</h3>
+              <p className="text-muted-foreground">House soft washing, driveway and patio pressure washing, and deck cleaning are quoted by size and condition.</p>
+              <Link className="inline-block mt-3 underline underline-offset-4" to="/pressure-washing">View services</Link>
+              <p className="text-sm text-muted-foreground mt-3"><Link className="underline underline-offset-4" to="/window-cleaning">Exterior window cleaning</Link> is also available.</p>
+            </div>
           </div>
         </section>
 

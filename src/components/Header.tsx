@@ -42,6 +42,9 @@ const Header = () => {
     { name: "Roof Cleaning", href: "/roof-cleaning" },
     { name: "Gutter Cleaning", href: "/gutter-cleaning" },
     { name: "Moss Removal & Treatment", href: "/moss-treatment" },
+    { name: "House Soft Washing", href: "/pressure-washing#house-soft-washing" },
+    { name: "Pressure Washing", href: "/pressure-washing" },
+    { name: "Deck Cleaning", href: "/pressure-washing#deck-cleaning" },
     { name: "All Services", href: "/services" },
   ];
 

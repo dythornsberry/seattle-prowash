@@ -11,6 +11,7 @@ import { CheckCircle, Droplet, Home, Phone } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
 import roofImg from "@/assets/roof-cleaning-before-after-new.jpg";
 import gutterImg from "@/assets/gutter-cleaning-before-after.jpg";
+import ExteriorCleaningServices from "@/components/ExteriorCleaningServices";
 
 const Services = () => {
   useEffect(() => {
@@ -54,7 +55,7 @@ const Services = () => {
     <>
       <SEOHead
         title="All Services"
-        description="Roof cleaning starting at $850 and complete gutter cleaning starting at $350 in Seattle, Kenmore, Bothell, and Kirkland."
+        description="Roof and gutter cleaning, house soft washing, pressure washing, deck cleaning, and exterior window cleaning in Seattle, Kenmore, Bothell, and Kirkland."
         url="https://www.seattleprowash.com/services"
       />
       <Header />
@@ -70,7 +71,7 @@ const Services = () => {
               Our Services
             </h1>
             <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-8">
-              Roof cleaning, moss removal, and complete gutter cleaning. Based in Kenmore, serving North Seattle and the Eastside.
+              Roofs, gutters, siding, concrete, and decks. Based in Kenmore, serving North Seattle and the Eastside.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="cta-orange" size="xl" onClick={navigateToContact}>
@@ -137,11 +138,10 @@ const Services = () => {
                 );
               })}
             </div>
-            <p id="add-ons" className="max-w-6xl mx-auto mt-6 text-sm text-muted-foreground text-center">
-              Pressure washing is available only as an add-on to roof or gutter cleaning, subject to scope and availability. No standalone pressure washing.
-            </p>
           </div>
         </section>
+
+        <ExteriorCleaningServices />
 
         {/* CTA Section */}
         <section className="py-16 md:py-20 bg-brand-navy text-white">

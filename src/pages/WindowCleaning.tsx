@@ -29,7 +29,7 @@ const WindowCleaning = () => {
       faqs: [
         {
           question: "Do you clean interior windows too?",
-          answer: "We focus on exterior window cleaning. For most homes, the outside is where the real buildup happens from rain, pollen, and hard water. We get those sparkling clean."
+          answer: "We offer exterior window cleaning only, including outside glass, frames, and sills."
         },
         {
           question: "How do you reach upper-story windows?",
@@ -84,9 +84,6 @@ const WindowCleaning = () => {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
                   Exterior Window Cleaning
                 </h1>
-                <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
-                  5.0★ from 233 neighbors · Licensed & Insured · Fast Quotes
-                </p>
                 <p className="text-white/80 mb-8 leading-relaxed">
                   Outside glass, frames, and sills cleaned with water-fed poles. Exterior cleaning only.
                 </p>
@@ -98,9 +95,6 @@ const WindowCleaning = () => {
                     Call or Text 206-752-6690
                   </Button>
                 </div>
-                <p className="text-white/80 text-sm">
-                  ✓ Streak-Free Guarantee  ✓ Fast Quotes  ✓ 233 Reviews
-                </p>
               </div>
               <div className="fade-up">
                 <img
@@ -148,7 +142,7 @@ const WindowCleaning = () => {
           faqs={[
             {
               question: "Do you clean interior windows too?",
-              answer: "We focus on exterior window cleaning. For most homes, the outside is where the real buildup happens from rain, pollen, and hard water. We get those sparkling clean."
+              answer: "We offer exterior window cleaning only, including outside glass, frames, and sills."
             },
             {
               question: "How do you reach upper-story windows?",

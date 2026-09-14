@@ -36,7 +36,17 @@ const routes = [
   {
     path: '/services',
     title: 'All Services',
-    description: 'Roof cleaning starting at $850 and complete gutter cleaning starting at $350 in Seattle, Kenmore, Bothell, and Kirkland.',
+    description: 'Roof and gutter cleaning, house soft washing, concrete pressure washing, deck cleaning, and exterior window cleaning in Seattle and nearby communities.',
+  },
+  {
+    path: '/pressure-washing',
+    title: 'House Soft Washing, Pressure Washing & Deck Cleaning',
+    description: 'Low-pressure house washing, concrete driveway and patio pressure washing, and wood or composite deck cleaning in Seattle, Kenmore, and Bothell.',
+  },
+  {
+    path: '/window-cleaning',
+    title: 'Exterior Window Cleaning',
+    description: 'Exterior window cleaning for outside glass, frames, and sills in Seattle, Kenmore, and Bothell.',
   },
   {
     path: '/roof-cleaning',

@@ -57,6 +57,10 @@ const Footer = () => {
                 <Link to="/roof-cleaning" className="text-white/75 hover:text-brand-orange">Roof Cleaning</Link>
                 <Link to="/gutter-cleaning" className="text-white/75 hover:text-brand-orange">Gutter Cleaning</Link>
                 <Link to="/moss-treatment" className="text-white/75 hover:text-brand-orange">Moss Treatment</Link>
+                <Link to="/pressure-washing#house-soft-washing" className="text-white/75 hover:text-brand-orange">House Soft Washing</Link>
+                <Link to="/pressure-washing" className="text-white/75 hover:text-brand-orange">Pressure Washing</Link>
+                <Link to="/pressure-washing#deck-cleaning" className="text-white/75 hover:text-brand-orange">Deck Cleaning</Link>
+                <Link to="/window-cleaning" className="text-white/75 hover:text-brand-orange">Window Cleaning</Link>
                 <Link to="/services" className="text-white/75 hover:text-brand-orange">All Services</Link>
               </nav>
             </div>

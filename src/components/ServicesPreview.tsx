@@ -4,6 +4,7 @@ import roofImage from "@/assets/roof-cleaning-before-after-new.jpg";
 import roofImageMobile from "@/assets/roof-cleaning-before-after-new-mobile.webp";
 import gutterImage from "@/assets/gutter-cleaning-before-after.jpg";
 import gutterImageMobile from "@/assets/gutter-cleaning-before-after-mobile.webp";
+import ExteriorCleaningServices from "@/components/ExteriorCleaningServices";
 
 const services = [
   {
@@ -30,6 +31,7 @@ const services = [
 
 
 const ServicesPreview = () => (
+  <>
   <section className="section-spacing bg-white">
     <div className="container mx-auto px-4">
       <h2 className="text-3xl md:text-4xl font-bold text-brand-navy text-center mb-8 fade-up">
@@ -66,11 +68,10 @@ const ServicesPreview = () => (
           </Link>
         ))}
       </div>
-      <p className="max-w-6xl mx-auto mt-6 text-sm text-muted-foreground text-center">
-        Pressure washing is available only as an add-on to roof or gutter cleaning, subject to availability.
-      </p>
     </div>
   </section>
+  <ExteriorCleaningServices />
+  </>
 );
 
 export default ServicesPreview;

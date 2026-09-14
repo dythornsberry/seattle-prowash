@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
 import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
@@ -18,10 +19,19 @@ import sidingBA from "@/assets/house-siding-softwash-before-after.jpg";
 import drivewayBA from "@/assets/driveway-moss-cleaning-before-after.jpg";
 
 const PressureWashing = () => {
+  const { hash } = useLocation();
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      const target = hash ? document.getElementById(hash.slice(1)) : null;
+      if (target) target.scrollIntoView();
+      else window.scrollTo(0, 0);
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [hash]);
   useEffect(() => {
     const serviceSchema = generateServiceSchema({
       name: "Pressure Washing Services",
-      description: "Professional pressure washing for driveways, patios, walkways, decks, and house siding in the greater Seattle area. Safe surface cleaning that restores curb appeal.",
+      description: "Concrete pressure washing, low-pressure house soft washing, and wood or composite deck cleaning in the greater Seattle area.",
       provider: COMPANY_INFO.name,
       areaServed: COMPANY_INFO.serviceAreas,
       serviceType: "Pressure Washing",
@@ -37,7 +47,7 @@ const PressureWashing = () => {
         },
         {
           question: "Will pressure washing damage my concrete or siding?",
-          answer: "No. We use the right pressure settings and surface cleaners for each material. Soft wash techniques protect delicate surfaces like vinyl siding and painted wood."
+          answer: "Too much pressure can damage surfaces. We assess the material and condition first, using low-pressure soft washing for siding and a suitable method for concrete and decks."
         },
         {
           question: "How often should I pressure wash my driveway?",
@@ -61,7 +71,6 @@ const PressureWashing = () => {
   }, []);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
     const observer = new IntersectionObserver(
       (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("in-view")),
       { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
@@ -86,11 +95,8 @@ const PressureWashing = () => {
             <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="fade-up">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
-                  Pressure &amp; Soft Washing
+                  House Soft Washing &amp; Pressure Washing
                 </h1>
-                <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
-                  5.0★ from 233 neighbors · Licensed & Insured · Fast Quotes
-                </p>
                 <p className="text-white/80 mb-8 leading-relaxed">
                   Concrete driveways, patios, and decks cleaned with the right method for each surface. Low-pressure soft washing for house siding.
                 </p>
@@ -102,9 +108,6 @@ const PressureWashing = () => {
                     Call or Text 206-752-6690
                   </Button>
                 </div>
-                <p className="text-white/80 text-sm">
-                  ✓ Safe for All Surfaces  ✓ Fast Quotes  ✓ 233 Reviews
-                </p>
               </div>
               <div className="fade-up">
                 <img
@@ -138,16 +141,13 @@ const PressureWashing = () => {
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[
-                  "Concrete driveways and walkways",
-                  "Patios and outdoor living areas",
-                  "Pavers and retaining walls",
-                  "Wood and composite decks",
-                  "House siding (soft wash)",
-                  "Stairs and entryways",
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3 fade-up">
+                  { id: "house-soft-washing", title: "House Soft Washing", description: "Low-pressure cleaning for siding, trim, and soffits." },
+                  { id: "concrete-cleaning", title: "Concrete Pressure Washing", description: "Driveways, patios, walkways, and steps." },
+                  { id: "deck-cleaning", title: "Deck Cleaning", description: "Wood and composite decks. Cleaning method matched to the material and condition." },
+                ].map((item) => (
+                  <div id={item.id} key={item.id} className="flex items-start gap-3 scroll-mt-32">
                     <CheckCircle className="w-5 h-5 text-brand-orange mt-1 flex-shrink-0" />
-                    <p className="text-muted-foreground">{item}</p>
+                    <div><h3 className="text-xl font-semibold text-brand-navy mb-2">{item.title}</h3><p className="text-muted-foreground">{item.description}</p></div>
                   </div>
                 ))}
               </div>
@@ -165,7 +165,7 @@ const PressureWashing = () => {
             },
             {
               question: "Will pressure washing damage my concrete or siding?",
-              answer: "No. We use the right pressure settings and surface cleaners for each material. Soft wash techniques protect delicate surfaces like vinyl siding and painted wood."
+              answer: "Too much pressure can damage surfaces. We assess the material and condition first, using low-pressure soft washing for siding and a suitable method for concrete and decks."
             },
             {
               question: "How often should I pressure wash my driveway?",
@@ -202,10 +202,10 @@ const PressureWashing = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center fade-up">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to See the Difference?
+                Get a Quote
               </h2>
               <p className="text-xl text-white/90 mb-8">
-                Get a fast pressure washing quote. Dylan will call or text to confirm the surfaces and help you get clear pricing.
+                Dylan will call or text to confirm the surfaces and price.
               </p>
               <Button variant="prowash-secondary" size="xl" onClick={navigateToContact}>
                 Get Fast Quote
