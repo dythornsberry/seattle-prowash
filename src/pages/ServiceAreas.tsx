@@ -6,6 +6,7 @@ import { MapPin, Phone, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BrandWordmark from "@/components/BrandWordmark";
 import { SEOHead } from "@/components/SEOHead";
 import MobileBottomBar from "@/components/MobileBottomBar";
 import { navigateToContact } from "@/lib/navigation";
@@ -116,19 +117,16 @@ const ServiceAreas = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-5xl mx-auto">
                 <div className="bg-primary-teal/10 rounded-lg p-12 text-center">
-                  <div className="relative max-w-md mx-auto">
+                  <div className="relative max-w-80 mx-auto">
                     {/* Center (Kenmore) */}
                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                      <div className="w-20 h-20 bg-bright-orange rounded-full flex items-center justify-center shadow-lg">
-                        <div className="text-white font-bold text-center text-sm">
-                          <div>Seattle</div>
-                          <div>ProWash</div>
-                        </div>
+                      <div className="w-20 h-20 border-2 border-brand-navy bg-white rounded-full flex items-center justify-center">
+                        <BrandWordmark compact />
                       </div>
                     </div>
                     
                     {/* Radius circle */}
-                    <div className="w-80 h-80 mx-auto border-4 border-primary-teal rounded-full flex items-center justify-center relative">
+                    <div className="w-full max-w-80 aspect-square mx-auto border-4 border-primary-teal rounded-full flex items-center justify-center relative">
                       <div className="absolute inset-0 bg-primary-teal/5 rounded-full"></div>
                       
                       {/* City markers around the circle */}

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { navigateToContact } from "@/lib/navigation";
 import { Button } from "@/components/ui/button";
+import BrandWordmark from "@/components/BrandWordmark";
 import { Phone, Menu, ChevronDown, ArrowRight } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription, SheetTrigger } from "@/components/ui/sheet";
@@ -30,9 +31,8 @@ const Header = () => {
   return (
     <header id="site-header" className="fixed inset-x-0 top-0 z-40 border-b bg-white">
       <div className="mx-auto flex h-20 max-w-[1360px] items-center justify-between gap-4 px-4 sm:px-6">
-        <Link to="/" aria-label="Seattle ProWash home" className="shrink-0 font-heading text-[22px] font-bold leading-[1.1] tracking-normal hover:no-underline">
-          <span className="block text-brand-navy">Seattle</span>
-          <span className="block text-[#bc4b00]">ProWash</span>
+        <Link to="/" aria-label="Seattle ProWash home" className="flex shrink-0 hover:no-underline">
+          <BrandWordmark />
         </Link>
         <nav aria-label="Main navigation" className="hidden items-center gap-6 text-sm font-semibold xl:flex">
           <DropdownMenu>
@@ -51,7 +51,7 @@ const Header = () => {
           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild><Button variant="outline" size="icon" className="h-11 w-11 shrink-0 border-border xl:hidden" aria-label="Open menu"><Menu aria-hidden="true" /></Button></SheetTrigger>
             <SheetContent className="w-[min(90vw,380px)] overflow-y-auto bg-white px-6 pb-28">
-              <SheetHeader className="mb-6 text-left"><SheetTitle>Seattle ProWash</SheetTitle><SheetDescription className="sr-only">Site navigation and cleaning services</SheetDescription></SheetHeader>
+              <SheetHeader className="mb-6 text-left"><SheetTitle><BrandWordmark /></SheetTitle><SheetDescription className="sr-only">Site navigation and cleaning services</SheetDescription></SheetHeader>
               <nav aria-label="Mobile navigation" className="space-y-1">
                 {[{ name: "Home", href: "/" }, ...navigation].map((item) => <Link key={item.href} to={item.href} onClick={() => setIsMenuOpen(false)} className="block border-b py-3 font-semibold">{item.name}</Link>)}
                 <p className="pt-5 pb-2 text-sm text-muted-foreground">Services</p>

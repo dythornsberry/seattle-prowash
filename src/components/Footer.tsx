@@ -1,5 +1,6 @@
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import BrandWordmark from "@/components/BrandWordmark";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,9 +11,9 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-3">
             <div>
-              <h2 className="mb-2 text-2xl font-bold text-white">
-                Seattle <span className="text-brand-orange">ProWash</span>
-              </h2>
+              <Link to="/" aria-label="Seattle ProWash home" className="mb-3 inline-flex hover:no-underline">
+                <BrandWordmark surface="dark" />
+              </Link>
               <p className="mb-4 text-sm font-medium text-brand-orange">Based in Kenmore, WA</p>
               <p className="max-w-sm leading-relaxed text-white/75">
                 Roof, gutter, and exterior cleaning across north Seattle and the Eastside.
