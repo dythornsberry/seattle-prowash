@@ -21,14 +21,14 @@ const GutterCleaning = () => {
 
     // Inject Service Schema
     const serviceSchema = generateServiceSchema({
-      name: "Gutter Cleaning and Maintenance",
+      name: "Complete Gutter Cleaning",
       description: "Professional gutter cleaning service including hand-scooping debris, downspout flushing, and roof debris removal. Complete gutter system maintenance to prevent water damage.",
       provider: COMPANY_INFO.name,
       areaServed: COMPANY_INFO.serviceAreas,
       serviceType: "Gutter Cleaning",
       url: `${COMPANY_INFO.url}/gutter-cleaning`,
       offers: {
-        priceRange: "$250-$600",
+        priceRange: "$400+",
         priceCurrency: "USD"
       }
     });
@@ -96,8 +96,8 @@ const GutterCleaning = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Gutter Cleaning in Seattle & Kenmore, WA"
-        description="Expert gutter cleaning in Seattle, Kenmore, Bothell & Kirkland — starting at $250 with free roof blow-off. Prevent water damage. Licensed & insured. Fast quotes."
+        title="Complete Gutter Cleaning in Seattle & Kenmore, WA"
+        description="Expert gutter cleaning in Seattle, Kenmore, Bothell & Kirkland — starting at $400 with free roof blow-off. Prevent water damage. Licensed & insured. Fast quotes."
         url="https://www.seattleprowash.com/gutter-cleaning"
         image={gutterCleaningImage}
       />
@@ -110,13 +110,13 @@ const GutterCleaning = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div className="fade-up">
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
-                    Gutter Cleaning in Seattle
+                    Complete Gutter Cleaning in Seattle
                   </h1>
                   
                   <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
                     Gutters cleared, downspouts flushed, and roof debris blown off.
                   </p>
-                  <p className="text-white font-semibold mb-6">From $250</p>
+                  <p className="text-white font-semibold mb-6">From $400</p>
 
                   <div className="grid grid-cols-2 sm:flex gap-3">
                     <Button 

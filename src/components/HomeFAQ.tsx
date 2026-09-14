@@ -12,7 +12,7 @@ import { generateFAQSchema, injectSchema } from "@/utils/schema";
 const topFAQs = [
   {
     question: "What does roof or gutter cleaning cost?",
-    answer: "Roof cleaning starts at $499 and gutter cleaning starts at $250. Your exact price depends on size, access, roof type, and buildup.",
+    answer: "Roof cleaning starts at $849 and complete gutter cleaning starts at $400. Your exact price depends on size, access, roof type, and buildup.",
   },
   {
     question: "How soon can you schedule my service?",

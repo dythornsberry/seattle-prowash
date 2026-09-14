@@ -6,7 +6,7 @@ import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
-import { Phone, CheckCircle, Droplet, Home, Ruler, Mountain, TreePine, Star, Sparkles, Wind } from "lucide-react";
+import { Phone, CheckCircle, Droplet, Home, Ruler, Mountain, TreePine, Star, Sparkles } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
 import asphaltRoofImg from "@/assets/recent-asphalt-roof-before-after-2026.webp";
 import metalRoofImg from "@/assets/recent-green-metal-roof-before-after-2026.webp";
@@ -45,42 +45,12 @@ const Pricing = () => {
     { icon: Home, factor: "Accessibility", description: "Landscaping and access points" },
   ];
 
-  const additionalServices = [
-    {
-      icon: Sparkles,
-      title: "Pressure / Power Washing",
-      startingPrice: "Starting at $200",
-      description: "Driveways, patios, walkways, retaining walls, decks, and other hard surfaces.",
-      detail: "Quoted based on square footage, surface type, and how much staining or organic growth needs to be removed.",
-    },
-    {
-      icon: Home,
-      title: "House Soft Washing",
-      startingPrice: "Starting at $500",
-      description: "Low-pressure cleaning for siding, trim, soffits, and other exterior surfaces.",
-      detail: "Quoted based on home size, siding material, access, and the amount of algae or dirt buildup.",
-    },
-    {
-      icon: Ruler,
-      title: "Driveway & Concrete Cleaning",
-      startingPrice: "Starting at $200",
-      description: "Concrete driveways, sidewalks, patios, stairs, and entry areas.",
-      detail: "Quoted based on total area, stain severity, and whether treatment is needed for moss, algae, or oil spots.",
-    },
-    {
-      icon: Wind,
-      title: "Exterior Window Cleaning",
-      startingPrice: "Starting at $200",
-      description: "Exterior-only window cleaning for homes and small commercial properties.",
-      detail: "Quoted based on pane count, number of stories, and access around landscaping or rooflines.",
-    },
-  ];
 
   return (
     <>
       <SEOHead
-        title="Pricing | Roof, Gutter & Pressure Washing"
-        description="Transparent pricing for roof cleaning, gutter cleaning, pressure washing, and window cleaning in Seattle. No hidden fees. Fast quotes."
+        title="Roof & Complete Gutter Cleaning Prices"
+        description="Roof cleaning starting at $849 and complete gutter cleaning starting at $400. Clear quotes for Seattle-area homes based on size, buildup, and access."
       />
       
       <Header />
@@ -93,13 +63,13 @@ const Pricing = () => {
               Transparent Pricing
             </Badge>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Clear Pricing for Exterior Cleaning
+              Roof &amp; Gutter Cleaning Prices
             </h1>
             <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-4">
-              Roof cleaning and gutter cleaning have the clearest typical ranges. Pressure washing, power washing, house soft washing, driveway cleaning, and window cleaning are quoted based on your property.
+              Roof cleaning starts at $849. Complete gutter cleaning starts at $400.
             </p>
             <p className="text-base text-white/90 max-w-2xl mx-auto mb-8 font-medium">
-              Straight answer up front: gutter cleaning starts at $250 and roof cleaning at $499. If that fits your budget, we'll take great care of you.
+              Your final quote depends on your home's size, buildup, roof material, and access.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="cta-orange" size="xl" onClick={navigateToContact}>
@@ -159,9 +129,9 @@ const Pricing = () => {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="text-center py-4 bg-brand-orange/5 rounded-lg">
-                    <p className="text-sm text-muted-foreground mb-1">Typical range</p>
-                    <p className="text-3xl font-bold text-brand-blue">$499 – $1,500</p>
-                    <p className="text-sm text-muted-foreground mt-1">A one-story rambler with light moss sits near $499 · A large two-story with heavy moss runs closer to $1,500</p>
+                    <p className="text-sm text-muted-foreground mb-1">Roof cleaning</p>
+                    <p className="text-3xl font-bold text-brand-blue">Starting at $849</p>
+                    <p className="text-sm text-muted-foreground mt-1">Smaller, straightforward roofs start at $849. Large roofs or heavy moss may cost $1,500 or more.</p>
                     <p className="text-xs text-muted-foreground mt-2">You get an exact price before anything is scheduled. No hidden fees, no surprises.</p>
                   </div>
                   
@@ -233,8 +203,8 @@ const Pricing = () => {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="text-center py-4 bg-brand-navy/5 rounded-lg">
-                    <p className="text-sm text-muted-foreground mb-1">Starting at</p>
-                    <p className="text-3xl font-bold text-brand-blue">$800+</p>
+                    <p className="text-sm text-muted-foreground mb-1">Metal roof cleaning</p>
+                    <p className="text-3xl font-bold text-brand-blue">Starting at $849</p>
                     <p className="text-sm text-muted-foreground mt-1">Often $1,500+ · Custom quote based on your roof</p>
                   </div>
 
@@ -333,7 +303,7 @@ const Pricing = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-10 max-w-3xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-brand-blue mb-3">
-                Gutter Cleaning Pricing
+                Complete Gutter Cleaning Pricing
               </h2>
               <p className="text-lg text-muted-foreground">
                 Full gutter clean plus roof blow-off, downspouts flushed and tested.
@@ -353,7 +323,7 @@ const Pricing = () => {
                 </div>
                 <CardHeader className="text-center pb-4">
                   <CardTitle className="text-2xl font-bold text-brand-blue">
-                    Gutter Cleaning
+                    Complete Gutter Cleaning
                   </CardTitle>
                   <CardDescription className="text-base">
                     Complete cleaning with downspout flush
@@ -361,9 +331,9 @@ const Pricing = () => {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="text-center py-4 bg-brand-orange/5 rounded-lg">
-                    <p className="text-sm text-muted-foreground mb-1">Typical range</p>
-                    <p className="text-3xl font-bold text-brand-blue">$250 – $600</p>
-                    <p className="text-sm text-muted-foreground mt-1">For most homes · Based on home size & accessibility</p>
+                    <p className="text-sm text-muted-foreground mb-1">Complete gutter cleaning</p>
+                    <p className="text-3xl font-bold text-brand-blue">Starting at $400</p>
+                    <p className="text-sm text-muted-foreground mt-1">Final quote based on home size, buildup, and access</p>
                   </div>
                   
                   <div className="space-y-3">
@@ -407,54 +377,13 @@ const Pricing = () => {
         </section>
 
         {/* Additional Services */}
-        <section className="py-16 md:py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <div className="text-center mb-12">
-                <Badge className="bg-brand-orange/10 text-brand-orange border-brand-orange/20 mb-4">
-                  Other Exterior Cleaning Services
-                </Badge>
-                <h2 className="text-3xl md:text-4xl font-bold text-brand-blue mb-4">
-                  We Also Quote Pressure Washing, House Soft Washing & Window Cleaning
-                </h2>
-                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                  We don&apos;t just clean roofs and gutters. We also provide fast quotes for pressure washing, power washing, house soft washing, driveway and concrete cleaning, and exterior window cleaning.
-                </p>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                {additionalServices.map((service) => {
-                  const IconComponent = service.icon;
-                  return (
-                    <Card key={service.title} className="border hover:border-brand-orange/40 transition-all duration-300 hover:shadow-lg">
-                      <CardHeader className="pb-3">
-                        <div className="flex items-center gap-4">
-                          <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-orange/10 rounded-full">
-                            <IconComponent className="w-6 h-6 text-brand-orange" />
-                          </div>
-                          <div>
-                            <CardTitle className="text-xl text-brand-blue">{service.title}</CardTitle>
-                            <CardDescription className="text-sm font-medium text-brand-orange">
-                              {service.startingPrice} • Fast quote
-                            </CardDescription>
-                          </div>
-                        </div>
-                      </CardHeader>
-                      <CardContent className="space-y-3">
-                        <p className="text-sm text-foreground">{service.description}</p>
-                        <p className="text-sm text-muted-foreground">{service.detail}</p>
-                      </CardContent>
-                    </Card>
-                  );
-                })}
-              </div>
-
-              <div className="mt-8 rounded-2xl border border-brand-orange/20 bg-brand-orange/5 p-6 text-center">
-                <p className="text-sm md:text-base text-brand-blue font-medium">
-                  Ask about multi-service pricing when bundling roof cleaning, gutter cleaning, driveway cleaning, window cleaning, or house soft washing in the same visit.
-                </p>
-              </div>
-            </div>
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 max-w-5xl text-center">
+            <h2 className="text-xl font-semibold text-brand-blue mb-3">Pressure Washing Add-On</h2>
+            <p className="text-muted-foreground">
+              Available only with roof or gutter cleaning, subject to scope and availability.
+              Mention your driveway, patio, or walkway when requesting your quote. No standalone pressure washing.
+            </p>
           </div>
         </section>
 

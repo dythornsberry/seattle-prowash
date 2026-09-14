@@ -75,9 +75,6 @@ const Gallery = () => {
     "Metal Roofs",
     "Roof Cleaning", 
     "Gutter Cleaning",
-    "Pressure Washing",
-    "House Soft Washing",
-    "Concrete Cleaning",
     "Team at Work"
   ];
 
@@ -657,9 +654,6 @@ const Gallery = () => {
       const metalRoofImages = galleryImages["Metal Roofs"] || [];
       const roofImages = galleryImages["Roof Cleaning"] || [];
       const gutterImages = galleryImages["Gutter Cleaning"] || [];
-      const pressureImages = galleryImages["Pressure Washing"] || [];
-      const houseImages = galleryImages["House Soft Washing"] || [];
-      const concreteImages = galleryImages["Concrete Cleaning"] || [];
       const teamImages = galleryImages["Team at Work"] || [];
       
       const interspersedImages = [];
@@ -667,9 +661,6 @@ const Gallery = () => {
         metalRoofImages.length,
         roofImages.length,
         gutterImages.length,
-        pressureImages.length,
-        houseImages.length,
-        concreteImages.length,
         teamImages.length
       );
       
@@ -678,9 +669,6 @@ const Gallery = () => {
         if (i < metalRoofImages.length) interspersedImages.push(metalRoofImages[i]);
         if (i < roofImages.length) interspersedImages.push(roofImages[i]);
         if (i < gutterImages.length) interspersedImages.push(gutterImages[i]);
-        if (i < pressureImages.length) interspersedImages.push(pressureImages[i]);
-        if (i < houseImages.length) interspersedImages.push(houseImages[i]);
-        if (i < concreteImages.length) interspersedImages.push(concreteImages[i]);
         if (i < teamImages.length) interspersedImages.push(teamImages[i]);
       }
       

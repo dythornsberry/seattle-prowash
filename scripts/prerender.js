@@ -36,7 +36,7 @@ const routes = [
   {
     path: '/services',
     title: 'All Services',
-    description: 'Roof cleaning, gutter cleaning, moss treatment, pressure washing, window cleaning, and commercial services in Seattle, Kenmore, Bothell, Kirkland & beyond.',
+    description: 'Roof cleaning starting at $849 and complete gutter cleaning starting at $400 in Seattle, Kenmore, Bothell, and Kirkland.',
   },
   {
     path: '/roof-cleaning',
@@ -54,24 +54,9 @@ const routes = [
     description: 'Expert moss removal and treatment in Seattle, Bothell & Kirkland. 12-month moss-free guarantee. Safe removal & prevention. Licensed & insured.',
   },
   {
-    path: '/pressure-washing',
-    title: 'Pressure Washing in Seattle & Kenmore, WA',
-    description: 'Professional pressure washing for driveways, patios, decks, and siding in Seattle, Kenmore, Bothell, and surrounding areas. Free estimates, licensed and insured.',
-  },
-  {
-    path: '/window-cleaning',
-    title: 'Window Cleaning in Seattle & Kenmore, WA',
-    description: 'Professional exterior window cleaning in Seattle, Kenmore & Bothell. Streak-free results with safe techniques. Free estimates. Licensed & insured.',
-  },
-  {
-    path: '/commercial',
-    title: 'Commercial Cleaning Services in Seattle, WA',
-    description: 'Commercial power washing, roof cleaning, gutter cleaning, and window cleaning for businesses in the Seattle area. Licensed & insured. Free estimates.',
-  },
-  {
     path: '/pricing',
-    title: 'Pricing | Roof, Gutter & Pressure Washing',
-    description: 'Transparent pricing for roof cleaning, gutter cleaning, pressure washing, and window cleaning in Seattle. No hidden fees. Free estimates.',
+    title: 'Roof & Complete Gutter Cleaning Prices',
+    description: 'Roof cleaning starting at $849 and complete gutter cleaning starting at $400. Quotes based on property size, condition, and access.',
   },
   {
     path: '/about',
@@ -111,7 +96,7 @@ const routes = [
   {
     path: '/resources/roof-cleaning-cost-seattle',
     title: 'What Roof Cleaning Costs in Seattle (2026 Guide)',
-    description: 'Real 2026 roof cleaning prices from a Seattle-area contractor. Most asphalt roofs run $499–$1,500 with gutter cleaning included. Metal starts at $800.',
+    description: 'Real 2026 roof cleaning prices from a Seattle-area contractor. Roof cleaning starts at $849 with gutter cleaning included. Complete gutter cleaning starts at $400.',
   },
   {
     path: '/resources/best-time-roof-gutter-cleaning-seattle',

@@ -96,7 +96,7 @@ const Seattle = () => {
           "name": "What's a typical price range in Seattle?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most asphalt and composite roofs in Seattle run $499-$1,500 for a full cleaning with moss treatment, and that includes gutter cleaning. Standalone gutter cleaning typically runs $250-$600 depending on home size and gutter length. Final pricing depends on roof pitch, access, and specific conditions. Dylan will call or text to confirm details and help you get clear pricing."
+            "text": "Roof cleaning in Seattle starts at $849 and includes moss treatment and gutter cleaning. Complete gutter cleaning starts at $400. Final pricing depends on roof pitch, access, and specific conditions. Dylan will call or text to confirm details and help you get clear pricing."
           }
         },
         {
@@ -335,23 +335,23 @@ const Seattle = () => {
                 <Card>
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold text-brand-navy mb-4">Roof Cleaning</h3>
-                    <p className="text-3xl font-bold text-brand-orange mb-2">$300 – $800</p>
-                    <p className="text-sm text-muted-foreground mb-4">Typical Seattle homes</p>
+                    <p className="text-3xl font-bold text-brand-orange mb-2">Starting at $849</p>
+                    <p className="text-sm text-muted-foreground mb-4">Moss removal, treatment, and gutter cleaning</p>
                     <ul className="text-sm space-y-2 text-muted-foreground">
-                      <li>• 1-story: $300-$600</li>
-                      <li>• 2-story: $400-$800</li>
+                      <li>• Gutter cleaning included</li>
+                      <li>• Moss treatment included</li>
                       <li>• Based on roof size, pitch, access</li>
                     </ul>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-brand-navy mb-4">Gutter Cleaning</h3>
-                    <p className="text-3xl font-bold text-brand-orange mb-2">$250 – $400</p>
-                    <p className="text-sm text-muted-foreground mb-4">Most Seattle homes</p>
+                    <h3 className="text-xl font-bold text-brand-navy mb-4">Complete Gutter Cleaning</h3>
+                    <p className="text-3xl font-bold text-brand-orange mb-2">Starting at $400</p>
+                    <p className="text-sm text-muted-foreground mb-4">Complete gutter system cleanout</p>
                     <ul className="text-sm space-y-2 text-muted-foreground">
-                      <li>• 1-story: $250-$350</li>
-                      <li>• 2-story: $250-$400</li>
+                      <li>• Roof debris blow-off</li>
+                      <li>• Hand removal of gutter debris</li>
                       <li>• Includes downspout flush & haul-away</li>
                     </ul>
                   </CardContent>
@@ -416,7 +416,7 @@ const Seattle = () => {
                 <Card>
                   <CardContent className="p-6">
                     <h3 className="font-bold text-brand-navy mb-2">What's a typical price range in Seattle?</h3>
-                    <p className="text-muted-foreground">Most Seattle homes range from $300-$600 for standard single-story roof cleaning and $400-$800 for two-story homes. Gutter cleaning typically runs $250-$400 depending on home size and gutter length.</p>
+                    <p className="text-muted-foreground">Roof cleaning starts at $849, including moss treatment and gutter cleaning. Complete gutter cleaning starts at $400. Your quote depends on size, buildup, roof material, and access.</p>
                   </CardContent>
                 </Card>
                 <Card>

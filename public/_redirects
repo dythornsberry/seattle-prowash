@@ -34,5 +34,8 @@
 /mountlake-terrace /mountlake-terrace-roof-gutter-cleaning 301
 /mill-creek /mill-creek-roof-gutter-cleaning 301
 
-# Seasonal notice for old service, location, and contact links.
+# SPA fallback for anything else (client router renders NotFound)
+/window-cleaning /services 301
+/commercial /services 301
+/pressure-washing /services#add-ons 301
 /* /index.html 200

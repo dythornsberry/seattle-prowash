@@ -32,7 +32,7 @@ const Hero = () => {
 
           {/* Subhead */}
           <p className="text-lg md:text-xl text-white/90 font-medium max-w-3xl mx-auto animate-fade-in drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-            Moss removal, roof treatment, and gutter cleaning across North Seattle and the Eastside.
+            Roof cleaning starting at $849. Complete gutter cleaning starting at $400.
           </p>
 
           {/* Inline mini-form */}

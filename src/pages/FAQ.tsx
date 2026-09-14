@@ -42,7 +42,7 @@ const faqs = [
   {
     icon: CheckCircle,
     question: "Do you offer other services besides roof and gutter cleaning?",
-    answer: "Yes. Roof cleaning and gutter cleaning are still our core services, and we also handle pressure washing, exterior window cleaning, and select commercial exterior cleaning throughout the Seattle area.",
+    answer: "We focus on roof cleaning starting at $849 and complete gutter cleaning starting at $400. Pressure washing is available only as an add-on to either service, subject to availability. We do not offer standalone pressure washing or window cleaning.",
     category: "Services"
   },
   {

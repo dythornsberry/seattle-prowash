@@ -16,9 +16,6 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const RoofCleaning = lazy(() => import("./pages/RoofCleaning"));
 const GutterCleaning = lazy(() => import("./pages/GutterCleaning"));
 const MossTreatment = lazy(() => import("./pages/MossTreatment"));
-const PressureWashing = lazy(() => import("./pages/PressureWashing"));
-const WindowCleaning = lazy(() => import("./pages/WindowCleaning"));
-const Commercial = lazy(() => import("./pages/Commercial"));
 const Pricing = lazy(() => import("./pages/Pricing"));
 const Reviews = lazy(() => import("./pages/Reviews"));
 const ServiceAreas = lazy(() => import("./pages/ServiceAreas"));
@@ -69,9 +66,9 @@ const App = () => (
             <Route path="/roof-cleaning" element={<RoofCleaning />} />
             <Route path="/gutter-cleaning" element={<GutterCleaning />} />
             <Route path="/pricing" element={<Pricing />} />
-            <Route path="/pressure-washing" element={<PressureWashing />} />
-            <Route path="/window-cleaning" element={<WindowCleaning />} />
-            <Route path="/commercial" element={<Commercial />} />
+            <Route path="/pressure-washing" element={<Navigate to="/services#add-ons" replace />} />
+            <Route path="/window-cleaning" element={<Navigate to="/services" replace />} />
+            <Route path="/commercial" element={<Navigate to="/services" replace />} />
 
             {/* Service areas hub */}
             <Route path="/service-areas" element={<ServiceAreas />} />

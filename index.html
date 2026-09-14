@@ -4,45 +4,299 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="512x512" />
     <link rel="apple-touch-icon" href="/favicon.png" />
+
+    <!-- Brand fonts: self-hosted woff2 (see public/fonts + @font-face in index.css) -->
     <link rel="preload" href="/fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="/src/seasonal-notice.css" />
-    <title>Fully Booked This Fall | Seattle ProWash</title>
-    <meta name="description" content="Seattle ProWash is fully booked this fall and will reopen for new cleaning clients on January 1, 2027. Christmas light installation is still available through Christmas Northwest." />
-    <link rel="canonical" href="https://www.seattleprowash.com/" />
-    <meta property="og:title" content="Fully Booked This Fall | Seattle ProWash" />
-    <meta property="og:description" content="Reopening for new cleaning clients January 1, 2027. Christmas light installation is still available through Christmas Northwest at ChristmasNW.com." />
+
+    <title>Expert Roof & Gutter Cleaning in Seattle | Seattle ProWash</title>
+    <meta name="description" content="Expert roof cleaning & moss removal in Seattle, Bothell, Kirkland, Kenmore. Licensed & insured. 12-month moss-free guarantee. 233 5-star reviews. Fast quotes. Call 206-752-6690." />
+    <meta name="author" content="Seattle ProWash" />
+    <meta name="keywords" content="roof cleaning, moss removal, gutter cleaning, roof maintenance, Seattle, Kenmore WA, Bothell, Kirkland, Woodinville, Redmond, Sammamish, Bellevue" />
+
+    <!-- Geographic Meta Tags for Local SEO -->
+    <meta name="geo.region" content="US-WA" />
+    <meta name="geo.placename" content="Kenmore" />
+    <meta name="geo.position" content="47.7574;-122.2429" />
+    <meta name="ICBM" content="47.7574, -122.2429" />
+
+    <!-- Performance optimizations -->
+    <link rel="preload" href="/src/assets/hero-roof-cleaning.webp" as="image" type="image/webp" fetchpriority="high" />
+    <link rel="dns-prefetch" href="https://hooks.zapier.com" />
+    <link rel="dns-prefetch" href="https://featurable.com" />
+    <link rel="dns-prefetch" href="https://api.featurable.com" />
+    <link rel="dns-prefetch" href="https://maps.googleapis.com" />
+
+    <meta property="og:title" content="Roof & Gutter Cleaning in Seattle | Seattle ProWash" />
+    <meta property="og:description" content="Professional roof cleaning with moss removal treatment and gutter cleaning with roof blow-off. 12-month moss-free guarantee. Serving Kenmore, Bothell, Kirkland, and Shoreline. Fast quotes." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.seattleprowash.com/" />
     <meta property="og:image" content="https://www.seattleprowash.com/og-seattle-prowash.jpg" />
+
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Fully Booked This Fall | Seattle ProWash" />
-    <meta name="twitter:description" content="Reopening for new cleaning clients January 1, 2027. Christmas light installation is still available through Christmas Northwest at ChristmasNW.com." />
+    <meta name="twitter:title" content="Roof & Gutter Cleaning in Seattle | Seattle ProWash" />
+    <meta name="twitter:description" content="Professional roof cleaning with moss removal treatment and gutter cleaning with roof blow-off. 12-month moss-free guarantee. Fast quotes." />
     <meta name="twitter:image" content="https://www.seattleprowash.com/og-seattle-prowash.jpg" />
   </head>
+
   <body>
-    <header class="brand-header">
-      <h1>Seattle ProWash</h1>
-    </header>
-    <main>
-      <section class="season-notice" aria-labelledby="season-heading">
-        <h2 id="season-heading">Fully booked this fall.</h2>
-        <p>Seattle ProWash will reopen for new cleaning clients on <strong><time datetime="2027-01-01">January 1, 2027</time></strong>. Sorry for the inconvenience.</p>
-        <p>Need Christmas lights? We still have openings through Christmas Northwest.</p>
-        <a class="lighting-link" href="https://christmasnw.com/">Get a Christmas Light Quote</a>
-      </section>
-      <section class="lighting" aria-labelledby="lighting-heading">
-        <img class="lighting-photo" src="/christmas-northwest-home.webp" width="1600" height="1000" alt="A Christmas Northwest installation with warm white lights along the roofline, porch, and walkway" fetchpriority="high" />
-        <div class="lighting-content">
-          <p class="lighting-label">Our lighting company</p>
-          <h2 id="lighting-heading">Christmas Northwest</h2>
-          <p>ChristmasNW.com</p>
-        </div>
-      </section>
-    </main>
-    <footer>Seattle ProWash &middot; Greater Seattle</footer>
-    <!-- Keep analytics, but do not mount the saved cleaning site or its forms. -->
-    <script type="module" src="/src/utils/ga4.ts"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- LocalBusiness and Services Schema for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "@id": "https://www.seattleprowash.com/#business",
+      "name": "Seattle ProWash",
+      "description": "Expert roof cleaning, moss removal, and gutter cleaning in the Seattle area. 12-month moss-free guarantee. Fast, professional service.",
+      "url": "https://www.seattleprowash.com",
+      "telephone": "+1-206-752-6690",
+      "email": "dythornsberry@gmail.com",
+      "foundingDate": "2022",
+      "founder": {
+        "@type": "Person",
+        "name": "Dylan Thornsberry"
+      },
+      "image": "https://www.seattleprowash.com/og-seattle-prowash.jpg",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.seattleprowash.com/favicon.png",
+        "width": 512,
+        "height": 512
+      },
+      "sameAs": [
+        "https://www.facebook.com/SeattleProWash",
+        "https://www.youtube.com/@seattleprowash",
+        "https://share.google/VJ2xiQPvoc6E8IQvw"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kenmore",
+        "addressRegion": "WA",
+        "postalCode": "98028",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.75740,
+        "longitude": -122.24650
+      },
+      "priceRange": "$$",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Kenmore",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Washington"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Lake Forest Park",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Washington"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Seattle",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Washington"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Bothell",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Washington"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Kirkland",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Washington"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Shoreline",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Washington"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Lynnwood",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Washington"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Woodinville",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Washington"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Edmonds",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Washington"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Bellevue",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Washington"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Redmond",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Washington"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Sammamish",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Washington"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mill Creek",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Washington"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mountlake Terrace",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Washington"
+          }
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5.0,
+        "reviewCount": 233,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Roof and Gutter Services",
+        "itemListElement": [
+          {
+            "@type": "Service",
+            "name": "Roof cleaning",
+            "description": "Professional roof cleaning with moss removal and eco-friendly treatment. 12-month moss-free guarantee.",
+            "provider": {
+              "@type": "HomeAndConstructionBusiness",
+              "@id": "https://www.seattleprowash.com/#business"
+            },
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "Kenmore"
+              },
+              {
+                "@type": "City",
+                "name": "Bothell"
+              },
+              {
+                "@type": "City",
+                "name": "Kirkland"
+              },
+              {
+                "@type": "City",
+                "name": "Shoreline"
+              }
+            ],
+            "offers": {
+              "@type": "Offer",
+              "priceRange": "$849+",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "keywords",
+                "value": ["moss removal", "moss treatment"]
+              }
+            ]
+          },
+          {
+            "@type": "Service",
+            "name": "Gutter cleaning",
+            "description": "Complete hand cleaning of gutters with downspout flush and roof debris blow-off",
+            "provider": {
+              "@type": "HomeAndConstructionBusiness",
+              "@id": "https://www.seattleprowash.com/#business"
+            },
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "Kenmore"
+              },
+              {
+                "@type": "City",
+                "name": "Bothell"
+              },
+              {
+                "@type": "City",
+                "name": "Kirkland"
+              },
+              {
+                "@type": "City",
+                "name": "Shoreline"
+              }
+            ],
+            "offers": {
+              "@type": "Offer",
+              "priceRange": "$400+",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "keywords",
+                "value": ["roof blow-off"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- GA4 loaded via src/utils/ga4.ts (Vite env vars only work in JS) -->
+
   </body>
 </html>

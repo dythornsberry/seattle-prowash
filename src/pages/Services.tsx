@@ -7,15 +7,10 @@ import MobileBottomBar from "@/components/MobileBottomBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Droplet, Home, TreePine, Sparkles, Wind, Building2, Phone, Zap } from "lucide-react";
+import { CheckCircle, Droplet, Home, Phone } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
 import roofImg from "@/assets/roof-cleaning-before-after-new.jpg";
 import gutterImg from "@/assets/gutter-cleaning-before-after.jpg";
-import pressureImg from "@/assets/driveway-pressure-washing.jpg";
-import windowImg from "@/assets/window-cleaning-action.jpg";
-import mossImg from "@/assets/roof-softwash-in-progress.jpg";
-import commercialImg from "@/assets/commercial-building-washing.jpg";
-import gutterBrighteningImg from "@/assets/gutter-brightening-before-after.jpg";
 
 const Services = () => {
   useEffect(() => {
@@ -29,7 +24,7 @@ const Services = () => {
       image: roofImg,
       href: "/roof-cleaning",
       badge: "Most Popular",
-      price: "Starting at $499",
+      price: "Starting at $849",
       description: "Warranty-safe moss removal for asphalt, metal, and composite roofs. Includes gutter cleaning and a 12-month moss-free guarantee.",
       includes: [
         "Safe, low-pressure cleaning",
@@ -39,25 +34,11 @@ const Services = () => {
       ],
     },
     {
-      title: "Moss Removal & Treatment",
-      icon: TreePine,
-      image: mossImg,
-      href: "/moss-treatment",
-      price: "Included with roof cleaning",
-      description: "Professional moss removal and zinc-based treatment to prevent regrowth. We treat the root cause, not just the surface.",
-      includes: [
-        "Complete moss removal",
-        "Zinc-based preventative treatment",
-        "Prevents regrowth for 12+ months",
-        "Safe for all roof types",
-      ],
-    },
-    {
-      title: "Gutter Cleaning",
+      title: "Complete Gutter Cleaning",
       icon: Home,
       image: gutterImg,
       href: "/gutter-cleaning",
-      price: "Starting at $250",
+      price: "Starting at $400",
       description: "Complete gutter system cleanout with downspout flush and roof blow-off. Hand-cleaned for thorough results.",
       includes: [
         "Hand removal of all debris",
@@ -66,69 +47,13 @@ const Services = () => {
         "Debris bagged & hauled away",
       ],
     },
-    {
-      title: "Pressure Washing",
-      icon: Sparkles,
-      image: pressureImg,
-      href: "/pressure-washing",
-      price: "Fast quotes",
-      description: "Driveways, patios, sidewalks, decks, and siding. We remove moss, algae, and surface grime with professional-grade equipment.",
-      includes: [
-        "Driveways & walkways",
-        "Patios & decks",
-        "House siding & fences",
-        "Oil & stain removal",
-      ],
-    },
-    {
-      title: "Gutter Brightening",
-      icon: Zap,
-      image: gutterBrighteningImg,
-      href: "/gutter-cleaning",
-      price: "Fast quotes",
-      description: "We clean the exterior face of your gutters -- removing oxidation, black streaks, and buildup that pressure washing alone can't touch. Also called exterior gutter cleaning.",
-      includes: [
-        "Removes black streaks & oxidation",
-        "Exterior face of gutters scrubbed",
-        "Restores original gutter color",
-        "Often combined with gutter cleaning",
-      ],
-    },
-    {
-      title: "Window Cleaning",
-      icon: Wind,
-      image: windowImg,
-      href: "/window-cleaning",
-      price: "Fast quotes",
-      description: "Exterior window cleaning for residential homes using water-fed pole systems. Streak-free results without ladders against your windows.",
-      includes: [
-        "Exterior window cleaning",
-        "Screen cleaning",
-        "Frame & sill wiping",
-        "Hard water stain removal",
-      ],
-    },
-    {
-      title: "Commercial Services",
-      icon: Building2,
-      image: commercialImg,
-      href: "/commercial",
-      price: "Fast quotes",
-      description: "Power washing, roof cleaning, gutter cleaning, and window cleaning for businesses. Licensed and insured for commercial properties.",
-      includes: [
-        "Commercial power washing",
-        "Commercial roof cleaning",
-        "Commercial gutter cleaning",
-        "Commercial window cleaning",
-      ],
-    },
   ];
 
   return (
     <>
       <SEOHead
         title="All Services"
-        description="Roof cleaning, gutter cleaning, moss treatment, pressure washing, window cleaning, and commercial services in Seattle, Kenmore, Bothell, Kirkland & beyond."
+        description="Roof cleaning starting at $849 and complete gutter cleaning starting at $400 in Seattle, Kenmore, Bothell, and Kirkland."
         url="https://www.seattleprowash.com/services"
       />
       <Header />
@@ -138,13 +63,13 @@ const Services = () => {
         <section className="bg-gradient-to-br from-brand-navy via-brand-blue to-brand-navy py-16 md:py-20">
           <div className="container mx-auto px-4 text-center">
             <Badge className="bg-brand-orange/20 text-brand-orange border-brand-orange/30 mb-4">
-              Full Service
+              Roof &amp; Gutter Care
             </Badge>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Our Services
             </h1>
             <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-8">
-              From rooftop to driveway, we keep your home and business looking its best. Kenmore-based, serving all of greater Seattle.
+              Roof cleaning, moss removal, and complete gutter cleaning. Based in Kenmore, serving North Seattle and the Eastside.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="cta-orange" size="xl" onClick={navigateToContact}>
@@ -165,9 +90,8 @@ const Services = () => {
         {/* Services Grid */}
         <section className="py-16 md:py-20 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {services.map((service, index) => {
-                const IconComponent = service.icon;
                 return (
                   <Card key={index} className="border-2 hover:border-brand-orange/50 transition-all duration-300 hover:shadow-xl overflow-hidden group">
                     {/* Image */}
@@ -212,13 +136,16 @@ const Services = () => {
                 );
               })}
             </div>
+            <p id="add-ons" className="max-w-6xl mx-auto mt-6 text-sm text-muted-foreground text-center">
+              Pressure washing is available only as an add-on to roof or gutter cleaning, subject to scope and availability. No standalone pressure washing.
+            </p>
           </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-16 md:py-20 bg-brand-navy text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Not Sure What You Need?
             </h2>
             <p className="text-lg text-white/80 max-w-xl mx-auto mb-8">

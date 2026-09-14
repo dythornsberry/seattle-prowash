@@ -37,7 +37,7 @@ const RoofCleaning = () => {
       serviceType: "Roof Cleaning",
       url: `${COMPANY_INFO.url}/roof-cleaning`,
       offers: {
-        priceRange: "$499-$1500",
+        priceRange: "$849+",
         priceCurrency: "USD"
       }
     });
@@ -60,7 +60,7 @@ const RoofCleaning = () => {
         },
         {
           question: "Do you clean metal roofs?",
-          answer: "Yes — we clean a lot of metal roofs, including standing seam and corrugated panels. Metal needs a gentler, finish-safe process than asphalt, and it comes with the same moss treatment and 12-month guarantee. Metal roof cleaning starts at $800."
+          answer: "Yes — we clean a lot of metal roofs, including standing seam and corrugated panels. Metal needs a gentler, finish-safe process than asphalt, and it comes with the same moss treatment and 12-month guarantee. Metal roof cleaning starts at $849."
         },
         {
           question: "Can moss on my roof affect my homeowners insurance?",
@@ -133,7 +133,7 @@ const RoofCleaning = () => {
                   <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
                     Moss removal and treatment, with gutter cleaning included.
                   </p>
-                  <p className="text-white font-semibold mb-6">From $499</p>
+                  <p className="text-white font-semibold mb-6">From $849</p>
 
                   <div className="grid grid-cols-2 sm:flex gap-3">
                     <Button
@@ -225,7 +225,7 @@ const RoofCleaning = () => {
             },
             {
               question: "Do you clean metal roofs?",
-              answer: "Yes — we clean a lot of metal roofs, including standing seam and corrugated panels. Metal needs a gentler, finish-safe process than asphalt, and it comes with the same moss treatment and 12-month guarantee. Metal roof cleaning starts at $800."
+              answer: "Yes — we clean a lot of metal roofs, including standing seam and corrugated panels. Metal needs a gentler, finish-safe process than asphalt, and it comes with the same moss treatment and 12-month guarantee. Metal roof cleaning starts at $849."
             },
             {
               question: "Can moss on my roof affect my homeowners insurance?",
@@ -256,7 +256,7 @@ const RoofCleaning = () => {
                     <CardDescription>Complete moss treatment & gutter cleaning</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-3xl font-bold text-brand-navy">$499 – $1,500 <span className="text-sm font-normal text-muted-foreground">for most homes</span></p>
+                    <p className="text-3xl font-bold text-brand-navy">Starting at $849</p>
                     <p className="text-muted-foreground">
                       Moss removal and treatment, with gutter cleaning included. No high pressure on shingles.
                     </p>
@@ -271,11 +271,11 @@ const RoofCleaning = () => {
                 </Card>
                 <Card className="fade-up">
                   <CardHeader>
-                    <CardTitle className="text-brand-navy">Gutter Cleaning</CardTitle>
+                    <CardTitle className="text-brand-navy">Complete Gutter Cleaning</CardTitle>
                     <CardDescription>Full clean with complimentary roof blow-off</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-3xl font-bold text-brand-navy">Starting at $250</p>
+                    <p className="text-3xl font-bold text-brand-navy">Starting at $400</p>
                     <p className="text-muted-foreground">
                       Gutters cleared, downspouts flushed, and roof debris blown off.
                     </p>
@@ -344,7 +344,7 @@ const RoofCleaning = () => {
                     </li>
                     <li className="flex items-start gap-2 text-sm">
                       <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
-                      <span>From $800, based on roof size and condition</span>
+                      <span>From $849, based on roof size and condition</span>
                     </li>
                   </ul>
                   <Button variant="cta-orange" size="lg" onClick={navigateToContact}>
