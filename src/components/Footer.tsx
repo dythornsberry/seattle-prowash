@@ -1,40 +1,11 @@
-import { Button } from "@/components/ui/button";
-import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-brand-navy text-white">
-      <div className="bg-brand-orange py-4 text-white">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <h3 className="text-center text-lg font-bold md:text-left md:text-xl">
-              Need your roof or gutters cleaned?
-            </h3>
-            <div className="flex flex-wrap justify-center gap-3">
-              <Button
-                variant="prowash-cta"
-                size="lg"
-                onClick={() => { window.location.href = "tel:206-752-6690"; }}
-              >
-                <Phone className="mr-2 h-4 w-4" />
-                Call 206-752-6690
-              </Button>
-              <Button asChild variant="prowash-cta" size="lg">
-                <a href="sms:+12067526690" onClick={() => {
-                  window.gtag?.('event', 'sms_click', { location: 'footer', phone_number: '2067526690' });
-                }}>
-                  <MessageCircle className="h-4 w-4" aria-hidden="true" />
-                  Text Us
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <footer className="bg-[#20272b] text-white">
       <div className="py-12">
         <div className="container mx-auto px-4">
           <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-3">
@@ -76,10 +47,9 @@ const Footer = () => {
                   <Mail className="h-5 w-5 shrink-0 text-brand-orange" />
                   seattleprowash@gmail.com
                 </a>
-                <div className="flex items-center gap-3 text-white/80">
-                  <Clock className="h-5 w-5 shrink-0 text-brand-orange" />
-                  Call or text anytime
-                </div>
+                <a href="sms:+12067526690" className="flex items-center gap-3 text-white/80 hover:text-brand-orange" onClick={() => window.gtag?.("event", "sms_click", { location: "footer", phone_number: "2067526690" })}>
+                  <MessageCircle className="h-5 w-5 shrink-0 text-brand-orange" aria-hidden="true" />Text Seattle ProWash
+                </a>
                 <div className="flex items-start gap-3 text-white/80">
                   <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-brand-orange" />
                   <span>6516 NE 192nd Pl<br />Kenmore, WA 98028</span>

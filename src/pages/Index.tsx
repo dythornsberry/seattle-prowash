@@ -4,17 +4,15 @@ import { scrollToSection } from "@/lib/navigation";
 import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import EnhancedTrustBar from "@/components/EnhancedTrustBar";
+import HomeReviewBand from "@/components/HomeReviewBand";
 import ServicesPreview from "@/components/ServicesPreview";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import AboutPreview from "@/components/AboutPreview";
 import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
-import GoogleReviewsCarousel from "@/components/GoogleReviewsCarousel";
 import HomeFAQ from "@/components/HomeFAQ";
 import ServiceAreasSection from "@/components/ServiceAreasSection";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
-import ExitIntentPopup from "@/components/ExitIntentPopup";
 
 const Index = () => {
   // Scroll tracking (LocalBusiness schema is in static index.html — no JS injection needed)
@@ -77,13 +75,10 @@ const Index = () => {
         
         <main>
           <Hero />
-          <EnhancedTrustBar />
+          <HomeReviewBand />
           <ServicesPreview />
-          <div className="bg-navy">
-            <BeforeAfterSlider />
-          </div>
+          <BeforeAfterSlider />
           <AboutPreview />
-          <GoogleReviewsCarousel />
           <div className="bg-off-white">
             <TwoStepQuoteForm />
           </div>
@@ -103,7 +98,6 @@ const Index = () => {
         </main>
       <Footer />
       <MobileBottomBar />
-      <ExitIntentPopup />
       </div>
     </div>
   );

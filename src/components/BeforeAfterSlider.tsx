@@ -1,6 +1,7 @@
 import { useState, memo } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import InteractiveBeforeAfter from "./InteractiveBeforeAfter";
 // WebP images with JPG fallbacks
 import newRoofBefore1WebP from "@/assets/new-roof-before-1.webp";
@@ -73,114 +74,32 @@ const BeforeAfterSlider = () => {
     setCurrentSlide((prev) => (prev - 1 + beforeAfterProjects.length) % beforeAfterProjects.length);
   };
 
+  const project = beforeAfterProjects[currentSlide];
+
   return (
-    <section className="section-spacing overflow-hidden">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-10 fade-up">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Real Results
-          </h2>
-          <p className="text-lg md:text-xl text-white/75 max-w-3xl mx-auto">
-            Before and after photos from Seattle ProWash jobs.
-          </p>
+    <section id="results" className="section-spacing border-y bg-muted/50">
+      <div className="mx-auto max-w-6xl px-5">
+        <div className="mb-8 flex flex-wrap items-end justify-between gap-5">
+          <div>
+            <h2 className="text-3xl text-foreground md:text-4xl">See the Difference</h2>
+            <p className="mt-3 text-muted-foreground">Before and after photos from Seattle ProWash jobs.</p>
+          </div>
+          <Link to="/gallery" className="inline-flex min-h-11 items-center gap-2 font-semibold text-brand-navy">All Projects <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
         </div>
-
-        <div className="max-w-6xl mx-auto">
-          <div className="relative">
-            {/* Project Slider */}
-            <div className="overflow-hidden rounded-2xl shadow-2xl bg-white">
-              <div 
-                className="flex transition-all duration-500 ease-in-out"
-                style={{ 
-                  transform: `translateX(-${currentSlide * 100}%) translateZ(0)`,
-                  backfaceVisibility: 'hidden' as const
-                }}
-              >
-                {beforeAfterProjects.map((project) => (
-                  <div key={project.id} className="w-full flex-shrink-0 fade-up gallery-item">
-                    <div className="bg-brand-white p-8">
-                      {/* Project Info */}
-                      <div className="text-center mb-8">
-                        <h3 className="text-2xl font-bold text-brand-navy mb-2">
-                          {project.title}
-                        </h3>
-                        <p className="text-muted-foreground">{project.location}</p>
-                        <span className="inline-block bg-brand-yellow/10 text-brand-navy px-3 py-1 rounded-full text-sm font-semibold mt-2">
-                          {project.service}
-                        </span>
-                      </div>
-
-                      {/* Interactive Before/After Comparison */}
-                      <InteractiveBeforeAfter
-                        beforeImage={project.beforeImage}
-                        afterImage={project.afterImage}
-                        beforeImageWebP={project.beforeImageWebP}
-                        afterImageWebP={project.afterImageWebP}
-                        beforeAlt={project.beforeAlt}
-                        afterAlt={project.afterAlt}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
+        <div className="mx-auto max-w-4xl">
+          <InteractiveBeforeAfter key={project.id} beforeImage={project.beforeImage} afterImage={project.afterImage} beforeImageWebP={project.beforeImageWebP} afterImageWebP={project.afterImageWebP} beforeAlt={project.beforeAlt} afterAlt={project.afterAlt} />
+          <div className="mt-5 flex items-center justify-between gap-4">
+            <div aria-live="polite" className="min-w-0">
+              <h3 className="text-base font-semibold text-foreground sm:text-lg">{project.title}</h3>
+              <p className="mt-1 text-sm text-muted-foreground">{currentSlide + 1} of {beforeAfterProjects.length}</p>
             </div>
-
-            {/* Navigation Arrows */}
-            <Button
-              variant="outline"
-              size="icon"
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-brand-white/90 border-brand-yellow hover:bg-brand-yellow hover:text-brand-navy shadow-lg"
-              onClick={prevSlide}
-              aria-label="Show previous project"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </Button>
-            
-            <Button
-              variant="outline"
-              size="icon"
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-brand-white/90 border-brand-yellow hover:bg-brand-yellow hover:text-brand-navy shadow-lg"
-              onClick={nextSlide}
-              aria-label="Show next project"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </Button>
+            <div className="flex shrink-0 gap-2">
+              <Button variant="outline" size="icon" className="h-11 w-11 border-border" onClick={prevSlide} aria-label="Show previous project" title="Previous project"><ChevronLeft aria-hidden="true" /></Button>
+              <Button variant="outline" size="icon" className="h-11 w-11 border-border" onClick={nextSlide} aria-label="Show next project" title="Next project"><ChevronRight aria-hidden="true" /></Button>
+            </div>
           </div>
-
-          {/* Dots Indicator */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {beforeAfterProjects.map((_, index) => (
-              <button
-                key={index}
-                type="button"
-                aria-label={`Show project ${index + 1}`}
-                aria-pressed={index === currentSlide}
-                className="flex h-6 w-6 items-center justify-center rounded-full"
-                onClick={() => setCurrentSlide(index)}
-              >
-                <span
-                  className={`block h-3 w-3 rounded-full transition-colors duration-300 ${
-                    index === currentSlide ? "bg-brand-yellow" : "bg-brand-yellow/30"
-                  }`}
-                />
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className="text-center mt-10 fade-up">
-          <Button
-            variant="prowash-secondary"
-            size="xl"
-            onClick={() => window.location.href = '/gallery'}
-          >
-            <ExternalLink className="w-5 h-5 mr-2" />
-            View All Projects
-          </Button>
         </div>
       </div>
-
     </section>
   );
 };

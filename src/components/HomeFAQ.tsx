@@ -48,17 +48,17 @@ const HomeFAQ = () => {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-3">
-              Frequently Asked Questions
+              Common Questions
             </h2>
           </div>
 
-          <Accordion type="single" collapsible className="space-y-3">
+          <Accordion type="single" collapsible>
             {topFAQs.map((faq, index) => {
               return (
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`}
-                  className="border border-border rounded-lg px-5 bg-card hover:shadow-sm transition-shadow"
+                  className="border-b border-border"
                 >
                   <AccordionTrigger className="text-left hover:no-underline py-5">
                     <span className="text-base font-medium text-foreground pr-4">

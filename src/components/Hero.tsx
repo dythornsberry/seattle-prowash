@@ -1,54 +1,25 @@
-import heroImage from "@/assets/hero-roof-cleaning.jpg";
-import heroImageWebp from "@/assets/hero-roof-cleaning.webp";
-import HeroQuickForm from "@/components/HeroQuickForm";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { navigateToContact } from "@/lib/navigation";
+import heroImage from "@/assets/truck-at-jobsite.jpg";
 
-const Hero = () => {
-  return (
-    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-28 pb-16 md:pt-32 md:pb-20">
-      {/* Hero Background with Navy Overlay */}
-      <div className="absolute inset-0 z-0">
-        <picture>
-          <source srcSet={heroImageWebp} type="image/webp" />
-          <img
-            src={heroImage}
-            alt="Professional roof cleaning service in Seattle - moss removal with pump sprayer treatment"
-            className="w-full h-full object-cover object-center"
-            width={1920}
-            height={1080}
-            loading="eager"
-            decoding="async"
-          />
-        </picture>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
+const Hero = () => (
+  <section className="prowash-hero relative mt-20 overflow-hidden bg-charcoal" aria-labelledby="home-title">
+    <picture className="absolute inset-0">
+      <img src={heroImage} alt="Seattle ProWash's equipped cleaning truck at a residential job" width={1200} height={900} fetchPriority="high" className="prowash-hero-image h-full w-full object-cover" />
+    </picture>
+    <div className="absolute inset-0 bg-black/40" />
+    <div className="prowash-hero-content relative mx-auto w-full max-w-[1280px] px-5 py-12 sm:px-8 sm:py-16">
+      <p className="mb-3 text-sm font-semibold text-white">Roof, gutter &amp; exterior cleaning</p>
+      <h1 id="home-title" className="max-w-xl text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">Seattle ProWash</h1>
+      <p className="mt-4 max-w-[440px] text-base leading-relaxed text-white sm:text-lg">Locally owned in Kenmore. Cleaning homes across north Seattle and the Eastside.</p>
+      <div className="mt-7 flex flex-wrap items-center gap-5">
+        <Button variant="cta-orange" className="h-12 px-6 text-base" onClick={navigateToContact}>Get a Quote <ArrowRight aria-hidden="true" /></Button>
+        <Link to="/gallery" className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-white">See Our Work <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
       </div>
-
-      {/* Hero Content */}
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center space-y-5 md:space-y-6">
-          {/* Main Headline */}
-          <h1 className="text-white font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight text-balance animate-fade-in drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
-            Roof &amp; Gutter Cleaning in Seattle
-          </h1>
-
-          {/* Subhead */}
-          <p className="text-lg md:text-xl text-white/90 font-medium max-w-3xl mx-auto animate-fade-in drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-            Deep roof cleaning, moss removal &amp; treatment, and complete gutter cleaning. All in one package.
-          </p>
-
-          {/* Inline mini-form */}
-          <HeroQuickForm />
-        </div>
-      </div>
-
-      {/* Decorative Bottom Wave */}
-      <div className="absolute bottom-0 left-0 right-0 z-10">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-12 md:h-20">
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                fill="#1A3E66" fillOpacity="1"></path>
-        </svg>
-      </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default Hero;

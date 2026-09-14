@@ -463,7 +463,7 @@ function prerender() {
     // discoverable in its prerendered HTML with fetchpriority).
     if (route.path !== '/') {
       html = html.replace(
-        /<link rel="preload" href="[^"]*hero-roof-cleaning[^"]*"[^>]*\/>\n?/,
+        /<link\b(?=[^>]*rel="preload")(?=[^>]*as="image")[^>]*>\n?/g,
         ''
       );
     }

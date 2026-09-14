@@ -18,74 +18,21 @@ const ServiceAreasSection = ({
   description = "Professional exterior cleaning services across the Greater Seattle area",
   areas
 }: ServiceAreasSectionProps) => {
-  // Featured cities get larger cards; rest are compact chips
-  const featuredNames = new Set(["Kenmore", "Bellevue", "Seattle"]);
-  const featured = areas.filter((a) => featuredNames.has(a.name));
-  const rest = areas.filter((a) => !featuredNames.has(a.name));
-
   return (
-    <section className="py-12 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            {title}
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            {description}
-          </p>
+    <section className="border-t bg-white py-12">
+      <div className="mx-auto max-w-6xl px-5">
+        <div className="flex flex-wrap items-end justify-between gap-5">
+          <div>
+            <h2 className="text-2xl text-foreground md:text-3xl">{title}</h2>
+            <p className="mt-3 text-muted-foreground">{description}</p>
+          </div>
+          <Link to="/service-areas" className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-brand-navy">All Service Areas <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
         </div>
-
-        <div className="max-w-5xl mx-auto">
-          {/* Featured cities */}
-          {featured.length > 0 && (
-            <div className="grid sm:grid-cols-3 gap-4 mb-6">
-              {featured.map((area) => (
-                <Link
-                  key={`${area.name}-${area.path}`}
-                  to={area.path}
-                  className="group bg-white border border-brand-navy/10 hover:border-brand-orange rounded-xl p-5 shadow-sm hover:shadow-md transition-all"
-                >
-                  <div className="flex items-center gap-2 mb-1">
-                    <MapPin className="w-5 h-5 text-brand-orange" />
-                    <p className="font-bold text-lg text-brand-navy group-hover:text-brand-orange transition-colors">
-                      {area.name}
-                    </p>
-                  </div>
-                  {area.description && (
-                    <p className="text-sm text-muted-foreground">
-                      {area.description}
-                    </p>
-                  )}
-                </Link>
-              ))}
-            </div>
-          )}
-
-          {/* Other cities as compact chips */}
-          {rest.length > 0 && (
-            <div className="flex flex-wrap justify-center gap-2">
-              {rest.map((area) => (
-                <Link
-                  key={`${area.name}-${area.path}`}
-                  to={area.path}
-                  className="inline-flex items-center gap-1.5 bg-white border border-brand-navy/10 hover:border-brand-orange hover:bg-brand-orange/5 text-brand-navy hover:text-brand-orange font-medium text-sm px-4 py-2 rounded-full transition-all"
-                >
-                  <MapPin className="w-3.5 h-3.5" />
-                  {area.name}
-                </Link>
-              ))}
-            </div>
-          )}
-        </div>
-
-        <div className="text-center mt-8">
-          <Link
-            to="/service-areas"
-            className="inline-flex items-center gap-1 text-brand-orange hover:underline font-semibold"
-          >
-            View All Service Areas <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
+        <nav aria-label="Local service areas" className="mt-6 grid grid-cols-2 gap-x-5 sm:grid-cols-3 lg:grid-cols-6">
+          {areas.map((area) => (
+            <Link key={area.path} to={area.path} className="flex min-h-12 items-center gap-2 text-sm font-medium text-brand-navy"><MapPin className="h-4 w-4 shrink-0" aria-hidden="true" />{area.name}</Link>
+          ))}
+        </nav>
       </div>
     </section>
   );

@@ -15,8 +15,8 @@ const buttonVariants = cva(
         outline:
           "border-2 border-brand-navy text-brand-navy bg-white hover:bg-brand-navy hover:text-white transition-all",
         secondary:
-          "bg-brand-orange text-white hover:bg-brand-orange-light hover:text-white transition-all shadow-sm",
-        ghost: "hover:bg-accent/10 hover:text-accent-foreground",
+          "bg-brand-orange text-charcoal hover:bg-brand-orange-light hover:text-charcoal transition-colors",
+        ghost: "hover:bg-muted hover:text-foreground",
         link: "text-brand-navy underline-offset-4 hover:underline",
         
         /* Premium ProWash variants */
@@ -24,8 +24,8 @@ const buttonVariants = cva(
         "prowash-primary": "bg-brand-navy text-white hover:bg-brand-blue-light font-semibold shadow-lg hover:shadow-xl transition-all rounded-xl",
         "prowash-secondary": "bg-white border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white font-semibold transition-all",
         "prowash-cta": "bg-brand-navy text-white hover:bg-brand-blue-light font-bold shadow-lg transition-all",
-        "prowash-phone": "bg-brand-orange text-white hover:bg-brand-orange-light hover:text-white font-bold shadow-lg",
-        "cta-orange": "bg-brand-orange text-white hover:bg-brand-orange-light hover:text-white font-bold shadow-lg hover:shadow-xl transition-all rounded-xl",
+        "prowash-phone": "bg-brand-orange text-charcoal hover:bg-brand-orange-light hover:text-charcoal font-semibold",
+        "cta-orange": "bg-brand-orange text-charcoal hover:bg-brand-orange-light hover:text-charcoal font-semibold transition-colors rounded-lg shadow-none",
         "prowash-outline": "bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-navy font-semibold",
       },
       size: {

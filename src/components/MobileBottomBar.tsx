@@ -1,8 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
+import { useEffect, useState } from "react";
 
 const MobileBottomBar = () => {
+  const [isFormVisible, setIsFormVisible] = useState(false);
+
+  useEffect(() => {
+    const form = document.querySelector('#contact form');
+    if (!form) return;
+    const observer = new IntersectionObserver(([entry]) => setIsFormVisible(entry.isIntersecting), { rootMargin: '-80px 0px 0px 0px' });
+    observer.observe(form);
+    return () => observer.disconnect();
+  }, []);
+
   const handleCall = () => {
     // Track phone call click
     if (window.gtag) {
@@ -25,7 +36,7 @@ const MobileBottomBar = () => {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t-2 border-brand-navy shadow-2xl md:hidden pb-safe">
+    <div data-testid="mobile-contact-bar" className={`fixed bottom-0 left-0 right-0 z-40 bg-white border-t md:hidden ${isFormVisible ? 'hidden' : ''}`} style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}>
       <div className="grid grid-cols-[minmax(0,1fr)_48px_minmax(0,1fr)] gap-2 p-3">
         <Button
           variant="outline"
@@ -51,7 +62,7 @@ const MobileBottomBar = () => {
         <Button 
           variant="cta-orange"
           size="lg"
-          className="w-full min-w-0 shadow-md min-h-[56px] px-2 text-sm font-semibold"
+          className="w-full min-w-0 min-h-[56px] px-2 text-sm font-semibold"
           onClick={handleQuote}
         >
           Get Quote

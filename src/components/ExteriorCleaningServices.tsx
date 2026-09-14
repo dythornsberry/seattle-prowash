@@ -12,13 +12,13 @@ const services = [
 
 const ExteriorCleaningServices = () => (
   <section className="py-12 md:py-16 bg-white">
-    <div className="container mx-auto px-4 max-w-6xl">
-      <h2 className="text-3xl font-bold text-brand-navy mb-8">House, Concrete &amp; Deck Cleaning</h2>
+    <div className="mx-auto px-5 max-w-6xl">
+      <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-8">House, Concrete &amp; Deck Cleaning</h2>
       <div className="grid md:grid-cols-3 gap-6">
         {services.map((service) => (
           <Link key={service.name} to={service.href} className="group hover:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange rounded-lg">
             <img src={service.image} alt={service.alt} loading="lazy" className="w-full aspect-[4/3] object-cover rounded-lg" />
-            <h3 className="flex items-start justify-between gap-3 mt-4 text-xl font-bold text-brand-navy">
+            <h3 className="flex items-start justify-between gap-3 mt-4 text-xl font-semibold text-foreground">
               {service.name}<ArrowRight className="w-5 h-5 shrink-0 mt-1 text-brand-orange" aria-hidden="true" />
             </h3>
             <p className="mt-2 text-muted-foreground">{service.description}</p>

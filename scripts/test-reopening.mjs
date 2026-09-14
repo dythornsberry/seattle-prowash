@@ -71,9 +71,8 @@ try {
   const page = await context.newPage();
   async function fillDetails() {
     await page.goto(base, { waitUntil: 'domcontentloaded' });
-    await page.getByRole('textbox', { name: 'Your name', exact: true }).fill('QA Preview Only');
-    await page.getByRole('textbox', { name: 'Phone number', exact: true }).fill('2062346789');
-    await page.getByRole('button', { name: 'Next: Project Details', exact: true }).click();
+    await page.getByLabel('Name *', { exact: true }).fill('QA Preview Only');
+    await page.getByLabel('Phone *', { exact: true }).fill('2062346789');
     await page.getByLabel('Email *', { exact: true }).fill('preview@example.com');
     await page.getByLabel('Address *', { exact: true }).fill('123 Example Street, Seattle, WA 98101');
     await page.getByRole('radio', { name: 'Flexible', exact: true }).click();

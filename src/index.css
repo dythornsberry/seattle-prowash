@@ -116,7 +116,7 @@
     --input: 0 0% 92%;
     --ring: 25 88% 55%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
     /* Sidebar colors */
     --sidebar-background: 0 0% 96%;
@@ -189,13 +189,19 @@
     font-family: "Poppins", sans-serif;
     color: hsl(var(--brand-navy));
     font-weight: 700;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
     line-height: 1.2;
   }
   
-  h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
-  h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
-  h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+
+  @media (min-width: 768px) {
+    h1 { font-size: 3.5rem; }
+    h2 { font-size: 2.5rem; }
+    h3 { font-size: 2rem; }
+  }
   
   /* Seattle ProWash Section Spacing */
   .section-spacing {
@@ -289,6 +295,25 @@
     display: none !important;
     visibility: hidden !important;
   }
+}
+
+.prowash-hero { min-height: 560px; }
+.prowash-hero-image { object-position: center 50%; }
+.prowash-hero-content { text-shadow: 0 1px 3px rgb(0 0 0 / 50%); }
+.prowash-hero-content button { text-shadow: none; }
+.quote-shell { container-type: inline-size; }
+.quote-layout { max-width: 720px; }
+@container (min-width: 950px) {
+  .quote-layout { max-width: 1152px; grid-template-columns: 0.75fr 1.25fr; gap: 64px; }
+  .quote-review { display: block; }
+}
+@media (max-width: 639px) {
+  .prowash-hero { min-height: 490px; }
+  .prowash-hero-image { object-position: center 50%; }
+  .prowash-hero-content { padding-top: 28px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fade-up { opacity: 1; transform: none; animation: none; transition: none; }
 }
 
 /* Safety-net keyframes (outside @layer so they resolve correctly):
