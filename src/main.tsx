@@ -1,5 +1,5 @@
 import React from "react";
-import { createRoot, hydrateRoot } from "react-dom/client";
+import { createRoot } from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import App from "./App.tsx";
 import "./index.css";
@@ -25,10 +25,6 @@ const app = (
   </React.StrictMode>
 );
 
-// Production HTML is prerendered (scripts/prerender.js snapshots the DOM), so
-// hydrate to reuse it; dev serves an empty shell, so render from scratch.
-if (container.hasChildNodes()) {
-  hydrateRoot(container, app);
-} else {
-  createRoot(container).render(app);
-}
+// The crawler HTML is a post-effect browser snapshot, not React SSR output.
+// Mount afresh: deferred sections and generated IDs cannot hydrate that snapshot.
+createRoot(container).render(app);
