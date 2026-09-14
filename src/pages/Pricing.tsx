@@ -9,7 +9,6 @@ import MobileBottomBar from "@/components/MobileBottomBar";
 import { Phone, CheckCircle, Droplet, Home, Ruler, Mountain, TreePine, Star, Sparkles } from "lucide-react";
 import { navigateToContact } from "@/lib/navigation";
 import asphaltRoofImg from "@/assets/recent-asphalt-roof-before-after-2026.webp";
-import metalRoofImg from "@/assets/recent-green-metal-roof-before-after-2026.webp";
 import gutterImg from "@/assets/gutter-cleaning-before-after.jpg";
 import heavyMossRoofImg from "@/assets/new-roof-before-1.jpg";
 
@@ -50,7 +49,7 @@ const Pricing = () => {
     <>
       <SEOHead
         title="Roof & Complete Gutter Cleaning Prices"
-        description="Roof cleaning starting at $850 and complete gutter cleaning starting at $350. Clear quotes for Seattle-area homes based on size, buildup, and access."
+        description="Roof and gutter cleaning packages: standard roof cleaning typically $850-$1,200; heavy moss removal typically $1,200-$2,000. Gutter-only cleaning starts at $350."
       />
       
       <Header />
@@ -87,7 +86,7 @@ const Pricing = () => {
           </div>
         </section>
 
-        {/* Pricing Cards - Roof Cleaning by Type */}
+        {/* Roof packages by moss coverage */}
         <section className="py-16 md:py-20 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-10 max-w-3xl mx-auto">
@@ -95,11 +94,11 @@ const Pricing = () => {
                 Roof &amp; Gutter Cleaning Combo
               </h2>
               <p className="text-lg text-muted-foreground">
-                Roof cleaning is priced by roof material. Pick the card that matches yours.
+                Both options include roof cleaning, moss removal and treatment, roof blow-off, gutter cleanout, downspout flushing, and cleanup.
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              {/* Asphalt / Composite Roof Card */}
+              {/* Standard roof cleaning */}
               <Card className="border-2 border-brand-orange ring-4 ring-brand-orange/30 lg:scale-[1.02] transition-all duration-300 shadow-xl hover:shadow-2xl relative overflow-hidden">
                 <div className="bg-brand-orange text-white text-center text-sm font-bold py-2 tracking-wide">
                   ★ MOST POPULAR — THE ALL-IN-ONE
@@ -121,17 +120,17 @@ const Pricing = () => {
                 </div>
                 <CardHeader className="text-center pb-4">
                   <CardTitle className="text-2xl font-bold text-brand-blue">
-                    Asphalt / Composite Roof
+                    Standard Roof Cleaning
                   </CardTitle>
                   <CardDescription className="text-base">
-                    All in one: deep roof cleaning, moss removal &amp; treatment, roof blow-off, gutter cleanout, downspout flushing &amp; cleanup.
+                    For roofs with light to moderate moss and normal debris buildup. The complete roof-and-gutter package.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="text-center py-4 bg-brand-orange/5 rounded-lg">
-                    <p className="text-sm text-muted-foreground mb-1">Roof cleaning</p>
-                    <p className="text-3xl font-bold text-brand-blue">Starting at $850</p>
-                    <p className="text-sm text-muted-foreground mt-1">Smaller, straightforward roofs start at $850. Large roofs or heavy moss may cost $1,500 or more.</p>
+                    <p className="text-sm text-muted-foreground mb-1">Typical price range</p>
+                    <p className="text-3xl font-bold text-brand-blue">$850–$1,200</p>
+                    <p className="text-sm text-muted-foreground mt-1">Includes deep roof cleaning, moss treatment, and complete gutter cleaning.</p>
                     <p className="text-xs text-muted-foreground mt-2">You get an exact price before anything is scheduled. No hidden fees, no surprises.</p>
                   </div>
                   
@@ -176,59 +175,59 @@ const Pricing = () => {
                 </CardContent>
               </Card>
 
-              {/* Specialty Roof Cleaning Card (Metal / Tile / Cedar) */}
+              {/* Heavy moss removal */}
               <Card className="border-2 border-brand-navy/30 hover:border-brand-navy transition-all duration-300 hover:shadow-xl relative overflow-hidden">
                 {/* Hero Image */}
                 <div className="relative aspect-[16/9] overflow-hidden">
                   <img
-                    src={metalRoofImg}
-                    alt="Metal roof before and after cleaning"
+                    src={heavyMossRoofImg}
+                    alt="Roof with thick moss buildup before cleaning"
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />
                   <div className="absolute top-3 right-3">
                     <Badge className="bg-brand-navy text-white border-brand-navy font-semibold shadow-md">
                       <Sparkles className="w-3 h-3 mr-1" />
-                      Specialty
+                      Heavy Moss
                     </Badge>
                   </div>
                 </div>
                 <CardHeader className="text-center pb-4">
                   <CardTitle className="text-2xl font-bold text-brand-blue">
-                    Specialty Roof Cleaning
+                    Heavy Moss Removal
                   </CardTitle>
                   <CardDescription className="text-base">
-                    Metal · Tile · Cedar Shake
+                    For roofs heavily covered in moss. The same complete package, with more detailed removal and treatment.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="text-center py-4 bg-brand-navy/5 rounded-lg">
-                    <p className="text-sm text-muted-foreground mb-1">Metal roof cleaning</p>
-                    <p className="text-3xl font-bold text-brand-blue">Starting at $850</p>
-                    <p className="text-sm text-muted-foreground mt-1">Often $1,500+ · Custom quote based on your roof</p>
+                    <p className="text-sm text-muted-foreground mb-1">Typical price range</p>
+                    <p className="text-3xl font-bold text-brand-blue">$1,200–$2,000</p>
+                    <p className="text-sm text-muted-foreground mt-1">Includes deep roof cleaning, moss treatment, and complete gutter cleaning.</p>
                   </div>
 
                   <div className="space-y-3">
-                    <p className="font-semibold text-brand-blue text-sm">Why specialty?</p>
+                    <p className="font-semibold text-brand-blue text-sm">Why the higher range?</p>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-brand-navy flex-shrink-0 mt-0.5" />
                       <div>
-                        <p className="font-medium text-sm">More time-consuming</p>
-                        <p className="text-xs text-muted-foreground">Each roof type needs a different process</p>
+                        <p className="font-medium text-sm">Thicker moss coverage</p>
+                        <p className="text-xs text-muted-foreground">More buildup requires more time for careful removal</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-brand-navy flex-shrink-0 mt-0.5" />
                       <div>
-                        <p className="font-medium text-sm">More custom</p>
-                        <p className="text-xs text-muted-foreground">Treatment, rinse, and timing varies</p>
+                        <p className="font-medium text-sm">Detailed roof cleaning</p>
+                        <p className="text-xs text-muted-foreground">Extra attention to areas with established moss</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-brand-navy flex-shrink-0 mt-0.5" />
                       <div>
-                        <p className="font-medium text-sm">More difficult</p>
-                        <p className="text-xs text-muted-foreground">Slippery surfaces, careful handling required</p>
+                        <p className="font-medium text-sm">More debris to clear</p>
+                        <p className="text-xs text-muted-foreground">Thorough gutter cleanout and cleanup after removal</p>
                       </div>
                     </div>
                   </div>
@@ -236,19 +235,19 @@ const Pricing = () => {
                   <div className="space-y-2 pt-4 border-t">
                     <div className="flex items-center gap-2 text-sm">
                       <CheckCircle className="w-4 h-4 text-green-600" />
-                      <span>Metal roof cleaning</span>
+                      <span>Deep roof cleaning &amp; moss removal</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm">
                       <CheckCircle className="w-4 h-4 text-green-600" />
-                      <span>Tile roof cleaning (multi-day treatment)</span>
+                      <span>Moss treatment &amp; 12-month moss-free guarantee</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm">
                       <CheckCircle className="w-4 h-4 text-green-600" />
-                      <span>Cedar shake cleaning</span>
+                      <span>Gutter cleaning &amp; downspout flushing included</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm">
                       <CheckCircle className="w-4 h-4 text-green-600" />
-                      <span>Licensed & insured</span>
+                      <span>Roof blow-off &amp; debris cleanup</span>
                     </div>
                   </div>
 
@@ -259,12 +258,16 @@ const Pricing = () => {
               </Card>
             </div>
 
+            <p className="max-w-3xl mx-auto mt-8 text-center text-sm text-muted-foreground">
+              These are typical ranges, not fixed prices. Roof size, pitch, material, and access affect your quote. Large or complex roofs may cost more. Metal, tile, and cedar roofs are quoted individually. Your exact price is confirmed before scheduling.
+            </p>
+
             <div id="heavy-moss-examples" className="max-w-5xl mx-auto mt-12 scroll-mt-28">
               <h3 className="text-2xl font-bold text-brand-blue text-center mb-2">
                 Heavy moss examples
               </h3>
               <p className="text-muted-foreground text-center mb-8 max-w-2xl mx-auto">
-                Jobs like these are closer to $1,500. Your quote depends on roof material, size, pitch, and access.
+                Heavy moss coverage typically falls in the $1,200–$2,000 range, including the full roof-and-gutter package. Your quote depends on roof size, material, pitch, and access.
               </p>
               <div className="grid md:grid-cols-2 gap-6">
                 <figure className="rounded-lg overflow-hidden shadow-lg bg-white">
