@@ -24,7 +24,7 @@ const roofPackages = [
   },
   {
     name: "Heavy Moss Removal",
-    description: "Thick moss coverage requiring more removal time.",
+    description: "For roofs heavily covered in moss.",
     price: "$1,200–$2,000",
     image: heavyMossRoofImg,
     alt: "Roof with thick moss buildup before cleaning",
