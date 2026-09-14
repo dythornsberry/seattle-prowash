@@ -76,6 +76,10 @@ try {
       const typographyIssues = await page.locator('main h1, main h2, main h3, main h4').evaluateAll(headings => headings.filter(element => !getComputedStyle(element).fontFamily.startsWith('Poppins')).map(element => element.textContent));
       assert.deepEqual(typographyIssues, [], `Heading font: ${path}`);
       assert.equal(await page.locator('body').evaluate(element => getComputedStyle(element).fontFamily.startsWith('Inter')), true);
+      if (path === '/about') {
+        assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, `About page fits: ${width}`);
+        assert.deepEqual(await page.locator('main div.text-sm').evaluateAll(elements => elements.filter(element => element.scrollWidth > element.clientWidth + 2).map(element => element.textContent)), [], `About stats fit: ${width}`);
+      }
       checks += 8;
 
       if (width < 1280) {

@@ -123,7 +123,7 @@ const About = () => {
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-4 gap-4 mt-8">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8">
                     <div className="text-center">
                       <div className="text-3xl font-bold text-brand-orange mb-2">2022</div>
                       <div className="text-sm text-muted-foreground">Founded Seattle ProWash</div>
@@ -153,7 +153,7 @@ const About = () => {
                       height={800}
                       loading="lazy"
                     />
-                    <div className="absolute -bottom-6 -right-6 bg-brand-orange text-white px-6 py-3 rounded-xl font-bold shadow-lg">
+                    <div className="absolute -bottom-6 right-0 xl:-right-6 bg-brand-orange text-white px-6 py-3 rounded-xl font-bold shadow-lg">
                       15+ Communities Served
                     </div>
                   </div>
