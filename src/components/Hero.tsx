@@ -32,7 +32,9 @@ const Hero = () => {
 
           {/* Subhead */}
           <p className="text-lg md:text-xl text-white/90 font-medium max-w-3xl mx-auto animate-fade-in drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-            Roof cleaning starting at $849. Complete gutter cleaning starting at $400.
+            <strong className="text-white">Roof &amp; Gutter Cleaning Combo from $850.</strong>{" "}
+            Deep roof cleaning, moss removal &amp; treatment, and complete gutter cleaning.
+            <span className="block mt-2 text-base">Gutter cleaning from $350, including roof blow-off, downspout flushing &amp; cleanup.</span>
           </p>
 
           {/* Inline mini-form */}

@@ -50,7 +50,7 @@ const Pricing = () => {
     <>
       <SEOHead
         title="Roof & Complete Gutter Cleaning Prices"
-        description="Roof cleaning starting at $849 and complete gutter cleaning starting at $400. Clear quotes for Seattle-area homes based on size, buildup, and access."
+        description="Roof cleaning starting at $850 and complete gutter cleaning starting at $350. Clear quotes for Seattle-area homes based on size, buildup, and access."
       />
       
       <Header />
@@ -66,7 +66,7 @@ const Pricing = () => {
               Roof &amp; Gutter Cleaning Prices
             </h1>
             <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-4">
-              Roof cleaning starts at $849. Complete gutter cleaning starts at $400.
+              Roof &amp; gutter cleaning combo from $850. Complete gutter cleaning from $350.
             </p>
             <p className="text-base text-white/90 max-w-2xl mx-auto mb-8 font-medium">
               Your final quote depends on your home's size, buildup, roof material, and access.
@@ -92,7 +92,7 @@ const Pricing = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-10 max-w-3xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-brand-blue mb-3">
-                Roof Cleaning Pricing
+                Roof &amp; Gutter Cleaning Combo
               </h2>
               <p className="text-lg text-muted-foreground">
                 Roof cleaning is priced by roof material. Pick the card that matches yours.
@@ -124,14 +124,14 @@ const Pricing = () => {
                     Asphalt / Composite Roof
                   </CardTitle>
                   <CardDescription className="text-base">
-                    The standard. Moss removal, treatment & gutter cleaning included.
+                    All in one: deep roof cleaning, moss removal &amp; treatment, roof blow-off, gutter cleanout, downspout flushing &amp; cleanup.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="text-center py-4 bg-brand-orange/5 rounded-lg">
                     <p className="text-sm text-muted-foreground mb-1">Roof cleaning</p>
-                    <p className="text-3xl font-bold text-brand-blue">Starting at $849</p>
-                    <p className="text-sm text-muted-foreground mt-1">Smaller, straightforward roofs start at $849. Large roofs or heavy moss may cost $1,500 or more.</p>
+                    <p className="text-3xl font-bold text-brand-blue">Starting at $850</p>
+                    <p className="text-sm text-muted-foreground mt-1">Smaller, straightforward roofs start at $850. Large roofs or heavy moss may cost $1,500 or more.</p>
                     <p className="text-xs text-muted-foreground mt-2">You get an exact price before anything is scheduled. No hidden fees, no surprises.</p>
                   </div>
                   
@@ -204,7 +204,7 @@ const Pricing = () => {
                 <CardContent className="space-y-6">
                   <div className="text-center py-4 bg-brand-navy/5 rounded-lg">
                     <p className="text-sm text-muted-foreground mb-1">Metal roof cleaning</p>
-                    <p className="text-3xl font-bold text-brand-blue">Starting at $849</p>
+                    <p className="text-3xl font-bold text-brand-blue">Starting at $850</p>
                     <p className="text-sm text-muted-foreground mt-1">Often $1,500+ · Custom quote based on your roof</p>
                   </div>
 
@@ -306,7 +306,7 @@ const Pricing = () => {
                 Complete Gutter Cleaning Pricing
               </h2>
               <p className="text-lg text-muted-foreground">
-                Full gutter clean plus roof blow-off, downspouts flushed and tested.
+                Roof blow-off, gutter cleanout, downspout flushing, and cleanup. Deep roof cleaning, moss removal and treatment are included in the roof combo, not this service.
               </p>
             </div>
             <div className="max-w-2xl mx-auto">
@@ -332,7 +332,7 @@ const Pricing = () => {
                 <CardContent className="space-y-6">
                   <div className="text-center py-4 bg-brand-orange/5 rounded-lg">
                     <p className="text-sm text-muted-foreground mb-1">Complete gutter cleaning</p>
-                    <p className="text-3xl font-bold text-brand-blue">Starting at $400</p>
+                    <p className="text-3xl font-bold text-brand-blue">Starting at $350</p>
                     <p className="text-sm text-muted-foreground mt-1">Final quote based on home size, buildup, and access</p>
                   </div>
                   

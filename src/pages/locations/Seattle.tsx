@@ -96,7 +96,7 @@ const Seattle = () => {
           "name": "What's a typical price range in Seattle?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Roof cleaning in Seattle starts at $849 and includes moss treatment and gutter cleaning. Complete gutter cleaning starts at $400. Final pricing depends on roof pitch, access, and specific conditions. Dylan will call or text to confirm details and help you get clear pricing."
+            "text": "Roof cleaning in Seattle starts at $850 and includes moss treatment and gutter cleaning. Complete gutter cleaning starts at $350. Final pricing depends on roof pitch, access, and specific conditions. Dylan will call or text to confirm details and help you get clear pricing."
           }
         },
         {
@@ -335,7 +335,7 @@ const Seattle = () => {
                 <Card>
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold text-brand-navy mb-4">Roof Cleaning</h3>
-                    <p className="text-3xl font-bold text-brand-orange mb-2">Starting at $849</p>
+                    <p className="text-3xl font-bold text-brand-orange mb-2">Starting at $850</p>
                     <p className="text-sm text-muted-foreground mb-4">Moss removal, treatment, and gutter cleaning</p>
                     <ul className="text-sm space-y-2 text-muted-foreground">
                       <li>• Gutter cleaning included</li>
@@ -347,7 +347,7 @@ const Seattle = () => {
                 <Card>
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold text-brand-navy mb-4">Complete Gutter Cleaning</h3>
-                    <p className="text-3xl font-bold text-brand-orange mb-2">Starting at $400</p>
+                    <p className="text-3xl font-bold text-brand-orange mb-2">Starting at $350</p>
                     <p className="text-sm text-muted-foreground mb-4">Complete gutter system cleanout</p>
                     <ul className="text-sm space-y-2 text-muted-foreground">
                       <li>• Roof debris blow-off</li>
@@ -416,7 +416,7 @@ const Seattle = () => {
                 <Card>
                   <CardContent className="p-6">
                     <h3 className="font-bold text-brand-navy mb-2">What's a typical price range in Seattle?</h3>
-                    <p className="text-muted-foreground">Roof cleaning starts at $849, including moss treatment and gutter cleaning. Complete gutter cleaning starts at $400. Your quote depends on size, buildup, roof material, and access.</p>
+                    <p className="text-muted-foreground">Roof cleaning starts at $850, including moss treatment and gutter cleaning. Complete gutter cleaning starts at $350. Your quote depends on size, buildup, roof material, and access.</p>
                   </CardContent>
                 </Card>
                 <Card>

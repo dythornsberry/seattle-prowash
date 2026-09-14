@@ -36,7 +36,7 @@ const routes = [
   {
     path: '/services',
     title: 'All Services',
-    description: 'Roof cleaning starting at $849 and complete gutter cleaning starting at $400 in Seattle, Kenmore, Bothell, and Kirkland.',
+    description: 'Roof cleaning starting at $850 and complete gutter cleaning starting at $350 in Seattle, Kenmore, Bothell, and Kirkland.',
   },
   {
     path: '/roof-cleaning',
@@ -56,7 +56,7 @@ const routes = [
   {
     path: '/pricing',
     title: 'Roof & Complete Gutter Cleaning Prices',
-    description: 'Roof cleaning starting at $849 and complete gutter cleaning starting at $400. Quotes based on property size, condition, and access.',
+    description: 'Roof cleaning starting at $850 and complete gutter cleaning starting at $350. Quotes based on property size, condition, and access.',
   },
   {
     path: '/about',
@@ -96,7 +96,7 @@ const routes = [
   {
     path: '/resources/roof-cleaning-cost-seattle',
     title: 'What Roof Cleaning Costs in Seattle (2026 Guide)',
-    description: 'Real 2026 roof cleaning prices from a Seattle-area contractor. Roof cleaning starts at $849 with gutter cleaning included. Complete gutter cleaning starts at $400.',
+    description: 'Real 2026 roof cleaning prices from a Seattle-area contractor. Roof cleaning starts at $850 with gutter cleaning included. Complete gutter cleaning starts at $350.',
   },
   {
     path: '/resources/best-time-roof-gutter-cleaning-seattle',

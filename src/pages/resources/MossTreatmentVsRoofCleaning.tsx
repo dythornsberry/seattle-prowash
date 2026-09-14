@@ -121,7 +121,7 @@ const MossTreatmentVsRoofCleaning = () => {
 
                   <h2>What They Cost</h2>
                   <p>
-                    Our full roof cleaning includes moss removal, treatment, and gutter cleaning, starting at <strong>$849</strong>. Complete gutter cleaning starts at <strong>$400</strong>. We assess your roof's condition before recommending work, and confirm the scope and price before scheduling.
+                    Our full roof cleaning includes moss removal, treatment, and gutter cleaning, starting at <strong>$850</strong>. Complete gutter cleaning starts at <strong>$350</strong>. We assess your roof's condition before recommending work, and confirm the scope and price before scheduling.
                   </p>
 
                   <h2>What About DIY Moss Killer?</h2>

@@ -20,7 +20,7 @@ const Resources = () => {
     {
       id: "roof-cleaning-cost-seattle",
       title: "What Roof Cleaning Costs in Seattle (2026 Guide)",
-      excerpt: "Real prices from a local contractor: roof cleaning starts at $849 with gutter cleaning included; complete gutter cleaning starts at $400. See exactly what drives your price and what should be included.",
+      excerpt: "Real prices from a local contractor: roof cleaning starts at $850 with gutter cleaning included; complete gutter cleaning starts at $350. See exactly what drives your price and what should be included.",
       category: "Pricing",
       readTime: "6 min read",
       date: "2026-07-11"

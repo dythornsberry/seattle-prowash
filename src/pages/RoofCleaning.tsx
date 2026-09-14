@@ -37,7 +37,7 @@ const RoofCleaning = () => {
       serviceType: "Roof Cleaning",
       url: `${COMPANY_INFO.url}/roof-cleaning`,
       offers: {
-        priceRange: "$849+",
+        priceRange: "$850+",
         priceCurrency: "USD"
       }
     });
@@ -60,7 +60,7 @@ const RoofCleaning = () => {
         },
         {
           question: "Do you clean metal roofs?",
-          answer: "Yes — we clean a lot of metal roofs, including standing seam and corrugated panels. Metal needs a gentler, finish-safe process than asphalt, and it comes with the same moss treatment and 12-month guarantee. Metal roof cleaning starts at $849."
+          answer: "Yes — we clean a lot of metal roofs, including standing seam and corrugated panels. Metal needs a gentler, finish-safe process than asphalt, and it comes with the same moss treatment and 12-month guarantee. Metal roof cleaning starts at $850."
         },
         {
           question: "Can moss on my roof affect my homeowners insurance?",
@@ -127,13 +127,13 @@ const RoofCleaning = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div className="fade-up">
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
-                    Roof Cleaning in Seattle
+                    Roof &amp; Gutter Cleaning Combo
                   </h1>
                   
                   <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
-                    Moss removal and treatment, with gutter cleaning included.
+                    Deep roof cleaning, moss removal and treatment, roof blow-off, gutter cleanout, downspout flushing, and cleanup. All included in one package.
                   </p>
-                  <p className="text-white font-semibold mb-6">From $849</p>
+                  <p className="text-white font-semibold mb-6">From $850</p>
 
                   <div className="grid grid-cols-2 sm:flex gap-3">
                     <Button
@@ -225,7 +225,7 @@ const RoofCleaning = () => {
             },
             {
               question: "Do you clean metal roofs?",
-              answer: "Yes — we clean a lot of metal roofs, including standing seam and corrugated panels. Metal needs a gentler, finish-safe process than asphalt, and it comes with the same moss treatment and 12-month guarantee. Metal roof cleaning starts at $849."
+              answer: "Yes — we clean a lot of metal roofs, including standing seam and corrugated panels. Metal needs a gentler, finish-safe process than asphalt, and it comes with the same moss treatment and 12-month guarantee. Metal roof cleaning starts at $850."
             },
             {
               question: "Can moss on my roof affect my homeowners insurance?",
@@ -252,11 +252,11 @@ const RoofCleaning = () => {
                     <Badge className="bg-brand-orange">Most Popular</Badge>
                   </div>
                   <CardHeader className="pt-6">
-                    <CardTitle className="text-brand-navy">Roof Cleaning</CardTitle>
-                    <CardDescription>Complete moss treatment & gutter cleaning</CardDescription>
+                    <CardTitle className="text-brand-navy">Roof &amp; Gutter Cleaning Combo</CardTitle>
+                    <CardDescription>Deep roof cleaning, moss removal &amp; treatment, and complete gutter cleaning</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-3xl font-bold text-brand-navy">Starting at $849</p>
+                    <p className="text-3xl font-bold text-brand-navy">Starting at $850</p>
                     <p className="text-muted-foreground">
                       Moss removal and treatment, with gutter cleaning included. No high pressure on shingles.
                     </p>
@@ -275,7 +275,7 @@ const RoofCleaning = () => {
                     <CardDescription>Full clean with complimentary roof blow-off</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-3xl font-bold text-brand-navy">Starting at $400</p>
+                    <p className="text-3xl font-bold text-brand-navy">Starting at $350</p>
                     <p className="text-muted-foreground">
                       Gutters cleared, downspouts flushed, and roof debris blown off.
                     </p>
@@ -344,7 +344,7 @@ const RoofCleaning = () => {
                     </li>
                     <li className="flex items-start gap-2 text-sm">
                       <CheckCircle className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
-                      <span>From $849, based on roof size and condition</span>
+                      <span>From $850, based on roof size and condition</span>
                     </li>
                   </ul>
                   <Button variant="cta-orange" size="lg" onClick={navigateToContact}>

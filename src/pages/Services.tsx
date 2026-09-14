@@ -19,17 +19,18 @@ const Services = () => {
 
   const services = [
     {
-      title: "Roof Cleaning",
+      title: "Roof & Gutter Cleaning Combo",
       icon: Droplet,
       image: roofImg,
       href: "/roof-cleaning",
       badge: "Most Popular",
-      price: "Starting at $849",
-      description: "Warranty-safe moss removal for asphalt, metal, and composite roofs. Includes gutter cleaning and a 12-month moss-free guarantee.",
+      price: "Starting at $850",
+      description: "Everything in complete gutter cleaning, plus deep roof cleaning, moss removal and treatment. One all-in-one package with a 12-month moss-free guarantee.",
       includes: [
-        "Safe, low-pressure cleaning",
+        "Deep roof cleaning & moss removal",
         "Moss treatment & prevention",
-        "Gutter cleaning included",
+        "Roof blow-off, gutter cleanout & downspout flushing",
+        "Debris cleanup included",
         "12-month moss-free guarantee",
       ],
     },
@@ -38,8 +39,8 @@ const Services = () => {
       icon: Home,
       image: gutterImg,
       href: "/gutter-cleaning",
-      price: "Starting at $400",
-      description: "Complete gutter system cleanout with downspout flush and roof blow-off. Hand-cleaned for thorough results.",
+      price: "Starting at $350",
+      description: "Roof blow-off, gutter cleanout, downspout flushing, and cleanup. Does not include deep roof cleaning, moss removal, or moss treatment.",
       includes: [
         "Hand removal of all debris",
         "Downspout flush & testing",
@@ -53,7 +54,7 @@ const Services = () => {
     <>
       <SEOHead
         title="All Services"
-        description="Roof cleaning starting at $849 and complete gutter cleaning starting at $400 in Seattle, Kenmore, Bothell, and Kirkland."
+        description="Roof cleaning starting at $850 and complete gutter cleaning starting at $350 in Seattle, Kenmore, Bothell, and Kirkland."
         url="https://www.seattleprowash.com/services"
       />
       <Header />
@@ -103,7 +104,7 @@ const Services = () => {
                         loading="lazy"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                      <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between">
+                      <div className="absolute bottom-3 left-4 right-4 flex flex-wrap items-center justify-between gap-2">
                         <h3 className="text-xl font-bold text-white">{service.title}</h3>
                         {service.badge && (
                           <Badge className="bg-brand-orange text-white border-brand-orange text-xs">

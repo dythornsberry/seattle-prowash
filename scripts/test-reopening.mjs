@@ -25,10 +25,15 @@ try {
         window.scrollTo(0, 0);
       });
       const body = await page.locator('body').innerText();
-      assert.doesNotMatch(body, /\$499|\$250|fully booked|reopen.*January/i, path);
+      assert.doesNotMatch(body, /\$499|\$250|\$849|\$400\b|fully booked|reopen.*January/i, path);
+      if (['/', '/pricing', '/roof-cleaning', '/services'].includes(path)) {
+        assert.match(body, /Roof & Gutter Cleaning Combo/i, path);
+        assert.match(body, /deep roof cleaning/i, path);
+        assert.match(body, /moss removal/i, path);
+      }
       if (path !== '/gallery') {
-        assert.match(body, /\$849/, path);
-        assert.match(body, /\$400/, path);
+        assert.match(body, /\$850/, path);
+        assert.match(body, /\$350/, path);
       }
       const overflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1);
       assert.equal(overflow, false, `Horizontal overflow: ${path} at ${width}px`);
@@ -75,7 +80,7 @@ try {
   }
   await fillDetails();
   const addon = page.getByRole('checkbox', { name: 'Pressure washing add-on', exact: true });
-  const roof = page.getByRole('checkbox', { name: 'Roof Cleaning', exact: true });
+  const roof = page.getByRole('checkbox', { name: 'Roof & Gutter Cleaning Combo', exact: true });
   const gutter = page.getByRole('checkbox', { name: 'Complete Gutter Cleaning', exact: true });
   assert.equal(await addon.isDisabled(), true);
   assert.equal(await page.getByRole('checkbox').count(), 3);

@@ -14,8 +14,8 @@ import { supabase } from "@/integrations/supabase/client";
 
 const primaryServices = ["Roof cleaning (moss removal & treatment)", "Gutter cleaning (includes roof blow-off)"];
 const serviceOptions = [
-  { value: primaryServices[0], label: "Roof Cleaning", detail: "Moss removal, treatment & gutter cleaning. Starting at $849.", primary: true },
-  { value: primaryServices[1], label: "Complete Gutter Cleaning", detail: "Gutters, downspouts, roof blow-off & cleanup. Starting at $400.", primary: true },
+  { value: primaryServices[0], label: "Roof & Gutter Cleaning Combo", detail: "Deep roof cleaning, moss removal & treatment, gutters, downspouts & cleanup. Starting at $850.", primary: true },
+  { value: primaryServices[1], label: "Complete Gutter Cleaning", detail: "Roof blow-off, gutters, downspouts & cleanup. No moss removal or treatment. Starting at $350.", primary: true },
   { value: "Pressure washing", label: "Pressure washing add-on", detail: "Only with roof or gutter cleaning. Quoted separately, subject to availability.", primary: false },
 ];
 
@@ -340,7 +340,7 @@ const TwoStepQuoteForm = () => {
               Tell us what needs cleaning. Dylan will call or text about your quote.
             </p>
             <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
-              Roof cleaning starting at $849. Complete gutter cleaning starting at $400.
+              Roof &amp; gutter cleaning combo from $850: deep roof cleaning, moss removal &amp; treatment, and gutter cleaning. Gutter cleaning with roof blow-off from $350.
             </p>
           </div>
 

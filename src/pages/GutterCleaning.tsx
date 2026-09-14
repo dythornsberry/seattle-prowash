@@ -28,7 +28,7 @@ const GutterCleaning = () => {
       serviceType: "Gutter Cleaning",
       url: `${COMPANY_INFO.url}/gutter-cleaning`,
       offers: {
-        priceRange: "$400+",
+        priceRange: "$350+",
         priceCurrency: "USD"
       }
     });
@@ -97,7 +97,7 @@ const GutterCleaning = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Complete Gutter Cleaning in Seattle & Kenmore, WA"
-        description="Expert gutter cleaning in Seattle, Kenmore, Bothell & Kirkland — starting at $400 with free roof blow-off. Prevent water damage. Licensed & insured. Fast quotes."
+        description="Expert gutter cleaning in Seattle, Kenmore, Bothell & Kirkland — starting at $350 with free roof blow-off. Prevent water damage. Licensed & insured. Fast quotes."
         url="https://www.seattleprowash.com/gutter-cleaning"
         image={gutterCleaningImage}
       />
@@ -114,9 +114,9 @@ const GutterCleaning = () => {
                   </h1>
                   
                   <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
-                    Gutters cleared, downspouts flushed, and roof debris blown off.
+                    Roof debris blown off, gutters cleared, downspouts flushed, and debris cleaned up. For deep roof cleaning, moss removal and treatment, choose our roof &amp; gutter combo from $850.
                   </p>
-                  <p className="text-white font-semibold mb-6">From $400</p>
+                  <p className="text-white font-semibold mb-6">From $350</p>
 
                   <div className="grid grid-cols-2 sm:flex gap-3">
                     <Button 

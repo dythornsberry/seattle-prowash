@@ -37,7 +37,7 @@ const RoofCleaningCostSeattle = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="What Roof Cleaning Costs in Seattle (2026 Guide)"
-        description="Real 2026 roof cleaning prices from a Seattle-area contractor. Roof cleaning starts at $849 with gutter cleaning included. Complete gutter cleaning starts at $400. See what drives your price."
+        description="Real 2026 roof cleaning prices from a Seattle-area contractor. Roof cleaning starts at $850 with gutter cleaning included. Complete gutter cleaning starts at $350. See what drives your price."
         url="https://www.seattleprowash.com/resources/roof-cleaning-cost-seattle"
       />
       <Header />
@@ -86,7 +86,7 @@ const RoofCleaningCostSeattle = () => {
                 <div className="prose prose-lg max-w-none">
                   <h2>The Short Answer</h2>
                   <p>
-                    Our roof cleaning starts at <strong>$849</strong>, including moss removal, treatment, and gutter cleaning. Complete gutter cleaning on its own starts at <strong>$400</strong>. Your final quote depends on roof material, size, buildup, and access; large or heavily moss-covered roofs can cost $1,500 or more.
+                    Our roof cleaning starts at <strong>$850</strong>, including moss removal, treatment, and gutter cleaning. Complete gutter cleaning on its own starts at <strong>$350</strong>. Your final quote depends on roof material, size, buildup, and access; large or heavily moss-covered roofs can cost $1,500 or more.
                   </p>
                   <p>
                     Those are our actual prices, not national averages pulled from a lead-generation site. National cost guides often quote $300 roof cleanings that simply don't exist here — Seattle's steep pitches, two-story homes, and heavy moss make our market different.
@@ -94,12 +94,12 @@ const RoofCleaningCostSeattle = () => {
 
                   <h2>Cost by Roof Type</h2>
 
-                  <h3>Asphalt & Composite Shingle: Starting at $849</h3>
+                  <h3>Asphalt & Composite Shingle: Starting at $850</h3>
                   <p>
                     This covers the large majority of homes we clean. A one-story rambler with light moss lands near the bottom of the range. A two-story home with a steep pitch and several years of moss buildup lands near the top. The work includes moss removal, a preventative treatment that keeps moss from coming back (we guarantee it for 12 months), and a full gutter cleaning.
                   </p>
 
-                  <h3>Metal Roofs: Starting at $849</h3>
+                  <h3>Metal Roofs: Starting at $850</h3>
                   <p>
                     Metal roofs are more common around here every year, and we clean a lot of them. They cost more because the surface is slick to work on and easy to scratch or dent if it's treated like asphalt — the process is slower and more careful. Standing seam, corrugated, and metal shake all fall in this category. Complex or large metal roofs can run $1,500 or more.
                   </p>

@@ -7,13 +7,13 @@ import gutterImageMobile from "@/assets/gutter-cleaning-before-after-mobile.webp
 
 const services = [
   {
-    name: "Roof Cleaning",
+    name: "Roof & Gutter Cleaning Combo",
     path: "/roof-cleaning",
     image: roofImage,
     mobileImage: roofImageMobile,
     alt: "Roof before and after moss removal",
-    description: "Moss removal and treatment. Gutter cleaning included.",
-    price: "Starting at $849",
+    description: "All in one: deep roof cleaning, moss removal and treatment, gutter cleanout, downspout flushing, and debris cleanup.",
+    price: "Starting at $850",
     detail: "12-month moss-free guarantee",
   },
   {
@@ -22,8 +22,8 @@ const services = [
     image: gutterImage,
     mobileImage: gutterImageMobile,
     alt: "Gutters before and after debris removal",
-    description: "Gutters cleared, downspouts flushed, and roof debris blown off.",
-    price: "Starting at $400",
+    description: "Roof debris blown off, gutters cleared, downspouts flushed, and debris cleaned up. Moss removal and treatment are part of the roof combo, not this service.",
+    price: "Starting at $350",
     detail: "Debris cleanup included",
   },
 ];

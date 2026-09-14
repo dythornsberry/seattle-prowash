@@ -136,7 +136,7 @@ const BestTimeRoofGutterCleaning = () => {
                     </Link>
                     <Link to="/gutter-cleaning" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
                       <h4 className="font-semibold text-brand-navy mb-2">Gutter Cleaning</h4>
-                      <p className="text-sm text-muted-foreground">Hand-cleaned with downspout flush, from $400</p>
+                      <p className="text-sm text-muted-foreground">Hand-cleaned with downspout flush, from $350</p>
                     </Link>
                   </div>
                   <div className="text-center mt-4">
