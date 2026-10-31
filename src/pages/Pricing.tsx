@@ -85,7 +85,7 @@ const Pricing = () => {
               ))}
             </div>
             <p className="max-w-3xl mx-auto mt-6 text-center text-sm text-muted-foreground">
-              Price depends on roof size, pitch, material, and access. Large or complex roofs may cost more. Metal, tile, and cedar roofs are quoted individually. Exact price confirmed before scheduling.
+              Price depends on roof size, pitch, material, and access. Large or complex roofs may cost more. Metal roofs start at $850. Tile and cedar roofs are quoted individually. Exact price confirmed before scheduling.
             </p>
 
             <div id="heavy-moss-examples" className="max-w-5xl mx-auto mt-12 scroll-mt-28">
