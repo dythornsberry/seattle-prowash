@@ -346,6 +346,15 @@ async function snapshotWithBrowser(browser, port) {
         () => (document.getElementById('root')?.innerHTML.length ?? 0) > 500,
         { timeout: 15000 }
       );
+      // JS chunks the route needed for its first render (page chunk + its
+      // imports). Preloading them lets the browser fetch them alongside the
+      // entry bundle instead of after it, so React mounts sooner.
+      const routeChunks = await page.evaluate(() =>
+        performance.getEntriesByType('resource')
+          .map((e) => new URL(e.name).pathname)
+          .filter((p) => p.startsWith('/assets/') && p.endsWith('.js'))
+      );
+
       // Scroll through the page so IntersectionObserver-gated sections
       // (DeferredSection) render before we snapshot.
       await page.evaluate(async () => {
@@ -367,6 +376,11 @@ async function snapshotWithBrowser(browser, port) {
 
       let html = readFileSync(outFile, 'utf-8');
       html = html.replace('<div id="root"></div>', `<div id="root">${rootHtml}</div>`);
+      const preloadTags = [...new Set(routeChunks)]
+        .filter((p) => !html.includes(p))
+        .map((p) => `    <link rel="modulepreload" crossorigin href="${p}">`)
+        .join('\n');
+      if (preloadTags) html = html.replace('</head>', `${preloadTags}\n  </head>`);
       if (schemas.length) {
         const schemaTags = schemas
           .map((s) => `    <script type="application/ld+json" data-prerendered="1">${s}</script>`)
