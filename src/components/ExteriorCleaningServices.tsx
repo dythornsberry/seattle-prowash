@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import houseImage from "@/assets/house-wash-before-after-2026.jpg";
-import concreteImage from "@/assets/patio-pressure-wash-before-after-2026.jpg";
-import deckImage from "@/assets/deck-cleaning-before-after-2026.jpg";
+import houseImage from "@/assets/house-wash-before-after-2026-800.webp";
+import concreteImage from "@/assets/patio-pressure-wash-before-after-2026-800.webp";
+import deckImage from "@/assets/deck-cleaning-before-after-2026-800.webp";
 
 const services = [
   { name: "House Soft Washing", description: "Low-pressure cleaning for siding, trim, and soffits.", image: houseImage, alt: "House siding before and after soft washing", href: "/pressure-washing#house-soft-washing" },
@@ -17,7 +17,7 @@ const ExteriorCleaningServices = () => (
       <div className="grid md:grid-cols-3 gap-6">
         {services.map((service) => (
           <Link key={service.name} to={service.href} className="group hover:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange rounded-lg">
-            <img src={service.image} alt={service.alt} loading="lazy" className="w-full aspect-[4/3] object-cover rounded-lg" />
+            <img src={service.image} alt={service.alt} loading="lazy" decoding="async" className="w-full aspect-[4/3] object-cover rounded-lg" />
             <h3 className="flex items-start justify-between gap-3 mt-4 text-xl font-semibold text-foreground">
               {service.name}<ArrowRight className="w-5 h-5 shrink-0 mt-1 text-brand-orange" aria-hidden="true" />
             </h3>

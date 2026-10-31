@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { navigateToContact } from "@/lib/navigation";
 import recentAsphaltRoofBeforeAfter from "@/assets/recent-asphalt-roof-before-after-2026.webp";
-import asphaltMossSeamsBA from "@/assets/asphalt-moss-seams-ba-2026.jpg";
+import asphaltMossSeamsBA from "@/assets/asphalt-moss-seams-ba-2026-1000.webp";
 import lakefrontMetalBA from "@/assets/lakefront-metal-before-after-2026.jpg";
 import rooftopPatioBA from "@/assets/rooftop-patio-ba-2026.jpg";
 import asphaltComposite4 from "@/assets/asphalt-roof-before-after-4-2026.jpg";

@@ -126,6 +126,7 @@ const GutterCleaning = () => {
                     width={1200}
                     height={800}
                     loading="eager"
+                    fetchPriority="high"
                   />
                 </div>
               </div>

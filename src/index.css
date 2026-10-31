@@ -315,6 +315,9 @@
   .fade-up { opacity: 1; transform: none; animation: none; transition: none; }
 }
 
+/* Hero content is what loads first (the LCP), so it never waits on the scroll animation */
+main > section:first-of-type .fade-up { opacity: 1; transform: none; animation: none; transition: none; }
+
 /* Safety-net keyframes (outside @layer so they resolve correctly):
    ensures .fade-up content becomes visible even if
    IntersectionObserver fails to add .in-view */

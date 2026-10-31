@@ -14,14 +14,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, MessageCircle } from "lucide-react";
-import roofCleaningImage from "@/assets/roof-moss-removal-detailed-before-after.jpg";
+import roofCleaningImage from "@/assets/roof-moss-removal-detailed-before-after-700.webp";
 import roofBA1 from "@/assets/asphalt-roof-moss-cleaning-before-after.jpg";
 import roofBA2 from "@/assets/metal-roof-cleaning-before-after.jpg";
 import roofBA3 from "@/assets/roof-softwash-before-after.jpg";
-import lakefrontMetalBefore from "@/assets/metal-roof-before-3-2026.jpg";
-import lakefrontMetalAfter from "@/assets/metal-roof-after-3-2026.jpg";
+import lakefrontMetalBefore from "@/assets/metal-roof-before-3-2026-600.webp";
+import lakefrontMetalAfter from "@/assets/metal-roof-after-3-2026-600.webp";
 import roofNeedlesBA from "@/assets/roof-needles-ba-2026.jpg";
-import mossSeamsBA from "@/assets/asphalt-moss-seams-ba-2026.jpg";
+import mossSeamsBA from "@/assets/asphalt-moss-seams-ba-2026-1000.webp";
 import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 import { navigateToContact } from "@/lib/navigation";
 
@@ -136,6 +136,7 @@ const RoofCleaning = () => {
                     width={1200}
                     height={800}
                     loading="eager"
+                    fetchPriority="high"
                   />
                 </div>
               </div>

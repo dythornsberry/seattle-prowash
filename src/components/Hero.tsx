@@ -3,10 +3,15 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { navigateToContact } from "@/lib/navigation";
 import heroImage from "@/assets/truck-at-jobsite.jpg";
+import heroImageMobile from "@/assets/truck-at-jobsite-800.webp";
+import heroImageWide from "@/assets/truck-at-jobsite-1200.webp";
 
 const Hero = () => (
   <section className="prowash-hero relative mt-20 overflow-hidden bg-charcoal" aria-labelledby="home-title">
+    {/* Media-query sources (not srcset) so the browser picks exactly what index.html preloads */}
     <picture className="absolute inset-0">
+      <source media="(max-width: 767px)" srcSet={heroImageMobile} type="image/webp" />
+      <source media="(min-width: 768px)" srcSet={heroImageWide} type="image/webp" />
       <img src={heroImage} alt="Seattle ProWash's equipped cleaning truck at a residential job" width={1200} height={900} fetchPriority="high" className="prowash-hero-image h-full w-full object-cover" />
     </picture>
     <div className="absolute inset-0 bg-black/40" />

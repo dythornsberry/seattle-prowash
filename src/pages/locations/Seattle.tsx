@@ -13,7 +13,7 @@ import NearbyLocations from "@/components/NearbyLocations";
 import { nearbyCitiesData } from "@/lib/locationNearbyCities";
 import newRoofBefore1 from "@/assets/new-roof-before-1.jpg";
 import metalRoofCleaningBeforeAfter from "@/assets/metal-roof-cleaning-before-after.jpg";
-import roofMossRemovalDetailedBeforeAfter from "@/assets/roof-moss-removal-detailed-before-after.jpg";
+import roofMossRemovalDetailedBeforeAfter from "@/assets/roof-moss-removal-detailed-before-after-700.webp";
 import gutterCleaningBeforeAfter from "@/assets/gutter-cleaning-before-after.jpg";
 import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 import { navigateToContact } from "@/lib/navigation";

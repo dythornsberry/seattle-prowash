@@ -1,7 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
-import App from "./App.tsx";
+import App, { preloadRoute } from "./App.tsx";
 import "./index.css";
 import "./utils/ga4";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
@@ -27,4 +27,8 @@ const app = (
 
 // The crawler HTML is a post-effect browser snapshot, not React SSR output.
 // Mount afresh: deferred sections and generated IDs cannot hydrate that snapshot.
-createRoot(container).render(app);
+// Wait for the route's chunk first so the snapshot stays up until real content
+// can replace it (a failed preload still mounts; Suspense handles the retry).
+preloadRoute(window.location.pathname)
+  .catch(() => undefined)
+  .then(() => createRoot(container).render(app));
