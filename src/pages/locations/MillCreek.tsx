@@ -11,37 +11,21 @@ import ServiceFAQ from "@/components/ServiceFAQ";
 import NearbyLocations from "@/components/NearbyLocations";
 import RelatedResources from "@/components/RelatedResources";
 import { nearbyCitiesData } from "@/lib/locationNearbyCities";
-import { generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { generateCityServiceSchema, injectSchema } from "@/utils/schema";
 import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 
 const MillCreek = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    const localBusinessSchema = generateLocalBusinessSchema({
-      name: "Seattle ProWash - Mill Creek",
+    const serviceSchema = generateCityServiceSchema({
+      city: "Mill Creek",
       description: "Professional roof cleaning, moss removal, and gutter cleaning services in Mill Creek, WA",
       url: "https://www.seattleprowash.com/mill-creek-roof-gutter-cleaning",
-      telephone: COMPANY_INFO.telephone,
-      address: {
-        streetAddress: "",
-        addressLocality: "Mill Creek",
-        addressRegion: "WA",
-        postalCode: "98012",
-        addressCountry: "US"
-      },
-      geo: {
-        latitude: 47.8601,
-        longitude: -122.2043
-      },
-      areaServed: ["Mill Creek"],
-      rating: {
-        ratingValue: 5.0,
-        reviewCount: 233
-      }
+      areaServed: ["Mill Creek"]
     });
 
-    const cleanup = injectSchema(localBusinessSchema);
+    const cleanup = injectSchema(serviceSchema);
     return cleanup;
   }, []);
 

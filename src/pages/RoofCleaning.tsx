@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
 import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -43,32 +43,6 @@ const RoofCleaning = () => {
     });
     const cleanupService = injectSchema(serviceSchema);
 
-    // Inject FAQ Schema
-    const faqSchema = generateFAQSchema({
-      faqs: [
-        {
-          question: "Will you damage my shingles with high pressure?",
-          answer: "We never use high pressure on asphalt shingles. Our soft-wash process uses low pressure and specialized solutions to safely remove moss, algae, and lichen without damaging your roof or voiding warranties."
-        },
-        {
-          question: "How long does the moss treatment last?",
-          answer: "Our moss prevention treatment typically lasts 12 months. The treatment kills existing moss at the root and prevents new growth for up to a year, depending on weather and tree coverage."
-        },
-        {
-          question: "Do I need to be home during the roof cleaning?",
-          answer: "You don't need to be home. We work on the exterior only and will send you before/after photos when the job is complete. Just make sure we have clear access to your roof."
-        },
-        {
-          question: "Do you clean metal roofs?",
-          answer: "Yes — we clean a lot of metal roofs, including standing seam and corrugated panels. Metal needs a gentler, finish-safe process than asphalt, and it comes with the same moss treatment and 12-month guarantee. Metal roof cleaning starts at $850."
-        },
-        {
-          question: "Can moss on my roof affect my homeowners insurance?",
-          answer: "It can, and it catches a lot of homeowners off guard. Insurance carriers increasingly review aerial and street-view imagery, and visible moss can trigger a fix-it notice or even a non-renewal. If you've received a letter from your insurer about your roof's condition, a professional cleaning and moss treatment is usually what resolves it — and we can provide before/after photos to document the work."
-        }
-      ]
-    });
-    const cleanupFAQ = injectSchema(faqSchema);
 
     // Inject Breadcrumb Schema
     const breadcrumbSchema = generateBreadcrumbSchema([
@@ -79,7 +53,6 @@ const RoofCleaning = () => {
 
     return () => {
       cleanupService();
-      cleanupFAQ();
       cleanupBreadcrumb();
     };
   }, []);
@@ -114,7 +87,7 @@ const RoofCleaning = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Roof Cleaning & Moss Removal in Seattle, WA"
-        description="Roof cleaning and moss removal for every roof type — asphalt, composite, metal, tile & cedar shake — in Seattle, Kenmore, Bothell & Kirkland. 12-month moss-free guarantee. Licensed & insured."
+        description="Roof cleaning and moss removal for every roof type (asphalt, composite, metal, tile & cedar shake) in Seattle, Kenmore, Bothell & Kirkland. 12-month moss-free guarantee. Licensed & insured."
         url="https://www.seattleprowash.com/roof-cleaning"
         image={roofCleaningImage}
       />
@@ -126,8 +99,9 @@ const RoofCleaning = () => {
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div className="fade-up">
+                  <p className="text-sm font-semibold text-white mb-3">Roof &amp; gutter combo</p>
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
-                    Roof &amp; Gutter Cleaning Combo
+                    Roof Cleaning &amp; Moss Removal
                   </h1>
                   
                   <p className="text-lg md:text-xl text-white/90 mb-6 font-medium">
@@ -225,11 +199,11 @@ const RoofCleaning = () => {
             },
             {
               question: "Do you clean metal roofs?",
-              answer: "Yes — we clean a lot of metal roofs, including standing seam and corrugated panels. Metal needs a gentler, finish-safe process than asphalt, and it comes with the same moss treatment and 12-month guarantee. Metal roof cleaning starts at $850."
+              answer: "Yes. We clean a lot of metal roofs, including standing seam and corrugated panels. Metal needs a gentler, finish-safe process than asphalt, and it comes with the same moss treatment and 12-month guarantee. Metal roof cleaning starts at $850."
             },
             {
               question: "Can moss on my roof affect my homeowners insurance?",
-              answer: "It can, and it catches a lot of homeowners off guard. Insurance carriers increasingly review aerial and street-view imagery, and visible moss can trigger a fix-it notice or even a non-renewal. If you've received a letter from your insurer about your roof's condition, a professional cleaning and moss treatment is usually what resolves it — and we can provide before/after photos to document the work."
+              answer: "It can, and it catches a lot of homeowners off guard. Insurance carriers increasingly review aerial and street-view imagery, and visible moss can trigger a fix-it notice or even a non-renewal. If you've received a letter from your insurer about your roof's condition, a professional cleaning and moss treatment is usually what resolves it, and we can provide before/after photos to document the work."
             }
           ]}
         />
@@ -327,7 +301,7 @@ const RoofCleaning = () => {
                     </div>
                   </div>
                   <p className="text-sm text-muted-foreground text-center mt-3 italic">
-                    Lake Washington waterfront — same roof, one visit.
+                    Lake Washington waterfront. Same roof, one visit.
                   </p>
                 </div>
                 <div className="fade-up">

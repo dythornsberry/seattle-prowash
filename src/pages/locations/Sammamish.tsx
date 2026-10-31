@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { generateBreadcrumbSchema, generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { generateBreadcrumbSchema, generateCityServiceSchema, injectSchema } from "@/utils/schema";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -18,26 +18,14 @@ import { navigateToContact } from "@/lib/navigation";
 
 const Sammamish = () => {
   useEffect(() => {
-    // Inject LocalBusiness Schema for Sammamish
-    const businessSchema = generateLocalBusinessSchema({
-      ...COMPANY_INFO,
-      name: `${COMPANY_INFO.name} - Sammamish`,
+    // Service schema for Sammamish
+    const serviceSchema = generateCityServiceSchema({
+      city: "Sammamish",
       description: "Professional roof cleaning, gutter cleaning, and exterior washing services in Sammamish, WA. Serving all Sammamish neighborhoods. 12-month moss-free guarantee.",
       url: "https://www.seattleprowash.com/sammamish-roof-gutter-cleaning",
-      address: {
-        streetAddress: "",
-        addressLocality: "Sammamish",
-        addressRegion: "WA",
-        postalCode: "98074",
-        addressCountry: "US"
-      },
-      geo: {
-        latitude: 47.6163,
-        longitude: -122.0356
-      },
       areaServed: ["Sammamish", "Klahanie", "Sahalee", "Pine Lake", "Beaver Lake"]
     });
-    const cleanupBusiness = injectSchema(businessSchema);
+    const cleanupBusiness = injectSchema(serviceSchema);
 
     // Inject Breadcrumb Schema
     const breadcrumbSchema = generateBreadcrumbSchema([
@@ -121,7 +109,7 @@ const Sammamish = () => {
                       </div>
                       <h3 className="text-xl font-bold mb-4 text-dark-teal">5-Star Service</h3>
                       <p className="text-gray-600">
-                        233 five-star reviews and counting — homeowners across Sammamish and surrounding areas trust our professional service.
+                        233 five-star reviews and counting. Homeowners across Sammamish and surrounding areas trust our professional service.
                       </p>
                     </CardContent>
                   </Card>

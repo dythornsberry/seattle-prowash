@@ -73,7 +73,7 @@ const RoofCleaningCostSeattle = () => {
                 </h1>
 
                 <p className="text-xl text-white/90 leading-relaxed">
-                  Actual numbers from a contractor who cleans roofs here every week — no "call for pricing" runaround.
+                  Actual numbers from a contractor who cleans roofs here every week. No "call for pricing" runaround.
                 </p>
               </div>
             </div>
@@ -89,7 +89,7 @@ const RoofCleaningCostSeattle = () => {
                     Our roof cleaning starts at <strong>$850</strong>, including moss removal, treatment, and gutter cleaning. Complete gutter cleaning on its own starts at <strong>$350</strong>. Your final quote depends on roof material, size, buildup, and access; large or heavily moss-covered roofs can cost $1,500 or more.
                   </p>
                   <p>
-                    Those are our actual prices, not national averages pulled from a lead-generation site. National cost guides often quote $300 roof cleanings that simply don't exist here — Seattle's steep pitches, two-story homes, and heavy moss make our market different.
+                    Those are our actual prices, not national averages pulled from a lead-generation site. National cost guides often quote $300 roof cleanings that simply don't exist here. Seattle's steep pitches, two-story homes, and heavy moss make our market different.
                   </p>
 
                   <h2>Cost by Roof Type</h2>
@@ -101,12 +101,12 @@ const RoofCleaningCostSeattle = () => {
 
                   <h3>Metal Roofs: Starting at $850</h3>
                   <p>
-                    Metal roofs are more common around here every year, and we clean a lot of them. They cost more because the surface is slick to work on and easy to scratch or dent if it's treated like asphalt — the process is slower and more careful. Standing seam, corrugated, and metal shake all fall in this category. Complex or large metal roofs can run $1,500 or more.
+                    Metal roofs are more common around here every year, and we clean a lot of them. They cost more because the surface is slick to work on and easy to scratch or dent if it's treated like asphalt, so the process is slower and more careful. Standing seam, corrugated, and metal shake all fall in this category. Complex or large metal roofs can run $1,500 or more.
                   </p>
 
                   <h3>Tile & Cedar Shake: Custom Quote</h3>
                   <p>
-                    Yes, we clean tile and cedar shake roofs too. They need multi-day treatment processes and very careful handling, so they're priced by custom quote — expect quotes starting well above $1,500 from anyone doing it properly.
+                    Yes, we clean tile and cedar shake roofs too. They need multi-day treatment processes and very careful handling, so they're priced by custom quote. Expect quotes starting well above $1,500 from anyone doing it properly.
                   </p>
 
                   <h2>What Actually Drives Your Price</h2>
@@ -123,8 +123,8 @@ const RoofCleaningCostSeattle = () => {
                   </p>
                   <ul>
                     <li>Moss and debris removal from the roof surface</li>
-                    <li>Preventative moss treatment (ask how long it's guaranteed — ours is 12 months)</li>
-                    <li>Gutter cleaning with downspout flush — the moss you remove ends up in the gutters, so a roof cleaning without gutter cleaning is half a job</li>
+                    <li>Preventative moss treatment (ask how long it's guaranteed; ours is 12 months)</li>
+                    <li>Gutter cleaning with downspout flush. The moss you remove ends up in the gutters, so a roof cleaning without gutter cleaning is half a job</li>
                     <li>Before and after photos, so you can see the work without climbing a ladder</li>
                     <li>Cleanup of everything that came off the roof</li>
                   </ul>

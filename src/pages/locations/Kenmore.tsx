@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { generateBreadcrumbSchema, generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { generateBreadcrumbSchema, generateCityServiceSchema, injectSchema } from "@/utils/schema";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -18,23 +18,14 @@ import { navigateToContact } from "@/lib/navigation";
 
 const Kenmore = () => {
   useEffect(() => {
-    // Inject LocalBusiness Schema for Kenmore
-    const businessSchema = generateLocalBusinessSchema({
-      ...COMPANY_INFO,
-      name: `${COMPANY_INFO.name} - Kenmore`,
+    // Service schema for Kenmore
+    const serviceSchema = generateCityServiceSchema({
+      city: "Kenmore",
       description: "Professional roof cleaning and gutter cleaning services in Kenmore, WA. Serving Kenmore Highlands, Moorlands, and all local neighborhoods. 12-month moss-free guarantee.",
       url: "https://www.seattleprowash.com/kenmore-roof-gutter-cleaning",
-      address: {
-        ...COMPANY_INFO.address,
-        addressLocality: "Kenmore"
-      },
-      geo: {
-        latitude: 47.7574,
-        longitude: -122.2429
-      },
       areaServed: ["Kenmore", "Kenmore Highlands", "Moorlands", "Inglewood", "Kenmore Village"]
     });
-    const cleanupBusiness = injectSchema(businessSchema);
+    const cleanupBusiness = injectSchema(serviceSchema);
 
     // Inject Breadcrumb Schema
     const breadcrumbSchema = generateBreadcrumbSchema([
@@ -129,7 +120,7 @@ const Kenmore = () => {
                       </div>
                       <h3 className="text-xl font-bold mb-4 text-dark-teal">5-Star Service</h3>
                       <p className="text-gray-600">
-                        233 five-star reviews and counting — homeowners across Kenmore and surrounding areas trust our professional service.
+                        233 five-star reviews and counting. Homeowners across Kenmore and surrounding areas trust our professional service.
                       </p>
                     </CardContent>
                   </Card>

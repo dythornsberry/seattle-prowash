@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { generateBreadcrumbSchema, generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { generateBreadcrumbSchema, generateCityServiceSchema, injectSchema } from "@/utils/schema";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -18,30 +18,14 @@ import { navigateToContact } from "@/lib/navigation";
 
 const LakeForestPark = () => {
   useEffect(() => {
-    // Inject LocalBusiness Schema for Lake Forest Park
-    const businessSchema = generateLocalBusinessSchema({
-      ...COMPANY_INFO,
-      name: `${COMPANY_INFO.name} - Lake Forest Park`,
+    // Service schema for Lake Forest Park
+    const serviceSchema = generateCityServiceSchema({
+      city: "Lake Forest Park",
       description: "Professional roof cleaning, moss removal, and gutter cleaning in Lake Forest Park, WA. Serving Sheridan Beach, Horizon View, and all local neighborhoods. 12-month moss-free guarantee.",
       url: "https://www.seattleprowash.com/lake-forest-park-roof-gutter-cleaning",
-      address: {
-        streetAddress: "",
-        addressLocality: "Lake Forest Park",
-        addressRegion: "WA",
-        postalCode: "98155",
-        addressCountry: "US"
-      },
-      geo: {
-        latitude: 47.7568,
-        longitude: -122.2810
-      },
-      areaServed: ["Lake Forest Park", "Sheridan Beach", "Horizon View", "Brookside", "Sheridan Heights"],
-      rating: {
-        ratingValue: 5.0,
-        reviewCount: 233
-      }
+      areaServed: ["Lake Forest Park", "Sheridan Beach", "Horizon View", "Brookside", "Sheridan Heights"]
     });
-    const cleanupBusiness = injectSchema(businessSchema);
+    const cleanupBusiness = injectSchema(serviceSchema);
 
     // Inject Breadcrumb Schema
     const breadcrumbSchema = generateBreadcrumbSchema([
@@ -112,7 +96,7 @@ const LakeForestPark = () => {
                     Lake Forest Park's Roof & Gutter Specialists Next Door
                   </h2>
                   <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                    We're based in Kenmore, one town over on Bothell Way. All those firs, cedars, and maples that make Lake Forest Park beautiful also drop needles in your gutters and shade your roof — which is exactly the work we do all day.
+                    We're based in Kenmore, one town over on Bothell Way. All those firs, cedars, and maples that make Lake Forest Park beautiful also drop needles in your gutters and shade your roof, which is exactly the work we do all day.
                   </p>
                 </div>
 
@@ -190,7 +174,7 @@ const LakeForestPark = () => {
                   <div className="text-center">
                     <h3 className="text-xl font-bold mb-4">Soft-Wash Roof Cleaning</h3>
                     <p className="text-white/80 mb-4">
-                      Gentle roof cleaning that removes moss, algae, and debris without high pressure — safe for asphalt, composite, and metal roofs.
+                      Gentle roof cleaning that removes moss, algae, and debris without high pressure. Safe for asphalt, composite, and metal roofs.
                     </p>
                     <div className="text-bright-orange font-semibold">Shingle-Safe Method</div>
                   </div>

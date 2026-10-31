@@ -11,37 +11,21 @@ import ServiceFAQ from "@/components/ServiceFAQ";
 import NearbyLocations from "@/components/NearbyLocations";
 import RelatedResources from "@/components/RelatedResources";
 import { nearbyCitiesData } from "@/lib/locationNearbyCities";
-import { generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { generateCityServiceSchema, injectSchema } from "@/utils/schema";
 import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 
 const MountlakeTerrace = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    const localBusinessSchema = generateLocalBusinessSchema({
-      name: "Seattle ProWash - Mountlake Terrace",
+    const serviceSchema = generateCityServiceSchema({
+      city: "Mountlake Terrace",
       description: "Professional roof cleaning, moss removal, and gutter cleaning services in Mountlake Terrace, WA",
       url: "https://www.seattleprowash.com/mountlake-terrace-roof-gutter-cleaning",
-      telephone: COMPANY_INFO.telephone,
-      address: {
-        streetAddress: "",
-        addressLocality: "Mountlake Terrace",
-        addressRegion: "WA",
-        postalCode: "98043",
-        addressCountry: "US"
-      },
-      geo: {
-        latitude: 47.7881,
-        longitude: -122.3089
-      },
-      areaServed: ["Mountlake Terrace"],
-      rating: {
-        ratingValue: 5.0,
-        reviewCount: 233
-      }
+      areaServed: ["Mountlake Terrace"]
     });
 
-    const cleanup = injectSchema(localBusinessSchema);
+    const cleanup = injectSchema(serviceSchema);
     return cleanup;
   }, []);
 

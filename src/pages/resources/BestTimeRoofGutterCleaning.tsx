@@ -18,7 +18,7 @@ const BestTimeRoofGutterCleaning = () => {
   useEffect(() => {
     const articleSchema = generateArticleSchema({
       headline: "The Best Time of Year for Roof & Gutter Cleaning in Seattle",
-      description: "When to schedule roof cleaning, moss treatment, and gutter cleaning in the Seattle area — season by season, from a local contractor.",
+      description: "When to schedule roof cleaning, moss treatment, and gutter cleaning in the Seattle area, season by season, from a local contractor.",
       url: "https://www.seattleprowash.com/resources/best-time-roof-gutter-cleaning-seattle",
       datePublished: "2026-07-11",
       dateModified: "2026-07-11",
@@ -86,8 +86,8 @@ const BestTimeRoofGutterCleaning = () => {
                 <div className="prose prose-lg max-w-none">
                   <h2>The Short Answer</h2>
                   <ul>
-                    <li><strong>Roof cleaning & moss treatment:</strong> any time of year works — moss treatment is effective in every season. Spring and early summer give the treatment the longest head start before the wet season.</li>
-                    <li><strong>Gutter cleaning:</strong> late fall (after the leaves drop) is essential, and a spring check catches what winter storms left behind. Homes under evergreens need it more often — fir needles fall year-round.</li>
+                    <li><strong>Roof cleaning & moss treatment:</strong> any time of year works. Moss treatment is effective in every season. Spring and early summer give the treatment the longest head start before the wet season.</li>
+                    <li><strong>Gutter cleaning:</strong> late fall (after the leaves drop) is essential, and a spring check catches what winter storms left behind. Homes under evergreens need it more often, since fir needles fall year-round.</li>
                     <li><strong>Scheduling reality:</strong> fall is the rush. If you want a specific week in October or November, book early. Most of the year we schedule within 1–2 weeks.</li>
                   </ul>
 
@@ -100,29 +100,29 @@ const BestTimeRoofGutterCleaning = () => {
 
                   <h3>Summer (June – August)</h3>
                   <p>
-                    Dry roofs are safe roofs — for the people working on them. Summer is ideal for the actual work, and it's when steep or complicated roofs are easiest to do well. It's also the right time to fix the neglect that shows up when you're getting a house ready to sell. Moss grows slower in summer but it doesn't die on its own; a summer treatment still prevents the fall growth spurt.
+                    Dry roofs are safe roofs for the people working on them. Summer is ideal for the actual work, and it's when steep or complicated roofs are easiest to do well. It's also the right time to fix the neglect that shows up when you're getting a house ready to sell. Moss grows slower in summer but it doesn't die on its own; a summer treatment still prevents the fall growth spurt.
                   </p>
 
                   <h3>Fall (September – November)</h3>
                   <p>
-                    Gutter season. Once the big leaf drop finishes — usually mid-November around here — gutters need to be clear before the winter rain arrives. This is our busiest stretch of the year, so book ahead. A roof moss treatment in fall also works well: it protects through the wet months when moss does most of its growing.
+                    Gutter season. Once the big leaf drop finishes (usually mid-November around here), gutters need to be clear before the winter rain arrives. This is our busiest stretch of the year, so book ahead. A roof moss treatment in fall also works well: it protects through the wet months when moss does most of its growing.
                   </p>
 
                   <h3>Winter (December – February)</h3>
                   <p>
-                    People assume we shut down in winter. We don't — winter is a perfectly good time for roof cleaning and moss treatment, and scheduling is usually easiest. Moss is at its greenest and most active in the cool, wet months, which means treatment is highly effective. The only constraint is safety: we won't work a roof in high winds or ice, so winter jobs occasionally shift a few days for weather.
+                    People assume we shut down in winter. We don't. Winter is a perfectly good time for roof cleaning and moss treatment, and scheduling is usually easiest. Moss is at its greenest and most active in the cool, wet months, which means treatment is highly effective. The only constraint is safety: we won't work a roof in high winds or ice, so winter jobs occasionally shift a few days for weather.
                   </p>
 
                   <h2>How Often Should You Clean?</h2>
                   <ul>
                     <li><strong>Gutters:</strong> once or twice a year for most homes; three or four times if you're under big evergreens (common in Kenmore, Lake Forest Park, and Shoreline).</li>
-                    <li><strong>Roof moss treatment:</strong> annually keeps most roofs moss-free indefinitely — that's why our treatment carries a 12-month guarantee.</li>
+                    <li><strong>Roof moss treatment:</strong> annually keeps most roofs moss-free indefinitely. That's why our treatment carries a 12-month guarantee.</li>
                     <li><strong>Full roof cleaning:</strong> every 2–4 years depending on tree cover and how long it's been since the last one.</li>
                   </ul>
 
                   <h2>The Honest Takeaway</h2>
                   <p>
-                    The best time to clean your roof is before the moss does visible damage, and the best time to clean your gutters is before they overflow — not after. If it's been a few years, the current season is the right season. Timing matters less than actually getting it done.
+                    The best time to clean your roof is before the moss does visible damage, and the best time to clean your gutters is before they overflow, not after. If it's been a few years, the current season is the right season. Timing matters less than actually getting it done.
                   </p>
                 </div>
 

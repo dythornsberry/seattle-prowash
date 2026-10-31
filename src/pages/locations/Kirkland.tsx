@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { generateBreadcrumbSchema, generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { generateBreadcrumbSchema, generateCityServiceSchema, injectSchema } from "@/utils/schema";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -19,26 +19,14 @@ import { navigateToContact } from "@/lib/navigation";
 
 const Kirkland = () => {
   useEffect(() => {
-    // Inject LocalBusiness Schema for Kirkland
-    const businessSchema = generateLocalBusinessSchema({
-      ...COMPANY_INFO,
-      name: `${COMPANY_INFO.name} - Kirkland`,
+    // Service schema for Kirkland
+    const serviceSchema = generateCityServiceSchema({
+      city: "Kirkland",
       description: "Professional roof cleaning and gutter cleaning services in Kirkland, WA. Serving all Kirkland neighborhoods including Juanita, Totem Lake, and Houghton. 12-month moss-free guarantee.",
       url: "https://www.seattleprowash.com/kirkland-roof-gutter-cleaning",
-      address: {
-        streetAddress: "",
-        addressLocality: "Kirkland",
-        addressRegion: "WA",
-        postalCode: "98033",
-        addressCountry: "US"
-      },
-      geo: {
-        latitude: 47.6815,
-        longitude: -122.2087
-      },
       areaServed: ["Kirkland", "Downtown Kirkland", "Juanita", "Totem Lake", "Houghton", "Finn Hill", "Kingsgate"]
     });
-    const cleanupBusiness = injectSchema(businessSchema);
+    const cleanupBusiness = injectSchema(serviceSchema);
 
     // Inject Breadcrumb Schema
     const breadcrumbSchema = generateBreadcrumbSchema([

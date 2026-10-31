@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
 import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -34,24 +34,6 @@ const GutterCleaning = () => {
     });
     const cleanupService = injectSchema(serviceSchema);
 
-    // Inject FAQ Schema
-    const faqSchema = generateFAQSchema({
-      faqs: [
-        {
-          question: "How often should I clean my gutters?",
-          answer: "In the Pacific Northwest, we recommend cleaning gutters twice per year - once in late fall after leaves drop, and once in spring. Homes with lots of trees may need more frequent cleaning."
-        },
-        {
-          question: "What's included in your gutter cleaning service?",
-          answer: "Our service includes hand-scooping all debris from gutters, flushing downspouts, blowing off roof debris, checking for damage, and cleaning up all debris from your property. We also provide before/after photos."
-        },
-        {
-          question: "Do you clean inside the downspouts?",
-          answer: "Yes! We flush all downspouts to ensure proper drainage. If we encounter a clog, we'll work to clear it or let you know if there's a structural issue."
-        }
-      ]
-    });
-    const cleanupFAQ = injectSchema(faqSchema);
 
     // Inject Breadcrumb Schema
     const breadcrumbSchema = generateBreadcrumbSchema([
@@ -62,7 +44,6 @@ const GutterCleaning = () => {
 
     return () => {
       cleanupService();
-      cleanupFAQ();
       cleanupBreadcrumb();
     };
   }, []);
@@ -97,7 +78,7 @@ const GutterCleaning = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Complete Gutter Cleaning in Seattle & Kenmore, WA"
-        description="Expert gutter cleaning in Seattle, Kenmore, Bothell & Kirkland — starting at $350 with free roof blow-off. Prevent water damage. Licensed & insured. Fast quotes."
+        description="Expert gutter cleaning in Seattle, Kenmore, Bothell & Kirkland, starting at $350 with free roof blow-off. Prevent water damage. Licensed & insured. Fast quotes."
         url="https://www.seattleprowash.com/gutter-cleaning"
         image={gutterCleaningImage}
       />

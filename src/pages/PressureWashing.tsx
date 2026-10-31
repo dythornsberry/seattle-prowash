@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
 import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -39,23 +39,6 @@ const PressureWashing = () => {
     });
     const cleanupService = injectSchema(serviceSchema);
 
-    const faqSchema = generateFAQSchema({
-      faqs: [
-        {
-          question: "What surfaces can you pressure wash?",
-          answer: "We clean concrete driveways, sidewalks, patios, pavers, decks, retaining walls, and house siding. We adjust pressure and technique based on the surface material to avoid damage."
-        },
-        {
-          question: "Will pressure washing damage my concrete or siding?",
-          answer: "Too much pressure can damage surfaces. We assess the material and condition first, using low-pressure soft washing for siding and a suitable method for concrete and decks."
-        },
-        {
-          question: "How often should I pressure wash my driveway?",
-          answer: "In the Pacific Northwest, we recommend once a year. Moss and algae grow fast in our climate, so annual cleaning keeps surfaces safe and looking great."
-        }
-      ]
-    });
-    const cleanupFAQ = injectSchema(faqSchema);
 
     const breadcrumbSchema = generateBreadcrumbSchema([
       { name: "Home", url: "https://www.seattleprowash.com" },
@@ -65,7 +48,6 @@ const PressureWashing = () => {
 
     return () => {
       cleanupService();
-      cleanupFAQ();
       cleanupBreadcrumb();
     };
   }, []);

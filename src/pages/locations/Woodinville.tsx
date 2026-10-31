@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { generateBreadcrumbSchema, generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { generateBreadcrumbSchema, generateCityServiceSchema, injectSchema } from "@/utils/schema";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -19,26 +19,14 @@ import { navigateToContact } from "@/lib/navigation";
 
 const Woodinville = () => {
   useEffect(() => {
-    // Inject LocalBusiness Schema for Woodinville
-    const businessSchema = generateLocalBusinessSchema({
-      ...COMPANY_INFO,
-      name: `${COMPANY_INFO.name} - Woodinville`,
+    // Service schema for Woodinville
+    const serviceSchema = generateCityServiceSchema({
+      city: "Woodinville",
       description: "Professional roof cleaning, gutter cleaning, and exterior washing services in Woodinville, WA. Serving all Woodinville neighborhoods. 12-month moss-free guarantee.",
       url: "https://www.seattleprowash.com/woodinville-roof-gutter-cleaning",
-      address: {
-        streetAddress: "",
-        addressLocality: "Woodinville",
-        addressRegion: "WA",
-        postalCode: "98072",
-        addressCountry: "US"
-      },
-      geo: {
-        latitude: 47.7540,
-        longitude: -122.1632
-      },
       areaServed: ["Woodinville", "Hollywood Hill", "Cottage Lake", "Wellington"]
     });
-    const cleanupBusiness = injectSchema(businessSchema);
+    const cleanupBusiness = injectSchema(serviceSchema);
 
     // Inject Breadcrumb Schema
     const breadcrumbSchema = generateBreadcrumbSchema([
@@ -123,7 +111,7 @@ const Woodinville = () => {
                       </div>
                       <h3 className="text-xl font-bold mb-4 text-dark-teal">5-Star Service</h3>
                       <p className="text-gray-600">
-                        233 five-star reviews and counting — homeowners across Woodinville and surrounding areas trust our professional service.
+                        233 five-star reviews and counting. Homeowners across Woodinville and surrounding areas trust our professional service.
                       </p>
                     </CardContent>
                   </Card>

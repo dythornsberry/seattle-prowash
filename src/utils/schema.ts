@@ -1,87 +1,31 @@
 // Schema.org structured data utilities for SEO
 
-interface LocalBusinessSchemaProps {
-  name: string;
-  description: string;
-  url: string;
-  telephone: string;
-  email?: string;
-  address: {
-    streetAddress: string;
-    addressLocality: string;
-    addressRegion: string;
-    postalCode: string;
-    addressCountry: string;
-  };
-  geo: {
-    latitude: number;
-    longitude: number;
-  };
-  areaServed: string[];
-  priceRange?: string;
-  rating?: {
-    ratingValue: number;
-    reviewCount: number;
-  };
-  image?: string;
-}
+// The one business entity, declared in index.html. Every other schema points at it by @id.
+export const BUSINESS_ID = "https://www.seattleprowash.com/#business";
 
 type JsonLd = Record<string, unknown>;
 
-export const generateLocalBusinessSchema = (props: LocalBusinessSchemaProps) => {
-  const schema: JsonLd = {
-    "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
-    "@id": `${props.url}#business`,
-    name: props.name,
-    description: props.description,
-    url: props.url,
-    telephone: props.telephone,
-    image: props.image || new URL("/og-seattle-prowash.jpg", props.url).toString(),
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: props.address.streetAddress,
-      addressLocality: props.address.addressLocality,
-      addressRegion: props.address.addressRegion,
-      postalCode: props.address.postalCode,
-      addressCountry: props.address.addressCountry
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: props.geo.latitude,
-      longitude: props.geo.longitude
-    },
-    areaServed: props.areaServed.map(area => ({
-      "@type": "City",
-      name: area
-    })),
-    priceRange: props.priceRange || "$$",
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        opens: "00:00",
-        closes: "23:59"
-      }
-    ]
-  };
+interface CityServiceSchemaProps {
+  city: string;
+  description: string;
+  url: string;
+  areaServed: string[];
+}
 
-  if (props.email) {
-    schema.email = props.email;
-  }
-
-  if (props.rating) {
-    schema.aggregateRating = {
-      "@type": "AggregateRating",
-      ratingValue: props.rating.ratingValue,
-      reviewCount: props.rating.reviewCount,
-      bestRating: 5,
-      worstRating: 1
-    };
-  }
-
-  return schema;
-};
+// City pages describe the service in that city, not a second business.
+export const generateCityServiceSchema = (props: CityServiceSchemaProps): JsonLd => ({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: `Roof and Gutter Cleaning in ${props.city}, WA`,
+  serviceType: "Roof cleaning, moss removal and gutter cleaning",
+  description: props.description,
+  url: props.url,
+  provider: { "@id": BUSINESS_ID },
+  areaServed: props.areaServed.map(name => ({
+    "@type": name === props.city ? "City" : "Place",
+    name
+  }))
+});
 
 interface ServiceSchemaProps {
   name: string;
@@ -105,7 +49,7 @@ export const generateServiceSchema = (props: ServiceSchemaProps) => {
     description: props.description,
     provider: {
       "@type": "HomeAndConstructionBusiness",
-      "@id": "https://www.seattleprowash.com#business",
+      "@id": BUSINESS_ID,
       name: props.provider,
       url: "https://www.seattleprowash.com"
     },
@@ -232,13 +176,13 @@ export const generateArticleSchema = (props: ArticleSchemaProps) => {
       jobTitle: "Owner",
       worksFor: {
         "@type": "HomeAndConstructionBusiness",
-        "@id": "https://www.seattleprowash.com#business",
+        "@id": BUSINESS_ID,
         name: "Seattle ProWash"
       }
     },
     publisher: {
       "@type": "Organization",
-      "@id": "https://www.seattleprowash.com#business",
+      "@id": BUSINESS_ID,
       name: "Seattle ProWash",
       logo: {
         "@type": "ImageObject",

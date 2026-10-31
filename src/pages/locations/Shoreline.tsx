@@ -12,37 +12,21 @@ import ServiceFAQ from "@/components/ServiceFAQ";
 import NearbyLocations from "@/components/NearbyLocations";
 import RelatedResources from "@/components/RelatedResources";
 import { nearbyCitiesData } from "@/lib/locationNearbyCities";
-import { generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { generateCityServiceSchema, injectSchema } from "@/utils/schema";
 import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 
 const Shoreline = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    const localBusinessSchema = generateLocalBusinessSchema({
-      name: "Seattle ProWash - Shoreline",
+    const serviceSchema = generateCityServiceSchema({
+      city: "Shoreline",
       description: "Professional roof cleaning, moss removal, and gutter cleaning services in Shoreline, WA",
       url: "https://www.seattleprowash.com/shoreline-roof-gutter-cleaning",
-      telephone: COMPANY_INFO.telephone,
-      address: {
-        streetAddress: "",
-        addressLocality: "Shoreline",
-        addressRegion: "WA",
-        postalCode: "98133",
-        addressCountry: "US"
-      },
-      geo: {
-        latitude: 47.7557,
-        longitude: -122.3415
-      },
-      areaServed: ["Shoreline"],
-      rating: {
-        ratingValue: 5.0,
-        reviewCount: 233
-      }
+      areaServed: ["Shoreline"]
     });
 
-    const cleanup = injectSchema(localBusinessSchema);
+    const cleanup = injectSchema(serviceSchema);
     return cleanup;
   }, []);
 

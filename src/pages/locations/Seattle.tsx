@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { SEOHead } from "@/components/SEOHead";
-import { generateBreadcrumbSchema, generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { generateBreadcrumbSchema, generateCityServiceSchema, injectSchema } from "@/utils/schema";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
@@ -22,23 +22,11 @@ const Seattle = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    // Inject LocalBusiness Schema for Seattle (parity with other location pages)
-    const businessSchema = generateLocalBusinessSchema({
-      ...COMPANY_INFO,
-      name: `${COMPANY_INFO.name} - Seattle`,
+    // Service schema for Seattle (parity with other location pages)
+    const serviceSchema = generateCityServiceSchema({
+      city: "Seattle",
       description: "Professional roof cleaning and gutter cleaning across Seattle neighborhoods. Warranty-safe moss removal from Queen Anne to Ballard, Green Lake to Capitol Hill. 12-month moss-free guarantee.",
       url: "https://www.seattleprowash.com/seattle-roof-gutter-cleaning",
-      address: {
-        streetAddress: "",
-        addressLocality: "Seattle",
-        addressRegion: "WA",
-        postalCode: "98115",
-        addressCountry: "US"
-      },
-      geo: {
-        latitude: 47.6062,
-        longitude: -122.3321
-      },
       areaServed: ["Seattle", "Queen Anne", "Ballard", "Green Lake", "Capitol Hill", "Fremont", "Wallingford", "Greenwood"]
     });
 
@@ -48,19 +36,6 @@ const Seattle = () => {
       { name: "Service Areas", url: "https://www.seattleprowash.com/service-areas" },
       { name: "Seattle", url: "https://www.seattleprowash.com/seattle-roof-gutter-cleaning" }
     ]);
-
-    // Inject Service Schema for Seattle
-    const serviceSchema = {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Roof and Gutter Cleaning",
-      "areaServed": { "@type": "City", "name": "Seattle" },
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Seattle ProWash",
-        "areaServed": "Seattle Metro"
-      }
-    };
 
     // Inject FAQ Schema for Seattle
     const faqSchema = {
@@ -110,13 +85,11 @@ const Seattle = () => {
       ]
     };
 
-    const cleanupBusiness = injectSchema(businessSchema);
     const cleanupBreadcrumb = injectSchema(breadcrumbSchema);
     const cleanupService = injectSchema(serviceSchema);
     const cleanupFAQ = injectSchema(faqSchema);
 
     return () => {
-      cleanupBusiness();
       cleanupBreadcrumb();
       cleanupService();
       cleanupFAQ();

@@ -185,7 +185,7 @@ const Gallery = () => {
         alt: "Asphalt roof cleaning before and after with moss and needles removed",
         title: "Asphalt roof cleaning before & after, Summer 2026",
         location: "Greater Seattle",
-        description: "Needles and moss cleared, then treated — one visit from buried to protected",
+        description: "Needles and moss cleared, then treated. One visit from buried to protected",
         service: "Roof Cleaning"
       },
       {
@@ -233,7 +233,7 @@ const Gallery = () => {
         alt: "Overgrown debris-covered roof restored - four stage before and after",
         title: "Full roof restoration project, Summer 2026",
         location: "Greater Seattle",
-        description: "Overgrown and debris-covered to cleaned and treated — the full restoration documented",
+        description: "Overgrown and debris-covered to cleaned and treated, with the full restoration documented",
         service: "Roof Cleaning"
       },
       {
@@ -363,7 +363,7 @@ const Gallery = () => {
         alt: "Gutter brightening before and after - dark streaks removed from exterior gutters",
         title: "Gutter brightening before & after, Summer 2026",
         location: "Greater Seattle",
-        description: "Oxidation and dark streaks scrubbed off the gutter faces — back to bright white without repainting",
+        description: "Oxidation and dark streaks scrubbed off the gutter faces, back to bright white without repainting",
         service: "Gutter Brightening"
       },
       {
@@ -429,7 +429,7 @@ const Gallery = () => {
         alt: "Rooftop deck tiles stained with rust and debris before and after pressure washing",
         title: "Rooftop deck cleaning, Summer 2026",
         location: "Greater Seattle",
-        description: "Rust staining and grime lifted off this rooftop entertaining space — furniture-ready again",
+        description: "Rust staining and grime lifted off this rooftop entertaining space, furniture-ready again",
         service: "Pressure Washing"
       },
       {
@@ -525,7 +525,7 @@ const Gallery = () => {
         alt: "Dylan of Seattle ProWash rinsing landscaping after a cleaning job",
         title: "Rinsing down the landscaping",
         location: "Greater Seattle",
-        description: "Every job ends with a full rinse-down — plants and beds protected, property cleaner than we found it",
+        description: "Every job ends with a full rinse-down. Plants and beds protected, property cleaner than we found it",
         service: "Owner"
       },
       {
@@ -533,7 +533,7 @@ const Gallery = () => {
         alt: "Seattle ProWash lettered service truck with ladder at a residential job site",
         title: "The Seattle ProWash truck",
         location: "Greater Seattle",
-        description: "The truck you'll see in your driveway — lettered, loaded, and ready",
+        description: "The truck you'll see in your driveway: lettered, loaded, and ready",
         service: "Team"
       },
       {

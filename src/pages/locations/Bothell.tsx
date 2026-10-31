@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { generateBreadcrumbSchema, generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { generateBreadcrumbSchema, generateCityServiceSchema, injectSchema } from "@/utils/schema";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -19,26 +19,14 @@ import { navigateToContact } from "@/lib/navigation";
 
 const Bothell = () => {
   useEffect(() => {
-    // Inject LocalBusiness Schema for Bothell
-    const businessSchema = generateLocalBusinessSchema({
-      ...COMPANY_INFO,
-      name: `${COMPANY_INFO.name} - Bothell`,
+    // Service schema for Bothell
+    const serviceSchema = generateCityServiceSchema({
+      city: "Bothell",
       description: "Professional roof cleaning and gutter cleaning services in Bothell, WA. Serving all Bothell neighborhoods including Canyon Park and Country Village. 12-month moss-free guarantee.",
       url: "https://www.seattleprowash.com/bothell-roof-gutter-cleaning",
-      address: {
-        streetAddress: "",
-        addressLocality: "Bothell",
-        addressRegion: "WA",
-        postalCode: "98011",
-        addressCountry: "US"
-      },
-      geo: {
-        latitude: 47.7623,
-        longitude: -122.2054
-      },
       areaServed: ["Bothell", "Downtown Bothell", "Canyon Park", "Country Village", "Fitzgerald", "North Creek"]
     });
-    const cleanupBusiness = injectSchema(businessSchema);
+    const cleanupBusiness = injectSchema(serviceSchema);
 
     // Inject Breadcrumb Schema
     const breadcrumbSchema = generateBreadcrumbSchema([

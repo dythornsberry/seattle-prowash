@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
 import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -25,23 +25,6 @@ const WindowCleaning = () => {
     });
     const cleanupService = injectSchema(serviceSchema);
 
-    const faqSchema = generateFAQSchema({
-      faqs: [
-        {
-          question: "Do you clean interior windows too?",
-          answer: "We offer exterior window cleaning only, including outside glass, frames, and sills."
-        },
-        {
-          question: "How do you reach upper-story windows?",
-          answer: "We use water-fed poles and professional extension equipment to safely clean windows up to three stories without ladders touching your siding or roof."
-        },
-        {
-          question: "How often should I get my windows cleaned?",
-          answer: "For the Seattle area, we recommend twice a year. Spring and fall cleanings keep your windows looking clear year-round and prevent hard water stains from building up."
-        }
-      ]
-    });
-    const cleanupFAQ = injectSchema(faqSchema);
 
     const breadcrumbSchema = generateBreadcrumbSchema([
       { name: "Home", url: "https://www.seattleprowash.com" },
@@ -51,7 +34,6 @@ const WindowCleaning = () => {
 
     return () => {
       cleanupService();
-      cleanupFAQ();
       cleanupBreadcrumb();
     };
   }, []);

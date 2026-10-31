@@ -2,6 +2,24 @@ import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import BrandWordmark from "@/components/BrandWordmark";
 
+// Every city page, core service area first, linked from every page so they get crawled.
+const CITY_LINKS = [
+  ["kenmore", "Kenmore"],
+  ["lake-forest-park", "Lake Forest Park"],
+  ["bothell", "Bothell"],
+  ["woodinville", "Woodinville"],
+  ["kirkland", "Kirkland"],
+  ["shoreline", "Shoreline"],
+  ["seattle", "Seattle"],
+  ["lynnwood", "Lynnwood"],
+  ["mountlake-terrace", "Mountlake Terrace"],
+  ["edmonds", "Edmonds"],
+  ["mill-creek", "Mill Creek"],
+  ["bellevue", "Bellevue"],
+  ["redmond", "Redmond"],
+  ["sammamish", "Sammamish"],
+] as const;
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -58,6 +76,17 @@ const Footer = () => {
               </div>
             </div>
           </div>
+
+          <nav aria-label="Areas we serve" className="mx-auto mt-10 max-w-6xl">
+            <p className="mb-3 text-sm font-bold text-white">Roof and gutter cleaning in</p>
+            <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+              {CITY_LINKS.map(([slug, name]) => (
+                <li key={slug}>
+                  <Link to={`/${slug}-roof-gutter-cleaning`} className="text-white/75 hover:text-brand-orange">{name}</Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
       </div>
 
@@ -69,6 +98,7 @@ const Footer = () => {
               <Link to="/pricing" className="hover:text-white">Pricing</Link>
               <Link to="/faq" className="hover:text-white">FAQ</Link>
               <Link to="/service-areas" className="hover:text-white">Service Areas</Link>
+              <Link to="/resources" className="hover:text-white">Resources</Link>
             </div>
           </div>
         </div>

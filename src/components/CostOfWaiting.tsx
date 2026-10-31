@@ -50,7 +50,7 @@ const CostOfWaiting = () => {
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-foreground"><strong>Insurance trouble</strong> — carriers increasingly flag visible moss from aerial photos, and it can mean a fix-it notice or non-renewal</span>
+                    <span className="text-foreground"><strong>Insurance trouble:</strong> carriers increasingly flag visible moss from aerial photos, and it can mean a fix-it notice or non-renewal</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>

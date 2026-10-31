@@ -87,13 +87,13 @@ const MossTreatmentVsRoofCleaning = () => {
                 <div className="prose prose-lg max-w-none">
                   <h2>The Difference in One Paragraph</h2>
                   <p>
-                    <strong>Moss treatment</strong> kills the moss where it sits. The dead moss dries out, loses its grip, and gradually sheds off the roof with weather over the following months. <strong>Full roof cleaning</strong> removes the moss and debris by hand and brush first, <em>then</em> applies the same treatment — so the roof looks clean the day we leave, not six months later. Both stop the damage; the difference is how fast your roof looks good and how much labor is involved.
+                    <strong>Moss treatment</strong> kills the moss where it sits. The dead moss dries out, loses its grip, and gradually sheds off the roof with weather over the following months. <strong>Full roof cleaning</strong> removes the moss and debris by hand and brush first, <em>then</em> applies the same treatment, so the roof looks clean the day we leave, not six months later. Both stop the damage; the difference is how fast your roof looks good and how much labor is involved.
                   </p>
 
                   <h2>When Moss Treatment Alone Makes Sense</h2>
                   <ul>
                     <li><strong>Light, early growth.</strong> If the moss is a green haze or small clumps rather than a thick carpet, treatment kills it before it can do real damage, and the small amount of dead material sheds on its own.</li>
-                    <li><strong>Maintenance after a full cleaning.</strong> This is the main one. An annual treatment after a proper cleaning keeps the roof moss-free indefinitely — it's why we guarantee our treatment for 12 months.</li>
+                    <li><strong>Maintenance after a full cleaning.</strong> This is the main one. An annual treatment after a proper cleaning keeps the roof moss-free indefinitely. It's why we guarantee our treatment for 12 months.</li>
                     <li><strong>Budget now, cleaning later.</strong> Treatment stops the damage clock. If a full cleaning isn't in the budget this year, treating now protects the roof while you plan.</li>
                   </ul>
 
@@ -108,14 +108,14 @@ const MossTreatmentVsRoofCleaning = () => {
                       decoding="async"
                     />
                     <figcaption className="text-sm text-muted-foreground text-center mt-2">
-                      What treatment looks like on day one — the white powder kills moss at the root, then weather does the rest.
+                      What treatment looks like on day one: the white powder kills moss at the root, then weather does the rest.
                     </figcaption>
                   </figure>
 
                   <h2>When You Need the Full Cleaning</h2>
                   <ul>
-                    <li><strong>Established moss mats.</strong> Once moss is thick enough to hold water against the shingles and lift their edges, killing it isn't enough — the dead mat still traps moisture and blocks drainage while it slowly sheds. It needs to come off.</li>
-                    <li><strong>You want it to look clean now.</strong> Treated moss turns brown before it sheds, and that takes months. If curb appeal matters — especially if you're selling — removal is the only fast answer.</li>
+                    <li><strong>Established moss mats.</strong> Once moss is thick enough to hold water against the shingles and lift their edges, killing it isn't enough. The dead mat still traps moisture and blocks drainage while it slowly sheds. It needs to come off.</li>
+                    <li><strong>You want it to look clean now.</strong> Treated moss turns brown before it sheds, and that takes months. If curb appeal matters, especially if you're selling, removal is the only fast answer.</li>
                     <li><strong>Clogged gutters and valleys.</strong> Heavy moss sheds into gutters and roof valleys. A full cleaning handles all of it in one visit, and our roof cleaning includes the gutter cleaning for exactly that reason.</li>
                   </ul>
 
@@ -126,12 +126,12 @@ const MossTreatmentVsRoofCleaning = () => {
 
                   <h2>What About DIY Moss Killer?</h2>
                   <p>
-                    Bags of zinc-based moss killer from the hardware store do work on light growth, with caveats: granules applied unevenly leave striping, over-application can corrode gutters and flashings, and getting the coverage right means walking a wet, mossy roof — which is how homeowners get hurt. If your roof is walkable and the growth is light, DIY is a reasonable option. If it's steep, two stories, or the moss is established, it isn't worth the risk.
+                    Bags of zinc-based moss killer from the hardware store do work on light growth, with caveats: granules applied unevenly leave striping, over-application can corrode gutters and flashings, and getting the coverage right means walking a wet, mossy roof, which is how homeowners get hurt. If your roof is walkable and the growth is light, DIY is a reasonable option. If it's steep, two stories, or the moss is established, it isn't worth the risk.
                   </p>
 
                   <h2>The Bottom Line</h2>
                   <p>
-                    Thick moss: full cleaning. Light growth or annual upkeep: treatment. When in doubt, ask — an honest company will quote the cheaper service when it's the right one, because that's what gets them the annual maintenance customer for the next decade.
+                    Thick moss: full cleaning. Light growth or annual upkeep: treatment. When in doubt, ask. An honest company will quote the cheaper service when it's the right one, because that's what gets them the annual maintenance customer for the next decade.
                   </p>
                 </div>
 
@@ -159,7 +159,7 @@ const MossTreatmentVsRoofCleaning = () => {
                 <div className="mt-12 p-8 bg-brand-navy text-white rounded-lg text-center">
                   <h3 className="text-2xl font-bold mb-4 text-white">Not Sure Which One Your Roof Needs?</h3>
                   <p className="text-lg mb-6">
-                    Send the form and Dylan will tell you straight — even if the answer is the cheaper service.
+                    Send the form and Dylan will tell you straight, even if the answer is the cheaper service.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { generateBreadcrumbSchema, generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { generateBreadcrumbSchema, generateCityServiceSchema, injectSchema } from "@/utils/schema";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -18,26 +18,14 @@ import { navigateToContact } from "@/lib/navigation";
 
 const Bellevue = () => {
   useEffect(() => {
-    // Inject LocalBusiness Schema for Bellevue
-    const businessSchema = generateLocalBusinessSchema({
-      ...COMPANY_INFO,
-      name: `${COMPANY_INFO.name} - Bellevue`,
+    // Service schema for Bellevue
+    const serviceSchema = generateCityServiceSchema({
+      city: "Bellevue",
       description: "Professional roof cleaning and gutter cleaning services in Bellevue, WA. Serving all Bellevue neighborhoods with expert moss removal and 12-month guarantee.",
       url: "https://www.seattleprowash.com/bellevue-roof-gutter-cleaning",
-      address: {
-        streetAddress: "",
-        addressLocality: "Bellevue",
-        addressRegion: "WA",
-        postalCode: "98004",
-        addressCountry: "US"
-      },
-      geo: {
-        latitude: 47.6101,
-        longitude: -122.2015
-      },
       areaServed: ["Bellevue", "Downtown Bellevue", "Crossroads", "Wilburton", "Somerset", "Factoria"]
     });
-    const cleanupBusiness = injectSchema(businessSchema);
+    const cleanupBusiness = injectSchema(serviceSchema);
 
     // Inject Breadcrumb Schema
     const breadcrumbSchema = generateBreadcrumbSchema([
@@ -121,7 +109,7 @@ const Bellevue = () => {
                       </div>
                       <h3 className="text-xl font-bold mb-4 text-dark-teal">5-Star Service</h3>
                       <p className="text-gray-600">
-                        233 five-star reviews and counting — homeowners across Bellevue and surrounding areas trust our professional service.
+                        233 five-star reviews and counting. Homeowners across Bellevue and surrounding areas trust our professional service.
                       </p>
                     </CardContent>
                   </Card>

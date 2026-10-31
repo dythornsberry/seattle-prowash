@@ -11,37 +11,21 @@ import ServiceFAQ from "@/components/ServiceFAQ";
 import NearbyLocations from "@/components/NearbyLocations";
 import RelatedResources from "@/components/RelatedResources";
 import { nearbyCitiesData } from "@/lib/locationNearbyCities";
-import { generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { generateCityServiceSchema, injectSchema } from "@/utils/schema";
 import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 
 const Edmonds = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    const localBusinessSchema = generateLocalBusinessSchema({
-      name: "Seattle ProWash - Edmonds",
+    const serviceSchema = generateCityServiceSchema({
+      city: "Edmonds",
       description: "Professional roof cleaning, moss removal, and gutter cleaning services in Edmonds, WA",
       url: "https://www.seattleprowash.com/edmonds-roof-gutter-cleaning",
-      telephone: COMPANY_INFO.telephone,
-      address: {
-        streetAddress: "",
-        addressLocality: "Edmonds",
-        addressRegion: "WA",
-        postalCode: "98020",
-        addressCountry: "US"
-      },
-      geo: {
-        latitude: 47.8107,
-        longitude: -122.3774
-      },
-      areaServed: ["Edmonds"],
-      rating: {
-        ratingValue: 5.0,
-        reviewCount: 233
-      }
+      areaServed: ["Edmonds"]
     });
 
-    const cleanup = injectSchema(localBusinessSchema);
+    const cleanup = injectSchema(serviceSchema);
     return cleanup;
   }, []);
 

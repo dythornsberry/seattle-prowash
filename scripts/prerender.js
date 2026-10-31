@@ -71,7 +71,7 @@ const routes = [
   {
     path: '/about',
     title: 'About Dylan & the Team',
-    description: 'Meet Dylan Thornsberry, owner of Seattle ProWash. Kenmore-based roof and gutter cleaning specialists serving Seattle Metro since 2022. 224 5-star reviews.',
+    description: 'Meet Dylan Thornsberry, owner of Seattle ProWash. Kenmore-based roof and gutter cleaning specialists serving Seattle Metro since 2022. 233 5-star reviews.',
   },
   {
     path: '/faq',
@@ -86,7 +86,7 @@ const routes = [
   {
     path: '/reviews',
     title: 'Customer Reviews',
-    description: 'Read 224 authentic 5-star reviews for Seattle ProWash. Real testimonials from customers in Kenmore, Bothell, Kirkland & Seattle.',
+    description: 'Read 233 authentic 5-star reviews for Seattle ProWash. Real testimonials from customers in Kenmore, Bothell, Kirkland & Seattle.',
   },
   {
     path: '/service-areas',
@@ -111,7 +111,7 @@ const routes = [
   {
     path: '/resources/best-time-roof-gutter-cleaning-seattle',
     title: 'Best Time of Year for Roof & Gutter Cleaning in Seattle',
-    description: 'When to schedule roof cleaning, moss treatment, and gutter cleaning in Seattle — season-by-season advice from a Kenmore-based contractor who works year-round.',
+    description: 'When to schedule roof cleaning, moss treatment, and gutter cleaning in Seattle: season-by-season advice from a Kenmore-based contractor who works year-round.',
   },
   {
     path: '/resources/moss-treatment-vs-roof-cleaning',

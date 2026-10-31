@@ -50,7 +50,7 @@ const About = () => {
       jobTitle: "Owner",
       worksFor: {
         "@type": "HomeAndConstructionBusiness",
-        "@id": "https://www.seattleprowash.com#business",
+        "@id": "https://www.seattleprowash.com/#business",
         name: "Seattle ProWash"
       },
       image: "https://www.seattleprowash.com/og-seattle-prowash.jpg",
@@ -274,7 +274,7 @@ const About = () => {
                      size="xl"
                      onClick={() => window.location.href = 'tel:206-752-6690'}
                    >
-                     📞 206-752-6690
+                     Call 206-752-6690
                    </Button>
                 </div>
               </div>

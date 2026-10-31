@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { generateBreadcrumbSchema, generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { generateBreadcrumbSchema, generateCityServiceSchema, injectSchema } from "@/utils/schema";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -18,26 +18,14 @@ import { navigateToContact } from "@/lib/navigation";
 
 const Redmond = () => {
   useEffect(() => {
-    // Inject LocalBusiness Schema for Redmond
-    const businessSchema = generateLocalBusinessSchema({
-      ...COMPANY_INFO,
-      name: `${COMPANY_INFO.name} - Redmond`,
+    // Service schema for Redmond
+    const serviceSchema = generateCityServiceSchema({
+      city: "Redmond",
       description: "Professional roof cleaning, gutter cleaning, and exterior washing services in Redmond, WA. Serving all Redmond neighborhoods. 12-month moss-free guarantee.",
       url: "https://www.seattleprowash.com/redmond-roof-gutter-cleaning",
-      address: {
-        streetAddress: "",
-        addressLocality: "Redmond",
-        addressRegion: "WA",
-        postalCode: "98052",
-        addressCountry: "US"
-      },
-      geo: {
-        latitude: 47.6740,
-        longitude: -122.1215
-      },
       areaServed: ["Redmond", "Downtown Redmond", "Education Hill", "Overlake", "Grasslawn"]
     });
-    const cleanupBusiness = injectSchema(businessSchema);
+    const cleanupBusiness = injectSchema(serviceSchema);
 
     // Inject Breadcrumb Schema
     const breadcrumbSchema = generateBreadcrumbSchema([
@@ -121,7 +109,7 @@ const Redmond = () => {
                       </div>
                       <h3 className="text-xl font-bold mb-4 text-dark-teal">5-Star Service</h3>
                       <p className="text-gray-600">
-                        233 five-star reviews and counting — homeowners across Redmond and surrounding areas trust our professional service.
+                        233 five-star reviews and counting. Homeowners across Redmond and surrounding areas trust our professional service.
                       </p>
                     </CardContent>
                   </Card>

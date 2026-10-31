@@ -117,7 +117,7 @@ const Commercial = () => {
               Commercial Cleaning Services
             </h1>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8">
-              From storefronts to big-box stores — we've cleaned everything from neighborhood shops to a Costco warehouse. Licensed, insured, and equipped for commercial properties across greater Seattle.
+              From storefronts to big-box stores, we've cleaned everything from neighborhood shops to a Costco warehouse. Licensed, insured, and equipped for commercial properties across greater Seattle.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="cta-orange" size="xl" onClick={navigateToContact}>
@@ -184,13 +184,13 @@ const Commercial = () => {
                   Recent Commercial Work
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Most of our commercial work is storefronts, small offices, and HOA properties — but we take on the big stuff too.
+                  Most of our commercial work is storefronts, small offices, and HOA properties, but we take on the big stuff too.
                 </p>
               </div>
               <div className="mb-8">
                 <img
                   src={qfcBeforeAfter}
-                  alt="Before and after cleaning the landmark QFC ball sign on Holman Road in Seattle — years of grime restored to gold"
+                  alt="Before and after cleaning the landmark QFC ball sign on Holman Road in Seattle: years of grime restored to gold"
                   className="w-full rounded-2xl shadow-xl"
                   width={1600}
                   height={1067}
@@ -198,7 +198,7 @@ const Commercial = () => {
                   decoding="async"
                 />
                 <p className="text-sm text-muted-foreground text-center mt-3 italic">
-                  The landmark QFC ball on Holman Road — before and after.
+                  The landmark QFC ball on Holman Road, before and after.
                 </p>
               </div>
               <div className="grid md:grid-cols-2 gap-6">
@@ -214,7 +214,7 @@ const Commercial = () => {
                   </div>
                   <CardContent className="p-8">
                     <Badge className="bg-brand-orange/10 text-brand-orange border-brand-orange/20 mb-3">High Access</Badge>
-                    <h3 className="text-xl font-bold text-brand-navy mb-2">QFC Signage — Holman Road, Seattle</h3>
+                    <h3 className="text-xl font-bold text-brand-navy mb-2">QFC Signage, Holman Road, Seattle</h3>
                     <p className="text-muted-foreground text-sm">
                       A Seattle landmark, cleaned 65 feet up from a boom lift. We have the equipment and insurance for work most exterior cleaners won't touch.
                     </p>
@@ -223,7 +223,7 @@ const Commercial = () => {
                 <Card className="border-2 hover:border-brand-orange/50 transition-all duration-300">
                   <CardContent className="p-8">
                     <Badge className="bg-brand-orange/10 text-brand-orange border-brand-orange/20 mb-3">Big-Box Retail</Badge>
-                    <h3 className="text-xl font-bold text-brand-navy mb-2">Costco Warehouse — Gig Harbor</h3>
+                    <h3 className="text-xl font-bold text-brand-navy mb-2">Costco Warehouse, Gig Harbor</h3>
                     <p className="text-muted-foreground text-sm">
                       Exterior cleaning for one of the largest retail footprints there is. If we can handle a Costco, your storefront is no problem.
                     </p>

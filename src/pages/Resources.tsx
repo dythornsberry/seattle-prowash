@@ -28,7 +28,7 @@ const Resources = () => {
     {
       id: "moss-treatment-vs-roof-cleaning",
       title: "Moss Treatment vs. Full Roof Cleaning: Which Do You Need?",
-      excerpt: "Two different services at two different prices — and plenty of homeowners pay for the wrong one. When treatment alone is enough, when you need the full cleaning, and what each costs.",
+      excerpt: "Two different services at two different prices, and plenty of homeowners pay for the wrong one. When treatment alone is enough, when you need the full cleaning, and what each costs.",
       category: "Moss Removal",
       readTime: "5 min read",
       date: "2026-07-11"
@@ -36,7 +36,7 @@ const Resources = () => {
     {
       id: "best-time-roof-gutter-cleaning-seattle",
       title: "The Best Time of Year for Roof & Gutter Cleaning in Seattle",
-      excerpt: "We work year-round, but timing still matters. Season-by-season advice on when to schedule roof cleaning, moss treatment, and gutter cleaning — plus when the fall rush hits.",
+      excerpt: "We work year-round, but timing still matters. Season-by-season advice on when to schedule roof cleaning, moss treatment, and gutter cleaning, plus when the fall rush hits.",
       category: "Timing",
       readTime: "5 min read",
       date: "2026-07-11"

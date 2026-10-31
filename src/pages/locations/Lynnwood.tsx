@@ -11,37 +11,21 @@ import TestimonialCard from "@/components/TestimonialCard";
 import ServiceFAQ from "@/components/ServiceFAQ";
 import NearbyLocations from "@/components/NearbyLocations";
 import { nearbyCitiesData } from "@/lib/locationNearbyCities";
-import { generateLocalBusinessSchema, injectSchema, COMPANY_INFO } from "@/utils/schema";
+import { generateCityServiceSchema, injectSchema } from "@/utils/schema";
 import TwoStepQuoteForm from "@/components/TwoStepQuoteForm";
 
 const Lynnwood = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    const localBusinessSchema = generateLocalBusinessSchema({
-      name: "Seattle ProWash - Lynnwood",
+    const serviceSchema = generateCityServiceSchema({
+      city: "Lynnwood",
       description: "Professional roof cleaning, moss removal, and gutter cleaning services in Lynnwood, WA",
       url: "https://www.seattleprowash.com/lynnwood-roof-gutter-cleaning",
-      telephone: COMPANY_INFO.telephone,
-      address: {
-        streetAddress: "",
-        addressLocality: "Lynnwood",
-        addressRegion: "WA",
-        postalCode: "98036",
-        addressCountry: "US"
-      },
-      geo: {
-        latitude: 47.8209,
-        longitude: -122.3151
-      },
-      areaServed: ["Lynnwood"],
-      rating: {
-        ratingValue: 5.0,
-        reviewCount: 233
-      }
+      areaServed: ["Lynnwood"]
     });
 
-    const cleanup = injectSchema(localBusinessSchema);
+    const cleanup = injectSchema(serviceSchema);
     return cleanup;
   }, []);
 
