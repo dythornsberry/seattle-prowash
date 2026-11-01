@@ -137,7 +137,7 @@ const GutterCleaningSafetyTips = () => {
                     One-story rambler, walkable yard, decent ladder, dry day? Clean your own gutters and save the money. We mean that.
                   </p>
                   <p>
-                    Two or more stories, steep terrain around the house, gutters over a sunroom or deck roof, or any spot you can't comfortably reach from a ladder? Hire it out. A professional crew has the stabilizers, the fall protection, and the insurance, and does hundreds of these a year. Our gutter cleaning starts at $250, includes the downspout flush and a roof blow-off, and takes about an hour or two. That's cheap compared to any version of falling off a ladder.
+                    Two or more stories, steep terrain around the house, gutters over a sunroom or deck roof, or any spot you can't comfortably reach from a ladder? Hire it out. A professional crew has the stabilizers, the fall protection, and the insurance. Our gutter cleaning starts at $350, includes the downspout flush and a roof blow-off, and takes about an hour or two. That's cheap compared to any version of falling off a ladder.
                   </p>
                 </div>
 

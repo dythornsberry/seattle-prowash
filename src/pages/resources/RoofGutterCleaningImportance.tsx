@@ -87,7 +87,7 @@ const RoofGutterCleaningImportance = () => {
                 <div className="prose prose-lg max-w-none">
                   <h2>The Math That Makes This Worth Reading</h2>
                   <p>
-                    A roof cleaning with moss treatment runs $499-$1,500 for most asphalt roofs around here, and on our schedule that's an every-2-to-4-years expense. A roof replacement runs $10,000-$30,000. Moss and clogged gutters are the two things that quietly move that replacement date up by years. A well-maintained roof commonly lasts 10-15 years longer than a neglected one. Nothing else in home maintenance has a spread like that.
+                    A roof cleaning with moss treatment runs $850 to $1,200 for most asphalt roofs around here (more with heavy moss), and on our schedule that's an every-2-to-4-years expense. A roof replacement runs $10,000-$30,000. Moss and clogged gutters are the two things that quietly move that replacement date up by years. A well-maintained roof commonly lasts 10-15 years longer than a neglected one. Nothing else in home maintenance has a spread like that.
                   </p>
 
                   <h3>What clogged gutters actually do</h3>
